@@ -322,15 +322,15 @@
         }
         .style-glass .hero-menuju { color: #163A6E; }
         .style-glass .hero-card {
-            background: linear-gradient(135deg, rgba(255,255,255,0.72) 0%, rgba(224,239,255,0.42) 55%, rgba(255,255,255,0.58) 100%);
+            background: linear-gradient(138deg, rgba(255,255,255,0.68) 0%, rgba(191,223,255,0.44) 50%, rgba(235,245,255,0.64) 100%);
             backdrop-filter: blur(22px);
-            border: 2px solid rgba(255,255,255,0.92);
-            box-shadow: inset 0 2px 0 rgba(255,255,255,0.95), 0 24px 52px rgba(30, 64, 175, 0.18);
-            border-radius: 22px;
+            border: 2px solid rgba(255,255,255,0.95);
+            box-shadow: inset 0 2px 1px rgba(255,255,255,0.95), inset 0 -14px 32px rgba(96,165,250,0.24), 0 24px 52px rgba(30, 64, 175, 0.22);
+            border-radius: 24px;
         }
         .style-glass .hero-card-grid {
-            background-image: linear-gradient(to right, rgba(37,99,235,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(37,99,235,0.06) 1px, transparent 1px);
-            background-size: 26px 26px;
+            background-image: linear-gradient(125deg, rgba(255,255,255,0.46) 0%, rgba(255,255,255,0.12) 38%, rgba(255,255,255,0) 58%);
+            background-size: 100% 100%;
         }
         .style-glass .win-dot { border: 1px solid rgba(255,255,255,0.7); border-radius: 999px; box-shadow: 0 2px 4px rgba(0,0,0,0.15); }
         .style-glass .win-dot-1 { background: #EF4444; }
@@ -629,7 +629,14 @@
                                 <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.72"/>
                                 <stop offset="100%" stop-color="#DBEAFE" stop-opacity="0.22"/>
                             </linearGradient>
+                            <radialGradient id="glassHeroOrb" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#60A5FA" stop-opacity="0.34"/>
+                                <stop offset="55%" stop-color="#93C5FD" stop-opacity="0.16"/>
+                                <stop offset="100%" stop-color="#BFDBFE" stop-opacity="0"/>
+                            </radialGradient>
                         </defs>
+                        <!-- Soft sky-blue ambient glow orb behind hero card -->
+                        <circle cx="540" cy="600" r="380" fill="url(#glassHeroOrb)"/>
                         <!-- Curved blue waves top-left & top-right -->
                         <path d="M-60 220 Q 240 40 520 -40 L -60 -40 Z" fill="url(#glassRibbon)"/>
                         <path d="M840 -40 Q 980 160 1140 240 L 1140 -40 Z" fill="url(#glassRibbon)"/>
@@ -698,9 +705,10 @@
 
                                 <svg viewBox="0 0 680 250" class="hero-svg relative z-10 w-[660px] h-[235px] overflow-visible" aria-label="H-7">
                                     <defs>
-                                        <linearGradient id="glassHeroGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                                            <stop offset="0%" stop-color="#F84B4B"/>
-                                            <stop offset="55%" stop-color="#DC2626"/>
+                                        <linearGradient id="glassHeroGrad" gradientUnits="userSpaceOnUse" x1="0" y1="36" x2="0" y2="212">
+                                            <stop offset="0%" stop-color="#FF8585"/>
+                                            <stop offset="28%" stop-color="#F84B4B"/>
+                                            <stop offset="68%" stop-color="#DC2626"/>
                                             <stop offset="100%" stop-color="#991B1B"/>
                                         </linearGradient>
                                     </defs>
@@ -840,33 +848,53 @@
             const svgShadow = document.getElementById('svgHeroShadow');
             const svgMain = document.getElementById('svgHeroMain');
             if (styleName === 'glass') {
-                svgShadow.setAttribute('fill', '#0F172A');
-                svgShadow.setAttribute('stroke', '#0F172A');
-                svgShadow.setAttribute('stroke-width', '20');
+                svgShadow.setAttribute('x', '347');
+                svgShadow.setAttribute('y', '132');
+                svgShadow.setAttribute('fill', '#1E293B');
+                svgShadow.setAttribute('stroke', '#1E293B');
+                svgShadow.setAttribute('stroke-width', '3');
+                svgShadow.style.opacity = '0.82';
+                svgShadow.style.filter = 'drop-shadow(0 14px 18px rgba(30, 64, 175, 0.34))';
                 svgMain.setAttribute('fill', 'url(#glassHeroGrad)');
-                svgMain.setAttribute('stroke', '#0F172A');
-                svgMain.setAttribute('stroke-width', '14');
+                svgMain.setAttribute('stroke', 'rgba(255, 255, 255, 0.90)');
+                svgMain.setAttribute('stroke-width', '5');
+                svgMain.style.filter = 'drop-shadow(0 4px 10px rgba(15, 23, 42, 0.22))';
             } else if (styleName === 'dark-code') {
+                svgShadow.setAttribute('x', '354');
+                svgShadow.setAttribute('y', '138');
+                svgShadow.style.opacity = '';
+                svgShadow.style.filter = '';
                 svgShadow.setAttribute('fill', '#EF4444');
                 svgShadow.setAttribute('stroke', '#000000');
                 svgShadow.setAttribute('stroke-width', '22');
                 svgMain.setAttribute('fill', '#FCD34D');
                 svgMain.setAttribute('stroke', '#060D1A');
                 svgMain.setAttribute('stroke-width', '16');
+                svgMain.style.filter = '';
             } else if (styleName === 'modern') {
+                svgShadow.setAttribute('x', '354');
+                svgShadow.setAttribute('y', '138');
+                svgShadow.style.opacity = '';
+                svgShadow.style.filter = '';
                 svgShadow.setAttribute('fill', '#FDD34D');
                 svgShadow.setAttribute('stroke', '#FDD34D');
                 svgShadow.setAttribute('stroke-width', '0');
                 svgMain.setAttribute('fill', '#FFFFFF');
                 svgMain.setAttribute('stroke', 'none');
                 svgMain.setAttribute('stroke-width', '0');
+                svgMain.style.filter = '';
             } else {
+                svgShadow.setAttribute('x', '354');
+                svgShadow.setAttribute('y', '138');
+                svgShadow.style.opacity = '';
+                svgShadow.style.filter = '';
                 svgShadow.setAttribute('fill', '#000000');
                 svgShadow.setAttribute('stroke', '#000000');
                 svgShadow.setAttribute('stroke-width', '26');
                 svgMain.setAttribute('fill', '#CA2C2A');
                 svgMain.setAttribute('stroke', '#000000');
                 svgMain.setAttribute('stroke-width', '18');
+                svgMain.style.filter = '';
             }
         }
 
@@ -1101,11 +1129,11 @@
                     cdText: '#FFFFFF', cdBorder: 1.5, cdBorderCol: 'rgba(255,255,255,0.90)', cdShadow: 0, cdRad: 12, cdRot: 0,
                     cdFontName: '"Space Grotesk", sans-serif', cdTrackRatio: 0.16,
                     mnFill: 'rgba(255,255,255,0.88)', mnText: '#163A6E', mnBorder: 1.5, mnBorderCol: '#FFFFFF', mnShadow: 0, mnRad: 10, mnRot: 0,
-                    cardFill: { dir: 'diag', stops: [[0, 'rgba(255,255,255,0.78)'], [0.55, 'rgba(224,239,255,0.52)'], [1, 'rgba(255,255,255,0.68)']] },
-                    cardBorder: 2, cardBorderCol: 'rgba(255,255,255,0.92)', cardShadow: 0, cardRad: 22, cardGrid: 'rgba(37,99,235,0.06)',
+                    cardFill: { dir: 'diag', stops: [[0, 'rgba(255,255,255,0.68)'], [0.5, 'rgba(191,223,255,0.44)'], [1, 'rgba(235,245,255,0.64)']] },
+                    cardBorder: 2, cardBorderCol: 'rgba(255,255,255,0.95)', cardShadow: 0, cardRad: 24, cardGrid: null,
                     winDots: ['#EF4444', '#F59E0B', '#3B82F6'], winDotRad: 99, winDotBorder: 1, winDotBorderCol: 'rgba(255,255,255,0.75)',
-                    heroShadowFill: '#0F172A', heroShadowStroke: '#0F172A', heroShadowSW: 20, heroShadowOff: 10,
-                    heroMainFill: 'glassGrad', heroMainStroke: '#0F172A', heroMainSW: 14,
+                    heroShadowFill: 'rgba(30, 41, 59, 0.82)', heroShadowStroke: 'rgba(30, 41, 59, 0.82)', heroShadowSW: 3, heroShadowOff: 7, heroShadowBlur: true,
+                    heroMainFill: 'glassGrad', heroMainStroke: 'rgba(255,255,255,0.90)', heroMainSW: 5, heroMainBlur: false,
                     stFill: { dir: 'vert', stops: [[0, 'rgba(248,75,75,0.96)'], [0.55, 'rgba(220,38,38,0.96)'], [1, 'rgba(185,28,28,0.98)']] },
                     stText: '#FFFFFF', stBorder: 1.5, stBorderCol: 'rgba(255,255,255,0.82)', stShadow: 0, stRad: 12, stRot: 0,
                     schedFill: { dir: 'diag', stops: [[0, 'rgba(255,255,255,0.82)'], [1, 'rgba(235,245,255,0.56)']] },
@@ -1286,6 +1314,16 @@
 
                 ctx.save();
                 ctx.scale(W / 1080, H / 1350);
+
+                // Soft ambient blue orb behind hero card
+                const orbGrad = ctx.createRadialGradient(540, 600, 0, 540, 600, 380);
+                orbGrad.addColorStop(0, 'rgba(96, 165, 250, 0.34)');
+                orbGrad.addColorStop(0.55, 'rgba(147, 197, 253, 0.16)');
+                orbGrad.addColorStop(1, 'rgba(191, 219, 254, 0)');
+                ctx.fillStyle = orbGrad;
+                ctx.beginPath();
+                ctx.arc(540, 600, 380, 0, Math.PI * 2);
+                ctx.fill();
 
                 const ribGrad = ctx.createLinearGradient(0, 0, 1080, 1350);
                 ribGrad.addColorStop(0, 'rgba(59, 130, 246, 0.42)');
@@ -1518,19 +1556,28 @@
             ctx.save();
             roundRectPath(heroCardX + 4, heroCardY + 4, hCfg.cardW - 8, heroCardH - 8, Math.max(0, T.cardRad - 4));
             ctx.clip();
-            ctx.strokeStyle = T.cardGrid;
-            ctx.lineWidth = 1;
-            for (let gx = heroCardX; gx < heroCardX + hCfg.cardW; gx += 26) {
-                ctx.beginPath();
-                ctx.moveTo(gx, heroCardY);
-                ctx.lineTo(gx, heroCardY + heroCardH);
-                ctx.stroke();
-            }
-            for (let gy = heroCardY; gy < heroCardY + heroCardH; gy += 26) {
-                ctx.beginPath();
-                ctx.moveTo(heroCardX, gy);
-                ctx.lineTo(heroCardX + hCfg.cardW, gy);
-                ctx.stroke();
+            if (T.cardGrid) {
+                ctx.strokeStyle = T.cardGrid;
+                ctx.lineWidth = 1;
+                for (let gx = heroCardX; gx < heroCardX + hCfg.cardW; gx += 26) {
+                    ctx.beginPath();
+                    ctx.moveTo(gx, heroCardY);
+                    ctx.lineTo(gx, heroCardY + heroCardH);
+                    ctx.stroke();
+                }
+                for (let gy = heroCardY; gy < heroCardY + heroCardH; gy += 26) {
+                    ctx.beginPath();
+                    ctx.moveTo(heroCardX, gy);
+                    ctx.lineTo(heroCardX + hCfg.cardW, gy);
+                    ctx.stroke();
+                }
+            } else if (currentStyle === 'glass') {
+                const sheen = ctx.createLinearGradient(heroCardX, heroCardY, heroCardX + hCfg.cardW * 0.65, heroCardY + heroCardH * 0.85);
+                sheen.addColorStop(0, 'rgba(255,255,255,0.46)');
+                sheen.addColorStop(0.45, 'rgba(255,255,255,0.12)');
+                sheen.addColorStop(1, 'rgba(255,255,255,0)');
+                ctx.fillStyle = sheen;
+                ctx.fillRect(heroCardX, heroCardY, hCfg.cardW, heroCardH);
             }
             ctx.restore();
 
@@ -1548,10 +1595,15 @@
             const heroCenterX = W / 2;
             const heroCenterY = heroCardY + hCfg.cardPt + hCfg.svgH / 2;
 
-            const drawHeroSvgLayer = (ox, oy, fillCol, strokeCol, strokeW) => {
+            const drawHeroSvgLayer = (ox, oy, fillCol, strokeCol, strokeW, blurGlow = false) => {
                 ctx.save();
                 ctx.translate(heroCenterX, heroCenterY);
                 ctx.scale(svgScale, svgScale);
+                if (blurGlow) {
+                    ctx.shadowColor = 'rgba(30, 64, 175, 0.34)';
+                    ctx.shadowBlur = 18;
+                    ctx.shadowOffsetY = 12;
+                }
                 ctx.font = `400 ${vFs}px "Archivo Black", "Space Grotesk", sans-serif`;
                 ctx.textBaseline = 'middle';
                 ctx.lineJoin = 'round';
@@ -1564,9 +1616,10 @@
                 ctx.textAlign = 'left';
                 const resolvedHeroFill = (() => {
                     if (fillCol !== 'glassGrad') return fillCol;
-                    const hg = ctx.createLinearGradient(0, oy - vFs * 0.42, 0, oy + vFs * 0.42);
-                    hg.addColorStop(0, '#F84B4B');
-                    hg.addColorStop(0.55, '#DC2626');
+                    const hg = ctx.createLinearGradient(0, oy - vFs * 0.36, 0, oy + vFs * 0.36);
+                    hg.addColorStop(0, '#FF8585');
+                    hg.addColorStop(0.28, '#F84B4B');
+                    hg.addColorStop(0.68, '#DC2626');
                     hg.addColorStop(1, '#991B1B');
                     return hg;
                 })();
@@ -1582,8 +1635,8 @@
                 });
                 ctx.restore();
             };
-            drawHeroSvgLayer(T.heroShadowOff, T.heroShadowOff, T.heroShadowFill, T.heroShadowStroke, T.heroShadowSW);
-            drawHeroSvgLayer(0, 0, T.heroMainFill, T.heroMainStroke, T.heroMainSW);
+            drawHeroSvgLayer(T.heroShadowOff, T.heroShadowOff, T.heroShadowFill, T.heroShadowStroke, T.heroShadowSW, !!T.heroShadowBlur);
+            drawHeroSvgLayer(0, 0, T.heroMainFill, T.heroMainStroke, T.heroMainSW, !!T.heroMainBlur);
 
             // COUNTDOWN Badge
             const cdTxt = (document.getElementById('outCountdown').textContent || 'COUNTDOWN').trim().toUpperCase();
