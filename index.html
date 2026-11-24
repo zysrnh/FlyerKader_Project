@@ -123,36 +123,57 @@
             background: #E6FC6D;
             border-bottom: 4px solid #000000;
         }
-        .l2-title-main {
-            font-family: 'Space Grotesk', 'Archivo Black', sans-serif;
-            font-weight: 800;
-            letter-spacing: -0.03em;
-            color: #08172E;
-            line-height: 0.94;
-        }
-        .l2-pill {
-            background: #E6FC6D;
+        .l2-sticker-top {
+            background: #08172E;
+            color: #E6FC6D;
             border: 3px solid #000000;
-            border-radius: 12px;
+            box-shadow: 5px 5px 0 #000000;
+            transform: rotate(-2deg);
+        }
+        .l2-sticker-stamp {
+            background: #CA2C2A;
+            color: #FFFFFF;
+            border: 3.5px solid #000000;
+            box-shadow: 6px 6px 0 #000000;
+            transform: rotate(1.5deg);
+        }
+        .l2-chip {
+            background: #F8FBFF;
+            border: 3px solid #000000;
             box-shadow: 4px 4px 0 #000000;
         }
-        .l2-star-tr { top: 50%; right: 20px; transform: translateY(-335px); width: 410px; height: 410px; }
-        .l2-star-bl { top: 50%; left: 10px;  transform: translateY(-60px);  width: 440px; height: 440px; }
-        .ratio-9-16 .l2-star-tr { transform: translateY(-360px); width: 450px; height: 450px; }
-        .ratio-9-16 .l2-star-bl { transform: translateY(-50px);  width: 480px; height: 480px; }
-        .ratio-1-1  .l2-star-tr { transform: translateY(-305px); width: 360px; height: 360px; }
-        .ratio-1-1  .l2-star-bl { transform: translateY(-55px);  width: 390px; height: 390px; }
+        .l2-chip-num {
+            background: #E6FC6D;
+            color: #000000;
+            border-right: 3px solid #000000;
+        }
+        .l2-cta-chip {
+            background: #148DF3;
+            color: #FFFFFF;
+            border: 3px solid #000000;
+            box-shadow: 5px 5px 0 #000000;
+            transform: rotate(-1deg);
+        }
+        .l2-hero-svg { width: 640px; height: 210px; }
+        .ratio-1-1 .l2-hero-svg { width: 560px; height: 165px; }
+        .ratio-9-16 .l2-hero-svg { width: 680px; height: 230px; }
+
+        .l2-star-tr { top: 50%; right: 20px; transform: translateY(-410px); width: 410px; height: 410px; }
+        .l2-star-bl { top: 50%; left: 10px;  transform: translateY(-20px);  width: 440px; height: 440px; }
+        .ratio-9-16 .l2-star-tr { transform: translateY(-440px); width: 450px; height: 450px; }
+        .ratio-9-16 .l2-star-bl { transform: translateY(-10px);  width: 480px; height: 480px; }
+        .ratio-1-1  .l2-star-tr { transform: translateY(-370px); width: 350px; height: 350px; }
+        .ratio-1-1  .l2-star-bl { transform: translateY(-20px);  width: 370px; height: 370px; }
 
         .l2-cursor-wrap {
             position: absolute;
-            top: 50%;
-            right: 34px;
-            transform: translateY(98px);
+            right: -30px;
+            bottom: -222px;
             z-index: 30;
             pointer-events: none;
         }
-        .ratio-9-16 .l2-cursor-wrap { right: 36px; transform: translateY(112px) scale(1.1); transform-origin: top right; }
-        .ratio-1-1  .l2-cursor-wrap { right: 40px; transform: translateY(88px) scale(0.92); transform-origin: top right; }
+        .ratio-9-16 .l2-cursor-wrap { right: -26px; bottom: -242px; transform: scale(1.12); transform-origin: bottom right; }
+        .ratio-1-1  .l2-cursor-wrap { right: -24px; bottom: -192px; transform: scale(0.86); transform-origin: bottom right; }
 
         /* ================= THEME 1: NEUBRUTALISM ================= */
         .style-neubrutalism {
@@ -916,66 +937,104 @@
                             <polygon points="210,12 248,108 345,52 308,148 408,168 320,224 388,308 282,294 274,398 210,322 146,398 138,294 32,308 100,224 12,168 112,148 75,52 172,108" fill="#E6FC6D"/>
                         </svg>
 
-                        <!-- Centered Retro Pop-up Dialog Window -->
+                        <!-- Centered Retro Pop-up Dialog Window + Attached Pixel Cursor -->
                         <div class="absolute inset-0 z-20 flex items-center justify-center px-10">
-                            <div class="l2-window overflow-hidden">
-                                <!-- Lime Title Bar with Dual Logos + X Button -->
-                                <div class="l2-titlebar px-6 py-4 flex items-center justify-between">
-                                    <div class="flex items-center gap-3">
-                                        <div class="w-10 h-10 bg-white border-2 border-black p-1 flex items-center justify-center shrink-0">
+                            <div class="relative">
+                                <div class="l2-window overflow-hidden">
+                                    <!-- Lime Title Bar: Logo Ujung Kiri, HIMA INFORMATIKA IDE LPKIA Tengah, Logo Ujung Kanan -->
+                                    <div class="l2-titlebar px-6 py-3.5 grid grid-cols-[auto_1fr_auto] items-center gap-4">
+                                        <div class="w-12 h-12 bg-white border-2 border-black p-1 flex items-center justify-center shrink-0">
                                             <img id="l2HimaLogo" src="" alt="Logo HIMA IF" class="w-full h-full object-contain">
                                         </div>
-                                        <div class="w-10 h-10 bg-white border-2 border-black p-1 flex items-center justify-center shrink-0">
+                                        <div class="text-center">
+                                            <p class="font-display text-[25px] font-bold uppercase tracking-[0.04em] text-[#08172E] leading-none">
+                                                HIMA INFORMATIKA
+                                            </p>
+                                            <p class="text-[13px] font-extrabold uppercase tracking-[0.24em] text-[#1A467C] mt-1 leading-none">
+                                                IDE LPKIA
+                                            </p>
+                                        </div>
+                                        <div class="w-12 h-12 bg-white border-2 border-black p-1 flex items-center justify-center shrink-0">
                                             <img id="l2LpkiaLogo" src="" alt="Logo IDE LPKIA" class="w-full h-full object-contain">
                                         </div>
-                                        <span class="font-display text-[26px] font-bold tracking-tight text-[#08172E] leading-none">
-                                            HIMA INFORMATIKA<span class="text-[13px] font-extrabold ml-2 opacity-75 uppercase tracking-wider">IDE LPKIA</span>
-                                        </span>
                                     </div>
-                                    <svg class="w-7 h-7 text-black shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" aria-hidden="true">
-                                        <path stroke-linecap="square" d="M5 5l14 14M19 5L5 19"/>
-                                    </svg>
+
+                                    <!-- White Dialog Hero Highlight (Fokus H-7 + Sticker Tempel) -->
+                                    <div class="px-8 pt-7 pb-7 flex flex-col items-center">
+                                        <!-- Top Tilted Pixel Sticker: COUNTDOWN • MENUJU -->
+                                        <div class="l2-sticker-top px-6 py-2">
+                                            <span id="l2OutBanner" class="font-pixel text-[26px] font-bold uppercase tracking-[0.08em] leading-none block">
+                                                COUNTDOWN • MENUJU
+                                            </span>
+                                        </div>
+
+                                        <!-- Giant H-7 Highlight SVG -->
+                                        <svg viewBox="0 0 680 220" class="l2-hero-svg mt-2 overflow-visible" aria-label="H-7">
+                                            <text id="l2SvgShadow" x="354" y="122" text-anchor="middle" dominant-baseline="central"
+                                                  class="font-hero svg-stroke" font-size="225" font-weight="400" letter-spacing="14"
+                                                  fill="#000000" stroke="#000000" stroke-width="26">
+                                                H-7
+                                            </text>
+                                            <text id="l2SvgMain" x="340" y="108" text-anchor="middle" dominant-baseline="central"
+                                                  class="font-hero svg-stroke" font-size="225" font-weight="400" letter-spacing="14"
+                                                  fill="#CA2C2A" stroke="#000000" stroke-width="18">
+                                                H-7
+                                            </text>
+                                        </svg>
+
+                                        <!-- Tilted Red Event Sticker Stamp: KADERISASI -->
+                                        <div class="l2-sticker-stamp -mt-3 px-7 py-2.5 inline-flex items-center gap-3">
+                                            <svg class="w-7 h-7 shrink-0 text-white" fill="none" stroke="currentColor" stroke-width="2.8" viewBox="0 0 24 24" aria-hidden="true">
+                                                <circle cx="12" cy="12" r="9"></circle>
+                                                <path stroke-linecap="square" d="M12 7v5l3 2"></path>
+                                            </svg>
+                                            <span id="l2OutTitle" class="font-display text-[40px] font-bold uppercase tracking-[0.06em] leading-none">
+                                                KADERISASI
+                                            </span>
+                                        </div>
+
+                                        <!-- Unified Bottom Sticker Chips (Tgl/Waktu, Lokasi, & CTA menunjuk ke kursor) -->
+                                        <div class="w-full mt-6 flex flex-col gap-3">
+                                            <div class="grid grid-cols-[1.35fr_1fr] gap-3 w-full">
+                                                <div class="l2-chip flex items-center overflow-hidden">
+                                                    <div id="l2OutNum" class="l2-chip-num px-3.5 py-2.5 font-display text-[24px] font-bold leading-none shrink-0">
+                                                        04
+                                                    </div>
+                                                    <div class="px-3.5 py-2 min-w-0">
+                                                        <p id="l2OutDate" class="font-display text-[17px] font-bold uppercase text-[#08172E] leading-tight truncate">
+                                                            JUMAT, 04 DES 2026
+                                                        </p>
+                                                        <p id="l2OutTime" class="text-[12px] font-extrabold uppercase text-[#2A82C6] leading-tight mt-0.5 truncate">
+                                                            08.00 WIB
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="l2-chip px-4 py-2 flex flex-col justify-center min-w-0">
+                                                    <span class="text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#CA2C2A] leading-none">LOKASI</span>
+                                                    <p id="l2OutLoc" class="font-display text-[17px] font-bold uppercase text-[#08172E] leading-tight mt-1 truncate">
+                                                        KAMPUS IDE LPKIA
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <div class="flex items-center justify-start pr-[185px]">
+                                                <div class="l2-cta-chip px-6 py-2.5 inline-flex items-center gap-3">
+                                                    <span class="w-3 h-3 bg-[#E6FC6D] border-2 border-black inline-block shrink-0"></span>
+                                                    <span id="l2OutCta" class="font-display text-[20px] font-bold uppercase tracking-[0.08em] leading-none">
+                                                        GO.HMIF-LPKIA.MY.ID
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <!-- White Dialog Content Body -->
-                                <div class="px-9 pt-8 pb-8 flex flex-col gap-6">
-                                    <h1 id="l2OutTitle" class="l2-title-main text-[122px] uppercase text-center leading-none truncate">
-                                        KADERISASI
-                                    </h1>
-
-                                    <div class="flex items-center justify-between gap-4">
-                                        <div class="l2-pill px-5 py-3 inline-flex flex-col">
-                                            <span id="l2OutPillTop" class="font-display text-[23px] font-bold uppercase text-black leading-tight">
-                                                COUNTDOWN : H-7
-                                            </span>
-                                            <span id="l2OutPillSub" class="font-display text-[17px] font-bold uppercase text-[#08172E] leading-tight mt-0.5">
-                                                MENUJU HARI PELAKSANAAN
-                                            </span>
-                                        </div>
-                                        <div class="text-right pr-2 shrink-0">
-                                            <p class="text-[12px] font-extrabold uppercase tracking-[0.16em] text-[#08172E]/80 leading-tight">EVENT</p>
-                                            <p class="text-[12px] font-extrabold uppercase tracking-[0.16em] text-[#08172E] leading-tight">INFORMATIKA</p>
-                                        </div>
-                                    </div>
-
-                                    <!-- Bottom Info Strip (kept clear of bottom-right cursor arrow) -->
-                                    <div class="flex items-end justify-between gap-4 pt-3 border-t-2 border-black/15 pr-[235px]">
-                                        <div class="text-[13px] font-extrabold uppercase text-[#08172E] leading-snug">
-                                            <p id="l2OutDate">04 • JUMAT, 04 DES 2026</p>
-                                            <p id="l2OutTimeLoc" class="mt-0.5 text-[#1A467C]">08.00 WIB • KAMPUS IDE LPKIA</p>
-                                        </div>
-                                        <div class="text-right text-[12px] font-extrabold uppercase text-[#08172E] leading-snug">
-                                            <p class="text-[#08172E]/70">OFFICIAL PORTAL:</p>
-                                            <p id="l2OutCta" class="text-[#CA2C2A] tracking-wider">GO.HMIF-LPKIA.MY.ID</p>
-                                        </div>
-                                    </div>
+                                <!-- Giant 8-Bit Pixelated Arrow Cursor pointing at CTA / Window Bottom-Right -->
+                                <div class="l2-cursor-wrap">
+                                    <svg id="l2CursorSvg" width="192" height="304" viewBox="0 0 12 19" shape-rendering="crispEdges" aria-hidden="true"></svg>
                                 </div>
                             </div>
-                        </div>
-
-                        <!-- Giant 8-Bit Pixelated Arrow Cursor -->
-                        <div class="l2-cursor-wrap">
-                            <svg id="l2CursorSvg" width="216" height="342" viewBox="0 0 12 19" shape-rendering="crispEdges" aria-hidden="true"></svg>
                         </div>
                     </div>
 
@@ -1039,12 +1098,14 @@
             svg.innerHTML = rects;
         }
 
-        function getL2BgRows(word) {
-            const clean = (word || 'KADERISASI').replace(/\s+/g, '') || 'KADERISASI';
-            const rep = clean.repeat(4);
+        function getL2BgRows(cd, title) {
+            const w1 = (cd || 'COUNTDOWN').replace(/\s+/g, '') || 'COUNTDOWN';
+            const w2 = (title || 'KADERISASI').replace(/\s+/g, '') || 'KADERISASI';
             const rows = [];
             for (let i = 0; i < 12; i++) {
-                const shift = (i * 3) % clean.length;
+                const base = i % 2 === 0 ? w1 : w2;
+                const rep = base.repeat(4);
+                const shift = (i * 3) % base.length;
                 rows.push(rep.slice(shift) + rep.slice(0, shift));
             }
             return rows;
@@ -1057,31 +1118,44 @@
             const mn = (document.getElementById('inMenuju')?.value || 'MENUJU').trim().toUpperCase() || 'MENUJU';
             const num = (document.getElementById('inNum')?.value || '04').trim() || '04';
             const date = (document.getElementById('inDate')?.value || 'JUMAT, 04 DES 2026').trim().toUpperCase();
-            const time = (document.getElementById('inTime')?.value || '08.00 WIB').trim();
+            const time = (document.getElementById('inTime')?.value || '08.00 WIB').trim().toUpperCase();
             const loc = (document.getElementById('inLoc')?.value || 'Kampus IDE LPKIA').trim().toUpperCase();
             const cta = (document.getElementById('inCta')?.value || 'GO.HMIF-LPKIA.MY.ID').trim().toUpperCase();
 
-            const titleEl = document.getElementById('l2OutTitle');
-            if (titleEl) {
-                titleEl.textContent = title;
-                const autoFs = title.length > 13 ? 72 : (title.length > 10 ? 92 : 122);
-                titleEl.style.fontSize = autoFs + 'px';
-            }
-            const pillTop = document.getElementById('l2OutPillTop');
-            const pillSub = document.getElementById('l2OutPillSub');
-            if (pillTop) pillTop.textContent = `${cd} : ${hero}`;
-            if (pillSub) pillSub.textContent = `${mn} HARI PELAKSANAAN`;
+            const bannerEl = document.getElementById('l2OutBanner');
+            if (bannerEl) bannerEl.textContent = `${cd} • ${mn}`;
 
+            const heroLen = hero.length;
+            const hFs = heroLen >= 6 ? 160 : (heroLen >= 5 ? 190 : 225);
+            const hLs = heroLen >= 5 ? 6 : 14;
+            const l2Shd = document.getElementById('l2SvgShadow');
+            const l2Main = document.getElementById('l2SvgMain');
+            if (l2Shd && l2Main) {
+                l2Shd.textContent = hero;
+                l2Main.textContent = hero;
+                l2Shd.setAttribute('font-size', hFs);
+                l2Main.setAttribute('font-size', hFs);
+                l2Shd.setAttribute('letter-spacing', hLs);
+                l2Main.setAttribute('letter-spacing', hLs);
+            }
+
+            const titleEl = document.getElementById('l2OutTitle');
+            if (titleEl) titleEl.textContent = title;
+
+            const nEl = document.getElementById('l2OutNum');
             const dEl = document.getElementById('l2OutDate');
-            const tlEl = document.getElementById('l2OutTimeLoc');
+            const tEl = document.getElementById('l2OutTime');
+            const lEl = document.getElementById('l2OutLoc');
             const ctaEl = document.getElementById('l2OutCta');
-            if (dEl) dEl.textContent = `${num} • ${date}`;
-            if (tlEl) tlEl.textContent = `${time} • ${loc}`;
+            if (nEl) nEl.textContent = num;
+            if (dEl) dEl.textContent = date;
+            if (tEl) tEl.textContent = time;
+            if (lEl) lEl.textContent = loc;
             if (ctaEl) ctaEl.textContent = cta;
 
             const wall = document.getElementById('l2BgWall');
             if (wall) {
-                wall.innerHTML = getL2BgRows(title)
+                wall.innerHTML = getL2BgRows(cd, title)
                     .map((line) => `<div class="l2-bg-row">${line}</div>`)
                     .join('');
             }
@@ -2060,7 +2134,7 @@
 
             const bgFs = currentRatio === '9-16' ? 260 : (currentRatio === '1-1' ? 210 : 235);
             const rowH = bgFs * 0.80;
-            const bgRows = getL2BgRows(title);
+            const bgRows = getL2BgRows(cd, title);
             const totalWallH = bgRows.length * rowH;
             const wallStartY = (H - totalWallH) / 2 + rowH * 0.5;
             bgRows.forEach((line, idx) => {
@@ -2089,10 +2163,10 @@
             };
 
             const starCfg = currentRatio === '9-16'
-                ? { trSize: 450, trY: 360, blSize: 480, blY: 50 }
+                ? { trSize: 450, trY: 440, blSize: 480, blY: 10 }
                 : (currentRatio === '1-1'
-                    ? { trSize: 360, trY: 305, blSize: 390, blY: 55 }
-                    : { trSize: 410, trY: 335, blSize: 440, blY: 60 });
+                    ? { trSize: 350, trY: 370, blSize: 370, blY: 20 }
+                    : { trSize: 410, trY: 410, blSize: 440, blY: 20 });
 
             drawStar(W - 20 - starCfg.trSize, H / 2 - starCfg.trY, starCfg.trSize);
             drawStar(10, H / 2 - starCfg.blY, starCfg.blSize);
@@ -2100,13 +2174,13 @@
             // 3. Centered Retro Pop-up Dialog Window
             const winW = currentRatio === '9-16' ? 920 : (currentRatio === '1-1' ? 880 : 900);
             const winX = (W - winW) / 2;
-            const tbH = 74;
-            const titleFs = title.length > 13 ? 72 : (title.length > 10 ? 92 : 122);
-            const bodyPadTop = 32;
-            const titleH = titleFs * 0.94;
-            const pillBoxH = 74;
-            const botStripH = 54;
-            const winH = tbH + bodyPadTop + titleH + 24 + pillBoxH + 24 + botStripH + 32;
+            const tbH = 78;
+            const heroSvgDim = currentRatio === '9-16' ? { w: 680, h: 230 } : (currentRatio === '1-1' ? { w: 560, h: 165 } : { w: 640, h: 210 });
+            const stickerTopH = 44;
+            const stampBoxH = 62;
+            const chipRowH = 56;
+            const ctaChipH = 48;
+            const winH = tbH + 28 + stickerTopH + 8 + heroSvgDim.h - 12 + stampBoxH + 24 + chipRowH + 12 + ctaChipH + 28;
             const winY = Math.round((H - winH) / 2);
 
             // Hard Neubrutalism shadow
@@ -2131,107 +2205,181 @@
             rrPath(winX, winY, winW, winH, 6);
             ctx.stroke();
 
-            // Titlebar Dual Logos + Brand + Close X
+            // Titlebar: Logo Ujung Kiri, HIMA INFORMATIKA / IDE LPKIA Tengah, Logo Ujung Kanan
             const drawMiniLogo = (lx, ly, img) => {
                 ctx.fillStyle = '#FFFFFF';
-                ctx.fillRect(lx, ly, 40, 40);
+                ctx.fillRect(lx, ly, 48, 48);
                 ctx.lineWidth = 2;
                 ctx.strokeStyle = '#000000';
-                ctx.strokeRect(lx, ly, 40, 40);
+                ctx.strokeRect(lx, ly, 48, 48);
                 if (img) {
-                    const maxD = 32;
+                    const maxD = 38;
                     const ratio = Math.min(maxD / img.width, maxD / img.height);
                     const dw = img.width * ratio;
                     const dh = img.height * ratio;
-                    ctx.drawImage(img, lx + (40 - dw) / 2, ly + (40 - dh) / 2, dw, dh);
+                    ctx.drawImage(img, lx + (48 - dw) / 2, ly + (48 - dh) / 2, dw, dh);
                 }
             };
             const tbPadX = 24;
-            const tbLogoY = winY + (tbH - 4 - 40) / 2;
+            const tbLogoY = winY + (tbH - 4 - 48) / 2;
             drawMiniLogo(winX + tbPadX, tbLogoY, himaImg);
-            drawMiniLogo(winX + tbPadX + 52, tbLogoY, lpkiaImg);
+            drawMiniLogo(winX + winW - tbPadX - 48, tbLogoY, lpkiaImg);
 
-            ctx.font = '700 26px "Space Grotesk", sans-serif';
-            ctx.fillStyle = '#08172E';
-            ctx.textAlign = 'left';
-            ctx.textBaseline = 'middle';
-            const brandX = winX + tbPadX + 104;
-            const brandCY = winY + (tbH - 4) / 2 + 1;
-            ctx.fillText('HIMA INFORMATIKA', brandX, brandCY);
-            const brandW = ctx.measureText('HIMA INFORMATIKA').width;
-            ctx.font = '800 13px "Plus Jakarta Sans", sans-serif';
-            ctx.fillStyle = 'rgba(8, 23, 46, 0.75)';
-            ctx.fillText('IDE LPKIA', brandX + brandW + 10, brandCY + 2);
+            const tbMidY = winY + (tbH - 4) / 2;
+            drawTextTrack('HIMA INFORMATIKA', winX + winW / 2, tbMidY - 8, '700 25px "Space Grotesk", sans-serif', '#08172E', 1, 'center');
+            drawTextTrack('IDE LPKIA', winX + winW / 2, tbMidY + 14, '800 13px "Plus Jakarta Sans", sans-serif', '#1A467C', 3.1, 'center');
 
-            // X close icon
-            const xSize = 20;
-            const xLeft = winX + winW - tbPadX - xSize;
-            const xTop = winY + (tbH - 4 - xSize) / 2;
-            ctx.strokeStyle = '#000000';
-            ctx.lineWidth = 3.2;
-            ctx.lineCap = 'square';
-            ctx.beginPath();
-            ctx.moveTo(xLeft, xTop);
-            ctx.lineTo(xLeft + xSize, xTop + xSize);
-            ctx.moveTo(xLeft + xSize, xTop);
-            ctx.lineTo(xLeft, xTop + xSize);
-            ctx.stroke();
-
-            // Dialog Body Content
-            const bodyX = winX + 36;
-            const bodyW = winW - 72;
-            const titleCY = winY + tbH + bodyPadTop + titleH / 2;
-            drawTextTrack(title, winX + winW / 2, titleCY, `800 ${titleFs}px "Space Grotesk", "Archivo Black", sans-serif`, '#08172E', -0.03 * titleFs, 'center');
-
-            // Middle Row: Highlight Pill + Right micro label
-            const midY = winY + tbH + bodyPadTop + titleH + 24;
-            const pillTextTop = `${cd} : ${hero}`;
-            const pillTextSub = `${mn} HARI PELAKSANAAN`;
-            ctx.font = '700 23px "Space Grotesk", sans-serif';
-            const topW = ctx.measureText(pillTextTop).width;
-            ctx.font = '700 17px "Space Grotesk", sans-serif';
-            const subW = ctx.measureText(pillTextSub).width;
-            const pillW = Math.max(topW, subW) + 40;
-
+            // Top Tilted Sticker: COUNTDOWN • MENUJU
+            const topTagTxt = `${cd} • ${mn}`;
+            ctx.font = '700 26px "Silkscreen", monospace';
+            const topTagW = ctx.measureText(topTagTxt).width + Math.max(0, topTagTxt.length - 1) * 2.1 + 48;
+            const topTagCY = winY + tbH + 28 + stickerTopH / 2;
+            ctx.save();
+            ctx.translate(winX + winW / 2, topTagCY);
+            ctx.rotate((-2 * Math.PI) / 180);
             ctx.fillStyle = '#000000';
-            rrPath(bodyX + 4, midY + 4, pillW, pillBoxH, 12);
-            ctx.fill();
-            ctx.fillStyle = '#E6FC6D';
-            rrPath(bodyX, midY, pillW, pillBoxH, 12);
-            ctx.fill();
+            ctx.fillRect(-topTagW / 2 + 5, -stickerTopH / 2 + 5, topTagW, stickerTopH);
+            ctx.fillStyle = '#08172E';
+            ctx.fillRect(-topTagW / 2, -stickerTopH / 2, topTagW, stickerTopH);
             ctx.lineWidth = 3;
             ctx.strokeStyle = '#000000';
-            rrPath(bodyX, midY, pillW, pillBoxH, 12);
+            ctx.strokeRect(-topTagW / 2, -stickerTopH / 2, topTagW, stickerTopH);
+            drawTextTrack(topTagTxt, 0, 1, '700 26px "Silkscreen", monospace', '#E6FC6D', 2.1, 'center');
+            ctx.restore();
+
+            // Giant H-7 Highlight Hero SVG inside Window
+            const hLen = hero.length;
+            const hFs = hLen >= 6 ? 160 : (hLen >= 5 ? 190 : 225);
+            const hLs = hLen >= 5 ? 6 : 14;
+            const svgScale = heroSvgDim.w / 680;
+            const heroCY = winY + tbH + 28 + stickerTopH + 8 + heroSvgDim.h / 2;
+
+            const drawL2HeroLayer = (ox, oy, fillCol, strokeCol, strokeW) => {
+                ctx.save();
+                ctx.translate(winX + winW / 2, heroCY);
+                ctx.scale(svgScale, svgScale);
+                ctx.font = `400 ${hFs}px "Archivo Black", "Space Grotesk", sans-serif`;
+                ctx.textBaseline = 'middle';
+                ctx.lineJoin = 'round';
+                ctx.lineCap = 'round';
+                const chars = Array.from(hero);
+                const ws = chars.map((c) => ctx.measureText(c).width);
+                const tot = ws.reduce((a, b) => a + b, 0) + hLs * Math.max(0, chars.length - 1);
+                let cx = -tot / 2 + ox;
+                ctx.textAlign = 'left';
+                chars.forEach((c, idx) => {
+                    ctx.lineWidth = strokeW;
+                    ctx.strokeStyle = strokeCol;
+                    ctx.strokeText(c, cx, oy);
+                    ctx.fillStyle = fillCol;
+                    ctx.fillText(c, cx, oy);
+                    cx += ws[idx] + hLs;
+                });
+                ctx.restore();
+            };
+            drawL2HeroLayer(14, 14, '#000000', '#000000', 26);
+            drawL2HeroLayer(0, 0, '#CA2C2A', '#000000', 18);
+
+            // Tilted Red Event Sticker Stamp: KADERISASI
+            ctx.font = '700 40px "Space Grotesk", sans-serif';
+            const stTxtW = ctx.measureText(title).width + Math.max(0, title.length - 1) * 2.4;
+            const stW = 56 + 28 + 12 + stTxtW;
+            const stampCY = heroCY + heroSvgDim.h / 2 - 12 + stampBoxH / 2;
+            ctx.save();
+            ctx.translate(winX + winW / 2, stampCY);
+            ctx.rotate((1.5 * Math.PI) / 180);
+            ctx.fillStyle = '#000000';
+            ctx.fillRect(-stW / 2 + 6, -stampBoxH / 2 + 6, stW, stampBoxH);
+            ctx.fillStyle = '#CA2C2A';
+            ctx.fillRect(-stW / 2, -stampBoxH / 2, stW, stampBoxH);
+            ctx.lineWidth = 3.5;
+            ctx.strokeStyle = '#000000';
+            ctx.strokeRect(-stW / 2, -stampBoxH / 2, stW, stampBoxH);
+            // Clock icon
+            const clkX = -stW / 2 + 28 + 14;
+            ctx.strokeStyle = '#FFFFFF';
+            ctx.lineWidth = 2.8;
+            ctx.beginPath();
+            ctx.arc(clkX, 0, 12, 0, Math.PI * 2);
             ctx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(clkX, -6.5);
+            ctx.lineTo(clkX, 0);
+            ctx.lineTo(clkX + 5, 3);
+            ctx.stroke();
+            drawTextTrack(title, -stW / 2 + 28 + 28 + 12, 1, '700 40px "Space Grotesk", sans-serif', '#FFFFFF', 2.4, 'left');
+            ctx.restore();
 
-            drawTextTrack(pillTextTop, bodyX + 20, midY + 25, '700 23px "Space Grotesk", sans-serif', '#000000', 0, 'left');
-            drawTextTrack(pillTextSub, bodyX + 20, midY + 52, '700 17px "Space Grotesk", sans-serif', '#08172E', 0, 'left');
+            // Unified Bottom Sticker Chips
+            const bodyX = winX + 32;
+            const bodyW = winW - 64;
+            const chipY = stampCY + stampBoxH / 2 + 24;
+            const chipGap = 12;
+            const chip1W = (bodyW - chipGap) * (1.35 / 2.35);
+            const chip2W = bodyW - chipGap - chip1W;
+            const chip2X = bodyX + chip1W + chipGap;
 
-            drawTextTrack('EVENT', winX + winW - 44, midY + 28, '800 12px "Plus Jakarta Sans", sans-serif', 'rgba(8,23,46,0.8)', 2, 'right');
-            drawTextTrack('INFORMATIKA', winX + winW - 44, midY + 44, '800 12px "Plus Jakarta Sans", sans-serif', '#08172E', 2, 'right');
+            // Chip 1: Date + Time
+            ctx.fillStyle = '#000000';
+            ctx.fillRect(bodyX + 4, chipY + 4, chip1W, chipRowH);
+            ctx.fillStyle = '#F8FBFF';
+            ctx.fillRect(bodyX, chipY, chip1W, chipRowH);
+            ctx.font = '700 24px "Space Grotesk", sans-serif';
+            const numW = Math.max(ctx.measureText(num).width + 28, 56);
+            ctx.fillStyle = '#E6FC6D';
+            ctx.fillRect(bodyX, chipY, numW, chipRowH);
+            ctx.fillStyle = '#000000';
+            ctx.fillRect(bodyX + numW - 3, chipY, 3, chipRowH);
+            ctx.lineWidth = 3;
+            ctx.strokeStyle = '#000000';
+            ctx.strokeRect(bodyX, chipY, chip1W, chipRowH);
+            drawTextTrack(num, bodyX + numW / 2, chipY + chipRowH / 2 + 1, '700 24px "Space Grotesk", sans-serif', '#000000', 0, 'center');
+            drawTextTrack(date, bodyX + numW + 14, chipY + chipRowH / 2 - 9, '700 17px "Space Grotesk", sans-serif', '#08172E', 0, 'left');
+            drawTextTrack(time.toUpperCase(), bodyX + numW + 14, chipY + chipRowH / 2 + 11, '800 12px "Plus Jakarta Sans", sans-serif', '#2A82C6', 0, 'left');
 
-            // Divider & Bottom Metadata Row (clear of cursor zone)
-            const divY = midY + pillBoxH + 24;
-            ctx.fillStyle = 'rgba(0, 0, 0, 0.15)';
-            ctx.fillRect(bodyX, divY, bodyW - 235, 2);
+            // Chip 2: Location
+            ctx.fillStyle = '#000000';
+            ctx.fillRect(chip2X + 4, chipY + 4, chip2W, chipRowH);
+            ctx.fillStyle = '#F8FBFF';
+            ctx.fillRect(chip2X, chipY, chip2W, chipRowH);
+            ctx.lineWidth = 3;
+            ctx.strokeStyle = '#000000';
+            ctx.strokeRect(chip2X, chipY, chip2W, chipRowH);
+            drawTextTrack('LOKASI', chip2X + 16, chipY + chipRowH / 2 - 11, '800 10px "Plus Jakarta Sans", sans-serif', '#CA2C2A', 1.8, 'left');
+            drawTextTrack(loc, chip2X + 16, chipY + chipRowH / 2 + 9, '700 17px "Space Grotesk", sans-serif', '#08172E', 0, 'left');
 
-            drawTextTrack(`${num} • ${date}`, bodyX, divY + 20, '800 13px "Plus Jakarta Sans", sans-serif', '#08172E', 0, 'left');
-            drawTextTrack(`${time} • ${loc}`, bodyX, divY + 40, '800 13px "Plus Jakarta Sans", sans-serif', '#1A467C', 0, 'left');
+            // Row 2: CTA Action Chip (left/center, clear of bottom-right cursor arrow)
+            const ctaY = chipY + chipRowH + 12;
+            ctx.font = '700 20px "Space Grotesk", sans-serif';
+            const ctaW = ctx.measureText(cta).width + Math.max(0, cta.length - 1) * 1.6 + 48 + 24;
+            ctx.save();
+            ctx.translate(bodyX + ctaW / 2, ctaY + ctaChipH / 2);
+            ctx.rotate((-1 * Math.PI) / 180);
+            ctx.fillStyle = '#000000';
+            ctx.fillRect(-ctaW / 2 + 5, -ctaChipH / 2 + 5, ctaW, ctaChipH);
+            ctx.fillStyle = '#148DF3';
+            ctx.fillRect(-ctaW / 2, -ctaChipH / 2, ctaW, ctaChipH);
+            ctx.lineWidth = 3;
+            ctx.strokeStyle = '#000000';
+            ctx.strokeRect(-ctaW / 2, -ctaChipH / 2, ctaW, ctaChipH);
+            ctx.fillStyle = '#E6FC6D';
+            ctx.fillRect(-ctaW / 2 + 24, -6, 12, 12);
+            ctx.lineWidth = 2;
+            ctx.strokeRect(-ctaW / 2 + 24, -6, 12, 12);
+            drawTextTrack(cta, -ctaW / 2 + 48, 1, '700 20px "Space Grotesk", sans-serif', '#FFFFFF', 1.6, 'left');
+            ctx.restore();
 
-            const botRightX = winX + winW - 36 - 235;
-            drawTextTrack('OFFICIAL PORTAL:', botRightX, divY + 20, '800 12px "Plus Jakarta Sans", sans-serif', 'rgba(8,23,46,0.7)', 0, 'right');
-            drawTextTrack(cta, botRightX, divY + 40, '800 12px "Plus Jakarta Sans", sans-serif', '#CA2C2A', 1, 'right');
-
-            // 4. Giant 8-Bit Pixelated Arrow Cursor
+            // 4. Giant 8-Bit Pixelated Arrow Cursor anchored to bottom-right of window
             const curCfg = currentRatio === '9-16'
-                ? { unit: 20, rightOff: 36, yOff: 112 }
+                ? { unit: 16 * 1.12, rOff: -26, bOff: -242 }
                 : (currentRatio === '1-1'
-                    ? { unit: 16.5, rightOff: 40, yOff: 88 }
-                    : { unit: 18, rightOff: 34, yOff: 98 });
+                    ? { unit: 16 * 0.86, rOff: -24, bOff: -192 }
+                    : { unit: 16, rOff: -30, bOff: -222 });
 
             const curW = 12 * curCfg.unit;
-            const curX = W - curCfg.rightOff - curW;
-            const curY = H / 2 + curCfg.yOff;
+            const curH = 19 * curCfg.unit;
+            const curX = winX + winW - curW - curCfg.rOff;
+            const curY = winY + winH - curH - curCfg.bOff;
             const palette = { B: '#000000', W: '#FFFFFF', G: '#CBD5E1' };
             L2_CURSOR_MAP.forEach((row, ry) => {
                 for (let rx = 0; rx < row.length; rx++) {
