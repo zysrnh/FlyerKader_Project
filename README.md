@@ -17,14 +17,19 @@ FlyerKader_Project/
 │   ├── poster-h7-dark-4x5.png
 │   ├── poster-h7-modern-4x5.png
 │   ├── poster-h7-layout2-neubrutalism-4x5.png
-│   └── poster-h7-layout2-neubrutalism-9x16.png
+│   ├── poster-h7-layout2-neubrutalism-9x16.png
+│   ├── poster-h7-layout2-glass-4x5.png
+│   ├── poster-h7-layout2-dark-4x5.png
+│   ├── poster-h7-layout2-modern-4x5.png
+│   ├── poster-coming-soon-neubrutalism-4x5.png
+│   └── poster-coming-soon-glass-4x5.png
 └── archive/            # Eksplorasi desain sebelumnya (H-3)
 ```
 
 ## Fitur di `index.html`
 
-- **Switcher Layout:** `Layout 1 (Countdown Card)` & `Layout 2 (Retro Pop-up Neubrutalism)`
-- **Switcher Style (Layout 1):** `Neubrutalism` (default), `Glassmorphism`, `Dark Code`, dan `Modern Clean`
+- **Switcher Layout:** `Layout 1 (Countdown)`, `Layout 2 (Retro Pop-up)`, dan `Layout 3 (Coming Soon — Clean)`
+- **Switcher Style (Semua Layout):** `Neubrutalism` (default), `Glassmorphism`, `Dark Code`, dan `Modern Clean`
 - **Multi-Rasio IG:** `4:5 Feed (1080x1350)`, `9:16 Story (1080x1920)`, dan `1:1 Square (1080x1080)`
 - **Preset & Edit Teks Live:** `H-7`, `H-3`, `H-1`, `HARI H`, tanggal, jam, lokasi, dan stempel acara
 - **Export PNG 1080px:** Menggunakan native HTML5 Canvas 2D renderer tanpa library eksternal

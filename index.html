@@ -77,15 +77,15 @@
         .ratio-9-16 .cta-btn { padding: 16px 40px; }
         .ratio-9-16 .cta-text { font-size: 26px; }
 
-        /* ================= LAYOUT 2: RETRO POP-UP (PALETTE LAYOUT 1) ================= */
-        .poster-canvas.layout-2 {
-            padding: 0 !important;
-            background-color: #2A82C6 !important;
-            background-image: radial-gradient(rgba(255, 255, 255, 0.14) 2px, transparent 2px) !important;
-            background-size: 24px 24px !important;
-        }
-        .poster-canvas.layout-2 .layout-1-root { display: none !important; }
+        /* ================= LAYOUT 2: RETRO POP-UP (4 TEMA) ================= */
+        .poster-canvas.layout-2 { padding: 0 !important; }
+        .poster-canvas.layout-2 .layout-1-root,
+        .poster-canvas.layout-2 .layout-3-root { display: none !important; }
         .poster-canvas.layout-2 .layout-2-root { display: block !important; }
+
+        .poster-canvas.layout-3 .layout-1-root,
+        .poster-canvas.layout-3 .layout-2-root { display: none !important; }
+        .poster-canvas.layout-3 .layout-3-root { display: flex !important; }
 
         .l2-bg-wall {
             position: absolute;
@@ -103,20 +103,13 @@
             font-size: 235px;
             line-height: 0.80;
             letter-spacing: -0.04em;
-            color: rgba(26, 70, 124, 0.36);
             white-space: nowrap;
             text-transform: uppercase;
         }
         .ratio-9-16 .l2-bg-row { font-size: 260px; line-height: 0.80; }
         .ratio-1-1  .l2-bg-row { font-size: 210px; line-height: 0.80; }
 
-        .l2-window {
-            width: 900px;
-            background: #FFFFFF;
-            border: 4px solid #000000;
-            box-shadow: 12px 12px 0 #000000;
-            border-radius: 6px;
-        }
+        .l2-window { width: 900px; }
         .ratio-1-1 .l2-window { width: 880px; }
         .ratio-9-16 .l2-window { width: 920px; }
 
@@ -133,57 +126,22 @@
         }
         .ratio-9-16 .l2-logos-top { top: 74px; gap: 22px; }
         .ratio-1-1  .l2-logos-top { top: 30px; gap: 16px; }
-        .l2-logo-box {
-            width: 62px;
-            height: 62px;
-            background: #FFFFFF;
-            border: 3px solid #000000;
-            box-shadow: 4px 4px 0 #000000;
-            padding: 5px;
-        }
+        .l2-logo-box { width: 62px; height: 62px; padding: 5px; }
         .ratio-1-1 .l2-logo-box { width: 52px; height: 52px; }
 
-        .l2-titlebar {
-            background: #1A467C;
-            border-bottom: 4px solid #000000;
-        }
         .l2-sticker-top {
             position: absolute;
             left: -14px;
             top: -12px;
             z-index: 30;
-            background: #FFFFFF;
-            color: #1A467C;
-            border: 3.5px solid #000000;
-            box-shadow: 5px 5px 0 #000000;
             transform: rotate(-3deg);
         }
-        .l2-sticker-stamp {
-            background: #CA2C2A;
-            color: #FFFFFF;
-            border: 3.5px solid #000000;
-            box-shadow: 6px 6px 0 #000000;
-            transform: rotate(1.5deg);
-        }
-        .l2-chip {
-            background: #F8FBFF;
-            border: 3px solid #000000;
-            box-shadow: 4px 4px 0 #000000;
-        }
-        .l2-chip-num {
-            background: #CA2C2A;
-            color: #FFFFFF;
-            border-right: 3px solid #000000;
-        }
+        .l2-sticker-stamp { transform: rotate(1.5deg); }
         .l2-ig-sticker {
             position: absolute;
             left: 28px;
             bottom: -24px;
             z-index: 30;
-            background: #FFFFFF;
-            color: #1A467C;
-            border: 3.5px solid #000000;
-            box-shadow: 5px 5px 0 #000000;
             transform: rotate(-2deg);
         }
         .l2-hero-svg { width: 640px; height: 205px; }
@@ -206,6 +164,96 @@
         }
         .ratio-9-16 .l2-cursor-wrap { right: -26px; bottom: -275px; transform: scale(1.12); transform-origin: bottom right; }
         .ratio-1-1  .l2-cursor-wrap { right: -24px; bottom: -210px; transform: scale(0.86); transform-origin: bottom right; }
+
+        /* Layout 2 Theme 1: Neubrutalism */
+        .poster-canvas.layout-2.style-neubrutalism {
+            background-color: #2A82C6;
+            background-image: radial-gradient(rgba(255, 255, 255, 0.14) 2px, transparent 2px);
+            background-size: 24px 24px;
+        }
+        .layout-2.style-neubrutalism .l2-bg-row { color: rgba(26, 70, 124, 0.36); }
+        .layout-2.style-neubrutalism .l2-star-poly { fill: #CA2C2A; stroke: #000000; stroke-width: 5; }
+        .layout-2.style-neubrutalism .l2-logo-box { background: #FFFFFF; border: 3px solid #000000; box-shadow: 4px 4px 0 #000000; border-radius: 0px; }
+        .layout-2.style-neubrutalism .l2-window { background: #FFFFFF; border: 4px solid #000000; box-shadow: 12px 12px 0 #000000; border-radius: 6px; }
+        .layout-2.style-neubrutalism .l2-titlebar { background: #1A467C; border-bottom: 4px solid #000000; }
+        .layout-2.style-neubrutalism .l2-hdr-title { color: #FFFFFF; }
+        .layout-2.style-neubrutalism .l2-hdr-sub { color: #93C5FD; }
+        .layout-2.style-neubrutalism .l2-sticker-top { background: #FFFFFF; color: #1A467C; border: 3.5px solid #000000; box-shadow: 5px 5px 0 #000000; border-radius: 0px; }
+        .layout-2.style-neubrutalism .l2-sticker-stamp { background: #CA2C2A; color: #FFFFFF; border: 3.5px solid #000000; box-shadow: 6px 6px 0 #000000; border-radius: 0px; }
+        .layout-2.style-neubrutalism .l2-ig-sticker { background: #FFFFFF; color: #1A467C; border: 3.5px solid #000000; box-shadow: 5px 5px 0 #000000; border-radius: 0px; }
+        .layout-2.style-neubrutalism .l2-ig-icon { color: #CA2C2A; }
+
+        /* Layout 2 Theme 2: Glassmorphism */
+        .poster-canvas.layout-2.style-glass {
+            background: radial-gradient(circle at 20% 15%, #F4F9FF 0%, #D9EBFF 48%, #BEDBFF 100%);
+        }
+        .layout-2.style-glass .l2-bg-row { color: rgba(37, 99, 235, 0.08); }
+        .layout-2.style-glass .l2-star-poly { fill: rgba(96, 165, 250, 0.28); stroke: rgba(255, 255, 255, 0.90); stroke-width: 4; }
+        .layout-2.style-glass .l2-star-tr,
+        .layout-2.style-glass .l2-star-bl { filter: drop-shadow(0 14px 28px rgba(30, 64, 175, 0.16)); }
+        .layout-2.style-glass .l2-logo-box { background: rgba(255,255,255,0.90); border: 1.5px solid rgba(255,255,255,0.95); box-shadow: 0 8px 20px rgba(30, 64, 175, 0.16); border-radius: 12px; backdrop-filter: blur(12px); }
+        .layout-2.style-glass .l2-window {
+            background: linear-gradient(138deg, rgba(255,255,255,0.72) 0%, rgba(191,223,255,0.46) 50%, rgba(235,245,255,0.66) 100%);
+            backdrop-filter: blur(22px);
+            border: 2px solid rgba(255,255,255,0.95);
+            box-shadow: inset 0 2px 1px rgba(255,255,255,0.95), 0 24px 52px rgba(30, 64, 175, 0.20);
+            border-radius: 22px;
+        }
+        .layout-2.style-glass .l2-titlebar { background: linear-gradient(135deg, rgba(59,130,246,0.92) 0%, rgba(29,78,216,0.96) 100%); border-bottom: 1.5px solid rgba(255,255,255,0.85); }
+        .layout-2.style-glass .l2-hdr-title { color: #FFFFFF; }
+        .layout-2.style-glass .l2-hdr-sub { color: #DBEAFE; }
+        .layout-2.style-glass .l2-sticker-top { background: rgba(255,255,255,0.92); color: #163A6E; border: 1.5px solid #FFFFFF; box-shadow: 0 10px 24px rgba(30, 64, 175, 0.20); border-radius: 12px; backdrop-filter: blur(12px); }
+        .layout-2.style-glass .l2-sticker-top-txt { font-family: 'Space Grotesk', sans-serif; letter-spacing: 0.10em; }
+        .layout-2.style-glass .l2-sticker-stamp { background: linear-gradient(180deg, rgba(248,75,75,0.95) 0%, rgba(185,28,28,0.98) 100%); color: #FFFFFF; border: 1.5px solid rgba(255,255,255,0.85); box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 14px 30px rgba(220,38,38,0.34); border-radius: 12px; }
+        .layout-2.style-glass .l2-ig-sticker { background: rgba(255,255,255,0.92); color: #163A6E; border: 1.5px solid #FFFFFF; box-shadow: 0 10px 24px rgba(30, 64, 175, 0.18); border-radius: 12px; backdrop-filter: blur(12px); }
+        .layout-2.style-glass .l2-ig-icon { color: #DC2626; }
+        .layout-2.style-glass .l2-cursor-svg { filter: drop-shadow(0 12px 22px rgba(30, 64, 175, 0.28)); }
+
+        /* Layout 2 Theme 3: Dark Code */
+        .poster-canvas.layout-2.style-dark-code {
+            background-color: #0B192E;
+            background-image: radial-gradient(rgba(56, 189, 248, 0.22) 1.5px, transparent 1.5px);
+            background-size: 24px 24px;
+        }
+        .layout-2.style-dark-code .l2-bg-row { color: rgba(56, 189, 248, 0.085); }
+        .layout-2.style-dark-code .l2-star-poly { fill: #0284C7; stroke: #38BDF8; stroke-width: 4.5; }
+        .layout-2.style-dark-code .l2-logo-box { background: #FFFFFF; border: 2.5px solid #38BDF8; box-shadow: 4px 4px 0 #000000; border-radius: 10px; }
+        .layout-2.style-dark-code .l2-window { background: #122645; border: 3.5px solid #38BDF8; box-shadow: 12px 12px 0 #000000; border-radius: 14px; }
+        .layout-2.style-dark-code .l2-titlebar { background: #1A365D; border-bottom: 3px solid #38BDF8; }
+        .layout-2.style-dark-code .l2-hdr-title { color: #FFFFFF; }
+        .layout-2.style-dark-code .l2-hdr-sub { color: #38BDF8; }
+        .layout-2.style-dark-code .l2-sticker-top { background: #0B192E; color: #FCD34D; border: 3px solid #FCD34D; box-shadow: 5px 5px 0 #000000; border-radius: 8px; }
+        .layout-2.style-dark-code .l2-sticker-stamp { background: #CA2C2A; color: #FFFFFF; border: 3px solid #FFFFFF; box-shadow: 6px 6px 0 #000000; border-radius: 10px; }
+        .layout-2.style-dark-code .l2-ig-sticker { background: #38BDF8; color: #0B192E; border: 3px solid #FFFFFF; box-shadow: 5px 5px 0 #000000; border-radius: 10px; }
+        .layout-2.style-dark-code .l2-ig-icon { color: #CA2C2A; }
+
+        /* Layout 2 Theme 4: Modern Clean */
+        .poster-canvas.layout-2.style-modern {
+            background: linear-gradient(155deg, #12305A 0%, #163D6E 50%, #1B4B82 100%);
+        }
+        .layout-2.style-modern .l2-bg-row { color: rgba(255, 255, 255, 0.055); }
+        .layout-2.style-modern .l2-star-poly { fill: #FDD34D; stroke: none; stroke-width: 0; }
+        .layout-2.style-modern .l2-star-tr,
+        .layout-2.style-modern .l2-star-bl { filter: drop-shadow(0 16px 32px rgba(8, 22, 44, 0.34)); }
+        .layout-2.style-modern .l2-logo-box { background: #FFFFFF; border: 1px solid rgba(18,48,90,0.12); box-shadow: 0 12px 28px rgba(8, 22, 44, 0.32); border-radius: 14px; }
+        .layout-2.style-modern .l2-window { background: #1D4D85; border: 1.5px solid rgba(255,255,255,0.22); box-shadow: 0 28px 60px rgba(8, 22, 44, 0.44); border-radius: 26px; }
+        .layout-2.style-modern .l2-titlebar { background: rgba(255,255,255,0.96); border-bottom: none; }
+        .layout-2.style-modern .l2-hdr-title { color: #12305A; }
+        .layout-2.style-modern .l2-hdr-sub { color: #2A82C6; }
+        .layout-2.style-modern .l2-sticker-top { background: #FDD34D; color: #12305A; border: none; box-shadow: 0 12px 28px rgba(8, 22, 44, 0.30); border-radius: 999px; }
+        .layout-2.style-modern .l2-sticker-top-txt { font-family: 'Space Grotesk', sans-serif; letter-spacing: 0.10em; }
+        .layout-2.style-modern .l2-sticker-stamp { background: #CA2C2A; color: #FFFFFF; border: none; box-shadow: 0 18px 36px rgba(8, 22, 44, 0.36); border-radius: 16px; }
+        .layout-2.style-modern .l2-ig-sticker { background: #FFFFFF; color: #12305A; border: none; box-shadow: 0 14px 32px rgba(8, 22, 44, 0.34); border-radius: 999px; }
+        .layout-2.style-modern .l2-ig-icon { color: #CA2C2A; }
+        .layout-2.style-modern .l2-cursor-svg { filter: drop-shadow(0 14px 26px rgba(8, 22, 44, 0.38)); }
+
+        /* ================= LAYOUT 3: COMING SOON (4 TEMA, ULTRA CLEAN) ================= */
+        .l3-hero-svg { width: 700px; height: 205px; }
+        .ratio-9-16 .l3-hero-svg { width: 720px; height: 225px; }
+        .ratio-1-1  .l3-hero-svg { width: 590px; height: 160px; }
+        .l3-hero-card { width: 760px; padding: 48px 32px 64px 32px; }
+        .ratio-9-16 .l3-hero-card { width: 800px; padding: 56px 36px 76px 36px; }
+        .ratio-1-1  .l3-hero-card { width: 660px; padding: 34px 24px 48px 24px; }
 
         /* ================= THEME 1: NEUBRUTALISM ================= */
         .style-neubrutalism {
@@ -571,16 +619,20 @@
             <div class="space-y-2">
                 <div class="flex items-center justify-between">
                     <span class="text-[11px] font-extrabold uppercase tracking-wider text-[#93C5FD]">0. Pilih Layout</span>
-                    <span id="lblActiveLayout" class="text-[10px] font-code text-[#E6FC6D]">layout-1</span>
+                    <span id="lblActiveLayout" class="text-[10px] font-code text-[#FCD34D]">layout-1</span>
                 </div>
-                <div class="grid grid-cols-2 gap-2">
-                    <button type="button" onclick="setLayout(1)" id="btn-layout-1" class="btn-brutal px-2.5 py-2 bg-[#FCD34D] text-black border-2 border-black shadow-[3px_3px_0_#000000] text-left cursor-pointer">
-                        <span class="text-[11px] font-extrabold uppercase block leading-tight">Layout 1</span>
-                        <span class="text-[9px] font-bold opacity-80 block mt-0.5">Countdown Card</span>
+                <div class="grid grid-cols-3 gap-1.5">
+                    <button type="button" onclick="setLayout(1)" id="btn-layout-1" class="btn-brutal px-2 py-2 bg-[#FCD34D] text-black border-2 border-black shadow-[3px_3px_0_#000000] text-left cursor-pointer">
+                        <span class="text-[10px] font-extrabold uppercase block leading-tight">Layout 1</span>
+                        <span class="text-[8.5px] font-bold opacity-80 block mt-0.5 truncate">Countdown</span>
                     </button>
-                    <button type="button" onclick="setLayout(2)" id="btn-layout-2" class="btn-brutal px-2.5 py-2 bg-[#162C4E] text-white border-2 border-black shadow-[3px_3px_0_#000000] text-left cursor-pointer relative">
-                        <span class="text-[11px] font-extrabold uppercase block leading-tight">Layout 2</span>
-                        <span class="text-[9px] font-bold opacity-80 block mt-0.5">Retro Pop-up</span>
+                    <button type="button" onclick="setLayout(2)" id="btn-layout-2" class="btn-brutal px-2 py-2 bg-[#162C4E] text-white border-2 border-black shadow-[3px_3px_0_#000000] text-left cursor-pointer">
+                        <span class="text-[10px] font-extrabold uppercase block leading-tight">Layout 2</span>
+                        <span class="text-[8.5px] font-bold opacity-80 block mt-0.5 truncate">Retro Pop</span>
+                    </button>
+                    <button type="button" onclick="setLayout(3)" id="btn-layout-3" class="btn-brutal px-2 py-2 bg-[#162C4E] text-white border-2 border-black shadow-[3px_3px_0_#000000] text-left cursor-pointer">
+                        <span class="text-[10px] font-extrabold uppercase block leading-tight">Layout 3</span>
+                        <span class="text-[8.5px] font-bold opacity-80 block mt-0.5 truncate">Coming Soon</span>
                     </button>
                 </div>
             </div>
@@ -591,9 +643,6 @@
                     <span class="text-[11px] font-extrabold uppercase tracking-wider text-[#93C5FD]">1. Tema Desain</span>
                     <span id="lblActiveStyle" class="text-[10px] font-code text-[#FCD34D]">neubrutalism</span>
                 </div>
-                <p id="lblLayout2ThemeHint" class="hidden text-[10px] font-bold text-[#E6FC6D] bg-[#0B192E] border border-[#E6FC6D]/50 px-2 py-1">
-                    Layout 2 memakai tema Neubrutalism (Retro OS)
-                </p>
                 <div class="grid grid-cols-1 gap-2">
                     <button type="button" onclick="setStyle('neubrutalism')" id="btn-style-neubrutalism" class="btn-brutal w-full px-3 py-2.5 bg-[#FCD34D] text-black border-2 border-black shadow-[3px_3px_0_#000000] flex items-center justify-between cursor-pointer">
                         <span class="text-xs font-extrabold uppercase">Neubrutalism</span>
@@ -783,8 +832,7 @@
                 <!-- ARTBOARD -->
                 <main id="posterCanvas" class="poster-canvas ratio-4-5 style-neubrutalism layout-1 relative overflow-hidden flex flex-col justify-between select-none">
 
-                    <div id="layout1Root" class="layout-1-root relative w-full h-full flex flex-col justify-between">
-                    <!-- Decorative Curved Ribbons + Frosted Glass Shards (Glassmorphism Theme Only) -->
+                    <!-- Decorative Curved Ribbons + Frosted Glass Shards (Shared across ALL Layouts in Glassmorphism) -->
                     <svg class="glass-bg-layer pointer-events-none absolute inset-0 w-full h-full z-0" viewBox="0 0 1080 1350" preserveAspectRatio="none" aria-hidden="true">
                         <defs>
                             <linearGradient id="glassRibbon" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -815,6 +863,8 @@
                         <rect x="28" y="695" width="66" height="66" rx="14" transform="rotate(14 61 728)" fill="url(#glassShard)" stroke="#FFFFFF" stroke-opacity="0.85" stroke-width="2"/>
                         <rect x="42" y="1210" width="150" height="96" rx="20" transform="rotate(-24 117 1258)" fill="url(#glassShard)" stroke="#FFFFFF" stroke-opacity="0.85" stroke-width="2"/>
                     </svg>
+
+                    <div id="layout1Root" class="layout-1-root relative z-10 w-full h-full flex flex-col justify-between">
 
                     <!-- 6 Unwrapped Coding Accents -->
                     <span class="code-accent acc-1 pointer-events-none font-code font-extrabold absolute top-[26%] left-[12%] -rotate-12 text-[38px] leading-none z-0">&gt;_</span>
@@ -975,12 +1025,12 @@
                         <!-- Stacked Kinetic Typography Wallpaper -->
                         <div id="l2BgWall" class="l2-bg-wall" aria-hidden="true"></div>
 
-                        <!-- 2 Spiky Crimson Starbursts Behind Dialog -->
+                        <!-- 2 Spiky Starbursts Behind Dialog -->
                         <svg viewBox="0 0 420 420" class="l2-star-tr pointer-events-none absolute z-10" aria-hidden="true">
-                            <polygon points="210,12 248,108 345,52 308,148 408,168 320,224 388,308 282,294 274,398 210,322 146,398 138,294 32,308 100,224 12,168 112,148 75,52 172,108" fill="#CA2C2A" stroke="#000000" stroke-width="5"/>
+                            <polygon class="l2-star-poly" points="210,12 248,108 345,52 308,148 408,168 320,224 388,308 282,294 274,398 210,322 146,398 138,294 32,308 100,224 12,168 112,148 75,52 172,108"/>
                         </svg>
                         <svg viewBox="0 0 420 420" class="l2-star-bl pointer-events-none absolute z-10" aria-hidden="true">
-                            <polygon points="210,12 248,108 345,52 308,148 408,168 320,224 388,308 282,294 274,398 210,322 146,398 138,294 32,308 100,224 12,168 112,148 75,52 172,108" fill="#CA2C2A" stroke="#000000" stroke-width="5"/>
+                            <polygon class="l2-star-poly" points="210,12 248,108 345,52 308,148 408,168 320,224 388,308 282,294 274,398 210,322 146,398 138,294 32,308 100,224 12,168 112,148 75,52 172,108"/>
                         </svg>
 
                         <!-- Top 3 Logos Bar Pinned at Top Poster Margin (Zona Merah) -->
@@ -1005,19 +1055,19 @@
                             <div class="relative">
                                 <!-- Top-Left Tilted Sticker (Zona Oren): COUNTDOWN • MENUJU -->
                                 <div class="l2-sticker-top px-5 py-2">
-                                    <span id="l2OutBanner" class="font-pixel text-[23px] font-bold uppercase tracking-[0.06em] leading-none block">
+                                    <span id="l2OutBanner" class="l2-sticker-top-txt font-pixel text-[23px] font-bold uppercase tracking-[0.06em] leading-none block">
                                         COUNTDOWN • MENUJU
                                     </span>
                                 </div>
 
                                 <div class="l2-window overflow-hidden">
-                                    <!-- Navy Title Bar: HIMA INFORMATIKA • IDE LPKIA -->
+                                    <!-- Title Bar: HIMA INFORMATIKA • IDE LPKIA -->
                                     <div class="l2-titlebar px-6 py-4 flex items-center justify-end">
                                         <div class="text-right">
-                                            <p class="font-display text-[23px] font-bold uppercase tracking-[0.04em] text-white leading-none">
+                                            <p class="l2-hdr-title font-display text-[23px] font-bold uppercase tracking-[0.04em] leading-none">
                                                 HIMA INFORMATIKA
                                             </p>
-                                            <p class="text-[12px] font-extrabold uppercase tracking-[0.24em] text-[#93C5FD] mt-1 leading-none">
+                                            <p class="l2-hdr-sub text-[12px] font-extrabold uppercase tracking-[0.24em] mt-1 leading-none">
                                                 IDE LPKIA
                                             </p>
                                         </div>
@@ -1027,6 +1077,14 @@
                                     <div class="px-8 pt-9 pb-14 flex flex-col items-center">
                                         <!-- Giant H-7 Highlight SVG -->
                                         <svg viewBox="0 0 680 220" class="l2-hero-svg overflow-visible" aria-label="H-7">
+                                            <defs>
+                                                <linearGradient id="l2GlassHeroGrad" gradientUnits="userSpaceOnUse" x1="0" y1="26" x2="0" y2="196">
+                                                    <stop offset="0%" stop-color="#FF8585"/>
+                                                    <stop offset="28%" stop-color="#F84B4B"/>
+                                                    <stop offset="68%" stop-color="#DC2626"/>
+                                                    <stop offset="100%" stop-color="#991B1B"/>
+                                                </linearGradient>
+                                            </defs>
                                             <text id="l2SvgShadow" x="354" y="122" text-anchor="middle" dominant-baseline="central"
                                                   class="font-hero svg-stroke" font-size="225" font-weight="400" letter-spacing="14"
                                                   fill="#000000" stroke="#000000" stroke-width="26">
@@ -1039,7 +1097,7 @@
                                             </text>
                                         </svg>
 
-                                        <!-- Tilted Red Event Sticker Stamp: KADERISASI -->
+                                        <!-- Tilted Event Sticker Stamp: KADERISASI -->
                                         <div class="l2-sticker-stamp -mt-3 px-7 py-2.5 inline-flex items-center gap-3">
                                             <svg class="w-7 h-7 shrink-0 text-white" fill="none" stroke="currentColor" stroke-width="2.8" viewBox="0 0 24 24" aria-hidden="true">
                                                 <circle cx="12" cy="12" r="9"></circle>
@@ -1054,7 +1112,7 @@
 
                                 <!-- Bottom-Left Taped IG Sticker (Zona Putih) -->
                                 <div class="l2-ig-sticker px-5 py-2.5 inline-flex items-center gap-2.5">
-                                    <svg class="w-6 h-6 shrink-0 text-[#CA2C2A]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true">
+                                    <svg class="l2-ig-icon w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true">
                                         <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                                         <circle cx="12" cy="12" r="4.5"></circle>
                                         <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"></circle>
@@ -1066,10 +1124,96 @@
 
                                 <!-- Giant 8-Bit Pixelated Arrow Cursor (Bottom-Right) -->
                                 <div class="l2-cursor-wrap">
-                                    <svg id="l2CursorSvg" width="192" height="304" viewBox="0 0 12 19" shape-rendering="crispEdges" aria-hidden="true"></svg>
+                                    <svg id="l2CursorSvg" class="l2-cursor-svg" width="192" height="304" viewBox="0 0 12 19" shape-rendering="crispEdges" aria-hidden="true"></svg>
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                    <!-- ================= LAYOUT 3: COMING SOON (ULTRA CLEAN — 4 TEMA) ================= -->
+                    <div id="layout3Root" class="layout-3-root hidden relative z-10 w-full h-full flex-col justify-between">
+                        <!-- Coding Accents (Optional Toggle) -->
+                        <span class="code-accent acc-1 pointer-events-none font-code font-extrabold absolute top-[24%] left-[8%] -rotate-12 text-[38px] leading-none z-0">&gt;_</span>
+                        <span class="code-accent acc-2 pointer-events-none font-code font-extrabold absolute top-[24%] right-[7%] rotate-12 text-[38px] leading-none z-0">&lt;/&gt;</span>
+                        <span class="code-accent acc-5 pointer-events-none font-code font-extrabold absolute bottom-[22%] left-[9%] -rotate-12 text-[34px] leading-none z-0">//</span>
+                        <span class="code-accent acc-6 pointer-events-none font-code font-extrabold absolute bottom-[22%] right-[9%] rotate-12 text-[34px] leading-none z-0">01;</span>
+
+                        <!-- Top Header (Reuses Theme Header) -->
+                        <header class="hdr-box relative z-10 grid grid-cols-[1fr_auto_1fr] items-center px-5 py-3.5">
+                            <div class="hdr-logo w-[66px] h-[66px] p-1.5 flex items-center justify-center justify-self-start shrink-0">
+                                <img id="l3HimaLogo" src="" alt="Logo HIMA Informatika" class="w-full h-full object-contain">
+                            </div>
+                            <div class="text-center justify-self-center px-4">
+                                <p class="hdr-title font-display text-[26px] font-bold uppercase tracking-[0.04em] leading-none">
+                                    HIMA INFORMATIKA
+                                </p>
+                                <p class="hdr-sub text-[16px] font-extrabold uppercase tracking-[0.24em] mt-1.5 leading-none">
+                                    IDE LPKIA
+                                </p>
+                            </div>
+                            <div class="hdr-logo w-[66px] h-[66px] p-1.5 flex items-center justify-center justify-self-end shrink-0">
+                                <img id="l3LpkiaLogo" src="" alt="Logo IDE LPKIA" class="w-full h-full object-contain">
+                            </div>
+                        </header>
+
+                        <!-- Clean Center Teaser Lockup (COMING SOON + KADERISASI, Zero Dates) -->
+                        <section class="relative z-10 flex flex-col items-center justify-center my-auto">
+                            <div class="countdown-box px-8 py-2.5">
+                                <span class="hero-countdown font-pixel text-[38px] font-bold tracking-[0.10em] leading-none block">
+                                    COMING SOON
+                                </span>
+                            </div>
+
+                            <div class="hero-card l3-hero-card relative mt-5 flex items-center justify-center overflow-hidden">
+                                <div class="hero-card-grid pointer-events-none absolute inset-0"></div>
+                                <div class="absolute top-3.5 left-4 flex items-center gap-1.5">
+                                    <span class="win-dot win-dot-1 w-3.5 h-3.5 block"></span>
+                                    <span class="win-dot win-dot-2 w-3.5 h-3.5 block"></span>
+                                    <span class="win-dot win-dot-3 w-3.5 h-3.5 block"></span>
+                                </div>
+
+                                <svg viewBox="0 0 760 210" class="l3-hero-svg relative z-10 overflow-visible" aria-label="KADERISASI">
+                                    <defs>
+                                        <linearGradient id="l3GlassHeroGrad" gradientUnits="userSpaceOnUse" x1="0" y1="44" x2="0" y2="166">
+                                            <stop offset="0%" stop-color="#FF8585"/>
+                                            <stop offset="28%" stop-color="#F84B4B"/>
+                                            <stop offset="68%" stop-color="#DC2626"/>
+                                            <stop offset="100%" stop-color="#991B1B"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <text id="l3SvgShadow" x="392" y="117" text-anchor="middle" dominant-baseline="central"
+                                          class="font-hero svg-stroke" font-size="92" font-weight="400" letter-spacing="3"
+                                          fill="#000000" stroke="#000000" stroke-width="26">
+                                        KADERISASI
+                                    </text>
+                                    <text id="l3SvgMain" x="380" y="105" text-anchor="middle" dominant-baseline="central"
+                                          class="font-hero svg-stroke" font-size="92" font-weight="400" letter-spacing="3"
+                                          fill="#CA2C2A" stroke="#000000" stroke-width="18">
+                                        KADERISASI
+                                    </text>
+                                </svg>
+                            </div>
+
+                            <div class="hero-stamp -mt-8 z-20 inline-flex items-center gap-3 px-8 py-3">
+                                <span class="hero-stamp-text font-display text-[32px] font-bold uppercase tracking-[0.14em] leading-none">
+                                    STAY TUNED
+                                </span>
+                            </div>
+                        </section>
+
+                        <!-- Clean Minimal Footer IG Handle -->
+                        <footer class="relative z-10 flex justify-center pb-2">
+                            <div class="cta-btn inline-flex items-center gap-3 px-8 py-3">
+                                <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <circle cx="12" cy="12" r="4.5"></circle>
+                                    <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"></circle>
+                                </svg>
+                                <span id="l3OutIg" class="cta-text font-display text-[22px] font-bold tracking-[0.04em] leading-none">
+                                    hmif_LPKIA
+                                </span>
+                            </div>
+                        </footer>
                     </div>
 
                 </main>
@@ -1153,10 +1297,17 @@
             "........BBB."
         ];
 
-        function renderL2CursorSvg() {
+        const L2_CURSOR_PALETTES = {
+            'neubrutalism': { B: '#000000', W: '#FFFFFF', G: '#CBD5E1' },
+            'glass':        { B: '#1E40AF', W: '#FFFFFF', G: '#BFDBFE' },
+            'dark-code':    { B: '#000000', W: '#FFFFFF', G: '#38BDF8' },
+            'modern':       { B: '#12305A', W: '#FFFFFF', G: '#FDD34D' }
+        };
+
+        function renderL2CursorSvg(styleName = currentStyle) {
             const svg = document.getElementById('l2CursorSvg');
             if (!svg) return;
-            const palette = { B: '#000000', W: '#FFFFFF', G: '#CBD5E1' };
+            const palette = L2_CURSOR_PALETTES[styleName] || L2_CURSOR_PALETTES['neubrutalism'];
             let rects = '';
             L2_CURSOR_MAP.forEach((row, y) => {
                 for (let x = 0; x < row.length; x++) {
@@ -1165,6 +1316,26 @@
                 }
             });
             svg.innerHTML = rects;
+        }
+
+        function syncLayout3Dom() {
+            const title = (document.getElementById('inStamp')?.value || 'KADERISASI').trim().toUpperCase() || 'KADERISASI';
+            const igHandle = (document.getElementById('inIg')?.value || 'hmif_LPKIA').trim() || 'hmif_LPKIA';
+            const l3Len = title.length;
+            const l3Fs = l3Len >= 13 ? 72 : (l3Len >= 10 ? 92 : (l3Len >= 7 ? 116 : 155));
+            const l3Ls = l3Len >= 10 ? 3 : 8;
+            const l3Shd = document.getElementById('l3SvgShadow');
+            const l3Main = document.getElementById('l3SvgMain');
+            if (l3Shd && l3Main) {
+                l3Shd.textContent = title;
+                l3Main.textContent = title;
+                l3Shd.setAttribute('font-size', l3Fs);
+                l3Main.setAttribute('font-size', l3Fs);
+                l3Shd.setAttribute('letter-spacing', l3Ls);
+                l3Main.setAttribute('letter-spacing', l3Ls);
+            }
+            const l3Ig = document.getElementById('l3OutIg');
+            if (l3Ig) l3Ig.textContent = igHandle;
         }
 
         function getL2BgRows(cd, title) {
@@ -1231,13 +1402,13 @@
         }
 
         function setLayout(layoutNum) {
-            currentLayout = Number(layoutNum) === 2 ? 2 : 1;
+            currentLayout = [1, 2, 3].includes(Number(layoutNum)) ? Number(layoutNum) : 1;
             const canvas = document.getElementById('posterCanvas');
-            canvas.classList.remove('layout-1', 'layout-2');
+            canvas.classList.remove('layout-1', 'layout-2', 'layout-3');
             canvas.classList.add('layout-' + currentLayout);
             document.getElementById('lblActiveLayout').textContent = 'layout-' + currentLayout;
 
-            [1, 2].forEach((n) => {
+            [1, 2, 3].forEach((n) => {
                 const btn = document.getElementById('btn-layout-' + n);
                 if (!btn) return;
                 if (n === currentLayout) {
@@ -1249,29 +1420,12 @@
                 }
             });
 
-            const hint = document.getElementById('lblLayout2ThemeHint');
-            if (currentLayout === 2) {
-                setStyle('neubrutalism');
-                if (hint) hint.classList.remove('hidden');
-            } else {
-                if (hint) hint.classList.add('hidden');
-            }
-
-            ['glass', 'dark-code', 'modern'].forEach((s) => {
-                const b = document.getElementById('btn-style-' + s);
-                if (!b) return;
-                b.disabled = currentLayout === 2;
-                b.classList.toggle('opacity-40', currentLayout === 2);
-                b.classList.toggle('cursor-not-allowed', currentLayout === 2);
-                b.classList.toggle('cursor-pointer', currentLayout !== 2);
-            });
-
             syncLayout2Dom();
+            syncLayout3Dom();
             applyScale();
         }
 
         function setStyle(styleName) {
-            if (currentLayout === 2 && styleName !== 'neubrutalism') return;
             currentStyle = styleName;
             const canvas = document.getElementById('posterCanvas');
             canvas.classList.remove('style-neubrutalism', 'style-glass', 'style-dark-code', 'style-modern');
@@ -1290,57 +1444,68 @@
                 }
             });
 
-            const svgShadow = document.getElementById('svgHeroShadow');
-            const svgMain = document.getElementById('svgHeroMain');
-            if (styleName === 'glass') {
-                svgShadow.setAttribute('x', '347');
-                svgShadow.setAttribute('y', '132');
-                svgShadow.setAttribute('fill', '#1E293B');
-                svgShadow.setAttribute('stroke', '#1E293B');
-                svgShadow.setAttribute('stroke-width', '3');
-                svgShadow.style.opacity = '0.82';
-                svgShadow.style.filter = 'drop-shadow(0 14px 18px rgba(30, 64, 175, 0.34))';
-                svgMain.setAttribute('fill', 'url(#glassHeroGrad)');
-                svgMain.setAttribute('stroke', 'rgba(255, 255, 255, 0.90)');
-                svgMain.setAttribute('stroke-width', '5');
-                svgMain.style.filter = 'drop-shadow(0 4px 10px rgba(15, 23, 42, 0.22))';
-            } else if (styleName === 'dark-code') {
-                svgShadow.setAttribute('x', '354');
-                svgShadow.setAttribute('y', '138');
-                svgShadow.style.opacity = '';
-                svgShadow.style.filter = '';
-                svgShadow.setAttribute('fill', '#EF4444');
-                svgShadow.setAttribute('stroke', '#000000');
-                svgShadow.setAttribute('stroke-width', '22');
-                svgMain.setAttribute('fill', '#FCD34D');
-                svgMain.setAttribute('stroke', '#060D1A');
-                svgMain.setAttribute('stroke-width', '16');
-                svgMain.style.filter = '';
-            } else if (styleName === 'modern') {
-                svgShadow.setAttribute('x', '354');
-                svgShadow.setAttribute('y', '138');
-                svgShadow.style.opacity = '';
-                svgShadow.style.filter = '';
-                svgShadow.setAttribute('fill', '#FDD34D');
-                svgShadow.setAttribute('stroke', '#FDD34D');
-                svgShadow.setAttribute('stroke-width', '0');
-                svgMain.setAttribute('fill', '#FFFFFF');
-                svgMain.setAttribute('stroke', 'none');
-                svgMain.setAttribute('stroke-width', '0');
-                svgMain.style.filter = '';
-            } else {
-                svgShadow.setAttribute('x', '354');
-                svgShadow.setAttribute('y', '138');
-                svgShadow.style.opacity = '';
-                svgShadow.style.filter = '';
-                svgShadow.setAttribute('fill', '#000000');
-                svgShadow.setAttribute('stroke', '#000000');
-                svgShadow.setAttribute('stroke-width', '26');
-                svgMain.setAttribute('fill', '#CA2C2A');
-                svgMain.setAttribute('stroke', '#000000');
-                svgMain.setAttribute('stroke-width', '18');
-                svgMain.style.filter = '';
-            }
+            const svgPairs = [
+                ['svgHeroShadow', 'svgHeroMain', 'glassHeroGrad', 354, 138, 347, 132],
+                ['l2SvgShadow', 'l2SvgMain', 'l2GlassHeroGrad', 354, 122, 347, 116],
+                ['l3SvgShadow', 'l3SvgMain', 'l3GlassHeroGrad', 392, 117, 386, 111]
+            ];
+            svgPairs.forEach(([shdId, mainId, glassGradId, baseX, baseY, glassX, glassY]) => {
+                const svgShadow = document.getElementById(shdId);
+                const svgMain = document.getElementById(mainId);
+                if (!svgShadow || !svgMain) return;
+                const centerX = shdId === 'l3SvgShadow' ? 380 : 340;
+                const centerY = shdId === 'l3SvgShadow' ? 105 : (shdId === 'l2SvgShadow' ? 108 : 124);
+                if (styleName === 'glass') {
+                    svgShadow.setAttribute('x', glassX);
+                    svgShadow.setAttribute('y', glassY);
+                    svgShadow.setAttribute('fill', '#1E293B');
+                    svgShadow.setAttribute('stroke', '#1E293B');
+                    svgShadow.setAttribute('stroke-width', '3');
+                    svgShadow.style.opacity = '0.82';
+                    svgShadow.style.filter = 'drop-shadow(0 14px 18px rgba(30, 64, 175, 0.34))';
+                    svgMain.setAttribute('fill', `url(#${glassGradId})`);
+                    svgMain.setAttribute('stroke', 'rgba(255, 255, 255, 0.90)');
+                    svgMain.setAttribute('stroke-width', '5');
+                    svgMain.style.filter = 'drop-shadow(0 4px 10px rgba(15, 23, 42, 0.22))';
+                } else if (styleName === 'dark-code') {
+                    svgShadow.setAttribute('x', baseX);
+                    svgShadow.setAttribute('y', baseY);
+                    svgShadow.style.opacity = '';
+                    svgShadow.style.filter = '';
+                    svgShadow.setAttribute('fill', '#EF4444');
+                    svgShadow.setAttribute('stroke', '#000000');
+                    svgShadow.setAttribute('stroke-width', '22');
+                    svgMain.setAttribute('fill', '#FCD34D');
+                    svgMain.setAttribute('stroke', '#060D1A');
+                    svgMain.setAttribute('stroke-width', '16');
+                    svgMain.style.filter = '';
+                } else if (styleName === 'modern') {
+                    svgShadow.setAttribute('x', centerX + 10);
+                    svgShadow.setAttribute('y', centerY + 10);
+                    svgShadow.style.opacity = '';
+                    svgShadow.style.filter = '';
+                    svgShadow.setAttribute('fill', '#FDD34D');
+                    svgShadow.setAttribute('stroke', '#FDD34D');
+                    svgShadow.setAttribute('stroke-width', '0');
+                    svgMain.setAttribute('fill', '#FFFFFF');
+                    svgMain.setAttribute('stroke', 'none');
+                    svgMain.setAttribute('stroke-width', '0');
+                    svgMain.style.filter = '';
+                } else {
+                    svgShadow.setAttribute('x', baseX);
+                    svgShadow.setAttribute('y', baseY);
+                    svgShadow.style.opacity = '';
+                    svgShadow.style.filter = '';
+                    svgShadow.setAttribute('fill', '#000000');
+                    svgShadow.setAttribute('stroke', '#000000');
+                    svgShadow.setAttribute('stroke-width', '26');
+                    svgMain.setAttribute('fill', '#CA2C2A');
+                    svgMain.setAttribute('stroke', '#000000');
+                    svgMain.setAttribute('stroke-width', '18');
+                    svgMain.style.filter = '';
+                }
+            });
+            renderL2CursorSvg(styleName);
         }
 
         function setRatio(ratio) {
@@ -1392,11 +1557,13 @@
             main.setAttribute('letter-spacing', ls);
             document.getElementById('inHero').value = txt;
             syncLayout2Dom();
+            syncLayout3Dom();
         }
 
         function setText(id, val) {
             document.getElementById(id).textContent = val;
             syncLayout2Dom();
+            syncLayout3Dom();
         }
 
         function toggleAccents() {
@@ -1434,6 +1601,7 @@
             clearLogo3();
             if (!showAccents) toggleAccents();
             syncLayout2Dom();
+            syncLayout3Dom();
             setZoomMode('fit');
         }
 
@@ -1490,6 +1658,9 @@
 
             if (currentLayout === 2) {
                 return renderLayout2Canvas(dims);
+            }
+            if (currentLayout === 3) {
+                return renderLayout3Canvas(dims);
             }
 
             const THEMES = {
@@ -2191,16 +2362,188 @@
                 });
             }
 
-            // 1. Layout 1 Cerulean Blue Background (#2A82C6) + Dots + Stacked Kinetic Typography (#1A467C)
-            ctx.fillStyle = '#2A82C6';
-            ctx.fillRect(0, 0, W, H);
+            function drawGlassCanvasBg(W, H, rrFn) {
+                const rad = ctx.createRadialGradient(W * 0.2, H * 0.15, 0, W * 0.2, H * 0.15, Math.max(W, H) * 1.1);
+                rad.addColorStop(0, '#F4F9FF');
+                rad.addColorStop(0.48, '#D9EBFF');
+                rad.addColorStop(1, '#BEDBFF');
+                ctx.fillStyle = rad;
+                ctx.fillRect(0, 0, W, H);
 
-            ctx.fillStyle = 'rgba(255, 255, 255, 0.14)';
-            for (let y = 12; y < H; y += 24) {
-                for (let x = 12; x < W; x += 24) {
-                    ctx.beginPath();
-                    ctx.arc(x, y, 2, 0, Math.PI * 2);
+                ctx.save();
+                ctx.scale(W / 1080, H / 1350);
+
+                const orbGrad = ctx.createRadialGradient(540, 600, 0, 540, 600, 380);
+                orbGrad.addColorStop(0, 'rgba(96, 165, 250, 0.34)');
+                orbGrad.addColorStop(0.55, 'rgba(147, 197, 253, 0.16)');
+                orbGrad.addColorStop(1, 'rgba(191, 219, 254, 0)');
+                ctx.fillStyle = orbGrad;
+                ctx.beginPath();
+                ctx.arc(540, 600, 380, 0, Math.PI * 2);
+                ctx.fill();
+
+                const ribGrad = ctx.createLinearGradient(0, 0, 1080, 1350);
+                ribGrad.addColorStop(0, 'rgba(59, 130, 246, 0.42)');
+                ribGrad.addColorStop(1, 'rgba(29, 78, 216, 0.10)');
+                ctx.fillStyle = ribGrad;
+
+                ctx.beginPath();
+                ctx.moveTo(-60, 220); ctx.quadraticCurveTo(240, 40, 520, -40); ctx.lineTo(-60, -40); ctx.closePath(); ctx.fill();
+                ctx.beginPath();
+                ctx.moveTo(840, -40); ctx.quadraticCurveTo(980, 160, 1140, 240); ctx.lineTo(1140, -40); ctx.closePath(); ctx.fill();
+                ctx.beginPath();
+                ctx.moveTo(-80, 1120); ctx.quadraticCurveTo(140, 1240, 260, 1400); ctx.lineTo(-80, 1400); ctx.closePath(); ctx.fill();
+                ctx.beginPath();
+                ctx.moveTo(740, 1400); ctx.quadraticCurveTo(920, 1200, 1140, 1140); ctx.lineTo(1140, 1400); ctx.closePath(); ctx.fill();
+
+                const shards = [
+                    { x: 850, y: 210, w: 165, h: 92, r: 18, rot: 22, cx: 930, cy: 256 },
+                    { x: 935, y: 425, w: 110, h: 82, r: 16, rot: -18, cx: 990, cy: 466 },
+                    { x: 28,  y: 695, w: 66,  h: 66, r: 14, rot: 14, cx: 61,  cy: 728 },
+                    { x: 42,  y: 1210, w: 150, h: 96, r: 20, rot: -24, cx: 117, cy: 1258 }
+                ];
+                shards.forEach(s => {
+                    ctx.save();
+                    ctx.translate(s.cx, s.cy);
+                    ctx.rotate((s.rot * Math.PI) / 180);
+                    ctx.translate(-s.cx, -s.cy);
+                    const sg = ctx.createLinearGradient(s.x, s.y, s.x + s.w, s.y + s.h);
+                    sg.addColorStop(0, 'rgba(255, 255, 255, 0.72)');
+                    sg.addColorStop(1, 'rgba(219, 234, 254, 0.22)');
+                    ctx.fillStyle = sg;
+                    rrFn(s.x, s.y, s.w, s.h, s.r);
                     ctx.fill();
+                    ctx.lineWidth = 2;
+                    ctx.strokeStyle = 'rgba(255, 255, 255, 0.85)';
+                    ctx.stroke();
+                    ctx.restore();
+                });
+
+                ctx.restore();
+            }
+
+            // 1. Theme Background
+            const L2_THEMES = {
+                'neubrutalism': {
+                    bgMode: 'solid', bg: '#2A82C6', dot: 'rgba(255, 255, 255, 0.14)',
+                    wallCol: 'rgba(26, 70, 124, 0.36)',
+                    starFill: '#CA2C2A', starStroke: '#000000', starSW: 5, starShadow: false,
+                    logoFill: '#FFFFFF', logoBorder: 3, logoBorderCol: '#000000', logoShadow: 4, logoRad: 0, logo3Bg: '#1A467C',
+                    winFill: '#FFFFFF', winBorder: 4, winBorderCol: '#000000', winShadow: 12, winRad: 6, softShadow: false,
+                    tbFill: '#1A467C', tbDivCol: '#000000', tbDivW: 4, tbTitleCol: '#FFFFFF', tbSubCol: '#93C5FD',
+                    topTagFill: '#FFFFFF', topTagText: '#1A467C', topTagBorder: 3.5, topTagBorderCol: '#000000', topTagShadow: 5, topTagRad: 0,
+                    topTagFont: '700 23px "Silkscreen", monospace', topTagTrack: 1.6,
+                    heroShdFill: '#000000', heroShdStroke: '#000000', heroShdSW: 26, heroShdOff: 14, heroShdBlur: false,
+                    heroMainFill: '#CA2C2A', heroMainStroke: '#000000', heroMainSW: 18,
+                    stFill: '#CA2C2A', stText: '#FFFFFF', stBorder: 3.5, stBorderCol: '#000000', stShadow: 6, stRad: 0,
+                    igFill: '#FFFFFF', igText: '#1A467C', igIcon: '#CA2C2A', igBorder: 3.5, igBorderCol: '#000000', igShadow: 5, igRad: 0
+                },
+                'glass': {
+                    bgMode: 'glass', dot: null,
+                    wallCol: 'rgba(37, 99, 235, 0.08)',
+                    starFill: 'rgba(96, 165, 250, 0.28)', starStroke: 'rgba(255, 255, 255, 0.90)', starSW: 4, starShadow: 'rgba(30, 64, 175, 0.16)',
+                    logoFill: 'rgba(255,255,255,0.90)', logoBorder: 1.5, logoBorderCol: 'rgba(255,255,255,0.95)', logoShadow: 0, logoRad: 12, logo3Bg: '#2563EB',
+                    winFill: { dir: 'diag', stops: [[0, 'rgba(255,255,255,0.72)'], [0.5, 'rgba(191,223,255,0.46)'], [1, 'rgba(235,245,255,0.66)']] },
+                    winBorder: 2, winBorderCol: 'rgba(255,255,255,0.95)', winShadow: 0, winRad: 22, softShadow: 'rgba(30, 64, 175, 0.20)',
+                    tbFill: { dir: 'diag', stops: [[0, 'rgba(59,130,246,0.92)'], [1, 'rgba(29,78,216,0.96)']] },
+                    tbDivCol: 'rgba(255,255,255,0.85)', tbDivW: 1.5, tbTitleCol: '#FFFFFF', tbSubCol: '#DBEAFE',
+                    topTagFill: 'rgba(255,255,255,0.92)', topTagText: '#163A6E', topTagBorder: 1.5, topTagBorderCol: '#FFFFFF', topTagShadow: 0, topTagRad: 12,
+                    topTagFont: '700 21px "Space Grotesk", sans-serif', topTagTrack: 2.1,
+                    heroShdFill: 'rgba(30, 41, 59, 0.82)', heroShdStroke: 'rgba(30, 41, 59, 0.82)', heroShdSW: 3, heroShdOff: 7, heroShdBlur: true,
+                    heroMainFill: 'glassGrad', heroMainStroke: 'rgba(255,255,255,0.90)', heroMainSW: 5,
+                    stFill: { dir: 'vert', stops: [[0, 'rgba(248,75,75,0.95)'], [1, 'rgba(185,28,28,0.98)']] },
+                    stText: '#FFFFFF', stBorder: 1.5, stBorderCol: 'rgba(255,255,255,0.85)', stShadow: 0, stRad: 12,
+                    igFill: 'rgba(255,255,255,0.92)', igText: '#163A6E', igIcon: '#DC2626', igBorder: 1.5, igBorderCol: '#FFFFFF', igShadow: 0, igRad: 12
+                },
+                'dark-code': {
+                    bgMode: 'solid', bg: '#0B192E', dot: 'rgba(56, 189, 248, 0.22)',
+                    wallCol: 'rgba(56, 189, 248, 0.085)',
+                    starFill: '#0284C7', starStroke: '#38BDF8', starSW: 4.5, starShadow: false,
+                    logoFill: '#FFFFFF', logoBorder: 2.5, logoBorderCol: '#38BDF8', logoShadow: 4, logoRad: 10, logo3Bg: '#0284C7',
+                    winFill: '#122645', winBorder: 3.5, winBorderCol: '#38BDF8', winShadow: 12, winRad: 14, softShadow: false,
+                    tbFill: '#1A365D', tbDivCol: '#38BDF8', tbDivW: 3, tbTitleCol: '#FFFFFF', tbSubCol: '#38BDF8',
+                    topTagFill: '#0B192E', topTagText: '#FCD34D', topTagBorder: 3, topTagBorderCol: '#FCD34D', topTagShadow: 5, topTagRad: 8,
+                    topTagFont: '700 23px "Silkscreen", monospace', topTagTrack: 1.6,
+                    heroShdFill: '#EF4444', heroShdStroke: '#000000', heroShdSW: 22, heroShdOff: 12, heroShdBlur: false,
+                    heroMainFill: '#FCD34D', heroMainStroke: '#060D1A', heroMainSW: 16,
+                    stFill: '#CA2C2A', stText: '#FFFFFF', stBorder: 3, stBorderCol: '#FFFFFF', stShadow: 6, stRad: 10,
+                    igFill: '#38BDF8', igText: '#0B192E', igIcon: '#CA2C2A', igBorder: 3, igBorderCol: '#FFFFFF', igShadow: 5, igRad: 10
+                },
+                'modern': {
+                    bgMode: 'gradient', dot: null,
+                    wallCol: 'rgba(255, 255, 255, 0.055)',
+                    starFill: '#FDD34D', starStroke: null, starSW: 0, starShadow: 'rgba(8, 22, 44, 0.34)',
+                    logoFill: '#FFFFFF', logoBorder: 1, logoBorderCol: 'rgba(18,48,90,0.12)', logoShadow: 0, logoRad: 14, logo3Bg: '#12305A',
+                    winFill: '#1D4D85', winBorder: 1.5, winBorderCol: 'rgba(255,255,255,0.22)', winShadow: 0, winRad: 26, softShadow: 'rgba(8, 22, 44, 0.44)',
+                    tbFill: 'rgba(255,255,255,0.96)', tbDivCol: 'transparent', tbDivW: 0, tbTitleCol: '#12305A', tbSubCol: '#2A82C6',
+                    topTagFill: '#FDD34D', topTagText: '#12305A', topTagBorder: 0, topTagBorderCol: 'transparent', topTagShadow: 0, topTagRad: 999,
+                    topTagFont: '700 21px "Space Grotesk", sans-serif', topTagTrack: 2.1,
+                    heroShdFill: '#FDD34D', heroShdStroke: '#FDD34D', heroShdSW: 0, heroShdOff: 10, heroShdBlur: false,
+                    heroMainFill: '#FFFFFF', heroMainStroke: null, heroMainSW: 0,
+                    stFill: '#CA2C2A', stText: '#FFFFFF', stBorder: 0, stBorderCol: 'transparent', stShadow: 0, stRad: 16,
+                    igFill: '#FFFFFF', igText: '#12305A', igIcon: '#CA2C2A', igBorder: 0, igBorderCol: 'transparent', igShadow: 0, igRad: 999
+                }
+            };
+            const L = L2_THEMES[currentStyle] || L2_THEMES['neubrutalism'];
+
+            function resolveL2Fill(fill, x, y, w, h) {
+                if (fill && typeof fill === 'object' && Array.isArray(fill.stops)) {
+                    const g = fill.dir === 'vert'
+                        ? ctx.createLinearGradient(x, y, x, y + h)
+                        : ctx.createLinearGradient(x, y, x + w, y + h);
+                    fill.stops.forEach(([pos, col]) => g.addColorStop(pos, col));
+                    return g;
+                }
+                return fill;
+            }
+
+            function drawL2Box(x, y, w, h, opts) {
+                const rad = opts.radius ?? 0;
+                const shd = opts.shadow ?? 0;
+                if (shd > 0) {
+                    ctx.fillStyle = '#000000';
+                    if (rad > 0) { rrPath(x + shd, y + shd, w, h, rad); ctx.fill(); }
+                    else ctx.fillRect(x + shd, y + shd, w, h);
+                }
+                ctx.save();
+                if (L.softShadow && opts.soft) {
+                    ctx.shadowColor = L.softShadow;
+                    ctx.shadowBlur = 28;
+                    ctx.shadowOffsetY = 14;
+                }
+                ctx.fillStyle = resolveL2Fill(opts.fill, x, y, w, h);
+                if (rad > 0) { rrPath(x, y, w, h, rad); ctx.fill(); }
+                else ctx.fillRect(x, y, w, h);
+                ctx.restore();
+                if (opts.border > 0) {
+                    ctx.lineWidth = opts.border;
+                    ctx.strokeStyle = opts.borderColor;
+                    if (rad > 0) { rrPath(x, y, w, h, rad); ctx.stroke(); }
+                    else ctx.strokeRect(x, y, w, h);
+                }
+            }
+
+            if (L.bgMode === 'glass') {
+                drawGlassCanvasBg(W, H, rrPath);
+            } else if (L.bgMode === 'gradient') {
+                const grad = ctx.createLinearGradient(0, 0, W * 0.45, H);
+                grad.addColorStop(0, '#12305A');
+                grad.addColorStop(0.5, '#163D6E');
+                grad.addColorStop(1, '#1B4B82');
+                ctx.fillStyle = grad;
+                ctx.fillRect(0, 0, W, H);
+            } else {
+                ctx.fillStyle = L.bg;
+                ctx.fillRect(0, 0, W, H);
+                if (L.dot) {
+                    ctx.fillStyle = L.dot;
+                    for (let y = 12; y < H; y += 24) {
+                        for (let x = 12; x < W; x += 24) {
+                            ctx.beginPath();
+                            ctx.arc(x, y, 2, 0, Math.PI * 2);
+                            ctx.fill();
+                        }
+                    }
                 }
             }
 
@@ -2208,10 +2551,6 @@
             const hero = (document.getElementById('inHero')?.value || 'H-7').trim().toUpperCase() || 'H-7';
             const cd = (document.getElementById('inCountdown')?.value || 'COUNTDOWN').trim().toUpperCase() || 'COUNTDOWN';
             const mn = (document.getElementById('inMenuju')?.value || 'MENUJU').trim().toUpperCase() || 'MENUJU';
-            const num = (document.getElementById('inNum')?.value || '04').trim() || '04';
-            const date = (document.getElementById('inDate')?.value || 'JUMAT, 04 DES 2026').trim().toUpperCase();
-            const time = (document.getElementById('inTime')?.value || '08.00 WIB').trim();
-            const loc = (document.getElementById('inLoc')?.value || 'Kampus IDE LPKIA').trim().toUpperCase();
             const igHandle = (document.getElementById('inIg')?.value || 'hmif_LPKIA').trim() || 'hmif_LPKIA';
 
             const bgFs = currentRatio === '9-16' ? 260 : (currentRatio === '1-1' ? 210 : 235);
@@ -2220,10 +2559,10 @@
             const totalWallH = bgRows.length * rowH;
             const wallStartY = (H - totalWallH) / 2 + rowH * 0.5;
             bgRows.forEach((line, idx) => {
-                drawTextTrack(line, -40, wallStartY + idx * rowH, `800 ${bgFs}px "Space Grotesk", "Archivo Black", sans-serif`, 'rgba(26, 70, 124, 0.36)', -0.04 * bgFs, 'left');
+                drawTextTrack(line, -40, wallStartY + idx * rowH, `800 ${bgFs}px "Space Grotesk", "Archivo Black", sans-serif`, L.wallCol, -0.04 * bgFs, 'left');
             });
 
-            // 2. 2 Spiky Crimson Starbursts (#CA2C2A + Black Outline) Behind Dialog
+            // 2. 2 Spiky Starbursts Behind Dialog
             const starPts = [
                 [210,12],[248,108],[345,52],[308,148],[408,168],[320,224],[388,308],
                 [282,294],[274,398],[210,322],[146,398],[138,294],[32,308],[100,224],
@@ -2233,18 +2572,35 @@
                 ctx.save();
                 ctx.translate(x, y);
                 ctx.scale(size / 420, size / 420);
+                if (L.starShadow) {
+                    ctx.shadowColor = L.starShadow;
+                    ctx.shadowBlur = 28;
+                    ctx.shadowOffsetY = 14;
+                }
                 ctx.beginPath();
                 starPts.forEach(([px, py], i) => {
                     if (i === 0) ctx.moveTo(px, py);
                     else ctx.lineTo(px, py);
                 });
                 ctx.closePath();
-                ctx.fillStyle = '#CA2C2A';
+                ctx.fillStyle = L.starFill;
                 ctx.fill();
-                ctx.lineWidth = 5;
-                ctx.strokeStyle = '#000000';
-                ctx.stroke();
                 ctx.restore();
+                if (L.starSW > 0 && L.starStroke) {
+                    ctx.save();
+                    ctx.translate(x, y);
+                    ctx.scale(size / 420, size / 420);
+                    ctx.beginPath();
+                    starPts.forEach(([px, py], i) => {
+                        if (i === 0) ctx.moveTo(px, py);
+                        else ctx.lineTo(px, py);
+                    });
+                    ctx.closePath();
+                    ctx.lineWidth = L.starSW;
+                    ctx.strokeStyle = L.starStroke;
+                    ctx.stroke();
+                    ctx.restore();
+                }
             };
 
             const starCfg = currentRatio === '9-16'
@@ -2256,7 +2612,7 @@
             drawStar(W - 20 - starCfg.trSize, H / 2 - starCfg.trY, starCfg.trSize);
             drawStar(10, H / 2 - starCfg.blY, starCfg.blSize);
 
-            // 3. Top Logos (pinned at top margin) + Vertically Centered Window Body + Bottom IG Sticker
+            // 3. Top Logos + Centered Window + Stickers
             const winW = currentRatio === '9-16' ? 920 : (currentRatio === '1-1' ? 880 : 900);
             const winX = (W - winW) / 2;
             const logoBoxS = currentRatio === '1-1' ? 52 : 62;
@@ -2270,17 +2626,13 @@
             const winH = tbH + bodyPt + heroSvgDim.h - 12 + stampBoxH + bodyPb;
             const winY = Math.round((H - winH) / 2);
 
-            // Top 3 Logos Bar Pinned at Top Margin of Canvas (Zona Merah)
+            // Top 3 Logos
             const logosTotalW = logoBoxS * 3 + logoGap * 2;
             const logosStartX = (W - logosTotalW) / 2;
             const drawTopLogoBox = (lx, ly, img, isLogo3 = false) => {
-                ctx.fillStyle = '#000000';
-                ctx.fillRect(lx + 4, ly + 4, logoBoxS, logoBoxS);
-                ctx.fillStyle = '#FFFFFF';
-                ctx.fillRect(lx, ly, logoBoxS, logoBoxS);
-                ctx.lineWidth = 3;
-                ctx.strokeStyle = '#000000';
-                ctx.strokeRect(lx, ly, logoBoxS, logoBoxS);
+                drawL2Box(lx, ly, logoBoxS, logoBoxS, {
+                    fill: L.logoFill, border: L.logoBorder, borderColor: L.logoBorderCol, shadow: L.logoShadow, radius: L.logoRad, soft: true
+                });
                 if (img) {
                     const pad = 5;
                     const maxD = logoBoxS - pad * 2;
@@ -2290,7 +2642,7 @@
                     ctx.drawImage(img, lx + (logoBoxS - dw) / 2, ly + (logoBoxS - dh) / 2, dw, dh);
                 } else if (isLogo3) {
                     const pad = 5;
-                    ctx.fillStyle = '#1A467C';
+                    ctx.fillStyle = L.logo3Bg;
                     ctx.fillRect(lx + pad, ly + pad, logoBoxS - pad * 2, logoBoxS - pad * 2);
                     drawTextTrack('KDR', lx + logoBoxS / 2, ly + logoBoxS / 2 - 4, '700 13px "Space Grotesk", sans-serif', '#FFFFFF', 0, 'center');
                     drawTextTrack('2026', lx + logoBoxS / 2, ly + logoBoxS / 2 + 10, '800 8px "Plus Jakarta Sans", sans-serif', 'rgba(255,255,255,0.8)', 0, 'center');
@@ -2300,64 +2652,77 @@
             drawTopLogoBox(logosStartX + logoBoxS + logoGap, logosTopY, lpkiaImg, false);
             drawTopLogoBox(logosStartX + (logoBoxS + logoGap) * 2, logosTopY, logo3Img, true);
 
-            // Hard Neubrutalism shadow for Window
-            ctx.fillStyle = '#000000';
-            rrPath(winX + 12, winY + 12, winW, winH, 6);
-            ctx.fill();
-
-            // Window background + Navy Titlebar clipped inside rounded corners
+            // Window Body + Titlebar
+            if (L.winShadow > 0) {
+                ctx.fillStyle = '#000000';
+                rrPath(winX + L.winShadow, winY + L.winShadow, winW, winH, L.winRad);
+                ctx.fill();
+            }
             ctx.save();
-            rrPath(winX, winY, winW, winH, 6);
-            ctx.clip();
-            ctx.fillStyle = '#FFFFFF';
-            ctx.fillRect(winX, winY, winW, winH);
-            ctx.fillStyle = '#1A467C';
-            ctx.fillRect(winX, winY, winW, tbH);
-            ctx.fillStyle = '#000000';
-            ctx.fillRect(winX, winY + tbH - 4, winW, 4);
+            if (L.softShadow) {
+                ctx.shadowColor = L.softShadow;
+                ctx.shadowBlur = 42;
+                ctx.shadowOffsetY = 18;
+            }
+            ctx.fillStyle = resolveL2Fill(L.winFill, winX, winY, winW, winH);
+            rrPath(winX, winY, winW, winH, L.winRad);
+            ctx.fill();
             ctx.restore();
 
-            ctx.lineWidth = 4;
-            ctx.strokeStyle = '#000000';
-            rrPath(winX, winY, winW, winH, 6);
-            ctx.stroke();
+            ctx.save();
+            rrPath(winX, winY, winW, winH, L.winRad);
+            ctx.clip();
+            ctx.fillStyle = resolveL2Fill(L.tbFill, winX, winY, winW, tbH);
+            ctx.fillRect(winX, winY, winW, tbH);
+            if (L.tbDivW > 0) {
+                ctx.fillStyle = L.tbDivCol;
+                ctx.fillRect(winX, winY + tbH - L.tbDivW, winW, L.tbDivW);
+            }
+            ctx.restore();
 
-            // Titlebar Right-Aligned: HIMA INFORMATIKA / IDE LPKIA
-            const tbMidY = winY + (tbH - 4) / 2;
-            drawTextTrack('HIMA INFORMATIKA', winX + winW - 24, tbMidY - 8, '700 23px "Space Grotesk", sans-serif', '#FFFFFF', 0.9, 'right');
-            drawTextTrack('IDE LPKIA', winX + winW - 24, tbMidY + 13, '800 12px "Plus Jakarta Sans", sans-serif', '#93C5FD', 2.8, 'right');
+            if (L.winBorder > 0) {
+                ctx.lineWidth = L.winBorder;
+                ctx.strokeStyle = L.winBorderCol;
+                rrPath(winX, winY, winW, winH, L.winRad);
+                ctx.stroke();
+            }
 
-            // Top-Left Tilted Sticker (Zona Oren): COUNTDOWN • MENUJU overlapping Titlebar
+            const tbMidY = winY + (tbH - L.tbDivW) / 2;
+            drawTextTrack('HIMA INFORMATIKA', winX + winW - 24, tbMidY - 8, '700 23px "Space Grotesk", sans-serif', L.tbTitleCol, 0.9, 'right');
+            drawTextTrack('IDE LPKIA', winX + winW - 24, tbMidY + 13, '800 12px "Plus Jakarta Sans", sans-serif', L.tbSubCol, 2.8, 'right');
+
+            // Top-Left Tilted Sticker (Zona Oren): COUNTDOWN • MENUJU
             const topTagTxt = `${cd} • ${mn}`;
-            ctx.font = '700 23px "Silkscreen", monospace';
-            const topTagW = ctx.measureText(topTagTxt).width + Math.max(0, topTagTxt.length - 1) * 1.6 + 40;
+            ctx.font = L.topTagFont;
+            const topTagW = ctx.measureText(topTagTxt).width + Math.max(0, topTagTxt.length - 1) * L.topTagTrack + 40;
             const topTagH = 42;
             const topTagCX = winX - 14 + topTagW / 2;
             const topTagCY = winY - 12 + topTagH / 2;
             ctx.save();
             ctx.translate(topTagCX, topTagCY);
             ctx.rotate((-3 * Math.PI) / 180);
-            ctx.fillStyle = '#000000';
-            ctx.fillRect(-topTagW / 2 + 5, -topTagH / 2 + 5, topTagW, topTagH);
-            ctx.fillStyle = '#FFFFFF';
-            ctx.fillRect(-topTagW / 2, -topTagH / 2, topTagW, topTagH);
-            ctx.lineWidth = 3.5;
-            ctx.strokeStyle = '#000000';
-            ctx.strokeRect(-topTagW / 2, -topTagH / 2, topTagW, topTagH);
-            drawTextTrack(topTagTxt, 0, 1, '700 23px "Silkscreen", monospace', '#1A467C', 1.6, 'center');
+            drawL2Box(-topTagW / 2, -topTagH / 2, topTagW, topTagH, {
+                fill: L.topTagFill, border: L.topTagBorder, borderColor: L.topTagBorderCol, shadow: L.topTagShadow, radius: L.topTagRad, soft: true
+            });
+            drawTextTrack(topTagTxt, 0, 1, L.topTagFont, L.topTagText, L.topTagTrack, 'center');
             ctx.restore();
 
-            // Giant H-7 Highlight Hero SVG inside Window
+            // Giant Hero Text
             const hLen = hero.length;
             const hFs = hLen >= 6 ? 160 : (hLen >= 5 ? 190 : 225);
             const hLs = hLen >= 5 ? 6 : 14;
             const svgScale = heroSvgDim.w / 680;
             const heroCY = winY + tbH + bodyPt + heroSvgDim.h / 2;
 
-            const drawL2HeroLayer = (ox, oy, fillCol, strokeCol, strokeW) => {
+            const drawL2HeroLayer = (ox, oy, fillCol, strokeCol, strokeW, blurGlow = false) => {
                 ctx.save();
                 ctx.translate(winX + winW / 2, heroCY);
                 ctx.scale(svgScale, svgScale);
+                if (blurGlow) {
+                    ctx.shadowColor = 'rgba(30, 64, 175, 0.34)';
+                    ctx.shadowBlur = 18;
+                    ctx.shadowOffsetY = 12;
+                }
                 ctx.font = `400 ${hFs}px "Archivo Black", "Space Grotesk", sans-serif`;
                 ctx.textBaseline = 'middle';
                 ctx.lineJoin = 'round';
@@ -2367,20 +2732,31 @@
                 const tot = ws.reduce((a, b) => a + b, 0) + hLs * Math.max(0, chars.length - 1);
                 let cx = -tot / 2 + ox;
                 ctx.textAlign = 'left';
+                const resolvedFill = (() => {
+                    if (fillCol !== 'glassGrad') return fillCol;
+                    const hg = ctx.createLinearGradient(0, oy - hFs * 0.36, 0, oy + hFs * 0.36);
+                    hg.addColorStop(0, '#FF8585');
+                    hg.addColorStop(0.28, '#F84B4B');
+                    hg.addColorStop(0.68, '#DC2626');
+                    hg.addColorStop(1, '#991B1B');
+                    return hg;
+                })();
                 chars.forEach((c, idx) => {
-                    ctx.lineWidth = strokeW;
-                    ctx.strokeStyle = strokeCol;
-                    ctx.strokeText(c, cx, oy);
-                    ctx.fillStyle = fillCol;
+                    if (strokeCol && strokeW > 0) {
+                        ctx.lineWidth = strokeW;
+                        ctx.strokeStyle = strokeCol;
+                        ctx.strokeText(c, cx, oy);
+                    }
+                    ctx.fillStyle = resolvedFill;
                     ctx.fillText(c, cx, oy);
                     cx += ws[idx] + hLs;
                 });
                 ctx.restore();
             };
-            drawL2HeroLayer(14, 14, '#000000', '#000000', 26);
-            drawL2HeroLayer(0, 0, '#CA2C2A', '#000000', 18);
+            drawL2HeroLayer(L.heroShdOff, L.heroShdOff, L.heroShdFill, L.heroShdStroke, L.heroShdSW, L.heroShdBlur);
+            drawL2HeroLayer(0, 0, L.heroMainFill, L.heroMainStroke, L.heroMainSW, false);
 
-            // Tilted Red Event Sticker Stamp: KADERISASI
+            // Tilted Event Sticker Stamp
             ctx.font = '700 40px "Space Grotesk", sans-serif';
             const stTxtW = ctx.measureText(title).width + Math.max(0, title.length - 1) * 2.4;
             const stW = 56 + 28 + 12 + stTxtW;
@@ -2388,15 +2764,11 @@
             ctx.save();
             ctx.translate(winX + winW / 2, stampCY);
             ctx.rotate((1.5 * Math.PI) / 180);
-            ctx.fillStyle = '#000000';
-            ctx.fillRect(-stW / 2 + 6, -stampBoxH / 2 + 6, stW, stampBoxH);
-            ctx.fillStyle = '#CA2C2A';
-            ctx.fillRect(-stW / 2, -stampBoxH / 2, stW, stampBoxH);
-            ctx.lineWidth = 3.5;
-            ctx.strokeStyle = '#000000';
-            ctx.strokeRect(-stW / 2, -stampBoxH / 2, stW, stampBoxH);
+            drawL2Box(-stW / 2, -stampBoxH / 2, stW, stampBoxH, {
+                fill: L.stFill, border: L.stBorder, borderColor: L.stBorderCol, shadow: L.stShadow, radius: L.stRad, soft: true
+            });
             const clkX = -stW / 2 + 28 + 14;
-            ctx.strokeStyle = '#FFFFFF';
+            ctx.strokeStyle = L.stText;
             ctx.lineWidth = 2.8;
             ctx.beginPath();
             ctx.arc(clkX, 0, 12, 0, Math.PI * 2);
@@ -2406,10 +2778,10 @@
             ctx.lineTo(clkX, 0);
             ctx.lineTo(clkX + 5, 3);
             ctx.stroke();
-            drawTextTrack(title, -stW / 2 + 28 + 28 + 12, 1, '700 40px "Space Grotesk", sans-serif', '#FFFFFF', 2.4, 'left');
+            drawTextTrack(title, -stW / 2 + 28 + 28 + 12, 1, '700 40px "Space Grotesk", sans-serif', L.stText, 2.4, 'left');
             ctx.restore();
 
-            // Bottom-Left Taped Instagram Sticker (Zona Putih): SVG IG Camera + hmif_LPKIA
+            // Bottom-Left Taped Instagram Sticker
             ctx.font = '700 20px "Space Grotesk", sans-serif';
             const igTxtW = ctx.measureText(igHandle).width + Math.max(0, igHandle.length - 1) * 0.4;
             const igW = 40 + 24 + 10 + igTxtW;
@@ -2419,27 +2791,22 @@
             ctx.save();
             ctx.translate(igCX, igCY);
             ctx.rotate((-2 * Math.PI) / 180);
-            ctx.fillStyle = '#000000';
-            ctx.fillRect(-igW / 2 + 5, -igH / 2 + 5, igW, igH);
-            ctx.fillStyle = '#FFFFFF';
-            ctx.fillRect(-igW / 2, -igH / 2, igW, igH);
-            ctx.lineWidth = 3.5;
-            ctx.strokeStyle = '#000000';
-            ctx.strokeRect(-igW / 2, -igH / 2, igW, igH);
-            // Draw Instagram Camera Vector Icon
+            drawL2Box(-igW / 2, -igH / 2, igW, igH, {
+                fill: L.igFill, border: L.igBorder, borderColor: L.igBorderCol, shadow: L.igShadow, radius: L.igRad, soft: true
+            });
             const igIconX = -igW / 2 + 20 + 12;
-            ctx.strokeStyle = '#CA2C2A';
+            ctx.strokeStyle = L.igIcon;
             ctx.lineWidth = 2.4;
             rrPath(igIconX - 10, -10, 20, 20, 5);
             ctx.stroke();
             ctx.beginPath();
             ctx.arc(igIconX, 0, 4.5, 0, Math.PI * 2);
             ctx.stroke();
-            ctx.fillStyle = '#CA2C2A';
+            ctx.fillStyle = L.igIcon;
             ctx.beginPath();
             ctx.arc(igIconX + 5.5, -5.5, 1.3, 0, Math.PI * 2);
             ctx.fill();
-            drawTextTrack(igHandle, -igW / 2 + 20 + 24 + 10, 1, '700 20px "Space Grotesk", sans-serif', '#1A467C', 0.4, 'left');
+            drawTextTrack(igHandle, -igW / 2 + 20 + 24 + 10, 1, '700 20px "Space Grotesk", sans-serif', L.igText, 0.4, 'left');
             ctx.restore();
 
             // 4. Giant 8-Bit Pixelated Arrow Cursor anchored to bottom-right of window
@@ -2453,7 +2820,13 @@
             const curH = 19 * curCfg.unit;
             const curX = winX + winW - curW - curCfg.rOff;
             const curY = winY + winH - curH - curCfg.bOff;
-            const palette = { B: '#000000', W: '#FFFFFF', G: '#CBD5E1' };
+            const palette = L2_CURSOR_PALETTES[currentStyle] || L2_CURSOR_PALETTES['neubrutalism'];
+            ctx.save();
+            if (currentStyle === 'glass' || currentStyle === 'modern') {
+                ctx.shadowColor = currentStyle === 'glass' ? 'rgba(30, 64, 175, 0.28)' : 'rgba(8, 22, 44, 0.36)';
+                ctx.shadowBlur = 22;
+                ctx.shadowOffsetY = 12;
+            }
             L2_CURSOR_MAP.forEach((row, ry) => {
                 for (let rx = 0; rx < row.length; rx++) {
                     const col = palette[row[rx]];
@@ -2467,6 +2840,295 @@
                     );
                 }
             });
+            ctx.restore();
+
+            return canvas;
+        }
+
+        async function renderLayout3Canvas(dims) {
+            const W = dims.w;
+            const H = dims.h;
+            const canvas = document.createElement('canvas');
+            canvas.width = W;
+            canvas.height = H;
+            const ctx = canvas.getContext('2d');
+
+            const loadImg = (src) => new Promise((res) => {
+                const img = new Image();
+                img.onload = () => res(img);
+                img.onerror = () => res(null);
+                img.src = src;
+            });
+            const [himaImg, lpkiaImg] = await Promise.all([
+                loadImg(document.querySelector('#himaLogoSlot img').src),
+                loadImg(document.querySelector('#lpkiaLogoSlot img').src)
+            ]);
+
+            function rr(x, y, w, h, r) {
+                const rad = Math.min(r, w / 2, h / 2);
+                ctx.beginPath();
+                ctx.moveTo(x + rad, y);
+                ctx.lineTo(x + w - rad, y);
+                ctx.quadraticCurveTo(x + w, y, x + w, y + rad);
+                ctx.lineTo(x + w, y + h - rad);
+                ctx.quadraticCurveTo(x + w, y + h, x + w - rad, y + h);
+                ctx.lineTo(x + rad, y + h);
+                ctx.quadraticCurveTo(x, y + h, x, y + h - rad);
+                ctx.lineTo(x, y + rad);
+                ctx.quadraticCurveTo(x, y, x + rad, y);
+                ctx.closePath();
+            }
+
+            function drawTrack(txt, cx, cy, font, color, tracking = 0, align = 'center') {
+                ctx.font = font;
+                ctx.fillStyle = color;
+                ctx.textBaseline = 'middle';
+                const cs = Array.from(txt);
+                const ws = cs.map((c) => ctx.measureText(c).width);
+                const tot = ws.reduce((a, b) => a + b, 0) + tracking * Math.max(0, cs.length - 1);
+                let x = align === 'center' ? cx - tot / 2 : (align === 'right' ? cx - tot : cx);
+                ctx.textAlign = 'left';
+                cs.forEach((c, idx) => { ctx.fillText(c, x, cy); x += ws[idx] + tracking; });
+            }
+
+            const L3_THEMES = {
+                'neubrutalism': {
+                    bgMode: 'solid', bg: '#FFFFFF', dot: 'rgba(42, 130, 198, 0.36)',
+                    hdrFill: '#FFFFFF', hdrB: 4, hdrBC: '#000000', hdrS: 7, hdrR: 0,
+                    logoFill: '#FFFFFF', logoB: 3, logoBC: '#000000', logoS: 4, logoR: 0,
+                    hdrT: '#1A467C', hdrSub: '#2A82C6', softCol: null,
+                    acc: [['>_', '#1A467C', 'rgba(42,130,198,0.28)'], ['</>', '#CA2C2A', 'rgba(0,0,0,0.16)'], ['//', '#2A82C6', 'rgba(26,70,124,0.18)'], ['01;', '#CA2C2A', 'rgba(0,0,0,0.16)']],
+                    cdFill: '#1A467C', cdT: '#FFFFFF', cdB: 4, cdBC: '#000000', cdS: 6, cdR: 0, cdRot: -1, cdFont: '"Silkscreen", monospace', cdTrk: 2.8,
+                    cardFill: '#FFFFFF', cardB: 5, cardBC: '#000000', cardS: 12, cardR: 0, grid: 'rgba(26,70,124,0.07)',
+                    dots: ['#CA2C2A', '#2A82C6', '#1A467C'], dotB: 2, dotBC: '#000000', dotR: 0,
+                    heroShdFill: '#000000', heroShdStroke: '#000000', heroShdSW: 26, heroShdOff: 12, heroShdBlur: false,
+                    heroMainFill: '#CA2C2A', heroMainStroke: '#000000', heroMainSW: 18,
+                    stFill: '#CA2C2A', stT: '#FFFFFF', stB: 4, stBC: '#000000', stS: 7, stR: 0, stRot: -2,
+                    ctaFill: '#1A467C', ctaT: '#FFFFFF', ctaB: 3.5, ctaBC: '#000000', ctaS: 6, ctaR: 10
+                },
+                'glass': {
+                    bgMode: 'glass',
+                    hdrFill: { dir: 'diag', stops: [[0, 'rgba(255,255,255,0.82)'], [1, 'rgba(235,245,255,0.56)']] },
+                    hdrB: 1.5, hdrBC: 'rgba(255,255,255,0.92)', hdrS: 0, hdrR: 16,
+                    logoFill: 'rgba(255,255,255,0.94)', logoB: 1.5, logoBC: 'rgba(255,255,255,0.95)', logoS: 0, logoR: 12,
+                    hdrT: '#163A6E', hdrSub: '#2563EB', softCol: 'rgba(30, 64, 175, 0.16)',
+                    acc: [['>_', '#2563EB', 'rgba(37,99,235,0.20)'], ['</>', '#DC2626', 'rgba(220,38,38,0.20)'], ['//', '#2563EB', 'rgba(37,99,235,0.18)'], ['01;', '#DC2626', 'rgba(220,38,38,0.20)']],
+                    cdFill: { dir: 'vert', stops: [[0, 'rgba(96,165,250,0.92)'], [1, 'rgba(37,99,235,0.96)']] },
+                    cdT: '#FFFFFF', cdB: 1.5, cdBC: 'rgba(255,255,255,0.90)', cdS: 0, cdR: 12, cdRot: 0, cdFont: '"Space Grotesk", sans-serif', cdTrk: 5.5,
+                    cardFill: { dir: 'diag', stops: [[0, 'rgba(255,255,255,0.68)'], [0.5, 'rgba(191,223,255,0.44)'], [1, 'rgba(235,245,255,0.64)']] },
+                    cardB: 2, cardBC: 'rgba(255,255,255,0.95)', cardS: 0, cardR: 24, grid: null,
+                    dots: ['#EF4444', '#F59E0B', '#3B82F6'], dotB: 1, dotBC: 'rgba(255,255,255,0.75)', dotR: 99,
+                    heroShdFill: 'rgba(30,41,59,0.82)', heroShdStroke: 'rgba(30,41,59,0.82)', heroShdSW: 3, heroShdOff: 6, heroShdBlur: true,
+                    heroMainFill: 'glassGrad', heroMainStroke: 'rgba(255,255,255,0.90)', heroMainSW: 5,
+                    stFill: { dir: 'vert', stops: [[0, 'rgba(248,75,75,0.96)'], [1, 'rgba(185,28,28,0.98)']] },
+                    stT: '#FFFFFF', stB: 1.5, stBC: 'rgba(255,255,255,0.82)', stS: 0, stR: 12, stRot: 0,
+                    ctaFill: { dir: 'vert', stops: [[0, '#2563EB'], [1, '#1E3A8A']] }, ctaT: '#FFFFFF', ctaB: 1.5, ctaBC: 'rgba(255,255,255,0.82)', ctaS: 0, ctaR: 14
+                },
+                'dark-code': {
+                    bgMode: 'solid', bg: '#0B192E', dot: 'rgba(56, 189, 248, 0.24)',
+                    hdrFill: '#122645', hdrB: 3, hdrBC: '#38BDF8', hdrS: 7, hdrR: 12,
+                    logoFill: '#FFFFFF', logoB: 2.5, logoBC: '#38BDF8', logoS: 3, logoR: 8,
+                    hdrT: '#FFFFFF', hdrSub: '#38BDF8', softCol: null,
+                    acc: [['>_', '#38BDF8', 'rgba(56,189,248,0.25)'], ['</>', '#F87171', 'rgba(248,113,113,0.25)'], ['//', '#94A3B8', null], ['01;', '#FCD34D', 'rgba(252,211,77,0.25)']],
+                    cdFill: '#1A365D', cdT: '#38BDF8', cdB: 3, cdBC: '#38BDF8', cdS: 6, cdR: 8, cdRot: -1, cdFont: '"Silkscreen", monospace', cdTrk: 2.8,
+                    cardFill: '#122645', cardB: 3.5, cardBC: '#38BDF8', cardS: 10, cardR: 18, grid: 'rgba(56,189,248,0.09)',
+                    dots: ['#EF4444', '#FCD34D', '#38BDF8'], dotB: 1.5, dotBC: '#000000', dotR: 99,
+                    heroShdFill: '#EF4444', heroShdStroke: '#000000', heroShdSW: 22, heroShdOff: 12, heroShdBlur: false,
+                    heroMainFill: '#FCD34D', heroMainStroke: '#060D1A', heroMainSW: 16,
+                    stFill: '#CA2C2A', stT: '#FFFFFF', stB: 3, stBC: '#FFFFFF', stS: 6, stR: 10, stRot: -2,
+                    ctaFill: '#38BDF8', ctaT: '#0B192E', ctaB: 3, ctaBC: '#FFFFFF', ctaS: 6, ctaR: 12
+                },
+                'modern': {
+                    bgMode: 'gradient',
+                    hdrFill: 'rgba(255,255,255,0.96)', hdrB: 0, hdrBC: 'transparent', hdrS: 0, hdrR: 22,
+                    logoFill: '#F8FBFE', logoB: 1, logoBC: 'rgba(18,48,90,0.12)', logoS: 0, logoR: 14,
+                    hdrT: '#12305A', hdrSub: '#2A82C6', softCol: 'rgba(8, 22, 44, 0.34)',
+                    acc: [['>_', 'rgba(253,211,77,0.88)', null], ['</>', 'rgba(255,255,255,0.78)', null], ['//', 'rgba(253,211,77,0.72)', null], ['01;', 'rgba(255,255,255,0.78)', null]],
+                    cdFill: '#FDD34D', cdT: '#12305A', cdB: 0, cdBC: 'transparent', cdS: 0, cdR: 999, cdRot: 0, cdFont: '"Silkscreen", monospace', cdTrk: 2.8,
+                    cardFill: '#1D4D85', cardB: 1.5, cardBC: 'rgba(255,255,255,0.22)', cardS: 0, cardR: 32, grid: 'rgba(255,255,255,0.04)',
+                    dots: ['#CA2C2A', '#FDD34D', '#FFFFFF'], dotB: 0, dotBC: 'transparent', dotR: 99,
+                    heroShdFill: '#FDD34D', heroShdStroke: '#FDD34D', heroShdSW: 0, heroShdOff: 10, heroShdBlur: false,
+                    heroMainFill: '#FFFFFF', heroMainStroke: null, heroMainSW: 0,
+                    stFill: '#CA2C2A', stT: '#FFFFFF', stB: 0, stBC: 'transparent', stS: 0, stR: 16, stRot: -2,
+                    ctaFill: '#FDD34D', ctaT: '#12305A', ctaB: 0, ctaBC: 'transparent', ctaS: 0, ctaR: 999
+                }
+            };
+            const T = L3_THEMES[currentStyle] || L3_THEMES['neubrutalism'];
+
+            function box(x, y, w, h, f, b, bc, s, r, soft = false) {
+                if (s > 0) {
+                    ctx.fillStyle = '#000000';
+                    if (r > 0) { rr(x + s, y + s, w, h, r); ctx.fill(); }
+                    else ctx.fillRect(x + s, y + s, w, h);
+                }
+                ctx.save();
+                if (T.softCol && soft) {
+                    ctx.shadowColor = T.softCol;
+                    ctx.shadowBlur = 28;
+                    ctx.shadowOffsetY = 14;
+                }
+                if (f && typeof f === 'object' && Array.isArray(f.stops)) {
+                    const g = f.dir === 'vert' ? ctx.createLinearGradient(x, y, x, y + h) : ctx.createLinearGradient(x, y, x + w, y + h);
+                    f.stops.forEach(([p, c]) => g.addColorStop(p, c));
+                    ctx.fillStyle = g;
+                } else ctx.fillStyle = f;
+                if (r > 0) { rr(x, y, w, h, r); ctx.fill(); }
+                else ctx.fillRect(x, y, w, h);
+                ctx.restore();
+                if (b > 0) {
+                    ctx.lineWidth = b;
+                    ctx.strokeStyle = bc;
+                    if (r > 0) { rr(x, y, w, h, r); ctx.stroke(); }
+                    else ctx.strokeRect(x, y, w, h);
+                }
+            }
+
+            if (T.bgMode === 'glass') {
+                const rad = ctx.createRadialGradient(W * 0.2, H * 0.15, 0, W * 0.2, H * 0.15, Math.max(W, H) * 1.1);
+                rad.addColorStop(0, '#F4F9FF'); rad.addColorStop(0.48, '#D9EBFF'); rad.addColorStop(1, '#BEDBFF');
+                ctx.fillStyle = rad; ctx.fillRect(0, 0, W, H);
+                ctx.save(); ctx.scale(W / 1080, H / 1350);
+                const orb = ctx.createRadialGradient(540, 600, 0, 540, 600, 380);
+                orb.addColorStop(0, 'rgba(96,165,250,0.34)'); orb.addColorStop(1, 'rgba(191,219,254,0)');
+                ctx.fillStyle = orb; ctx.beginPath(); ctx.arc(540, 600, 380, 0, Math.PI * 2); ctx.fill();
+                const rg = ctx.createLinearGradient(0, 0, 1080, 1350);
+                rg.addColorStop(0, 'rgba(59,130,246,0.42)'); rg.addColorStop(1, 'rgba(29,78,216,0.10)');
+                ctx.fillStyle = rg;
+                ctx.beginPath(); ctx.moveTo(-60,220); ctx.quadraticCurveTo(240,40,520,-40); ctx.lineTo(-60,-40); ctx.fill();
+                ctx.beginPath(); ctx.moveTo(840,-40); ctx.quadraticCurveTo(980,160,1140,240); ctx.lineTo(1140,-40); ctx.fill();
+                ctx.beginPath(); ctx.moveTo(-80,1120); ctx.quadraticCurveTo(140,1240,260,1400); ctx.lineTo(-80,1400); ctx.fill();
+                ctx.beginPath(); ctx.moveTo(740,1400); ctx.quadraticCurveTo(920,1200,1140,1140); ctx.lineTo(1140,1400); ctx.fill();
+                ctx.restore();
+            } else if (T.bgMode === 'gradient') {
+                const g = ctx.createLinearGradient(0, 0, W * 0.45, H);
+                g.addColorStop(0, '#12305A'); g.addColorStop(0.5, '#163D6E'); g.addColorStop(1, '#1B4B82');
+                ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+            } else {
+                ctx.fillStyle = T.bg; ctx.fillRect(0, 0, W, H);
+                ctx.fillStyle = T.dot;
+                for (let y = 12; y < H; y += 24) for (let x = 12; x < W; x += 24) {
+                    ctx.beginPath(); ctx.arc(x, y, 2, 0, Math.PI * 2); ctx.fill();
+                }
+            }
+
+            if (showAccents) {
+                const pts = [[0.10,0.25,-12,38],[0.90,0.25,12,38],[0.11,0.77,-12,34],[0.89,0.77,12,34]];
+                pts.forEach(([px, py, rot, sz], idx) => {
+                    const [t, c, s] = T.acc[idx];
+                    ctx.save(); ctx.translate(px * W, py * H); ctx.rotate((rot * Math.PI) / 180);
+                    ctx.font = `800 ${sz}px "JetBrains Mono", monospace`;
+                    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+                    if (s) { ctx.fillStyle = s; ctx.fillText(t, 3, 3); }
+                    ctx.fillStyle = c; ctx.fillText(t, 0, 0);
+                    ctx.restore();
+                });
+            }
+
+            // Header
+            const innerW = W - dims.px * 2;
+            const hCfg = currentRatio === '9-16' ? { py: 16, px: 24, logo: 78, title: 30, sub: 18 }
+                : (currentRatio === '1-1' ? { py: 10, px: 18, logo: 54, title: 22, sub: 14 } : { py: 14, px: 20, logo: 66, title: 26, sub: 16 });
+            const hdrH = hCfg.logo + hCfg.py * 2;
+            box(dims.px, dims.pt, innerW, hdrH, T.hdrFill, T.hdrB, T.hdrBC, T.hdrS, T.hdrR, true);
+            const drawL = (lx, ly, img) => {
+                box(lx, ly, hCfg.logo, hCfg.logo, T.logoFill, T.logoB, T.logoBC, T.logoS, T.logoR, false);
+                if (img) {
+                    const m = hCfg.logo - 14; const sc = Math.min(m / img.width, m / img.height);
+                    ctx.drawImage(img, lx + (hCfg.logo - img.width * sc) / 2, ly + (hCfg.logo - img.height * sc) / 2, img.width * sc, img.height * sc);
+                }
+            };
+            drawL(dims.px + hCfg.px, dims.pt + hCfg.py, himaImg);
+            drawL(dims.px + innerW - hCfg.px - hCfg.logo, dims.pt + hCfg.py, lpkiaImg);
+            drawTrack('HIMA INFORMATIKA', W / 2, dims.pt + hdrH / 2 - hCfg.sub * 0.65, `700 ${hCfg.title}px "Space Grotesk", sans-serif`, T.hdrT, 1.2);
+            drawTrack('IDE LPKIA', W / 2, dims.pt + hdrH / 2 + hCfg.title * 0.58, `800 ${hCfg.sub}px "Plus Jakarta Sans", sans-serif`, T.hdrSub, 4.2);
+
+            // Bottom IG Pill
+            const igHandle = (document.getElementById('inIg')?.value || 'hmif_LPKIA').trim() || 'hmif_LPKIA';
+            const igFs = currentRatio === '1-1' ? 19 : 22;
+            const igH = igFs + 26;
+            const igY = H - dims.pb - igH;
+            ctx.font = `700 ${igFs}px "Space Grotesk", sans-serif`;
+            const igW = ctx.measureText(igHandle).width + 92;
+            const igX = (W - igW) / 2;
+            box(igX, igY, igW, igH, T.ctaFill, T.ctaB, T.ctaBC, T.ctaS, T.ctaR, true);
+            const ix = igX + 36; const iy = igY + igH / 2;
+            ctx.strokeStyle = T.ctaT; ctx.lineWidth = 2.4;
+            rr(ix - 10, iy - 10, 20, 20, 5); ctx.stroke();
+            ctx.beginPath(); ctx.arc(ix, iy, 4.5, 0, Math.PI * 2); ctx.stroke();
+            ctx.fillStyle = T.ctaT; ctx.beginPath(); ctx.arc(ix + 5.5, iy - 5.5, 1.2, 0, Math.PI * 2); ctx.fill();
+            drawTrack(igHandle, ix + 24, iy + 1, `700 ${igFs}px "Space Grotesk", sans-serif`, T.ctaT, 0.8, 'left');
+
+            // Center Coming Soon Lockup
+            const title = (document.getElementById('inStamp')?.value || 'KADERISASI').trim().toUpperCase() || 'KADERISASI';
+            const cardDim = currentRatio === '9-16' ? { w: 800, pt: 56, pb: 76, svgW: 720, svgH: 225, cdFs: 44, stFs: 36 }
+                : (currentRatio === '1-1' ? { w: 660, pt: 34, pb: 48, svgW: 590, svgH: 160, cdFs: 30, stFs: 26 }
+                : { w: 760, pt: 48, pb: 64, svgW: 700, svgH: 205, cdFs: 38, stFs: 32 });
+            const cdH = cardDim.cdFs + 24;
+            const stH = cardDim.stFs + 28;
+            const cardH = cardDim.pt + cardDim.svgH + cardDim.pb;
+            const gapCard = 20;
+            const totalMidH = cdH + gapCard + cardH - 32 + stH;
+            const midTopY = (dims.pt + hdrH) + ((igY - (dims.pt + hdrH)) - totalMidH) / 2;
+
+            // COMING SOON pill
+            const cdTxt = 'COMING SOON';
+            ctx.font = `700 ${cardDim.cdFs}px ${T.cdFont}`;
+            const cdW = ctx.measureText(cdTxt).width + Math.max(0, cdTxt.length - 1) * T.cdTrk + 64;
+            ctx.save(); ctx.translate(W / 2, midTopY + cdH / 2); ctx.rotate((T.cdRot * Math.PI) / 180);
+            box(-cdW / 2, -cdH / 2, cdW, cdH, T.cdFill, T.cdB, T.cdBC, T.cdS, T.cdR, true);
+            drawTrack(cdTxt, 0, 1, `700 ${cardDim.cdFs}px ${T.cdFont}`, T.cdT, T.cdTrk);
+            ctx.restore();
+
+            // Hero Card + KADERISASI Hero
+            const cardX = (W - cardDim.w) / 2;
+            const cardY = midTopY + cdH + gapCard;
+            box(cardX, cardY, cardDim.w, cardH, T.cardFill, T.cardB, T.cardBC, T.cardS, T.cardR, true);
+            if (T.grid) {
+                ctx.save(); rr(cardX + 4, cardY + 4, cardDim.w - 8, cardH - 8, Math.max(0, T.cardR - 4)); ctx.clip();
+                ctx.strokeStyle = T.grid; ctx.lineWidth = 1;
+                for (let gx = cardX; gx < cardX + cardDim.w; gx += 26) { ctx.beginPath(); ctx.moveTo(gx, cardY); ctx.lineTo(gx, cardY + cardH); ctx.stroke(); }
+                for (let gy = cardY; gy < cardY + cardH; gy += 26) { ctx.beginPath(); ctx.moveTo(cardX, gy); ctx.lineTo(cardX + cardDim.w, gy); ctx.stroke(); }
+                ctx.restore();
+            }
+            T.dots.forEach((col, i) => box(cardX + 18 + i * 20, cardY + 16, 14, 14, col, T.dotB, T.dotBC, 0, T.dotR, false));
+
+            const l3Len = title.length;
+            const l3Fs = l3Len >= 13 ? 72 : (l3Len >= 10 ? 92 : (l3Len >= 7 ? 116 : 155));
+            const l3Ls = l3Len >= 10 ? 3 : 8;
+            const l3Scale = cardDim.svgW / 760;
+            const l3CY = cardY + cardDim.pt + cardDim.svgH / 2;
+            const drawL3Text = (ox, oy, fCol, sCol, sw, blur) => {
+                ctx.save(); ctx.translate(W / 2, l3CY); ctx.scale(l3Scale, l3Scale);
+                if (blur) { ctx.shadowColor = 'rgba(30,64,175,0.34)'; ctx.shadowBlur = 18; ctx.shadowOffsetY = 12; }
+                ctx.font = `400 ${l3Fs}px "Archivo Black", "Space Grotesk", sans-serif`;
+                ctx.textBaseline = 'middle'; ctx.lineJoin = 'round'; ctx.lineCap = 'round';
+                const cs = Array.from(title); const ws = cs.map(c => ctx.measureText(c).width);
+                const tot = ws.reduce((a, b) => a + b, 0) + l3Ls * Math.max(0, cs.length - 1);
+                let cx = -tot / 2 + ox; ctx.textAlign = 'left';
+                const rf = (() => {
+                    if (fCol !== 'glassGrad') return fCol;
+                    const hg = ctx.createLinearGradient(0, oy - l3Fs * 0.42, 0, oy + l3Fs * 0.42);
+                    hg.addColorStop(0, '#FF8585'); hg.addColorStop(0.28, '#F84B4B'); hg.addColorStop(0.68, '#DC2626'); hg.addColorStop(1, '#991B1B');
+                    return hg;
+                })();
+                cs.forEach((c, idx) => {
+                    if (sCol && sw > 0) { ctx.lineWidth = sw; ctx.strokeStyle = sCol; ctx.strokeText(c, cx, oy); }
+                    ctx.fillStyle = rf; ctx.fillText(c, cx, oy); cx += ws[idx] + l3Ls;
+                });
+                ctx.restore();
+            };
+            drawL3Text(T.heroShdOff, T.heroShdOff, T.heroShdFill, T.heroShdStroke, T.heroShdSW, T.heroShdBlur);
+            drawL3Text(0, 0, T.heroMainFill, T.heroMainStroke, T.heroMainSW, false);
+
+            // STAY TUNED stamp
+            const stTxt = 'STAY TUNED';
+            ctx.font = `700 ${cardDim.stFs}px "Space Grotesk", sans-serif`;
+            const stW = ctx.measureText(stTxt).width + Math.max(0, stTxt.length - 1) * 4.5 + 64;
+            const stY = cardY + cardH - 32 + stH / 2;
+            ctx.save(); ctx.translate(W / 2, stY); ctx.rotate((T.stRot * Math.PI) / 180);
+            box(-stW / 2, -stH / 2, stW, stH, T.stFill, T.stB, T.stBC, T.stS, T.stR, true);
+            drawTrack(stTxt, 0, 1, `700 ${cardDim.stFs}px "Space Grotesk", sans-serif`, T.stT, 4.5);
+            ctx.restore();
 
             return canvas;
         }
@@ -2479,8 +3141,10 @@
             try {
                 const rendered = await renderPosterCanvas();
                 const link = document.createElement('a');
-                const heroSlug = (document.getElementById('inHero').value || 'H-7').toLowerCase().replace(/\s+/g, '-');
-                const layoutTag = currentLayout === 2 ? 'layout2-' : '';
+                const heroSlug = currentLayout === 3
+                    ? 'coming-soon'
+                    : (document.getElementById('inHero').value || 'H-7').toLowerCase().replace(/\s+/g, '-');
+                const layoutTag = currentLayout === 2 ? 'layout2-' : (currentLayout === 3 ? 'layout3-' : '');
                 link.download = `poster-${heroSlug}-${layoutTag}${currentStyle}-${currentRatio}.png`;
                 link.href = rendered.toDataURL('image/png');
                 link.click();
@@ -2497,8 +3161,11 @@
             document.getElementById('sidebarLogo').src = himaSrc;
             document.getElementById('l2HimaLogo').src = himaSrc;
             document.getElementById('l2LpkiaLogo').src = lpkiaSrc;
+            document.getElementById('l3HimaLogo').src = himaSrc;
+            document.getElementById('l3LpkiaLogo').src = lpkiaSrc;
             renderL2CursorSvg();
             syncLayout2Dom();
+            syncLayout3Dom();
             applyScale();
         });
     </script>
