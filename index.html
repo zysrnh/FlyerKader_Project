@@ -79,13 +79,12 @@
 
         /* ================= LAYOUT 2: RETRO POP-UP (4 TEMA) ================= */
         .poster-canvas.layout-2 { padding: 0 !important; }
-        .poster-canvas.layout-2 .layout-1-root,
-        .poster-canvas.layout-2 .layout-3-root { display: none !important; }
+        .poster-canvas.layout-2 .layout-1-root { display: none !important; }
         .poster-canvas.layout-2 .layout-2-root { display: block !important; }
 
-        .poster-canvas.layout-3 .layout-1-root,
-        .poster-canvas.layout-3 .layout-2-root { display: none !important; }
-        .poster-canvas.layout-3 .layout-3-root { display: flex !important; }
+        /* Mode Coming Soon (berlaku di Layout 1 & Layout 2, tanpa tanggal) */
+        .poster-canvas.mode-coming-soon .layout-1-root .menuju-box,
+        .poster-canvas.mode-coming-soon .layout-1-root .sched-grid { display: none !important; }
 
         .l2-bg-wall {
             position: absolute;
@@ -246,14 +245,6 @@
         .layout-2.style-modern .l2-ig-sticker { background: #FFFFFF; color: #12305A; border: none; box-shadow: 0 14px 32px rgba(8, 22, 44, 0.34); border-radius: 999px; }
         .layout-2.style-modern .l2-ig-icon { color: #CA2C2A; }
         .layout-2.style-modern .l2-cursor-svg { filter: drop-shadow(0 14px 26px rgba(8, 22, 44, 0.38)); }
-
-        /* ================= LAYOUT 3: COMING SOON (4 TEMA, ULTRA CLEAN) ================= */
-        .l3-hero-svg { width: 700px; height: 205px; }
-        .ratio-9-16 .l3-hero-svg { width: 720px; height: 225px; }
-        .ratio-1-1  .l3-hero-svg { width: 590px; height: 160px; }
-        .l3-hero-card { width: 760px; padding: 48px 32px 64px 32px; }
-        .ratio-9-16 .l3-hero-card { width: 800px; padding: 56px 36px 76px 36px; }
-        .ratio-1-1  .l3-hero-card { width: 660px; padding: 34px 24px 48px 24px; }
 
         /* ================= THEME 1: NEUBRUTALISM ================= */
         .style-neubrutalism {
@@ -615,24 +606,20 @@
         <!-- Scrollable Inspector Controls -->
         <div class="builder-scroll flex-1 overflow-y-auto p-4 space-y-5">
 
-            <!-- 0. PILIH LAYOUT -->
+            <!-- 0. PILIH LAYOUT (2 LAYOUT) -->
             <div class="space-y-2">
                 <div class="flex items-center justify-between">
                     <span class="text-[11px] font-extrabold uppercase tracking-wider text-[#93C5FD]">0. Pilih Layout</span>
                     <span id="lblActiveLayout" class="text-[10px] font-code text-[#FCD34D]">layout-1</span>
                 </div>
-                <div class="grid grid-cols-3 gap-1.5">
-                    <button type="button" onclick="setLayout(1)" id="btn-layout-1" class="btn-brutal px-2 py-2 bg-[#FCD34D] text-black border-2 border-black shadow-[3px_3px_0_#000000] text-left cursor-pointer">
-                        <span class="text-[10px] font-extrabold uppercase block leading-tight">Layout 1</span>
-                        <span class="text-[8.5px] font-bold opacity-80 block mt-0.5 truncate">Countdown</span>
+                <div class="grid grid-cols-2 gap-2">
+                    <button type="button" onclick="setLayout(1)" id="btn-layout-1" class="btn-brutal px-2.5 py-2 bg-[#FCD34D] text-black border-2 border-black shadow-[3px_3px_0_#000000] text-left cursor-pointer">
+                        <span class="text-[11px] font-extrabold uppercase block leading-tight">Layout 1</span>
+                        <span class="text-[9.5px] font-bold opacity-80 block mt-0.5 truncate">Countdown Card</span>
                     </button>
-                    <button type="button" onclick="setLayout(2)" id="btn-layout-2" class="btn-brutal px-2 py-2 bg-[#162C4E] text-white border-2 border-black shadow-[3px_3px_0_#000000] text-left cursor-pointer">
-                        <span class="text-[10px] font-extrabold uppercase block leading-tight">Layout 2</span>
-                        <span class="text-[8.5px] font-bold opacity-80 block mt-0.5 truncate">Retro Pop</span>
-                    </button>
-                    <button type="button" onclick="setLayout(3)" id="btn-layout-3" class="btn-brutal px-2 py-2 bg-[#162C4E] text-white border-2 border-black shadow-[3px_3px_0_#000000] text-left cursor-pointer">
-                        <span class="text-[10px] font-extrabold uppercase block leading-tight">Layout 3</span>
-                        <span class="text-[8.5px] font-bold opacity-80 block mt-0.5 truncate">Coming Soon</span>
+                    <button type="button" onclick="setLayout(2)" id="btn-layout-2" class="btn-brutal px-2.5 py-2 bg-[#162C4E] text-white border-2 border-black shadow-[3px_3px_0_#000000] text-left cursor-pointer">
+                        <span class="text-[11px] font-extrabold uppercase block leading-tight">Layout 2</span>
+                        <span class="text-[9.5px] font-bold opacity-80 block mt-0.5 truncate">Retro Pop-up</span>
                     </button>
                 </div>
             </div>
@@ -700,67 +687,77 @@
 
             <!-- 3. COUNTDOWN PRESET & KONTEN -->
             <div class="space-y-3 pt-3 border-t-2 border-white/10">
-                <span class="text-[11px] font-extrabold uppercase tracking-wider text-[#93C5FD] block">3. Countdown &amp; Konten</span>
+                <div class="flex items-center justify-between">
+                    <span class="text-[11px] font-extrabold uppercase tracking-wider text-[#93C5FD]">3. Countdown &amp; Konten</span>
+                    <span id="lblActiveMode" class="text-[10px] font-code text-[#FCD34D]">countdown</span>
+                </div>
 
-                <div class="grid grid-cols-4 gap-1.5">
-                    <button type="button" onclick="setHeroPreset('H-7')" id="preset-H-7" class="btn-brutal py-1.5 bg-[#FCD34D] text-black border-2 border-black text-xs font-extrabold shadow-[2px_2px_0_#000000] cursor-pointer">H-7</button>
-                    <button type="button" onclick="setHeroPreset('H-3')" id="preset-H-3" class="btn-brutal py-1.5 bg-white text-black border-2 border-black text-xs font-extrabold shadow-[2px_2px_0_#000000] cursor-pointer">H-3</button>
-                    <button type="button" onclick="setHeroPreset('H-1')" id="preset-H-1" class="btn-brutal py-1.5 bg-white text-black border-2 border-black text-xs font-extrabold shadow-[2px_2px_0_#000000] cursor-pointer">H-1</button>
-                    <button type="button" onclick="setHeroPreset('HARI H')" id="preset-HARI H" class="btn-brutal py-1.5 bg-white text-black border-2 border-black text-[11px] font-extrabold shadow-[2px_2px_0_#000000] cursor-pointer">HARI H</button>
+                <div class="space-y-1.5">
+                    <div class="grid grid-cols-4 gap-1.5">
+                        <button type="button" onclick="setHeroPreset('H-7')" id="preset-H-7" class="btn-brutal py-1.5 bg-[#FCD34D] text-black border-2 border-black text-xs font-extrabold shadow-[2px_2px_0_#000000] cursor-pointer">H-7</button>
+                        <button type="button" onclick="setHeroPreset('H-3')" id="preset-H-3" class="btn-brutal py-1.5 bg-white text-black border-2 border-black text-xs font-extrabold shadow-[2px_2px_0_#000000] cursor-pointer">H-3</button>
+                        <button type="button" onclick="setHeroPreset('H-1')" id="preset-H-1" class="btn-brutal py-1.5 bg-white text-black border-2 border-black text-xs font-extrabold shadow-[2px_2px_0_#000000] cursor-pointer">H-1</button>
+                        <button type="button" onclick="setHeroPreset('HARI H')" id="preset-HARI H" class="btn-brutal py-1.5 bg-white text-black border-2 border-black text-[11px] font-extrabold shadow-[2px_2px_0_#000000] cursor-pointer">HARI H</button>
+                    </div>
+                    <button type="button" onclick="setHeroPreset('COMING SOON')" id="preset-COMING SOON" class="btn-brutal w-full py-1.5 bg-[#162C4E] text-[#FCD34D] border-2 border-black text-[11px] font-extrabold uppercase tracking-wider shadow-[2px_2px_0_#000000] cursor-pointer">
+                        COMING SOON (Tanpa Tanggal)
+                    </button>
                 </div>
 
                 <div class="grid grid-cols-2 gap-2.5">
-                    <div>
+                    <div id="heroTextFieldWrap" class="transition-opacity">
                         <label class="text-[10px] font-bold uppercase text-white/70 block mb-1">Teks Hero</label>
                         <input id="inHero" type="text" value="H-7" oninput="setHeroText(this.value)" class="w-full px-2.5 py-1.5 bg-[#0B192E] border-2 border-black text-xs font-bold text-white focus:border-[#38BDF8] focus:outline-none">
                     </div>
                     <div>
-                        <label class="text-[10px] font-bold uppercase text-white/70 block mb-1">Stempel Acara</label>
-                        <input id="inStamp" type="text" value="KADERISASI" oninput="setText('outStamp', this.value.toUpperCase())" class="w-full px-2.5 py-1.5 bg-[#0B192E] border-2 border-black text-xs font-bold text-white focus:border-[#38BDF8] focus:outline-none">
+                        <label class="text-[10px] font-bold uppercase text-white/70 block mb-1">Nama / Stempel Acara</label>
+                        <input id="inStamp" type="text" value="KADERISASI" oninput="syncAllDom()" class="w-full px-2.5 py-1.5 bg-[#0B192E] border-2 border-black text-xs font-bold text-white focus:border-[#38BDF8] focus:outline-none">
                     </div>
                 </div>
 
-                <div class="grid grid-cols-2 gap-2.5">
-                    <div>
-                        <label class="text-[10px] font-bold uppercase text-white/70 block mb-1">Badge Atas</label>
-                        <input id="inCountdown" type="text" value="COUNTDOWN" oninput="setText('outCountdown', this.value.toUpperCase())" class="w-full px-2.5 py-1.5 bg-[#0B192E] border-2 border-black text-xs font-bold text-white focus:border-[#38BDF8] focus:outline-none">
+                <div id="countdownFieldsWrap" class="space-y-2.5 transition-opacity">
+                    <div class="grid grid-cols-2 gap-2.5">
+                        <div>
+                            <label class="text-[10px] font-bold uppercase text-white/70 block mb-1">Badge Atas</label>
+                            <input id="inCountdown" type="text" value="COUNTDOWN" oninput="syncAllDom()" class="w-full px-2.5 py-1.5 bg-[#0B192E] border-2 border-black text-xs font-bold text-white focus:border-[#38BDF8] focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="text-[10px] font-bold uppercase text-white/70 block mb-1">Sub-Label</label>
+                            <input id="inMenuju" type="text" value="MENUJU" oninput="syncAllDom()" class="w-full px-2.5 py-1.5 bg-[#0B192E] border-2 border-black text-xs font-bold text-white focus:border-[#38BDF8] focus:outline-none">
+                        </div>
                     </div>
-                    <div>
-                        <label class="text-[10px] font-bold uppercase text-white/70 block mb-1">Sub-Label</label>
-                        <input id="inMenuju" type="text" value="MENUJU" oninput="setText('outMenuju', this.value.toUpperCase())" class="w-full px-2.5 py-1.5 bg-[#0B192E] border-2 border-black text-xs font-bold text-white focus:border-[#38BDF8] focus:outline-none">
-                    </div>
-                </div>
 
-                <div class="grid grid-cols-3 gap-2.5">
-                    <div>
-                        <label class="text-[10px] font-bold uppercase text-white/70 block mb-1">Tgl</label>
-                        <input id="inNum" type="text" value="04" oninput="setText('outNum', this.value)" class="w-full px-2.5 py-1.5 bg-[#0B192E] border-2 border-black text-xs font-bold text-white focus:border-[#38BDF8] focus:outline-none">
+                    <div class="grid grid-cols-3 gap-2.5">
+                        <div>
+                            <label class="text-[10px] font-bold uppercase text-white/70 block mb-1">Tgl</label>
+                            <input id="inNum" type="text" value="04" oninput="syncAllDom()" class="w-full px-2.5 py-1.5 bg-[#0B192E] border-2 border-black text-xs font-bold text-white focus:border-[#38BDF8] focus:outline-none">
+                        </div>
+                        <div class="col-span-2">
+                            <label class="text-[10px] font-bold uppercase text-white/70 block mb-1">Hari &amp; Tanggal</label>
+                            <input id="inDate" type="text" value="JUMAT, 04 DES 2026" oninput="syncAllDom()" class="w-full px-2.5 py-1.5 bg-[#0B192E] border-2 border-black text-xs font-bold text-white focus:border-[#38BDF8] focus:outline-none">
+                        </div>
                     </div>
-                    <div class="col-span-2">
-                        <label class="text-[10px] font-bold uppercase text-white/70 block mb-1">Hari &amp; Tanggal</label>
-                        <input id="inDate" type="text" value="JUMAT, 04 DES 2026" oninput="setText('outDate', this.value.toUpperCase())" class="w-full px-2.5 py-1.5 bg-[#0B192E] border-2 border-black text-xs font-bold text-white focus:border-[#38BDF8] focus:outline-none">
-                    </div>
-                </div>
 
-                <div class="grid grid-cols-2 gap-2.5">
-                    <div>
-                        <label class="text-[10px] font-bold uppercase text-white/70 block mb-1">Waktu</label>
-                        <input id="inTime" type="text" value="08.00 WIB" oninput="setText('outTime', this.value)" class="w-full px-2.5 py-1.5 bg-[#0B192E] border-2 border-black text-xs font-bold text-white focus:border-[#38BDF8] focus:outline-none">
-                    </div>
-                    <div>
-                        <label class="text-[10px] font-bold uppercase text-white/70 block mb-1">Lokasi</label>
-                        <input id="inLoc" type="text" value="Kampus IDE LPKIA" oninput="setText('outLoc', this.value)" class="w-full px-2.5 py-1.5 bg-[#0B192E] border-2 border-black text-xs font-bold text-white focus:border-[#38BDF8] focus:outline-none">
+                    <div class="grid grid-cols-2 gap-2.5">
+                        <div>
+                            <label class="text-[10px] font-bold uppercase text-white/70 block mb-1">Waktu</label>
+                            <input id="inTime" type="text" value="08.00 WIB" oninput="syncAllDom()" class="w-full px-2.5 py-1.5 bg-[#0B192E] border-2 border-black text-xs font-bold text-white focus:border-[#38BDF8] focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="text-[10px] font-bold uppercase text-white/70 block mb-1">Lokasi</label>
+                            <input id="inLoc" type="text" value="Kampus IDE LPKIA" oninput="syncAllDom()" class="w-full px-2.5 py-1.5 bg-[#0B192E] border-2 border-black text-xs font-bold text-white focus:border-[#38BDF8] focus:outline-none">
+                        </div>
                     </div>
                 </div>
 
                 <div class="grid grid-cols-2 gap-2.5">
                     <div>
                         <label class="text-[10px] font-bold uppercase text-white/70 block mb-1">Link CTA (Layout 1)</label>
-                        <input id="inCta" type="text" value="GO.HMIF-LPKIA.MY.ID" oninput="setText('outCta', this.value.toUpperCase())" class="w-full px-2.5 py-1.5 bg-[#0B192E] border-2 border-black text-xs font-bold text-white focus:border-[#38BDF8] focus:outline-none">
+                        <input id="inCta" type="text" value="GO.HMIF-LPKIA.MY.ID" oninput="syncAllDom()" class="w-full px-2.5 py-1.5 bg-[#0B192E] border-2 border-black text-xs font-bold text-white focus:border-[#38BDF8] focus:outline-none">
                     </div>
                     <div>
                         <label class="text-[10px] font-bold uppercase text-white/70 block mb-1">IG Handle (Layout 2)</label>
-                        <input id="inIg" type="text" value="hmif_LPKIA" oninput="syncLayout2Dom()" class="w-full px-2.5 py-1.5 bg-[#0B192E] border-2 border-black text-xs font-bold text-white focus:border-[#38BDF8] focus:outline-none">
+                        <input id="inIg" type="text" value="hmif_LPKIA" oninput="syncAllDom()" class="w-full px-2.5 py-1.5 bg-[#0B192E] border-2 border-black text-xs font-bold text-white focus:border-[#38BDF8] focus:outline-none">
                     </div>
                 </div>
             </div>
@@ -1130,92 +1127,6 @@
                         </div>
                     </div>
 
-                    <!-- ================= LAYOUT 3: COMING SOON (ULTRA CLEAN — 4 TEMA) ================= -->
-                    <div id="layout3Root" class="layout-3-root hidden relative z-10 w-full h-full flex-col justify-between">
-                        <!-- Coding Accents (Optional Toggle) -->
-                        <span class="code-accent acc-1 pointer-events-none font-code font-extrabold absolute top-[24%] left-[8%] -rotate-12 text-[38px] leading-none z-0">&gt;_</span>
-                        <span class="code-accent acc-2 pointer-events-none font-code font-extrabold absolute top-[24%] right-[7%] rotate-12 text-[38px] leading-none z-0">&lt;/&gt;</span>
-                        <span class="code-accent acc-5 pointer-events-none font-code font-extrabold absolute bottom-[22%] left-[9%] -rotate-12 text-[34px] leading-none z-0">//</span>
-                        <span class="code-accent acc-6 pointer-events-none font-code font-extrabold absolute bottom-[22%] right-[9%] rotate-12 text-[34px] leading-none z-0">01;</span>
-
-                        <!-- Top Header (Reuses Theme Header) -->
-                        <header class="hdr-box relative z-10 grid grid-cols-[1fr_auto_1fr] items-center px-5 py-3.5">
-                            <div class="hdr-logo w-[66px] h-[66px] p-1.5 flex items-center justify-center justify-self-start shrink-0">
-                                <img id="l3HimaLogo" src="" alt="Logo HIMA Informatika" class="w-full h-full object-contain">
-                            </div>
-                            <div class="text-center justify-self-center px-4">
-                                <p class="hdr-title font-display text-[26px] font-bold uppercase tracking-[0.04em] leading-none">
-                                    HIMA INFORMATIKA
-                                </p>
-                                <p class="hdr-sub text-[16px] font-extrabold uppercase tracking-[0.24em] mt-1.5 leading-none">
-                                    IDE LPKIA
-                                </p>
-                            </div>
-                            <div class="hdr-logo w-[66px] h-[66px] p-1.5 flex items-center justify-center justify-self-end shrink-0">
-                                <img id="l3LpkiaLogo" src="" alt="Logo IDE LPKIA" class="w-full h-full object-contain">
-                            </div>
-                        </header>
-
-                        <!-- Clean Center Teaser Lockup (COMING SOON + KADERISASI, Zero Dates) -->
-                        <section class="relative z-10 flex flex-col items-center justify-center my-auto">
-                            <div class="countdown-box px-8 py-2.5">
-                                <span class="hero-countdown font-pixel text-[38px] font-bold tracking-[0.10em] leading-none block">
-                                    COMING SOON
-                                </span>
-                            </div>
-
-                            <div class="hero-card l3-hero-card relative mt-5 flex items-center justify-center overflow-hidden">
-                                <div class="hero-card-grid pointer-events-none absolute inset-0"></div>
-                                <div class="absolute top-3.5 left-4 flex items-center gap-1.5">
-                                    <span class="win-dot win-dot-1 w-3.5 h-3.5 block"></span>
-                                    <span class="win-dot win-dot-2 w-3.5 h-3.5 block"></span>
-                                    <span class="win-dot win-dot-3 w-3.5 h-3.5 block"></span>
-                                </div>
-
-                                <svg viewBox="0 0 760 210" class="l3-hero-svg relative z-10 overflow-visible" aria-label="KADERISASI">
-                                    <defs>
-                                        <linearGradient id="l3GlassHeroGrad" gradientUnits="userSpaceOnUse" x1="0" y1="44" x2="0" y2="166">
-                                            <stop offset="0%" stop-color="#FF8585"/>
-                                            <stop offset="28%" stop-color="#F84B4B"/>
-                                            <stop offset="68%" stop-color="#DC2626"/>
-                                            <stop offset="100%" stop-color="#991B1B"/>
-                                        </linearGradient>
-                                    </defs>
-                                    <text id="l3SvgShadow" x="392" y="117" text-anchor="middle" dominant-baseline="central"
-                                          class="font-hero svg-stroke" font-size="92" font-weight="400" letter-spacing="3"
-                                          fill="#000000" stroke="#000000" stroke-width="26">
-                                        KADERISASI
-                                    </text>
-                                    <text id="l3SvgMain" x="380" y="105" text-anchor="middle" dominant-baseline="central"
-                                          class="font-hero svg-stroke" font-size="92" font-weight="400" letter-spacing="3"
-                                          fill="#CA2C2A" stroke="#000000" stroke-width="18">
-                                        KADERISASI
-                                    </text>
-                                </svg>
-                            </div>
-
-                            <div class="hero-stamp -mt-8 z-20 inline-flex items-center gap-3 px-8 py-3">
-                                <span class="hero-stamp-text font-display text-[32px] font-bold uppercase tracking-[0.14em] leading-none">
-                                    STAY TUNED
-                                </span>
-                            </div>
-                        </section>
-
-                        <!-- Clean Minimal Footer IG Handle -->
-                        <footer class="relative z-10 flex justify-center pb-2">
-                            <div class="cta-btn inline-flex items-center gap-3 px-8 py-3">
-                                <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true">
-                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                                    <circle cx="12" cy="12" r="4.5"></circle>
-                                    <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"></circle>
-                                </svg>
-                                <span id="l3OutIg" class="cta-text font-display text-[22px] font-bold tracking-[0.04em] leading-none">
-                                    hmif_LPKIA
-                                </span>
-                            </div>
-                        </footer>
-                    </div>
-
                 </main>
             </div>
         </div>
@@ -1225,6 +1136,7 @@
         let currentLayout = 1;
         let currentRatio = '4-5';
         let currentStyle = 'neubrutalism';
+        let posterMode = 'countdown';
         let zoomSetting = 'fit';
         let showAccents = true;
         let customLogo3DataUrl = null;
@@ -1318,32 +1230,49 @@
             svg.innerHTML = rects;
         }
 
-        function syncLayout3Dom() {
-            const title = (document.getElementById('inStamp')?.value || 'KADERISASI').trim().toUpperCase() || 'KADERISASI';
-            const igHandle = (document.getElementById('inIg')?.value || 'hmif_LPKIA').trim() || 'hmif_LPKIA';
-            const l3Len = title.length;
-            const l3Fs = l3Len >= 13 ? 72 : (l3Len >= 10 ? 92 : (l3Len >= 7 ? 116 : 155));
-            const l3Ls = l3Len >= 10 ? 3 : 8;
-            const l3Shd = document.getElementById('l3SvgShadow');
-            const l3Main = document.getElementById('l3SvgMain');
-            if (l3Shd && l3Main) {
-                l3Shd.textContent = title;
-                l3Main.textContent = title;
-                l3Shd.setAttribute('font-size', l3Fs);
-                l3Main.setAttribute('font-size', l3Fs);
-                l3Shd.setAttribute('letter-spacing', l3Ls);
-                l3Main.setAttribute('letter-spacing', l3Ls);
-            }
-            const l3Ig = document.getElementById('l3OutIg');
-            if (l3Ig) l3Ig.textContent = igHandle;
+        function getHeroMetrics(txt, baseFs = 220) {
+            const len = (txt || '').length;
+            const scale = baseFs / 220;
+            if (len >= 13) return { fs: Math.round(62 * scale), ls: 2 };
+            if (len >= 10) return { fs: Math.round(80 * scale), ls: 3 };
+            if (len >= 8)  return { fs: Math.round(110 * scale), ls: 4 };
+            if (len >= 6)  return { fs: Math.round(155 * scale), ls: 6 };
+            if (len === 5) return { fs: Math.round(185 * scale), ls: 6 };
+            return { fs: Math.round(220 * scale), ls: 14 };
         }
 
-        function getL2BgRows(cd, title) {
-            const w1 = (cd || 'COUNTDOWN').replace(/\s+/g, '') || 'COUNTDOWN';
-            const w2 = (title || 'KADERISASI').replace(/\s+/g, '') || 'KADERISASI';
+        function getEffectiveContent() {
+            const title = (document.getElementById('inStamp')?.value || 'KADERISASI').trim().toUpperCase() || 'KADERISASI';
+            const rawHero = (document.getElementById('inHero')?.value || 'H-7').trim().toUpperCase() || 'H-7';
+            const rawCd = (document.getElementById('inCountdown')?.value || 'COUNTDOWN').trim().toUpperCase() || 'COUNTDOWN';
+            const rawMn = (document.getElementById('inMenuju')?.value || 'MENUJU').trim().toUpperCase() || 'MENUJU';
+            const num = (document.getElementById('inNum')?.value || '04').trim() || '04';
+            const date = (document.getElementById('inDate')?.value || 'JUMAT, 04 DES 2026').trim().toUpperCase();
+            const time = (document.getElementById('inTime')?.value || '08.00 WIB').trim().toUpperCase();
+            const loc = (document.getElementById('inLoc')?.value || 'Kampus IDE LPKIA').trim().toUpperCase();
+            const igHandle = (document.getElementById('inIg')?.value || 'hmif_LPKIA').trim() || 'hmif_LPKIA';
+            const cta = (document.getElementById('inCta')?.value || 'GO.HMIF-LPKIA.MY.ID').trim().toUpperCase() || 'GO.HMIF-LPKIA.MY.ID';
+            const isCS = posterMode === 'coming-soon';
+            return {
+                isCS,
+                title,
+                hero: isCS ? title : rawHero,
+                cd: isCS ? 'COMING SOON' : rawCd,
+                mn: isCS ? '' : rawMn,
+                l2Banner: isCS ? 'COMING SOON' : `${rawCd} • ${rawMn}`,
+                stamp: isCS ? 'STAY TUNED' : title,
+                bgWord1: isCS ? 'COMINGSOON' : rawCd,
+                bgWord2: title,
+                num, date, time, loc, igHandle, cta
+            };
+        }
+
+        function getL2BgRows(w1, w2) {
+            const a = (w1 || 'COUNTDOWN').replace(/\s+/g, '') || 'COUNTDOWN';
+            const b = (w2 || 'KADERISASI').replace(/\s+/g, '') || 'KADERISASI';
             const rows = [];
             for (let i = 0; i < 12; i++) {
-                const base = i % 2 === 0 ? w1 : w2;
+                const base = i % 2 === 0 ? a : b;
                 const rep = base.repeat(4);
                 const shift = (i * 3) % base.length;
                 rows.push(rep.slice(shift) + rep.slice(0, shift));
@@ -1351,64 +1280,76 @@
             return rows;
         }
 
-        function syncLayout2Dom() {
-            const title = (document.getElementById('inStamp')?.value || 'KADERISASI').trim().toUpperCase() || 'KADERISASI';
-            const hero = (document.getElementById('inHero')?.value || 'H-7').trim().toUpperCase() || 'H-7';
-            const cd = (document.getElementById('inCountdown')?.value || 'COUNTDOWN').trim().toUpperCase() || 'COUNTDOWN';
-            const mn = (document.getElementById('inMenuju')?.value || 'MENUJU').trim().toUpperCase() || 'MENUJU';
-            const num = (document.getElementById('inNum')?.value || '04').trim() || '04';
-            const date = (document.getElementById('inDate')?.value || 'JUMAT, 04 DES 2026').trim().toUpperCase();
-            const time = (document.getElementById('inTime')?.value || '08.00 WIB').trim().toUpperCase();
-            const loc = (document.getElementById('inLoc')?.value || 'Kampus IDE LPKIA').trim().toUpperCase();
-            const igHandle = (document.getElementById('inIg')?.value || 'hmif_LPKIA').trim() || 'hmif_LPKIA';
+        function syncAllDom() {
+            const E = getEffectiveContent();
+            const canvas = document.getElementById('posterCanvas');
+            if (canvas) canvas.classList.toggle('mode-coming-soon', E.isCS);
 
-            const bannerEl = document.getElementById('l2OutBanner');
-            if (bannerEl) bannerEl.textContent = `${cd} • ${mn}`;
+            const modeLbl = document.getElementById('lblActiveMode');
+            if (modeLbl) modeLbl.textContent = posterMode;
+            const heroWrap = document.getElementById('heroTextFieldWrap');
+            const cdWrap = document.getElementById('countdownFieldsWrap');
+            if (heroWrap) heroWrap.classList.toggle('opacity-50', E.isCS);
+            if (cdWrap) cdWrap.classList.toggle('opacity-50', E.isCS);
 
-            const heroLen = hero.length;
-            const hFs = heroLen >= 6 ? 160 : (heroLen >= 5 ? 190 : 225);
-            const hLs = heroLen >= 5 ? 6 : 14;
+            // Layout 1 DOM sync
+            const setIf = (id, v) => {
+                const el = document.getElementById(id);
+                if (el) el.textContent = v;
+            };
+            setIf('outCountdown', E.cd);
+            setIf('outMenuju', E.mn);
+            setIf('outStamp', E.stamp);
+            setIf('outNum', E.num);
+            setIf('outDate', E.date);
+            setIf('outTime', E.time);
+            setIf('outLoc', E.loc);
+            setIf('outCta', E.cta);
+
+            const l1M = getHeroMetrics(E.hero, 220);
+            const svgShd = document.getElementById('svgHeroShadow');
+            const svgMain = document.getElementById('svgHeroMain');
+            if (svgShd && svgMain) {
+                svgShd.textContent = E.hero;
+                svgMain.textContent = E.hero;
+                svgShd.setAttribute('font-size', l1M.fs);
+                svgMain.setAttribute('font-size', l1M.fs);
+                svgShd.setAttribute('letter-spacing', l1M.ls);
+                svgMain.setAttribute('letter-spacing', l1M.ls);
+            }
+
+            // Layout 2 DOM sync
+            setIf('l2OutBanner', E.l2Banner);
+            const l2M = getHeroMetrics(E.hero, 225);
             const l2Shd = document.getElementById('l2SvgShadow');
             const l2Main = document.getElementById('l2SvgMain');
             if (l2Shd && l2Main) {
-                l2Shd.textContent = hero;
-                l2Main.textContent = hero;
-                l2Shd.setAttribute('font-size', hFs);
-                l2Main.setAttribute('font-size', hFs);
-                l2Shd.setAttribute('letter-spacing', hLs);
-                l2Main.setAttribute('letter-spacing', hLs);
+                l2Shd.textContent = E.hero;
+                l2Main.textContent = E.hero;
+                l2Shd.setAttribute('font-size', l2M.fs);
+                l2Main.setAttribute('font-size', l2M.fs);
+                l2Shd.setAttribute('letter-spacing', l2M.ls);
+                l2Main.setAttribute('letter-spacing', l2M.ls);
             }
-
-            const titleEl = document.getElementById('l2OutTitle');
-            if (titleEl) titleEl.textContent = title;
-
-            const nEl = document.getElementById('l2OutNum');
-            const dEl = document.getElementById('l2OutDate');
-            const tEl = document.getElementById('l2OutTime');
-            const lEl = document.getElementById('l2OutLoc');
-            const igEl = document.getElementById('l2OutIg');
-            if (nEl) nEl.textContent = num;
-            if (dEl) dEl.textContent = date;
-            if (tEl) tEl.textContent = time;
-            if (lEl) lEl.textContent = loc;
-            if (igEl) igEl.textContent = igHandle;
+            setIf('l2OutTitle', E.stamp);
+            setIf('l2OutIg', E.igHandle);
 
             const wall = document.getElementById('l2BgWall');
             if (wall) {
-                wall.innerHTML = getL2BgRows(cd, title)
+                wall.innerHTML = getL2BgRows(E.bgWord1, E.bgWord2)
                     .map((line) => `<div class="l2-bg-row">${line}</div>`)
                     .join('');
             }
         }
 
         function setLayout(layoutNum) {
-            currentLayout = [1, 2, 3].includes(Number(layoutNum)) ? Number(layoutNum) : 1;
+            currentLayout = Number(layoutNum) === 2 ? 2 : 1;
             const canvas = document.getElementById('posterCanvas');
-            canvas.classList.remove('layout-1', 'layout-2', 'layout-3');
+            canvas.classList.remove('layout-1', 'layout-2');
             canvas.classList.add('layout-' + currentLayout);
             document.getElementById('lblActiveLayout').textContent = 'layout-' + currentLayout;
 
-            [1, 2, 3].forEach((n) => {
+            [1, 2].forEach((n) => {
                 const btn = document.getElementById('btn-layout-' + n);
                 if (!btn) return;
                 if (n === currentLayout) {
@@ -1420,8 +1361,7 @@
                 }
             });
 
-            syncLayout2Dom();
-            syncLayout3Dom();
+            syncAllDom();
             applyScale();
         }
 
@@ -1446,15 +1386,14 @@
 
             const svgPairs = [
                 ['svgHeroShadow', 'svgHeroMain', 'glassHeroGrad', 354, 138, 347, 132],
-                ['l2SvgShadow', 'l2SvgMain', 'l2GlassHeroGrad', 354, 122, 347, 116],
-                ['l3SvgShadow', 'l3SvgMain', 'l3GlassHeroGrad', 392, 117, 386, 111]
+                ['l2SvgShadow', 'l2SvgMain', 'l2GlassHeroGrad', 354, 122, 347, 116]
             ];
             svgPairs.forEach(([shdId, mainId, glassGradId, baseX, baseY, glassX, glassY]) => {
                 const svgShadow = document.getElementById(shdId);
                 const svgMain = document.getElementById(mainId);
                 if (!svgShadow || !svgMain) return;
-                const centerX = shdId === 'l3SvgShadow' ? 380 : 340;
-                const centerY = shdId === 'l3SvgShadow' ? 105 : (shdId === 'l2SvgShadow' ? 108 : 124);
+                const centerX = 340;
+                const centerY = shdId === 'l2SvgShadow' ? 108 : 124;
                 if (styleName === 'glass') {
                     svgShadow.setAttribute('x', glassX);
                     svgShadow.setAttribute('y', glassY);
@@ -1527,12 +1466,11 @@
             applyScale();
         }
 
-        function setHeroPreset(val) {
-            setHeroText(val);
+        function updatePresetButtons(activeVal) {
             ['H-7', 'H-3', 'H-1', 'HARI H'].forEach((p) => {
                 const btn = document.getElementById('preset-' + p);
                 if (!btn) return;
-                if (p === val) {
+                if (p === activeVal) {
                     btn.classList.remove('bg-white');
                     btn.classList.add('bg-[#FCD34D]');
                 } else {
@@ -1540,30 +1478,44 @@
                     btn.classList.add('bg-white');
                 }
             });
+            const csBtn = document.getElementById('preset-COMING SOON');
+            if (csBtn) {
+                if (activeVal === 'COMING SOON') {
+                    csBtn.classList.remove('bg-[#162C4E]', 'text-[#FCD34D]');
+                    csBtn.classList.add('bg-[#FCD34D]', 'text-black');
+                } else {
+                    csBtn.classList.remove('bg-[#FCD34D]', 'text-black');
+                    csBtn.classList.add('bg-[#162C4E]', 'text-[#FCD34D]');
+                }
+            }
+        }
+
+        function setHeroPreset(val) {
+            if (val === 'COMING SOON') {
+                posterMode = 'coming-soon';
+                updatePresetButtons('COMING SOON');
+                syncAllDom();
+                return;
+            }
+            posterMode = 'countdown';
+            const clean = (val || 'H-7').toUpperCase();
+            document.getElementById('inHero').value = clean;
+            updatePresetButtons(clean);
+            syncAllDom();
         }
 
         function setHeroText(val) {
-            const txt = (val || 'H-7').toUpperCase();
-            const len = txt.length;
-            const fs = len >= 6 ? 155 : (len >= 5 ? 185 : 220);
-            const ls = len >= 5 ? 6 : 14;
-            const shadow = document.getElementById('svgHeroShadow');
-            const main = document.getElementById('svgHeroMain');
-            shadow.textContent = txt;
-            main.textContent = txt;
-            shadow.setAttribute('font-size', fs);
-            main.setAttribute('font-size', fs);
-            shadow.setAttribute('letter-spacing', ls);
-            main.setAttribute('letter-spacing', ls);
-            document.getElementById('inHero').value = txt;
-            syncLayout2Dom();
-            syncLayout3Dom();
+            posterMode = 'countdown';
+            const clean = (val || 'H-7').toUpperCase();
+            document.getElementById('inHero').value = clean;
+            updatePresetButtons(clean);
+            syncAllDom();
         }
 
         function setText(id, val) {
-            document.getElementById(id).textContent = val;
-            syncLayout2Dom();
-            syncLayout3Dom();
+            const el = document.getElementById(id);
+            if (el) el.textContent = val;
+            syncAllDom();
         }
 
         function toggleAccents() {
@@ -1580,28 +1532,19 @@
         function resetDefaults() {
             setStyle('neubrutalism');
             setRatio('4-5');
-            setHeroPreset('H-7');
             document.getElementById('inCountdown').value = 'COUNTDOWN';
-            setText('outCountdown', 'COUNTDOWN');
             document.getElementById('inMenuju').value = 'MENUJU';
-            setText('outMenuju', 'MENUJU');
             document.getElementById('inStamp').value = 'KADERISASI';
-            setText('outStamp', 'KADERISASI');
             document.getElementById('inNum').value = '04';
-            setText('outNum', '04');
             document.getElementById('inDate').value = 'JUMAT, 04 DES 2026';
-            setText('outDate', 'JUMAT, 04 DES 2026');
             document.getElementById('inTime').value = '08.00 WIB';
-            setText('outTime', '08.00 WIB');
             document.getElementById('inLoc').value = 'Kampus IDE LPKIA';
-            setText('outLoc', 'Kampus IDE LPKIA');
             document.getElementById('inCta').value = 'GO.HMIF-LPKIA.MY.ID';
-            setText('outCta', 'GO.HMIF-LPKIA.MY.ID');
             document.getElementById('inIg').value = 'hmif_LPKIA';
+            setHeroPreset('H-7');
             clearLogo3();
             if (!showAccents) toggleAccents();
-            syncLayout2Dom();
-            syncLayout3Dom();
+            syncAllDom();
             setZoomMode('fit');
         }
 
@@ -1658,9 +1601,6 @@
 
             if (currentLayout === 2) {
                 return renderLayout2Canvas(dims);
-            }
-            if (currentLayout === 3) {
-                return renderLayout3Canvas(dims);
             }
 
             const THEMES = {
@@ -2079,6 +2019,7 @@
             }
 
             // 4. Schedule Cards & CTA
+            const E = getEffectiveContent();
             const sCfg = currentRatio === '9-16'
                 ? { wrapGap: 28, gridGap: 18, numSize: 58, numPx: 22, numPy: 12, dateSize: 34, cardPx: 24, cardPy: 16, botPx: 26, botPy: 20, botVal: 24, ctaPx: 40, ctaPy: 16, ctaText: 26 }
                 : (currentRatio === '1-1'
@@ -2090,58 +2031,61 @@
 
             const ctaH = sCfg.ctaText + sCfg.ctaPy * 2 + 8;
             const ctaY = H - dims.pb - ctaH;
+            const ctaTxt = E.cta;
 
-            const botH = 48 + sCfg.botPy * 2;
-            const botY = ctaY - sCfg.wrapGap - botH;
+            let dateCardY = ctaY;
+            if (!E.isCS) {
+                const botH = 48 + sCfg.botPy * 2;
+                const botY = ctaY - sCfg.wrapGap - botH;
 
-            const numText = document.getElementById('outNum').textContent.trim();
-            const dateText = document.getElementById('outDate').textContent.trim();
-            const timeText = document.getElementById('outTime').textContent.trim();
-            const locText = document.getElementById('outLoc').textContent.trim();
-            const ctaTxt = (document.getElementById('outCta').textContent || 'GO.HMIF-LPKIA.MY.ID').trim().toUpperCase();
+                const numText = E.num;
+                const dateText = E.date;
+                const timeText = E.time;
+                const locText = E.loc;
 
-            const numBadgeH = sCfg.numSize + sCfg.numPy * 2 + 6;
-            const dateCardH = Math.max(numBadgeH + sCfg.cardPy * 2, 86);
-            const dateCardY = botY - sCfg.gridGap - dateCardH;
+                const numBadgeH = sCfg.numSize + sCfg.numPy * 2 + 6;
+                const dateCardH = Math.max(numBadgeH + sCfg.cardPy * 2, 86);
+                dateCardY = botY - sCfg.gridGap - dateCardH;
 
-            drawBox(schedX, dateCardY, schedW, dateCardH, {
-                fill: T.schedFill, border: T.schedBorder, borderColor: T.schedBorderCol, shadow: T.schedShadow, radius: T.schedRad, softShadow: true
-            });
-            ctx.font = `700 ${sCfg.numSize}px "Space Grotesk", sans-serif`;
-            const numBadgeW = Math.max(ctx.measureText(numText).width + sCfg.numPx * 2, 84);
-            const numBX = schedX + sCfg.cardPx;
-            const numBY = dateCardY + (dateCardH - numBadgeH) / 2;
-            drawBox(numBX, numBY, numBadgeW, numBadgeH, {
-                fill: T.numFill, border: T.numBorder, borderColor: T.numBorderCol || '#000000', shadow: T.numShadow, radius: T.numRad
-            });
-            if (T.numTextShadow) {
-                drawTrackedText(numText, numBX + numBadgeW / 2 + 3, numBY + numBadgeH / 2 + 3, `700 ${sCfg.numSize}px "Space Grotesk", sans-serif`, T.numTextShadow, 0, 'center');
-            }
-            drawTrackedText(numText, numBX + numBadgeW / 2, numBY + numBadgeH / 2, `700 ${sCfg.numSize}px "Space Grotesk", sans-serif`, T.numText, 0, 'center');
-
-            const dateTextX = numBX + numBadgeW + 20;
-            drawTrackedText('JADWAL KEGIATAN', dateTextX, dateCardY + dateCardH / 2 - 18, '800 13px "Plus Jakarta Sans", sans-serif', T.lblCol, 2.8, 'left');
-            drawTrackedText(dateText, dateTextX, dateCardY + dateCardH / 2 + 12, `700 ${sCfg.dateSize}px "Space Grotesk", sans-serif`, T.dateCol, 0, 'left');
-
-            const halfW = (schedW - sCfg.gridGap) / 2;
-            const drawInfoCard = (cx, lbl, val, bgIcon, iconColor, iconBorder, iconBorderCol, iconShadow, iconType) => {
-                drawBox(cx, botY, halfW, botH, {
+                drawBox(schedX, dateCardY, schedW, dateCardH, {
                     fill: T.schedFill, border: T.schedBorder, borderColor: T.schedBorderCol, shadow: T.schedShadow, radius: T.schedRad, softShadow: true
                 });
-                const ix = cx + sCfg.botPx;
-                const iy = botY + (botH - 48) / 2;
-                drawBox(ix, iy, 48, 48, { fill: bgIcon, border: iconBorder, borderColor: iconBorderCol, shadow: iconShadow, radius: T.iconRad });
-                if (iconType === 'clock') {
-                    drawClockIcon(ix + 24, iy + 24, 24, iconColor, 2.5);
-                } else {
-                    drawPinIcon(ix + 24, iy + 24, 24, iconColor, 2.5);
+                ctx.font = `700 ${sCfg.numSize}px "Space Grotesk", sans-serif`;
+                const numBadgeW = Math.max(ctx.measureText(numText).width + sCfg.numPx * 2, 84);
+                const numBX = schedX + sCfg.cardPx;
+                const numBY = dateCardY + (dateCardH - numBadgeH) / 2;
+                drawBox(numBX, numBY, numBadgeW, numBadgeH, {
+                    fill: T.numFill, border: T.numBorder, borderColor: T.numBorderCol || '#000000', shadow: T.numShadow, radius: T.numRad
+                });
+                if (T.numTextShadow) {
+                    drawTrackedText(numText, numBX + numBadgeW / 2 + 3, numBY + numBadgeH / 2 + 3, `700 ${sCfg.numSize}px "Space Grotesk", sans-serif`, T.numTextShadow, 0, 'center');
                 }
-                const tx = ix + 48 + 16;
-                drawTrackedText(lbl, tx, botY + botH / 2 - 13, '800 12px "Plus Jakarta Sans", sans-serif', T.lblCol, 2, 'left');
-                drawTrackedText(val, tx, botY + botH / 2 + 11, `800 ${sCfg.botVal}px "Plus Jakarta Sans", sans-serif`, T.valCol, 0, 'left');
-            };
-            drawInfoCard(schedX, 'WAKTU', timeText, T.iconTimeFill, T.iconTimeCol, T.iconTimeBorder, T.iconTimeBorderCol, T.iconTimeShadow, 'clock');
-            drawInfoCard(schedX + halfW + sCfg.gridGap, 'LOKASI', locText, T.iconLocFill, T.iconLocCol, T.iconLocBorder, T.iconLocBorderCol, T.iconLocShadow, 'pin');
+                drawTrackedText(numText, numBX + numBadgeW / 2, numBY + numBadgeH / 2, `700 ${sCfg.numSize}px "Space Grotesk", sans-serif`, T.numText, 0, 'center');
+
+                const dateTextX = numBX + numBadgeW + 20;
+                drawTrackedText('JADWAL KEGIATAN', dateTextX, dateCardY + dateCardH / 2 - 18, '800 13px "Plus Jakarta Sans", sans-serif', T.lblCol, 2.8, 'left');
+                drawTrackedText(dateText, dateTextX, dateCardY + dateCardH / 2 + 12, `700 ${sCfg.dateSize}px "Space Grotesk", sans-serif`, T.dateCol, 0, 'left');
+
+                const halfW = (schedW - sCfg.gridGap) / 2;
+                const drawInfoCard = (cx, lbl, val, bgIcon, iconColor, iconBorder, iconBorderCol, iconShadow, iconType) => {
+                    drawBox(cx, botY, halfW, botH, {
+                        fill: T.schedFill, border: T.schedBorder, borderColor: T.schedBorderCol, shadow: T.schedShadow, radius: T.schedRad, softShadow: true
+                    });
+                    const ix = cx + sCfg.botPx;
+                    const iy = botY + (botH - 48) / 2;
+                    drawBox(ix, iy, 48, 48, { fill: bgIcon, border: iconBorder, borderColor: iconBorderCol, shadow: iconShadow, radius: T.iconRad });
+                    if (iconType === 'clock') {
+                        drawClockIcon(ix + 24, iy + 24, 24, iconColor, 2.5);
+                    } else {
+                        drawPinIcon(ix + 24, iy + 24, 24, iconColor, 2.5);
+                    }
+                    const tx = ix + 48 + 16;
+                    drawTrackedText(lbl, tx, botY + botH / 2 - 13, '800 12px "Plus Jakarta Sans", sans-serif', T.lblCol, 2, 'left');
+                    drawTrackedText(val, tx, botY + botH / 2 + 11, `800 ${sCfg.botVal}px "Plus Jakarta Sans", sans-serif`, T.valCol, 0, 'left');
+                };
+                drawInfoCard(schedX, 'WAKTU', timeText, T.iconTimeFill, T.iconTimeCol, T.iconTimeBorder, T.iconTimeBorderCol, T.iconTimeShadow, 'clock');
+                drawInfoCard(schedX + halfW + sCfg.gridGap, 'LOKASI', locText, T.iconLocFill, T.iconLocCol, T.iconLocBorder, T.iconLocBorderCol, T.iconLocShadow, 'pin');
+            }
 
             ctx.font = `700 ${sCfg.ctaText}px "Space Grotesk", sans-serif`;
             const ctaTrackedW = ctx.measureText(ctaTxt).width + Math.max(0, ctaTxt.length - 1) * 1.5;
@@ -2167,13 +2111,14 @@
             const heroCardH = hCfg.cardPt + hCfg.svgH + hCfg.cardPb;
             const stH = hCfg.stFont + hCfg.stPy * 2 + 8;
             const mnGap = currentStyle === 'modern' ? 8 : (currentStyle === 'glass' ? 6 : -8);
-            const totalHeroH = cdH + mnGap + mnH + hCfg.cardMt + heroCardH + (hCfg.stMt + stH);
+            const mnBlockH = E.isCS ? 0 : (mnGap + mnH);
+            const totalHeroH = cdH + mnBlockH + hCfg.cardMt + heroCardH + (hCfg.stMt + stH);
 
             const areaTop = hdrY + hdrH;
             const areaBot = dateCardY;
             const heroStartY = areaTop + (areaBot - areaTop - totalHeroH) / 2;
 
-            const heroCardY = heroStartY + cdH + mnGap + mnH + hCfg.cardMt;
+            const heroCardY = heroStartY + cdH + mnBlockH + hCfg.cardMt;
             const heroCardX = (W - hCfg.cardW) / 2;
 
             drawBox(heroCardX, heroCardY, hCfg.cardW, heroCardH, {
@@ -2213,10 +2158,8 @@
                 });
             });
 
-            const heroStr = (document.getElementById('inHero').value || 'H-7').toUpperCase();
-            const len = heroStr.length;
-            const vFs = len >= 6 ? 155 : (len >= 5 ? 185 : 220);
-            const vLs = len >= 5 ? 6 : 14;
+            const heroStr = E.hero;
+            const { fs: vFs, ls: vLs } = getHeroMetrics(heroStr, 220);
             const svgScale = hCfg.svgW / 680;
             const heroCenterX = W / 2;
             const heroCenterY = heroCardY + hCfg.cardPt + hCfg.svgH / 2;
@@ -2264,8 +2207,8 @@
             drawHeroSvgLayer(T.heroShadowOff, T.heroShadowOff, T.heroShadowFill, T.heroShadowStroke, T.heroShadowSW, !!T.heroShadowBlur);
             drawHeroSvgLayer(0, 0, T.heroMainFill, T.heroMainStroke, T.heroMainSW, !!T.heroMainBlur);
 
-            // COUNTDOWN Badge
-            const cdTxt = (document.getElementById('outCountdown').textContent || 'COUNTDOWN').trim().toUpperCase();
+            // COUNTDOWN / COMING SOON Badge
+            const cdTxt = E.cd;
             const cdFontFam = T.cdFontName || '"Silkscreen", monospace';
             const cdTrack = T.cdTrackRatio ? Math.round(hCfg.cdFont * T.cdTrackRatio * 10) / 10 : 2.4;
             ctx.font = `700 ${hCfg.cdFont}px ${cdFontFam}`;
@@ -2279,21 +2222,23 @@
             drawTrackedText(cdTxt, 0, 1, `700 ${hCfg.cdFont}px ${cdFontFam}`, T.cdText, cdTrack, 'center');
             ctx.restore();
 
-            // MENUJU Tag
-            const mnTxt = (document.getElementById('outMenuju').textContent || 'MENUJU').trim().toUpperCase();
-            ctx.font = `700 ${hCfg.mnFont}px "Space Grotesk", sans-serif`;
-            const mnW = ctx.measureText(mnTxt).width + Math.max(0, mnTxt.length - 1) * 4.6 + hCfg.mnPx * 2;
-            ctx.save();
-            ctx.translate(W / 2, heroStartY + cdH + mnGap + mnH / 2);
-            ctx.rotate((T.mnRot * Math.PI) / 180);
-            drawBox(-mnW / 2, -mnH / 2, mnW, mnH, {
-                fill: T.mnFill, border: T.mnBorder, borderColor: T.mnBorderCol, shadow: T.mnShadow, radius: T.mnRad
-            });
-            drawTrackedText(mnTxt, 0, 1, `700 ${hCfg.mnFont}px "Space Grotesk", sans-serif`, T.mnText, 4.6, 'center');
-            ctx.restore();
+            // MENUJU Tag (hidden on Coming Soon mode)
+            if (!E.isCS && E.mn) {
+                const mnTxt = E.mn;
+                ctx.font = `700 ${hCfg.mnFont}px "Space Grotesk", sans-serif`;
+                const mnW = ctx.measureText(mnTxt).width + Math.max(0, mnTxt.length - 1) * 4.6 + hCfg.mnPx * 2;
+                ctx.save();
+                ctx.translate(W / 2, heroStartY + cdH + mnGap + mnH / 2);
+                ctx.rotate((T.mnRot * Math.PI) / 180);
+                drawBox(-mnW / 2, -mnH / 2, mnW, mnH, {
+                    fill: T.mnFill, border: T.mnBorder, borderColor: T.mnBorderCol, shadow: T.mnShadow, radius: T.mnRad
+                });
+                drawTrackedText(mnTxt, 0, 1, `700 ${hCfg.mnFont}px "Space Grotesk", sans-serif`, T.mnText, 4.6, 'center');
+                ctx.restore();
+            }
 
-            // KADERISASI Stamp
-            const stampStr = (document.getElementById('outStamp').textContent || 'KADERISASI').trim().toUpperCase();
+            // Event / STAY TUNED Stamp
+            const stampStr = E.stamp;
             ctx.font = `700 ${hCfg.stFont}px "Space Grotesk", sans-serif`;
             const stTextW = ctx.measureText(stampStr).width + Math.max(0, stampStr.length - 1) * 2.4;
             const stW = hCfg.stPx * 2 + hCfg.stIcon + 14 + stTextW;
@@ -2547,15 +2492,14 @@
                 }
             }
 
-            const title = (document.getElementById('inStamp')?.value || 'KADERISASI').trim().toUpperCase() || 'KADERISASI';
-            const hero = (document.getElementById('inHero')?.value || 'H-7').trim().toUpperCase() || 'H-7';
-            const cd = (document.getElementById('inCountdown')?.value || 'COUNTDOWN').trim().toUpperCase() || 'COUNTDOWN';
-            const mn = (document.getElementById('inMenuju')?.value || 'MENUJU').trim().toUpperCase() || 'MENUJU';
-            const igHandle = (document.getElementById('inIg')?.value || 'hmif_LPKIA').trim() || 'hmif_LPKIA';
+            const E = getEffectiveContent();
+            const hero = E.hero;
+            const stampTxt = E.stamp;
+            const igHandle = E.igHandle;
 
             const bgFs = currentRatio === '9-16' ? 260 : (currentRatio === '1-1' ? 210 : 235);
             const rowH = bgFs * 0.80;
-            const bgRows = getL2BgRows(cd, title);
+            const bgRows = getL2BgRows(E.bgWord1, E.bgWord2);
             const totalWallH = bgRows.length * rowH;
             const wallStartY = (H - totalWallH) / 2 + rowH * 0.5;
             bgRows.forEach((line, idx) => {
@@ -2691,8 +2635,8 @@
             drawTextTrack('HIMA INFORMATIKA', winX + winW - 24, tbMidY - 8, '700 23px "Space Grotesk", sans-serif', L.tbTitleCol, 0.9, 'right');
             drawTextTrack('IDE LPKIA', winX + winW - 24, tbMidY + 13, '800 12px "Plus Jakarta Sans", sans-serif', L.tbSubCol, 2.8, 'right');
 
-            // Top-Left Tilted Sticker (Zona Oren): COUNTDOWN • MENUJU
-            const topTagTxt = `${cd} • ${mn}`;
+            // Top-Left Tilted Sticker (Zona Oren): COUNTDOWN • MENUJU / COMING SOON
+            const topTagTxt = E.l2Banner;
             ctx.font = L.topTagFont;
             const topTagW = ctx.measureText(topTagTxt).width + Math.max(0, topTagTxt.length - 1) * L.topTagTrack + 40;
             const topTagH = 42;
@@ -2708,9 +2652,7 @@
             ctx.restore();
 
             // Giant Hero Text
-            const hLen = hero.length;
-            const hFs = hLen >= 6 ? 160 : (hLen >= 5 ? 190 : 225);
-            const hLs = hLen >= 5 ? 6 : 14;
+            const { fs: hFs, ls: hLs } = getHeroMetrics(hero, 225);
             const svgScale = heroSvgDim.w / 680;
             const heroCY = winY + tbH + bodyPt + heroSvgDim.h / 2;
 
@@ -2756,9 +2698,9 @@
             drawL2HeroLayer(L.heroShdOff, L.heroShdOff, L.heroShdFill, L.heroShdStroke, L.heroShdSW, L.heroShdBlur);
             drawL2HeroLayer(0, 0, L.heroMainFill, L.heroMainStroke, L.heroMainSW, false);
 
-            // Tilted Event Sticker Stamp
+            // Tilted Event Sticker Stamp (KADERISASI / STAY TUNED)
             ctx.font = '700 40px "Space Grotesk", sans-serif';
-            const stTxtW = ctx.measureText(title).width + Math.max(0, title.length - 1) * 2.4;
+            const stTxtW = ctx.measureText(stampTxt).width + Math.max(0, stampTxt.length - 1) * 2.4;
             const stW = 56 + 28 + 12 + stTxtW;
             const stampCY = heroCY + heroSvgDim.h / 2 - 12 + stampBoxH / 2;
             ctx.save();
@@ -2778,7 +2720,7 @@
             ctx.lineTo(clkX, 0);
             ctx.lineTo(clkX + 5, 3);
             ctx.stroke();
-            drawTextTrack(title, -stW / 2 + 28 + 28 + 12, 1, '700 40px "Space Grotesk", sans-serif', L.stText, 2.4, 'left');
+            drawTextTrack(stampTxt, -stW / 2 + 28 + 28 + 12, 1, '700 40px "Space Grotesk", sans-serif', L.stText, 2.4, 'left');
             ctx.restore();
 
             // Bottom-Left Taped Instagram Sticker
@@ -2845,294 +2787,6 @@
             return canvas;
         }
 
-        async function renderLayout3Canvas(dims) {
-            const W = dims.w;
-            const H = dims.h;
-            const canvas = document.createElement('canvas');
-            canvas.width = W;
-            canvas.height = H;
-            const ctx = canvas.getContext('2d');
-
-            const loadImg = (src) => new Promise((res) => {
-                const img = new Image();
-                img.onload = () => res(img);
-                img.onerror = () => res(null);
-                img.src = src;
-            });
-            const [himaImg, lpkiaImg] = await Promise.all([
-                loadImg(document.querySelector('#himaLogoSlot img').src),
-                loadImg(document.querySelector('#lpkiaLogoSlot img').src)
-            ]);
-
-            function rr(x, y, w, h, r) {
-                const rad = Math.min(r, w / 2, h / 2);
-                ctx.beginPath();
-                ctx.moveTo(x + rad, y);
-                ctx.lineTo(x + w - rad, y);
-                ctx.quadraticCurveTo(x + w, y, x + w, y + rad);
-                ctx.lineTo(x + w, y + h - rad);
-                ctx.quadraticCurveTo(x + w, y + h, x + w - rad, y + h);
-                ctx.lineTo(x + rad, y + h);
-                ctx.quadraticCurveTo(x, y + h, x, y + h - rad);
-                ctx.lineTo(x, y + rad);
-                ctx.quadraticCurveTo(x, y, x + rad, y);
-                ctx.closePath();
-            }
-
-            function drawTrack(txt, cx, cy, font, color, tracking = 0, align = 'center') {
-                ctx.font = font;
-                ctx.fillStyle = color;
-                ctx.textBaseline = 'middle';
-                const cs = Array.from(txt);
-                const ws = cs.map((c) => ctx.measureText(c).width);
-                const tot = ws.reduce((a, b) => a + b, 0) + tracking * Math.max(0, cs.length - 1);
-                let x = align === 'center' ? cx - tot / 2 : (align === 'right' ? cx - tot : cx);
-                ctx.textAlign = 'left';
-                cs.forEach((c, idx) => { ctx.fillText(c, x, cy); x += ws[idx] + tracking; });
-            }
-
-            const L3_THEMES = {
-                'neubrutalism': {
-                    bgMode: 'solid', bg: '#FFFFFF', dot: 'rgba(42, 130, 198, 0.36)',
-                    hdrFill: '#FFFFFF', hdrB: 4, hdrBC: '#000000', hdrS: 7, hdrR: 0,
-                    logoFill: '#FFFFFF', logoB: 3, logoBC: '#000000', logoS: 4, logoR: 0,
-                    hdrT: '#1A467C', hdrSub: '#2A82C6', softCol: null,
-                    acc: [['>_', '#1A467C', 'rgba(42,130,198,0.28)'], ['</>', '#CA2C2A', 'rgba(0,0,0,0.16)'], ['//', '#2A82C6', 'rgba(26,70,124,0.18)'], ['01;', '#CA2C2A', 'rgba(0,0,0,0.16)']],
-                    cdFill: '#1A467C', cdT: '#FFFFFF', cdB: 4, cdBC: '#000000', cdS: 6, cdR: 0, cdRot: -1, cdFont: '"Silkscreen", monospace', cdTrk: 2.8,
-                    cardFill: '#FFFFFF', cardB: 5, cardBC: '#000000', cardS: 12, cardR: 0, grid: 'rgba(26,70,124,0.07)',
-                    dots: ['#CA2C2A', '#2A82C6', '#1A467C'], dotB: 2, dotBC: '#000000', dotR: 0,
-                    heroShdFill: '#000000', heroShdStroke: '#000000', heroShdSW: 26, heroShdOff: 12, heroShdBlur: false,
-                    heroMainFill: '#CA2C2A', heroMainStroke: '#000000', heroMainSW: 18,
-                    stFill: '#CA2C2A', stT: '#FFFFFF', stB: 4, stBC: '#000000', stS: 7, stR: 0, stRot: -2,
-                    ctaFill: '#1A467C', ctaT: '#FFFFFF', ctaB: 3.5, ctaBC: '#000000', ctaS: 6, ctaR: 10
-                },
-                'glass': {
-                    bgMode: 'glass',
-                    hdrFill: { dir: 'diag', stops: [[0, 'rgba(255,255,255,0.82)'], [1, 'rgba(235,245,255,0.56)']] },
-                    hdrB: 1.5, hdrBC: 'rgba(255,255,255,0.92)', hdrS: 0, hdrR: 16,
-                    logoFill: 'rgba(255,255,255,0.94)', logoB: 1.5, logoBC: 'rgba(255,255,255,0.95)', logoS: 0, logoR: 12,
-                    hdrT: '#163A6E', hdrSub: '#2563EB', softCol: 'rgba(30, 64, 175, 0.16)',
-                    acc: [['>_', '#2563EB', 'rgba(37,99,235,0.20)'], ['</>', '#DC2626', 'rgba(220,38,38,0.20)'], ['//', '#2563EB', 'rgba(37,99,235,0.18)'], ['01;', '#DC2626', 'rgba(220,38,38,0.20)']],
-                    cdFill: { dir: 'vert', stops: [[0, 'rgba(96,165,250,0.92)'], [1, 'rgba(37,99,235,0.96)']] },
-                    cdT: '#FFFFFF', cdB: 1.5, cdBC: 'rgba(255,255,255,0.90)', cdS: 0, cdR: 12, cdRot: 0, cdFont: '"Space Grotesk", sans-serif', cdTrk: 5.5,
-                    cardFill: { dir: 'diag', stops: [[0, 'rgba(255,255,255,0.68)'], [0.5, 'rgba(191,223,255,0.44)'], [1, 'rgba(235,245,255,0.64)']] },
-                    cardB: 2, cardBC: 'rgba(255,255,255,0.95)', cardS: 0, cardR: 24, grid: null,
-                    dots: ['#EF4444', '#F59E0B', '#3B82F6'], dotB: 1, dotBC: 'rgba(255,255,255,0.75)', dotR: 99,
-                    heroShdFill: 'rgba(30,41,59,0.82)', heroShdStroke: 'rgba(30,41,59,0.82)', heroShdSW: 3, heroShdOff: 6, heroShdBlur: true,
-                    heroMainFill: 'glassGrad', heroMainStroke: 'rgba(255,255,255,0.90)', heroMainSW: 5,
-                    stFill: { dir: 'vert', stops: [[0, 'rgba(248,75,75,0.96)'], [1, 'rgba(185,28,28,0.98)']] },
-                    stT: '#FFFFFF', stB: 1.5, stBC: 'rgba(255,255,255,0.82)', stS: 0, stR: 12, stRot: 0,
-                    ctaFill: { dir: 'vert', stops: [[0, '#2563EB'], [1, '#1E3A8A']] }, ctaT: '#FFFFFF', ctaB: 1.5, ctaBC: 'rgba(255,255,255,0.82)', ctaS: 0, ctaR: 14
-                },
-                'dark-code': {
-                    bgMode: 'solid', bg: '#0B192E', dot: 'rgba(56, 189, 248, 0.24)',
-                    hdrFill: '#122645', hdrB: 3, hdrBC: '#38BDF8', hdrS: 7, hdrR: 12,
-                    logoFill: '#FFFFFF', logoB: 2.5, logoBC: '#38BDF8', logoS: 3, logoR: 8,
-                    hdrT: '#FFFFFF', hdrSub: '#38BDF8', softCol: null,
-                    acc: [['>_', '#38BDF8', 'rgba(56,189,248,0.25)'], ['</>', '#F87171', 'rgba(248,113,113,0.25)'], ['//', '#94A3B8', null], ['01;', '#FCD34D', 'rgba(252,211,77,0.25)']],
-                    cdFill: '#1A365D', cdT: '#38BDF8', cdB: 3, cdBC: '#38BDF8', cdS: 6, cdR: 8, cdRot: -1, cdFont: '"Silkscreen", monospace', cdTrk: 2.8,
-                    cardFill: '#122645', cardB: 3.5, cardBC: '#38BDF8', cardS: 10, cardR: 18, grid: 'rgba(56,189,248,0.09)',
-                    dots: ['#EF4444', '#FCD34D', '#38BDF8'], dotB: 1.5, dotBC: '#000000', dotR: 99,
-                    heroShdFill: '#EF4444', heroShdStroke: '#000000', heroShdSW: 22, heroShdOff: 12, heroShdBlur: false,
-                    heroMainFill: '#FCD34D', heroMainStroke: '#060D1A', heroMainSW: 16,
-                    stFill: '#CA2C2A', stT: '#FFFFFF', stB: 3, stBC: '#FFFFFF', stS: 6, stR: 10, stRot: -2,
-                    ctaFill: '#38BDF8', ctaT: '#0B192E', ctaB: 3, ctaBC: '#FFFFFF', ctaS: 6, ctaR: 12
-                },
-                'modern': {
-                    bgMode: 'gradient',
-                    hdrFill: 'rgba(255,255,255,0.96)', hdrB: 0, hdrBC: 'transparent', hdrS: 0, hdrR: 22,
-                    logoFill: '#F8FBFE', logoB: 1, logoBC: 'rgba(18,48,90,0.12)', logoS: 0, logoR: 14,
-                    hdrT: '#12305A', hdrSub: '#2A82C6', softCol: 'rgba(8, 22, 44, 0.34)',
-                    acc: [['>_', 'rgba(253,211,77,0.88)', null], ['</>', 'rgba(255,255,255,0.78)', null], ['//', 'rgba(253,211,77,0.72)', null], ['01;', 'rgba(255,255,255,0.78)', null]],
-                    cdFill: '#FDD34D', cdT: '#12305A', cdB: 0, cdBC: 'transparent', cdS: 0, cdR: 999, cdRot: 0, cdFont: '"Silkscreen", monospace', cdTrk: 2.8,
-                    cardFill: '#1D4D85', cardB: 1.5, cardBC: 'rgba(255,255,255,0.22)', cardS: 0, cardR: 32, grid: 'rgba(255,255,255,0.04)',
-                    dots: ['#CA2C2A', '#FDD34D', '#FFFFFF'], dotB: 0, dotBC: 'transparent', dotR: 99,
-                    heroShdFill: '#FDD34D', heroShdStroke: '#FDD34D', heroShdSW: 0, heroShdOff: 10, heroShdBlur: false,
-                    heroMainFill: '#FFFFFF', heroMainStroke: null, heroMainSW: 0,
-                    stFill: '#CA2C2A', stT: '#FFFFFF', stB: 0, stBC: 'transparent', stS: 0, stR: 16, stRot: -2,
-                    ctaFill: '#FDD34D', ctaT: '#12305A', ctaB: 0, ctaBC: 'transparent', ctaS: 0, ctaR: 999
-                }
-            };
-            const T = L3_THEMES[currentStyle] || L3_THEMES['neubrutalism'];
-
-            function box(x, y, w, h, f, b, bc, s, r, soft = false) {
-                if (s > 0) {
-                    ctx.fillStyle = '#000000';
-                    if (r > 0) { rr(x + s, y + s, w, h, r); ctx.fill(); }
-                    else ctx.fillRect(x + s, y + s, w, h);
-                }
-                ctx.save();
-                if (T.softCol && soft) {
-                    ctx.shadowColor = T.softCol;
-                    ctx.shadowBlur = 28;
-                    ctx.shadowOffsetY = 14;
-                }
-                if (f && typeof f === 'object' && Array.isArray(f.stops)) {
-                    const g = f.dir === 'vert' ? ctx.createLinearGradient(x, y, x, y + h) : ctx.createLinearGradient(x, y, x + w, y + h);
-                    f.stops.forEach(([p, c]) => g.addColorStop(p, c));
-                    ctx.fillStyle = g;
-                } else ctx.fillStyle = f;
-                if (r > 0) { rr(x, y, w, h, r); ctx.fill(); }
-                else ctx.fillRect(x, y, w, h);
-                ctx.restore();
-                if (b > 0) {
-                    ctx.lineWidth = b;
-                    ctx.strokeStyle = bc;
-                    if (r > 0) { rr(x, y, w, h, r); ctx.stroke(); }
-                    else ctx.strokeRect(x, y, w, h);
-                }
-            }
-
-            if (T.bgMode === 'glass') {
-                const rad = ctx.createRadialGradient(W * 0.2, H * 0.15, 0, W * 0.2, H * 0.15, Math.max(W, H) * 1.1);
-                rad.addColorStop(0, '#F4F9FF'); rad.addColorStop(0.48, '#D9EBFF'); rad.addColorStop(1, '#BEDBFF');
-                ctx.fillStyle = rad; ctx.fillRect(0, 0, W, H);
-                ctx.save(); ctx.scale(W / 1080, H / 1350);
-                const orb = ctx.createRadialGradient(540, 600, 0, 540, 600, 380);
-                orb.addColorStop(0, 'rgba(96,165,250,0.34)'); orb.addColorStop(1, 'rgba(191,219,254,0)');
-                ctx.fillStyle = orb; ctx.beginPath(); ctx.arc(540, 600, 380, 0, Math.PI * 2); ctx.fill();
-                const rg = ctx.createLinearGradient(0, 0, 1080, 1350);
-                rg.addColorStop(0, 'rgba(59,130,246,0.42)'); rg.addColorStop(1, 'rgba(29,78,216,0.10)');
-                ctx.fillStyle = rg;
-                ctx.beginPath(); ctx.moveTo(-60,220); ctx.quadraticCurveTo(240,40,520,-40); ctx.lineTo(-60,-40); ctx.fill();
-                ctx.beginPath(); ctx.moveTo(840,-40); ctx.quadraticCurveTo(980,160,1140,240); ctx.lineTo(1140,-40); ctx.fill();
-                ctx.beginPath(); ctx.moveTo(-80,1120); ctx.quadraticCurveTo(140,1240,260,1400); ctx.lineTo(-80,1400); ctx.fill();
-                ctx.beginPath(); ctx.moveTo(740,1400); ctx.quadraticCurveTo(920,1200,1140,1140); ctx.lineTo(1140,1400); ctx.fill();
-                ctx.restore();
-            } else if (T.bgMode === 'gradient') {
-                const g = ctx.createLinearGradient(0, 0, W * 0.45, H);
-                g.addColorStop(0, '#12305A'); g.addColorStop(0.5, '#163D6E'); g.addColorStop(1, '#1B4B82');
-                ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
-            } else {
-                ctx.fillStyle = T.bg; ctx.fillRect(0, 0, W, H);
-                ctx.fillStyle = T.dot;
-                for (let y = 12; y < H; y += 24) for (let x = 12; x < W; x += 24) {
-                    ctx.beginPath(); ctx.arc(x, y, 2, 0, Math.PI * 2); ctx.fill();
-                }
-            }
-
-            if (showAccents) {
-                const pts = [[0.10,0.25,-12,38],[0.90,0.25,12,38],[0.11,0.77,-12,34],[0.89,0.77,12,34]];
-                pts.forEach(([px, py, rot, sz], idx) => {
-                    const [t, c, s] = T.acc[idx];
-                    ctx.save(); ctx.translate(px * W, py * H); ctx.rotate((rot * Math.PI) / 180);
-                    ctx.font = `800 ${sz}px "JetBrains Mono", monospace`;
-                    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-                    if (s) { ctx.fillStyle = s; ctx.fillText(t, 3, 3); }
-                    ctx.fillStyle = c; ctx.fillText(t, 0, 0);
-                    ctx.restore();
-                });
-            }
-
-            // Header
-            const innerW = W - dims.px * 2;
-            const hCfg = currentRatio === '9-16' ? { py: 16, px: 24, logo: 78, title: 30, sub: 18 }
-                : (currentRatio === '1-1' ? { py: 10, px: 18, logo: 54, title: 22, sub: 14 } : { py: 14, px: 20, logo: 66, title: 26, sub: 16 });
-            const hdrH = hCfg.logo + hCfg.py * 2;
-            box(dims.px, dims.pt, innerW, hdrH, T.hdrFill, T.hdrB, T.hdrBC, T.hdrS, T.hdrR, true);
-            const drawL = (lx, ly, img) => {
-                box(lx, ly, hCfg.logo, hCfg.logo, T.logoFill, T.logoB, T.logoBC, T.logoS, T.logoR, false);
-                if (img) {
-                    const m = hCfg.logo - 14; const sc = Math.min(m / img.width, m / img.height);
-                    ctx.drawImage(img, lx + (hCfg.logo - img.width * sc) / 2, ly + (hCfg.logo - img.height * sc) / 2, img.width * sc, img.height * sc);
-                }
-            };
-            drawL(dims.px + hCfg.px, dims.pt + hCfg.py, himaImg);
-            drawL(dims.px + innerW - hCfg.px - hCfg.logo, dims.pt + hCfg.py, lpkiaImg);
-            drawTrack('HIMA INFORMATIKA', W / 2, dims.pt + hdrH / 2 - hCfg.sub * 0.65, `700 ${hCfg.title}px "Space Grotesk", sans-serif`, T.hdrT, 1.2);
-            drawTrack('IDE LPKIA', W / 2, dims.pt + hdrH / 2 + hCfg.title * 0.58, `800 ${hCfg.sub}px "Plus Jakarta Sans", sans-serif`, T.hdrSub, 4.2);
-
-            // Bottom IG Pill
-            const igHandle = (document.getElementById('inIg')?.value || 'hmif_LPKIA').trim() || 'hmif_LPKIA';
-            const igFs = currentRatio === '1-1' ? 19 : 22;
-            const igH = igFs + 26;
-            const igY = H - dims.pb - igH;
-            ctx.font = `700 ${igFs}px "Space Grotesk", sans-serif`;
-            const igW = ctx.measureText(igHandle).width + 92;
-            const igX = (W - igW) / 2;
-            box(igX, igY, igW, igH, T.ctaFill, T.ctaB, T.ctaBC, T.ctaS, T.ctaR, true);
-            const ix = igX + 36; const iy = igY + igH / 2;
-            ctx.strokeStyle = T.ctaT; ctx.lineWidth = 2.4;
-            rr(ix - 10, iy - 10, 20, 20, 5); ctx.stroke();
-            ctx.beginPath(); ctx.arc(ix, iy, 4.5, 0, Math.PI * 2); ctx.stroke();
-            ctx.fillStyle = T.ctaT; ctx.beginPath(); ctx.arc(ix + 5.5, iy - 5.5, 1.2, 0, Math.PI * 2); ctx.fill();
-            drawTrack(igHandle, ix + 24, iy + 1, `700 ${igFs}px "Space Grotesk", sans-serif`, T.ctaT, 0.8, 'left');
-
-            // Center Coming Soon Lockup
-            const title = (document.getElementById('inStamp')?.value || 'KADERISASI').trim().toUpperCase() || 'KADERISASI';
-            const cardDim = currentRatio === '9-16' ? { w: 800, pt: 56, pb: 76, svgW: 720, svgH: 225, cdFs: 44, stFs: 36 }
-                : (currentRatio === '1-1' ? { w: 660, pt: 34, pb: 48, svgW: 590, svgH: 160, cdFs: 30, stFs: 26 }
-                : { w: 760, pt: 48, pb: 64, svgW: 700, svgH: 205, cdFs: 38, stFs: 32 });
-            const cdH = cardDim.cdFs + 24;
-            const stH = cardDim.stFs + 28;
-            const cardH = cardDim.pt + cardDim.svgH + cardDim.pb;
-            const gapCard = 20;
-            const totalMidH = cdH + gapCard + cardH - 32 + stH;
-            const midTopY = (dims.pt + hdrH) + ((igY - (dims.pt + hdrH)) - totalMidH) / 2;
-
-            // COMING SOON pill
-            const cdTxt = 'COMING SOON';
-            ctx.font = `700 ${cardDim.cdFs}px ${T.cdFont}`;
-            const cdW = ctx.measureText(cdTxt).width + Math.max(0, cdTxt.length - 1) * T.cdTrk + 64;
-            ctx.save(); ctx.translate(W / 2, midTopY + cdH / 2); ctx.rotate((T.cdRot * Math.PI) / 180);
-            box(-cdW / 2, -cdH / 2, cdW, cdH, T.cdFill, T.cdB, T.cdBC, T.cdS, T.cdR, true);
-            drawTrack(cdTxt, 0, 1, `700 ${cardDim.cdFs}px ${T.cdFont}`, T.cdT, T.cdTrk);
-            ctx.restore();
-
-            // Hero Card + KADERISASI Hero
-            const cardX = (W - cardDim.w) / 2;
-            const cardY = midTopY + cdH + gapCard;
-            box(cardX, cardY, cardDim.w, cardH, T.cardFill, T.cardB, T.cardBC, T.cardS, T.cardR, true);
-            if (T.grid) {
-                ctx.save(); rr(cardX + 4, cardY + 4, cardDim.w - 8, cardH - 8, Math.max(0, T.cardR - 4)); ctx.clip();
-                ctx.strokeStyle = T.grid; ctx.lineWidth = 1;
-                for (let gx = cardX; gx < cardX + cardDim.w; gx += 26) { ctx.beginPath(); ctx.moveTo(gx, cardY); ctx.lineTo(gx, cardY + cardH); ctx.stroke(); }
-                for (let gy = cardY; gy < cardY + cardH; gy += 26) { ctx.beginPath(); ctx.moveTo(cardX, gy); ctx.lineTo(cardX + cardDim.w, gy); ctx.stroke(); }
-                ctx.restore();
-            }
-            T.dots.forEach((col, i) => box(cardX + 18 + i * 20, cardY + 16, 14, 14, col, T.dotB, T.dotBC, 0, T.dotR, false));
-
-            const l3Len = title.length;
-            const l3Fs = l3Len >= 13 ? 72 : (l3Len >= 10 ? 92 : (l3Len >= 7 ? 116 : 155));
-            const l3Ls = l3Len >= 10 ? 3 : 8;
-            const l3Scale = cardDim.svgW / 760;
-            const l3CY = cardY + cardDim.pt + cardDim.svgH / 2;
-            const drawL3Text = (ox, oy, fCol, sCol, sw, blur) => {
-                ctx.save(); ctx.translate(W / 2, l3CY); ctx.scale(l3Scale, l3Scale);
-                if (blur) { ctx.shadowColor = 'rgba(30,64,175,0.34)'; ctx.shadowBlur = 18; ctx.shadowOffsetY = 12; }
-                ctx.font = `400 ${l3Fs}px "Archivo Black", "Space Grotesk", sans-serif`;
-                ctx.textBaseline = 'middle'; ctx.lineJoin = 'round'; ctx.lineCap = 'round';
-                const cs = Array.from(title); const ws = cs.map(c => ctx.measureText(c).width);
-                const tot = ws.reduce((a, b) => a + b, 0) + l3Ls * Math.max(0, cs.length - 1);
-                let cx = -tot / 2 + ox; ctx.textAlign = 'left';
-                const rf = (() => {
-                    if (fCol !== 'glassGrad') return fCol;
-                    const hg = ctx.createLinearGradient(0, oy - l3Fs * 0.42, 0, oy + l3Fs * 0.42);
-                    hg.addColorStop(0, '#FF8585'); hg.addColorStop(0.28, '#F84B4B'); hg.addColorStop(0.68, '#DC2626'); hg.addColorStop(1, '#991B1B');
-                    return hg;
-                })();
-                cs.forEach((c, idx) => {
-                    if (sCol && sw > 0) { ctx.lineWidth = sw; ctx.strokeStyle = sCol; ctx.strokeText(c, cx, oy); }
-                    ctx.fillStyle = rf; ctx.fillText(c, cx, oy); cx += ws[idx] + l3Ls;
-                });
-                ctx.restore();
-            };
-            drawL3Text(T.heroShdOff, T.heroShdOff, T.heroShdFill, T.heroShdStroke, T.heroShdSW, T.heroShdBlur);
-            drawL3Text(0, 0, T.heroMainFill, T.heroMainStroke, T.heroMainSW, false);
-
-            // STAY TUNED stamp
-            const stTxt = 'STAY TUNED';
-            ctx.font = `700 ${cardDim.stFs}px "Space Grotesk", sans-serif`;
-            const stW = ctx.measureText(stTxt).width + Math.max(0, stTxt.length - 1) * 4.5 + 64;
-            const stY = cardY + cardH - 32 + stH / 2;
-            ctx.save(); ctx.translate(W / 2, stY); ctx.rotate((T.stRot * Math.PI) / 180);
-            box(-stW / 2, -stH / 2, stW, stH, T.stFill, T.stB, T.stBC, T.stS, T.stR, true);
-            drawTrack(stTxt, 0, 1, `700 ${cardDim.stFs}px "Space Grotesk", sans-serif`, T.stT, 4.5);
-            ctx.restore();
-
-            return canvas;
-        }
-
         async function downloadPng() {
             const btn = document.getElementById('btnDownload');
             btn.disabled = true;
@@ -3141,10 +2795,11 @@
             try {
                 const rendered = await renderPosterCanvas();
                 const link = document.createElement('a');
-                const heroSlug = currentLayout === 3
+                const E = getEffectiveContent();
+                const heroSlug = E.isCS
                     ? 'coming-soon'
-                    : (document.getElementById('inHero').value || 'H-7').toLowerCase().replace(/\s+/g, '-');
-                const layoutTag = currentLayout === 2 ? 'layout2-' : (currentLayout === 3 ? 'layout3-' : '');
+                    : E.hero.toLowerCase().replace(/\s+/g, '-');
+                const layoutTag = currentLayout === 2 ? 'layout2-' : '';
                 link.download = `poster-${heroSlug}-${layoutTag}${currentStyle}-${currentRatio}.png`;
                 link.href = rendered.toDataURL('image/png');
                 link.click();
@@ -3161,11 +2816,8 @@
             document.getElementById('sidebarLogo').src = himaSrc;
             document.getElementById('l2HimaLogo').src = himaSrc;
             document.getElementById('l2LpkiaLogo').src = lpkiaSrc;
-            document.getElementById('l3HimaLogo').src = himaSrc;
-            document.getElementById('l3LpkiaLogo').src = lpkiaSrc;
             renderL2CursorSvg();
-            syncLayout2Dom();
-            syncLayout3Dom();
+            syncAllDom();
             applyScale();
         });
     </script>
