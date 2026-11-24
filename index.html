@@ -77,6 +77,83 @@
         .ratio-9-16 .cta-btn { padding: 16px 40px; }
         .ratio-9-16 .cta-text { font-size: 26px; }
 
+        /* ================= LAYOUT 2: RETRO POP-UP (NEUBRUTALISM) ================= */
+        .poster-canvas.layout-2 {
+            padding: 0 !important;
+            background: #148DF3 !important;
+            background-image: none !important;
+        }
+        .poster-canvas.layout-2 .layout-1-root { display: none !important; }
+        .poster-canvas.layout-2 .layout-2-root { display: block !important; }
+
+        .l2-bg-wall {
+            position: absolute;
+            inset: -40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+            pointer-events: none;
+            user-select: none;
+        }
+        .l2-bg-row {
+            font-family: 'Space Grotesk', 'Archivo Black', sans-serif;
+            font-weight: 800;
+            font-size: 235px;
+            line-height: 0.80;
+            letter-spacing: -0.04em;
+            color: #0E75D4;
+            white-space: nowrap;
+            text-transform: uppercase;
+        }
+        .ratio-9-16 .l2-bg-row { font-size: 260px; line-height: 0.80; }
+        .ratio-1-1  .l2-bg-row { font-size: 210px; line-height: 0.80; }
+
+        .l2-window {
+            width: 900px;
+            background: #FFFFFF;
+            border: 4px solid #000000;
+            box-shadow: 12px 12px 0 #000000;
+            border-radius: 6px;
+        }
+        .ratio-1-1 .l2-window { width: 880px; }
+        .ratio-9-16 .l2-window { width: 920px; }
+
+        .l2-titlebar {
+            background: #E6FC6D;
+            border-bottom: 4px solid #000000;
+        }
+        .l2-title-main {
+            font-family: 'Space Grotesk', 'Archivo Black', sans-serif;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            color: #08172E;
+            line-height: 0.94;
+        }
+        .l2-pill {
+            background: #E6FC6D;
+            border: 3px solid #000000;
+            border-radius: 12px;
+            box-shadow: 4px 4px 0 #000000;
+        }
+        .l2-star-tr { top: 50%; right: 20px; transform: translateY(-335px); width: 410px; height: 410px; }
+        .l2-star-bl { top: 50%; left: 10px;  transform: translateY(-60px);  width: 440px; height: 440px; }
+        .ratio-9-16 .l2-star-tr { transform: translateY(-360px); width: 450px; height: 450px; }
+        .ratio-9-16 .l2-star-bl { transform: translateY(-50px);  width: 480px; height: 480px; }
+        .ratio-1-1  .l2-star-tr { transform: translateY(-305px); width: 360px; height: 360px; }
+        .ratio-1-1  .l2-star-bl { transform: translateY(-55px);  width: 390px; height: 390px; }
+
+        .l2-cursor-wrap {
+            position: absolute;
+            top: 50%;
+            right: 34px;
+            transform: translateY(98px);
+            z-index: 30;
+            pointer-events: none;
+        }
+        .ratio-9-16 .l2-cursor-wrap { right: 36px; transform: translateY(112px) scale(1.1); transform-origin: top right; }
+        .ratio-1-1  .l2-cursor-wrap { right: 40px; transform: translateY(88px) scale(0.92); transform-origin: top right; }
+
         /* ================= THEME 1: NEUBRUTALISM ================= */
         .style-neubrutalism {
             background-color: #FFFFFF;
@@ -437,12 +514,33 @@
         <!-- Scrollable Inspector Controls -->
         <div class="builder-scroll flex-1 overflow-y-auto p-4 space-y-5">
 
-            <!-- 1. STYLE / TEMA -->
+            <!-- 0. PILIH LAYOUT -->
             <div class="space-y-2">
+                <div class="flex items-center justify-between">
+                    <span class="text-[11px] font-extrabold uppercase tracking-wider text-[#93C5FD]">0. Pilih Layout</span>
+                    <span id="lblActiveLayout" class="text-[10px] font-code text-[#E6FC6D]">layout-1</span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button type="button" onclick="setLayout(1)" id="btn-layout-1" class="btn-brutal px-2.5 py-2 bg-[#FCD34D] text-black border-2 border-black shadow-[3px_3px_0_#000000] text-left cursor-pointer">
+                        <span class="text-[11px] font-extrabold uppercase block leading-tight">Layout 1</span>
+                        <span class="text-[9px] font-bold opacity-80 block mt-0.5">Countdown Card</span>
+                    </button>
+                    <button type="button" onclick="setLayout(2)" id="btn-layout-2" class="btn-brutal px-2.5 py-2 bg-[#162C4E] text-white border-2 border-black shadow-[3px_3px_0_#000000] text-left cursor-pointer relative">
+                        <span class="text-[11px] font-extrabold uppercase block leading-tight">Layout 2</span>
+                        <span class="text-[9px] font-bold opacity-80 block mt-0.5">Retro Pop-up</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 1. STYLE / TEMA -->
+            <div class="space-y-2 pt-3 border-t-2 border-white/10">
                 <div class="flex items-center justify-between">
                     <span class="text-[11px] font-extrabold uppercase tracking-wider text-[#93C5FD]">1. Tema Desain</span>
                     <span id="lblActiveStyle" class="text-[10px] font-code text-[#FCD34D]">neubrutalism</span>
                 </div>
+                <p id="lblLayout2ThemeHint" class="hidden text-[10px] font-bold text-[#E6FC6D] bg-[#0B192E] border border-[#E6FC6D]/50 px-2 py-1">
+                    Layout 2 memakai tema Neubrutalism (Retro OS)
+                </p>
                 <div class="grid grid-cols-1 gap-2">
                     <button type="button" onclick="setStyle('neubrutalism')" id="btn-style-neubrutalism" class="btn-brutal w-full px-3 py-2.5 bg-[#FCD34D] text-black border-2 border-black shadow-[3px_3px_0_#000000] flex items-center justify-between cursor-pointer">
                         <span class="text-xs font-extrabold uppercase">Neubrutalism</span>
@@ -616,8 +714,9 @@
             <div id="scaleOuter" class="relative shrink-0 shadow-[0_24px_60px_rgba(0,0,0,0.65)]">
 
                 <!-- ARTBOARD -->
-                <main id="posterCanvas" class="poster-canvas ratio-4-5 style-neubrutalism relative overflow-hidden flex flex-col justify-between select-none">
+                <main id="posterCanvas" class="poster-canvas ratio-4-5 style-neubrutalism layout-1 relative overflow-hidden flex flex-col justify-between select-none">
 
+                    <div id="layout1Root" class="layout-1-root relative w-full h-full flex flex-col justify-between">
                     <!-- Decorative Curved Ribbons + Frosted Glass Shards (Glassmorphism Theme Only) -->
                     <svg class="glass-bg-layer pointer-events-none absolute inset-0 w-full h-full z-0" viewBox="0 0 1080 1350" preserveAspectRatio="none" aria-hidden="true">
                         <defs>
@@ -802,6 +901,83 @@
                             </span>
                         </div>
                     </section>
+                    </div>
+
+                    <!-- ================= LAYOUT 2: RETRO OS POP-UP (NEUBRUTALISM) ================= -->
+                    <div id="layout2Root" class="layout-2-root hidden relative w-full h-full overflow-hidden">
+                        <!-- Stacked Kinetic Typography Wallpaper -->
+                        <div id="l2BgWall" class="l2-bg-wall" aria-hidden="true"></div>
+
+                        <!-- 2 Multi-Point Spiky Lime Starbursts Behind Dialog -->
+                        <svg viewBox="0 0 420 420" class="l2-star-tr pointer-events-none absolute z-10" aria-hidden="true">
+                            <polygon points="210,12 248,108 345,52 308,148 408,168 320,224 388,308 282,294 274,398 210,322 146,398 138,294 32,308 100,224 12,168 112,148 75,52 172,108" fill="#E6FC6D"/>
+                        </svg>
+                        <svg viewBox="0 0 420 420" class="l2-star-bl pointer-events-none absolute z-10" aria-hidden="true">
+                            <polygon points="210,12 248,108 345,52 308,148 408,168 320,224 388,308 282,294 274,398 210,322 146,398 138,294 32,308 100,224 12,168 112,148 75,52 172,108" fill="#E6FC6D"/>
+                        </svg>
+
+                        <!-- Centered Retro Pop-up Dialog Window -->
+                        <div class="absolute inset-0 z-20 flex items-center justify-center px-10">
+                            <div class="l2-window overflow-hidden">
+                                <!-- Lime Title Bar with Dual Logos + X Button -->
+                                <div class="l2-titlebar px-6 py-4 flex items-center justify-between">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 bg-white border-2 border-black p-1 flex items-center justify-center shrink-0">
+                                            <img id="l2HimaLogo" src="" alt="Logo HIMA IF" class="w-full h-full object-contain">
+                                        </div>
+                                        <div class="w-10 h-10 bg-white border-2 border-black p-1 flex items-center justify-center shrink-0">
+                                            <img id="l2LpkiaLogo" src="" alt="Logo IDE LPKIA" class="w-full h-full object-contain">
+                                        </div>
+                                        <span class="font-display text-[26px] font-bold tracking-tight text-[#08172E] leading-none">
+                                            HIMA INFORMATIKA<span class="text-[13px] font-extrabold ml-2 opacity-75 uppercase tracking-wider">IDE LPKIA</span>
+                                        </span>
+                                    </div>
+                                    <svg class="w-7 h-7 text-black shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" aria-hidden="true">
+                                        <path stroke-linecap="square" d="M5 5l14 14M19 5L5 19"/>
+                                    </svg>
+                                </div>
+
+                                <!-- White Dialog Content Body -->
+                                <div class="px-9 pt-8 pb-8 flex flex-col gap-6">
+                                    <h1 id="l2OutTitle" class="l2-title-main text-[122px] uppercase text-center leading-none truncate">
+                                        KADERISASI
+                                    </h1>
+
+                                    <div class="flex items-center justify-between gap-4">
+                                        <div class="l2-pill px-5 py-3 inline-flex flex-col">
+                                            <span id="l2OutPillTop" class="font-display text-[23px] font-bold uppercase text-black leading-tight">
+                                                COUNTDOWN : H-7
+                                            </span>
+                                            <span id="l2OutPillSub" class="font-display text-[17px] font-bold uppercase text-[#08172E] leading-tight mt-0.5">
+                                                MENUJU HARI PELAKSANAAN
+                                            </span>
+                                        </div>
+                                        <div class="text-right pr-2 shrink-0">
+                                            <p class="text-[12px] font-extrabold uppercase tracking-[0.16em] text-[#08172E]/80 leading-tight">EVENT</p>
+                                            <p class="text-[12px] font-extrabold uppercase tracking-[0.16em] text-[#08172E] leading-tight">INFORMATIKA</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Bottom Info Strip (kept clear of bottom-right cursor arrow) -->
+                                    <div class="flex items-end justify-between gap-4 pt-3 border-t-2 border-black/15 pr-[235px]">
+                                        <div class="text-[13px] font-extrabold uppercase text-[#08172E] leading-snug">
+                                            <p id="l2OutDate">04 • JUMAT, 04 DES 2026</p>
+                                            <p id="l2OutTimeLoc" class="mt-0.5 text-[#1A467C]">08.00 WIB • KAMPUS IDE LPKIA</p>
+                                        </div>
+                                        <div class="text-right text-[12px] font-extrabold uppercase text-[#08172E] leading-snug">
+                                            <p class="text-[#08172E]/70">OFFICIAL PORTAL:</p>
+                                            <p id="l2OutCta" class="text-[#CA2C2A] tracking-wider">GO.HMIF-LPKIA.MY.ID</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Giant 8-Bit Pixelated Arrow Cursor -->
+                        <div class="l2-cursor-wrap">
+                            <svg id="l2CursorSvg" width="216" height="342" viewBox="0 0 12 19" shape-rendering="crispEdges" aria-hidden="true"></svg>
+                        </div>
+                    </div>
 
                 </main>
             </div>
@@ -809,6 +985,7 @@
     </div>
 
     <script>
+        let currentLayout = 1;
         let currentRatio = '4-5';
         let currentStyle = 'neubrutalism';
         let zoomSetting = 'fit';
@@ -826,7 +1003,132 @@
             }
         }
 
+        const L2_CURSOR_MAP = [
+            "B...........",
+            "BB..........",
+            "BWB.........",
+            "BWWB........",
+            "BWWWB.......",
+            "BWWWWB......",
+            "BWWWWWB.....",
+            "BWWWWWWB....",
+            "BWWWWWWWB...",
+            "BWWWWWWWWB..",
+            "BWWWWWWWWGB.",
+            "BWWWWWWWBBBB",
+            "BWWWBWWGB...",
+            "BWWB.BWWGB..",
+            "BWB..BWWGB..",
+            "BB....BWWGB.",
+            "B.....BWWGB.",
+            ".......BWWGB",
+            "........BBB."
+        ];
+
+        function renderL2CursorSvg() {
+            const svg = document.getElementById('l2CursorSvg');
+            if (!svg) return;
+            const palette = { B: '#000000', W: '#FFFFFF', G: '#CBD5E1' };
+            let rects = '';
+            L2_CURSOR_MAP.forEach((row, y) => {
+                for (let x = 0; x < row.length; x++) {
+                    const col = palette[row[x]];
+                    if (col) rects += `<rect x="${x}" y="${y}" width="1" height="1" fill="${col}"/>`;
+                }
+            });
+            svg.innerHTML = rects;
+        }
+
+        function getL2BgRows(word) {
+            const clean = (word || 'KADERISASI').replace(/\s+/g, '') || 'KADERISASI';
+            const rep = clean.repeat(4);
+            const rows = [];
+            for (let i = 0; i < 12; i++) {
+                const shift = (i * 3) % clean.length;
+                rows.push(rep.slice(shift) + rep.slice(0, shift));
+            }
+            return rows;
+        }
+
+        function syncLayout2Dom() {
+            const title = (document.getElementById('inStamp')?.value || 'KADERISASI').trim().toUpperCase() || 'KADERISASI';
+            const hero = (document.getElementById('inHero')?.value || 'H-7').trim().toUpperCase() || 'H-7';
+            const cd = (document.getElementById('inCountdown')?.value || 'COUNTDOWN').trim().toUpperCase() || 'COUNTDOWN';
+            const mn = (document.getElementById('inMenuju')?.value || 'MENUJU').trim().toUpperCase() || 'MENUJU';
+            const num = (document.getElementById('inNum')?.value || '04').trim() || '04';
+            const date = (document.getElementById('inDate')?.value || 'JUMAT, 04 DES 2026').trim().toUpperCase();
+            const time = (document.getElementById('inTime')?.value || '08.00 WIB').trim();
+            const loc = (document.getElementById('inLoc')?.value || 'Kampus IDE LPKIA').trim().toUpperCase();
+            const cta = (document.getElementById('inCta')?.value || 'GO.HMIF-LPKIA.MY.ID').trim().toUpperCase();
+
+            const titleEl = document.getElementById('l2OutTitle');
+            if (titleEl) {
+                titleEl.textContent = title;
+                const autoFs = title.length > 13 ? 72 : (title.length > 10 ? 92 : 122);
+                titleEl.style.fontSize = autoFs + 'px';
+            }
+            const pillTop = document.getElementById('l2OutPillTop');
+            const pillSub = document.getElementById('l2OutPillSub');
+            if (pillTop) pillTop.textContent = `${cd} : ${hero}`;
+            if (pillSub) pillSub.textContent = `${mn} HARI PELAKSANAAN`;
+
+            const dEl = document.getElementById('l2OutDate');
+            const tlEl = document.getElementById('l2OutTimeLoc');
+            const ctaEl = document.getElementById('l2OutCta');
+            if (dEl) dEl.textContent = `${num} • ${date}`;
+            if (tlEl) tlEl.textContent = `${time} • ${loc}`;
+            if (ctaEl) ctaEl.textContent = cta;
+
+            const wall = document.getElementById('l2BgWall');
+            if (wall) {
+                wall.innerHTML = getL2BgRows(title)
+                    .map((line) => `<div class="l2-bg-row">${line}</div>`)
+                    .join('');
+            }
+        }
+
+        function setLayout(layoutNum) {
+            currentLayout = Number(layoutNum) === 2 ? 2 : 1;
+            const canvas = document.getElementById('posterCanvas');
+            canvas.classList.remove('layout-1', 'layout-2');
+            canvas.classList.add('layout-' + currentLayout);
+            document.getElementById('lblActiveLayout').textContent = 'layout-' + currentLayout;
+
+            [1, 2].forEach((n) => {
+                const btn = document.getElementById('btn-layout-' + n);
+                if (!btn) return;
+                if (n === currentLayout) {
+                    btn.classList.remove('bg-[#162C4E]', 'text-white');
+                    btn.classList.add('bg-[#FCD34D]', 'text-black');
+                } else {
+                    btn.classList.remove('bg-[#FCD34D]', 'text-black');
+                    btn.classList.add('bg-[#162C4E]', 'text-white');
+                }
+            });
+
+            const hint = document.getElementById('lblLayout2ThemeHint');
+            if (currentLayout === 2) {
+                setStyle('neubrutalism');
+                if (hint) hint.classList.remove('hidden');
+            } else {
+                if (hint) hint.classList.add('hidden');
+            }
+
+            ['glass', 'dark-code', 'modern'].forEach((s) => {
+                const b = document.getElementById('btn-style-' + s);
+                if (!b) return;
+                b.disabled = currentLayout === 2;
+                b.classList.toggle('opacity-40', currentLayout === 2);
+                b.classList.toggle('cursor-not-allowed', currentLayout === 2);
+                b.classList.toggle('cursor-pointer', currentLayout !== 2);
+            });
+
+            syncLayout2Dom();
+            applyScale();
+        }
+
         function setStyle(styleName) {
+            if (currentLayout === 2 && styleName !== 'neubrutalism') return;
             currentStyle = styleName;
             const canvas = document.getElementById('posterCanvas');
             canvas.classList.remove('style-neubrutalism', 'style-glass', 'style-dark-code', 'style-modern');
@@ -946,10 +1248,12 @@
             shadow.setAttribute('letter-spacing', ls);
             main.setAttribute('letter-spacing', ls);
             document.getElementById('inHero').value = txt;
+            syncLayout2Dom();
         }
 
         function setText(id, val) {
             document.getElementById(id).textContent = val;
+            syncLayout2Dom();
         }
 
         function toggleAccents() {
@@ -984,6 +1288,7 @@
             document.getElementById('inCta').value = 'GO.HMIF-LPKIA.MY.ID';
             setText('outCta', 'GO.HMIF-LPKIA.MY.ID');
             if (!showAccents) toggleAccents();
+            syncLayout2Dom();
             setZoomMode('fit');
         }
 
@@ -1037,6 +1342,10 @@
                 '9-16': { w: 1080, h: 1920, px: 68, pt: 78, pb: 86 },
                 '1-1':  { w: 1080, h: 1080, px: 56, pt: 34, pb: 36 }
             }[currentRatio] || { w: 1080, h: 1350, px: 64, pt: 46, pb: 48 };
+
+            if (currentLayout === 2) {
+                return renderLayout2Canvas(dims);
+            }
 
             const THEMES = {
                 'neubrutalism': {
@@ -1686,6 +1995,261 @@
             return canvas;
         }
 
+        async function renderLayout2Canvas(dims) {
+            const W = dims.w;
+            const H = dims.h;
+            const canvas = document.createElement('canvas');
+            canvas.width = W;
+            canvas.height = H;
+            const ctx = canvas.getContext('2d');
+
+            const loadImg = (src) => new Promise((resolve) => {
+                const img = new Image();
+                img.onload = () => resolve(img);
+                img.onerror = () => resolve(null);
+                img.src = src;
+            });
+            const [himaImg, lpkiaImg] = await Promise.all([
+                loadImg(document.querySelector('#himaLogoSlot img').src),
+                loadImg(document.querySelector('#lpkiaLogoSlot img').src)
+            ]);
+
+            function rrPath(x, y, w, h, r) {
+                const rr = Math.min(r, w / 2, h / 2);
+                ctx.beginPath();
+                ctx.moveTo(x + rr, y);
+                ctx.lineTo(x + w - rr, y);
+                ctx.quadraticCurveTo(x + w, y, x + w, y + rr);
+                ctx.lineTo(x + w, y + h - rr);
+                ctx.quadraticCurveTo(x + w, y + h, x + w - rr, y + h);
+                ctx.lineTo(x + rr, y + h);
+                ctx.quadraticCurveTo(x, y + h, x, y + h - rr);
+                ctx.lineTo(x, y + rr);
+                ctx.quadraticCurveTo(x, y, x + rr, y);
+                ctx.closePath();
+            }
+
+            function drawTextTrack(text, x, y, font, color, tracking, align = 'left') {
+                ctx.font = font;
+                ctx.fillStyle = color;
+                ctx.textBaseline = 'middle';
+                const chars = Array.from(text);
+                const ws = chars.map((c) => ctx.measureText(c).width);
+                const tot = ws.reduce((a, b) => a + b, 0) + tracking * Math.max(0, chars.length - 1);
+                let cx = align === 'center' ? x - tot / 2 : (align === 'right' ? x - tot : x);
+                ctx.textAlign = 'left';
+                chars.forEach((c, idx) => {
+                    ctx.fillText(c, cx, y);
+                    cx += ws[idx] + tracking;
+                });
+            }
+
+            // 1. Solid Electric Azure Blue Background + Stacked Kinetic Typographic Wallpaper
+            ctx.fillStyle = '#148DF3';
+            ctx.fillRect(0, 0, W, H);
+
+            const title = (document.getElementById('inStamp')?.value || 'KADERISASI').trim().toUpperCase() || 'KADERISASI';
+            const hero = (document.getElementById('inHero')?.value || 'H-7').trim().toUpperCase() || 'H-7';
+            const cd = (document.getElementById('inCountdown')?.value || 'COUNTDOWN').trim().toUpperCase() || 'COUNTDOWN';
+            const mn = (document.getElementById('inMenuju')?.value || 'MENUJU').trim().toUpperCase() || 'MENUJU';
+            const num = (document.getElementById('inNum')?.value || '04').trim() || '04';
+            const date = (document.getElementById('inDate')?.value || 'JUMAT, 04 DES 2026').trim().toUpperCase();
+            const time = (document.getElementById('inTime')?.value || '08.00 WIB').trim();
+            const loc = (document.getElementById('inLoc')?.value || 'Kampus IDE LPKIA').trim().toUpperCase();
+            const cta = (document.getElementById('inCta')?.value || 'GO.HMIF-LPKIA.MY.ID').trim().toUpperCase();
+
+            const bgFs = currentRatio === '9-16' ? 260 : (currentRatio === '1-1' ? 210 : 235);
+            const rowH = bgFs * 0.80;
+            const bgRows = getL2BgRows(title);
+            const totalWallH = bgRows.length * rowH;
+            const wallStartY = (H - totalWallH) / 2 + rowH * 0.5;
+            bgRows.forEach((line, idx) => {
+                drawTextTrack(line, -40, wallStartY + idx * rowH, `800 ${bgFs}px "Space Grotesk", "Archivo Black", sans-serif`, '#0E75D4', -0.04 * bgFs, 'left');
+            });
+
+            // 2. 2 Multi-Point Spiky Lime Starbursts Behind Dialog
+            const starPts = [
+                [210,12],[248,108],[345,52],[308,148],[408,168],[320,224],[388,308],
+                [282,294],[274,398],[210,322],[146,398],[138,294],[32,308],[100,224],
+                [12,168],[112,148],[75,52],[172,108]
+            ];
+            const drawStar = (x, y, size) => {
+                ctx.save();
+                ctx.translate(x, y);
+                ctx.scale(size / 420, size / 420);
+                ctx.beginPath();
+                starPts.forEach(([px, py], i) => {
+                    if (i === 0) ctx.moveTo(px, py);
+                    else ctx.lineTo(px, py);
+                });
+                ctx.closePath();
+                ctx.fillStyle = '#E6FC6D';
+                ctx.fill();
+                ctx.restore();
+            };
+
+            const starCfg = currentRatio === '9-16'
+                ? { trSize: 450, trY: 360, blSize: 480, blY: 50 }
+                : (currentRatio === '1-1'
+                    ? { trSize: 360, trY: 305, blSize: 390, blY: 55 }
+                    : { trSize: 410, trY: 335, blSize: 440, blY: 60 });
+
+            drawStar(W - 20 - starCfg.trSize, H / 2 - starCfg.trY, starCfg.trSize);
+            drawStar(10, H / 2 - starCfg.blY, starCfg.blSize);
+
+            // 3. Centered Retro Pop-up Dialog Window
+            const winW = currentRatio === '9-16' ? 920 : (currentRatio === '1-1' ? 880 : 900);
+            const winX = (W - winW) / 2;
+            const tbH = 74;
+            const titleFs = title.length > 13 ? 72 : (title.length > 10 ? 92 : 122);
+            const bodyPadTop = 32;
+            const titleH = titleFs * 0.94;
+            const pillBoxH = 74;
+            const botStripH = 54;
+            const winH = tbH + bodyPadTop + titleH + 24 + pillBoxH + 24 + botStripH + 32;
+            const winY = Math.round((H - winH) / 2);
+
+            // Hard Neubrutalism shadow
+            ctx.fillStyle = '#000000';
+            rrPath(winX + 12, winY + 12, winW, winH, 6);
+            ctx.fill();
+
+            // Window background + Lime Titlebar clipped inside rounded corners
+            ctx.save();
+            rrPath(winX, winY, winW, winH, 6);
+            ctx.clip();
+            ctx.fillStyle = '#FFFFFF';
+            ctx.fillRect(winX, winY, winW, winH);
+            ctx.fillStyle = '#E6FC6D';
+            ctx.fillRect(winX, winY, winW, tbH);
+            ctx.fillStyle = '#000000';
+            ctx.fillRect(winX, winY + tbH - 4, winW, 4);
+            ctx.restore();
+
+            ctx.lineWidth = 4;
+            ctx.strokeStyle = '#000000';
+            rrPath(winX, winY, winW, winH, 6);
+            ctx.stroke();
+
+            // Titlebar Dual Logos + Brand + Close X
+            const drawMiniLogo = (lx, ly, img) => {
+                ctx.fillStyle = '#FFFFFF';
+                ctx.fillRect(lx, ly, 40, 40);
+                ctx.lineWidth = 2;
+                ctx.strokeStyle = '#000000';
+                ctx.strokeRect(lx, ly, 40, 40);
+                if (img) {
+                    const maxD = 32;
+                    const ratio = Math.min(maxD / img.width, maxD / img.height);
+                    const dw = img.width * ratio;
+                    const dh = img.height * ratio;
+                    ctx.drawImage(img, lx + (40 - dw) / 2, ly + (40 - dh) / 2, dw, dh);
+                }
+            };
+            const tbPadX = 24;
+            const tbLogoY = winY + (tbH - 4 - 40) / 2;
+            drawMiniLogo(winX + tbPadX, tbLogoY, himaImg);
+            drawMiniLogo(winX + tbPadX + 52, tbLogoY, lpkiaImg);
+
+            ctx.font = '700 26px "Space Grotesk", sans-serif';
+            ctx.fillStyle = '#08172E';
+            ctx.textAlign = 'left';
+            ctx.textBaseline = 'middle';
+            const brandX = winX + tbPadX + 104;
+            const brandCY = winY + (tbH - 4) / 2 + 1;
+            ctx.fillText('HIMA INFORMATIKA', brandX, brandCY);
+            const brandW = ctx.measureText('HIMA INFORMATIKA').width;
+            ctx.font = '800 13px "Plus Jakarta Sans", sans-serif';
+            ctx.fillStyle = 'rgba(8, 23, 46, 0.75)';
+            ctx.fillText('IDE LPKIA', brandX + brandW + 10, brandCY + 2);
+
+            // X close icon
+            const xSize = 20;
+            const xLeft = winX + winW - tbPadX - xSize;
+            const xTop = winY + (tbH - 4 - xSize) / 2;
+            ctx.strokeStyle = '#000000';
+            ctx.lineWidth = 3.2;
+            ctx.lineCap = 'square';
+            ctx.beginPath();
+            ctx.moveTo(xLeft, xTop);
+            ctx.lineTo(xLeft + xSize, xTop + xSize);
+            ctx.moveTo(xLeft + xSize, xTop);
+            ctx.lineTo(xLeft, xTop + xSize);
+            ctx.stroke();
+
+            // Dialog Body Content
+            const bodyX = winX + 36;
+            const bodyW = winW - 72;
+            const titleCY = winY + tbH + bodyPadTop + titleH / 2;
+            drawTextTrack(title, winX + winW / 2, titleCY, `800 ${titleFs}px "Space Grotesk", "Archivo Black", sans-serif`, '#08172E', -0.03 * titleFs, 'center');
+
+            // Middle Row: Highlight Pill + Right micro label
+            const midY = winY + tbH + bodyPadTop + titleH + 24;
+            const pillTextTop = `${cd} : ${hero}`;
+            const pillTextSub = `${mn} HARI PELAKSANAAN`;
+            ctx.font = '700 23px "Space Grotesk", sans-serif';
+            const topW = ctx.measureText(pillTextTop).width;
+            ctx.font = '700 17px "Space Grotesk", sans-serif';
+            const subW = ctx.measureText(pillTextSub).width;
+            const pillW = Math.max(topW, subW) + 40;
+
+            ctx.fillStyle = '#000000';
+            rrPath(bodyX + 4, midY + 4, pillW, pillBoxH, 12);
+            ctx.fill();
+            ctx.fillStyle = '#E6FC6D';
+            rrPath(bodyX, midY, pillW, pillBoxH, 12);
+            ctx.fill();
+            ctx.lineWidth = 3;
+            ctx.strokeStyle = '#000000';
+            rrPath(bodyX, midY, pillW, pillBoxH, 12);
+            ctx.stroke();
+
+            drawTextTrack(pillTextTop, bodyX + 20, midY + 25, '700 23px "Space Grotesk", sans-serif', '#000000', 0, 'left');
+            drawTextTrack(pillTextSub, bodyX + 20, midY + 52, '700 17px "Space Grotesk", sans-serif', '#08172E', 0, 'left');
+
+            drawTextTrack('EVENT', winX + winW - 44, midY + 28, '800 12px "Plus Jakarta Sans", sans-serif', 'rgba(8,23,46,0.8)', 2, 'right');
+            drawTextTrack('INFORMATIKA', winX + winW - 44, midY + 44, '800 12px "Plus Jakarta Sans", sans-serif', '#08172E', 2, 'right');
+
+            // Divider & Bottom Metadata Row (clear of cursor zone)
+            const divY = midY + pillBoxH + 24;
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.15)';
+            ctx.fillRect(bodyX, divY, bodyW - 235, 2);
+
+            drawTextTrack(`${num} • ${date}`, bodyX, divY + 20, '800 13px "Plus Jakarta Sans", sans-serif', '#08172E', 0, 'left');
+            drawTextTrack(`${time} • ${loc}`, bodyX, divY + 40, '800 13px "Plus Jakarta Sans", sans-serif', '#1A467C', 0, 'left');
+
+            const botRightX = winX + winW - 36 - 235;
+            drawTextTrack('OFFICIAL PORTAL:', botRightX, divY + 20, '800 12px "Plus Jakarta Sans", sans-serif', 'rgba(8,23,46,0.7)', 0, 'right');
+            drawTextTrack(cta, botRightX, divY + 40, '800 12px "Plus Jakarta Sans", sans-serif', '#CA2C2A', 1, 'right');
+
+            // 4. Giant 8-Bit Pixelated Arrow Cursor
+            const curCfg = currentRatio === '9-16'
+                ? { unit: 20, rightOff: 36, yOff: 112 }
+                : (currentRatio === '1-1'
+                    ? { unit: 16.5, rightOff: 40, yOff: 88 }
+                    : { unit: 18, rightOff: 34, yOff: 98 });
+
+            const curW = 12 * curCfg.unit;
+            const curX = W - curCfg.rightOff - curW;
+            const curY = H / 2 + curCfg.yOff;
+            const palette = { B: '#000000', W: '#FFFFFF', G: '#CBD5E1' };
+            L2_CURSOR_MAP.forEach((row, ry) => {
+                for (let rx = 0; rx < row.length; rx++) {
+                    const col = palette[row[rx]];
+                    if (!col) continue;
+                    ctx.fillStyle = col;
+                    ctx.fillRect(
+                        Math.round(curX + rx * curCfg.unit),
+                        Math.round(curY + ry * curCfg.unit),
+                        Math.ceil(curCfg.unit),
+                        Math.ceil(curCfg.unit)
+                    );
+                }
+            });
+
+            return canvas;
+        }
+
         async function downloadPng() {
             const btn = document.getElementById('btnDownload');
             btn.disabled = true;
@@ -1695,7 +2259,8 @@
                 const rendered = await renderPosterCanvas();
                 const link = document.createElement('a');
                 const heroSlug = (document.getElementById('inHero').value || 'H-7').toLowerCase().replace(/\s+/g, '-');
-                link.download = `poster-${heroSlug}-${currentStyle}-${currentRatio}.png`;
+                const layoutTag = currentLayout === 2 ? 'layout2-' : '';
+                link.download = `poster-${heroSlug}-${layoutTag}${currentStyle}-${currentRatio}.png`;
                 link.href = rendered.toDataURL('image/png');
                 link.click();
             } finally {
@@ -1706,7 +2271,13 @@
 
         window.addEventListener('resize', applyScale);
         window.addEventListener('load', () => {
-            document.getElementById('sidebarLogo').src = document.querySelector('#himaLogoSlot img').src;
+            const himaSrc = document.querySelector('#himaLogoSlot img').src;
+            const lpkiaSrc = document.querySelector('#lpkiaLogoSlot img').src;
+            document.getElementById('sidebarLogo').src = himaSrc;
+            document.getElementById('l2HimaLogo').src = himaSrc;
+            document.getElementById('l2LpkiaLogo').src = lpkiaSrc;
+            renderL2CursorSvg();
+            syncLayout2Dom();
             applyScale();
         });
     </script>
