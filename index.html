@@ -120,9 +120,22 @@
         .ratio-1-1 .l2-window { width: 880px; }
         .ratio-9-16 .l2-window { width: 920px; }
 
+        .l2-logos-top {
+            position: absolute;
+            top: 44px;
+            left: 0;
+            right: 0;
+            z-index: 25;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 18px;
+        }
+        .ratio-9-16 .l2-logos-top { top: 74px; gap: 22px; }
+        .ratio-1-1  .l2-logos-top { top: 30px; gap: 16px; }
         .l2-logo-box {
-            width: 60px;
-            height: 60px;
+            width: 62px;
+            height: 62px;
             background: #FFFFFF;
             border: 3px solid #000000;
             box-shadow: 4px 4px 0 #000000;
@@ -970,116 +983,113 @@
                             <polygon points="210,12 248,108 345,52 308,148 408,168 320,224 388,308 282,294 274,398 210,322 146,398 138,294 32,308 100,224 12,168 112,148 75,52 172,108" fill="#CA2C2A" stroke="#000000" stroke-width="5"/>
                         </svg>
 
-                        <!-- Centered Stack: 3 Logos Above Window + Dialog + Attached Stickers & Cursor -->
+                        <!-- Top 3 Logos Bar Pinned at Top Poster Margin (Zona Merah) -->
+                        <div class="l2-logos-top">
+                            <div class="l2-logo-box flex items-center justify-center shrink-0">
+                                <img id="l2HimaLogo" src="" alt="Logo HIMA IF" class="w-full h-full object-contain">
+                            </div>
+                            <div class="l2-logo-box flex items-center justify-center shrink-0">
+                                <img id="l2LpkiaLogo" src="" alt="Logo IDE LPKIA" class="w-full h-full object-contain">
+                            </div>
+                            <div id="l2Logo3Slot" class="l2-logo-box flex items-center justify-center shrink-0">
+                                <img id="l2Logo3Img" src="" alt="Logo 3" class="hidden w-full h-full object-contain">
+                                <div id="l2Logo3Default" class="w-full h-full bg-[#1A467C] flex flex-col items-center justify-center text-white leading-none">
+                                    <span class="font-display text-[13px] font-bold tracking-tight">KDR</span>
+                                    <span class="text-[8px] font-extrabold opacity-80 mt-0.5">2026</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Centered Dialog Window + Attached Stickers & Cursor -->
                         <div class="absolute inset-0 z-20 flex items-center justify-center px-10">
-                            <div class="flex flex-col items-center">
-                                <!-- Top 3 Logos Row (Zona Merah) -->
-                                <div class="flex items-center justify-center gap-4 mb-4">
-                                    <div class="l2-logo-box flex items-center justify-center shrink-0">
-                                        <img id="l2HimaLogo" src="" alt="Logo HIMA IF" class="w-full h-full object-contain">
-                                    </div>
-                                    <div class="l2-logo-box flex items-center justify-center shrink-0">
-                                        <img id="l2LpkiaLogo" src="" alt="Logo IDE LPKIA" class="w-full h-full object-contain">
-                                    </div>
-                                    <div id="l2Logo3Slot" class="l2-logo-box flex items-center justify-center shrink-0">
-                                        <img id="l2Logo3Img" src="" alt="Logo 3" class="hidden w-full h-full object-contain">
-                                        <div id="l2Logo3Default" class="w-full h-full bg-[#1A467C] flex flex-col items-center justify-center text-white leading-none">
-                                            <span class="font-display text-[13px] font-bold tracking-tight">KDR</span>
-                                            <span class="text-[8px] font-extrabold opacity-80 mt-0.5">2026</span>
-                                        </div>
-                                    </div>
+                            <div class="relative">
+                                <!-- Top-Left Tilted Sticker (Zona Oren): COUNTDOWN • MENUJU -->
+                                <div class="l2-sticker-top px-5 py-2">
+                                    <span id="l2OutBanner" class="font-pixel text-[23px] font-bold uppercase tracking-[0.06em] leading-none block">
+                                        COUNTDOWN • MENUJU
+                                    </span>
                                 </div>
 
-                                <div class="relative">
-                                    <!-- Top-Left Tilted Sticker (Zona Oren): COUNTDOWN • MENUJU -->
-                                    <div class="l2-sticker-top px-5 py-2">
-                                        <span id="l2OutBanner" class="font-pixel text-[23px] font-bold uppercase tracking-[0.06em] leading-none block">
-                                            COUNTDOWN • MENUJU
-                                        </span>
+                                <div class="l2-window overflow-hidden">
+                                    <!-- Navy Title Bar: HIMA INFORMATIKA • IDE LPKIA -->
+                                    <div class="l2-titlebar px-6 py-4 flex items-center justify-end">
+                                        <div class="text-right">
+                                            <p class="font-display text-[23px] font-bold uppercase tracking-[0.04em] text-white leading-none">
+                                                HIMA INFORMATIKA
+                                            </p>
+                                            <p class="text-[12px] font-extrabold uppercase tracking-[0.24em] text-[#93C5FD] mt-1 leading-none">
+                                                IDE LPKIA
+                                            </p>
+                                        </div>
                                     </div>
 
-                                    <div class="l2-window overflow-hidden">
-                                        <!-- Navy Title Bar: HIMA INFORMATIKA • IDE LPKIA -->
-                                        <div class="l2-titlebar px-6 py-4 flex items-center justify-end">
-                                            <div class="text-right">
-                                                <p class="font-display text-[23px] font-bold uppercase tracking-[0.04em] text-white leading-none">
-                                                    HIMA INFORMATIKA
-                                                </p>
-                                                <p class="text-[12px] font-extrabold uppercase tracking-[0.24em] text-[#93C5FD] mt-1 leading-none">
-                                                    IDE LPKIA
-                                                </p>
-                                            </div>
+                                    <!-- White Dialog Hero Highlight (Fokus H-7 + Stamp KADERISASI + Jadwal Tanggal & Waktu) -->
+                                    <div class="px-8 pt-6 pb-11 flex flex-col items-center">
+                                        <!-- Giant H-7 Highlight SVG -->
+                                        <svg viewBox="0 0 680 220" class="l2-hero-svg overflow-visible" aria-label="H-7">
+                                            <text id="l2SvgShadow" x="354" y="122" text-anchor="middle" dominant-baseline="central"
+                                                  class="font-hero svg-stroke" font-size="225" font-weight="400" letter-spacing="14"
+                                                  fill="#000000" stroke="#000000" stroke-width="26">
+                                                H-7
+                                            </text>
+                                            <text id="l2SvgMain" x="340" y="108" text-anchor="middle" dominant-baseline="central"
+                                                  class="font-hero svg-stroke" font-size="225" font-weight="400" letter-spacing="14"
+                                                  fill="#CA2C2A" stroke="#000000" stroke-width="18">
+                                                H-7
+                                            </text>
+                                        </svg>
+
+                                        <!-- Tilted Red Event Sticker Stamp: KADERISASI -->
+                                        <div class="l2-sticker-stamp -mt-3 px-7 py-2.5 inline-flex items-center gap-3">
+                                            <svg class="w-7 h-7 shrink-0 text-white" fill="none" stroke="currentColor" stroke-width="2.8" viewBox="0 0 24 24" aria-hidden="true">
+                                                <circle cx="12" cy="12" r="9"></circle>
+                                                <path stroke-linecap="square" d="M12 7v5l3 2"></path>
+                                            </svg>
+                                            <span id="l2OutTitle" class="font-display text-[40px] font-bold uppercase tracking-[0.06em] leading-none">
+                                                KADERISASI
+                                            </span>
                                         </div>
 
-                                        <!-- White Dialog Hero Highlight (Fokus H-7 + Stamp KADERISASI + Chips) -->
-                                        <div class="px-8 pt-6 pb-11 flex flex-col items-center">
-                                            <!-- Giant H-7 Highlight SVG -->
-                                            <svg viewBox="0 0 680 220" class="l2-hero-svg overflow-visible" aria-label="H-7">
-                                                <text id="l2SvgShadow" x="354" y="122" text-anchor="middle" dominant-baseline="central"
-                                                      class="font-hero svg-stroke" font-size="225" font-weight="400" letter-spacing="14"
-                                                      fill="#000000" stroke="#000000" stroke-width="26">
-                                                    H-7
-                                                </text>
-                                                <text id="l2SvgMain" x="340" y="108" text-anchor="middle" dominant-baseline="central"
-                                                      class="font-hero svg-stroke" font-size="225" font-weight="400" letter-spacing="14"
-                                                      fill="#CA2C2A" stroke="#000000" stroke-width="18">
-                                                    H-7
-                                                </text>
-                                            </svg>
-
-                                            <!-- Tilted Red Event Sticker Stamp: KADERISASI -->
-                                            <div class="l2-sticker-stamp -mt-3 px-7 py-2.5 inline-flex items-center gap-3">
-                                                <svg class="w-7 h-7 shrink-0 text-white" fill="none" stroke="currentColor" stroke-width="2.8" viewBox="0 0 24 24" aria-hidden="true">
-                                                    <circle cx="12" cy="12" r="9"></circle>
-                                                    <path stroke-linecap="square" d="M12 7v5l3 2"></path>
-                                                </svg>
-                                                <span id="l2OutTitle" class="font-display text-[40px] font-bold uppercase tracking-[0.06em] leading-none">
-                                                    KADERISASI
-                                                </span>
-                                            </div>
-
-                                            <!-- Unified Schedule Chips -->
-                                            <div class="w-full mt-6 grid grid-cols-[1.35fr_1fr] gap-3">
-                                                <div class="l2-chip flex items-center overflow-hidden">
-                                                    <div id="l2OutNum" class="l2-chip-num px-3.5 py-2.5 font-display text-[24px] font-bold leading-none shrink-0">
+                                        <!-- Single Unified Schedule Bar (Tanpa Lokasi) -->
+                                        <div class="w-full mt-6">
+                                            <div class="l2-chip w-full flex items-center justify-between overflow-hidden">
+                                                <div class="flex items-center min-w-0">
+                                                    <div id="l2OutNum" class="l2-chip-num px-4 py-2.5 font-display text-[26px] font-bold leading-none shrink-0">
                                                         04
                                                     </div>
-                                                    <div class="px-3.5 py-2 min-w-0">
-                                                        <p id="l2OutDate" class="font-display text-[17px] font-bold uppercase text-[#1A467C] leading-tight truncate">
-                                                            JUMAT, 04 DES 2026
-                                                        </p>
-                                                        <p id="l2OutTime" class="text-[12px] font-extrabold uppercase text-[#2A82C6] leading-tight mt-0.5 truncate">
-                                                            08.00 WIB
-                                                        </p>
-                                                    </div>
+                                                    <p id="l2OutDate" class="font-display text-[21px] font-bold uppercase text-[#1A467C] px-4 leading-none truncate">
+                                                        JUMAT, 04 DES 2026
+                                                    </p>
                                                 </div>
-
-                                                <div class="l2-chip px-4 py-2 flex flex-col justify-center min-w-0">
-                                                    <span class="text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#CA2C2A] leading-none">LOKASI</span>
-                                                    <p id="l2OutLoc" class="font-display text-[17px] font-bold uppercase text-[#1A467C] leading-tight mt-1 truncate">
-                                                        KAMPUS IDE LPKIA
+                                                <div class="px-4 py-2.5 bg-[#E8F2FA] border-l-[3px] border-black flex items-center gap-2 shrink-0">
+                                                    <svg class="w-4 h-4 text-[#1A467C] shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+                                                        <circle cx="12" cy="12" r="9"></circle>
+                                                        <path stroke-linecap="square" d="M12 7v5l3.5 2"></path>
+                                                    </svg>
+                                                    <p id="l2OutTime" class="font-display text-[17px] font-bold uppercase text-[#1A467C] leading-none">
+                                                        08.00 WIB
                                                     </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
 
-                                    <!-- Bottom-Left Taped IG Sticker (Zona Putih) -->
-                                    <div class="l2-ig-sticker px-5 py-2.5 inline-flex items-center gap-2.5">
-                                        <svg class="w-6 h-6 shrink-0 text-[#CA2C2A]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true">
-                                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                                            <circle cx="12" cy="12" r="4.5"></circle>
-                                            <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"></circle>
-                                        </svg>
-                                        <span id="l2OutIg" class="font-display text-[20px] font-bold tracking-[0.02em] leading-none">
-                                            hmif_LPKIA
-                                        </span>
-                                    </div>
+                                <!-- Bottom-Left Taped IG Sticker (Zona Putih) -->
+                                <div class="l2-ig-sticker px-5 py-2.5 inline-flex items-center gap-2.5">
+                                    <svg class="w-6 h-6 shrink-0 text-[#CA2C2A]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true">
+                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                        <circle cx="12" cy="12" r="4.5"></circle>
+                                        <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"></circle>
+                                    </svg>
+                                    <span id="l2OutIg" class="font-display text-[20px] font-bold tracking-[0.02em] leading-none">
+                                        hmif_LPKIA
+                                    </span>
+                                </div>
 
-                                    <!-- Giant 8-Bit Pixelated Arrow Cursor (Bottom-Right) -->
-                                    <div class="l2-cursor-wrap">
-                                        <svg id="l2CursorSvg" width="192" height="304" viewBox="0 0 12 19" shape-rendering="crispEdges" aria-hidden="true"></svg>
-                                    </div>
+                                <!-- Giant 8-Bit Pixelated Arrow Cursor (Bottom-Right) -->
+                                <div class="l2-cursor-wrap">
+                                    <svg id="l2CursorSvg" width="192" height="304" viewBox="0 0 12 19" shape-rendering="crispEdges" aria-hidden="true"></svg>
                                 </div>
                             </div>
                         </div>
@@ -2269,24 +2279,22 @@
             drawStar(W - 20 - starCfg.trSize, H / 2 - starCfg.trY, starCfg.trSize);
             drawStar(10, H / 2 - starCfg.blY, starCfg.blSize);
 
-            // 3. Stack Geometry: Top 3 Logos Bar Above Window + Window Body + Bottom IG Sticker
+            // 3. Top Logos (pinned at top margin) + Vertically Centered Window Body + Bottom IG Sticker
             const winW = currentRatio === '9-16' ? 920 : (currentRatio === '1-1' ? 880 : 900);
             const winX = (W - winW) / 2;
-            const logoBoxS = currentRatio === '1-1' ? 52 : 60;
-            const logoGap = 16;
-            const logoMarginBot = 16;
+            const logoBoxS = currentRatio === '1-1' ? 52 : 62;
+            const logoGap = currentRatio === '9-16' ? 22 : (currentRatio === '1-1' ? 16 : 18);
+            const logosTopY = currentRatio === '9-16' ? 74 : (currentRatio === '1-1' ? 30 : 44);
             const tbH = 74;
             const heroSvgDim = currentRatio === '9-16' ? { w: 680, h: 225 } : (currentRatio === '1-1' ? { w: 560, h: 160 } : { w: 640, h: 205 });
             const stampBoxH = 62;
-            const chipRowH = 56;
+            const chipRowH = 54;
             const bodyPt = 24;
             const bodyPb = 44;
             const winH = tbH + bodyPt + heroSvgDim.h - 12 + stampBoxH + 24 + chipRowH + bodyPb;
-            const totalStackH = logoBoxS + logoMarginBot + winH;
-            const stackTopY = Math.round((H - totalStackH) / 2);
-            const winY = stackTopY + logoBoxS + logoMarginBot;
+            const winY = Math.round((H - winH) / 2);
 
-            // Top 3 Logos Bar (Zona Merah: centered above window)
+            // Top 3 Logos Bar Pinned at Top Margin of Canvas (Zona Merah)
             const logosTotalW = logoBoxS * 3 + logoGap * 2;
             const logosStartX = (W - logosTotalW) / 2;
             const drawTopLogoBox = (lx, ly, img, isLogo3 = false) => {
@@ -2312,9 +2320,9 @@
                     drawTextTrack('2026', lx + logoBoxS / 2, ly + logoBoxS / 2 + 10, '800 8px "Plus Jakarta Sans", sans-serif', 'rgba(255,255,255,0.8)', 0, 'center');
                 }
             };
-            drawTopLogoBox(logosStartX, stackTopY, himaImg, false);
-            drawTopLogoBox(logosStartX + logoBoxS + logoGap, stackTopY, lpkiaImg, false);
-            drawTopLogoBox(logosStartX + (logoBoxS + logoGap) * 2, stackTopY, logo3Img, true);
+            drawTopLogoBox(logosStartX, logosTopY, himaImg, false);
+            drawTopLogoBox(logosStartX + logoBoxS + logoGap, logosTopY, lpkiaImg, false);
+            drawTopLogoBox(logosStartX + (logoBoxS + logoGap) * 2, logosTopY, logo3Img, true);
 
             // Hard Neubrutalism shadow for Window
             ctx.fillStyle = '#000000';
@@ -2425,41 +2433,54 @@
             drawTextTrack(title, -stW / 2 + 28 + 28 + 12, 1, '700 40px "Space Grotesk", sans-serif', '#FFFFFF', 2.4, 'left');
             ctx.restore();
 
-            // Unified Schedule Chips (04 | JUMAT, 04 DES 2026 & LOKASI)
+            // Unified Single Schedule Bar (Tanpa Lokasi: 04 | JUMAT, 04 DES 2026 | Jam)
             const bodyX = winX + 32;
             const bodyW = winW - 64;
             const chipY = stampCY + stampBoxH / 2 + 24;
-            const chipGap = 12;
-            const chip1W = (bodyW - chipGap) * (1.35 / 2.35);
-            const chip2W = bodyW - chipGap - chip1W;
-            const chip2X = bodyX + chip1W + chipGap;
 
             ctx.fillStyle = '#000000';
-            ctx.fillRect(bodyX + 4, chipY + 4, chip1W, chipRowH);
+            ctx.fillRect(bodyX + 4, chipY + 4, bodyW, chipRowH);
             ctx.fillStyle = '#F8FBFF';
-            ctx.fillRect(bodyX, chipY, chip1W, chipRowH);
-            ctx.font = '700 24px "Space Grotesk", sans-serif';
-            const numW = Math.max(ctx.measureText(num).width + 28, 56);
+            ctx.fillRect(bodyX, chipY, bodyW, chipRowH);
+
+            ctx.font = '700 26px "Space Grotesk", sans-serif';
+            const numW = Math.max(ctx.measureText(num).width + 32, 60);
             ctx.fillStyle = '#CA2C2A';
             ctx.fillRect(bodyX, chipY, numW, chipRowH);
             ctx.fillStyle = '#000000';
             ctx.fillRect(bodyX + numW - 3, chipY, 3, chipRowH);
-            ctx.lineWidth = 3;
-            ctx.strokeStyle = '#000000';
-            ctx.strokeRect(bodyX, chipY, chip1W, chipRowH);
-            drawTextTrack(num, bodyX + numW / 2, chipY + chipRowH / 2 + 1, '700 24px "Space Grotesk", sans-serif', '#FFFFFF', 0, 'center');
-            drawTextTrack(date, bodyX + numW + 14, chipY + chipRowH / 2 - 9, '700 17px "Space Grotesk", sans-serif', '#1A467C', 0, 'left');
-            drawTextTrack(time.toUpperCase(), bodyX + numW + 14, chipY + chipRowH / 2 + 11, '800 12px "Plus Jakarta Sans", sans-serif', '#2A82C6', 0, 'left');
 
+            const timeTxt = time.toUpperCase();
+            ctx.font = '700 17px "Space Grotesk", sans-serif';
+            const timeTxtW = ctx.measureText(timeTxt).width;
+            const timeBoxW = 32 + 16 + 8 + timeTxtW;
+            const timeBoxX = bodyX + bodyW - timeBoxW;
+            ctx.fillStyle = '#E8F2FA';
+            ctx.fillRect(timeBoxX, chipY, timeBoxW, chipRowH);
             ctx.fillStyle = '#000000';
-            ctx.fillRect(chip2X + 4, chipY + 4, chip2W, chipRowH);
-            ctx.fillStyle = '#F8FBFF';
-            ctx.fillRect(chip2X, chipY, chip2W, chipRowH);
+            ctx.fillRect(timeBoxX, chipY, 3, chipRowH);
+
             ctx.lineWidth = 3;
             ctx.strokeStyle = '#000000';
-            ctx.strokeRect(chip2X, chipY, chip2W, chipRowH);
-            drawTextTrack('LOKASI', chip2X + 16, chipY + chipRowH / 2 - 11, '800 10px "Plus Jakarta Sans", sans-serif', '#CA2C2A', 1.8, 'left');
-            drawTextTrack(loc, chip2X + 16, chipY + chipRowH / 2 + 9, '700 17px "Space Grotesk", sans-serif', '#1A467C', 0, 'left');
+            ctx.strokeRect(bodyX, chipY, bodyW, chipRowH);
+
+            drawTextTrack(num, bodyX + numW / 2, chipY + chipRowH / 2 + 1, '700 26px "Space Grotesk", sans-serif', '#FFFFFF', 0, 'center');
+            drawTextTrack(date, bodyX + numW + 18, chipY + chipRowH / 2 + 1, '700 21px "Space Grotesk", sans-serif', '#1A467C', 0, 'left');
+
+            // Right time clock icon + text
+            const tClkX = timeBoxX + 18 + 8;
+            const tClkY = chipY + chipRowH / 2;
+            ctx.strokeStyle = '#1A467C';
+            ctx.lineWidth = 2.2;
+            ctx.beginPath();
+            ctx.arc(tClkX, tClkY, 7.5, 0, Math.PI * 2);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(tClkX, tClkY - 4);
+            ctx.lineTo(tClkX, tClkY);
+            ctx.lineTo(tClkX + 3, tClkY + 2);
+            ctx.stroke();
+            drawTextTrack(timeTxt, tClkX + 15, chipY + chipRowH / 2 + 1, '700 17px "Space Grotesk", sans-serif', '#1A467C', 0, 'left');
 
             // Bottom-Left Taped Instagram Sticker (Zona Putih): SVG IG Camera + hmif_LPKIA
             ctx.font = '700 20px "Space Grotesk", sans-serif';
