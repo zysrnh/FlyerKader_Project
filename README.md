@@ -13,6 +13,7 @@ FlyerKader_Project/
 ├── exports/            # Hasil export PNG siap posting
 │   ├── poster-h7-feed-4x5.png
 │   ├── poster-h7-story-9x16.png
+│   ├── poster-h7-glass-4x5.png
 │   ├── poster-h7-dark-4x5.png
 │   └── poster-h7-modern-4x5.png
 └── archive/            # Eksplorasi desain sebelumnya (H-3)
@@ -20,7 +21,7 @@ FlyerKader_Project/
 
 ## Fitur di `index.html`
 
-- **Switcher Style:** `Neubrutalism` (default), `Dark Code`, dan `Modern Clean`
+- **Switcher Style:** `Neubrutalism` (default), `Glassmorphism`, `Dark Code`, dan `Modern Clean`
 - **Multi-Rasio IG:** `4:5 Feed (1080x1350)`, `9:16 Story (1080x1920)`, dan `1:1 Square (1080x1080)`
 - **Preset & Edit Teks Live:** `H-7`, `H-3`, `H-1`, `HARI H`, tanggal, jam, lokasi, dan stempel acara
 - **Export PNG 1080px:** Menggunakan native HTML5 Canvas 2D renderer tanpa library eksternal
