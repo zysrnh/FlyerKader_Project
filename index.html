@@ -190,22 +190,22 @@
         .ratio-1-1 .l2-hero-svg { width: 560px; height: 160px; }
         .ratio-9-16 .l2-hero-svg { width: 680px; height: 225px; }
 
-        .l2-star-tr { top: 50%; right: 20px; transform: translateY(-380px); width: 410px; height: 410px; }
-        .l2-star-bl { top: 50%; left: 10px;  transform: translateY(-10px);  width: 440px; height: 440px; }
-        .ratio-9-16 .l2-star-tr { transform: translateY(-410px); width: 450px; height: 450px; }
-        .ratio-9-16 .l2-star-bl { transform: translateY(0px);   width: 480px; height: 480px; }
-        .ratio-1-1  .l2-star-tr { transform: translateY(-340px); width: 340px; height: 340px; }
-        .ratio-1-1  .l2-star-bl { transform: translateY(-10px);  width: 360px; height: 360px; }
+        .l2-star-tr { top: 50%; right: 20px; transform: translateY(-355px); width: 410px; height: 410px; }
+        .l2-star-bl { top: 50%; left: 10px;  transform: translateY(-35px);  width: 440px; height: 440px; }
+        .ratio-9-16 .l2-star-tr { transform: translateY(-385px); width: 450px; height: 450px; }
+        .ratio-9-16 .l2-star-bl { transform: translateY(-25px);  width: 480px; height: 480px; }
+        .ratio-1-1  .l2-star-tr { transform: translateY(-320px); width: 340px; height: 340px; }
+        .ratio-1-1  .l2-star-bl { transform: translateY(-35px);  width: 360px; height: 360px; }
 
         .l2-cursor-wrap {
             position: absolute;
             right: -30px;
-            bottom: -265px;
+            bottom: -245px;
             z-index: 30;
             pointer-events: none;
         }
-        .ratio-9-16 .l2-cursor-wrap { right: -26px; bottom: -298px; transform: scale(1.12); transform-origin: bottom right; }
-        .ratio-1-1  .l2-cursor-wrap { right: -24px; bottom: -224px; transform: scale(0.86); transform-origin: bottom right; }
+        .ratio-9-16 .l2-cursor-wrap { right: -26px; bottom: -275px; transform: scale(1.12); transform-origin: bottom right; }
+        .ratio-1-1  .l2-cursor-wrap { right: -24px; bottom: -210px; transform: scale(0.86); transform-origin: bottom right; }
 
         /* ================= THEME 1: NEUBRUTALISM ================= */
         .style-neubrutalism {
@@ -1023,8 +1023,8 @@
                                         </div>
                                     </div>
 
-                                    <!-- White Dialog Hero Highlight (Fokus H-7 + Stamp KADERISASI + Jadwal Tanggal & Waktu) -->
-                                    <div class="px-8 pt-6 pb-11 flex flex-col items-center">
+                                    <!-- White Dialog Hero Highlight (Fokus H-7 + Stamp KADERISASI) -->
+                                    <div class="px-8 pt-9 pb-14 flex flex-col items-center">
                                         <!-- Giant H-7 Highlight SVG -->
                                         <svg viewBox="0 0 680 220" class="l2-hero-svg overflow-visible" aria-label="H-7">
                                             <text id="l2SvgShadow" x="354" y="122" text-anchor="middle" dominant-baseline="central"
@@ -1048,29 +1048,6 @@
                                             <span id="l2OutTitle" class="font-display text-[40px] font-bold uppercase tracking-[0.06em] leading-none">
                                                 KADERISASI
                                             </span>
-                                        </div>
-
-                                        <!-- Single Unified Schedule Bar (Tanpa Lokasi) -->
-                                        <div class="w-full mt-6">
-                                            <div class="l2-chip w-full flex items-center justify-between overflow-hidden">
-                                                <div class="flex items-center min-w-0">
-                                                    <div id="l2OutNum" class="l2-chip-num px-4 py-2.5 font-display text-[26px] font-bold leading-none shrink-0">
-                                                        04
-                                                    </div>
-                                                    <p id="l2OutDate" class="font-display text-[21px] font-bold uppercase text-[#1A467C] px-4 leading-none truncate">
-                                                        JUMAT, 04 DES 2026
-                                                    </p>
-                                                </div>
-                                                <div class="px-4 py-2.5 bg-[#E8F2FA] border-l-[3px] border-black flex items-center gap-2 shrink-0">
-                                                    <svg class="w-4 h-4 text-[#1A467C] shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
-                                                        <circle cx="12" cy="12" r="9"></circle>
-                                                        <path stroke-linecap="square" d="M12 7v5l3.5 2"></path>
-                                                    </svg>
-                                                    <p id="l2OutTime" class="font-display text-[17px] font-bold uppercase text-[#1A467C] leading-none">
-                                                        08.00 WIB
-                                                    </p>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -2271,10 +2248,10 @@
             };
 
             const starCfg = currentRatio === '9-16'
-                ? { trSize: 450, trY: 410, blSize: 480, blY: 0 }
+                ? { trSize: 450, trY: 385, blSize: 480, blY: 25 }
                 : (currentRatio === '1-1'
-                    ? { trSize: 340, trY: 340, blSize: 360, blY: 10 }
-                    : { trSize: 410, trY: 380, blSize: 440, blY: 10 });
+                    ? { trSize: 340, trY: 320, blSize: 360, blY: 35 }
+                    : { trSize: 410, trY: 355, blSize: 440, blY: 35 });
 
             drawStar(W - 20 - starCfg.trSize, H / 2 - starCfg.trY, starCfg.trSize);
             drawStar(10, H / 2 - starCfg.blY, starCfg.blSize);
@@ -2288,10 +2265,9 @@
             const tbH = 74;
             const heroSvgDim = currentRatio === '9-16' ? { w: 680, h: 225 } : (currentRatio === '1-1' ? { w: 560, h: 160 } : { w: 640, h: 205 });
             const stampBoxH = 62;
-            const chipRowH = 54;
-            const bodyPt = 24;
-            const bodyPb = 44;
-            const winH = tbH + bodyPt + heroSvgDim.h - 12 + stampBoxH + 24 + chipRowH + bodyPb;
+            const bodyPt = 36;
+            const bodyPb = 56;
+            const winH = tbH + bodyPt + heroSvgDim.h - 12 + stampBoxH + bodyPb;
             const winY = Math.round((H - winH) / 2);
 
             // Top 3 Logos Bar Pinned at Top Margin of Canvas (Zona Merah)
@@ -2433,55 +2409,6 @@
             drawTextTrack(title, -stW / 2 + 28 + 28 + 12, 1, '700 40px "Space Grotesk", sans-serif', '#FFFFFF', 2.4, 'left');
             ctx.restore();
 
-            // Unified Single Schedule Bar (Tanpa Lokasi: 04 | JUMAT, 04 DES 2026 | Jam)
-            const bodyX = winX + 32;
-            const bodyW = winW - 64;
-            const chipY = stampCY + stampBoxH / 2 + 24;
-
-            ctx.fillStyle = '#000000';
-            ctx.fillRect(bodyX + 4, chipY + 4, bodyW, chipRowH);
-            ctx.fillStyle = '#F8FBFF';
-            ctx.fillRect(bodyX, chipY, bodyW, chipRowH);
-
-            ctx.font = '700 26px "Space Grotesk", sans-serif';
-            const numW = Math.max(ctx.measureText(num).width + 32, 60);
-            ctx.fillStyle = '#CA2C2A';
-            ctx.fillRect(bodyX, chipY, numW, chipRowH);
-            ctx.fillStyle = '#000000';
-            ctx.fillRect(bodyX + numW - 3, chipY, 3, chipRowH);
-
-            const timeTxt = time.toUpperCase();
-            ctx.font = '700 17px "Space Grotesk", sans-serif';
-            const timeTxtW = ctx.measureText(timeTxt).width;
-            const timeBoxW = 32 + 16 + 8 + timeTxtW;
-            const timeBoxX = bodyX + bodyW - timeBoxW;
-            ctx.fillStyle = '#E8F2FA';
-            ctx.fillRect(timeBoxX, chipY, timeBoxW, chipRowH);
-            ctx.fillStyle = '#000000';
-            ctx.fillRect(timeBoxX, chipY, 3, chipRowH);
-
-            ctx.lineWidth = 3;
-            ctx.strokeStyle = '#000000';
-            ctx.strokeRect(bodyX, chipY, bodyW, chipRowH);
-
-            drawTextTrack(num, bodyX + numW / 2, chipY + chipRowH / 2 + 1, '700 26px "Space Grotesk", sans-serif', '#FFFFFF', 0, 'center');
-            drawTextTrack(date, bodyX + numW + 18, chipY + chipRowH / 2 + 1, '700 21px "Space Grotesk", sans-serif', '#1A467C', 0, 'left');
-
-            // Right time clock icon + text
-            const tClkX = timeBoxX + 18 + 8;
-            const tClkY = chipY + chipRowH / 2;
-            ctx.strokeStyle = '#1A467C';
-            ctx.lineWidth = 2.2;
-            ctx.beginPath();
-            ctx.arc(tClkX, tClkY, 7.5, 0, Math.PI * 2);
-            ctx.stroke();
-            ctx.beginPath();
-            ctx.moveTo(tClkX, tClkY - 4);
-            ctx.lineTo(tClkX, tClkY);
-            ctx.lineTo(tClkX + 3, tClkY + 2);
-            ctx.stroke();
-            drawTextTrack(timeTxt, tClkX + 15, chipY + chipRowH / 2 + 1, '700 17px "Space Grotesk", sans-serif', '#1A467C', 0, 'left');
-
             // Bottom-Left Taped Instagram Sticker (Zona Putih): SVG IG Camera + hmif_LPKIA
             ctx.font = '700 20px "Space Grotesk", sans-serif';
             const igTxtW = ctx.measureText(igHandle).width + Math.max(0, igHandle.length - 1) * 0.4;
@@ -2517,10 +2444,10 @@
 
             // 4. Giant 8-Bit Pixelated Arrow Cursor anchored to bottom-right of window
             const curCfg = currentRatio === '9-16'
-                ? { unit: 16 * 1.12, rOff: -26, bOff: -298 }
+                ? { unit: 16 * 1.12, rOff: -26, bOff: -275 }
                 : (currentRatio === '1-1'
-                    ? { unit: 16 * 0.86, rOff: -24, bOff: -224 }
-                    : { unit: 16, rOff: -30, bOff: -265 });
+                    ? { unit: 16 * 0.86, rOff: -24, bOff: -210 }
+                    : { unit: 16, rOff: -30, bOff: -245 });
 
             const curW = 12 * curCfg.unit;
             const curH = 19 * curCfg.unit;
