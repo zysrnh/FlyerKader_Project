@@ -77,11 +77,12 @@
         .ratio-9-16 .cta-btn { padding: 16px 40px; }
         .ratio-9-16 .cta-text { font-size: 26px; }
 
-        /* ================= LAYOUT 2: RETRO POP-UP (NEUBRUTALISM) ================= */
+        /* ================= LAYOUT 2: RETRO POP-UP (PALETTE LAYOUT 1) ================= */
         .poster-canvas.layout-2 {
             padding: 0 !important;
-            background: #148DF3 !important;
-            background-image: none !important;
+            background-color: #2A82C6 !important;
+            background-image: radial-gradient(rgba(255, 255, 255, 0.14) 2px, transparent 2px) !important;
+            background-size: 24px 24px !important;
         }
         .poster-canvas.layout-2 .layout-1-root { display: none !important; }
         .poster-canvas.layout-2 .layout-2-root { display: block !important; }
@@ -102,7 +103,7 @@
             font-size: 235px;
             line-height: 0.80;
             letter-spacing: -0.04em;
-            color: #0E75D4;
+            color: rgba(26, 70, 124, 0.36);
             white-space: nowrap;
             text-transform: uppercase;
         }
@@ -119,16 +120,30 @@
         .ratio-1-1 .l2-window { width: 880px; }
         .ratio-9-16 .l2-window { width: 920px; }
 
+        .l2-logo-box {
+            width: 60px;
+            height: 60px;
+            background: #FFFFFF;
+            border: 3px solid #000000;
+            box-shadow: 4px 4px 0 #000000;
+            padding: 5px;
+        }
+        .ratio-1-1 .l2-logo-box { width: 52px; height: 52px; }
+
         .l2-titlebar {
-            background: #E6FC6D;
+            background: #1A467C;
             border-bottom: 4px solid #000000;
         }
         .l2-sticker-top {
-            background: #08172E;
-            color: #E6FC6D;
-            border: 3px solid #000000;
+            position: absolute;
+            left: -14px;
+            top: -12px;
+            z-index: 30;
+            background: #FFFFFF;
+            color: #1A467C;
+            border: 3.5px solid #000000;
             box-shadow: 5px 5px 0 #000000;
-            transform: rotate(-2deg);
+            transform: rotate(-3deg);
         }
         .l2-sticker-stamp {
             background: #CA2C2A;
@@ -143,37 +158,41 @@
             box-shadow: 4px 4px 0 #000000;
         }
         .l2-chip-num {
-            background: #E6FC6D;
-            color: #000000;
+            background: #CA2C2A;
+            color: #FFFFFF;
             border-right: 3px solid #000000;
         }
-        .l2-cta-chip {
-            background: #148DF3;
-            color: #FFFFFF;
-            border: 3px solid #000000;
+        .l2-ig-sticker {
+            position: absolute;
+            left: 28px;
+            bottom: -24px;
+            z-index: 30;
+            background: #FFFFFF;
+            color: #1A467C;
+            border: 3.5px solid #000000;
             box-shadow: 5px 5px 0 #000000;
-            transform: rotate(-1deg);
+            transform: rotate(-2deg);
         }
-        .l2-hero-svg { width: 640px; height: 210px; }
-        .ratio-1-1 .l2-hero-svg { width: 560px; height: 165px; }
-        .ratio-9-16 .l2-hero-svg { width: 680px; height: 230px; }
+        .l2-hero-svg { width: 640px; height: 205px; }
+        .ratio-1-1 .l2-hero-svg { width: 560px; height: 160px; }
+        .ratio-9-16 .l2-hero-svg { width: 680px; height: 225px; }
 
-        .l2-star-tr { top: 50%; right: 20px; transform: translateY(-410px); width: 410px; height: 410px; }
-        .l2-star-bl { top: 50%; left: 10px;  transform: translateY(-20px);  width: 440px; height: 440px; }
-        .ratio-9-16 .l2-star-tr { transform: translateY(-440px); width: 450px; height: 450px; }
-        .ratio-9-16 .l2-star-bl { transform: translateY(-10px);  width: 480px; height: 480px; }
-        .ratio-1-1  .l2-star-tr { transform: translateY(-370px); width: 350px; height: 350px; }
-        .ratio-1-1  .l2-star-bl { transform: translateY(-20px);  width: 370px; height: 370px; }
+        .l2-star-tr { top: 50%; right: 20px; transform: translateY(-380px); width: 410px; height: 410px; }
+        .l2-star-bl { top: 50%; left: 10px;  transform: translateY(-10px);  width: 440px; height: 440px; }
+        .ratio-9-16 .l2-star-tr { transform: translateY(-410px); width: 450px; height: 450px; }
+        .ratio-9-16 .l2-star-bl { transform: translateY(0px);   width: 480px; height: 480px; }
+        .ratio-1-1  .l2-star-tr { transform: translateY(-340px); width: 340px; height: 340px; }
+        .ratio-1-1  .l2-star-bl { transform: translateY(-10px);  width: 360px; height: 360px; }
 
         .l2-cursor-wrap {
             position: absolute;
             right: -30px;
-            bottom: -222px;
+            bottom: -265px;
             z-index: 30;
             pointer-events: none;
         }
-        .ratio-9-16 .l2-cursor-wrap { right: -26px; bottom: -242px; transform: scale(1.12); transform-origin: bottom right; }
-        .ratio-1-1  .l2-cursor-wrap { right: -24px; bottom: -192px; transform: scale(0.86); transform-origin: bottom right; }
+        .ratio-9-16 .l2-cursor-wrap { right: -26px; bottom: -298px; transform: scale(1.12); transform-origin: bottom right; }
+        .ratio-1-1  .l2-cursor-wrap { right: -24px; bottom: -224px; transform: scale(0.86); transform-origin: bottom right; }
 
         /* ================= THEME 1: NEUBRUTALISM ================= */
         .style-neubrutalism {
@@ -672,15 +691,29 @@
                     </div>
                 </div>
 
-                <div>
-                    <label class="text-[10px] font-bold uppercase text-white/70 block mb-1">Link / CTA Bawah</label>
-                    <input id="inCta" type="text" value="GO.HMIF-LPKIA.MY.ID" oninput="setText('outCta', this.value.toUpperCase())" class="w-full px-2.5 py-1.5 bg-[#0B192E] border-2 border-black text-xs font-bold text-white focus:border-[#38BDF8] focus:outline-none">
+                <div class="grid grid-cols-2 gap-2.5">
+                    <div>
+                        <label class="text-[10px] font-bold uppercase text-white/70 block mb-1">Link CTA (Layout 1)</label>
+                        <input id="inCta" type="text" value="GO.HMIF-LPKIA.MY.ID" oninput="setText('outCta', this.value.toUpperCase())" class="w-full px-2.5 py-1.5 bg-[#0B192E] border-2 border-black text-xs font-bold text-white focus:border-[#38BDF8] focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="text-[10px] font-bold uppercase text-white/70 block mb-1">IG Handle (Layout 2)</label>
+                        <input id="inIg" type="text" value="hmif_LPKIA" oninput="syncLayout2Dom()" class="w-full px-2.5 py-1.5 bg-[#0B192E] border-2 border-black text-xs font-bold text-white focus:border-[#38BDF8] focus:outline-none">
+                    </div>
                 </div>
             </div>
 
-            <!-- 4. OPSI DEKORASI & RESET -->
+            <!-- 4. OPSI DEKORASI & LOGO KE-3 -->
             <div class="space-y-2.5 pt-3 border-t-2 border-white/10">
-                <span class="text-[11px] font-extrabold uppercase tracking-wider text-[#93C5FD] block">4. Printilan &amp; Opsi</span>
+                <span class="text-[11px] font-extrabold uppercase tracking-wider text-[#93C5FD] block">4. Printilan &amp; Logo Ke-3</span>
+
+                <div class="bg-[#0B192E] border-2 border-black p-2.5 space-y-1.5">
+                    <div class="flex items-center justify-between gap-2">
+                        <span class="text-[11px] font-bold text-white">Logo ke-3 (Slot Atas L2)</span>
+                        <button type="button" onclick="clearLogo3()" id="btnClearLogo3" class="hidden px-2 py-0.5 bg-[#CA2C2A] text-white border border-black text-[9px] font-extrabold uppercase cursor-pointer">Hapus</button>
+                    </div>
+                    <input id="inLogo3File" type="file" accept="image/*" onchange="handleLogo3Upload(this)" class="w-full text-[10px] text-white/80 file:mr-2 file:py-1 file:px-2 file:border file:border-black file:bg-[#FCD34D] file:text-black file:text-[10px] file:font-extrabold file:uppercase file:cursor-pointer cursor-pointer">
+                </div>
 
                 <div class="flex items-center justify-between gap-2 bg-[#0B192E] border-2 border-black px-3 py-2">
                     <span class="text-xs font-bold text-white">Simbol Koding (&gt;_ &lt;/&gt;)</span>
@@ -924,84 +957,95 @@
                     </section>
                     </div>
 
-                    <!-- ================= LAYOUT 2: RETRO OS POP-UP (NEUBRUTALISM) ================= -->
+                    <!-- ================= LAYOUT 2: RETRO OS POP-UP (PALETTE LAYOUT 1) ================= -->
                     <div id="layout2Root" class="layout-2-root hidden relative w-full h-full overflow-hidden">
                         <!-- Stacked Kinetic Typography Wallpaper -->
                         <div id="l2BgWall" class="l2-bg-wall" aria-hidden="true"></div>
 
-                        <!-- 2 Multi-Point Spiky Lime Starbursts Behind Dialog -->
+                        <!-- 2 Spiky Crimson Starbursts Behind Dialog -->
                         <svg viewBox="0 0 420 420" class="l2-star-tr pointer-events-none absolute z-10" aria-hidden="true">
-                            <polygon points="210,12 248,108 345,52 308,148 408,168 320,224 388,308 282,294 274,398 210,322 146,398 138,294 32,308 100,224 12,168 112,148 75,52 172,108" fill="#E6FC6D"/>
+                            <polygon points="210,12 248,108 345,52 308,148 408,168 320,224 388,308 282,294 274,398 210,322 146,398 138,294 32,308 100,224 12,168 112,148 75,52 172,108" fill="#CA2C2A" stroke="#000000" stroke-width="5"/>
                         </svg>
                         <svg viewBox="0 0 420 420" class="l2-star-bl pointer-events-none absolute z-10" aria-hidden="true">
-                            <polygon points="210,12 248,108 345,52 308,148 408,168 320,224 388,308 282,294 274,398 210,322 146,398 138,294 32,308 100,224 12,168 112,148 75,52 172,108" fill="#E6FC6D"/>
+                            <polygon points="210,12 248,108 345,52 308,148 408,168 320,224 388,308 282,294 274,398 210,322 146,398 138,294 32,308 100,224 12,168 112,148 75,52 172,108" fill="#CA2C2A" stroke="#000000" stroke-width="5"/>
                         </svg>
 
-                        <!-- Centered Retro Pop-up Dialog Window + Attached Pixel Cursor -->
+                        <!-- Centered Stack: 3 Logos Above Window + Dialog + Attached Stickers & Cursor -->
                         <div class="absolute inset-0 z-20 flex items-center justify-center px-10">
-                            <div class="relative">
-                                <div class="l2-window overflow-hidden">
-                                    <!-- Lime Title Bar: Logo Ujung Kiri, HIMA INFORMATIKA IDE LPKIA Tengah, Logo Ujung Kanan -->
-                                    <div class="l2-titlebar px-6 py-3.5 grid grid-cols-[auto_1fr_auto] items-center gap-4">
-                                        <div class="w-12 h-12 bg-white border-2 border-black p-1 flex items-center justify-center shrink-0">
-                                            <img id="l2HimaLogo" src="" alt="Logo HIMA IF" class="w-full h-full object-contain">
-                                        </div>
-                                        <div class="text-center">
-                                            <p class="font-display text-[25px] font-bold uppercase tracking-[0.04em] text-[#08172E] leading-none">
-                                                HIMA INFORMATIKA
-                                            </p>
-                                            <p class="text-[13px] font-extrabold uppercase tracking-[0.24em] text-[#1A467C] mt-1 leading-none">
-                                                IDE LPKIA
-                                            </p>
-                                        </div>
-                                        <div class="w-12 h-12 bg-white border-2 border-black p-1 flex items-center justify-center shrink-0">
-                                            <img id="l2LpkiaLogo" src="" alt="Logo IDE LPKIA" class="w-full h-full object-contain">
+                            <div class="flex flex-col items-center">
+                                <!-- Top 3 Logos Row (Zona Merah) -->
+                                <div class="flex items-center justify-center gap-4 mb-4">
+                                    <div class="l2-logo-box flex items-center justify-center shrink-0">
+                                        <img id="l2HimaLogo" src="" alt="Logo HIMA IF" class="w-full h-full object-contain">
+                                    </div>
+                                    <div class="l2-logo-box flex items-center justify-center shrink-0">
+                                        <img id="l2LpkiaLogo" src="" alt="Logo IDE LPKIA" class="w-full h-full object-contain">
+                                    </div>
+                                    <div id="l2Logo3Slot" class="l2-logo-box flex items-center justify-center shrink-0">
+                                        <img id="l2Logo3Img" src="" alt="Logo 3" class="hidden w-full h-full object-contain">
+                                        <div id="l2Logo3Default" class="w-full h-full bg-[#1A467C] flex flex-col items-center justify-center text-white leading-none">
+                                            <span class="font-display text-[13px] font-bold tracking-tight">KDR</span>
+                                            <span class="text-[8px] font-extrabold opacity-80 mt-0.5">2026</span>
                                         </div>
                                     </div>
+                                </div>
 
-                                    <!-- White Dialog Hero Highlight (Fokus H-7 + Sticker Tempel) -->
-                                    <div class="px-8 pt-7 pb-7 flex flex-col items-center">
-                                        <!-- Top Tilted Pixel Sticker: COUNTDOWN • MENUJU -->
-                                        <div class="l2-sticker-top px-6 py-2">
-                                            <span id="l2OutBanner" class="font-pixel text-[26px] font-bold uppercase tracking-[0.08em] leading-none block">
-                                                COUNTDOWN • MENUJU
-                                            </span>
+                                <div class="relative">
+                                    <!-- Top-Left Tilted Sticker (Zona Oren): COUNTDOWN • MENUJU -->
+                                    <div class="l2-sticker-top px-5 py-2">
+                                        <span id="l2OutBanner" class="font-pixel text-[23px] font-bold uppercase tracking-[0.06em] leading-none block">
+                                            COUNTDOWN • MENUJU
+                                        </span>
+                                    </div>
+
+                                    <div class="l2-window overflow-hidden">
+                                        <!-- Navy Title Bar: HIMA INFORMATIKA • IDE LPKIA -->
+                                        <div class="l2-titlebar px-6 py-4 flex items-center justify-end">
+                                            <div class="text-right">
+                                                <p class="font-display text-[23px] font-bold uppercase tracking-[0.04em] text-white leading-none">
+                                                    HIMA INFORMATIKA
+                                                </p>
+                                                <p class="text-[12px] font-extrabold uppercase tracking-[0.24em] text-[#93C5FD] mt-1 leading-none">
+                                                    IDE LPKIA
+                                                </p>
+                                            </div>
                                         </div>
 
-                                        <!-- Giant H-7 Highlight SVG -->
-                                        <svg viewBox="0 0 680 220" class="l2-hero-svg mt-2 overflow-visible" aria-label="H-7">
-                                            <text id="l2SvgShadow" x="354" y="122" text-anchor="middle" dominant-baseline="central"
-                                                  class="font-hero svg-stroke" font-size="225" font-weight="400" letter-spacing="14"
-                                                  fill="#000000" stroke="#000000" stroke-width="26">
-                                                H-7
-                                            </text>
-                                            <text id="l2SvgMain" x="340" y="108" text-anchor="middle" dominant-baseline="central"
-                                                  class="font-hero svg-stroke" font-size="225" font-weight="400" letter-spacing="14"
-                                                  fill="#CA2C2A" stroke="#000000" stroke-width="18">
-                                                H-7
-                                            </text>
-                                        </svg>
-
-                                        <!-- Tilted Red Event Sticker Stamp: KADERISASI -->
-                                        <div class="l2-sticker-stamp -mt-3 px-7 py-2.5 inline-flex items-center gap-3">
-                                            <svg class="w-7 h-7 shrink-0 text-white" fill="none" stroke="currentColor" stroke-width="2.8" viewBox="0 0 24 24" aria-hidden="true">
-                                                <circle cx="12" cy="12" r="9"></circle>
-                                                <path stroke-linecap="square" d="M12 7v5l3 2"></path>
+                                        <!-- White Dialog Hero Highlight (Fokus H-7 + Stamp KADERISASI + Chips) -->
+                                        <div class="px-8 pt-6 pb-11 flex flex-col items-center">
+                                            <!-- Giant H-7 Highlight SVG -->
+                                            <svg viewBox="0 0 680 220" class="l2-hero-svg overflow-visible" aria-label="H-7">
+                                                <text id="l2SvgShadow" x="354" y="122" text-anchor="middle" dominant-baseline="central"
+                                                      class="font-hero svg-stroke" font-size="225" font-weight="400" letter-spacing="14"
+                                                      fill="#000000" stroke="#000000" stroke-width="26">
+                                                    H-7
+                                                </text>
+                                                <text id="l2SvgMain" x="340" y="108" text-anchor="middle" dominant-baseline="central"
+                                                      class="font-hero svg-stroke" font-size="225" font-weight="400" letter-spacing="14"
+                                                      fill="#CA2C2A" stroke="#000000" stroke-width="18">
+                                                    H-7
+                                                </text>
                                             </svg>
-                                            <span id="l2OutTitle" class="font-display text-[40px] font-bold uppercase tracking-[0.06em] leading-none">
-                                                KADERISASI
-                                            </span>
-                                        </div>
 
-                                        <!-- Unified Bottom Sticker Chips (Tgl/Waktu, Lokasi, & CTA menunjuk ke kursor) -->
-                                        <div class="w-full mt-6 flex flex-col gap-3">
-                                            <div class="grid grid-cols-[1.35fr_1fr] gap-3 w-full">
+                                            <!-- Tilted Red Event Sticker Stamp: KADERISASI -->
+                                            <div class="l2-sticker-stamp -mt-3 px-7 py-2.5 inline-flex items-center gap-3">
+                                                <svg class="w-7 h-7 shrink-0 text-white" fill="none" stroke="currentColor" stroke-width="2.8" viewBox="0 0 24 24" aria-hidden="true">
+                                                    <circle cx="12" cy="12" r="9"></circle>
+                                                    <path stroke-linecap="square" d="M12 7v5l3 2"></path>
+                                                </svg>
+                                                <span id="l2OutTitle" class="font-display text-[40px] font-bold uppercase tracking-[0.06em] leading-none">
+                                                    KADERISASI
+                                                </span>
+                                            </div>
+
+                                            <!-- Unified Schedule Chips -->
+                                            <div class="w-full mt-6 grid grid-cols-[1.35fr_1fr] gap-3">
                                                 <div class="l2-chip flex items-center overflow-hidden">
                                                     <div id="l2OutNum" class="l2-chip-num px-3.5 py-2.5 font-display text-[24px] font-bold leading-none shrink-0">
                                                         04
                                                     </div>
                                                     <div class="px-3.5 py-2 min-w-0">
-                                                        <p id="l2OutDate" class="font-display text-[17px] font-bold uppercase text-[#08172E] leading-tight truncate">
+                                                        <p id="l2OutDate" class="font-display text-[17px] font-bold uppercase text-[#1A467C] leading-tight truncate">
                                                             JUMAT, 04 DES 2026
                                                         </p>
                                                         <p id="l2OutTime" class="text-[12px] font-extrabold uppercase text-[#2A82C6] leading-tight mt-0.5 truncate">
@@ -1012,27 +1056,30 @@
 
                                                 <div class="l2-chip px-4 py-2 flex flex-col justify-center min-w-0">
                                                     <span class="text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#CA2C2A] leading-none">LOKASI</span>
-                                                    <p id="l2OutLoc" class="font-display text-[17px] font-bold uppercase text-[#08172E] leading-tight mt-1 truncate">
+                                                    <p id="l2OutLoc" class="font-display text-[17px] font-bold uppercase text-[#1A467C] leading-tight mt-1 truncate">
                                                         KAMPUS IDE LPKIA
                                                     </p>
                                                 </div>
                                             </div>
-
-                                            <div class="flex items-center justify-start pr-[185px]">
-                                                <div class="l2-cta-chip px-6 py-2.5 inline-flex items-center gap-3">
-                                                    <span class="w-3 h-3 bg-[#E6FC6D] border-2 border-black inline-block shrink-0"></span>
-                                                    <span id="l2OutCta" class="font-display text-[20px] font-bold uppercase tracking-[0.08em] leading-none">
-                                                        GO.HMIF-LPKIA.MY.ID
-                                                    </span>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <!-- Giant 8-Bit Pixelated Arrow Cursor pointing at CTA / Window Bottom-Right -->
-                                <div class="l2-cursor-wrap">
-                                    <svg id="l2CursorSvg" width="192" height="304" viewBox="0 0 12 19" shape-rendering="crispEdges" aria-hidden="true"></svg>
+                                    <!-- Bottom-Left Taped IG Sticker (Zona Putih) -->
+                                    <div class="l2-ig-sticker px-5 py-2.5 inline-flex items-center gap-2.5">
+                                        <svg class="w-6 h-6 shrink-0 text-[#CA2C2A]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true">
+                                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                            <circle cx="12" cy="12" r="4.5"></circle>
+                                            <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"></circle>
+                                        </svg>
+                                        <span id="l2OutIg" class="font-display text-[20px] font-bold tracking-[0.02em] leading-none">
+                                            hmif_LPKIA
+                                        </span>
+                                    </div>
+
+                                    <!-- Giant 8-Bit Pixelated Arrow Cursor (Bottom-Right) -->
+                                    <div class="l2-cursor-wrap">
+                                        <svg id="l2CursorSvg" width="192" height="304" viewBox="0 0 12 19" shape-rendering="crispEdges" aria-hidden="true"></svg>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1049,6 +1096,41 @@
         let currentStyle = 'neubrutalism';
         let zoomSetting = 'fit';
         let showAccents = true;
+        let customLogo3DataUrl = null;
+
+        function handleLogo3Upload(input) {
+            const file = input?.files?.[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                customLogo3DataUrl = e.target.result;
+                const img = document.getElementById('l2Logo3Img');
+                const def = document.getElementById('l2Logo3Default');
+                const clr = document.getElementById('btnClearLogo3');
+                if (img && def) {
+                    img.src = customLogo3DataUrl;
+                    img.classList.remove('hidden');
+                    def.classList.add('hidden');
+                }
+                if (clr) clr.classList.remove('hidden');
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function clearLogo3() {
+            customLogo3DataUrl = null;
+            const inp = document.getElementById('inLogo3File');
+            const img = document.getElementById('l2Logo3Img');
+            const def = document.getElementById('l2Logo3Default');
+            const clr = document.getElementById('btnClearLogo3');
+            if (inp) inp.value = '';
+            if (img && def) {
+                img.src = '';
+                img.classList.add('hidden');
+                def.classList.remove('hidden');
+            }
+            if (clr) clr.classList.add('hidden');
+        }
 
         function toggleMobileSidebar(open) {
             const sb = document.getElementById('builderSidebar');
@@ -1120,7 +1202,7 @@
             const date = (document.getElementById('inDate')?.value || 'JUMAT, 04 DES 2026').trim().toUpperCase();
             const time = (document.getElementById('inTime')?.value || '08.00 WIB').trim().toUpperCase();
             const loc = (document.getElementById('inLoc')?.value || 'Kampus IDE LPKIA').trim().toUpperCase();
-            const cta = (document.getElementById('inCta')?.value || 'GO.HMIF-LPKIA.MY.ID').trim().toUpperCase();
+            const igHandle = (document.getElementById('inIg')?.value || 'hmif_LPKIA').trim() || 'hmif_LPKIA';
 
             const bannerEl = document.getElementById('l2OutBanner');
             if (bannerEl) bannerEl.textContent = `${cd} • ${mn}`;
@@ -1146,12 +1228,12 @@
             const dEl = document.getElementById('l2OutDate');
             const tEl = document.getElementById('l2OutTime');
             const lEl = document.getElementById('l2OutLoc');
-            const ctaEl = document.getElementById('l2OutCta');
+            const igEl = document.getElementById('l2OutIg');
             if (nEl) nEl.textContent = num;
             if (dEl) dEl.textContent = date;
             if (tEl) tEl.textContent = time;
             if (lEl) lEl.textContent = loc;
-            if (ctaEl) ctaEl.textContent = cta;
+            if (igEl) igEl.textContent = igHandle;
 
             const wall = document.getElementById('l2BgWall');
             if (wall) {
@@ -1361,6 +1443,8 @@
             setText('outLoc', 'Kampus IDE LPKIA');
             document.getElementById('inCta').value = 'GO.HMIF-LPKIA.MY.ID';
             setText('outCta', 'GO.HMIF-LPKIA.MY.ID');
+            document.getElementById('inIg').value = 'hmif_LPKIA';
+            clearLogo3();
             if (!showAccents) toggleAccents();
             syncLayout2Dom();
             setZoomMode('fit');
@@ -1549,9 +1633,10 @@
                 img.src = src;
             });
 
-            const [himaImg, lpkiaImg] = await Promise.all([
+            const [himaImg, lpkiaImg, logo3Img] = await Promise.all([
                 loadImg(document.querySelector('#himaLogoSlot img').src),
-                loadImg(document.querySelector('#lpkiaLogoSlot img').src)
+                loadImg(document.querySelector('#lpkiaLogoSlot img').src),
+                customLogo3DataUrl ? loadImg(customLogo3DataUrl) : Promise.resolve(null)
             ]);
 
             function roundRectPath(x, y, w, h, r) {
@@ -2083,9 +2168,10 @@
                 img.onerror = () => resolve(null);
                 img.src = src;
             });
-            const [himaImg, lpkiaImg] = await Promise.all([
+            const [himaImg, lpkiaImg, logo3Img] = await Promise.all([
                 loadImg(document.querySelector('#himaLogoSlot img').src),
-                loadImg(document.querySelector('#lpkiaLogoSlot img').src)
+                loadImg(document.querySelector('#lpkiaLogoSlot img').src),
+                customLogo3DataUrl ? loadImg(customLogo3DataUrl) : Promise.resolve(null)
             ]);
 
             function rrPath(x, y, w, h, r) {
@@ -2118,9 +2204,18 @@
                 });
             }
 
-            // 1. Solid Electric Azure Blue Background + Stacked Kinetic Typographic Wallpaper
-            ctx.fillStyle = '#148DF3';
+            // 1. Layout 1 Cerulean Blue Background (#2A82C6) + Dots + Stacked Kinetic Typography (#1A467C)
+            ctx.fillStyle = '#2A82C6';
             ctx.fillRect(0, 0, W, H);
+
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.14)';
+            for (let y = 12; y < H; y += 24) {
+                for (let x = 12; x < W; x += 24) {
+                    ctx.beginPath();
+                    ctx.arc(x, y, 2, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+            }
 
             const title = (document.getElementById('inStamp')?.value || 'KADERISASI').trim().toUpperCase() || 'KADERISASI';
             const hero = (document.getElementById('inHero')?.value || 'H-7').trim().toUpperCase() || 'H-7';
@@ -2130,7 +2225,7 @@
             const date = (document.getElementById('inDate')?.value || 'JUMAT, 04 DES 2026').trim().toUpperCase();
             const time = (document.getElementById('inTime')?.value || '08.00 WIB').trim();
             const loc = (document.getElementById('inLoc')?.value || 'Kampus IDE LPKIA').trim().toUpperCase();
-            const cta = (document.getElementById('inCta')?.value || 'GO.HMIF-LPKIA.MY.ID').trim().toUpperCase();
+            const igHandle = (document.getElementById('inIg')?.value || 'hmif_LPKIA').trim() || 'hmif_LPKIA';
 
             const bgFs = currentRatio === '9-16' ? 260 : (currentRatio === '1-1' ? 210 : 235);
             const rowH = bgFs * 0.80;
@@ -2138,10 +2233,10 @@
             const totalWallH = bgRows.length * rowH;
             const wallStartY = (H - totalWallH) / 2 + rowH * 0.5;
             bgRows.forEach((line, idx) => {
-                drawTextTrack(line, -40, wallStartY + idx * rowH, `800 ${bgFs}px "Space Grotesk", "Archivo Black", sans-serif`, '#0E75D4', -0.04 * bgFs, 'left');
+                drawTextTrack(line, -40, wallStartY + idx * rowH, `800 ${bgFs}px "Space Grotesk", "Archivo Black", sans-serif`, 'rgba(26, 70, 124, 0.36)', -0.04 * bgFs, 'left');
             });
 
-            // 2. 2 Multi-Point Spiky Lime Starbursts Behind Dialog
+            // 2. 2 Spiky Crimson Starbursts (#CA2C2A + Black Outline) Behind Dialog
             const starPts = [
                 [210,12],[248,108],[345,52],[308,148],[408,168],[320,224],[388,308],
                 [282,294],[274,398],[210,322],[146,398],[138,294],[32,308],[100,224],
@@ -2157,44 +2252,82 @@
                     else ctx.lineTo(px, py);
                 });
                 ctx.closePath();
-                ctx.fillStyle = '#E6FC6D';
+                ctx.fillStyle = '#CA2C2A';
                 ctx.fill();
+                ctx.lineWidth = 5;
+                ctx.strokeStyle = '#000000';
+                ctx.stroke();
                 ctx.restore();
             };
 
             const starCfg = currentRatio === '9-16'
-                ? { trSize: 450, trY: 440, blSize: 480, blY: 10 }
+                ? { trSize: 450, trY: 410, blSize: 480, blY: 0 }
                 : (currentRatio === '1-1'
-                    ? { trSize: 350, trY: 370, blSize: 370, blY: 20 }
-                    : { trSize: 410, trY: 410, blSize: 440, blY: 20 });
+                    ? { trSize: 340, trY: 340, blSize: 360, blY: 10 }
+                    : { trSize: 410, trY: 380, blSize: 440, blY: 10 });
 
             drawStar(W - 20 - starCfg.trSize, H / 2 - starCfg.trY, starCfg.trSize);
             drawStar(10, H / 2 - starCfg.blY, starCfg.blSize);
 
-            // 3. Centered Retro Pop-up Dialog Window
+            // 3. Stack Geometry: Top 3 Logos Bar Above Window + Window Body + Bottom IG Sticker
             const winW = currentRatio === '9-16' ? 920 : (currentRatio === '1-1' ? 880 : 900);
             const winX = (W - winW) / 2;
-            const tbH = 78;
-            const heroSvgDim = currentRatio === '9-16' ? { w: 680, h: 230 } : (currentRatio === '1-1' ? { w: 560, h: 165 } : { w: 640, h: 210 });
-            const stickerTopH = 44;
+            const logoBoxS = currentRatio === '1-1' ? 52 : 60;
+            const logoGap = 16;
+            const logoMarginBot = 16;
+            const tbH = 74;
+            const heroSvgDim = currentRatio === '9-16' ? { w: 680, h: 225 } : (currentRatio === '1-1' ? { w: 560, h: 160 } : { w: 640, h: 205 });
             const stampBoxH = 62;
             const chipRowH = 56;
-            const ctaChipH = 48;
-            const winH = tbH + 28 + stickerTopH + 8 + heroSvgDim.h - 12 + stampBoxH + 24 + chipRowH + 12 + ctaChipH + 28;
-            const winY = Math.round((H - winH) / 2);
+            const bodyPt = 24;
+            const bodyPb = 44;
+            const winH = tbH + bodyPt + heroSvgDim.h - 12 + stampBoxH + 24 + chipRowH + bodyPb;
+            const totalStackH = logoBoxS + logoMarginBot + winH;
+            const stackTopY = Math.round((H - totalStackH) / 2);
+            const winY = stackTopY + logoBoxS + logoMarginBot;
 
-            // Hard Neubrutalism shadow
+            // Top 3 Logos Bar (Zona Merah: centered above window)
+            const logosTotalW = logoBoxS * 3 + logoGap * 2;
+            const logosStartX = (W - logosTotalW) / 2;
+            const drawTopLogoBox = (lx, ly, img, isLogo3 = false) => {
+                ctx.fillStyle = '#000000';
+                ctx.fillRect(lx + 4, ly + 4, logoBoxS, logoBoxS);
+                ctx.fillStyle = '#FFFFFF';
+                ctx.fillRect(lx, ly, logoBoxS, logoBoxS);
+                ctx.lineWidth = 3;
+                ctx.strokeStyle = '#000000';
+                ctx.strokeRect(lx, ly, logoBoxS, logoBoxS);
+                if (img) {
+                    const pad = 5;
+                    const maxD = logoBoxS - pad * 2;
+                    const ratio = Math.min(maxD / img.width, maxD / img.height);
+                    const dw = img.width * ratio;
+                    const dh = img.height * ratio;
+                    ctx.drawImage(img, lx + (logoBoxS - dw) / 2, ly + (logoBoxS - dh) / 2, dw, dh);
+                } else if (isLogo3) {
+                    const pad = 5;
+                    ctx.fillStyle = '#1A467C';
+                    ctx.fillRect(lx + pad, ly + pad, logoBoxS - pad * 2, logoBoxS - pad * 2);
+                    drawTextTrack('KDR', lx + logoBoxS / 2, ly + logoBoxS / 2 - 4, '700 13px "Space Grotesk", sans-serif', '#FFFFFF', 0, 'center');
+                    drawTextTrack('2026', lx + logoBoxS / 2, ly + logoBoxS / 2 + 10, '800 8px "Plus Jakarta Sans", sans-serif', 'rgba(255,255,255,0.8)', 0, 'center');
+                }
+            };
+            drawTopLogoBox(logosStartX, stackTopY, himaImg, false);
+            drawTopLogoBox(logosStartX + logoBoxS + logoGap, stackTopY, lpkiaImg, false);
+            drawTopLogoBox(logosStartX + (logoBoxS + logoGap) * 2, stackTopY, logo3Img, true);
+
+            // Hard Neubrutalism shadow for Window
             ctx.fillStyle = '#000000';
             rrPath(winX + 12, winY + 12, winW, winH, 6);
             ctx.fill();
 
-            // Window background + Lime Titlebar clipped inside rounded corners
+            // Window background + Navy Titlebar clipped inside rounded corners
             ctx.save();
             rrPath(winX, winY, winW, winH, 6);
             ctx.clip();
             ctx.fillStyle = '#FFFFFF';
             ctx.fillRect(winX, winY, winW, winH);
-            ctx.fillStyle = '#E6FC6D';
+            ctx.fillStyle = '#1A467C';
             ctx.fillRect(winX, winY, winW, tbH);
             ctx.fillStyle = '#000000';
             ctx.fillRect(winX, winY + tbH - 4, winW, 4);
@@ -2205,46 +2338,29 @@
             rrPath(winX, winY, winW, winH, 6);
             ctx.stroke();
 
-            // Titlebar: Logo Ujung Kiri, HIMA INFORMATIKA / IDE LPKIA Tengah, Logo Ujung Kanan
-            const drawMiniLogo = (lx, ly, img) => {
-                ctx.fillStyle = '#FFFFFF';
-                ctx.fillRect(lx, ly, 48, 48);
-                ctx.lineWidth = 2;
-                ctx.strokeStyle = '#000000';
-                ctx.strokeRect(lx, ly, 48, 48);
-                if (img) {
-                    const maxD = 38;
-                    const ratio = Math.min(maxD / img.width, maxD / img.height);
-                    const dw = img.width * ratio;
-                    const dh = img.height * ratio;
-                    ctx.drawImage(img, lx + (48 - dw) / 2, ly + (48 - dh) / 2, dw, dh);
-                }
-            };
-            const tbPadX = 24;
-            const tbLogoY = winY + (tbH - 4 - 48) / 2;
-            drawMiniLogo(winX + tbPadX, tbLogoY, himaImg);
-            drawMiniLogo(winX + winW - tbPadX - 48, tbLogoY, lpkiaImg);
-
+            // Titlebar Right-Aligned: HIMA INFORMATIKA / IDE LPKIA
             const tbMidY = winY + (tbH - 4) / 2;
-            drawTextTrack('HIMA INFORMATIKA', winX + winW / 2, tbMidY - 8, '700 25px "Space Grotesk", sans-serif', '#08172E', 1, 'center');
-            drawTextTrack('IDE LPKIA', winX + winW / 2, tbMidY + 14, '800 13px "Plus Jakarta Sans", sans-serif', '#1A467C', 3.1, 'center');
+            drawTextTrack('HIMA INFORMATIKA', winX + winW - 24, tbMidY - 8, '700 23px "Space Grotesk", sans-serif', '#FFFFFF', 0.9, 'right');
+            drawTextTrack('IDE LPKIA', winX + winW - 24, tbMidY + 13, '800 12px "Plus Jakarta Sans", sans-serif', '#93C5FD', 2.8, 'right');
 
-            // Top Tilted Sticker: COUNTDOWN • MENUJU
+            // Top-Left Tilted Sticker (Zona Oren): COUNTDOWN • MENUJU overlapping Titlebar
             const topTagTxt = `${cd} • ${mn}`;
-            ctx.font = '700 26px "Silkscreen", monospace';
-            const topTagW = ctx.measureText(topTagTxt).width + Math.max(0, topTagTxt.length - 1) * 2.1 + 48;
-            const topTagCY = winY + tbH + 28 + stickerTopH / 2;
+            ctx.font = '700 23px "Silkscreen", monospace';
+            const topTagW = ctx.measureText(topTagTxt).width + Math.max(0, topTagTxt.length - 1) * 1.6 + 40;
+            const topTagH = 42;
+            const topTagCX = winX - 14 + topTagW / 2;
+            const topTagCY = winY - 12 + topTagH / 2;
             ctx.save();
-            ctx.translate(winX + winW / 2, topTagCY);
-            ctx.rotate((-2 * Math.PI) / 180);
+            ctx.translate(topTagCX, topTagCY);
+            ctx.rotate((-3 * Math.PI) / 180);
             ctx.fillStyle = '#000000';
-            ctx.fillRect(-topTagW / 2 + 5, -stickerTopH / 2 + 5, topTagW, stickerTopH);
-            ctx.fillStyle = '#08172E';
-            ctx.fillRect(-topTagW / 2, -stickerTopH / 2, topTagW, stickerTopH);
-            ctx.lineWidth = 3;
+            ctx.fillRect(-topTagW / 2 + 5, -topTagH / 2 + 5, topTagW, topTagH);
+            ctx.fillStyle = '#FFFFFF';
+            ctx.fillRect(-topTagW / 2, -topTagH / 2, topTagW, topTagH);
+            ctx.lineWidth = 3.5;
             ctx.strokeStyle = '#000000';
-            ctx.strokeRect(-topTagW / 2, -stickerTopH / 2, topTagW, stickerTopH);
-            drawTextTrack(topTagTxt, 0, 1, '700 26px "Silkscreen", monospace', '#E6FC6D', 2.1, 'center');
+            ctx.strokeRect(-topTagW / 2, -topTagH / 2, topTagW, topTagH);
+            drawTextTrack(topTagTxt, 0, 1, '700 23px "Silkscreen", monospace', '#1A467C', 1.6, 'center');
             ctx.restore();
 
             // Giant H-7 Highlight Hero SVG inside Window
@@ -2252,7 +2368,7 @@
             const hFs = hLen >= 6 ? 160 : (hLen >= 5 ? 190 : 225);
             const hLs = hLen >= 5 ? 6 : 14;
             const svgScale = heroSvgDim.w / 680;
-            const heroCY = winY + tbH + 28 + stickerTopH + 8 + heroSvgDim.h / 2;
+            const heroCY = winY + tbH + bodyPt + heroSvgDim.h / 2;
 
             const drawL2HeroLayer = (ox, oy, fillCol, strokeCol, strokeW) => {
                 ctx.save();
@@ -2295,7 +2411,6 @@
             ctx.lineWidth = 3.5;
             ctx.strokeStyle = '#000000';
             ctx.strokeRect(-stW / 2, -stampBoxH / 2, stW, stampBoxH);
-            // Clock icon
             const clkX = -stW / 2 + 28 + 14;
             ctx.strokeStyle = '#FFFFFF';
             ctx.lineWidth = 2.8;
@@ -2310,7 +2425,7 @@
             drawTextTrack(title, -stW / 2 + 28 + 28 + 12, 1, '700 40px "Space Grotesk", sans-serif', '#FFFFFF', 2.4, 'left');
             ctx.restore();
 
-            // Unified Bottom Sticker Chips
+            // Unified Schedule Chips (04 | JUMAT, 04 DES 2026 & LOKASI)
             const bodyX = winX + 32;
             const bodyW = winW - 64;
             const chipY = stampCY + stampBoxH / 2 + 24;
@@ -2319,25 +2434,23 @@
             const chip2W = bodyW - chipGap - chip1W;
             const chip2X = bodyX + chip1W + chipGap;
 
-            // Chip 1: Date + Time
             ctx.fillStyle = '#000000';
             ctx.fillRect(bodyX + 4, chipY + 4, chip1W, chipRowH);
             ctx.fillStyle = '#F8FBFF';
             ctx.fillRect(bodyX, chipY, chip1W, chipRowH);
             ctx.font = '700 24px "Space Grotesk", sans-serif';
             const numW = Math.max(ctx.measureText(num).width + 28, 56);
-            ctx.fillStyle = '#E6FC6D';
+            ctx.fillStyle = '#CA2C2A';
             ctx.fillRect(bodyX, chipY, numW, chipRowH);
             ctx.fillStyle = '#000000';
             ctx.fillRect(bodyX + numW - 3, chipY, 3, chipRowH);
             ctx.lineWidth = 3;
             ctx.strokeStyle = '#000000';
             ctx.strokeRect(bodyX, chipY, chip1W, chipRowH);
-            drawTextTrack(num, bodyX + numW / 2, chipY + chipRowH / 2 + 1, '700 24px "Space Grotesk", sans-serif', '#000000', 0, 'center');
-            drawTextTrack(date, bodyX + numW + 14, chipY + chipRowH / 2 - 9, '700 17px "Space Grotesk", sans-serif', '#08172E', 0, 'left');
+            drawTextTrack(num, bodyX + numW / 2, chipY + chipRowH / 2 + 1, '700 24px "Space Grotesk", sans-serif', '#FFFFFF', 0, 'center');
+            drawTextTrack(date, bodyX + numW + 14, chipY + chipRowH / 2 - 9, '700 17px "Space Grotesk", sans-serif', '#1A467C', 0, 'left');
             drawTextTrack(time.toUpperCase(), bodyX + numW + 14, chipY + chipRowH / 2 + 11, '800 12px "Plus Jakarta Sans", sans-serif', '#2A82C6', 0, 'left');
 
-            // Chip 2: Location
             ctx.fillStyle = '#000000';
             ctx.fillRect(chip2X + 4, chipY + 4, chip2W, chipRowH);
             ctx.fillStyle = '#F8FBFF';
@@ -2346,35 +2459,47 @@
             ctx.strokeStyle = '#000000';
             ctx.strokeRect(chip2X, chipY, chip2W, chipRowH);
             drawTextTrack('LOKASI', chip2X + 16, chipY + chipRowH / 2 - 11, '800 10px "Plus Jakarta Sans", sans-serif', '#CA2C2A', 1.8, 'left');
-            drawTextTrack(loc, chip2X + 16, chipY + chipRowH / 2 + 9, '700 17px "Space Grotesk", sans-serif', '#08172E', 0, 'left');
+            drawTextTrack(loc, chip2X + 16, chipY + chipRowH / 2 + 9, '700 17px "Space Grotesk", sans-serif', '#1A467C', 0, 'left');
 
-            // Row 2: CTA Action Chip (left/center, clear of bottom-right cursor arrow)
-            const ctaY = chipY + chipRowH + 12;
+            // Bottom-Left Taped Instagram Sticker (Zona Putih): SVG IG Camera + hmif_LPKIA
             ctx.font = '700 20px "Space Grotesk", sans-serif';
-            const ctaW = ctx.measureText(cta).width + Math.max(0, cta.length - 1) * 1.6 + 48 + 24;
+            const igTxtW = ctx.measureText(igHandle).width + Math.max(0, igHandle.length - 1) * 0.4;
+            const igW = 40 + 24 + 10 + igTxtW;
+            const igH = 44;
+            const igCX = winX + 28 + igW / 2;
+            const igCY = winY + winH + 24 - igH / 2;
             ctx.save();
-            ctx.translate(bodyX + ctaW / 2, ctaY + ctaChipH / 2);
-            ctx.rotate((-1 * Math.PI) / 180);
+            ctx.translate(igCX, igCY);
+            ctx.rotate((-2 * Math.PI) / 180);
             ctx.fillStyle = '#000000';
-            ctx.fillRect(-ctaW / 2 + 5, -ctaChipH / 2 + 5, ctaW, ctaChipH);
-            ctx.fillStyle = '#148DF3';
-            ctx.fillRect(-ctaW / 2, -ctaChipH / 2, ctaW, ctaChipH);
-            ctx.lineWidth = 3;
+            ctx.fillRect(-igW / 2 + 5, -igH / 2 + 5, igW, igH);
+            ctx.fillStyle = '#FFFFFF';
+            ctx.fillRect(-igW / 2, -igH / 2, igW, igH);
+            ctx.lineWidth = 3.5;
             ctx.strokeStyle = '#000000';
-            ctx.strokeRect(-ctaW / 2, -ctaChipH / 2, ctaW, ctaChipH);
-            ctx.fillStyle = '#E6FC6D';
-            ctx.fillRect(-ctaW / 2 + 24, -6, 12, 12);
-            ctx.lineWidth = 2;
-            ctx.strokeRect(-ctaW / 2 + 24, -6, 12, 12);
-            drawTextTrack(cta, -ctaW / 2 + 48, 1, '700 20px "Space Grotesk", sans-serif', '#FFFFFF', 1.6, 'left');
+            ctx.strokeRect(-igW / 2, -igH / 2, igW, igH);
+            // Draw Instagram Camera Vector Icon
+            const igIconX = -igW / 2 + 20 + 12;
+            ctx.strokeStyle = '#CA2C2A';
+            ctx.lineWidth = 2.4;
+            rrPath(igIconX - 10, -10, 20, 20, 5);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.arc(igIconX, 0, 4.5, 0, Math.PI * 2);
+            ctx.stroke();
+            ctx.fillStyle = '#CA2C2A';
+            ctx.beginPath();
+            ctx.arc(igIconX + 5.5, -5.5, 1.3, 0, Math.PI * 2);
+            ctx.fill();
+            drawTextTrack(igHandle, -igW / 2 + 20 + 24 + 10, 1, '700 20px "Space Grotesk", sans-serif', '#1A467C', 0.4, 'left');
             ctx.restore();
 
             // 4. Giant 8-Bit Pixelated Arrow Cursor anchored to bottom-right of window
             const curCfg = currentRatio === '9-16'
-                ? { unit: 16 * 1.12, rOff: -26, bOff: -242 }
+                ? { unit: 16 * 1.12, rOff: -26, bOff: -298 }
                 : (currentRatio === '1-1'
-                    ? { unit: 16 * 0.86, rOff: -24, bOff: -192 }
-                    : { unit: 16, rOff: -30, bOff: -222 });
+                    ? { unit: 16 * 0.86, rOff: -24, bOff: -224 }
+                    : { unit: 16, rOff: -30, bOff: -265 });
 
             const curW = 12 * curCfg.unit;
             const curH = 19 * curCfg.unit;
