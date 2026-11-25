@@ -744,39 +744,46 @@
             pointer-events: none;
             z-index: 1;
             background-size: 56px 56px;
+            -webkit-mask-image: radial-gradient(ellipse 92% 86% at 50% 48%, rgba(0, 0, 0, 0.96) 36%, rgba(0, 0, 0, 0.28) 84%, rgba(0, 0, 0, 0.06) 100%);
+            mask-image: radial-gradient(ellipse 92% 86% at 50% 48%, rgba(0, 0, 0, 0.96) 36%, rgba(0, 0, 0, 0.28) 84%, rgba(0, 0, 0, 0.06) 100%);
         }
 
-        .l5-orb-tl, .l5-orb-br {
+        .l5-orb-tl, .l5-orb-br, .l5-orb-bl {
             position: absolute;
             pointer-events: none;
             border-radius: 999px;
             z-index: 0;
         }
-        .l5-orb-tl { top: -120px; left: -100px; width: 620px; height: 620px; }
-        .l5-orb-br { bottom: -140px; right: -100px; width: 640px; height: 640px; }
+        .l5-orb-tl { top: -140px; left: -120px; width: 680px; height: 680px; }
+        .l5-orb-br { bottom: -160px; right: -120px; width: 680px; height: 680px; }
+        .l5-orb-bl { bottom: -180px; left: -140px; width: 520px; height: 520px; }
 
         .l5-bloom-tl {
             position: absolute;
-            top: 90px;
-            left: -44px;
-            width: 300px;
-            height: 300px;
+            top: 96px;
+            left: -26px;
+            width: 260px;
+            height: 260px;
             pointer-events: none;
             z-index: 2;
         }
         .l5-bloom-br {
             position: absolute;
-            bottom: 44px;
-            right: -36px;
-            width: 245px;
-            height: 245px;
+            bottom: 52px;
+            right: -20px;
+            width: 220px;
+            height: 220px;
             pointer-events: none;
             z-index: 2;
         }
-        .ratio-1-1 .l5-bloom-tl { width: 240px; height: 240px; top: 72px; left: -36px; }
-        .ratio-1-1 .l5-bloom-br { width: 205px; height: 205px; bottom: 30px; right: -28px; }
-        .ratio-9-16 .l5-bloom-tl { width: 340px; height: 340px; top: 130px; }
-        .ratio-9-16 .l5-bloom-br { width: 280px; height: 280px; bottom: 84px; }
+        .ratio-1-1 .l5-bloom-tl { width: 210px; height: 210px; top: 76px; left: -20px; }
+        .ratio-1-1 .l5-bloom-br { width: 185px; height: 185px; bottom: 34px; right: -16px; }
+        .ratio-9-16 .l5-bloom-tl { width: 295px; height: 295px; top: 136px; left: -24px; }
+        .ratio-9-16 .l5-bloom-br { width: 250px; height: 250px; bottom: 88px; right: -18px; }
+
+        .l5-bloom-flat-mini { display: none; }
+        .layout-5.style-neubrutalism .l5-bloom-soft { display: none; }
+        .layout-5.style-neubrutalism .l5-bloom-flat-mini { display: block; }
 
         .l5-code {
             position: absolute;
@@ -787,16 +794,15 @@
             z-index: 3;
             line-height: 1;
         }
-        .l5-c1 { top: 32%; left: 52px; font-size: 36px; transform: rotate(-10deg); }
+        .l5-c1 { top: 34%; left: 52px; font-size: 34px; transform: rotate(-10deg); }
         .l5-c2 { top: 22%; right: 56px; font-size: 32px; transform: rotate(9deg); }
-        .l5-c3 { bottom: 23%; left: 50px; font-size: 36px; transform: rotate(8deg); }
-        .l5-c4 { bottom: 20%; right: 54px; font-size: 32px; transform: rotate(-10deg); }
-        .ratio-1-1 .l5-c1 { top: 30%; left: 46px; }
+        .l5-c3 { bottom: 23%; left: 50px; font-size: 34px; transform: rotate(8deg); }
+        .l5-c4 { bottom: 21%; right: 54px; font-size: 30px; transform: rotate(-10deg); }
+        .ratio-1-1 .l5-c1 { top: 31%; left: 46px; }
         .ratio-1-1 .l5-c2 { top: 18%; }
         .ratio-1-1 .l5-c3, .ratio-1-1 .l5-c4 { bottom: 18%; }
-        .ratio-9-16 .l5-c1 { top: 30%; left: 52px; }
+        .ratio-9-16 .l5-c1 { top: 32%; left: 52px; }
         .ratio-9-16 .l5-c2 { top: 21%; }
-        .ratio-9-16 .l5-c3, .ratio-9-16 .l5-c4 { bottom: 21%; }
 
         /* Top Editorial Strip + Hairline Rule */
         .l5-top-wrap {
@@ -826,19 +832,19 @@
             align-items: center;
             gap: 8px;
             background: #FFFFFF;
-            border-radius: 9px;
-            padding: 5px 8px;
+            border-radius: 999px;
+            padding: 5px 12px;
             box-sizing: border-box;
             flex-shrink: 0;
         }
         .l5-logo-img {
-            width: 34px;
-            height: 34px;
+            width: 32px;
+            height: 32px;
             object-fit: contain;
             display: block;
         }
-        .ratio-1-1 .l5-logo-img { width: 28px; height: 28px; }
-        .ratio-9-16 .l5-logo-img { width: 38px; height: 38px; }
+        .ratio-1-1 .l5-logo-img { width: 27px; height: 27px; }
+        .ratio-9-16 .l5-logo-img { width: 36px; height: 36px; }
 
         .l5-vsep {
             width: 1.5px;
@@ -848,7 +854,7 @@
         .l5-org-meta {
             display: flex;
             flex-direction: column;
-            line-height: 1.18;
+            line-height: 1.20;
         }
         .l5-org-title {
             font-family: 'Space Grotesk', sans-serif;
@@ -865,7 +871,7 @@
         }
         .l5-top-right {
             text-align: right;
-            line-height: 1.18;
+            line-height: 1.20;
             flex-shrink: 0;
         }
         .l5-right-title {
@@ -899,7 +905,7 @@
             height: 1.5px;
         }
 
-        /* Center Pinned Note Stage (Explicit Flex Centering) */
+        /* Center Pinned Note Stage */
         .l5-center-stage {
             position: relative;
             z-index: 12;
@@ -927,17 +933,17 @@
         .l5-card-back {
             position: absolute;
             inset: 0;
-            transform: translate(-18px, -12px) rotate(-4.5deg);
+            transform: translate(-12px, -5px) rotate(-5.8deg);
             border-radius: 36px;
             pointer-events: none;
         }
-        .ratio-1-1 .l5-card-back { border-radius: 28px; transform: translate(-14px, -10px) rotate(-4.5deg); }
+        .ratio-1-1 .l5-card-back { border-radius: 28px; transform: translate(-10px, -4px) rotate(-5.8deg); }
 
         .l5-note-card {
             position: relative;
             width: 100%;
             height: 100%;
-            transform: rotate(-4.5deg);
+            transform: rotate(-4.2deg);
             border-radius: 36px;
             display: flex;
             flex-direction: column;
@@ -950,68 +956,61 @@
         }
         .ratio-1-1 .l5-note-card { border-radius: 28px; padding: 20px 34px; }
 
+        .l5-card-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+        }
+        .ratio-1-1 .l5-card-inner { gap: 10px; }
+        .ratio-9-16 .l5-card-inner { gap: 16px; }
+
         .l5-card-pin-mark {
             position: absolute;
-            top: 23px;
-            right: 29px;
-            width: 18px;
-            height: 18px;
+            top: 29px;
+            right: 41px;
+            width: 22px;
+            height: 22px;
             border-radius: 999px;
-            background: radial-gradient(circle, rgba(15, 23, 42, 0.34) 0%, rgba(15, 23, 42, 0.10) 55%, transparent 72%);
+            background: radial-gradient(circle, rgba(15, 23, 42, 0.34) 0%, rgba(15, 23, 42, 0.12) 48%, rgba(15, 23, 42, 0) 74%);
             pointer-events: none;
             z-index: 5;
-        }
-        .l5-card-pin-cast {
-            position: absolute;
-            top: 31px;
-            right: 34px;
-            width: 56px;
-            height: 14px;
-            border-radius: 999px;
-            background: linear-gradient(90deg, rgba(15, 23, 42, 0) 0%, rgba(15, 23, 42, 0.16) 100%);
-            transform: rotate(-34deg);
-            transform-origin: right center;
-            pointer-events: none;
-            z-index: 4;
         }
 
         .l5-pushpin {
             position: absolute;
-            top: -96px;
-            right: -76px;
+            top: -88px;
+            right: -62px;
             width: 160px;
             height: 160px;
             pointer-events: none;
             z-index: 30;
-            transform: scale(1.1);
+            transform: scale(1.12);
             transform-origin: 46px 128px;
-            filter: drop-shadow(-4px 8px 10px rgba(0, 0, 0, 0.28));
+            filter: drop-shadow(-7px 10px 10px rgba(8, 22, 52, 0.28));
         }
         .ratio-1-1 .l5-pushpin {
-            transform: scale(0.94);
+            transform: scale(0.95);
             transform-origin: 46px 128px;
         }
         .ratio-9-16 .l5-pushpin {
-            transform: scale(1.16);
+            transform: scale(1.18);
             transform-origin: 46px 128px;
         }
 
         .l5-card-cd {
-            position: absolute;
-            top: 26px;
-            left: 50%;
-            transform: translateX(-50%);
             font-family: 'JetBrains Mono', monospace;
             font-weight: 800;
             font-size: 16px;
             letter-spacing: 0.22em;
             text-transform: uppercase;
             white-space: nowrap;
-            padding: 4px 16px;
+            padding: 5px 18px;
             border-radius: 999px;
         }
-        .ratio-1-1 .l5-card-cd { top: 18px; font-size: 14px; padding: 3px 13px; }
-        .ratio-9-16 .l5-card-cd { top: 30px; font-size: 17px; }
+        .ratio-1-1 .l5-card-cd { font-size: 14px; padding: 4px 14px; }
+        .ratio-9-16 .l5-card-cd { font-size: 17px; padding: 5px 20px; }
 
         .l5-card-hero {
             font-family: 'Outfit', 'Archivo Black', sans-serif;
@@ -1020,9 +1019,7 @@
             letter-spacing: -0.03em;
             text-transform: uppercase;
             white-space: pre-line;
-            margin-top: 16px;
         }
-        .ratio-1-1 .l5-card-hero { margin-top: 14px; }
 
         /* Title + Motto + Schedule below pinned card */
         .l5-info-stack {
@@ -1030,13 +1027,13 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            margin-top: 52px;
-            gap: 10px;
+            margin-top: 50px;
+            gap: 8px;
             width: 100%;
-            max-width: 940px;
+            max-width: 960px;
         }
-        .ratio-9-16 .l5-info-stack { margin-top: 72px; gap: 14px; }
-        .ratio-1-1  .l5-info-stack { margin-top: 34px; gap: 6px; }
+        .ratio-9-16 .l5-info-stack { margin-top: 68px; gap: 12px; }
+        .ratio-1-1  .l5-info-stack { margin-top: 32px; gap: 5px; }
 
         .l5-menuju-pill {
             font-family: 'Space Grotesk', sans-serif;
@@ -1050,30 +1047,35 @@
         }
         .ratio-1-1 .l5-menuju-pill { font-size: 14px; padding: 3px 14px; }
 
-        .l5-title-out {
+        .l5-title-svg {
+            width: 920px;
+            height: 112px;
+            overflow: visible;
+            display: block;
+            margin: 0 auto;
+        }
+        .ratio-1-1 .l5-title-svg { margin: -8px auto; }
+
+        .l5-title-svg-text {
             font-family: 'Archivo Black', 'Space Grotesk', sans-serif;
             font-weight: 400;
-            font-size: 86px;
-            line-height: 1.02;
-            letter-spacing: 0.02em;
             text-transform: uppercase;
             paint-order: stroke fill;
-            white-space: nowrap;
+            stroke-linejoin: round;
+            stroke-linecap: round;
         }
-        .ratio-9-16 .l5-title-out { font-size: 92px; }
-        .ratio-1-1  .l5-title-out { font-size: 74px; }
 
         .l5-motto {
             font-family: 'Plus Jakarta Sans', sans-serif;
             font-weight: 600;
             font-style: italic;
-            font-size: 24px;
+            font-size: 23px;
             line-height: 1.3;
             letter-spacing: 0.01em;
             margin-top: 2px;
         }
         .ratio-1-1 .l5-motto { font-size: 20px; }
-        .ratio-9-16 .l5-motto { font-size: 26px; }
+        .ratio-9-16 .l5-motto { font-size: 25px; }
 
         .l5-sched-row {
             margin-top: 8px;
@@ -1104,8 +1106,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 34px;
-            margin-bottom: 12px;
+            gap: 24px;
+            margin-bottom: 13px;
+        }
+        .l5-soc-sep {
+            width: 1.5px;
+            height: 18px;
+            opacity: 0.40;
         }
         .l5-soc-item {
             display: inline-flex;
@@ -1119,7 +1126,7 @@
         .l5-soc-badge {
             width: 28px;
             height: 28px;
-            border-radius: 7px;
+            border-radius: 999px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -1137,19 +1144,25 @@
                 linear-gradient(to bottom, rgba(255, 255, 255, 0.14) 1px, transparent 1px);
         }
         .layout-5.style-neubrutalism .l5-orb-tl {
-            background: radial-gradient(circle, rgba(252, 211, 77, 0.24) 0%, transparent 66%);
+            background: radial-gradient(circle, rgba(252, 211, 77, 0.20) 0%, transparent 64%);
         }
         .layout-5.style-neubrutalism .l5-orb-br {
-            background: radial-gradient(circle, rgba(42, 130, 198, 0.42) 0%, transparent 66%);
+            background: radial-gradient(circle, rgba(42, 130, 198, 0.36) 0%, transparent 66%);
         }
-        .layout-5.style-neubrutalism .l5-bloom-svg { fill: #FCD34D; opacity: 0.92; filter: none; }
-        .layout-5.style-neubrutalism .l5-bloom-br .l5-bloom-svg { fill: #CA2C2A; }
+        .layout-5.style-neubrutalism .l5-orb-bl {
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.16) 0%, transparent 66%);
+        }
+        .layout-5.style-neubrutalism .l5-star-main { fill: #FCD34D; stroke: #000000; stroke-width: 5.5; stroke-linejoin: round; }
+        .layout-5.style-neubrutalism .l5-star-companion { fill: #FFFFFF; stroke: #000000; stroke-width: 4.5; stroke-linejoin: round; }
+        .layout-5.style-neubrutalism .l5-bloom-br .l5-star-main { fill: #CA2C2A; stroke: #000000; stroke-width: 5.5; }
+        .layout-5.style-neubrutalism .l5-bloom-br .l5-star-companion { fill: #FCD34D; stroke: #000000; stroke-width: 4.5; }
         .layout-5.style-neubrutalism .l5-ca { color: rgba(255, 255, 255, 0.36); }
         .layout-5.style-neubrutalism .l5-cb { color: rgba(252, 211, 77, 0.85); }
         .layout-5.style-neubrutalism .l5-logos-trio {
             border: 2.5px solid #000000;
             box-shadow: 3px 3px 0 #000000;
             border-radius: 0px;
+            padding: 5px 9px;
         }
         .layout-5.style-neubrutalism .l5-vsep { background: rgba(255, 255, 255, 0.50); }
         .layout-5.style-neubrutalism .l5-org-title { color: #FFFFFF; }
@@ -1160,14 +1173,15 @@
         .layout-5.style-neubrutalism .l5-line { background: rgba(255, 255, 255, 0.72); }
         .layout-5.style-neubrutalism .l5-card-back {
             background: #0B1F40;
-            border: 4px solid #000000;
+            border: 4.5px solid #000000;
             border-radius: 18px;
+            transform: translate(14px, 14px) rotate(-4.2deg);
         }
         .layout-5.style-neubrutalism .l5-note-card {
             background: #FFFFFF;
             border: 4.5px solid #000000;
-            box-shadow: 10px 10px 0 #000000;
             border-radius: 18px;
+            box-shadow: none;
         }
         .layout-5.style-neubrutalism .l5-card-cd {
             background: #1A467C;
@@ -1183,11 +1197,8 @@
             box-shadow: 4px 4px 0 #000000;
             border-radius: 0px;
         }
-        .layout-5.style-neubrutalism .l5-title-out {
-            color: #0B1F40;
-            -webkit-text-stroke: 14px #FFFFFF;
-            text-shadow: 6px 6px 0 #000000;
-        }
+        .layout-5.style-neubrutalism #l5TitleShd { opacity: 1; }
+        .layout-5.style-neubrutalism #l5TitleMain { fill: #0B1F40; stroke: #FFFFFF; }
         .layout-5.style-neubrutalism .l5-motto { color: #E2EEFF; }
         .layout-5.style-neubrutalism .l5-sched-row {
             background: #FFFFFF;
@@ -1198,6 +1209,7 @@
         }
         .layout-5.style-neubrutalism .l5-sched-pin { color: #CA2C2A; }
         .layout-5.style-neubrutalism .l5-soc-item { color: #FFFFFF; }
+        .layout-5.style-neubrutalism .l5-soc-sep { background: rgba(255, 255, 255, 0.65); }
         .layout-5.style-neubrutalism .l5-soc-badge {
             background: #FFFFFF;
             color: #0B1F40;
@@ -1207,7 +1219,7 @@
 
         /* ====== LAYOUT 5 THEME 2: GLASSMORPHISM (LUMINOUS FROST GRID) ====== */
         .poster-canvas.layout-5.style-glass {
-            background: linear-gradient(155deg, #0D3A73 0%, #1761A8 46%, #2482CE 100%);
+            background: linear-gradient(155deg, #0B366D 0%, #165FA5 48%, #2281CE 100%);
             color: #FFFFFF;
         }
         .layout-5.style-glass .l5-bg-grid {
@@ -1216,58 +1228,58 @@
                 linear-gradient(to bottom, rgba(255, 255, 255, 0.11) 1px, transparent 1px);
         }
         .layout-5.style-glass .l5-orb-tl {
-            background: radial-gradient(circle, rgba(253, 224, 71, 0.34) 0%, transparent 66%);
+            background: radial-gradient(circle, rgba(253, 224, 71, 0.32) 0%, transparent 66%);
         }
         .layout-5.style-glass .l5-orb-br {
-            background: radial-gradient(circle, rgba(125, 211, 252, 0.38) 0%, transparent 66%);
+            background: radial-gradient(circle, rgba(125, 211, 252, 0.36) 0%, transparent 66%);
         }
-        .layout-5.style-glass .l5-bloom-svg {
+        .layout-5.style-glass .l5-orb-bl {
+            background: radial-gradient(circle, rgba(253, 224, 71, 0.24) 0%, transparent 66%);
+        }
+        .layout-5.style-glass .l5-bloom-soft-path {
             fill: #FDE047;
-            opacity: 0.72;
-            filter: blur(11px);
+            opacity: 0.62;
+            filter: blur(22px);
         }
-        .layout-5.style-glass .l5-bloom-br .l5-bloom-svg { fill: #BAE6FD; opacity: 0.75; }
+        .layout-5.style-glass .l5-bloom-br .l5-bloom-soft-path { fill: #BAE6FD; opacity: 0.68; filter: blur(18px); }
         .layout-5.style-glass .l5-ca { color: rgba(255, 255, 255, 0.34); }
         .layout-5.style-glass .l5-cb { color: rgba(253, 224, 71, 0.68); }
         .layout-5.style-glass .l5-logos-trio {
             background: rgba(255, 255, 255, 0.94);
             border: 1.5px solid rgba(255, 255, 255, 0.95);
-            box-shadow: 0 8px 20px rgba(7, 24, 58, 0.26);
-            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(7, 24, 58, 0.24);
         }
-        .layout-5.style-glass .l5-vsep { background: rgba(255, 255, 255, 0.45); }
+        .layout-5.style-glass .l5-vsep { background: rgba(255, 255, 255, 0.42); }
         .layout-5.style-glass .l5-org-title { color: #FFFFFF; }
         .layout-5.style-glass .l5-org-sub { color: #DBEAFE; }
         .layout-5.style-glass .l5-right-title { color: #FFFFFF; }
         .layout-5.style-glass .l5-right-sub { color: #BAE6FD; }
         .layout-5.style-glass .l5-dot { background: rgba(255, 255, 255, 0.92); }
-        .layout-5.style-glass .l5-line { background: rgba(255, 255, 255, 0.65); }
+        .layout-5.style-glass .l5-line { background: rgba(255, 255, 255, 0.60); }
         .layout-5.style-glass .l5-card-back {
-            background: rgba(9, 41, 86, 0.56);
-            border: 1.5px solid rgba(255, 255, 255, 0.25);
+            background: rgba(8, 36, 78, 0.46);
+            border: none;
         }
         .layout-5.style-glass .l5-note-card {
-            background: linear-gradient(155deg, rgba(255, 255, 255, 0.98) 0%, rgba(235, 244, 255, 0.94) 100%);
-            border: 2px solid #FFFFFF;
-            box-shadow: 0 28px 54px rgba(6, 22, 54, 0.38);
+            background: linear-gradient(155deg, rgba(255, 255, 255, 0.98) 0%, rgba(235, 244, 255, 0.95) 100%);
+            border: 1.5px solid rgba(255, 255, 255, 0.96);
+            box-shadow: 0 26px 52px rgba(6, 22, 54, 0.36);
         }
         .layout-5.style-glass .l5-card-cd {
-            background: rgba(37, 99, 235, 0.12);
+            background: rgba(37, 99, 235, 0.11);
             color: #1D4ED8;
-            border: 1px solid rgba(37, 99, 235, 0.24);
+            border: 1px solid rgba(37, 99, 235, 0.20);
         }
         .layout-5.style-glass .l5-card-hero { color: #0F3568; }
         .layout-5.style-glass .l5-menuju-pill {
-            background: rgba(255, 255, 255, 0.22);
+            background: rgba(255, 255, 255, 0.20);
             color: #FFFFFF;
             border: 1.5px solid rgba(255, 255, 255, 0.65);
             border-radius: 999px;
         }
-        .layout-5.style-glass .l5-title-out {
-            color: #0D356F;
-            -webkit-text-stroke: 14px #FFFFFF;
-            filter: drop-shadow(0 8px 18px rgba(7, 24, 58, 0.34));
-        }
+        .layout-5.style-glass #l5TitleShd { opacity: 0; }
+        .layout-5.style-glass #l5TitleMain { fill: #0D356F; stroke: #FFFFFF; }
+        .layout-5.style-glass .l5-title-svg { filter: drop-shadow(0 8px 18px rgba(7, 24, 58, 0.34)); }
         .layout-5.style-glass .l5-motto { color: #EFF6FF; }
         .layout-5.style-glass .l5-sched-row {
             background: rgba(255, 255, 255, 0.16);
@@ -1277,6 +1289,7 @@
         }
         .layout-5.style-glass .l5-sched-pin { color: #FDE047; }
         .layout-5.style-glass .l5-soc-item { color: #FFFFFF; }
+        .layout-5.style-glass .l5-soc-sep { background: rgba(255, 255, 255, 0.50); }
         .layout-5.style-glass .l5-soc-badge {
             background: #FFFFFF;
             color: #16488E;
@@ -1298,18 +1311,22 @@
         .layout-5.style-dark-code .l5-orb-br {
             background: radial-gradient(circle, rgba(252, 211, 77, 0.18) 0%, transparent 66%);
         }
-        .layout-5.style-dark-code .l5-bloom-svg {
-            fill: #38BDF8;
-            opacity: 0.48;
-            filter: blur(12px);
+        .layout-5.style-dark-code .l5-orb-bl {
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.14) 0%, transparent 66%);
         }
-        .layout-5.style-dark-code .l5-bloom-br .l5-bloom-svg { fill: #FCD34D; opacity: 0.42; }
+        .layout-5.style-dark-code .l5-bloom-soft-path {
+            fill: #38BDF8;
+            opacity: 0.44;
+            filter: blur(24px);
+        }
+        .layout-5.style-dark-code .l5-bloom-br .l5-bloom-soft-path { fill: #FCD34D; opacity: 0.38; filter: blur(20px); }
         .layout-5.style-dark-code .l5-ca { color: rgba(56, 189, 248, 0.46); }
         .layout-5.style-dark-code .l5-cb { color: rgba(252, 211, 77, 0.62); }
         .layout-5.style-dark-code .l5-logos-trio {
             background: #FFFFFF;
-            border: 2px solid #38BDF8;
-            border-radius: 8px;
+            border: 1.5px solid #38BDF8;
+            border-radius: 10px;
+            padding: 4px 10px;
         }
         .layout-5.style-dark-code .l5-vsep { background: rgba(56, 189, 248, 0.45); }
         .layout-5.style-dark-code .l5-org-title { color: #FFFFFF; }
@@ -1320,11 +1337,11 @@
         .layout-5.style-dark-code .l5-line { background: rgba(56, 189, 248, 0.55); }
         .layout-5.style-dark-code .l5-card-back {
             background: #14325B;
-            border: 2.5px solid rgba(56, 189, 248, 0.55);
+            border: 2px solid rgba(56, 189, 248, 0.45);
         }
         .layout-5.style-dark-code .l5-note-card {
             background: #F8FAFC;
-            border: 3.5px solid #38BDF8;
+            border: 3px solid #38BDF8;
             box-shadow: 0 24px 48px rgba(0, 0, 0, 0.58);
         }
         .layout-5.style-dark-code .l5-card-cd {
@@ -1339,11 +1356,9 @@
             border: 2px solid #38BDF8;
             border-radius: 8px;
         }
-        .layout-5.style-dark-code .l5-title-out {
-            color: #0B192E;
-            -webkit-text-stroke: 14px #FFFFFF;
-            filter: drop-shadow(0 6px 18px rgba(56, 189, 248, 0.42));
-        }
+        .layout-5.style-dark-code #l5TitleShd { opacity: 0; }
+        .layout-5.style-dark-code #l5TitleMain { fill: #0B192E; stroke: #FFFFFF; }
+        .layout-5.style-dark-code .l5-title-svg { filter: drop-shadow(0 6px 18px rgba(56, 189, 248, 0.42)); }
         .layout-5.style-dark-code .l5-motto { color: #BAE6FD; }
         .layout-5.style-dark-code .l5-sched-row {
             background: #122645;
@@ -1353,6 +1368,7 @@
         }
         .layout-5.style-dark-code .l5-sched-pin { color: #FCD34D; }
         .layout-5.style-dark-code .l5-soc-item { color: #F8FAFC; }
+        .layout-5.style-dark-code .l5-soc-sep { background: rgba(56, 189, 248, 0.55); }
         .layout-5.style-dark-code .l5-soc-badge {
             background: #38BDF8;
             color: #091529;
@@ -1374,18 +1390,20 @@
         .layout-5.style-modern .l5-orb-br {
             background: radial-gradient(circle, rgba(59, 130, 246, 0.34) 0%, transparent 66%);
         }
-        .layout-5.style-modern .l5-bloom-svg {
-            fill: #FDD34D;
-            opacity: 0.62;
-            filter: blur(11px);
+        .layout-5.style-modern .l5-orb-bl {
+            background: radial-gradient(circle, rgba(253, 211, 77, 0.16) 0%, transparent 66%);
         }
-        .layout-5.style-modern .l5-bloom-br .l5-bloom-svg { fill: #93C5FD; opacity: 0.58; }
+        .layout-5.style-modern .l5-bloom-soft-path {
+            fill: #FDD34D;
+            opacity: 0.56;
+            filter: blur(22px);
+        }
+        .layout-5.style-modern .l5-bloom-br .l5-bloom-soft-path { fill: #93C5FD; opacity: 0.54; filter: blur(18px); }
         .layout-5.style-modern .l5-ca { color: rgba(255, 255, 255, 0.28); }
         .layout-5.style-modern .l5-cb { color: rgba(253, 211, 77, 0.58); }
         .layout-5.style-modern .l5-logos-trio {
             background: rgba(255, 255, 255, 0.96);
-            box-shadow: 0 8px 20px rgba(6, 20, 44, 0.28);
-            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(6, 20, 44, 0.26);
         }
         .layout-5.style-modern .l5-vsep { background: rgba(255, 255, 255, 0.38); }
         .layout-5.style-modern .l5-org-title { color: #FFFFFF; }
@@ -1395,11 +1413,12 @@
         .layout-5.style-modern .l5-dot { background: #FDD34D; }
         .layout-5.style-modern .l5-line { background: rgba(255, 255, 255, 0.52); }
         .layout-5.style-modern .l5-card-back {
-            background: rgba(9, 28, 60, 0.62);
+            background: rgba(9, 28, 60, 0.50);
+            border: none;
         }
         .layout-5.style-modern .l5-note-card {
             background: #FFFFFF;
-            box-shadow: 0 30px 56px rgba(6, 18, 42, 0.45);
+            box-shadow: 0 28px 54px rgba(6, 18, 42, 0.44);
         }
         .layout-5.style-modern .l5-card-cd {
             background: #EFF6FF;
@@ -1410,13 +1429,11 @@
             background: #FDD34D;
             color: #12305A;
             border-radius: 999px;
-            box-shadow: 0 8px 18px rgba(6, 20, 44, 0.26);
+            box-shadow: 0 8px 18px rgba(6, 20, 44, 0.24);
         }
-        .layout-5.style-modern .l5-title-out {
-            color: #12305A;
-            -webkit-text-stroke: 14px #FFFFFF;
-            filter: drop-shadow(0 10px 22px rgba(6, 18, 42, 0.42));
-        }
+        .layout-5.style-modern #l5TitleShd { opacity: 0; }
+        .layout-5.style-modern #l5TitleMain { fill: #12305A; stroke: #FFFFFF; }
+        .layout-5.style-modern .l5-title-svg { filter: drop-shadow(0 10px 22px rgba(6, 18, 42, 0.42)); }
         .layout-5.style-modern .l5-motto { color: #E2EEFF; }
         .layout-5.style-modern .l5-sched-row {
             background: rgba(255, 255, 255, 0.14);
@@ -1426,6 +1443,7 @@
         }
         .layout-5.style-modern .l5-sched-pin { color: #FDD34D; }
         .layout-5.style-modern .l5-soc-item { color: #FFFFFF; }
+        .layout-5.style-modern .l5-soc-sep { background: rgba(255, 255, 255, 0.44); }
         .layout-5.style-modern .l5-soc-badge {
             background: #FFFFFF;
             color: #12305A;
@@ -2721,19 +2739,38 @@
 
                     <!-- ==================== LAYOUT 5 ROOT (PINNED NOTE / MADING PIN 3D) ==================== -->
                     <div id="layout5Root" class="layout-5-root">
-                        <!-- Ambient Orbs + Square Graph Grid + 4-Petal Sparkle Blooms -->
+                        <!-- Ambient Orbs + Square Graph Grid + Soft Clover Blooms / Crisp Stars -->
                         <div class="l5-orb-tl"></div>
                         <div class="l5-orb-br"></div>
+                        <div class="l5-orb-bl"></div>
                         <div class="l5-bg-grid"></div>
 
                         <div class="l5-bloom-tl" aria-hidden="true">
-                            <svg class="w-full h-full overflow-visible" viewBox="0 0 200 200">
-                                <path class="l5-bloom-svg" d="M100,12 Q118,82 188,100 Q118,118 100,188 Q82,118 12,100 Q82,82 100,12 Z" transform="rotate(-14 100 100)"></path>
+                            <svg class="l5-bloom-soft w-full h-full overflow-visible" viewBox="0 0 200 200">
+                                <g transform="rotate(-16 100 100)">
+                                    <ellipse class="l5-bloom-soft-path" cx="100" cy="64" rx="28" ry="44"/>
+                                    <ellipse class="l5-bloom-soft-path" cx="100" cy="136" rx="28" ry="44"/>
+                                    <ellipse class="l5-bloom-soft-path" cx="64" cy="100" rx="44" ry="28"/>
+                                    <ellipse class="l5-bloom-soft-path" cx="136" cy="100" rx="44" ry="28"/>
+                                </g>
+                            </svg>
+                            <svg class="l5-bloom-flat-mini w-full h-full overflow-visible" viewBox="0 0 200 200">
+                                <path class="l5-star-main" d="M84,28 Q95,78 145,89 Q95,100 84,150 Q73,100 23,89 Q73,78 84,28 Z" transform="rotate(-12 84 89)"/>
+                                <path class="l5-star-companion" d="M150,126 Q155,144 173,149 Q155,154 150,172 Q145,154 127,149 Q145,144 150,126 Z" transform="rotate(8 150 149)"/>
                             </svg>
                         </div>
                         <div class="l5-bloom-br" aria-hidden="true">
-                            <svg class="w-full h-full overflow-visible" viewBox="0 0 200 200">
-                                <path class="l5-bloom-svg" d="M100,14 Q114,86 186,100 Q114,114 100,186 Q86,114 14,100 Q86,86 100,14 Z" transform="rotate(10 100 100)"></path>
+                            <svg class="l5-bloom-soft w-full h-full overflow-visible" viewBox="0 0 200 200">
+                                <g transform="rotate(14 100 100)">
+                                    <ellipse class="l5-bloom-soft-path" cx="100" cy="68" rx="26" ry="42"/>
+                                    <ellipse class="l5-bloom-soft-path" cx="100" cy="132" rx="26" ry="42"/>
+                                    <ellipse class="l5-bloom-soft-path" cx="68" cy="100" rx="42" ry="26"/>
+                                    <ellipse class="l5-bloom-soft-path" cx="132" cy="100" rx="42" ry="26"/>
+                                </g>
+                            </svg>
+                            <svg class="l5-bloom-flat-mini w-full h-full overflow-visible" viewBox="0 0 200 200">
+                                <path class="l5-star-main" d="M116,46 Q126,90 170,100 Q126,110 116,154 Q106,110 62,100 Q106,90 116,46 Z" transform="rotate(10 116 100)"/>
+                                <path class="l5-star-companion" d="M46,32 Q51,49 68,54 Q51,59 46,76 Q41,59 24,54 Q41,49 46,32 Z" transform="rotate(-10 46 54)"/>
                             </svg>
                         </div>
 
@@ -2770,65 +2807,68 @@
                             </div>
                         </header>
 
-                        <!-- Center Pinned Note Stage + Outlined Title -->
+                        <!-- Center Pinned Note Stage + Rounded Outlined SVG Title -->
                         <section class="l5-center-stage">
                             <div class="l5-card-wrap">
                                 <div class="l5-card-back"></div>
                                 <div class="l5-note-card">
-                                    <div class="l5-card-pin-cast"></div>
                                     <div class="l5-card-pin-mark"></div>
-                                    <!-- 3D Glossy Red Pushpin at Top-Right Corner -->
+                                    <!-- 3D Glossy Red Pushpin anchored inward at top-right corner -->
                                     <svg class="l5-pushpin" viewBox="0 0 160 160" aria-hidden="true">
                                         <defs>
                                             <linearGradient id="l5PinSteel" x1="0" y1="0" x2="1" y2="0">
-                                                <stop offset="0%" stop-color="#F1F5F9"/>
-                                                <stop offset="55%" stop-color="#94A3B8"/>
+                                                <stop offset="0%" stop-color="#F8FAFC"/>
+                                                <stop offset="52%" stop-color="#94A3B8"/>
                                                 <stop offset="100%" stop-color="#475569"/>
                                             </linearGradient>
                                             <linearGradient id="l5PinStem" x1="0" y1="0" x2="1" y2="0">
                                                 <stop offset="0%" stop-color="#FCA5A5"/>
-                                                <stop offset="28%" stop-color="#EF4444"/>
+                                                <stop offset="30%" stop-color="#EF4444"/>
                                                 <stop offset="72%" stop-color="#DC2626"/>
                                                 <stop offset="100%" stop-color="#7F1D1D"/>
                                             </linearGradient>
                                             <linearGradient id="l5PinDisc" x1="0" y1="0" x2="1" y2="1">
-                                                <stop offset="0%" stop-color="#FF7B7B"/>
-                                                <stop offset="45%" stop-color="#DC2626"/>
+                                                <stop offset="0%" stop-color="#FF8585"/>
+                                                <stop offset="48%" stop-color="#DC2626"/>
                                                 <stop offset="100%" stop-color="#7F1D1D"/>
                                             </linearGradient>
                                             <linearGradient id="l5PinCap" x1="0" y1="0" x2="1" y2="1">
-                                                <stop offset="0%" stop-color="#FCA5A5"/>
-                                                <stop offset="42%" stop-color="#EF4444"/>
-                                                <stop offset="100%" stop-color="#B91C1C"/>
+                                                <stop offset="0%" stop-color="#FECACA"/>
+                                                <stop offset="36%" stop-color="#EF4444"/>
+                                                <stop offset="100%" stop-color="#991B1B"/>
                                             </linearGradient>
                                         </defs>
-                                        <!-- Puncture Needle + Pushpin leaning +38deg -->
-                                        <g transform="translate(46, 128) rotate(38)">
-                                            <!-- Tapered Steel Needle -->
-                                            <polygon points="0,0 -2.6,-30 2.6,-30" fill="url(#l5PinSteel)" stroke="#334155" stroke-width="0.8"/>
-                                            <!-- Under-collar Shadow -->
-                                            <ellipse cx="0" cy="-29" rx="28" ry="11" fill="#450A0A" opacity="0.85"/>
-                                            <!-- Flared Bottom Collar -->
-                                            <ellipse cx="0" cy="-34" rx="30" ry="12.5" fill="url(#l5PinDisc)" stroke="#991B1B" stroke-width="1.2"/>
-                                            <path d="M-23,-36 A24,9 0 0,1 16,-41" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="2" stroke-linecap="round"/>
+                                        <g transform="translate(46, 128) rotate(36)">
+                                            <!-- Steel Needle -->
+                                            <polygon points="0,0 -2.8,-30 2.8,-30" fill="url(#l5PinSteel)" stroke="#334155" stroke-width="0.6"/>
+                                            <!-- Soft under-flange lip -->
+                                            <ellipse cx="0" cy="-29" rx="29" ry="11.5" fill="#450A0A" opacity="0.88"/>
+                                            <!-- Flared Bottom Flange -->
+                                            <ellipse cx="0" cy="-34" rx="31" ry="13" fill="url(#l5PinDisc)" stroke="#991B1B" stroke-width="1"/>
+                                            <path d="M-24,-36 A25,9.5 0 0,1 18,-41" fill="none" stroke="rgba(255,255,255,0.62)" stroke-width="2.2" stroke-linecap="round"/>
                                             <!-- Hourglass Neck / Body -->
-                                            <path d="M-19,-37 C-12,-48 -11,-61 -21,-76 L21,-76 C11,-61 12,-48 19,-37 Z" fill="url(#l5PinStem)" stroke="#991B1B" stroke-width="1"/>
-                                            <path d="M-10,-42 C-7,-52 -7,-61 -12,-72" fill="none" stroke="rgba(255,255,255,0.52)" stroke-width="3.2" stroke-linecap="round"/>
-                                            <!-- Top Cap Underside Lip & Main Glossy Crown -->
-                                            <ellipse cx="0" cy="-74" rx="25" ry="11" fill="#991B1B"/>
-                                            <ellipse cx="0" cy="-78" rx="25" ry="10.5" fill="url(#l5PinCap)" stroke="#FCA5A5" stroke-width="1"/>
-                                            <path d="M-17,-80 A18,6.5 0 0,1 13,-83" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="2.4" stroke-linecap="round"/>
+                                            <path d="M-19.5,-37 C-12.5,-48 -11.5,-61 -21.5,-77 L21.5,-77 C11.5,-61 12.5,-48 19.5,-37 Z" fill="url(#l5PinStem)" stroke="#991B1B" stroke-width="0.9"/>
+                                            <path d="M-10.5,-42 C-7.5,-52 -7.5,-61 -12.5,-73" fill="none" stroke="rgba(255,255,255,0.58)" stroke-width="3.5" stroke-linecap="round"/>
+                                            <!-- Top Cap Bevel & Glossy Crown -->
+                                            <ellipse cx="0" cy="-74" rx="26" ry="11.5" fill="#991B1B"/>
+                                            <ellipse cx="0" cy="-78" rx="26" ry="11" fill="url(#l5PinCap)" stroke="#FCA5A5" stroke-width="0.9"/>
+                                            <path d="M-18,-80 A19,7 0 0,1 14,-83" fill="none" stroke="rgba(255,255,255,0.88)" stroke-width="2.6" stroke-linecap="round"/>
                                         </g>
                                     </svg>
 
-                                    <span id="l5OutCd" class="l5-card-cd">COUNTDOWN</span>
-                                    <span id="l5OutHero" class="l5-card-hero">H-7</span>
+                                    <div class="l5-card-inner">
+                                        <span id="l5OutCd" class="l5-card-cd">COUNTDOWN</span>
+                                        <span id="l5OutHero" class="l5-card-hero">H-7</span>
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="l5-info-stack">
                                 <span id="l5OutMenuju" class="l5-menuju-pill l5-countdown-only">MENUJU</span>
-                                <h2 id="l5OutTitle" class="l5-title-out">KADERISASI</h2>
+                                <svg id="l5TitleSvg" class="l5-title-svg" viewBox="0 0 920 112" aria-label="KADERISASI">
+                                    <text id="l5TitleShd" class="l5-title-svg-text" x="466" y="62" text-anchor="middle" dominant-baseline="central" font-size="84" letter-spacing="4" fill="#000000" stroke="#000000" stroke-width="15">KADERISASI</text>
+                                    <text id="l5TitleMain" class="l5-title-svg-text" x="460" y="56" text-anchor="middle" dominant-baseline="central" font-size="84" letter-spacing="4" fill="#0D356F" stroke="#FFFFFF" stroke-width="15">KADERISASI</text>
+                                </svg>
                                 <p class="l5-motto">&ldquo;Dari Ilmu, Menjadi Karya.&rdquo;</p>
                                 <div class="l5-sched-row l5-countdown-only">
                                     <svg class="l5-sched-pin w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -2852,6 +2892,7 @@
                                     </span>
                                     <span id="l5OutIg">hmif_LPKIA</span>
                                 </div>
+                                <span class="l5-soc-sep" aria-hidden="true"></span>
                                 <div class="l5-soc-item">
                                     <span class="l5-soc-badge">
                                         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true">
@@ -3155,10 +3196,15 @@
                 l5HeroEl.style.fontSize = l5M.heroFs + 'px';
             }
             setL5If('l5OutMenuju', l5M.menujuTxt);
-            const l5TitleEl = document.getElementById('l5OutTitle');
-            if (l5TitleEl) {
-                l5TitleEl.textContent = E.title;
-                l5TitleEl.style.fontSize = l5M.titleFs + 'px';
+            const l5ShdEl = document.getElementById('l5TitleShd');
+            const l5MainEl = document.getElementById('l5TitleMain');
+            if (l5ShdEl && l5MainEl) {
+                l5ShdEl.textContent = E.title;
+                l5MainEl.textContent = E.title;
+                l5ShdEl.setAttribute('font-size', l5M.titleFs);
+                l5MainEl.setAttribute('font-size', l5M.titleFs);
+                l5ShdEl.setAttribute('letter-spacing', l5M.titleTrack);
+                l5MainEl.setAttribute('letter-spacing', l5M.titleTrack);
             }
             setL5If('l5OutSched', l5M.schedLine);
             setL5If('l5OutIg', E.igHandle);
@@ -3174,11 +3220,13 @@
             const baseHero = E.isCS
                 ? 116
                 : (hl >= 10 ? 74 : (hl >= 7 ? 116 : (hl >= 5 ? 168 : 228)));
-            const baseTitle = tl >= 14 ? 62 : (tl >= 11 ? 74 : 86);
+            const baseTitle = tl >= 14 ? 60 : (tl >= 11 ? 72 : 84);
+            const titleFs = Math.round(baseTitle * rs);
             return {
                 heroLines,
                 heroFs: Math.round(baseHero * rs),
-                titleFs: Math.round(baseTitle * rs),
+                titleFs,
+                titleTrack: Math.round(titleFs * 0.048 * 10) / 10,
                 cdTxt: E.isCS ? 'STAY TUNED' : (E.cd || 'COUNTDOWN'),
                 menujuTxt: E.mn || 'MENUJU',
                 schedLine: `${E.date} • ${E.time} • ${toTitleCase(E.loc)}`
@@ -6156,76 +6204,81 @@
 
             const L5_THEMES = {
                 'neubrutalism': {
-                    bgMode: 'solid', bg: '#16488E', grid: 'rgba(255,255,255,0.14)',
-                    orbTL: 'rgba(252,211,77,0.24)', orbBR: 'rgba(42,130,198,0.42)',
-                    bloomTL: '#FCD34D', bloomTLOp: 0.92, bloomBR: '#CA2C2A', bloomBROp: 0.92, bloomBlur: 0,
+                    bgMode: 'solid', bg: '#16488E', vig: 'rgba(11,31,64,0.34)', grid: 'rgba(255,255,255,0.14)',
+                    orbTL: 'rgba(252,211,77,0.20)', orbBR: 'rgba(42,130,198,0.36)', orbBL: 'rgba(56,189,248,0.16)',
+                    bloomKind: 'flat',
+                    starTL: { m: '#FCD34D', c: '#FFFFFF', sw: 5.5 },
+                    starBR: { m: '#CA2C2A', c: '#FCD34D', sw: 5.5 },
                     codeA: 'rgba(255,255,255,0.36)', codeB: 'rgba(252,211,77,0.85)',
-                    chipRad: 0, chipBorder: '#000000', chipBW: 2.5, chipShd: 3,
+                    chipRad: 0, chipBorder: '#000000', chipBW: 2.5, chipShd: 3, chipPx: 9,
                     vsep: 'rgba(255,255,255,0.50)', orgSub: '#FCD34D', rightSub: '#93C5FD',
                     dot: '#FCD34D', line: 'rgba(255,255,255,0.72)',
-                    backFill: '#0B1F40', backBorder: '#000000', backBW: 4, cardRad: 18,
-                    cardFill: '#FFFFFF', cardBorder: '#000000', cardBW: 4.5, cardShdOff: 10, cardSoft: null,
+                    backFill: '#0B1F40', backBorder: '#000000', backBW: 4.5, backOff: [14, 14, -4.2], cardRad: 18,
+                    cardFill: '#FFFFFF', cardBorder: '#000000', cardBW: 4.5, cardSoft: null,
                     cdFill: '#1A467C', cdText: '#FFFFFF', cdBorder: '#000000', cdBW: 2.5, cdRad: 0,
                     heroCol: '#0B1F40',
                     mnFill: '#FCD34D', mnText: '#0B1F40', mnBorder: '#000000', mnBW: 3, mnShdOff: 4, mnRad: 0,
-                    titleFill: '#0B1F40', titleStroke: '#FFFFFF', titleSW: 14, titleShdOff: 6, titleShdCol: '#000000', titleSoft: null,
+                    titleFill: '#0B1F40', titleStroke: '#FFFFFF', titleSW: 15, titleShdOff: 6, titleShdCol: '#000000', titleSoft: null,
                     mottoCol: '#E2EEFF',
                     schedFill: '#FFFFFF', schedText: '#0B1F40', schedBorder: '#000000', schedBW: 3, schedShdOff: 4, schedRad: 0, schedPin: '#CA2C2A',
-                    socCol: '#FFFFFF', badgeFill: '#FFFFFF', badgeCol: '#0B1F40', badgeBorder: '#000000', badgeRad: 0
+                    socCol: '#FFFFFF', sepCol: 'rgba(255,255,255,0.65)', badgeFill: '#FFFFFF', badgeCol: '#0B1F40', badgeBorder: '#000000', badgeRad: 0
                 },
                 'glass': {
-                    bgMode: 'grad', stops: [[0, '#0D3A73'], [0.46, '#1761A8'], [1, '#2482CE']], grid: 'rgba(255,255,255,0.11)',
-                    orbTL: 'rgba(253,224,71,0.34)', orbBR: 'rgba(125,211,252,0.38)',
-                    bloomTL: '#FDE047', bloomTLOp: 0.72, bloomBR: '#BAE6FD', bloomBROp: 0.75, bloomBlur: 11,
+                    bgMode: 'grad', stops: [[0, '#0B366D'], [0.48, '#165FA5'], [1, '#2281CE']], vig: 'rgba(6,24,58,0.28)', grid: 'rgba(255,255,255,0.11)',
+                    orbTL: 'rgba(253,224,71,0.32)', orbBR: 'rgba(125,211,252,0.36)', orbBL: 'rgba(253,224,71,0.24)',
+                    bloomKind: 'soft',
+                    bloomTL: '#FDE047', bloomTLOp: 0.62, bloomTLBlur: 22, bloomBR: '#BAE6FD', bloomBROp: 0.68, bloomBRBlur: 18,
                     codeA: 'rgba(255,255,255,0.34)', codeB: 'rgba(253,224,71,0.68)',
-                    chipRad: 10, chipBorder: 'rgba(255,255,255,0.95)', chipBW: 1.5, chipShd: 0,
-                    vsep: 'rgba(255,255,255,0.45)', orgSub: '#DBEAFE', rightSub: '#BAE6FD',
-                    dot: 'rgba(255,255,255,0.92)', line: 'rgba(255,255,255,0.65)',
-                    backFill: 'rgba(9,41,86,0.56)', backBorder: 'rgba(255,255,255,0.25)', backBW: 1.5, cardRad: 36,
-                    cardFill: ['#FFFFFF', '#EBF4FF'], cardBorder: '#FFFFFF', cardBW: 2, cardShdOff: 0, cardSoft: 'rgba(6,22,54,0.38)',
-                    cdFill: 'rgba(37,99,235,0.12)', cdText: '#1D4ED8', cdBorder: 'rgba(37,99,235,0.24)', cdBW: 1, cdRad: 999,
+                    chipRad: 999, chipBorder: 'rgba(255,255,255,0.95)', chipBW: 1.5, chipShd: 0, chipPx: 12,
+                    vsep: 'rgba(255,255,255,0.42)', orgSub: '#DBEAFE', rightSub: '#BAE6FD',
+                    dot: 'rgba(255,255,255,0.92)', line: 'rgba(255,255,255,0.60)',
+                    backFill: 'rgba(8,36,78,0.46)', backBorder: null, backBW: 0, backOff: [-12, -5, -5.8], cardRad: 36,
+                    cardFill: ['#FFFFFF', '#EBF4FF'], cardBorder: 'rgba(255,255,255,0.96)', cardBW: 1.5, cardSoft: 'rgba(6,22,54,0.36)',
+                    cdFill: 'rgba(37,99,235,0.11)', cdText: '#1D4ED8', cdBorder: 'rgba(37,99,235,0.20)', cdBW: 1, cdRad: 999,
                     heroCol: '#0F3568',
-                    mnFill: 'rgba(255,255,255,0.22)', mnText: '#FFFFFF', mnBorder: 'rgba(255,255,255,0.65)', mnBW: 1.5, mnShdOff: 0, mnRad: 999,
-                    titleFill: '#0D356F', titleStroke: '#FFFFFF', titleSW: 14, titleShdOff: 0, titleShdCol: null, titleSoft: { col: 'rgba(7,24,58,0.34)', blur: 18, sy: 8 },
+                    mnFill: 'rgba(255,255,255,0.20)', mnText: '#FFFFFF', mnBorder: 'rgba(255,255,255,0.65)', mnBW: 1.5, mnShdOff: 0, mnRad: 999,
+                    titleFill: '#0D356F', titleStroke: '#FFFFFF', titleSW: 15, titleShdOff: 0, titleShdCol: null, titleSoft: { col: 'rgba(7,24,58,0.34)', blur: 18, sy: 8 },
                     mottoCol: '#EFF6FF',
                     schedFill: 'rgba(255,255,255,0.16)', schedText: '#FFFFFF', schedBorder: 'rgba(255,255,255,0.44)', schedBW: 1.5, schedShdOff: 0, schedRad: 999, schedPin: '#FDE047',
-                    socCol: '#FFFFFF', badgeFill: '#FFFFFF', badgeCol: '#16488E', badgeBorder: null, badgeRad: 7
+                    socCol: '#FFFFFF', sepCol: 'rgba(255,255,255,0.50)', badgeFill: '#FFFFFF', badgeCol: '#16488E', badgeBorder: null, badgeRad: 999
                 },
                 'dark-code': {
-                    bgMode: 'solid', bg: '#091529', grid: 'rgba(56,189,248,0.11)',
-                    orbTL: 'rgba(56,189,248,0.24)', orbBR: 'rgba(252,211,77,0.18)',
-                    bloomTL: '#38BDF8', bloomTLOp: 0.48, bloomBR: '#FCD34D', bloomBROp: 0.42, bloomBlur: 12,
+                    bgMode: 'solid', bg: '#091529', vig: 'rgba(4,10,24,0.42)', grid: 'rgba(56,189,248,0.11)',
+                    orbTL: 'rgba(56,189,248,0.24)', orbBR: 'rgba(252,211,77,0.18)', orbBL: 'rgba(56,189,248,0.14)',
+                    bloomKind: 'soft',
+                    bloomTL: '#38BDF8', bloomTLOp: 0.44, bloomTLBlur: 24, bloomBR: '#FCD34D', bloomBROp: 0.38, bloomBRBlur: 20,
                     codeA: 'rgba(56,189,248,0.46)', codeB: 'rgba(252,211,77,0.62)',
-                    chipRad: 8, chipBorder: '#38BDF8', chipBW: 2, chipShd: 0,
+                    chipRad: 10, chipBorder: '#38BDF8', chipBW: 1.5, chipShd: 0, chipPx: 10,
                     vsep: 'rgba(56,189,248,0.45)', orgSub: '#38BDF8', rightSub: '#FCD34D',
                     dot: '#38BDF8', line: 'rgba(56,189,248,0.55)',
-                    backFill: '#14325B', backBorder: 'rgba(56,189,248,0.55)', backBW: 2.5, cardRad: 36,
-                    cardFill: '#F8FAFC', cardBorder: '#38BDF8', cardBW: 3.5, cardShdOff: 0, cardSoft: 'rgba(0,0,0,0.58)',
+                    backFill: '#14325B', backBorder: 'rgba(56,189,248,0.45)', backBW: 2, backOff: [-12, -5, -5.8], cardRad: 36,
+                    cardFill: '#F8FAFC', cardBorder: '#38BDF8', cardBW: 3, cardSoft: 'rgba(0,0,0,0.58)',
                     cdFill: '#0B192E', cdText: '#38BDF8', cdBorder: '#38BDF8', cdBW: 1.5, cdRad: 999,
                     heroCol: '#0B192E',
                     mnFill: '#122645', mnText: '#38BDF8', mnBorder: '#38BDF8', mnBW: 2, mnShdOff: 0, mnRad: 8,
-                    titleFill: '#0B192E', titleStroke: '#FFFFFF', titleSW: 14, titleShdOff: 0, titleShdCol: null, titleSoft: { col: 'rgba(56,189,248,0.42)', blur: 18, sy: 6 },
+                    titleFill: '#0B192E', titleStroke: '#FFFFFF', titleSW: 15, titleShdOff: 0, titleShdCol: null, titleSoft: { col: 'rgba(56,189,248,0.42)', blur: 18, sy: 6 },
                     mottoCol: '#BAE6FD',
                     schedFill: '#122645', schedText: '#FFFFFF', schedBorder: 'rgba(56,189,248,0.55)', schedBW: 1.5, schedShdOff: 0, schedRad: 10, schedPin: '#FCD34D',
-                    socCol: '#F8FAFC', badgeFill: '#38BDF8', badgeCol: '#091529', badgeBorder: null, badgeRad: 7
+                    socCol: '#F8FAFC', sepCol: 'rgba(56,189,248,0.55)', badgeFill: '#38BDF8', badgeCol: '#091529', badgeBorder: null, badgeRad: 999
                 },
                 'modern': {
-                    bgMode: 'radial', stops: [[0, '#2E7BD1'], [0.48, '#16488E'], [1, '#0C2B57']], grid: 'rgba(255,255,255,0.08)',
-                    orbTL: 'rgba(253,211,77,0.22)', orbBR: 'rgba(59,130,246,0.34)',
-                    bloomTL: '#FDD34D', bloomTLOp: 0.62, bloomBR: '#93C5FD', bloomBROp: 0.58, bloomBlur: 11,
+                    bgMode: 'radial', stops: [[0, '#2E7BD1'], [0.48, '#16488E'], [1, '#0C2B57']], vig: 'rgba(6,18,44,0.28)', grid: 'rgba(255,255,255,0.08)',
+                    orbTL: 'rgba(253,211,77,0.22)', orbBR: 'rgba(59,130,246,0.34)', orbBL: 'rgba(253,211,77,0.16)',
+                    bloomKind: 'soft',
+                    bloomTL: '#FDD34D', bloomTLOp: 0.56, bloomTLBlur: 22, bloomBR: '#93C5FD', bloomBROp: 0.54, bloomBRBlur: 18,
                     codeA: 'rgba(255,255,255,0.28)', codeB: 'rgba(253,211,77,0.58)',
-                    chipRad: 10, chipBorder: null, chipBW: 0, chipShd: 0,
+                    chipRad: 999, chipBorder: null, chipBW: 0, chipShd: 0, chipPx: 12,
                     vsep: 'rgba(255,255,255,0.38)', orgSub: '#FDD34D', rightSub: '#CBD5E1',
                     dot: '#FDD34D', line: 'rgba(255,255,255,0.52)',
-                    backFill: 'rgba(9,28,60,0.62)', backBorder: null, backBW: 0, cardRad: 36,
-                    cardFill: '#FFFFFF', cardBorder: null, cardBW: 0, cardShdOff: 0, cardSoft: 'rgba(6,18,42,0.45)',
+                    backFill: 'rgba(9,28,60,0.50)', backBorder: null, backBW: 0, backOff: [-12, -5, -5.8], cardRad: 36,
+                    cardFill: '#FFFFFF', cardBorder: null, cardBW: 0, cardSoft: 'rgba(6,18,42,0.44)',
                     cdFill: '#EFF6FF', cdText: '#16488E', cdBorder: null, cdBW: 0, cdRad: 999,
                     heroCol: '#12305A',
                     mnFill: '#FDD34D', mnText: '#12305A', mnBorder: null, mnBW: 0, mnShdOff: 0, mnRad: 999,
-                    titleFill: '#12305A', titleStroke: '#FFFFFF', titleSW: 14, titleShdOff: 0, titleShdCol: null, titleSoft: { col: 'rgba(6,18,42,0.42)', blur: 22, sy: 10 },
+                    titleFill: '#12305A', titleStroke: '#FFFFFF', titleSW: 15, titleShdOff: 0, titleShdCol: null, titleSoft: { col: 'rgba(6,18,42,0.42)', blur: 22, sy: 10 },
                     mottoCol: '#E2EEFF',
                     schedFill: 'rgba(255,255,255,0.14)', schedText: '#FFFFFF', schedBorder: 'rgba(255,255,255,0.26)', schedBW: 1, schedShdOff: 0, schedRad: 999, schedPin: '#FDD34D',
-                    socCol: '#FFFFFF', badgeFill: '#FFFFFF', badgeCol: '#12305A', badgeBorder: null, badgeRad: 7
+                    socCol: '#FFFFFF', sepCol: 'rgba(255,255,255,0.44)', badgeFill: '#FFFFFF', badgeCol: '#12305A', badgeBorder: null, badgeRad: 999
                 }
             };
 
@@ -6235,7 +6288,7 @@
             const is11 = currentRatio === '1-1';
             const is916 = currentRatio === '9-16';
 
-            // 1. Background
+            // 1. Background + Soft Ambient Orbs
             if (T.bgMode === 'radial') {
                 const rg = ctx.createRadialGradient(W * 0.80, H * 0.18, 0, W * 0.80, H * 0.18, Math.max(W, H) * 0.92);
                 T.stops.forEach(([p, c]) => rg.addColorStop(p, c));
@@ -6251,7 +6304,6 @@
                 ctx.fillRect(0, 0, W, H);
             }
 
-            // Ambient corner light orbs
             const drawOrb = (cx, cy, r, col) => {
                 const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, r);
                 g.addColorStop(0, col);
@@ -6261,19 +6313,38 @@
                 ctx.arc(cx, cy, r, 0, Math.PI * 2);
                 ctx.fill();
             };
-            drawOrb(210, 190, 310, T.orbTL);
-            drawOrb(W - 220, H - 180, 320, T.orbBR);
+            drawOrb(220, 200, 340, T.orbTL);
+            drawOrb(W - 220, H - 180, 340, T.orbBR);
+            drawOrb(120, H - 120, 260, T.orbBL);
 
-            // 2. Square Graph-Grid
-            ctx.strokeStyle = T.grid;
-            ctx.lineWidth = 1;
-            ctx.beginPath();
-            for (let gx = 0; gx <= W; gx += 56) { ctx.moveTo(gx, 0); ctx.lineTo(gx, H); }
-            for (let gy = 0; gy <= H; gy += 56) { ctx.moveTo(0, gy); ctx.lineTo(W, gy); }
-            ctx.stroke();
+            // 2. Masked Square Graph-Grid (smooth radial edge fade)
+            const gridCanv = document.createElement('canvas');
+            gridCanv.width = W;
+            gridCanv.height = H;
+            const gctx = gridCanv.getContext('2d');
+            gctx.strokeStyle = T.grid;
+            gctx.lineWidth = 1;
+            gctx.beginPath();
+            for (let gx = 0; gx <= W; gx += 56) { gctx.moveTo(gx, 0); gctx.lineTo(gx, H); }
+            for (let gy = 0; gy <= H; gy += 56) { gctx.moveTo(0, gy); gctx.lineTo(W, gy); }
+            gctx.stroke();
+            gctx.globalCompositeOperation = 'destination-in';
+            gctx.save();
+            gctx.translate(W * 0.50, H * 0.48);
+            gctx.scale(1, (H * 0.86) / (W * 0.92));
+            const mg = gctx.createRadialGradient(0, 0, W * 0.16, 0, 0, W * 0.54);
+            mg.addColorStop(0, 'rgba(0,0,0,0.96)');
+            mg.addColorStop(0.75, 'rgba(0,0,0,0.28)');
+            mg.addColorStop(1, 'rgba(0,0,0,0.06)');
+            gctx.fillStyle = mg;
+            gctx.beginPath();
+            gctx.arc(0, 0, W * 0.65, 0, Math.PI * 2);
+            gctx.fill();
+            gctx.restore();
+            ctx.drawImage(gridCanv, 0, 0);
 
-            // 3. Two 4-Petal Sparkle Blooms (top-left & bottom-right)
-            const drawBloom = (bx, by, size, rotDeg, col, op, blurPx) => {
+            // 3. Soft Clover Light Blooms OR Crisp Flat Mini Star Pairs
+            const drawSoftClover = (bx, by, size, rotDeg, rx1, ry1, col, op, blurPx) => {
                 ctx.save();
                 ctx.translate(bx + size / 2, by + size / 2);
                 ctx.rotate((rotDeg * Math.PI) / 180);
@@ -6282,31 +6353,73 @@
                 ctx.globalAlpha = op;
                 if (blurPx > 0) ctx.filter = `blur(${blurPx}px)`;
                 ctx.fillStyle = col;
-                ctx.beginPath();
-                ctx.moveTo(100, 12);
-                ctx.quadraticCurveTo(118, 82, 188, 100);
-                ctx.quadraticCurveTo(118, 118, 100, 188);
-                ctx.quadraticCurveTo(82, 118, 12, 100);
-                ctx.quadraticCurveTo(82, 82, 100, 12);
-                ctx.closePath();
-                ctx.fill();
+                [
+                    [100, 100 - (100 - ry1), rx1, ry1],
+                    [100, 100 + (100 - ry1), rx1, ry1],
+                    [100 - (100 - ry1), 100, ry1, rx1],
+                    [100 + (100 - ry1), 100, ry1, rx1]
+                ].forEach(([cx, cy, ex, ey]) => {
+                    ctx.beginPath();
+                    ctx.ellipse(cx, cy, ex, ey, 0, 0, Math.PI * 2);
+                    ctx.fill();
+                });
                 ctx.restore();
             };
-            const bTL = is916 ? { x: -44, y: 130, s: 340 } : (is11 ? { x: -36, y: 72, s: 240 } : { x: -44, y: 90, s: 300 });
-            const bBR = is916 ? { x: W - 280 + 36, y: H - 84 - 280, s: 280 } : (is11 ? { x: W - 205 + 28, y: H - 30 - 205, s: 205 } : { x: W - 245 + 36, y: H - 44 - 245, s: 245 });
-            drawBloom(bTL.x, bTL.y, bTL.s, -14, T.bloomTL, T.bloomTLOp, T.bloomBlur);
-            drawBloom(bBR.x, bBR.y, bBR.s, 10, T.bloomBR, T.bloomBROp, T.bloomBlur);
+
+            const drawStarPair = (bx, by, size, isTL, cfg) => {
+                const traceStar = (cx, cy, rOut, rIn, rotD) => {
+                    ctx.save();
+                    ctx.translate(cx, cy);
+                    ctx.rotate((rotD * Math.PI) / 180);
+                    ctx.beginPath();
+                    ctx.moveTo(0, -rOut);
+                    ctx.quadraticCurveTo(rIn, -rIn, rOut, 0);
+                    ctx.quadraticCurveTo(rIn, rIn, 0, rOut);
+                    ctx.quadraticCurveTo(-rIn, rIn, -rOut, 0);
+                    ctx.quadraticCurveTo(-rIn, -rIn, 0, -rOut);
+                    ctx.closePath();
+                    ctx.restore();
+                };
+                ctx.save();
+                ctx.translate(bx, by);
+                ctx.scale(size / 200, size / 200);
+                ctx.lineJoin = 'round';
+                ctx.lineWidth = cfg.sw;
+                ctx.strokeStyle = '#000000';
+                if (isTL) {
+                    traceStar(84, 89, 61, 11, -12);
+                    ctx.fillStyle = cfg.m; ctx.fill(); ctx.stroke();
+                    traceStar(150, 149, 23, 5, 8);
+                    ctx.fillStyle = cfg.c; ctx.fill(); ctx.stroke();
+                } else {
+                    traceStar(116, 100, 54, 10, 10);
+                    ctx.fillStyle = cfg.m; ctx.fill(); ctx.stroke();
+                    traceStar(46, 54, 22, 5, -10);
+                    ctx.fillStyle = cfg.c; ctx.fill(); ctx.stroke();
+                }
+                ctx.restore();
+            };
+
+            const bTL = is916 ? { x: -24, y: 136, s: 295 } : (is11 ? { x: -20, y: 76, s: 210 } : { x: -26, y: 96, s: 260 });
+            const bBR = is916 ? { x: W - 250 + 18, y: H - 88 - 250, s: 250 } : (is11 ? { x: W - 185 + 16, y: H - 34 - 185, s: 185 } : { x: W - 220 + 20, y: H - 52 - 220, s: 220 });
+            if (T.bloomKind === 'soft') {
+                drawSoftClover(bTL.x, bTL.y, bTL.s, -16, 28, 44, T.bloomTL, T.bloomTLOp, T.bloomTLBlur);
+                drawSoftClover(bBR.x, bBR.y, bBR.s, 14, 26, 42, T.bloomBR, T.bloomBROp, T.bloomBRBlur);
+            } else {
+                drawStarPair(bTL.x, bTL.y, bTL.s, true, T.starTL);
+                drawStarPair(bBR.x, bBR.y, bBR.s, false, T.starBR);
+            }
 
             // 4. Subtle Code Accents
             if (showAccents) {
-                const topAccY = is916 ? 0.30 * H : (is11 ? 0.30 * H : 0.32 * H);
+                const topAccY = is916 ? 0.32 * H : (is11 ? 0.31 * H : 0.34 * H);
                 const topRightY = is916 ? 0.21 * H : (is11 ? 0.18 * H : 0.22 * H);
                 const botAccY = is916 ? 0.79 * H : (is11 ? 0.82 * H : 0.77 * H);
                 const accList = [
-                    ['>_', 72, topAccY + 18, -10, 36, T.codeA],
+                    ['>_', 72, topAccY + 17, -10, 34, T.codeA],
                     ['</>', W - 82, topRightY + 18, 9, 32, T.codeB],
-                    ['{ }', 82, botAccY - 12, 8, 36, T.codeB],
-                    ['01;', W - 82, botAccY + 18, -10, 32, T.codeA]
+                    ['{ }', 82, botAccY - 12, 8, 34, T.codeB],
+                    ['01;', W - 82, botAccY + 18, -10, 30, T.codeA]
                 ];
                 accList.forEach(([txt, ax, ay, rot, fs, col]) => {
                     ctx.save();
@@ -6321,7 +6434,6 @@
                 });
             }
 
-            // Helper: hairline rule with circle dot end-caps
             const drawHairline = (x1, x2, y) => {
                 ctx.fillStyle = T.dot;
                 ctx.beginPath(); ctx.arc(x1 + 3, y, 3, 0, Math.PI * 2); ctx.fill();
@@ -6333,9 +6445,9 @@
             // 5. Top Editorial Header + Hairline Rule
             const sidePad = is916 ? 60 : (is11 ? 48 : 56);
             const topPad = is916 ? 72 : (is11 ? 30 : 44);
-            const logoS = is916 ? 38 : (is11 ? 28 : 34);
+            const logoS = is916 ? 36 : (is11 ? 27 : 32);
             const chipH = logoS + 10;
-            const chipW = logoS * 3 + 16 + 16;
+            const chipW = logoS * 3 + 16 + T.chipPx * 2;
             const chipY = topPad;
 
             if (T.chipShd > 0) {
@@ -6357,9 +6469,9 @@
                 const sc = Math.min(logoS / img.width, logoS / img.height);
                 ctx.drawImage(img, ix + (logoS - img.width * sc) / 2, iy + (logoS - img.height * sc) / 2, img.width * sc, img.height * sc);
             };
-            drawTrioLogo(sidePad + 8, chipY + 5, himaImg);
-            drawTrioLogo(sidePad + 8 + logoS + 8, chipY + 5, kabinetImg);
-            drawTrioLogo(sidePad + 8 + (logoS + 8) * 2, chipY + 5, lpkiaImg);
+            drawTrioLogo(sidePad + T.chipPx, chipY + 5, himaImg);
+            drawTrioLogo(sidePad + T.chipPx + logoS + 8, chipY + 5, kabinetImg);
+            drawTrioLogo(sidePad + T.chipPx + (logoS + 8) * 2, chipY + 5, lpkiaImg);
 
             const midHdrY = chipY + chipH / 2;
             const sepX = sidePad + chipW + 14;
@@ -6375,18 +6487,18 @@
             const topRuleY = chipY + chipH + 18;
             drawHairline(sidePad, W - sidePad, topRuleY);
 
-            // 6. Bottom Social Row + Hairline Rule
+            // 6. Bottom Social Row + Separator + Hairline Rule
             const botPad = is916 ? 72 : (is11 ? 28 : 42);
             const botRuleY = H - botPad - 4;
             drawHairline(sidePad, W - sidePad, botRuleY);
 
-            const socY = botRuleY - 29;
+            const socY = botRuleY - 30;
             ctx.font = '700 18px "Plus Jakarta Sans", sans-serif';
             const igTxtW = ctx.measureText(E.igHandle).width + 0.36 * E.igHandle.length;
             const ctaTxtW = ctx.measureText(E.cta).width + 0.36 * E.cta.length;
             const item1W = 28 + 9 + igTxtW;
             const item2W = 28 + 9 + ctaTxtW;
-            const socTotalW = item1W + 34 + item2W;
+            const socTotalW = item1W + 24 + 1.5 + 24 + item2W;
             let sx = W / 2 - socTotalW / 2;
 
             const drawSocBadge = (bx, by, kind) => {
@@ -6409,27 +6521,31 @@
 
             drawSocBadge(sx, socY, 'ig');
             drawTextTrack(E.igHandle, sx + 37, socY + 1, '700 18px "Plus Jakarta Sans", sans-serif', T.socCol, 0.36, 'left');
-            sx += item1W + 34;
+            sx += item1W + 24;
+            ctx.fillStyle = T.sepCol;
+            ctx.fillRect(sx, socY - 9, 1.5, 18);
+            sx += 25.5;
             drawSocBadge(sx, socY, 'web');
             drawTextTrack(E.cta, sx + 37, socY + 1, '700 18px "Plus Jakarta Sans", sans-serif', T.socCol, 0.36, 'left');
 
-            // 7. Vertical Layout Math for Center Pinned Note + Outlined Title Block
+            // 7. Vertical Layout Math for Pinned Note + Smooth Rounded Outlined Title Block
             const cardW = is916 ? 760 : (is11 ? 630 : 720);
             const cardH = is916 ? 470 : (is11 ? 350 : 430);
             const cardRad = is11 ? Math.min(T.cardRad, 28) : T.cardRad;
-            const backOffX = is11 ? -14 : -18;
-            const backOffY = is11 ? -10 : -12;
-            const infoGap = is916 ? 72 : (is11 ? 34 : 52);
+            const [rawBx, rawBy, backDeg] = T.backOff;
+            const backOffX = is11 ? Math.round(rawBx * 0.8) : rawBx;
+            const backOffY = is11 ? Math.round(rawBy * 0.8) : rawBy;
+            const infoGap = is916 ? 68 : (is11 ? 32 : 50);
             const marginT = is916 ? 24 : (is11 ? 10 : 18);
 
             const mnH = E.isCS ? 0 : (is11 ? 26 : 30);
-            const gap1 = E.isCS ? 0 : (is11 ? 6 : (is916 ? 14 : 10));
-            const titleH = M.titleFs * 1.02;
-            const mottoH = (is916 ? 26 : (is11 ? 20 : 24)) * 1.3;
+            const gap1 = E.isCS ? 0 : (is11 ? 5 : (is916 ? 12 : 8));
+            const titleBoxH = is11 ? 96 : 112;
+            const mottoH = (is916 ? 25 : (is11 ? 20 : 23)) * 1.3;
             const schedH = E.isCS ? 0 : (is916 ? 46 : (is11 ? 32 : 40));
-            const gap2 = is11 ? 8 : (is916 ? 16 : 12);
-            const schedGap = E.isCS ? 0 : (is11 ? 10 : (is916 ? 26 : 18));
-            const infoTotalH = mnH + gap1 + titleH + gap2 + mottoH + schedGap + schedH;
+            const gap2 = is11 ? 5 : (is916 ? 12 : 8);
+            const schedGap = E.isCS ? 0 : (is11 ? 9 : (is916 ? 24 : 16));
+            const infoTotalH = mnH + gap1 + titleBoxH + gap2 + mottoH + schedGap + schedH;
             const totalStageH = marginT + cardH + infoGap + infoTotalH;
 
             const midAreaTop = topRuleY + 8;
@@ -6439,10 +6555,10 @@
             const cardCX = W / 2;
             const cardCY = startY + marginT + cardH / 2;
 
-            // Back Silhouette Card
+            // Back Silhouette Plate
             ctx.save();
             ctx.translate(cardCX + backOffX, cardCY + backOffY);
-            ctx.rotate((-4.5 * Math.PI) / 180);
+            ctx.rotate((backDeg * Math.PI) / 180);
             ctx.fillStyle = T.backFill;
             rrPath(-cardW / 2, -cardH / 2, cardW, cardH, cardRad);
             ctx.fill();
@@ -6454,21 +6570,16 @@
             }
             ctx.restore();
 
-            // Main Tilted White Note Card (-4.5deg)
+            // Main Tilted White Note Card (-4.2deg)
             ctx.save();
             ctx.translate(cardCX, cardCY);
-            ctx.rotate((-4.5 * Math.PI) / 180);
+            ctx.rotate((-4.2 * Math.PI) / 180);
 
-            if (T.cardShdOff > 0) {
-                ctx.fillStyle = '#000000';
-                rrPath(-cardW / 2 + T.cardShdOff, -cardH / 2 + T.cardShdOff, cardW, cardH, cardRad);
-                ctx.fill();
-            }
             ctx.save();
             if (T.cardSoft) {
                 ctx.shadowColor = T.cardSoft;
-                ctx.shadowBlur = 54;
-                ctx.shadowOffsetY = 28;
+                ctx.shadowBlur = 52;
+                ctx.shadowOffsetY = 26;
             }
             if (Array.isArray(T.cardFill)) {
                 const cg = ctx.createLinearGradient(-cardW / 2, -cardH / 2, cardW / 2, cardH / 2);
@@ -6489,29 +6600,32 @@
                 ctx.stroke();
             }
 
-            // Countdown Eyebrow Cue inside Card
+            // Unified Centered Inner Block: Eyebrow Cue + Hero
             const cdFs = is916 ? 17 : (is11 ? 14 : 16);
-            const cdY = -cardH / 2 + (is916 ? 30 : (is11 ? 18 : 26)) + cdFs * 0.72;
+            const innerGap = is916 ? 16 : (is11 ? 10 : 14);
+            const cdBoxH = is11 ? 25 : (is916 ? 30 : 28);
+            const heroLineH = M.heroFs * 0.88;
+            const heroBlockH = M.heroLines.length * heroLineH;
+            const innerTotalH = cdBoxH + innerGap + heroBlockH;
+            const cdCenterY = -innerTotalH / 2 + cdBoxH / 2;
+
             ctx.font = `800 ${cdFs}px "JetBrains Mono", monospace`;
             const cdTrack = 0.22 * cdFs;
             const cdTxtW = ctx.measureText(M.cdTxt).width + cdTrack * Math.max(0, M.cdTxt.length - 1);
-            const cdPadX = is11 ? 13 : 16;
+            const cdPadX = is11 ? 14 : (is916 ? 20 : 18);
             const cdBoxW = cdTxtW + cdPadX * 2;
-            const cdBoxH = is11 ? 24 : 28;
             ctx.fillStyle = T.cdFill;
-            rrPath(-cdBoxW / 2, cdY - cdBoxH / 2, cdBoxW, cdBoxH, T.cdRad);
+            rrPath(-cdBoxW / 2, cdCenterY - cdBoxH / 2, cdBoxW, cdBoxH, T.cdRad);
             ctx.fill();
             if (T.cdBW > 0 && T.cdBorder) {
                 ctx.lineWidth = T.cdBW;
                 ctx.strokeStyle = T.cdBorder;
-                rrPath(-cdBoxW / 2, cdY - cdBoxH / 2, cdBoxW, cdBoxH, T.cdRad);
+                rrPath(-cdBoxW / 2, cdCenterY - cdBoxH / 2, cdBoxW, cdBoxH, T.cdRad);
                 ctx.stroke();
             }
-            drawTextTrack(M.cdTxt, 0, cdY + 1, `800 ${cdFs}px "JetBrains Mono", monospace`, T.cdText, cdTrack, 'center');
+            drawTextTrack(M.cdTxt, 0, cdCenterY + 1, `800 ${cdFs}px "JetBrains Mono", monospace`, T.cdText, cdTrack, 'center');
 
-            // Giant Card Hero (H-7 or stacked COMING / SOON)
-            const heroLineH = M.heroFs * 0.88;
-            const heroStartY = 8 - ((M.heroLines.length - 1) * heroLineH) / 2;
+            const heroStartY = -innerTotalH / 2 + cdBoxH + innerGap + heroLineH / 2;
             M.heroLines.forEach((line, idx) => {
                 drawTextTrack(
                     line,
@@ -6524,93 +6638,76 @@
                 );
             });
 
-            // Needle puncture shadow + angled paper shadow on top-right corner
-            const pinX = cardW / 2 - 38;
-            const pinY = -cardH / 2 + 32;
-            ctx.save();
-            ctx.translate(pinX, pinY);
-            ctx.rotate((-34 * Math.PI) / 180);
-            const cShd = ctx.createLinearGradient(-56, 0, 0, 0);
-            cShd.addColorStop(0, 'rgba(15,23,42,0)');
-            cShd.addColorStop(1, 'rgba(15,23,42,0.16)');
-            ctx.fillStyle = cShd;
-            rrPath(-56, -7, 56, 14, 7);
-            ctx.fill();
-            ctx.restore();
-
-            const pMark = ctx.createRadialGradient(pinX, pinY, 0, pinX, pinY, 10);
+            // Soft Paper Dent Shadow + 3D Glossy Red Pushpin inward at (cardW/2 - 52, -cardH/2 + 40)
+            const pinX = cardW / 2 - 52;
+            const pinY = -cardH / 2 + 40;
+            const pMark = ctx.createRadialGradient(pinX, pinY, 0, pinX, pinY, 12);
             pMark.addColorStop(0, 'rgba(15,23,42,0.34)');
-            pMark.addColorStop(0.55, 'rgba(15,23,42,0.10)');
+            pMark.addColorStop(0.48, 'rgba(15,23,42,0.12)');
             pMark.addColorStop(1, 'rgba(15,23,42,0)');
             ctx.fillStyle = pMark;
             ctx.beginPath();
-            ctx.arc(pinX, pinY, 10, 0, Math.PI * 2);
+            ctx.arc(pinX, pinY, 12, 0, Math.PI * 2);
             ctx.fill();
 
-            // 3D Red Pushpin anchored at (pinX, pinY) leaning +38deg
-            const pinScale = is916 ? 1.16 : (is11 ? 0.94 : 1.10);
+            const pinScale = is916 ? 1.18 : (is11 ? 0.95 : 1.12);
             ctx.save();
             ctx.translate(pinX, pinY);
             ctx.scale(pinScale, pinScale);
-            ctx.rotate((38 * Math.PI) / 180);
-            ctx.shadowColor = 'rgba(0,0,0,0.28)';
+            ctx.rotate((36 * Math.PI) / 180);
+            ctx.shadowColor = 'rgba(8,22,52,0.28)';
             ctx.shadowBlur = 10;
-            ctx.shadowOffsetX = -4;
-            ctx.shadowOffsetY = 8;
+            ctx.shadowOffsetX = -7;
+            ctx.shadowOffsetY = 10;
 
-            // Tapered Steel Needle
             const gStl = ctx.createLinearGradient(-3, 0, 3, 0);
-            gStl.addColorStop(0, '#F1F5F9'); gStl.addColorStop(0.55, '#94A3B8'); gStl.addColorStop(1, '#475569');
+            gStl.addColorStop(0, '#F8FAFC'); gStl.addColorStop(0.52, '#94A3B8'); gStl.addColorStop(1, '#475569');
             ctx.fillStyle = gStl;
-            ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(-2.6, -30); ctx.lineTo(2.6, -30); ctx.closePath(); ctx.fill();
+            ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(-2.8, -30); ctx.lineTo(2.8, -30); ctx.closePath(); ctx.fill();
 
-            // Under-collar shadow
-            ctx.fillStyle = 'rgba(69,10,10,0.85)';
-            ctx.beginPath(); ctx.ellipse(0, -29, 28, 11, 0, 0, Math.PI * 2); ctx.fill();
+            ctx.fillStyle = 'rgba(69,10,10,0.88)';
+            ctx.beginPath(); ctx.ellipse(0, -29, 29, 11.5, 0, 0, Math.PI * 2); ctx.fill();
 
-            // Flared Bottom Collar
-            const gDisc = ctx.createLinearGradient(-30, -46, 30, -22);
-            gDisc.addColorStop(0, '#FF7B7B'); gDisc.addColorStop(0.45, '#DC2626'); gDisc.addColorStop(1, '#7F1D1D');
-            ctx.fillStyle = gDisc; ctx.strokeStyle = '#991B1B'; ctx.lineWidth = 1.2;
-            ctx.beginPath(); ctx.ellipse(0, -34, 30, 12.5, 0, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+            const gDisc = ctx.createLinearGradient(-31, -47, 31, -21);
+            gDisc.addColorStop(0, '#FF8585'); gDisc.addColorStop(0.48, '#DC2626'); gDisc.addColorStop(1, '#7F1D1D');
+            ctx.fillStyle = gDisc; ctx.strokeStyle = '#991B1B'; ctx.lineWidth = 1;
+            ctx.beginPath(); ctx.ellipse(0, -34, 31, 13, 0, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
 
             ctx.shadowColor = 'transparent';
-            ctx.strokeStyle = 'rgba(255,255,255,0.55)'; ctx.lineWidth = 2; ctx.lineCap = 'round';
-            ctx.beginPath(); ctx.ellipse(0, -36, 22, 8, 0, Math.PI * 1.15, Math.PI * 1.80); ctx.stroke();
+            ctx.strokeStyle = 'rgba(255,255,255,0.62)'; ctx.lineWidth = 2.2; ctx.lineCap = 'round';
+            ctx.beginPath(); ctx.ellipse(0, -36, 23, 8.5, 0, Math.PI * 1.15, Math.PI * 1.82); ctx.stroke();
 
-            // Hourglass Neck
-            const gStm = ctx.createLinearGradient(-21, 0, 21, 0);
-            gStm.addColorStop(0, '#FCA5A5'); gStm.addColorStop(0.28, '#EF4444'); gStm.addColorStop(0.72, '#DC2626'); gStm.addColorStop(1, '#7F1D1D');
-            ctx.fillStyle = gStm; ctx.strokeStyle = '#991B1B'; ctx.lineWidth = 1;
+            const gStm = ctx.createLinearGradient(-21.5, 0, 21.5, 0);
+            gStm.addColorStop(0, '#FCA5A5'); gStm.addColorStop(0.30, '#EF4444'); gStm.addColorStop(0.72, '#DC2626'); gStm.addColorStop(1, '#7F1D1D');
+            ctx.fillStyle = gStm; ctx.strokeStyle = '#991B1B'; ctx.lineWidth = 0.9;
             ctx.beginPath();
-            ctx.moveTo(-19, -37);
-            ctx.bezierCurveTo(-12, -48, -11, -61, -21, -76);
-            ctx.lineTo(21, -76);
-            ctx.bezierCurveTo(11, -61, 12, -48, 19, -37);
+            ctx.moveTo(-19.5, -37);
+            ctx.bezierCurveTo(-12.5, -48, -11.5, -61, -21.5, -77);
+            ctx.lineTo(21.5, -77);
+            ctx.bezierCurveTo(11.5, -61, 12.5, -48, 19.5, -37);
             ctx.closePath();
             ctx.fill();
             ctx.stroke();
 
-            ctx.strokeStyle = 'rgba(255,255,255,0.52)'; ctx.lineWidth = 3.2;
+            ctx.strokeStyle = 'rgba(255,255,255,0.58)'; ctx.lineWidth = 3.5;
             ctx.beginPath();
-            ctx.moveTo(-10, -42);
-            ctx.bezierCurveTo(-7, -52, -7, -61, -12, -72);
+            ctx.moveTo(-10.5, -42);
+            ctx.bezierCurveTo(-7.5, -52, -7.5, -61, -12.5, -73);
             ctx.stroke();
 
-            // Top Glossy Crown
             ctx.fillStyle = '#991B1B';
-            ctx.beginPath(); ctx.ellipse(0, -74, 25, 11, 0, 0, Math.PI * 2); ctx.fill();
-            const gCap = ctx.createLinearGradient(-25, -88, 25, -68);
-            gCap.addColorStop(0, '#FCA5A5'); gCap.addColorStop(0.42, '#EF4444'); gCap.addColorStop(1, '#B91C1C');
-            ctx.fillStyle = gCap; ctx.strokeStyle = '#FCA5A5'; ctx.lineWidth = 1;
-            ctx.beginPath(); ctx.ellipse(0, -78, 25, 10.5, 0, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
-            ctx.strokeStyle = 'rgba(255,255,255,0.85)'; ctx.lineWidth = 2.4;
-            ctx.beginPath(); ctx.ellipse(0, -78, 18, 6.8, 0, Math.PI * 1.12, Math.PI * 1.82); ctx.stroke();
+            ctx.beginPath(); ctx.ellipse(0, -74, 26, 11.5, 0, 0, Math.PI * 2); ctx.fill();
+            const gCap = ctx.createLinearGradient(-26, -89, 26, -67);
+            gCap.addColorStop(0, '#FECACA'); gCap.addColorStop(0.36, '#EF4444'); gCap.addColorStop(1, '#991B1B');
+            ctx.fillStyle = gCap; ctx.strokeStyle = '#FCA5A5'; ctx.lineWidth = 0.9;
+            ctx.beginPath(); ctx.ellipse(0, -78, 26, 11, 0, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+            ctx.strokeStyle = 'rgba(255,255,255,0.88)'; ctx.lineWidth = 2.6;
+            ctx.beginPath(); ctx.ellipse(0, -78, 19, 7, 0, Math.PI * 1.12, Math.PI * 1.82); ctx.stroke();
 
             ctx.restore();
             ctx.restore();
 
-            // 8. Info Stack below card (MENUJU badge, Outlined Title, Motto, Schedule)
+            // 8. Info Stack below card (MENUJU badge, Smooth Round-Stroked Title, Motto, Schedule)
             let curY = startY + marginT + cardH + infoGap;
             if (!E.isCS && mnH > 0) {
                 const mFs = is11 ? 14 : 17;
@@ -6639,10 +6736,10 @@
                 curY += mnH + gap1;
             }
 
-            // Outlined Event Title (paint-order: stroke fill)
-            const tCenterY = curY + titleH / 2;
+            // Smooth Round-Join Outlined Event Title (identical to #l5TitleSvg)
+            const tCenterY = curY + titleBoxH / 2;
             const tFont = `400 ${M.titleFs}px "Archivo Black", "Space Grotesk", sans-serif`;
-            const tTrack = 0.02 * M.titleFs;
+            const tTrack = M.titleTrack;
             ctx.save();
             ctx.font = tFont;
             ctx.textBaseline = 'middle';
@@ -6672,10 +6769,9 @@
             paintTitle(0, 0, null, T.titleFill);
             ctx.restore();
 
-            curY += titleH + gap2;
+            curY += titleBoxH + gap2;
 
-            // Motto
-            const mottoFs = is916 ? 26 : (is11 ? 20 : 24);
+            const mottoFs = is916 ? 25 : (is11 ? 20 : 23);
             drawTextTrack(
                 '“Dari Ilmu, Menjadi Karya.”',
                 W / 2,
@@ -6687,7 +6783,6 @@
             );
             curY += mottoH;
 
-            // Schedule + Location pill (hidden in Coming Soon)
             if (!E.isCS && schedH > 0) {
                 curY += schedGap;
                 const scFs = is916 ? 20 : (is11 ? 15.5 : 18);
@@ -6729,7 +6824,6 @@
 
             return canvas;
         }
-
         async function downloadPng() {
             const btn = document.getElementById('btnDownload');
             btn.disabled = true;
