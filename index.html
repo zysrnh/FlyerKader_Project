@@ -105,10 +105,14 @@
         .poster-canvas.layout-5 .layout-4-root { display: none !important; }
         .poster-canvas.layout-5 .layout-5-root { display: flex !important; }
 
-        /* Mode Coming Soon (berlaku di Layout 1, 2, 3 & 4 — tanpa tanggal/lokasi) */
+        /* Mode Coming Soon / Hide Schedule (berlaku di Layout 1, 2, 3, 4 & 5) */
         .poster-canvas.mode-coming-soon .layout-1-root .menuju-box,
         .poster-canvas.mode-coming-soon .layout-1-root .sched-grid,
-        .poster-canvas.mode-coming-soon .layout-3-root .l3-countdown-only { display: none !important; }
+        .poster-canvas.mode-coming-soon .layout-3-root .l3-countdown-only,
+        .poster-canvas.hide-schedule .layout-1-root .sched-grid,
+        .poster-canvas.hide-schedule .layout-3-root .l3-countdown-only,
+        .poster-canvas.hide-schedule .layout-4-root .l4-loc,
+        .poster-canvas.hide-schedule .layout-5-root .l5-sched-row { display: none !important; }
 
         .l2-bg-wall {
             position: absolute;
@@ -3056,6 +3060,13 @@
                 </div>
 
                 <div class="flex items-center justify-between gap-2 bg-[#0B192E] border-2 border-black px-3 py-2">
+                    <span class="text-xs font-bold text-white">Jadwal &amp; Lokasi</span>
+                    <button type="button" onclick="toggleSchedule()" id="btnSchedule" class="px-2.5 py-1 bg-[#CA2C2A] text-white border border-black text-[10px] font-extrabold uppercase cursor-pointer">
+                        OFF
+                    </button>
+                </div>
+
+                <div class="flex items-center justify-between gap-2 bg-[#0B192E] border-2 border-black px-3 py-2">
                     <span class="text-xs font-bold text-white">Simbol Koding (&gt;_ &lt;/&gt;)</span>
                     <button type="button" onclick="toggleAccents()" id="btnAccents" class="px-2.5 py-1 bg-[#15803d] text-white border border-black text-[10px] font-extrabold uppercase cursor-pointer">
                         ON
@@ -4360,6 +4371,7 @@
         let posterMode = 'countdown';
         let zoomSetting = 'fit';
         let showAccents = true;
+        let showSchedule = false;
         let customLogo3DataUrl = null;
         let livePhotoDataUrl = null;
 
@@ -4714,6 +4726,7 @@
             if (canvas) {
                 canvas.classList.toggle('mode-coming-soon', E.isCS);
                 canvas.classList.toggle('mode-live-report', E.isLR);
+                canvas.classList.toggle('hide-schedule', !showSchedule);
             }
 
             const modeLbl = document.getElementById('lblActiveMode');
@@ -4724,7 +4737,7 @@
             const schedWrapEl = document.getElementById('scheduleFieldsWrap');
             if (heroWrap) heroWrap.classList.toggle('opacity-50', E.isCS || E.isLR);
             if (cdWrap) cdWrap.classList.toggle('opacity-50', E.isCS);
-            if (schedWrapEl) schedWrapEl.classList.toggle('opacity-40', E.isLR && !E.isCS);
+            if (schedWrapEl) schedWrapEl.classList.toggle('opacity-40', !showSchedule || (E.isLR && !E.isCS));
             if (lrWrap) lrWrap.classList.toggle('hidden', !E.isLR);
 
             document.querySelectorAll('.lr-hole').forEach((hole) => {
@@ -5380,7 +5393,9 @@
                     ? `${E.liveTopic} • ${toTitleCase(E.title)} HIMA IF`
                     : (E.isCS
                         ? `Coming Soon — ${toTitleCase(E.title)} HIMA IF! Stay tuned!`
-                        : `${toTitleCase(E.title)} HIMA IF • ${toTitleCase(E.date)} (${E.time})`),
+                        : (showSchedule
+                            ? `${toTitleCase(E.title)} HIMA IF • ${toTitleCase(E.date)} (${E.time})`
+                            : `${toTitleCase(E.title)} HIMA Informatika IDE LPKIA`)),
                 badgeFs: r === '9-16' ? 29 : (r === '1-1' ? 22 : 26),
                 badgePy: r === '9-16' ? 9 : (r === '1-1' ? 7 : 8),
                 badgePx: r === '9-16' ? 28 : (r === '1-1' ? 22 : 26),
@@ -5660,6 +5675,17 @@
             syncAllDom();
         }
 
+        function toggleSchedule() {
+            showSchedule = !showSchedule;
+            const btn = document.getElementById('btnSchedule');
+            if (btn) {
+                btn.textContent = showSchedule ? 'ON' : 'OFF';
+                btn.classList.toggle('bg-[#15803d]', showSchedule);
+                btn.classList.toggle('bg-[#CA2C2A]', !showSchedule);
+            }
+            syncAllDom();
+        }
+
         function toggleAccents() {
             showAccents = !showAccents;
             const btn = document.getElementById('btnAccents');
@@ -5691,6 +5717,7 @@
             setHeroPreset('H-7');
             clearLogo3();
             if (!showAccents) toggleAccents();
+            if (showSchedule) toggleSchedule();
             syncAllDom();
             setZoomMode('fit');
         }
@@ -6495,7 +6522,7 @@
             const ctaTxt = E.cta;
 
             let dateCardY = ctaY;
-            if (!E.isCS && !E.isLR) {
+            if (!E.isCS && !E.isLR && showSchedule) {
                 const botH = 48 + sCfg.botPy * 2;
                 const botY = ctaY - sCfg.wrapGap - botH;
 
@@ -8068,7 +8095,7 @@
                 ? computeFitFont(E.liveTopic, is916 ? 52 : (is11 ? 36 : 46), 28, '400', '"Archivo Black", "Space Grotesk", sans-serif', 0.02, 960)
                 : 0;
             const capGap = E.isLR ? (is11 ? 6 : 10) : (is11 ? 20 : 28);
-            const capBlockH = E.isLR ? (Math.round(l3TopicFs * 1.04) + 36) : (E.isCS ? 58 : 132);
+            const capBlockH = E.isLR ? (Math.round(l3TopicFs * 1.04) + 36) : ((E.isCS || !showSchedule) ? 58 : 132);
             const totalMidH = bDim.bodyH + bDim.tailH + capGap + capBlockH;
             const areaTop = topPad.y + pillH;
             const areaBot = dockY;
@@ -8441,7 +8468,7 @@
                 drawTextTrack('Institut Digital Ekonomi LPKIA', W / 2, capY + capOff + 41, `600 21px ${L.capFont}`, L.capCol, 0, 'center');
             }
 
-            if (!E.isCS && !E.isLR) {
+            if (!E.isCS && !E.isLR && showSchedule) {
                 const dtTxt = `${E.date} • ${E.time}`;
                 drawTextTrack(dtTxt, W / 2, capY + capOff + 76, `700 19px ${L.dateFont}`, L.dateCol, 1.4, 'center');
 
@@ -9249,7 +9276,7 @@
                 const leadW = ctx.measureText(capLead).width;
                 drawTextTrack(capLead, cx0 + 24, fY + 83, `800 16px ${L.uiFam}`, L.cardText, 0, 'left');
                 drawTextTrack(M.caption, cx0 + 24 + leadW, fY + 83, `600 16px ${L.uiFam}`, L.cardText, 0, 'left');
-                if (!E.isCS) {
+                if (!E.isCS && showSchedule) {
                     const px = cx0 + 24;
                     const py = fY + 108;
                     ctx.save();
@@ -10093,9 +10120,9 @@
             const gap1 = (E.isCS || E.isLR) ? 0 : (is11 ? 5 : (is916 ? 12 : 8));
             const titleBoxH = is11 ? 96 : 112;
             const mottoH = E.isLR ? 0 : ((is916 ? 25 : (is11 ? 20 : 23)) * 1.3);
-            const schedH = (E.isCS || E.isLR) ? 0 : (is916 ? 46 : (is11 ? 32 : 40));
+            const schedH = (E.isCS || E.isLR || !showSchedule) ? 0 : (is916 ? 46 : (is11 ? 32 : 40));
             const gap2 = E.isLR ? 0 : (is11 ? 5 : (is916 ? 12 : 8));
-            const schedGap = (E.isCS || E.isLR) ? 0 : (is11 ? 9 : (is916 ? 24 : 16));
+            const schedGap = (E.isCS || E.isLR || !showSchedule) ? 0 : (is11 ? 9 : (is916 ? 24 : 16));
             const infoTotalH = mnH + gap1 + titleBoxH + gap2 + mottoH + schedGap + schedH;
             const totalStageH = marginT + cardH + infoGap + infoTotalH;
 
@@ -10379,7 +10406,7 @@
                 curY += mottoH;
             }
 
-            if (!E.isCS && !E.isLR && schedH > 0) {
+            if (!E.isCS && !E.isLR && showSchedule && schedH > 0) {
                 curY += schedGap;
                 const scFs = is916 ? 20 : (is11 ? 15.5 : 18);
                 const scFont = `700 ${scFs}px "Space Grotesk", sans-serif`;
