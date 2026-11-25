@@ -1449,7 +1449,7 @@
             color: #12305A;
         }
 
-        /* ================= LIVE REPORT MODE (FRAME BOLONG 5 LAYOUT) ================= */
+        /* ================= LIVE REPORT MODE (STORY 9:16 FULL FRAME + 4:5/1:1, 5 LAYOUT) ================= */
         .lr-only { display: none !important; }
         .poster-canvas.mode-live-report .lr-only { display: inline-flex !important; }
         .poster-canvas.mode-live-report .lr-only-block { display: flex !important; }
@@ -1497,7 +1497,7 @@
         .lr-hole-hint {
             position: relative;
             z-index: 1;
-            padding: 7px 16px;
+            padding: 8px 18px;
             border-radius: 999px;
             background: rgba(15, 23, 42, 0.72);
             color: #FFFFFF;
@@ -1510,51 +1510,132 @@
             pointer-events: none;
         }
 
-        /* Layout 1 Live Report Cutout */
+        /* Layout 1 Live Report Cutout (Full Story Width Frame) */
+        .poster-canvas.layout-1.ratio-4-5.mode-live-report  { padding: 34px 46px 34px 46px; }
+        .poster-canvas.layout-1.ratio-9-16.mode-live-report { padding: 44px 44px 44px 44px; }
+        .poster-canvas.layout-1.ratio-1-1.mode-live-report  { padding: 26px 42px 26px 42px; }
+        .poster-canvas.layout-1.mode-live-report .hdr-box { padding: 11px 18px !important; }
+        .poster-canvas.layout-1.mode-live-report .hdr-logo { width: 54px !important; height: 54px !important; }
+        .poster-canvas.layout-1.mode-live-report .hdr-title { font-size: 24px !important; }
+        .poster-canvas.layout-1.mode-live-report .hdr-sub { font-size: 14px !important; }
+        .poster-canvas.layout-1.ratio-1-1.mode-live-report .hdr-logo { width: 46px !important; height: 46px !important; }
+        .poster-canvas.layout-1.ratio-1-1.mode-live-report .hdr-title { font-size: 20px !important; }
+        .poster-canvas.layout-1.ratio-1-1.mode-live-report .hdr-sub { font-size: 12px !important; }
+
         .poster-canvas.layout-1.mode-live-report .countdown-box {
             display: inline-flex;
             align-items: center;
             gap: 10px;
+            padding: 8px 20px !important;
         }
+        .poster-canvas.layout-1.mode-live-report .hero-countdown { font-size: 32px !important; }
+        .poster-canvas.layout-1.ratio-1-1.mode-live-report .hero-countdown { font-size: 24px !important; }
+        .poster-canvas.layout-1.mode-live-report .menuju-box { padding: 4px 18px !important; }
+        .poster-canvas.layout-1.mode-live-report .hero-menuju { font-size: 19px !important; }
+        .poster-canvas.layout-1.ratio-1-1.mode-live-report .hero-menuju { font-size: 15px !important; }
+
         .poster-canvas.layout-1.mode-live-report .hero-card {
-            padding: 44px 18px 28px 18px !important;
+            width: 840px !important;
+            padding: 38px 16px 26px 16px !important;
+            margin-top: 10px !important;
         }
         .poster-canvas.layout-1.ratio-9-16.mode-live-report .hero-card {
-            padding: 48px 20px 34px 20px !important;
+            width: 964px !important;
+            padding: 40px 16px 28px 16px !important;
+            margin-top: 12px !important;
         }
         .poster-canvas.layout-1.ratio-1-1.mode-live-report .hero-card {
-            padding: 38px 16px 22px 16px !important;
+            width: 760px !important;
+            padding: 34px 14px 20px 14px !important;
+            margin-top: 8px !important;
         }
+        .poster-canvas.layout-1.mode-live-report section.my-auto > div { width: 980px; }
+
         .l1-lr-hole {
             width: 100%;
-            height: 295px;
+            height: 490px;
             border-radius: 14px;
             border: 2.5px solid rgba(15, 23, 42, 0.25);
         }
-        .ratio-9-16 .l1-lr-hole { height: 430px; }
-        .ratio-1-1  .l1-lr-hole { height: 210px; }
+        .ratio-9-16 .l1-lr-hole { height: 1120px; border-radius: 18px; }
+        .ratio-1-1  .l1-lr-hole { height: 300px; border-radius: 12px; }
         .layout-1.style-neubrutalism .l1-lr-hole { border: 3.5px solid #000000; border-radius: 0px; }
         .layout-1.style-dark-code .l1-lr-hole { border: 2.5px solid #38BDF8; border-radius: 12px; }
         .layout-1.style-glass .l1-lr-hole { border: 2px solid rgba(255, 255, 255, 0.92); border-radius: 16px; }
 
-        /* Layout 2 Live Report Cutout */
-        .poster-canvas.layout-2.mode-live-report .l2-body-wrap {
-            padding: 16px 18px 46px 18px !important;
+        .poster-canvas.layout-1.mode-live-report .hero-stamp {
+            margin-top: -30px !important;
+            padding: 11px 28px !important;
+            max-width: 920px;
         }
-        .poster-canvas.layout-2.ratio-9-16.mode-live-report .l2-body-wrap {
-            padding: 16px 20px 52px 20px !important;
+        .poster-canvas.layout-1.ratio-9-16.mode-live-report .hero-stamp {
+            margin-top: -34px !important;
+            padding: 12px 32px !important;
         }
-        .poster-canvas.layout-2.ratio-1-1.mode-live-report .l2-body-wrap {
-            padding: 14px 16px 38px 16px !important;
+        .poster-canvas.layout-1.ratio-1-1.mode-live-report .hero-stamp {
+            margin-top: -24px !important;
+            padding: 8px 22px !important;
         }
+        .poster-canvas.layout-1.mode-live-report .hero-stamp-text { font-size: 38px; white-space: nowrap; }
+        .poster-canvas.layout-1.ratio-9-16.mode-live-report .hero-stamp-text { font-size: 44px; }
+        .poster-canvas.layout-1.ratio-1-1.mode-live-report .hero-stamp-text { font-size: 30px; }
+        .poster-canvas.layout-1.mode-live-report .hero-stamp-icon { width: 32px !important; height: 32px !important; }
+        .poster-canvas.layout-1.ratio-1-1.mode-live-report .hero-stamp-icon { width: 24px !important; height: 24px !important; }
+
+        .poster-canvas.layout-1.mode-live-report .sched-wrap { max-width: 940px !important; gap: 14px !important; }
+        .poster-canvas.layout-1.mode-live-report .sched-grid { gap: 12px !important; }
+        .poster-canvas.layout-1.mode-live-report .sched-date-card { padding: 10px 20px !important; gap: 16px !important; }
+        .poster-canvas.layout-1.mode-live-report .sched-num-badge { padding: 8px 18px !important; }
+        .poster-canvas.layout-1.mode-live-report .sched-num { font-size: 42px !important; }
+        .poster-canvas.layout-1.mode-live-report .sched-date { font-size: 28px !important; }
+        .poster-canvas.layout-1.mode-live-report .sched-bot-cell { padding: 12px 20px !important; }
+        .poster-canvas.layout-1.mode-live-report .sched-bot-val { font-size: 21px !important; }
+        .poster-canvas.layout-1.mode-live-report .cta-btn { padding: 11px 32px !important; }
+        .poster-canvas.layout-1.mode-live-report .cta-text { font-size: 21px !important; }
+        .poster-canvas.layout-1.ratio-1-1.mode-live-report .sched-wrap { gap: 10px !important; }
+        .poster-canvas.layout-1.ratio-1-1.mode-live-report .sched-grid { gap: 10px !important; }
+        .poster-canvas.layout-1.ratio-1-1.mode-live-report .sched-date-card { padding: 8px 16px !important; }
+        .poster-canvas.layout-1.ratio-1-1.mode-live-report .sched-num { font-size: 34px !important; }
+        .poster-canvas.layout-1.ratio-1-1.mode-live-report .sched-date { font-size: 22px !important; }
+        .poster-canvas.layout-1.ratio-1-1.mode-live-report .sched-bot-cell { padding: 9px 16px !important; }
+        .poster-canvas.layout-1.ratio-1-1.mode-live-report .sched-bot-val { font-size: 18px !important; }
+        .poster-canvas.layout-1.ratio-1-1.mode-live-report .cta-btn { padding: 9px 26px !important; }
+        .poster-canvas.layout-1.ratio-1-1.mode-live-report .cta-text { font-size: 18px !important; }
+        .poster-canvas.layout-1.mode-live-report .acc-1 { top: 10.5% !important; left: 10% !important; }
+        .poster-canvas.layout-1.mode-live-report .acc-2 { top: 10.5% !important; right: 10% !important; }
+        .poster-canvas.layout-1.mode-live-report .acc-3 { display: none !important; }
+        .poster-canvas.layout-1.mode-live-report .acc-4 { display: none !important; }
+        .poster-canvas.layout-1.mode-live-report .acc-5 { top: 81.5% !important; left: 10% !important; }
+        .poster-canvas.layout-1.mode-live-report .acc-6 { top: 81.5% !important; right: 10% !important; }
+        .poster-canvas.layout-1:not(.ratio-9-16).mode-live-report .acc-1 { left: 5% !important; top: 14% !important; }
+        .poster-canvas.layout-1:not(.ratio-9-16).mode-live-report .acc-2 { right: 5% !important; top: 14% !important; }
+        .poster-canvas.layout-1:not(.ratio-9-16).mode-live-report .acc-5 { left: 5% !important; top: 71% !important; }
+        .poster-canvas.layout-1:not(.ratio-9-16).mode-live-report .acc-6 { right: 5% !important; top: 71% !important; }
+
+        /* Layout 2 Live Report Cutout (Full Story Browser Frame) */
+        .poster-canvas.layout-2.mode-live-report .l2-logos-top { top: 30px; gap: 16px; }
+        .poster-canvas.layout-2.ratio-9-16.mode-live-report .l2-logos-top { top: 54px; gap: 18px; }
+        .poster-canvas.layout-2.ratio-1-1.mode-live-report  .l2-logos-top { top: 22px; gap: 14px; }
+        .poster-canvas.layout-2.mode-live-report .l2-logo-box { width: 54px; height: 54px; }
+        .poster-canvas.layout-2.ratio-9-16.mode-live-report .l2-logo-box { width: 56px; height: 56px; }
+        .poster-canvas.layout-2.ratio-1-1.mode-live-report  .l2-logo-box { width: 46px; height: 46px; }
+
+        .poster-canvas.layout-2.mode-live-report .l2-window { width: 940px; }
+        .poster-canvas.layout-2.ratio-9-16.mode-live-report .l2-window { width: 976px; }
+        .poster-canvas.layout-2.ratio-1-1.mode-live-report  .l2-window { width: 900px; }
+        .poster-canvas.layout-2.mode-live-report .l2-titlebar { padding: 13px 22px !important; }
+        .poster-canvas.layout-2.mode-live-report .l2-body-wrap { padding: 14px 16px 44px 16px !important; }
+        .poster-canvas.layout-2.ratio-9-16.mode-live-report .l2-body-wrap { padding: 14px 16px 48px 16px !important; }
+        .poster-canvas.layout-2.ratio-1-1.mode-live-report  .l2-body-wrap { padding: 12px 14px 36px 14px !important; }
+
         .l2-lr-hole {
             width: 100%;
-            height: 420px;
+            height: 710px;
             border-radius: 14px;
             border: 2.5px solid rgba(15, 23, 42, 0.25);
         }
-        .ratio-9-16 .l2-lr-hole { height: 600px; border-radius: 16px; }
-        .ratio-1-1  .l2-lr-hole { height: 325px; border-radius: 12px; }
+        .ratio-9-16 .l2-lr-hole { height: 1280px; border-radius: 16px; }
+        .ratio-1-1  .l2-lr-hole { height: 520px; border-radius: 12px; }
         .layout-2.style-neubrutalism .l2-lr-hole { border: 3.5px solid #000000; border-radius: 0px; }
         .layout-2.style-dark-code .l2-lr-hole { border: 2.5px solid #38BDF8; border-radius: 10px; }
         .layout-2.style-glass .l2-lr-hole { border: 2px solid rgba(255, 255, 255, 0.92); border-radius: 14px; }
@@ -1567,27 +1648,56 @@
             margin-top: -24px !important;
             position: relative;
             z-index: 25;
+            padding: 11px 30px !important;
         }
+        .poster-canvas.layout-2.ratio-9-16.mode-live-report .l2-sticker-stamp {
+            padding: 13px 34px !important;
+        }
+        .poster-canvas.layout-2.mode-live-report .l2-star-tr { transform: translateY(-510px); }
+        .poster-canvas.layout-2.mode-live-report .l2-star-bl { transform: translateY(80px); }
+        .poster-canvas.layout-2.ratio-9-16.mode-live-report .l2-star-tr { transform: translateY(-880px); }
+        .poster-canvas.layout-2.ratio-9-16.mode-live-report .l2-star-bl { transform: translateY(450px); }
+        .poster-canvas.layout-2.ratio-1-1.mode-live-report  .l2-star-tr { transform: translateY(-420px); }
+        .poster-canvas.layout-2.ratio-1-1.mode-live-report  .l2-star-bl { transform: translateY(40px); }
+        .poster-canvas.layout-2.mode-live-report .l2-cursor-wrap { right: -14px; bottom: -210px; transform: scale(0.90625); transform-origin: bottom right; }
+        .poster-canvas.layout-2.ratio-9-16.mode-live-report .l2-cursor-wrap { right: -12px; bottom: -165px; transform: scale(0.875); transform-origin: bottom right; }
+        .poster-canvas.layout-2.ratio-1-1.mode-live-report  .l2-cursor-wrap { right: -14px; bottom: -170px; transform: scale(0.8); transform-origin: bottom right; }
 
-        /* Layout 3 Live Report Cutout */
+        /* Layout 3 Live Report Cutout (Pinterest Story Curved Twibbon + 3D Megaphone) */
+        .poster-canvas.layout-3.mode-live-report .l3-header-area { padding: 34px 46px 0 46px; }
+        .poster-canvas.layout-3.ratio-9-16.mode-live-report .l3-header-area { padding: 44px 46px 0 46px; }
+        .poster-canvas.layout-3.ratio-1-1.mode-live-report  .l3-header-area { padding: 24px 40px 0 40px; }
+        .poster-canvas.layout-3.mode-live-report .l3-org-pill { padding: 10px 22px 10px 14px; gap: 12px; }
+        .poster-canvas.layout-3.mode-live-report .l3-org-logo { width: 44px; height: 44px; }
+        .poster-canvas.layout-3.ratio-9-16.mode-live-report .l3-org-logo { width: 46px; height: 46px; }
+        .poster-canvas.layout-3.ratio-1-1.mode-live-report  .l3-org-logo { width: 36px; height: 36px; }
+        .poster-canvas.layout-3.mode-live-report .l3-org-div { height: 34px; }
+        .poster-canvas.layout-3.mode-live-report .l3-footer-wrap { padding: 0 44px 30px 44px; }
+        .poster-canvas.layout-3.ratio-9-16.mode-live-report .l3-footer-wrap { padding: 0 46px 44px 46px; }
+        .poster-canvas.layout-3.ratio-1-1.mode-live-report  .l3-footer-wrap { padding: 0 38px 22px 38px; }
+        .poster-canvas.layout-3.mode-live-report .l3-bottom-dock { padding: 16px 32px; }
+
         .poster-canvas.layout-3.mode-live-report .l3-bubble-wrap {
-            width: 690px;
-            height: 518px;
+            width: 880px;
+            height: 730px;
+            --l3-lr-hole-bot: 78px;
         }
         .poster-canvas.layout-3.ratio-9-16.mode-live-report .l3-bubble-wrap {
-            width: 750px;
-            height: 680px;
+            width: 976px;
+            height: 1276px;
+            --l3-lr-hole-bot: 94px;
         }
         .poster-canvas.layout-3.ratio-1-1.mode-live-report .l3-bubble-wrap {
-            width: 580px;
-            height: 408px;
+            width: 780px;
+            height: 540px;
+            --l3-lr-hole-bot: 68px;
         }
         .l3-lr-hole {
             position: absolute;
-            top: 22px;
-            left: 22px;
-            right: 22px;
-            bottom: calc(13.5% + 18px);
+            top: 18px;
+            left: 18px;
+            right: 18px;
+            bottom: var(--l3-lr-hole-bot, 94px);
             border-radius: 26px;
             z-index: 5;
             border: 2.5px solid rgba(15, 23, 42, 0.22);
@@ -1596,18 +1706,22 @@
         .layout-3.style-dark-code .l3-lr-hole { border: 2.5px solid #38BDF8; border-radius: 22px; }
         .layout-3.style-glass .l3-lr-hole { border: 2px solid rgba(255, 255, 255, 0.95); }
 
+        .poster-canvas.layout-3.mode-live-report .l3-megaphone { right: -34px; top: -78px; width: 222px; height: 222px; }
+        .poster-canvas.layout-3.ratio-9-16.mode-live-report .l3-megaphone { right: -44px; top: -86px; width: 248px; height: 248px; }
+        .poster-canvas.layout-3.ratio-1-1.mode-live-report  .l3-megaphone { right: -30px; top: -64px; width: 184px; height: 184px; }
+
         .l3-lr-badge {
             display: none;
             position: absolute;
             top: -16px;
-            left: 24px;
+            left: 26px;
             z-index: 25;
-            padding: 7px 18px;
+            padding: 8px 20px;
             align-items: center;
             gap: 9px;
             font-family: 'Space Grotesk', sans-serif;
             font-weight: 800;
-            font-size: 18px;
+            font-size: 19px;
             letter-spacing: 0.14em;
             text-transform: uppercase;
             transform: rotate(-2deg);
@@ -1618,23 +1732,62 @@
         .layout-3.style-dark-code .l3-lr-badge { background: #0B192E; color: #38BDF8; border: 2.5px solid #38BDF8; border-radius: 8px; box-shadow: 4px 4px 0 #000000; }
         .layout-3.style-modern .l3-lr-badge { background: #CA2C2A; color: #FFFFFF; border-radius: 999px; box-shadow: 0 10px 24px rgba(8, 22, 44, 0.36); }
 
+        .l3-lr-capbox { max-width: 680px; }
+        .poster-canvas.layout-3.mode-live-report .l3-lr-capbox {
+            max-width: 960px !important;
+            margin-top: 12px !important;
+        }
         .l3-lr-topic {
             display: none;
-            font-family: 'Space Grotesk', sans-serif;
-            font-weight: 800;
-            font-size: 32px;
-            line-height: 1.1;
-            letter-spacing: 0.04em;
+            font-family: 'Archivo Black', 'Space Grotesk', sans-serif;
+            font-weight: 400;
+            font-size: 46px;
+            line-height: 1.04;
+            letter-spacing: 0.02em;
             text-transform: uppercase;
             color: #FCD34D;
+            white-space: nowrap;
+            text-shadow: 4px 4px 0 #000000;
         }
-        .ratio-9-16 .l3-lr-topic { font-size: 36px; }
-        .ratio-1-1  .l3-lr-topic { font-size: 26px; }
+        .ratio-9-16 .l3-lr-topic { font-size: 58px; }
+        .ratio-1-1  .l3-lr-topic { font-size: 36px; }
         .poster-canvas.layout-3.mode-live-report .l3-lr-topic { display: block; }
-        .layout-3.style-dark-code .l3-lr-topic { color: #38BDF8; }
-        .layout-3.style-glass .l3-lr-topic { color: #FFFFFF; text-shadow: 0 4px 12px rgba(6, 20, 56, 0.35); }
+        .layout-3.style-dark-code .l3-lr-topic { color: #38BDF8; text-shadow: 4px 4px 0 #000000; }
+        .layout-3.style-glass .l3-lr-topic { color: #FFFFFF; text-shadow: 0 6px 20px rgba(6, 20, 56, 0.42); }
+        .layout-3.style-modern .l3-lr-topic { color: #FCD34D; text-shadow: 0 6px 18px rgba(4, 15, 34, 0.42); }
 
-        /* Layout 4 Live Report Cutout */
+        /* Layout 4 Live Report Cutout (Full Story IG Frame) */
+        .poster-canvas.layout-4.mode-live-report .l4-top-wrap { padding: 30px 40px 0 40px; }
+        .poster-canvas.layout-4.ratio-9-16.mode-live-report .l4-top-wrap { padding: 38px 40px 0 40px; }
+        .poster-canvas.layout-4.ratio-1-1.mode-live-report  .l4-top-wrap { padding: 20px 36px 0 36px; }
+        .poster-canvas.layout-4.mode-live-report .l4-top-pill { padding: 9px 22px; gap: 14px; }
+        .poster-canvas.layout-4.mode-live-report .l4-top-logo { width: 40px; height: 40px; }
+        .poster-canvas.layout-4.ratio-9-16.mode-live-report .l4-top-logo { width: 44px; height: 44px; }
+        .poster-canvas.layout-4.ratio-1-1.mode-live-report  .l4-top-logo { width: 32px; height: 32px; }
+        .poster-canvas.layout-4.ratio-9-16.mode-live-report .l4-bottom-bar { padding: 16px 40px; }
+
+        .poster-canvas.layout-4.mode-live-report .l4-stack-stage { width: 820px; height: 1010px; }
+        .poster-canvas.layout-4.ratio-9-16.mode-live-report .l4-stack-stage { width: 936px; height: 1616px; }
+        .poster-canvas.layout-4.ratio-1-1.mode-live-report  .l4-stack-stage { width: 760px; height: 790px; }
+
+        .poster-canvas.layout-4.mode-live-report .l4-card-back { transform: translate(12px, -4px) rotate(2.3deg); }
+        .poster-canvas.layout-4.mode-live-report .l4-card-front { transform: rotate(-1.3deg); }
+        .poster-canvas.layout-4.mode-live-report .l4-card-hdr { height: 70px; }
+        .poster-canvas.layout-4.ratio-9-16.mode-live-report .l4-card-hdr { height: 74px; }
+        .poster-canvas.layout-4.ratio-1-1.mode-live-report  .l4-card-hdr { height: 62px; }
+        .poster-canvas.layout-4.mode-live-report .l4-media-box { margin: 0 16px; }
+        .poster-canvas.layout-4.ratio-1-1.mode-live-report  .l4-media-box { margin: 0 14px; }
+        .poster-canvas.layout-4.mode-live-report .l4-card-ftr { height: 146px; }
+        .poster-canvas.layout-4.ratio-9-16.mode-live-report .l4-card-ftr { height: 174px; padding: 10px 26px 0 26px; }
+        .poster-canvas.layout-4.ratio-1-1.mode-live-report  .l4-card-ftr { height: 128px; }
+        .poster-canvas.layout-4.ratio-9-16.mode-live-report .l4-likes { font-size: 18px; line-height: 28px; }
+        .poster-canvas.layout-4.ratio-9-16.mode-live-report .l4-cap   { font-size: 19px; line-height: 30px; }
+        .poster-canvas.layout-4.ratio-9-16.mode-live-report .l4-loc   { font-size: 17px; line-height: 26px; }
+
+        .poster-canvas.layout-4.mode-live-report .l4-props-cluster { right: -34px; bottom: 112px; width: 210px; height: 210px; }
+        .poster-canvas.layout-4.ratio-9-16.mode-live-report .l4-props-cluster { right: -30px; bottom: 146px; width: 235px; height: 235px; }
+        .poster-canvas.layout-4.ratio-1-1.mode-live-report  .l4-props-cluster { right: -30px; bottom: 92px; width: 175px; height: 175px; }
+
         .l4-lr-pill {
             display: none;
             margin-left: 14px;
@@ -1666,32 +1819,56 @@
             z-index: 3;
         }
 
-        /* Layout 5 Live Report Cutout (Polaroid Mading Frame) */
+        /* Layout 5 Live Report Cutout (Full Story Polaroid Mading Frame) */
+        .poster-canvas.layout-5.mode-live-report .l5-c1,
+        .poster-canvas.layout-5.mode-live-report .l5-c2 { display: none !important; }
+        .poster-canvas.layout-5.mode-live-report .l5-top-wrap { padding: 32px 48px 0 48px; }
+        .poster-canvas.layout-5.ratio-9-16.mode-live-report .l5-top-wrap { padding: 42px 52px 0 52px; }
+        .poster-canvas.layout-5.ratio-1-1.mode-live-report  .l5-top-wrap { padding: 24px 44px 0 44px; }
+        .poster-canvas.layout-5.mode-live-report .l5-bottom-wrap { padding: 0 48px 30px 48px; }
+        .poster-canvas.layout-5.ratio-9-16.mode-live-report .l5-bottom-wrap { padding: 0 52px 42px 52px; }
+        .poster-canvas.layout-5.ratio-1-1.mode-live-report  .l5-bottom-wrap { padding: 0 44px 22px 44px; }
+
         .poster-canvas.layout-5.mode-live-report .l5-card-wrap {
-            width: 720px;
-            height: 506px;
-            margin-top: 12px;
-        }
-        .poster-canvas.layout-5.ratio-9-16.mode-live-report .l5-card-wrap {
-            width: 760px;
-            height: 650px;
-            margin-top: 18px;
-        }
-        .poster-canvas.layout-5.ratio-1-1.mode-live-report .l5-card-wrap {
-            width: 630px;
-            height: 392px;
+            width: 810px;
+            height: 710px;
             margin-top: 8px;
         }
+        .poster-canvas.layout-5.ratio-9-16.mode-live-report .l5-card-wrap {
+            width: 912px;
+            height: 1280px;
+            margin-top: 10px;
+        }
+        .poster-canvas.layout-5.ratio-1-1.mode-live-report .l5-card-wrap {
+            width: 720px;
+            height: 520px;
+            margin-top: 6px;
+        }
+        .poster-canvas.layout-5.mode-live-report .l5-card-back {
+            transform: translate(-11px, -4px) rotate(-4.2deg);
+            border-radius: 30px;
+        }
+        .poster-canvas.layout-5.ratio-9-16.mode-live-report .l5-card-back {
+            transform: translate(-10px, -4px) rotate(-3.4deg);
+            border-radius: 30px;
+        }
         .poster-canvas.layout-5.mode-live-report .l5-note-card {
-            padding: 20px 20px 18px 20px !important;
+            transform: rotate(-2.6deg);
+            border-radius: 30px;
+            padding: 18px 18px 16px 18px !important;
             justify-content: flex-start;
         }
+        .poster-canvas.layout-5.ratio-9-16.mode-live-report .l5-note-card {
+            transform: rotate(-2.0deg);
+            border-radius: 30px;
+            padding: 18px 18px 16px 18px !important;
+        }
         .poster-canvas.layout-5.mode-live-report .l5-info-stack {
-            margin-top: 38px;
+            margin-top: 30px;
             gap: 6px;
         }
-        .poster-canvas.layout-5.ratio-9-16.mode-live-report .l5-info-stack { margin-top: 52px; }
-        .poster-canvas.layout-5.ratio-1-1.mode-live-report .l5-info-stack { margin-top: 24px; gap: 4px; }
+        .poster-canvas.layout-5.ratio-9-16.mode-live-report .l5-info-stack { margin-top: 40px; gap: 8px; }
+        .poster-canvas.layout-5.ratio-1-1.mode-live-report .l5-info-stack { margin-top: 22px; gap: 4px; }
 
         .l5-lr-hole {
             width: 100%;
@@ -1705,7 +1882,7 @@
         .l5-lr-chin {
             display: none;
             width: 100%;
-            height: 52px;
+            height: 54px;
             align-items: center;
             justify-content: space-between;
             padding: 8px 8px 0 8px;
@@ -2757,7 +2934,7 @@
                         <section class="relative z-10 flex flex-col items-center justify-center my-auto px-8">
                             <div class="l3-bubble-wrap flex items-center justify-center">
                                 <!-- Unified Speech Bubble Shape with Pointer Tail -->
-                                <svg viewBox="0 0 640 430" preserveAspectRatio="none" class="l3-bubble-shape absolute inset-0 w-full h-full overflow-visible" aria-hidden="true">
+                                <svg id="l3BubbleSvg" viewBox="0 0 640 430" preserveAspectRatio="none" class="l3-bubble-shape absolute inset-0 w-full h-full overflow-visible" aria-hidden="true">
                                     <defs>
                                         <linearGradient id="l3GlassBubFill" x1="0%" y1="0%" x2="100%" y2="100%">
                                             <stop offset="0%" stop-color="rgba(255, 255, 255, 0.88)"/>
@@ -2765,7 +2942,7 @@
                                             <stop offset="100%" stop-color="rgba(255, 255, 255, 0.84)"/>
                                         </linearGradient>
                                     </defs>
-                                    <path class="l3-bubble-path" d="M 52 14 L 588 14 A 38 38 0 0 1 626 52 L 626 334 A 38 38 0 0 1 588 372 L 366 372 L 320 422 L 274 372 L 52 372 A 38 38 0 0 1 14 334 L 14 52 A 38 38 0 0 1 52 14 Z"/>
+                                    <path id="l3BubblePath" class="l3-bubble-path" d="M 52 14 L 588 14 A 38 38 0 0 1 626 52 L 626 334 A 38 38 0 0 1 588 372 L 366 372 L 320 422 L 274 372 L 52 372 A 38 38 0 0 1 14 334 L 14 52 A 38 38 0 0 1 52 14 Z"/>
                                 </svg>
 
                                 <!-- Upgraded 3D Sculpted Studio Megaphone + Sound Waves (Theme-Aware Red/Blue) -->
@@ -2865,7 +3042,7 @@
                             </div>
 
                             <!-- Centered Org Description + Schedule + Location -->
-                            <div class="mt-6 text-center space-y-2 max-w-[680px]">
+                            <div class="l3-lr-capbox mt-6 text-center space-y-2 max-w-[680px]">
                                 <p id="l3OutLrTopic" class="l3-lr-topic">OPENING CEREMONY</p>
                                 <p class="l3-cap-main font-semibold text-[21px] leading-snug">
                                     <span id="l3OutSubTitle" class="font-bold">Kaderisasi</span> HIMA Informatika<br>
@@ -3480,6 +3657,29 @@
             return { fs: Math.round(220 * scale), ls: 14 };
         }
 
+        let _fitCtx = null;
+        function computeFitFont(text, baseFs, minFs, fontWeight, fontFamily, trackRatio, maxW) {
+            if (!_fitCtx && typeof document !== 'undefined') {
+                _fitCtx = document.createElement('canvas').getContext('2d');
+            }
+            if (!_fitCtx || !text) return baseFs;
+            let fs = baseFs;
+            while (fs > minFs) {
+                _fitCtx.font = `${fontWeight} ${fs}px ${fontFamily}`;
+                const tr = trackRatio * fs;
+                const w = _fitCtx.measureText(text).width + Math.max(0, text.length - 1) * tr;
+                if (w <= maxW) break;
+                fs -= 1;
+            }
+            return fs;
+        }
+
+        function getL3LrBubbleDim(ratio) {
+            if (ratio === '9-16') return { w: 976, bodyH: 1200, tailW: 112, tailH: 76, rad: 38, mega: 248, mOffX: 44, mOffY: -86 };
+            if (ratio === '1-1')  return { w: 780, bodyH: 490,  tailW: 84,  tailH: 50, rad: 30, mega: 184, mOffX: 30, mOffY: -64 };
+            return { w: 880, bodyH: 670, tailW: 96, tailH: 60, rad: 36, mega: 222, mOffX: 34, mOffY: -78 };
+        }
+
         function getEffectiveContent() {
             const title = (document.getElementById('inStamp')?.value || 'KADERISASI').trim().toUpperCase() || 'KADERISASI';
             const rawHero = (document.getElementById('inHero')?.value || 'H-7').trim().toUpperCase() || 'H-7';
@@ -3503,9 +3703,9 @@
                 liveTopic,
                 hero: isCS ? title : rawHero,
                 cd: isLR ? liveLabel : (isCS ? 'COMING SOON' : rawCd),
-                mn: isLR ? liveTopic : (isCS ? '' : rawMn),
+                mn: isLR ? title : (isCS ? '' : rawMn),
                 l2Banner: isLR ? liveLabel : (isCS ? 'COMING SOON' : `${rawCd} • ${rawMn}`),
-                stamp: isLR ? title : (isCS ? 'STAY TUNED' : title),
+                stamp: isLR ? liveTopic : (isCS ? 'STAY TUNED' : title),
                 l2Stamp: isLR ? liveTopic : (isCS ? 'STAY TUNED' : title),
                 bgWord1: isLR ? liveLabel.replace(/\s+/g, '') : (isCS ? 'COMINGSOON' : rawCd),
                 bgWord2: title,
@@ -3571,6 +3771,15 @@
             setIf('outCountdown', E.cd);
             setIf('outMenuju', E.mn);
             setIf('outStamp', E.stamp);
+            const outStampEl = document.getElementById('outStamp');
+            if (outStampEl) {
+                if (E.isLR) {
+                    const baseSt = currentRatio === '9-16' ? 44 : (currentRatio === '1-1' ? 30 : 38);
+                    outStampEl.style.fontSize = computeFitFont(E.stamp, baseSt, 24, '700', '"Space Grotesk", sans-serif', 0.06, 740) + 'px';
+                } else {
+                    outStampEl.style.fontSize = '';
+                }
+            }
             setIf('outNum', E.num);
             setIf('outDate', E.date);
             setIf('outTime', E.time);
@@ -3603,6 +3812,15 @@
                 l2Main.setAttribute('letter-spacing', l2M.ls);
             }
             setIf('l2OutTitle', E.l2Stamp);
+            const l2TitleEl = document.getElementById('l2OutTitle');
+            if (l2TitleEl) {
+                if (E.isLR) {
+                    const baseL2 = currentRatio === '9-16' ? 44 : (currentRatio === '1-1' ? 32 : 38);
+                    l2TitleEl.style.fontSize = computeFitFont(E.l2Stamp, baseL2, 24, '700', '"Space Grotesk", sans-serif', 0.06, 720) + 'px';
+                } else {
+                    l2TitleEl.style.fontSize = '';
+                }
+            }
             setIf('l2OutIg', E.igHandle);
 
             const wall = document.getElementById('l2BgWall');
@@ -3635,6 +3853,24 @@
             }
             setIf('l3OutLrBadge', E.liveLabel);
             setIf('l3OutLrTopic', E.liveTopic);
+            const l3TopicEl = document.getElementById('l3OutLrTopic');
+            if (l3TopicEl) {
+                const baseT3 = currentRatio === '9-16' ? 58 : (currentRatio === '1-1' ? 36 : 46);
+                l3TopicEl.style.fontSize = computeFitFont(E.liveTopic, baseT3, 28, '400', '"Archivo Black", "Space Grotesk", sans-serif', 0.02, 920) + 'px';
+            }
+            const l3BubSvg = document.getElementById('l3BubbleSvg');
+            const l3BubPath = document.getElementById('l3BubblePath');
+            if (l3BubSvg && l3BubPath) {
+                if (E.isLR) {
+                    const b3 = getL3LrBubbleDim(currentRatio);
+                    const totH = b3.bodyH + b3.tailH;
+                    l3BubSvg.setAttribute('viewBox', `0 0 ${b3.w} ${totH}`);
+                    l3BubPath.setAttribute('d', `M ${b3.rad} 0 L ${b3.w - b3.rad} 0 A ${b3.rad} ${b3.rad} 0 0 1 ${b3.w} ${b3.rad} L ${b3.w} ${b3.bodyH - b3.rad} A ${b3.rad} ${b3.rad} 0 0 1 ${b3.w - b3.rad} ${b3.bodyH} L ${b3.w / 2 + b3.tailW / 2} ${b3.bodyH} L ${b3.w / 2} ${totH} L ${b3.w / 2 - b3.tailW / 2} ${b3.bodyH} L ${b3.rad} ${b3.bodyH} A ${b3.rad} ${b3.rad} 0 0 1 0 ${b3.bodyH - b3.rad} L 0 ${b3.rad} A ${b3.rad} ${b3.rad} 0 0 1 ${b3.rad} 0 Z`);
+                } else {
+                    l3BubSvg.setAttribute('viewBox', '0 0 640 430');
+                    l3BubPath.setAttribute('d', 'M 52 14 L 588 14 A 38 38 0 0 1 626 52 L 626 334 A 38 38 0 0 1 588 372 L 366 372 L 320 422 L 274 372 L 52 372 A 38 38 0 0 1 14 334 L 14 52 A 38 38 0 0 1 52 14 Z');
+                }
+            }
             setIf('l3OutSubTitle', toTitleCase(E.title));
             setIf('l3OutDateTime', `${E.date} • ${E.time}`);
             setIf('l3OutLoc', toTitleCase(E.loc));
@@ -3687,8 +3923,8 @@
             const l5ShdEl = document.getElementById('l5TitleShd');
             const l5MainEl = document.getElementById('l5TitleMain');
             if (l5ShdEl && l5MainEl) {
-                l5ShdEl.textContent = E.title;
-                l5MainEl.textContent = E.title;
+                l5ShdEl.textContent = l5M.titleTxt;
+                l5MainEl.textContent = l5M.titleTxt;
                 l5ShdEl.setAttribute('font-size', l5M.titleFs);
                 l5MainEl.setAttribute('font-size', l5M.titleFs);
                 l5ShdEl.setAttribute('letter-spacing', l5M.titleTrack);
@@ -3705,18 +3941,22 @@
         function getL5Metrics(E) {
             const heroLines = E.isCS ? ['COMING', 'SOON'] : [E.hero || 'H-7'];
             const hl = Math.max(1, ...heroLines.map((l) => l.length));
-            const tl = (E.title || '').length;
+            const titleTxt = E.isLR ? (E.liveTopic || E.title) : (E.title || 'KADERISASI');
+            const tl = titleTxt.length;
             const rs = currentRatio === '9-16' ? 1.07 : (currentRatio === '1-1' ? 0.84 : 1);
             const baseHero = E.isCS
                 ? 116
                 : (hl >= 10 ? 74 : (hl >= 7 ? 116 : (hl >= 5 ? 168 : 228)));
             const baseTitle = tl >= 14 ? 60 : (tl >= 11 ? 72 : 84);
-            const titleFs = Math.round(baseTitle * rs);
+            const titleFs = E.isLR
+                ? computeFitFont(titleTxt, Math.round(baseTitle * rs), 34, '400', '"Archivo Black", "Space Grotesk", sans-serif', 0.045, 830)
+                : Math.round(baseTitle * rs);
             return {
                 heroLines,
                 heroFs: Math.round(baseHero * rs),
+                titleTxt,
                 titleFs,
-                titleTrack: Math.round(titleFs * 0.048 * 10) / 10,
+                titleTrack: Math.round(titleFs * (E.isLR ? 0.042 : 0.048) * 10) / 10,
                 cdTxt: E.isCS ? 'STAY TUNED' : (E.cd || 'COUNTDOWN'),
                 menujuTxt: E.mn || 'MENUJU',
                 schedLine: `${E.date} • ${E.time} • ${toTitleCase(E.loc)}`
@@ -3740,7 +3980,7 @@
                 stampTxt: E.isCS ? 'STAY TUNED' : E.title,
                 fileName: E.isLR ? 'live_report.exe' : (E.isCS ? 'coming_soon.exe' : 'countdown.exe'),
                 caption: E.isLR
-                    ? `${toTitleCase(E.liveTopic)} — ${toTitleCase(E.title)} HIMA IF`
+                    ? `${E.liveTopic} • ${toTitleCase(E.title)} HIMA IF`
                     : (E.isCS
                         ? `Coming Soon — ${toTitleCase(E.title)} HIMA Informatika IDE LPKIA! Stay tuned!`
                         : `${toTitleCase(E.title)} HIMA IF • ${toTitleCase(E.date)} (${E.time})`),
@@ -3951,7 +4191,11 @@
             if (val === 'LIVE REPORT') {
                 posterMode = 'live-report';
                 updatePresetButtons('LIVE REPORT');
-                syncAllDom();
+                if (currentRatio !== '9-16') {
+                    setRatio('9-16');
+                } else {
+                    syncAllDom();
+                }
                 return;
             }
             posterMode = 'countdown';
@@ -4056,11 +4300,18 @@
                 await document.fonts.ready;
             }
 
-            const dims = {
-                '4-5':  { w: 1080, h: 1350, px: 64, pt: 46, pb: 48 },
-                '9-16': { w: 1080, h: 1920, px: 68, pt: 78, pb: 86 },
-                '1-1':  { w: 1080, h: 1080, px: 56, pt: 34, pb: 36 }
-            }[currentRatio] || { w: 1080, h: 1350, px: 64, pt: 46, pb: 48 };
+            const isL1LR = currentLayout === 1 && posterMode === 'live-report';
+            const dims = isL1LR
+                ? ({
+                    '4-5':  { w: 1080, h: 1350, px: 46, pt: 34, pb: 34 },
+                    '9-16': { w: 1080, h: 1920, px: 44, pt: 44, pb: 44 },
+                    '1-1':  { w: 1080, h: 1080, px: 42, pt: 26, pb: 26 }
+                }[currentRatio] || { w: 1080, h: 1350, px: 46, pt: 34, pb: 34 })
+                : ({
+                    '4-5':  { w: 1080, h: 1350, px: 64, pt: 46, pb: 48 },
+                    '9-16': { w: 1080, h: 1920, px: 68, pt: 78, pb: 86 },
+                    '1-1':  { w: 1080, h: 1080, px: 56, pt: 34, pb: 36 }
+                }[currentRatio] || { w: 1080, h: 1350, px: 64, pt: 46, pb: 48 });
 
             if (currentLayout === 2) {
                 return renderLayout2Canvas(dims);
@@ -4426,12 +4677,17 @@
             }
 
             // 2. Top Header
+            const E = getEffectiveContent();
             const innerW = W - dims.px * 2;
-            const hdrCfg = currentRatio === '9-16'
-                ? { py: 16, px: 24, logo: 78, title: 30, sub: 18 }
-                : (currentRatio === '1-1'
-                    ? { py: 10, px: 18, logo: 54, title: 22, sub: 14 }
-                    : { py: 14, px: 20, logo: 66, title: 26, sub: 16 });
+            const hdrCfg = E.isLR
+                ? (currentRatio === '1-1'
+                    ? { py: 11, px: 18, logo: 46, title: 20, sub: 12 }
+                    : { py: 11, px: 18, logo: 54, title: 24, sub: 14 })
+                : (currentRatio === '9-16'
+                    ? { py: 16, px: 24, logo: 78, title: 30, sub: 18 }
+                    : (currentRatio === '1-1'
+                        ? { py: 10, px: 18, logo: 54, title: 22, sub: 14 }
+                        : { py: 14, px: 20, logo: 66, title: 26, sub: 16 }));
             const hdrH = hdrCfg.logo + hdrCfg.py * 2;
             const hdrX = dims.px;
             const hdrY = dims.pt;
@@ -4466,16 +4722,31 @@
 
             // 3. Coding Accents
             if (showAccents) {
-                const accCoords = [
-                    { x: 0.145 * W, y: 0.27 * H, rot: -12, size: 38 },
-                    { x: 0.875 * W, y: 0.27 * H, rot:  12, size: 38 },
-                    { x: 0.088 * W, y: 0.47 * H, rot:   6, size: 40 },
-                    { x: 0.912 * W, y: 0.47 * H, rot:  -6, size: 40 },
-                    { x: 0.145 * W, y: 0.66 * H, rot: -12, size: 34 },
-                    { x: 0.852 * W, y: 0.67 * H, rot:  12, size: 34 }
-                ];
-                accCoords.forEach((p, idx) => {
-                    const [txt, col, shd] = T.accents[idx];
+                const is916_1 = currentRatio === '9-16';
+                const accCoords = E.isLR
+                    ? (is916_1
+                        ? [
+                            { x: 0.105 * W, y: 0.105 * H, rot: -12, size: 34, idx: 0 },
+                            { x: 0.895 * W, y: 0.105 * H, rot:  12, size: 34, idx: 1 },
+                            { x: 0.105 * W, y: 0.815 * H, rot: -12, size: 32, idx: 4 },
+                            { x: 0.895 * W, y: 0.815 * H, rot:  12, size: 32, idx: 5 }
+                        ]
+                        : [
+                            { x: 0.055 * W, y: 0.145 * H, rot: -12, size: 32, idx: 0 },
+                            { x: 0.945 * W, y: 0.145 * H, rot:  12, size: 32, idx: 1 },
+                            { x: 0.055 * W, y: 0.715 * H, rot: -12, size: 30, idx: 4 },
+                            { x: 0.945 * W, y: 0.715 * H, rot:  12, size: 30, idx: 5 }
+                        ])
+                    : [
+                        { x: 0.145 * W, y: 0.27 * H, rot: -12, size: 38, idx: 0 },
+                        { x: 0.875 * W, y: 0.27 * H, rot:  12, size: 38, idx: 1 },
+                        { x: 0.088 * W, y: 0.47 * H, rot:   6, size: 40, idx: 2 },
+                        { x: 0.912 * W, y: 0.47 * H, rot:  -6, size: 40, idx: 3 },
+                        { x: 0.145 * W, y: 0.66 * H, rot: -12, size: 34, idx: 4 },
+                        { x: 0.852 * W, y: 0.67 * H, rot:  12, size: 34, idx: 5 }
+                    ];
+                accCoords.forEach((p) => {
+                    const [txt, col, shd] = T.accents[p.idx];
                     ctx.save();
                     ctx.translate(p.x, p.y);
                     ctx.rotate((p.rot * Math.PI) / 180);
@@ -4493,14 +4764,17 @@
             }
 
             // 4. Schedule Cards & CTA
-            const E = getEffectiveContent();
-            const sCfg = currentRatio === '9-16'
-                ? { wrapGap: 28, gridGap: 18, numSize: 58, numPx: 22, numPy: 12, dateSize: 34, cardPx: 24, cardPy: 16, botPx: 26, botPy: 20, botVal: 24, ctaPx: 40, ctaPy: 16, ctaText: 26 }
-                : (currentRatio === '1-1'
-                    ? { wrapGap: 14, gridGap: 14, numSize: 40, numPx: 14, numPy: 6, dateSize: 25, cardPx: 18, cardPy: 10, botPx: 18, botPy: 12, botVal: 19, ctaPx: 28, ctaPy: 10, ctaText: 19 }
-                    : { wrapGap: 20, gridGap: 16, numSize: 48, numPx: 20, numPy: 8, dateSize: 32, cardPx: 24, cardPy: 14, botPx: 24, botPy: 16, botVal: 22, ctaPx: 36, ctaPy: 14, ctaText: 22 });
+            const sCfg = E.isLR
+                ? (currentRatio === '1-1'
+                    ? { wrapGap: 10, gridGap: 10, numSize: 34, numPx: 14, numPy: 6, dateSize: 22, cardPx: 16, cardPy: 8, botPx: 16, botPy: 9, botVal: 18, ctaPx: 26, ctaPy: 9, ctaText: 18 }
+                    : { wrapGap: 14, gridGap: 12, numSize: 42, numPx: 18, numPy: 8, dateSize: 28, cardPx: 20, cardPy: 10, botPx: 20, botPy: 12, botVal: 21, ctaPx: 32, ctaPy: 11, ctaText: 21 })
+                : (currentRatio === '9-16'
+                    ? { wrapGap: 28, gridGap: 18, numSize: 58, numPx: 22, numPy: 12, dateSize: 34, cardPx: 24, cardPy: 16, botPx: 26, botPy: 20, botVal: 24, ctaPx: 40, ctaPy: 16, ctaText: 26 }
+                    : (currentRatio === '1-1'
+                        ? { wrapGap: 14, gridGap: 14, numSize: 40, numPx: 14, numPy: 6, dateSize: 25, cardPx: 18, cardPy: 10, botPx: 18, botPy: 12, botVal: 19, ctaPx: 28, ctaPy: 10, ctaText: 19 }
+                        : { wrapGap: 20, gridGap: 16, numSize: 48, numPx: 20, numPy: 8, dateSize: 32, cardPx: 24, cardPy: 14, botPx: 24, botPy: 16, botVal: 22, ctaPx: 36, ctaPy: 14, ctaText: 22 }));
 
-            const schedW = Math.min(820, innerW);
+            const schedW = Math.min(E.isLR ? 940 : 820, innerW);
             const schedX = (W - schedW) / 2;
 
             const ctaH = sCfg.ctaText + sCfg.ctaPy * 2 + 8;
@@ -4574,16 +4848,25 @@
             drawTrackedText(ctaTxt, ctaX + sCfg.ctaPx + 26, ctaY + ctaH / 2 + 1, `700 ${sCfg.ctaText}px "Space Grotesk", sans-serif`, T.ctaText, 1.5, 'left');
 
             // 5. Hero Lockup
-            const hCfg = currentRatio === '9-16'
-                ? { cdFont: 52, cdPx: 32, cdPy: 12, mnFont: 28, mnPx: 28, mnPy: 8, cardW: 760, cardPt: 40, cardPb: 80, svgW: 680, svgH: 295, cardMt: 24, stFont: 54, stPx: 40, stPy: 16, stIcon: 40, stMt: -44 }
-                : (currentRatio === '1-1'
-                    ? { cdFont: 32, cdPx: 22, cdPy: 8, mnFont: 19, mnPx: 18, mnPy: 5, cardW: 620, cardPt: 22, cardPb: 42, svgW: 540, svgH: 175, cardMt: 12, stFont: 34, stPx: 26, stPy: 9, stIcon: 28, stMt: -28 }
-                    : { cdFont: 42, cdPx: 28, cdPy: 10, mnFont: 24, mnPx: 24, mnPy: 6, cardW: 710, cardPt: 36, cardPb: 56, svgW: 660, svgH: 235, cardMt: 16, stFont: 44, stPx: 32, stPy: 12, stIcon: 32, stMt: -36 });
+            const l1StFit = E.isLR
+                ? computeFitFont(E.stamp, currentRatio === '9-16' ? 44 : (currentRatio === '1-1' ? 30 : 38), 24, '700', '"Space Grotesk", sans-serif', 0.06, 740)
+                : null;
+            const hCfg = E.isLR
+                ? (currentRatio === '9-16'
+                    ? { cdFont: 32, cdPx: 20, cdPy: 8, mnFont: 19, mnPx: 18, mnPy: 4, cardW: 964, cardPt: 40, cardPb: 28, svgW: 680, svgH: 295, cardMt: 12, stFont: l1StFit, stPx: 32, stPy: 12, stIcon: 32, stMt: -34 }
+                    : (currentRatio === '1-1'
+                        ? { cdFont: 24, cdPx: 18, cdPy: 7, mnFont: 15, mnPx: 16, mnPy: 4, cardW: 760, cardPt: 34, cardPb: 20, svgW: 540, svgH: 175, cardMt: 8,  stFont: l1StFit, stPx: 22, stPy: 8,  stIcon: 24, stMt: -24 }
+                        : { cdFont: 32, cdPx: 20, cdPy: 8, mnFont: 19, mnPx: 18, mnPy: 4, cardW: 840, cardPt: 38, cardPb: 26, svgW: 660, svgH: 235, cardMt: 10, stFont: l1StFit, stPx: 28, stPy: 11, stIcon: 30, stMt: -30 }))
+                : (currentRatio === '9-16'
+                    ? { cdFont: 52, cdPx: 32, cdPy: 12, mnFont: 28, mnPx: 28, mnPy: 8, cardW: 760, cardPt: 40, cardPb: 80, svgW: 680, svgH: 295, cardMt: 24, stFont: 54, stPx: 40, stPy: 16, stIcon: 40, stMt: -44 }
+                    : (currentRatio === '1-1'
+                        ? { cdFont: 32, cdPx: 22, cdPy: 8, mnFont: 19, mnPx: 18, mnPy: 5, cardW: 620, cardPt: 22, cardPb: 42, svgW: 540, svgH: 175, cardMt: 12, stFont: 34, stPx: 26, stPy: 9, stIcon: 28, stMt: -28 }
+                        : { cdFont: 42, cdPx: 28, cdPy: 10, mnFont: 24, mnPx: 24, mnPy: 6, cardW: 710, cardPt: 36, cardPb: 56, svgW: 660, svgH: 235, cardMt: 16, stFont: 44, stPx: 32, stPy: 12, stIcon: 32, stMt: -36 }));
 
-            const lrHoleH = currentRatio === '9-16' ? 430 : (currentRatio === '1-1' ? 210 : 295);
-            const lrPt = currentRatio === '9-16' ? 48 : (currentRatio === '1-1' ? 38 : 44);
-            const lrPb = currentRatio === '9-16' ? 34 : (currentRatio === '1-1' ? 22 : 28);
-            const lrPx = currentRatio === '9-16' ? 20 : (currentRatio === '1-1' ? 16 : 18);
+            const lrHoleH = currentRatio === '9-16' ? 1120 : (currentRatio === '1-1' ? 300 : 490);
+            const lrPt = currentRatio === '9-16' ? 40 : (currentRatio === '1-1' ? 34 : 38);
+            const lrPb = currentRatio === '9-16' ? 28 : (currentRatio === '1-1' ? 20 : 26);
+            const lrPx = currentRatio === '1-1' ? 14 : 16;
 
             const cdH = hCfg.cdFont + hCfg.cdPy * 2 + 8;
             const mnH = hCfg.mnFont + hCfg.mnPy * 2 + 7;
@@ -4641,7 +4924,7 @@
                 const holeX = heroCardX + lrPx;
                 const holeY = heroCardY + lrPt;
                 const holeW = hCfg.cardW - lrPx * 2;
-                const holeRad = currentStyle === 'neubrutalism' ? 0 : (currentStyle === 'dark-code' ? 12 : (currentStyle === 'glass' ? 16 : 14));
+                const holeRad = currentStyle === 'neubrutalism' ? 0 : (currentStyle === 'dark-code' ? 12 : (currentStyle === 'glass' ? 16 : (currentRatio === '9-16' ? 18 : 14)));
                 const rimCol = currentStyle === 'neubrutalism' ? '#000000' : (currentStyle === 'dark-code' ? '#38BDF8' : (currentStyle === 'glass' ? 'rgba(255,255,255,0.92)' : 'rgba(255,255,255,0.38)'));
                 const rimW = currentStyle === 'neubrutalism' ? 3.5 : 2.5;
                 punchLiveHole(ctx, () => roundRectPath(holeX, holeY, holeW, lrHoleH, holeRad), { x: holeX, y: holeY, w: holeW, h: lrHoleH }, liveImg, rimCol, rimW);
@@ -5041,25 +5324,46 @@
                 }
             };
 
-            const starCfg = currentRatio === '9-16'
-                ? { trSize: 450, trY: 385, blSize: 480, blY: 25 }
-                : (currentRatio === '1-1'
-                    ? { trSize: 340, trY: 320, blSize: 360, blY: 35 }
-                    : { trSize: 410, trY: 355, blSize: 440, blY: 35 });
+            const starCfg = E.isLR
+                ? (currentRatio === '9-16'
+                    ? { trSize: 450, trY: 880, blSize: 480, blY: -450 }
+                    : (currentRatio === '1-1'
+                        ? { trSize: 340, trY: 420, blSize: 360, blY: -40 }
+                        : { trSize: 410, trY: 510, blSize: 440, blY: -80 }))
+                : (currentRatio === '9-16'
+                    ? { trSize: 450, trY: 385, blSize: 480, blY: 25 }
+                    : (currentRatio === '1-1'
+                        ? { trSize: 340, trY: 320, blSize: 360, blY: 35 }
+                        : { trSize: 410, trY: 355, blSize: 440, blY: 35 }));
 
             drawStar(W - 20 - starCfg.trSize, H / 2 - starCfg.trY, starCfg.trSize);
             drawStar(10, H / 2 - starCfg.blY, starCfg.blSize);
 
             // 3. Top Logos + Centered Window + Stickers
-            const winW = currentRatio === '9-16' ? 920 : (currentRatio === '1-1' ? 880 : 900);
+            const winW = E.isLR
+                ? (currentRatio === '9-16' ? 976 : (currentRatio === '1-1' ? 900 : 940))
+                : (currentRatio === '9-16' ? 920 : (currentRatio === '1-1' ? 880 : 900));
             const winX = (W - winW) / 2;
-            const logoBoxS = currentRatio === '1-1' ? 52 : 62;
-            const logoGap = currentRatio === '9-16' ? 22 : (currentRatio === '1-1' ? 16 : 18);
-            const logosTopY = currentRatio === '9-16' ? 74 : (currentRatio === '1-1' ? 30 : 44);
-            const tbH = 74;
+            const logoBoxS = E.isLR
+                ? (currentRatio === '9-16' ? 56 : (currentRatio === '1-1' ? 46 : 54))
+                : (currentRatio === '1-1' ? 52 : 62);
+            const logoGap = E.isLR
+                ? (currentRatio === '9-16' ? 18 : (currentRatio === '1-1' ? 14 : 16))
+                : (currentRatio === '9-16' ? 22 : (currentRatio === '1-1' ? 16 : 18));
+            const logosTopY = E.isLR
+                ? (currentRatio === '9-16' ? 54 : (currentRatio === '1-1' ? 22 : 30))
+                : (currentRatio === '9-16' ? 74 : (currentRatio === '1-1' ? 30 : 44));
+            const tbH = E.isLR ? 68 : 74;
             const heroSvgDim = currentRatio === '9-16' ? { w: 680, h: 225 } : (currentRatio === '1-1' ? { w: 560, h: 160 } : { w: 640, h: 205 });
-            const lrL2Dim = currentRatio === '9-16' ? { h: 600, px: 20, pt: 16, pb: 52, rad: 16 } : (currentRatio === '1-1' ? { h: 325, px: 16, pt: 14, pb: 38, rad: 12 } : { h: 420, px: 18, pt: 16, pb: 46, rad: 14 });
-            const stampBoxH = 62;
+            const lrL2Dim = currentRatio === '9-16'
+                ? { h: 1280, px: 16, pt: 14, pb: 48, rad: 16 }
+                : (currentRatio === '1-1'
+                    ? { h: 520,  px: 14, pt: 12, pb: 36, rad: 12 }
+                    : { h: 710,  px: 16, pt: 14, pb: 44, rad: 14 });
+            const l2StFs = E.isLR
+                ? computeFitFont(stampTxt, currentRatio === '9-16' ? 44 : (currentRatio === '1-1' ? 32 : 38), 24, '700', '"Space Grotesk", sans-serif', 0.06, 720)
+                : 40;
+            const stampBoxH = E.isLR ? (l2StFs + (currentRatio === '9-16' ? 26 : 22) + 8) : 62;
             const bodyPt = E.isLR ? lrL2Dim.pt : 36;
             const bodyPb = E.isLR ? lrL2Dim.pb : 56;
             const winH = E.isLR
@@ -5209,9 +5513,11 @@
             ctx.restore();
 
             // Tilted Event Sticker Stamp (KADERISASI / STAY TUNED / LIVE TOPIC)
-            ctx.font = '700 40px "Space Grotesk", sans-serif';
-            const stTxtW = ctx.measureText(stampTxt).width + Math.max(0, stampTxt.length - 1) * 2.4;
-            const stW = 56 + 28 + 12 + stTxtW;
+            const l2StPx = E.isLR ? (currentRatio === '9-16' ? 34 : 30) : 28;
+            const l2StTrack = Math.round(l2StFs * 0.06 * 10) / 10;
+            ctx.font = `700 ${l2StFs}px "Space Grotesk", sans-serif`;
+            const stTxtW = ctx.measureText(stampTxt).width + Math.max(0, stampTxt.length - 1) * l2StTrack;
+            const stW = l2StPx * 2 + 28 + 12 + stTxtW;
             const stampCY = E.isLR
                 ? (winY + tbH + bodyPt + lrL2Dim.h - 24 + stampBoxH / 2)
                 : (winY + tbH + bodyPt + heroSvgDim.h - 12 + stampBoxH / 2);
@@ -5221,7 +5527,7 @@
             drawL2Box(-stW / 2, -stampBoxH / 2, stW, stampBoxH, {
                 fill: L.stFill, border: L.stBorder, borderColor: L.stBorderCol, shadow: L.stShadow, radius: L.stRad, soft: true
             });
-            const clkX = -stW / 2 + 28 + 14;
+            const clkX = -stW / 2 + l2StPx + 14;
             ctx.strokeStyle = L.stText;
             ctx.lineWidth = 2.8;
             ctx.beginPath();
@@ -5232,7 +5538,7 @@
             ctx.lineTo(clkX, 0);
             ctx.lineTo(clkX + 5, 3);
             ctx.stroke();
-            drawTextTrack(stampTxt, -stW / 2 + 28 + 28 + 12, 1, '700 40px "Space Grotesk", sans-serif', L.stText, 2.4, 'left');
+            drawTextTrack(stampTxt, -stW / 2 + l2StPx + 28 + 12, 1, `700 ${l2StFs}px "Space Grotesk", sans-serif`, L.stText, l2StTrack, 'left');
             ctx.restore();
 
             // Bottom-Left Taped Instagram Sticker
@@ -5264,11 +5570,17 @@
             ctx.restore();
 
             // 4. Giant 8-Bit Pixelated Arrow Cursor anchored to bottom-right of window
-            const curCfg = currentRatio === '9-16'
-                ? { unit: 16 * 1.12, rOff: -26, bOff: -275 }
-                : (currentRatio === '1-1'
-                    ? { unit: 16 * 0.86, rOff: -24, bOff: -210 }
-                    : { unit: 16, rOff: -30, bOff: -245 });
+            const curCfg = E.isLR
+                ? (currentRatio === '9-16'
+                    ? { unit: 14, rOff: -12, bOff: -165 }
+                    : (currentRatio === '1-1'
+                        ? { unit: 12.8, rOff: -14, bOff: -170 }
+                        : { unit: 14.5, rOff: -14, bOff: -210 }))
+                : (currentRatio === '9-16'
+                    ? { unit: 16 * 1.12, rOff: -26, bOff: -275 }
+                    : (currentRatio === '1-1'
+                        ? { unit: 16 * 0.86, rOff: -24, bOff: -210 }
+                        : { unit: 16, rOff: -30, bOff: -245 }));
 
             const curW = 12 * curCfg.unit;
             const curH = 19 * curCfg.unit;
@@ -5612,9 +5924,13 @@
             const E = getEffectiveContent();
             const is11 = currentRatio === '1-1';
             const is916 = currentRatio === '9-16';
-            const topPad = is916 ? { x: 56, y: 72, logo: 54, py: 14, pl: 18, pr: 28, gap: 16, divH: 40 }
-                : (is11 ? { x: 46, y: 28, logo: 38, py: 9, pl: 12, pr: 18, gap: 10, divH: 32 }
-                : { x: 52, y: 42, logo: 46, py: 12, pl: 16, pr: 24, gap: 14, divH: 40 });
+            const topPad = E.isLR
+                ? (is916 ? { x: 46, y: 44, logo: 46, py: 10, pl: 14, pr: 22, gap: 12, divH: 34 }
+                    : (is11 ? { x: 40, y: 24, logo: 36, py: 9,  pl: 12, pr: 18, gap: 10, divH: 32 }
+                    : { x: 46, y: 34, logo: 44, py: 10, pl: 14, pr: 22, gap: 12, divH: 34 }))
+                : (is916 ? { x: 56, y: 72, logo: 54, py: 14, pl: 18, pr: 28, gap: 16, divH: 40 }
+                    : (is11 ? { x: 46, y: 28, logo: 38, py: 9, pl: 12, pr: 18, gap: 10, divH: 32 }
+                    : { x: 52, y: 42, logo: 46, py: 12, pl: 16, pr: 24, gap: 14, divH: 40 }));
 
             // 3. Top-Left Org Pill Badge (3 Wajib Logos)
             ctx.font = '700 19px "Space Grotesk", sans-serif';
@@ -5656,9 +5972,13 @@
             drawTextTrack('IDE LPKIA', txtX, topPad.y + pillH / 2 + 11, '800 13px "Plus Jakarta Sans", sans-serif', L.orgSub, 2.3, 'left');
 
             // 4. Bottom Dock Bar
-            const dockCfg = is916 ? { px: 50, pb: 72, py: 22 }
-                : (is11 ? { px: 40, pb: 26, py: 14 }
-                : { px: 46, pb: 36, py: 18 });
+            const dockCfg = E.isLR
+                ? (is916 ? { px: 46, pb: 44, py: 16 }
+                    : (is11 ? { px: 38, pb: 22, py: 14 }
+                    : { px: 44, pb: 30, py: 16 }))
+                : (is916 ? { px: 50, pb: 72, py: 22 }
+                    : (is11 ? { px: 40, pb: 26, py: 14 }
+                    : { px: 46, pb: 36, py: 18 }));
             const dockH = 26 + dockCfg.py * 2;
             const dockW = W - dockCfg.px * 2;
             const dockX = dockCfg.px;
@@ -5709,15 +6029,16 @@
 
             // 5. Center Speech Bubble + Megaphone + Caption
             const bDim = E.isLR
-                ? (is916 ? { w: 750, bodyH: 588, tailW: 104, tailH: 92, rad: 40, mega: 244, mOffX: 28, mOffY: -90 }
-                    : (is11 ? { w: 580, bodyH: 354, tailW: 82, tailH: 54, rad: 30, mega: 178, mOffX: 20, mOffY: -68 }
-                    : { w: 690, bodyH: 450, tailW: 96, tailH: 68, rad: 38, mega: 222, mOffX: 26, mOffY: -82 }))
+                ? getL3LrBubbleDim(currentRatio)
                 : (is916 ? { w: 690, bodyH: 392, tailW: 96, tailH: 52, rad: 38, mega: 244, mOffX: 28, mOffY: -90 }
                     : (is11 ? { w: 536, bodyH: 304, tailW: 76, tailH: 42, rad: 30, mega: 178, mOffX: 20, mOffY: -68 }
                     : { w: 632, bodyH: 360, tailW: 90, tailH: 48, rad: 36, mega: 222, mOffX: 26, mOffY: -82 }));
 
-            const capGap = is11 ? 20 : 28;
-            const capBlockH = E.isLR ? 174 : (E.isCS ? 58 : 132);
+            const l3TopicFs = E.isLR
+                ? computeFitFont(E.liveTopic, is916 ? 58 : (is11 ? 36 : 46), 28, '400', '"Archivo Black", "Space Grotesk", sans-serif', 0.02, 920)
+                : 0;
+            const capGap = E.isLR ? (is11 ? 10 : 14) : (is11 ? 20 : 28);
+            const capBlockH = E.isLR ? (Math.round(l3TopicFs * 1.04) + 12 + 132) : (E.isCS ? 58 : 132);
             const totalMidH = bDim.bodyH + bDim.tailH + capGap + capBlockH;
             const areaTop = topPad.y + pillH;
             const areaBot = dockY;
@@ -5756,23 +6077,23 @@
             }
 
             if (E.isLR) {
-                const holeX = bubX + 22;
-                const holeY = bubY + 22;
-                const holeW = bDim.w - 44;
-                const holeH = bDim.bodyH - 22;
+                const holeX = bubX + 18;
+                const holeY = bubY + 18;
+                const holeW = bDim.w - 36;
+                const holeH = bDim.bodyH - 36;
                 const holeRad = currentStyle === 'neubrutalism' || currentStyle === 'dark-code' ? 22 : 26;
                 const rimCol = currentStyle === 'neubrutalism' ? '#000000' : (currentStyle === 'dark-code' ? '#38BDF8' : (currentStyle === 'glass' ? '#FFFFFF' : 'rgba(15,23,42,0.22)'));
                 const rimW = currentStyle === 'neubrutalism' ? 3.5 : 2.5;
                 punchLiveHole(ctx, () => rrPath(holeX, holeY, holeW, holeH, holeRad), { x: holeX, y: holeY, w: holeW, h: holeH }, liveImg, rimCol, rimW);
 
                 // Top-left Live Report badge on bubble edge (drawn AFTER hole punch)
-                ctx.font = '800 18px "Space Grotesk", sans-serif';
-                const bTrack3 = 2.5;
+                ctx.font = '800 19px "Space Grotesk", sans-serif';
+                const bTrack3 = 2.66;
                 const lrTxtW = ctx.measureText(E.liveLabel).width + Math.max(0, E.liveLabel.length - 1) * bTrack3;
-                const lrW = lrTxtW + 36 + 20;
-                const lrH = 38;
+                const lrW = lrTxtW + 40 + 20;
+                const lrH = 40;
                 ctx.save();
-                ctx.translate(bubX + 24 + lrW / 2, bubY - 16 + lrH / 2);
+                ctx.translate(bubX + 26 + lrW / 2, bubY - 16 + lrH / 2);
                 ctx.rotate((-2 * Math.PI) / 180);
                 const bFill3 = currentStyle === 'neubrutalism' ? '#FCD34D' : (currentStyle === 'dark-code' ? '#0B192E' : '#CA2C2A');
                 const bCol3 = currentStyle === 'neubrutalism' ? '#0B1F40' : (currentStyle === 'dark-code' ? '#38BDF8' : '#FFFFFF');
@@ -5783,8 +6104,8 @@
                     radius: currentStyle === 'neubrutalism' ? 0 : (currentStyle === 'dark-code' ? 8 : 999),
                     soft: L.soft
                 });
-                drawLiveDot(ctx, -lrW / 2 + 20, 0, 5.5, currentStyle === 'glass' || currentStyle === 'modern');
-                drawTextTrack(E.liveLabel, -lrW / 2 + 34, 1, '800 18px "Space Grotesk", sans-serif', bCol3, bTrack3, 'left');
+                drawLiveDot(ctx, -lrW / 2 + 21, 0, 5.5, currentStyle === 'glass' || currentStyle === 'modern');
+                drawTextTrack(E.liveLabel, -lrW / 2 + 35, 1, '800 19px "Space Grotesk", sans-serif', bCol3, bTrack3, 'left');
                 ctx.restore();
             } else {
             // Stacked 3-Layer Hero Text Inside Bubble (Theme-Distinct Typography)
@@ -6064,10 +6385,22 @@
             const capY = bubY + bDim.bodyH + bDim.tailH + capGap;
             let capOff = 0;
             if (E.isLR) {
-                const tFs3 = is916 ? 36 : (is11 ? 26 : 32);
+                const tFs3 = l3TopicFs;
                 const tCol3 = currentStyle === 'dark-code' ? '#38BDF8' : (currentStyle === 'glass' ? '#FFFFFF' : '#FCD34D');
-                drawTextTrack(E.liveTopic, W / 2, capY + tFs3 * 0.52, `800 ${tFs3}px "Space Grotesk", sans-serif`, tCol3, 0.04 * tFs3, 'center');
-                capOff = tFs3 + 10;
+                ctx.save();
+                if (currentStyle === 'neubrutalism' || currentStyle === 'dark-code') {
+                    ctx.shadowColor = '#000000';
+                    ctx.shadowBlur = 0;
+                    ctx.shadowOffsetX = 4;
+                    ctx.shadowOffsetY = 4;
+                } else {
+                    ctx.shadowColor = 'rgba(6, 20, 56, 0.42)';
+                    ctx.shadowBlur = 18;
+                    ctx.shadowOffsetY = 6;
+                }
+                drawTextTrack(E.liveTopic, W / 2, capY + tFs3 * 0.52, `400 ${tFs3}px "Archivo Black", "Space Grotesk", sans-serif`, tCol3, 0.02 * tFs3, 'center');
+                ctx.restore();
+                capOff = Math.round(tFs3 * 1.04) + 12;
             }
             const titleLine = `${toTitleCase(E.title)} HIMA Informatika`;
             drawTextTrack(titleLine, W / 2, capY + capOff + 12, `700 21px ${L.capFont}`, L.capCol, 0, 'center');
@@ -6405,12 +6738,12 @@
             }
 
             // 5. Top 3-Logo Header Pill
-            const topY = is916 ? 66 : (is11 ? 24 : 38);
-            const logoS = is916 ? 52 : (is11 ? 34 : 44);
+            const topY = E.isLR ? (is916 ? 38 : (is11 ? 20 : 30)) : (is916 ? 66 : (is11 ? 24 : 38));
+            const logoS = E.isLR ? (is916 ? 44 : (is11 ? 32 : 40)) : (is916 ? 52 : (is11 ? 34 : 44));
             const chipWrap4 = currentStyle === 'dark-code';
             const slot4 = chipWrap4 ? logoS + 6 : logoS;
-            const pillPy = is916 ? 12 : (is11 ? 7 : 10);
-            const pillPx = is916 ? 28 : (is11 ? 18 : 24);
+            const pillPy = E.isLR ? (is916 ? 9 : (is11 ? 7 : 9)) : (is916 ? 12 : (is11 ? 7 : 10));
+            const pillPx = E.isLR ? (is916 ? 22 : (is11 ? 18 : 22)) : (is916 ? 28 : (is11 ? 18 : 24));
             const pillH = slot4 + pillPy * 2;
             ctx.font = '700 20px "Space Grotesk", sans-serif';
             const titleW = Math.max(ctx.measureText('HIMA INFORMATIKA').width + 18, 220);
@@ -6439,7 +6772,7 @@
             drawTextTrack('IDE LPKIA BANDUNG', titleCX4, topY + pillH / 2 + 11, '800 12px "Plus Jakarta Sans", sans-serif', L.topSub, 2.4, 'center');
 
             // 6. Bottom Social Strip Bar
-            const barH = is916 ? 62 : (is11 ? 48 : 54);
+            const barH = (E.isLR && is916) ? 58 : (is916 ? 62 : (is11 ? 48 : 54));
             const barY = H - barH;
             ctx.fillStyle = L.barFill; ctx.fillRect(0, barY, W, barH);
             if (L.barBorder !== 'transparent') { ctx.fillStyle = L.barBorder; ctx.fillRect(0, barY, W, 3); }
@@ -6460,18 +6793,28 @@
             drawTextTrack(E.cta, gX + 20, barMidY + 1, '700 18px "Space Grotesk", sans-serif', L.barText, 0.5, 'left');
 
             // 7. Tilted Stacked Instagram Card
-            const S = is916 ? { cw: 760, ch: 820, hdrH: 82, ftrH: 150, mxm: 20, avS: 40 }
-                : (is11 ? { cw: 640, ch: 640, hdrH: 64, ftrH: 124, mxm: 16, avS: 34 }
-                : { cw: 700, ch: 740, hdrH: 76, ftrH: 140, mxm: 20, avS: 40 });
-            const P = is916 ? { mega: 230, r: 56, b: 104 } : (is11 ? { mega: 180, r: 46, b: 70 } : { mega: 210, r: 52, b: 84 });
+            const S = E.isLR
+                ? (is916 ? { cw: 936, ch: 1616, hdrH: 74, ftrH: 174, mxm: 16, avS: 38 }
+                    : (is11 ? { cw: 760, ch: 790,  hdrH: 62, ftrH: 128, mxm: 14, avS: 34 }
+                    : { cw: 820, ch: 1010, hdrH: 70, ftrH: 146, mxm: 16, avS: 38 }))
+                : (is916 ? { cw: 760, ch: 820, hdrH: 82, ftrH: 150, mxm: 20, avS: 40 }
+                    : (is11 ? { cw: 640, ch: 640, hdrH: 64, ftrH: 124, mxm: 16, avS: 34 }
+                    : { cw: 700, ch: 740, hdrH: 76, ftrH: 140, mxm: 20, avS: 40 }));
+            const P = E.isLR
+                ? (is916 ? { mega: 235, r: 30, b: 146 } : (is11 ? { mega: 175, r: 30, b: 92 } : { mega: 210, r: 34, b: 112 }))
+                : (is916 ? { mega: 230, r: 56, b: 104 } : (is11 ? { mega: 180, r: 46, b: 70 } : { mega: 210, r: 52, b: 84 }));
             const stackCX = W / 2;
             const areaTop = topY + pillH;
             const stackCY = areaTop + (barY - areaTop) / 2;
+            const rotBack4 = E.isLR ? 2.3 : 4.2;
+            const rotFront4 = E.isLR ? -1.3 : -2.2;
+            const backOx4 = E.isLR ? 12 : 16;
+            const backOy4 = E.isLR ? -4 : -6;
 
             // Back card
             ctx.save();
-            ctx.translate(stackCX + 16, stackCY - 6);
-            ctx.rotate((4.2 * Math.PI) / 180);
+            ctx.translate(stackCX + backOx4, stackCY + backOy4);
+            ctx.rotate((rotBack4 * Math.PI) / 180);
             drawBox(-S.cw / 2, -S.ch / 2, S.cw, S.ch, {
                 fill: L.backFill, border: L.backBorder, borderCol: L.backBorderCol, shadow: L.backShadow, radius: L.cardRad, soft: L.softCol, blur: 36, sy: 18
             });
@@ -6480,7 +6823,7 @@
             // Front card
             ctx.save();
             ctx.translate(stackCX, stackCY);
-            ctx.rotate((-2.2 * Math.PI) / 180);
+            ctx.rotate((rotFront4 * Math.PI) / 180);
             const cx0 = -S.cw / 2;
             const cy0 = -S.ch / 2;
             drawBox(cx0, cy0, S.cw, S.ch, {
@@ -6713,22 +7056,30 @@
                 ctx.beginPath(); ctx.arc(cx0 + S.cw / 2 + 5 + d * 14, actY, d === 0 ? 5 : 4, 0, Math.PI * 2); ctx.fill();
                 ctx.restore();
             }
-            drawTextTrack('1,024 likes', cx0 + 24, fY + 58, `800 16px ${L.uiFam}`, L.cardText, 0, 'left');
+            const isL4Lr916 = E.isLR && is916;
+            const likeFs4 = isL4Lr916 ? 18 : 16;
+            const capFs4 = isL4Lr916 ? 19 : 16;
+            const locFs4 = isL4Lr916 ? 17 : 15.5;
+            const likeY4 = fY + (isL4Lr916 ? 64 : 58);
+            const capY4 = fY + (isL4Lr916 ? 94 : 83);
+            const locY4 = fY + (isL4Lr916 ? 124 : 108);
+            const fPadX4 = isL4Lr916 ? 26 : 24;
+            drawTextTrack('1,024 likes', cx0 + fPadX4, likeY4, `800 ${likeFs4}px ${L.uiFam}`, L.cardText, 0, 'left');
             const capLead = E.igHandle + '  ';
-            ctx.font = `800 16px ${L.uiFam}`;
+            ctx.font = `800 ${capFs4}px ${L.uiFam}`;
             const leadW = ctx.measureText(capLead).width;
-            drawTextTrack(capLead, cx0 + 24, fY + 83, `800 16px ${L.uiFam}`, L.cardText, 0, 'left');
-            drawTextTrack(M.caption, cx0 + 24 + leadW, fY + 83, `600 16px ${L.uiFam}`, L.cardText, 0, 'left');
+            drawTextTrack(capLead, cx0 + fPadX4, capY4, `800 ${capFs4}px ${L.uiFam}`, L.cardText, 0, 'left');
+            drawTextTrack(M.caption, cx0 + fPadX4 + leadW, capY4, `600 ${capFs4}px ${L.uiFam}`, L.cardText, 0, 'left');
             if (!E.isCS) {
-                const px = cx0 + 24;
-                const py = fY + 108;
+                const px = cx0 + fPadX4;
+                const py = locY4;
                 ctx.save();
                 ctx.translate(px + 8, py);
                 ctx.fillStyle = '#EF4444';
                 ctx.beginPath(); ctx.arc(0, -2, 6.5, Math.PI, 0, false); ctx.quadraticCurveTo(6.5, 2, 0, 9); ctx.quadraticCurveTo(-6.5, 2, -6.5, -2); ctx.closePath(); ctx.fill();
                 ctx.fillStyle = '#FFFFFF'; ctx.beginPath(); ctx.arc(0, -2, 2.4, 0, Math.PI * 2); ctx.fill();
                 ctx.restore();
-                drawTextTrack(toTitleCase(E.loc), px + 22, py + 1, `700 15.5px ${L.uiFam}`, L.cardText, 0, 'left');
+                drawTextTrack(toTitleCase(E.loc), px + 22, py + 1, `700 ${locFs4}px ${L.uiFam}`, L.cardText, 0, 'left');
             }
             ctx.restore();
 
@@ -7048,12 +7399,17 @@
                 const topAccY = is916 ? 0.32 * H : (is11 ? 0.31 * H : 0.34 * H);
                 const topRightY = is916 ? 0.21 * H : (is11 ? 0.18 * H : 0.22 * H);
                 const botAccY = is916 ? 0.79 * H : (is11 ? 0.82 * H : 0.77 * H);
-                const accList = [
-                    ['>_', 72, topAccY + 17, -10, 34, T.codeA],
-                    ['</>', W - 82, topRightY + 18, 9, 32, T.codeB],
-                    ['{ }', 82, botAccY - 12, 8, 34, T.codeB],
-                    ['01;', W - 82, botAccY + 18, -10, 30, T.codeA]
-                ];
+                const accList = E.isLR
+                    ? [
+                        ['{ }', 82, botAccY - 12, 8, 34, T.codeB],
+                        ['01;', W - 82, botAccY + 18, -10, 30, T.codeA]
+                    ]
+                    : [
+                        ['>_', 72, topAccY + 17, -10, 34, T.codeA],
+                        ['</>', W - 82, topRightY + 18, 9, 32, T.codeB],
+                        ['{ }', 82, botAccY - 12, 8, 34, T.codeB],
+                        ['01;', W - 82, botAccY + 18, -10, 30, T.codeA]
+                    ];
                 accList.forEach(([txt, ax, ay, rot, fs, col]) => {
                     ctx.save();
                     ctx.translate(ax, ay);
@@ -7076,8 +7432,8 @@
             };
 
             // 5. Top Editorial Header + Hairline Rule
-            const sidePad = is916 ? 60 : (is11 ? 48 : 56);
-            const topPad = is916 ? 72 : (is11 ? 30 : 44);
+            const sidePad = E.isLR ? (is916 ? 52 : (is11 ? 44 : 48)) : (is916 ? 60 : (is11 ? 48 : 56));
+            const topPad = E.isLR ? (is916 ? 42 : (is11 ? 24 : 32)) : (is916 ? 72 : (is11 ? 30 : 44));
             const logoS = is916 ? 36 : (is11 ? 27 : 32);
             const chipH = logoS + 10;
             const chipW = logoS * 3 + 16 + T.chipPx * 2;
@@ -7121,7 +7477,7 @@
             drawHairline(sidePad, W - sidePad, topRuleY);
 
             // 6. Bottom Social Row + Separator + Hairline Rule
-            const botPad = is916 ? 72 : (is11 ? 28 : 42);
+            const botPad = E.isLR ? (is916 ? 42 : (is11 ? 22 : 30)) : (is916 ? 72 : (is11 ? 28 : 42));
             const botRuleY = H - botPad - 4;
             drawHairline(sidePad, W - sidePad, botRuleY);
 
@@ -7162,19 +7518,23 @@
             drawTextTrack(E.cta, sx + 37, socY + 1, '700 18px "Plus Jakarta Sans", sans-serif', T.socCol, 0.36, 'left');
 
             // 7. Vertical Layout Math for Pinned Note / Live Polaroid + Smooth Outlined Title Block
-            const cardW = is916 ? 760 : (is11 ? 630 : 720);
+            const cardW = E.isLR
+                ? (is916 ? 912 : (is11 ? 720 : 810))
+                : (is916 ? 760 : (is11 ? 630 : 720));
             const cardH = E.isLR
-                ? (is916 ? 650 : (is11 ? 392 : 506))
+                ? (is916 ? 1280 : (is11 ? 520 : 710))
                 : (is916 ? 470 : (is11 ? 350 : 430));
-            const cardRad = is11 ? Math.min(T.cardRad, 28) : T.cardRad;
-            const [rawBx, rawBy, backDeg] = T.backOff;
-            const backOffX = is11 ? Math.round(rawBx * 0.8) : rawBx;
-            const backOffY = is11 ? Math.round(rawBy * 0.8) : rawBy;
+            const cardRad = E.isLR ? 30 : (is11 ? Math.min(T.cardRad, 28) : T.cardRad);
+            const [rawBx, rawBy, rawBackDeg] = T.backOff;
+            const cardDeg = E.isLR ? (is916 ? -2.0 : -2.6) : -4.2;
+            const backDeg = E.isLR ? (is916 ? -3.4 : -4.2) : rawBackDeg;
+            const backOffX = E.isLR ? (is916 ? -10 : -11) : (is11 ? Math.round(rawBx * 0.8) : rawBx);
+            const backOffY = E.isLR ? -4 : (is11 ? Math.round(rawBy * 0.8) : rawBy);
             const infoGap = E.isLR
-                ? (is916 ? 52 : (is11 ? 24 : 38))
+                ? (is916 ? 40 : (is11 ? 22 : 30))
                 : (is916 ? 68 : (is11 ? 32 : 50));
             const marginT = E.isLR
-                ? (is916 ? 18 : (is11 ? 8 : 12))
+                ? (is916 ? 10 : (is11 ? 6 : 8))
                 : (is916 ? 24 : (is11 ? 10 : 18));
 
             const mnH = E.isCS ? 0 : (is11 ? 26 : 30);
@@ -7209,10 +7569,10 @@
             }
             ctx.restore();
 
-            // Main Tilted White Note Card (-4.2deg)
+            // Main Tilted White Note Card / Live Polaroid
             ctx.save();
             ctx.translate(cardCX, cardCY);
-            ctx.rotate((-4.2 * Math.PI) / 180);
+            ctx.rotate((cardDeg * Math.PI) / 180);
 
             ctx.save();
             if (T.cardSoft) {
@@ -7240,10 +7600,10 @@
             }
 
             if (E.isLR) {
-                const chinH = is11 ? 42 : 52;
-                const holeX5 = -cardW / 2 + 20;
-                const holeY5 = -cardH / 2 + 20;
-                const holeW5 = cardW - 40;
+                const chinH = is11 ? 42 : 54;
+                const holeX5 = -cardW / 2 + 18;
+                const holeY5 = -cardH / 2 + 18;
+                const holeW5 = cardW - 36;
                 const holeH5 = cardH - 34 - chinH;
                 const holeRad5 = currentStyle === 'neubrutalism' ? 10 : 18;
                 const rimCol5 = currentStyle === 'neubrutalism' ? '#000000' : (currentStyle === 'dark-code' ? '#38BDF8' : 'rgba(15,23,42,0.16)');
@@ -7426,7 +7786,7 @@
             ctx.textBaseline = 'middle';
             ctx.lineJoin = 'round';
             ctx.lineCap = 'round';
-            const tChars = Array.from(E.title);
+            const tChars = Array.from(M.titleTxt);
             const tWidths = tChars.map((c) => ctx.measureText(c).width);
             const tTot = tWidths.reduce((a, b) => a + b, 0) + tTrack * Math.max(0, tChars.length - 1);
             const paintTitle = (ox, oy, strokeCol, fillCol) => {
@@ -7548,6 +7908,12 @@
             renderL2CursorSvg();
             syncAllDom();
             applyScale();
+            if (document.fonts && document.fonts.ready) {
+                document.fonts.ready.then(() => {
+                    syncAllDom();
+                    applyScale();
+                });
+            }
         });
     </script>
 </body>
