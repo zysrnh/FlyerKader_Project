@@ -38,6 +38,7 @@ FlyerKader_Project/
 │   ├── poster-coming-soon-layout4-modern-4x5.png
 │   ├── poster-h7-layout5-neubrutalism-4x5.png
 │   ├── poster-h7-layout5-glass-4x5.png
+│   ├── poster-h7-layout5-glass-9x16.png
 │   ├── poster-h7-layout5-dark-4x5.png
 │   ├── poster-h7-layout5-modern-4x5.png
 │   └── poster-coming-soon-layout5-glass-4x5.png
@@ -46,7 +47,7 @@ FlyerKader_Project/
 
 ## Fitur di `index.html`
 
-- **Switcher Layout:** `Layout 1 (Countdown Card)`, `Layout 2 (Retro Pop-up)`, `Layout 3 (Bubble Pop — Biru HIMA IF)`, `Layout 4 (IG Feed Stack)`, dan `Layout 5 (Arcade Quest — Retro Console)`
+- **Switcher Layout:** `Layout 1 (Countdown Card)`, `Layout 2 (Retro Pop-up)`, `Layout 3 (Bubble Pop — Biru HIMA IF)`, `Layout 4 (IG Feed Stack)`, dan `Layout 5 (Pinned Note — Mading Pin 3D)`
 - **3 Logo Resmi Terintegrasi:** `HIMA Informatika`, `IDE LPKIA`, dan `Kabinet Aksara Nirmana` terpasang di seluruh Layout 1–5 (plus opsional override logo ke-3 di Layout 2)
 - **Mode / Preset Konten:** `H-7`, `H-3`, `H-1`, `HARI H`, dan **`COMING SOON` (tersedia di semua layout 1–5 — tanpa tanggal/lokasi)**
 - **Switcher Style (Semua Layout & Mode):** `Neubrutalism` (default), `Glassmorphism`, `Dark Code`, dan `Modern Clean`

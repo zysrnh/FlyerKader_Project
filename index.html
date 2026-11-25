@@ -99,6 +99,12 @@
         .poster-canvas.layout-4 .layout-5-root { display: none !important; }
         .poster-canvas.layout-4 .layout-4-root { display: flex !important; }
 
+        .poster-canvas.layout-5 .layout-1-root,
+        .poster-canvas.layout-5 .layout-2-root,
+        .poster-canvas.layout-5 .layout-3-root,
+        .poster-canvas.layout-5 .layout-4-root { display: none !important; }
+        .poster-canvas.layout-5 .layout-5-root { display: flex !important; }
+
         /* Mode Coming Soon (berlaku di Layout 1, 2, 3 & 4 — tanpa tanggal/lokasi) */
         .poster-canvas.mode-coming-soon .layout-1-root .menuju-box,
         .poster-canvas.mode-coming-soon .layout-1-root .sched-grid,
@@ -708,77 +714,9 @@
         .layout-4.style-modern .l4-bottom-bar { background: #0A2044; color: #FFFFFF; }
         .layout-4.style-modern .l4-bar-icon { color: #FDD34D; }
 
-        /* ================= LAYOUT 5: ARCADE QUEST (RETRO GAME CABINET + HIMA IF DNA) ================= */
-        .poster-canvas.layout-5 { padding: 0 !important; }
-        .poster-canvas.layout-5 .layout-1-root,
-        .poster-canvas.layout-5 .layout-2-root,
-        .poster-canvas.layout-5 .layout-3-root,
-        .poster-canvas.layout-5 .layout-4-root { display: none !important; }
-        .poster-canvas.layout-5 .layout-5-root { display: block !important; }
-
-        .poster-canvas.mode-coming-soon .layout-5-root .l5-countdown-only { display: none !important; }
-        .poster-canvas.mode-coming-soon .layout-5-root .l5-cs-only { display: inline-flex !important; }
-
-        .l5-cabinet { position: relative; display: flex; flex-direction: column; align-items: center; }
-        .l5-marquee { width: 100%; display: flex; align-items: center; justify-content: center; box-sizing: border-box; position: relative; z-index: 12; }
-        .l5-mq-screen { width: calc(100% - 36px); height: calc(100% - 26px); display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 0 20px; box-sizing: border-box; }
-        .l5-mq-logos { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
-        .l5-logo-chip { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0; }
-        .ratio-1-1 .l5-logo-chip { width: 38px; height: 38px; }
-        .ratio-9-16 .l5-logo-chip { width: 50px; height: 50px; }
-        .l5-logo-chip img { width: 100%; height: 100%; object-fit: contain; }
-
-        .l5-mq-titles { flex: 1; min-width: 0; text-align: left; }
-        .l5-mq-h1 { font-size: 19px; letter-spacing: 0.04em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .l5-mq-h2 { font-size: 11.5px; letter-spacing: 0.16em; margin-top: 4px; white-space: nowrap; }
-        .ratio-1-1 .l5-mq-h1 { font-size: 17px; }
-        .ratio-1-1 .l5-mq-h2 { font-size: 10.5px; }
-        .ratio-9-16 .l5-mq-h1 { font-size: 21px; }
-        .ratio-9-16 .l5-mq-h2 { font-size: 12.5px; }
-
-        .l5-mq-socials { display: flex; flex-direction: column; gap: 5px; flex-shrink: 0; align-items: flex-end; }
-        .l5-mq-srow { display: inline-flex; align-items: center; gap: 6px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 12.5px; line-height: 1; letter-spacing: 0.02em; }
-        .l5-mq-ico { width: 14px; height: 14px; flex-shrink: 0; }
-        .ratio-1-1 .l5-mq-srow { font-size: 11.5px; }
-        .ratio-9-16 .l5-mq-srow { font-size: 13.5px; }
-
-        .l5-body { width: 100%; position: relative; box-sizing: border-box; display: flex; align-items: center; justify-content: center; }
-        .l5-bezel { position: relative; overflow: hidden; box-sizing: border-box; }
-        .l5-screen { position: relative; width: 100%; height: 100%; overflow: hidden; }
-        .l5-crt-scan { position: absolute; inset: 0; pointer-events: none; z-index: 4; background: repeating-linear-gradient(to bottom, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 3px, rgba(0,0,0,0.06) 3px, rgba(0,0,0,0.06) 4px); }
-        .l5-hud-row { position: relative; z-index: 6; display: flex; align-items: center; justify-content: space-between; padding: 12px 18px 0; font-size: 13px; letter-spacing: 0.08em; }
-        .l5-stage-overlay { position: absolute; inset: 0; pointer-events: none; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-        .l5-diag-top { align-self: flex-start; margin-left: 72px; margin-bottom: 6px; transform: rotate(-5deg); }
-        .ratio-1-1 .l5-diag-top { margin-left: 62px; }
-        .l5-badge { display: inline-block; padding: 8px 24px; font-family: 'Silkscreen', monospace; font-weight: 700; font-size: 26px; letter-spacing: 0.08em; line-height: 1; }
-        .ratio-1-1 .l5-badge { padding: 6px 18px; font-size: 21px; }
-        .ratio-9-16 .l5-badge { padding: 10px 28px; font-size: 30px; }
-
-        .l5-hero-txt { display: block; text-align: center; text-transform: uppercase; line-height: 0.86; letter-spacing: -0.02em; white-space: pre-line; transform: rotate(-2deg); margin: 4px 0; }
-        .l5-diag-bot { align-self: flex-end; margin-right: 64px; margin-top: 8px; display: inline-flex; align-items: center; gap: 10px; transform: rotate(-4deg); }
-        .ratio-1-1 .l5-diag-bot { margin-right: 54px; margin-top: 4px; }
-        .l5-menuju { display: inline-block; padding: 6px 16px; font-family: 'Space Grotesk', sans-serif; font-weight: 800; font-size: 20px; letter-spacing: 0.14em; line-height: 1; text-transform: uppercase; }
-        .l5-stamp { display: inline-block; padding: 7px 20px; font-family: 'Space Grotesk', sans-serif; font-weight: 800; font-size: 26px; letter-spacing: 0.06em; line-height: 1; text-transform: uppercase; }
-        .ratio-1-1 .l5-menuju { padding: 5px 12px; font-size: 17px; }
-        .ratio-1-1 .l5-stamp { padding: 6px 16px; font-size: 21px; }
-        .ratio-9-16 .l5-menuju { padding: 7px 18px; font-size: 22px; }
-        .ratio-9-16 .l5-stamp { padding: 9px 24px; font-size: 29px; }
-
-        .l5-deck-wrap { position: relative; z-index: 15; width: 100%; display: flex; flex-direction: column; justify-content: flex-end; }
-        .l5-apron { position: relative; z-index: 20; width: 100%; display: flex; align-items: center; justify-content: center; box-sizing: border-box; }
-        .l5-apron-pill { display: inline-flex; align-items: center; gap: 12px; padding: 8px 22px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16.5px; letter-spacing: 0.04em; line-height: 1; }
-        .ratio-1-1 .l5-apron-pill { font-size: 15px; padding: 6px 18px; }
-        .ratio-9-16 .l5-apron-pill { font-size: 18px; padding: 10px 26px; }
-        .l5-apron-sep { opacity: 0.45; }
-
-        .l5-kick { width: 100%; display: flex; align-items: center; justify-content: center; gap: 28px; box-sizing: border-box; position: relative; z-index: 11; }
-        .l5-coin-slot { width: 22px; height: 32px; border-radius: 4px; opacity: 0.65; }
-        .l5-coin-plate { padding: 6px 18px; font-size: 14px; letter-spacing: 0.14em; }
-
-        /* Shared Dark-Code White Logo Chip (Layouts 3, 4, 5) */
+        /* Shared Dark-Code White Logo Chip (Layouts 3, 4) */
         .layout-3.style-dark-code .l3-logo-chip,
-        .layout-4.style-dark-code .l4-logo-chip,
-        .layout-5.style-dark-code .l5-logo-chip {
+        .layout-4.style-dark-code .l4-logo-chip {
             background: #FFFFFF;
             border-radius: 8px;
             padding: 3px;
@@ -786,113 +724,712 @@
         }
         .layout-4 .l4-logos-left { display: flex; align-items: center; gap: 8px; }
 
-        /* Layout 5 Theme 1: Neubrutalism (Biru Arcade + Border Hitam + Merah/Kuning Solid) */
+        /* ================= LAYOUT 5: PINNED NOTE / MADING PIN 3D ================= */
+        .poster-canvas.mode-coming-soon .layout-5-root .l5-countdown-only { display: none !important; }
+
+        .layout-5-root {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .l5-bg-grid {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 1;
+            background-size: 56px 56px;
+        }
+
+        .l5-orb-tl, .l5-orb-br {
+            position: absolute;
+            pointer-events: none;
+            border-radius: 999px;
+            z-index: 0;
+        }
+        .l5-orb-tl { top: -120px; left: -100px; width: 620px; height: 620px; }
+        .l5-orb-br { bottom: -140px; right: -100px; width: 640px; height: 640px; }
+
+        .l5-bloom-tl {
+            position: absolute;
+            top: 90px;
+            left: -44px;
+            width: 300px;
+            height: 300px;
+            pointer-events: none;
+            z-index: 2;
+        }
+        .l5-bloom-br {
+            position: absolute;
+            bottom: 44px;
+            right: -36px;
+            width: 245px;
+            height: 245px;
+            pointer-events: none;
+            z-index: 2;
+        }
+        .ratio-1-1 .l5-bloom-tl { width: 240px; height: 240px; top: 72px; left: -36px; }
+        .ratio-1-1 .l5-bloom-br { width: 205px; height: 205px; bottom: 30px; right: -28px; }
+        .ratio-9-16 .l5-bloom-tl { width: 340px; height: 340px; top: 130px; }
+        .ratio-9-16 .l5-bloom-br { width: 280px; height: 280px; bottom: 84px; }
+
+        .l5-code {
+            position: absolute;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 800;
+            pointer-events: none;
+            user-select: none;
+            z-index: 3;
+            line-height: 1;
+        }
+        .l5-c1 { top: 32%; left: 52px; font-size: 36px; transform: rotate(-10deg); }
+        .l5-c2 { top: 22%; right: 56px; font-size: 32px; transform: rotate(9deg); }
+        .l5-c3 { bottom: 23%; left: 50px; font-size: 36px; transform: rotate(8deg); }
+        .l5-c4 { bottom: 20%; right: 54px; font-size: 32px; transform: rotate(-10deg); }
+        .ratio-1-1 .l5-c1 { top: 30%; left: 46px; }
+        .ratio-1-1 .l5-c2 { top: 18%; }
+        .ratio-1-1 .l5-c3, .ratio-1-1 .l5-c4 { bottom: 18%; }
+        .ratio-9-16 .l5-c1 { top: 30%; left: 52px; }
+        .ratio-9-16 .l5-c2 { top: 21%; }
+        .ratio-9-16 .l5-c3, .ratio-9-16 .l5-c4 { bottom: 21%; }
+
+        /* Top Editorial Strip + Hairline Rule */
+        .l5-top-wrap {
+            position: relative;
+            z-index: 10;
+            padding: 44px 56px 0 56px;
+            flex-shrink: 0;
+        }
+        .ratio-9-16 .l5-top-wrap { padding: 72px 60px 0 60px; }
+        .ratio-1-1  .l5-top-wrap { padding: 30px 48px 0 48px; }
+
+        .l5-top-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 14px;
+        }
+        .l5-top-left {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            min-width: 0;
+        }
+        .l5-logos-trio {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: #FFFFFF;
+            border-radius: 9px;
+            padding: 5px 8px;
+            box-sizing: border-box;
+            flex-shrink: 0;
+        }
+        .l5-logo-img {
+            width: 34px;
+            height: 34px;
+            object-fit: contain;
+            display: block;
+        }
+        .ratio-1-1 .l5-logo-img { width: 28px; height: 28px; }
+        .ratio-9-16 .l5-logo-img { width: 38px; height: 38px; }
+
+        .l5-vsep {
+            width: 1.5px;
+            height: 34px;
+            flex-shrink: 0;
+        }
+        .l5-org-meta {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.18;
+        }
+        .l5-org-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 800;
+            font-size: 16px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+        .l5-org-sub {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            opacity: 0.92;
+        }
+        .l5-top-right {
+            text-align: right;
+            line-height: 1.18;
+            flex-shrink: 0;
+        }
+        .l5-right-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 800;
+            font-size: 15.5px;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+        .l5-right-sub {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 600;
+            font-size: 13.5px;
+            opacity: 0.88;
+        }
+
+        .l5-hairline {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 8px;
+        }
+        .l5-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 999px;
+            flex-shrink: 0;
+        }
+        .l5-line {
+            flex: 1;
+            height: 1.5px;
+        }
+
+        /* Center Pinned Note Stage (Explicit Flex Centering) */
+        .l5-center-stage {
+            position: relative;
+            z-index: 12;
+            flex: 1;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 48px 16px 48px;
+            box-sizing: border-box;
+        }
+        .ratio-1-1 .l5-center-stage { padding: 8px 40px 10px 40px; }
+
+        .l5-card-wrap {
+            position: relative;
+            width: 720px;
+            height: 430px;
+            margin: 18px auto 0 auto;
+            flex-shrink: 0;
+        }
+        .ratio-9-16 .l5-card-wrap { width: 760px; height: 470px; margin-top: 24px; }
+        .ratio-1-1  .l5-card-wrap { width: 630px; height: 350px; margin-top: 10px; }
+
+        .l5-card-back {
+            position: absolute;
+            inset: 0;
+            transform: translate(-18px, -12px) rotate(-4.5deg);
+            border-radius: 36px;
+            pointer-events: none;
+        }
+        .ratio-1-1 .l5-card-back { border-radius: 28px; transform: translate(-14px, -10px) rotate(-4.5deg); }
+
+        .l5-note-card {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform: rotate(-4.5deg);
+            border-radius: 36px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 28px 44px;
+            overflow: visible;
+        }
+        .ratio-1-1 .l5-note-card { border-radius: 28px; padding: 20px 34px; }
+
+        .l5-card-pin-mark {
+            position: absolute;
+            top: 23px;
+            right: 29px;
+            width: 18px;
+            height: 18px;
+            border-radius: 999px;
+            background: radial-gradient(circle, rgba(15, 23, 42, 0.34) 0%, rgba(15, 23, 42, 0.10) 55%, transparent 72%);
+            pointer-events: none;
+            z-index: 5;
+        }
+        .l5-card-pin-cast {
+            position: absolute;
+            top: 31px;
+            right: 34px;
+            width: 56px;
+            height: 14px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, rgba(15, 23, 42, 0) 0%, rgba(15, 23, 42, 0.16) 100%);
+            transform: rotate(-34deg);
+            transform-origin: right center;
+            pointer-events: none;
+            z-index: 4;
+        }
+
+        .l5-pushpin {
+            position: absolute;
+            top: -96px;
+            right: -76px;
+            width: 160px;
+            height: 160px;
+            pointer-events: none;
+            z-index: 30;
+            transform: scale(1.1);
+            transform-origin: 46px 128px;
+            filter: drop-shadow(-4px 8px 10px rgba(0, 0, 0, 0.28));
+        }
+        .ratio-1-1 .l5-pushpin {
+            transform: scale(0.94);
+            transform-origin: 46px 128px;
+        }
+        .ratio-9-16 .l5-pushpin {
+            transform: scale(1.16);
+            transform-origin: 46px 128px;
+        }
+
+        .l5-card-cd {
+            position: absolute;
+            top: 26px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 800;
+            font-size: 16px;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            white-space: nowrap;
+            padding: 4px 16px;
+            border-radius: 999px;
+        }
+        .ratio-1-1 .l5-card-cd { top: 18px; font-size: 14px; padding: 3px 13px; }
+        .ratio-9-16 .l5-card-cd { top: 30px; font-size: 17px; }
+
+        .l5-card-hero {
+            font-family: 'Outfit', 'Archivo Black', sans-serif;
+            font-weight: 900;
+            line-height: 0.88;
+            letter-spacing: -0.03em;
+            text-transform: uppercase;
+            white-space: pre-line;
+            margin-top: 16px;
+        }
+        .ratio-1-1 .l5-card-hero { margin-top: 14px; }
+
+        /* Title + Motto + Schedule below pinned card */
+        .l5-info-stack {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-top: 52px;
+            gap: 10px;
+            width: 100%;
+            max-width: 940px;
+        }
+        .ratio-9-16 .l5-info-stack { margin-top: 72px; gap: 14px; }
+        .ratio-1-1  .l5-info-stack { margin-top: 34px; gap: 6px; }
+
+        .l5-menuju-pill {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 800;
+            font-size: 17px;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            padding: 4px 18px;
+            display: inline-block;
+            line-height: 1.2;
+        }
+        .ratio-1-1 .l5-menuju-pill { font-size: 14px; padding: 3px 14px; }
+
+        .l5-title-out {
+            font-family: 'Archivo Black', 'Space Grotesk', sans-serif;
+            font-weight: 400;
+            font-size: 86px;
+            line-height: 1.02;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            paint-order: stroke fill;
+            white-space: nowrap;
+        }
+        .ratio-9-16 .l5-title-out { font-size: 92px; }
+        .ratio-1-1  .l5-title-out { font-size: 74px; }
+
+        .l5-motto {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 600;
+            font-style: italic;
+            font-size: 24px;
+            line-height: 1.3;
+            letter-spacing: 0.01em;
+            margin-top: 2px;
+        }
+        .ratio-1-1 .l5-motto { font-size: 20px; }
+        .ratio-9-16 .l5-motto { font-size: 26px; }
+
+        .l5-sched-row {
+            margin-top: 8px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 8px 22px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            letter-spacing: 0.04em;
+        }
+        .ratio-1-1 .l5-sched-row { font-size: 15.5px; padding: 6px 16px; margin-top: 4px; }
+        .ratio-9-16 .l5-sched-row { font-size: 20px; padding: 10px 26px; margin-top: 12px; }
+
+        /* Bottom Editorial Socials + Rule */
+        .l5-bottom-wrap {
+            position: relative;
+            z-index: 10;
+            padding: 0 56px 42px 56px;
+            flex-shrink: 0;
+        }
+        .ratio-9-16 .l5-bottom-wrap { padding: 0 60px 72px 60px; }
+        .ratio-1-1  .l5-bottom-wrap { padding: 0 48px 28px 48px; }
+
+        .l5-social-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 34px;
+            margin-bottom: 12px;
+        }
+        .l5-soc-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            letter-spacing: 0.02em;
+        }
+        .l5-soc-badge {
+            width: 28px;
+            height: 28px;
+            border-radius: 7px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        /* ====== LAYOUT 5 THEME 1: NEUBRUTALISM (HIMA IF BOLD FLAT) ====== */
         .poster-canvas.layout-5.style-neubrutalism {
             background-color: #16488E;
-            background-image: radial-gradient(rgba(255, 255, 255, 0.16) 2px, transparent 2px);
-            background-size: 24px 24px;
+            color: #FFFFFF;
         }
+        .layout-5.style-neubrutalism .l5-bg-grid {
+            background-image:
+                linear-gradient(to right, rgba(255, 255, 255, 0.14) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.14) 1px, transparent 1px);
+        }
+        .layout-5.style-neubrutalism .l5-orb-tl {
+            background: radial-gradient(circle, rgba(252, 211, 77, 0.24) 0%, transparent 66%);
+        }
+        .layout-5.style-neubrutalism .l5-orb-br {
+            background: radial-gradient(circle, rgba(42, 130, 198, 0.42) 0%, transparent 66%);
+        }
+        .layout-5.style-neubrutalism .l5-bloom-svg { fill: #FCD34D; opacity: 0.92; filter: none; }
+        .layout-5.style-neubrutalism .l5-bloom-br .l5-bloom-svg { fill: #CA2C2A; }
         .layout-5.style-neubrutalism .l5-ca { color: rgba(255, 255, 255, 0.36); }
-        .layout-5.style-neubrutalism .l5-cb { color: rgba(252, 211, 77, 0.80); }
-        .layout-5.style-neubrutalism .l5-cabinet { filter: drop-shadow(12px 12px 0 #000000); }
-        .layout-5.style-neubrutalism .l5-marquee { background: #1A467C; border: 4px solid #000000; border-bottom: 0; border-radius: 16px 16px 0 0; }
-        .layout-5.style-neubrutalism .l5-mq-screen { background: #FFFFFF; color: #12305A; border: 3px solid #000000; border-radius: 10px; }
-        .layout-5.style-neubrutalism .l5-mq-h2 { color: #CA2C2A; }
-        .layout-5.style-neubrutalism .l5-mq-ico { color: #CA2C2A; }
-        .layout-5.style-neubrutalism .l5-body { background: #1D54A6; border-left: 4px solid #000000; border-right: 4px solid #000000; }
-        .layout-5.style-neubrutalism .l5-bezel { background: #0B1F40; border: 4px solid #000000; padding: 12px; border-radius: 8px; }
-        .layout-5.style-neubrutalism .l5-screen { background: linear-gradient(180deg, #1E4D92 0%, #3B82F6 60%, #93C5FD 100%); border: 3px solid #000000; }
-        .layout-5.style-neubrutalism .l5-hud-row { color: #FFFFFF; text-shadow: 2px 2px 0 #000000; }
-        .layout-5.style-neubrutalism .l5-hud-right { color: #FCD34D; }
-        .layout-5.style-neubrutalism .l5-badge { background: #FFFFFF; color: #12305A; border: 3.5px solid #000000; box-shadow: 5px 5px 0 #000000; }
-        .layout-5.style-neubrutalism .l5-hero-txt { font-family: 'Archivo Black', sans-serif; color: #CA2C2A; -webkit-text-stroke: 16px #000000; paint-order: stroke fill; text-shadow: 8px 8px 0 #000000; }
-        .layout-5.style-neubrutalism .l5-menuju { background: #FCD34D; color: #0B1F40; border: 3.5px solid #000000; box-shadow: 4px 4px 0 #000000; }
-        .layout-5.style-neubrutalism .l5-stamp { background: #CA2C2A; color: #FFFFFF; border: 3.5px solid #000000; box-shadow: 5px 5px 0 #000000; }
-        .layout-5.style-neubrutalism .l5-apron { background: #0B1F40; border-top: 4px solid #000000; border-bottom: 4px solid #000000; }
-        .layout-5.style-neubrutalism .l5-apron-pill { background: #FFFFFF; color: #12305A; border: 3px solid #000000; box-shadow: 4px 4px 0 #000000; }
-        .layout-5.style-neubrutalism .l5-kick { background: #1A467C; border: 4px solid #000000; border-top: 0; border-radius: 0 0 14px 14px; }
-        .layout-5.style-neubrutalism .l5-coin-slot { background: #0B1F40; border: 2px solid #000000; }
-        .layout-5.style-neubrutalism .l5-coin-plate { background: #CA2C2A; color: #FFFFFF; border: 2.5px solid #000000; }
+        .layout-5.style-neubrutalism .l5-cb { color: rgba(252, 211, 77, 0.85); }
+        .layout-5.style-neubrutalism .l5-logos-trio {
+            border: 2.5px solid #000000;
+            box-shadow: 3px 3px 0 #000000;
+            border-radius: 0px;
+        }
+        .layout-5.style-neubrutalism .l5-vsep { background: rgba(255, 255, 255, 0.50); }
+        .layout-5.style-neubrutalism .l5-org-title { color: #FFFFFF; }
+        .layout-5.style-neubrutalism .l5-org-sub { color: #FCD34D; }
+        .layout-5.style-neubrutalism .l5-right-title { color: #FFFFFF; }
+        .layout-5.style-neubrutalism .l5-right-sub { color: #93C5FD; }
+        .layout-5.style-neubrutalism .l5-dot { background: #FCD34D; }
+        .layout-5.style-neubrutalism .l5-line { background: rgba(255, 255, 255, 0.72); }
+        .layout-5.style-neubrutalism .l5-card-back {
+            background: #0B1F40;
+            border: 4px solid #000000;
+            border-radius: 18px;
+        }
+        .layout-5.style-neubrutalism .l5-note-card {
+            background: #FFFFFF;
+            border: 4.5px solid #000000;
+            box-shadow: 10px 10px 0 #000000;
+            border-radius: 18px;
+        }
+        .layout-5.style-neubrutalism .l5-card-cd {
+            background: #1A467C;
+            color: #FFFFFF;
+            border: 2.5px solid #000000;
+            border-radius: 0px;
+        }
+        .layout-5.style-neubrutalism .l5-card-hero { color: #0B1F40; }
+        .layout-5.style-neubrutalism .l5-menuju-pill {
+            background: #FCD34D;
+            color: #0B1F40;
+            border: 3px solid #000000;
+            box-shadow: 4px 4px 0 #000000;
+            border-radius: 0px;
+        }
+        .layout-5.style-neubrutalism .l5-title-out {
+            color: #0B1F40;
+            -webkit-text-stroke: 14px #FFFFFF;
+            text-shadow: 6px 6px 0 #000000;
+        }
+        .layout-5.style-neubrutalism .l5-motto { color: #E2EEFF; }
+        .layout-5.style-neubrutalism .l5-sched-row {
+            background: #FFFFFF;
+            color: #0B1F40;
+            border: 3px solid #000000;
+            box-shadow: 4px 4px 0 #000000;
+            border-radius: 0px;
+        }
+        .layout-5.style-neubrutalism .l5-sched-pin { color: #CA2C2A; }
+        .layout-5.style-neubrutalism .l5-soc-item { color: #FFFFFF; }
+        .layout-5.style-neubrutalism .l5-soc-badge {
+            background: #FFFFFF;
+            color: #0B1F40;
+            border: 2px solid #000000;
+            border-radius: 0px;
+        }
 
-        /* Layout 5 Theme 2: Glassmorphism (Sky-Blue Dreamy Arcade ala Referensi + Outfit Glossy) */
+        /* ====== LAYOUT 5 THEME 2: GLASSMORPHISM (LUMINOUS FROST GRID) ====== */
         .poster-canvas.layout-5.style-glass {
-            background: linear-gradient(160deg, #528FF5 0%, #8BB8FF 48%, #CBE0FF 100%);
+            background: linear-gradient(155deg, #0D3A73 0%, #1761A8 46%, #2482CE 100%);
+            color: #FFFFFF;
         }
-        .layout-5.style-glass .l5-ca { color: rgba(255, 255, 255, 0.45); }
-        .layout-5.style-glass .l5-cb { color: rgba(253, 224, 71, 0.72); }
-        .layout-5.style-glass .l5-cabinet { filter: drop-shadow(0 28px 54px rgba(15, 41, 74, 0.34)); }
-        .layout-5.style-glass .l5-marquee { background: linear-gradient(180deg, rgba(191,219,254,0.92) 0%, rgba(147,197,253,0.90) 100%); border: 2px solid rgba(255,255,255,0.95); border-bottom: 0; border-radius: 22px 22px 0 0; }
-        .layout-5.style-glass .l5-mq-screen { background: rgba(255, 255, 255, 0.88); color: #12305A; border: 1.5px solid #FFFFFF; box-shadow: 0 8px 20px rgba(30, 64, 175, 0.14); border-radius: 14px; }
-        .layout-5.style-glass .l5-mq-h2 { color: #2563EB; }
-        .layout-5.style-glass .l5-mq-ico { color: #2563EB; }
-        .layout-5.style-glass .l5-body { background: linear-gradient(180deg, rgba(165,205,255,0.88) 0%, rgba(125,176,248,0.90) 100%); border-left: 2px solid rgba(255,255,255,0.90); border-right: 2px solid rgba(255,255,255,0.90); }
-        .layout-5.style-glass .l5-bezel { background: linear-gradient(145deg, #2563EB 0%, #60A5FA 100%); border: 2px solid rgba(255,255,255,0.85); padding: 14px; border-radius: 14px; box-shadow: inset 0 6px 24px rgba(15, 23, 42, 0.32); }
-        .layout-5.style-glass .l5-screen { background: linear-gradient(180deg, #60A5FA 0%, #93C5FD 55%, #E0F2FE 100%); border-radius: 8px; }
-        .layout-5.style-glass .l5-hud-row { color: #0F294A; opacity: 0.82; }
-        .layout-5.style-glass .l5-hud-right { color: #DC2626; }
-        .layout-5.style-glass .l5-badge { background: rgba(255, 255, 255, 0.94); color: #1E3A8A; border: 2px solid #FFFFFF; box-shadow: 0 10px 24px rgba(15, 41, 74, 0.24); border-radius: 12px; font-family: 'Space Grotesk', sans-serif; }
-        .layout-5.style-glass .l5-hero-txt { font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif; font-weight: 900; color: #FFFFFF; -webkit-text-stroke: 14px #0F4C81; paint-order: stroke fill; text-shadow: -5px 2px 0 #F472B6, 6px 9px 0 #0C4A6E; filter: drop-shadow(0 16px 24px rgba(12, 74, 110, 0.36)); }
-        .layout-5.style-glass .l5-menuju { background: linear-gradient(180deg, #FDE047 0%, #F59E0B 100%); color: #0F294A; border: 1.5px solid #FFFFFF; box-shadow: 0 10px 20px rgba(245, 158, 11, 0.35); border-radius: 10px; }
-        .layout-5.style-glass .l5-stamp { background: linear-gradient(180deg, #F87171 0%, #DC2626 100%); color: #FFFFFF; border: 1.5px solid rgba(255,255,255,0.92); box-shadow: 0 12px 24px rgba(220, 38, 38, 0.32); border-radius: 12px; font-family: 'Outfit', sans-serif; }
-        .layout-5.style-glass .l5-apron { background: rgba(59, 130, 246, 0.85); border-top: 1.5px solid rgba(255,255,255,0.85); }
-        .layout-5.style-glass .l5-apron-pill { background: rgba(255, 255, 255, 0.92); color: #0F294A; border: 1.5px solid #FFFFFF; box-shadow: 0 8px 20px rgba(15, 41, 74, 0.22); border-radius: 999px; font-family: 'Outfit', sans-serif; }
-        .layout-5.style-glass .l5-kick { background: rgba(147, 197, 253, 0.92); border: 2px solid rgba(255,255,255,0.92); border-top: 0; border-radius: 0 0 20px 20px; }
-        .layout-5.style-glass .l5-coin-slot { background: rgba(30, 64, 175, 0.28); border: 1.5px solid rgba(255,255,255,0.7); }
-        .layout-5.style-glass .l5-coin-plate { background: rgba(255,255,255,0.85); color: #1E40AF; border-radius: 999px; }
+        .layout-5.style-glass .l5-bg-grid {
+            background-image:
+                linear-gradient(to right, rgba(255, 255, 255, 0.11) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.11) 1px, transparent 1px);
+        }
+        .layout-5.style-glass .l5-orb-tl {
+            background: radial-gradient(circle, rgba(253, 224, 71, 0.34) 0%, transparent 66%);
+        }
+        .layout-5.style-glass .l5-orb-br {
+            background: radial-gradient(circle, rgba(125, 211, 252, 0.38) 0%, transparent 66%);
+        }
+        .layout-5.style-glass .l5-bloom-svg {
+            fill: #FDE047;
+            opacity: 0.72;
+            filter: blur(11px);
+        }
+        .layout-5.style-glass .l5-bloom-br .l5-bloom-svg { fill: #BAE6FD; opacity: 0.75; }
+        .layout-5.style-glass .l5-ca { color: rgba(255, 255, 255, 0.34); }
+        .layout-5.style-glass .l5-cb { color: rgba(253, 224, 71, 0.68); }
+        .layout-5.style-glass .l5-logos-trio {
+            background: rgba(255, 255, 255, 0.94);
+            border: 1.5px solid rgba(255, 255, 255, 0.95);
+            box-shadow: 0 8px 20px rgba(7, 24, 58, 0.26);
+            border-radius: 10px;
+        }
+        .layout-5.style-glass .l5-vsep { background: rgba(255, 255, 255, 0.45); }
+        .layout-5.style-glass .l5-org-title { color: #FFFFFF; }
+        .layout-5.style-glass .l5-org-sub { color: #DBEAFE; }
+        .layout-5.style-glass .l5-right-title { color: #FFFFFF; }
+        .layout-5.style-glass .l5-right-sub { color: #BAE6FD; }
+        .layout-5.style-glass .l5-dot { background: rgba(255, 255, 255, 0.92); }
+        .layout-5.style-glass .l5-line { background: rgba(255, 255, 255, 0.65); }
+        .layout-5.style-glass .l5-card-back {
+            background: rgba(9, 41, 86, 0.56);
+            border: 1.5px solid rgba(255, 255, 255, 0.25);
+        }
+        .layout-5.style-glass .l5-note-card {
+            background: linear-gradient(155deg, rgba(255, 255, 255, 0.98) 0%, rgba(235, 244, 255, 0.94) 100%);
+            border: 2px solid #FFFFFF;
+            box-shadow: 0 28px 54px rgba(6, 22, 54, 0.38);
+        }
+        .layout-5.style-glass .l5-card-cd {
+            background: rgba(37, 99, 235, 0.12);
+            color: #1D4ED8;
+            border: 1px solid rgba(37, 99, 235, 0.24);
+        }
+        .layout-5.style-glass .l5-card-hero { color: #0F3568; }
+        .layout-5.style-glass .l5-menuju-pill {
+            background: rgba(255, 255, 255, 0.22);
+            color: #FFFFFF;
+            border: 1.5px solid rgba(255, 255, 255, 0.65);
+            border-radius: 999px;
+        }
+        .layout-5.style-glass .l5-title-out {
+            color: #0D356F;
+            -webkit-text-stroke: 14px #FFFFFF;
+            filter: drop-shadow(0 8px 18px rgba(7, 24, 58, 0.34));
+        }
+        .layout-5.style-glass .l5-motto { color: #EFF6FF; }
+        .layout-5.style-glass .l5-sched-row {
+            background: rgba(255, 255, 255, 0.16);
+            color: #FFFFFF;
+            border: 1.5px solid rgba(255, 255, 255, 0.44);
+            border-radius: 999px;
+        }
+        .layout-5.style-glass .l5-sched-pin { color: #FDE047; }
+        .layout-5.style-glass .l5-soc-item { color: #FFFFFF; }
+        .layout-5.style-glass .l5-soc-badge {
+            background: #FFFFFF;
+            color: #16488E;
+        }
 
-        /* Layout 5 Theme 3: Dark Code (Cyberpunk Terminal Arcade) */
+        /* ====== LAYOUT 5 THEME 3: DARK CODE (NAVY TERMINAL GRID) ====== */
         .poster-canvas.layout-5.style-dark-code {
-            background-color: #0B192E;
-            background-image: radial-gradient(rgba(56, 189, 248, 0.24) 2px, transparent 2px);
-            background-size: 24px 24px;
+            background-color: #091529;
+            color: #F8FAFC;
         }
-        .layout-5.style-dark-code .l5-ca { color: rgba(56, 189, 248, 0.50); }
-        .layout-5.style-dark-code .l5-cb { color: rgba(252, 211, 77, 0.65); }
-        .layout-5.style-dark-code .l5-cabinet { filter: drop-shadow(0 24px 48px rgba(0, 0, 0, 0.72)); }
-        .layout-5.style-dark-code .l5-marquee { background: #122645; border: 3px solid #38BDF8; border-bottom: 0; border-radius: 16px 16px 0 0; }
-        .layout-5.style-dark-code .l5-mq-screen { background: #0B192E; color: #FFFFFF; border: 2px solid rgba(56, 189, 248, 0.65); border-radius: 10px; }
-        .layout-5.style-dark-code .l5-mq-h2 { color: #38BDF8; }
-        .layout-5.style-dark-code .l5-mq-ico { color: #38BDF8; }
-        .layout-5.style-dark-code .l5-body { background: #122645; border-left: 3px solid #38BDF8; border-right: 3px solid #38BDF8; }
-        .layout-5.style-dark-code .l5-bezel { background: #071120; border: 3px solid #38BDF8; padding: 12px; border-radius: 10px; }
-        .layout-5.style-dark-code .l5-screen { background: linear-gradient(180deg, #040B16 0%, #0D203C 100%); border: 2px solid rgba(56,189,248,0.45); }
-        .layout-5.style-dark-code .l5-hud-row { color: #38BDF8; }
-        .layout-5.style-dark-code .l5-hud-right { color: #FCD34D; }
-        .layout-5.style-dark-code .l5-badge { background: #1A365D; color: #38BDF8; border: 3px solid #38BDF8; box-shadow: 6px 6px 0 #000000; border-radius: 8px; }
-        .layout-5.style-dark-code .l5-hero-txt { font-family: 'Archivo Black', sans-serif; color: #FCD34D; -webkit-text-stroke: 14px #060D1A; paint-order: stroke fill; text-shadow: 8px 8px 0 #EF4444; }
-        .layout-5.style-dark-code .l5-menuju { background: #0B192E; color: #38BDF8; border: 2.5px solid #38BDF8; box-shadow: 4px 4px 0 #000000; border-radius: 8px; }
-        .layout-5.style-dark-code .l5-stamp { background: #CA2C2A; color: #FFFFFF; border: 3px solid #FFFFFF; box-shadow: 5px 5px 0 #000000; border-radius: 10px; }
-        .layout-5.style-dark-code .l5-apron { background: #091529; border-top: 2.5px solid #38BDF8; border-bottom: 2.5px solid rgba(56,189,248,0.45); }
-        .layout-5.style-dark-code .l5-apron-pill { background: #122645; color: #F8FAFC; border: 2px solid #38BDF8; border-radius: 999px; }
-        .layout-5.style-dark-code .l5-kick { background: #0D1E38; border: 3px solid #38BDF8; border-top: 0; border-radius: 0 0 16px 16px; }
-        .layout-5.style-dark-code .l5-coin-slot { background: #040B16; border: 2px solid #38BDF8; }
-        .layout-5.style-dark-code .l5-coin-plate { background: #0B192E; color: #FCD34D; border: 2px solid #FCD34D; border-radius: 6px; }
+        .layout-5.style-dark-code .l5-bg-grid {
+            background-image:
+                linear-gradient(to right, rgba(56, 189, 248, 0.11) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(56, 189, 248, 0.11) 1px, transparent 1px);
+        }
+        .layout-5.style-dark-code .l5-orb-tl {
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.24) 0%, transparent 66%);
+        }
+        .layout-5.style-dark-code .l5-orb-br {
+            background: radial-gradient(circle, rgba(252, 211, 77, 0.18) 0%, transparent 66%);
+        }
+        .layout-5.style-dark-code .l5-bloom-svg {
+            fill: #38BDF8;
+            opacity: 0.48;
+            filter: blur(12px);
+        }
+        .layout-5.style-dark-code .l5-bloom-br .l5-bloom-svg { fill: #FCD34D; opacity: 0.42; }
+        .layout-5.style-dark-code .l5-ca { color: rgba(56, 189, 248, 0.46); }
+        .layout-5.style-dark-code .l5-cb { color: rgba(252, 211, 77, 0.62); }
+        .layout-5.style-dark-code .l5-logos-trio {
+            background: #FFFFFF;
+            border: 2px solid #38BDF8;
+            border-radius: 8px;
+        }
+        .layout-5.style-dark-code .l5-vsep { background: rgba(56, 189, 248, 0.45); }
+        .layout-5.style-dark-code .l5-org-title { color: #FFFFFF; }
+        .layout-5.style-dark-code .l5-org-sub { color: #38BDF8; }
+        .layout-5.style-dark-code .l5-right-title { color: #FFFFFF; }
+        .layout-5.style-dark-code .l5-right-sub { color: #FCD34D; }
+        .layout-5.style-dark-code .l5-dot { background: #38BDF8; }
+        .layout-5.style-dark-code .l5-line { background: rgba(56, 189, 248, 0.55); }
+        .layout-5.style-dark-code .l5-card-back {
+            background: #14325B;
+            border: 2.5px solid rgba(56, 189, 248, 0.55);
+        }
+        .layout-5.style-dark-code .l5-note-card {
+            background: #F8FAFC;
+            border: 3.5px solid #38BDF8;
+            box-shadow: 0 24px 48px rgba(0, 0, 0, 0.58);
+        }
+        .layout-5.style-dark-code .l5-card-cd {
+            background: #0B192E;
+            color: #38BDF8;
+            border: 1.5px solid #38BDF8;
+        }
+        .layout-5.style-dark-code .l5-card-hero { color: #0B192E; }
+        .layout-5.style-dark-code .l5-menuju-pill {
+            background: #122645;
+            color: #38BDF8;
+            border: 2px solid #38BDF8;
+            border-radius: 8px;
+        }
+        .layout-5.style-dark-code .l5-title-out {
+            color: #0B192E;
+            -webkit-text-stroke: 14px #FFFFFF;
+            filter: drop-shadow(0 6px 18px rgba(56, 189, 248, 0.42));
+        }
+        .layout-5.style-dark-code .l5-motto { color: #BAE6FD; }
+        .layout-5.style-dark-code .l5-sched-row {
+            background: #122645;
+            color: #FFFFFF;
+            border: 1.5px solid rgba(56, 189, 248, 0.55);
+            border-radius: 10px;
+        }
+        .layout-5.style-dark-code .l5-sched-pin { color: #FCD34D; }
+        .layout-5.style-dark-code .l5-soc-item { color: #F8FAFC; }
+        .layout-5.style-dark-code .l5-soc-badge {
+            background: #38BDF8;
+            color: #091529;
+        }
 
-        /* Layout 5 Theme 4: Modern Clean (Royal Studio Biru + Emas) */
+        /* ====== LAYOUT 5 THEME 4: MODERN CLEAN (ROYAL STUDIO) ====== */
         .poster-canvas.layout-5.style-modern {
-            background: radial-gradient(circle at 80% 18%, #2E7BD1 0%, #16488E 46%, #0D2D5E 100%);
+            background: radial-gradient(circle at 80% 18%, #2E7BD1 0%, #16488E 48%, #0C2B57 100%);
+            color: #FFFFFF;
         }
-        .layout-5.style-modern .l5-ca { color: rgba(255, 255, 255, 0.30); }
-        .layout-5.style-modern .l5-cb { color: rgba(253, 211, 77, 0.65); }
-        .layout-5.style-modern .l5-cabinet { filter: drop-shadow(0 30px 60px rgba(6, 20, 44, 0.50)); }
-        .layout-5.style-modern .l5-marquee { background: #1D4D85; border-radius: 24px 24px 0 0; }
-        .layout-5.style-modern .l5-mq-screen { background: rgba(255, 255, 255, 0.96); color: #12305A; border-radius: 16px; box-shadow: 0 10px 24px rgba(6, 20, 44, 0.22); }
-        .layout-5.style-modern .l5-mq-h2 { color: #2A82C6; }
-        .layout-5.style-modern .l5-mq-ico { color: #CA2C2A; }
-        .layout-5.style-modern .l5-body { background: #225B9E; }
-        .layout-5.style-modern .l5-bezel { background: #12305A; padding: 14px; border-radius: 16px; }
-        .layout-5.style-modern .l5-screen { background: linear-gradient(180deg, #16488E 0%, #2563EB 65%, #60A5FA 100%); border-radius: 10px; }
-        .layout-5.style-modern .l5-hud-row { color: #E2EEFF; }
-        .layout-5.style-modern .l5-hud-right { color: #FDD34D; }
-        .layout-5.style-modern .l5-badge { background: #FDD34D; color: #12305A; box-shadow: 0 12px 24px rgba(6, 20, 44, 0.32); border-radius: 999px; }
-        .layout-5.style-modern .l5-hero-txt { font-family: 'Archivo Black', sans-serif; color: #FFFFFF; text-shadow: 9px 9px 0 #FDD34D; filter: drop-shadow(0 16px 26px rgba(6, 20, 44, 0.42)); }
-        .layout-5.style-modern .l5-menuju { background: #FDD34D; color: #12305A; box-shadow: 0 10px 20px rgba(6, 20, 44, 0.30); border-radius: 999px; }
-        .layout-5.style-modern .l5-stamp { background: #CA2C2A; color: #FFFFFF; box-shadow: 0 12px 26px rgba(6, 20, 44, 0.38); border-radius: 16px; }
-        .layout-5.style-modern .l5-apron { background: #0F294A; }
-        .layout-5.style-modern .l5-apron-pill { background: #FFFFFF; color: #12305A; box-shadow: 0 8px 18px rgba(6, 20, 44, 0.28); border-radius: 999px; }
-        .layout-5.style-modern .l5-kick { background: #16488E; border-radius: 0 0 22px 22px; }
-        .layout-5.style-modern .l5-coin-slot { background: #0B1F40; }
-        .layout-5.style-modern .l5-coin-plate { background: #FDD34D; color: #12305A; border-radius: 999px; }
+        .layout-5.style-modern .l5-bg-grid {
+            background-image:
+                linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+        }
+        .layout-5.style-modern .l5-orb-tl {
+            background: radial-gradient(circle, rgba(253, 211, 77, 0.22) 0%, transparent 66%);
+        }
+        .layout-5.style-modern .l5-orb-br {
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.34) 0%, transparent 66%);
+        }
+        .layout-5.style-modern .l5-bloom-svg {
+            fill: #FDD34D;
+            opacity: 0.62;
+            filter: blur(11px);
+        }
+        .layout-5.style-modern .l5-bloom-br .l5-bloom-svg { fill: #93C5FD; opacity: 0.58; }
+        .layout-5.style-modern .l5-ca { color: rgba(255, 255, 255, 0.28); }
+        .layout-5.style-modern .l5-cb { color: rgba(253, 211, 77, 0.58); }
+        .layout-5.style-modern .l5-logos-trio {
+            background: rgba(255, 255, 255, 0.96);
+            box-shadow: 0 8px 20px rgba(6, 20, 44, 0.28);
+            border-radius: 10px;
+        }
+        .layout-5.style-modern .l5-vsep { background: rgba(255, 255, 255, 0.38); }
+        .layout-5.style-modern .l5-org-title { color: #FFFFFF; }
+        .layout-5.style-modern .l5-org-sub { color: #FDD34D; }
+        .layout-5.style-modern .l5-right-title { color: #FFFFFF; }
+        .layout-5.style-modern .l5-right-sub { color: #CBD5E1; }
+        .layout-5.style-modern .l5-dot { background: #FDD34D; }
+        .layout-5.style-modern .l5-line { background: rgba(255, 255, 255, 0.52); }
+        .layout-5.style-modern .l5-card-back {
+            background: rgba(9, 28, 60, 0.62);
+        }
+        .layout-5.style-modern .l5-note-card {
+            background: #FFFFFF;
+            box-shadow: 0 30px 56px rgba(6, 18, 42, 0.45);
+        }
+        .layout-5.style-modern .l5-card-cd {
+            background: #EFF6FF;
+            color: #16488E;
+        }
+        .layout-5.style-modern .l5-card-hero { color: #12305A; }
+        .layout-5.style-modern .l5-menuju-pill {
+            background: #FDD34D;
+            color: #12305A;
+            border-radius: 999px;
+            box-shadow: 0 8px 18px rgba(6, 20, 44, 0.26);
+        }
+        .layout-5.style-modern .l5-title-out {
+            color: #12305A;
+            -webkit-text-stroke: 14px #FFFFFF;
+            filter: drop-shadow(0 10px 22px rgba(6, 18, 42, 0.42));
+        }
+        .layout-5.style-modern .l5-motto { color: #E2EEFF; }
+        .layout-5.style-modern .l5-sched-row {
+            background: rgba(255, 255, 255, 0.14);
+            color: #FFFFFF;
+            border: 1px solid rgba(255, 255, 255, 0.26);
+            border-radius: 999px;
+        }
+        .layout-5.style-modern .l5-sched-pin { color: #FDD34D; }
+        .layout-5.style-modern .l5-soc-item { color: #FFFFFF; }
+        .layout-5.style-modern .l5-soc-badge {
+            background: #FFFFFF;
+            color: #12305A;
+        }
 
         /* ================= THEME 1: NEUBRUTALISM ================= */
         .style-neubrutalism {
@@ -1278,12 +1815,12 @@
                         <span class="text-[10.5px] font-extrabold uppercase block leading-tight">Layout 4</span>
                         <span class="text-[9px] font-bold opacity-80 block mt-0.5 truncate">IG Feed Stack</span>
                     </button>
-                    <button type="button" onclick="setLayout(5)" id="btn-layout-5" class="btn-brutal col-span-2 px-2.5 py-2 bg-[#162C4E] text-white border-2 border-black shadow-[3px_3px_0_#000000] flex items-center justify-between text-left cursor-pointer">
-                        <div>
+                    <button type="button" onclick="setLayout(5)" id="btn-layout-5" class="col-span-2 btn-brutal px-2.5 py-2 bg-[#162C4E] text-white border-2 border-black shadow-[3px_3px_0_#000000] flex items-center justify-between text-left cursor-pointer">
+                        <span>
                             <span class="text-[10.5px] font-extrabold uppercase block leading-tight">Layout 5</span>
-                            <span class="text-[9px] font-bold opacity-80 block mt-0.5">Arcade Quest • Retro Console</span>
-                        </div>
-                        <span class="text-[9px] font-code font-extrabold px-1.5 py-0.5 bg-black/35 text-[#FCD34D] border border-black/40">NEW</span>
+                            <span class="text-[9px] font-bold opacity-80 block mt-0.5 truncate">Pinned Note &bull; Mading Pin 3D</span>
+                        </span>
+                        <span class="text-[9px] font-extrabold uppercase px-1.5 py-0.5 bg-[#CA2C2A] text-white border border-black">NEW</span>
                     </button>
                 </div>
             </div>
@@ -2182,100 +2719,155 @@
                         </footer>
                     </div>
 
-                    <!-- ================= LAYOUT 5: ARCADE QUEST (CABINET + PIXEL CAMPUS + ORBITAL RING) ================= -->
-                    <div id="layout5Root" class="layout-5-root hidden relative w-full h-full overflow-hidden">
-                        <!-- Side Pixel Fireworks + Confetti + Unboxed Coding Accents -->
-                        <svg id="l5SideFxSvg" viewBox="0 0 1080 1350" class="pointer-events-none absolute inset-0 w-full h-full z-0" aria-hidden="true"></svg>
-                        <span class="code-accent l5-code l5-ca pointer-events-none font-code font-extrabold absolute top-[15%] left-[3.5%] -rotate-12 text-[28px] leading-none z-[2]">&gt;_</span>
-                        <span class="code-accent l5-code l5-cb pointer-events-none font-code font-extrabold absolute top-[17%] right-[3.2%] rotate-12 text-[28px] leading-none z-[2]">&lt;/&gt;</span>
-                        <span class="code-accent l5-code l5-cb pointer-events-none font-code font-extrabold absolute bottom-[14%] left-[3.2%] rotate-6 text-[30px] leading-none z-[2]">&#123; &#125;</span>
-                        <span class="code-accent l5-code l5-ca pointer-events-none font-code font-extrabold absolute bottom-[15%] right-[3.5%] -rotate-12 text-[26px] leading-none z-[2]">01;</span>
+                    <!-- ==================== LAYOUT 5 ROOT (PINNED NOTE / MADING PIN 3D) ==================== -->
+                    <div id="layout5Root" class="layout-5-root">
+                        <!-- Ambient Orbs + Square Graph Grid + 4-Petal Sparkle Blooms -->
+                        <div class="l5-orb-tl"></div>
+                        <div class="l5-orb-br"></div>
+                        <div class="l5-bg-grid"></div>
 
-                        <!-- Arcade Cabinet Frame -->
-                        <div id="l5Cabinet" class="l5-cabinet">
-                            <!-- 1. Marquee Header (3 Wajib Logos + Org Name + Socials) -->
-                            <header id="l5Marquee" class="l5-marquee">
-                                <div class="l5-mq-screen">
-                                    <div class="l5-mq-logos">
-                                        <span class="l5-logo-chip"><img id="l5HimaLogo" src="" alt="Logo HIMA IF"></span>
-                                        <span class="l5-logo-chip"><img id="l5LpkiaLogo" src="" alt="Logo IDE LPKIA"></span>
-                                        <span class="l5-logo-chip"><img id="l5KabinetLogo" src="" alt="Logo Kabinet Aksara Nirmana"></span>
-                                    </div>
-                                    <div class="l5-mq-titles">
-                                        <p class="l5-mq-h1 font-display font-bold uppercase leading-none">HIMA INFORMATIKA</p>
-                                        <p class="l5-mq-h2 font-extrabold uppercase leading-none">IDE LPKIA BANDUNG</p>
-                                    </div>
-                                    <div class="l5-mq-socials">
-                                        <div class="l5-mq-srow">
-                                            <svg class="l5-mq-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true">
-                                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                                                <circle cx="12" cy="12" r="4.5"></circle>
-                                                <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"></circle>
-                                            </svg>
-                                            <span id="l5OutIg">hmif_LPKIA</span>
-                                        </div>
-                                        <div class="l5-mq-srow">
-                                            <svg class="l5-mq-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true">
-                                                <circle cx="12" cy="12" r="9"></circle>
-                                                <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path>
-                                            </svg>
-                                            <span id="l5OutCta">GO.HMIF-LPKIA.MY.ID</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </header>
-
-                            <!-- 2. CRT Cabinet Body + Bezel + Pixel Campus + Orbital Burst Ring -->
-                            <section id="l5Body" class="l5-body">
-                                <div id="l5Bezel" class="l5-bezel">
-                                    <div id="l5Screen" class="l5-screen">
-                                        <svg id="l5ScreenArtSvg" viewBox="0 0 692 678" preserveAspectRatio="xMidYMax slice" class="pointer-events-none absolute inset-0 w-full h-full" aria-hidden="true"></svg>
-                                        <div class="l5-crt-scan"></div>
-                                        <div class="l5-hud-row">
-                                            <span id="l5OutHud" class="font-code font-extrabold">STAGE // IF_QUEST</span>
-                                            <span class="l5-hud-right font-code font-extrabold">&gt;_ KADERISASI.EXE</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Orbital Pixel Burst Ring Breaking Over Bezel -->
-                                <svg id="l5OrbitalSvg" class="pointer-events-none absolute inset-0 w-full h-full z-20 overflow-visible" aria-hidden="true"></svg>
-
-                                <!-- Kinetic Diagonal Hero Cluster -->
-                                <div class="l5-stage-overlay z-30">
-                                    <div class="l5-diag-top">
-                                        <span id="l5OutBadge" class="l5-badge">COUNTDOWN</span>
-                                    </div>
-                                    <span id="l5OutHero" class="l5-hero-txt" style="font-size: 205px;">H-7</span>
-                                    <div class="l5-diag-bot">
-                                        <span id="l5OutMenuju" class="l5-menuju">MENUJU</span>
-                                        <span id="l5OutStamp" class="l5-stamp">KADERISASI</span>
-                                    </div>
-                                </div>
-                            </section>
-
-                            <!-- 3. Trapezoid Arcade Control Deck + Joystick & Dome Buttons + Schedule Apron -->
-                            <section id="l5DeckWrap" class="l5-deck-wrap">
-                                <svg id="l5DeckSvg" class="pointer-events-none absolute inset-0 w-full h-full overflow-visible" aria-hidden="true"></svg>
-                                <div id="l5Apron" class="l5-apron">
-                                    <div class="l5-apron-pill l5-countdown-only">
-                                        <span id="l5OutDateTime">JUMAT, 04 DES 2026 • 08.00 WIB</span>
-                                        <span class="l5-apron-sep">|</span>
-                                        <span id="l5OutLoc">Kampus IDE LPKIA</span>
-                                    </div>
-                                    <div class="l5-apron-pill l5-cs-only hidden">
-                                        <span>PRESS START • KADERISASI HIMA IF</span>
-                                    </div>
-                                </div>
-                            </section>
-
-                            <!-- 4. Bottom Coin-Door Kickplate -->
-                            <footer id="l5Kick" class="l5-kick">
-                                <div class="l5-coin-slot"></div>
-                                <div class="l5-coin-plate font-code font-extrabold">25¢ IF</div>
-                                <div class="l5-coin-slot"></div>
-                            </footer>
+                        <div class="l5-bloom-tl" aria-hidden="true">
+                            <svg class="w-full h-full overflow-visible" viewBox="0 0 200 200">
+                                <path class="l5-bloom-svg" d="M100,12 Q118,82 188,100 Q118,118 100,188 Q82,118 12,100 Q82,82 100,12 Z" transform="rotate(-14 100 100)"></path>
+                            </svg>
                         </div>
+                        <div class="l5-bloom-br" aria-hidden="true">
+                            <svg class="w-full h-full overflow-visible" viewBox="0 0 200 200">
+                                <path class="l5-bloom-svg" d="M100,14 Q114,86 186,100 Q114,114 100,186 Q86,114 14,100 Q86,86 100,14 Z" transform="rotate(10 100 100)"></path>
+                            </svg>
+                        </div>
+
+                        <!-- Subtle HIMA IF Code Accents -->
+                        <span class="code-accent l5-code l5-ca l5-c1">&gt;_</span>
+                        <span class="code-accent l5-code l5-cb l5-c2">&lt;/&gt;</span>
+                        <span class="code-accent l5-code l5-cb l5-c3">{ }</span>
+                        <span class="code-accent l5-code l5-ca l5-c4">01;</span>
+
+                        <!-- Top Editorial Strip + Hairline Rule -->
+                        <header class="l5-top-wrap">
+                            <div class="l5-top-row">
+                                <div class="l5-top-left">
+                                    <div class="l5-logos-trio">
+                                        <img id="l5HimaLogo" class="l5-logo-img" alt="HIMA IF">
+                                        <img id="l5KabinetLogo" class="l5-logo-img" alt="Kabinet Aksara Nirmana">
+                                        <img id="l5LpkiaLogo" class="l5-logo-img" alt="IDE LPKIA">
+                                    </div>
+                                    <div class="l5-vsep"></div>
+                                    <div class="l5-org-meta">
+                                        <span class="l5-org-title">HIMA INFORMATIKA</span>
+                                        <span class="l5-org-sub">Kabinet Aksara Nirmana</span>
+                                    </div>
+                                </div>
+                                <div class="l5-top-right">
+                                    <div class="l5-right-title">IDE LPKIA BANDUNG</div>
+                                    <div class="l5-right-sub">Prodi Teknik Informatika</div>
+                                </div>
+                            </div>
+                            <div class="l5-hairline" aria-hidden="true">
+                                <span class="l5-dot"></span>
+                                <span class="l5-line"></span>
+                                <span class="l5-dot"></span>
+                            </div>
+                        </header>
+
+                        <!-- Center Pinned Note Stage + Outlined Title -->
+                        <section class="l5-center-stage">
+                            <div class="l5-card-wrap">
+                                <div class="l5-card-back"></div>
+                                <div class="l5-note-card">
+                                    <div class="l5-card-pin-cast"></div>
+                                    <div class="l5-card-pin-mark"></div>
+                                    <!-- 3D Glossy Red Pushpin at Top-Right Corner -->
+                                    <svg class="l5-pushpin" viewBox="0 0 160 160" aria-hidden="true">
+                                        <defs>
+                                            <linearGradient id="l5PinSteel" x1="0" y1="0" x2="1" y2="0">
+                                                <stop offset="0%" stop-color="#F1F5F9"/>
+                                                <stop offset="55%" stop-color="#94A3B8"/>
+                                                <stop offset="100%" stop-color="#475569"/>
+                                            </linearGradient>
+                                            <linearGradient id="l5PinStem" x1="0" y1="0" x2="1" y2="0">
+                                                <stop offset="0%" stop-color="#FCA5A5"/>
+                                                <stop offset="28%" stop-color="#EF4444"/>
+                                                <stop offset="72%" stop-color="#DC2626"/>
+                                                <stop offset="100%" stop-color="#7F1D1D"/>
+                                            </linearGradient>
+                                            <linearGradient id="l5PinDisc" x1="0" y1="0" x2="1" y2="1">
+                                                <stop offset="0%" stop-color="#FF7B7B"/>
+                                                <stop offset="45%" stop-color="#DC2626"/>
+                                                <stop offset="100%" stop-color="#7F1D1D"/>
+                                            </linearGradient>
+                                            <linearGradient id="l5PinCap" x1="0" y1="0" x2="1" y2="1">
+                                                <stop offset="0%" stop-color="#FCA5A5"/>
+                                                <stop offset="42%" stop-color="#EF4444"/>
+                                                <stop offset="100%" stop-color="#B91C1C"/>
+                                            </linearGradient>
+                                        </defs>
+                                        <!-- Puncture Needle + Pushpin leaning +38deg -->
+                                        <g transform="translate(46, 128) rotate(38)">
+                                            <!-- Tapered Steel Needle -->
+                                            <polygon points="0,0 -2.6,-30 2.6,-30" fill="url(#l5PinSteel)" stroke="#334155" stroke-width="0.8"/>
+                                            <!-- Under-collar Shadow -->
+                                            <ellipse cx="0" cy="-29" rx="28" ry="11" fill="#450A0A" opacity="0.85"/>
+                                            <!-- Flared Bottom Collar -->
+                                            <ellipse cx="0" cy="-34" rx="30" ry="12.5" fill="url(#l5PinDisc)" stroke="#991B1B" stroke-width="1.2"/>
+                                            <path d="M-23,-36 A24,9 0 0,1 16,-41" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="2" stroke-linecap="round"/>
+                                            <!-- Hourglass Neck / Body -->
+                                            <path d="M-19,-37 C-12,-48 -11,-61 -21,-76 L21,-76 C11,-61 12,-48 19,-37 Z" fill="url(#l5PinStem)" stroke="#991B1B" stroke-width="1"/>
+                                            <path d="M-10,-42 C-7,-52 -7,-61 -12,-72" fill="none" stroke="rgba(255,255,255,0.52)" stroke-width="3.2" stroke-linecap="round"/>
+                                            <!-- Top Cap Underside Lip & Main Glossy Crown -->
+                                            <ellipse cx="0" cy="-74" rx="25" ry="11" fill="#991B1B"/>
+                                            <ellipse cx="0" cy="-78" rx="25" ry="10.5" fill="url(#l5PinCap)" stroke="#FCA5A5" stroke-width="1"/>
+                                            <path d="M-17,-80 A18,6.5 0 0,1 13,-83" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="2.4" stroke-linecap="round"/>
+                                        </g>
+                                    </svg>
+
+                                    <span id="l5OutCd" class="l5-card-cd">COUNTDOWN</span>
+                                    <span id="l5OutHero" class="l5-card-hero">H-7</span>
+                                </div>
+                            </div>
+
+                            <div class="l5-info-stack">
+                                <span id="l5OutMenuju" class="l5-menuju-pill l5-countdown-only">MENUJU</span>
+                                <h2 id="l5OutTitle" class="l5-title-out">KADERISASI</h2>
+                                <p class="l5-motto">&ldquo;Dari Ilmu, Menjadi Karya.&rdquo;</p>
+                                <div class="l5-sched-row l5-countdown-only">
+                                    <svg class="l5-sched-pin w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/>
+                                    </svg>
+                                    <span id="l5OutSched">JUMAT, 04 DES 2026 &bull; 08.00 WIB &bull; Kampus IDE LPKIA</span>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Bottom Socials + Hairline Rule -->
+                        <footer class="l5-bottom-wrap">
+                            <div class="l5-social-row">
+                                <div class="l5-soc-item">
+                                    <span class="l5-soc-badge">
+                                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true">
+                                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                            <circle cx="12" cy="12" r="4.5"></circle>
+                                            <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"></circle>
+                                        </svg>
+                                    </span>
+                                    <span id="l5OutIg">hmif_LPKIA</span>
+                                </div>
+                                <div class="l5-soc-item">
+                                    <span class="l5-soc-badge">
+                                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true">
+                                            <circle cx="12" cy="12" r="9"></circle>
+                                            <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path>
+                                        </svg>
+                                    </span>
+                                    <span id="l5OutCta">GO.HMIF-LPKIA.MY.ID</span>
+                                </div>
+                            </div>
+                            <div class="l5-hairline" aria-hidden="true">
+                                <span class="l5-dot"></span>
+                                <span class="l5-line"></span>
+                                <span class="l5-dot"></span>
+                            </div>
+                        </footer>
                     </div>
 
                 </main>
@@ -2550,320 +3142,48 @@
                     .join('');
             }
 
-            syncLayout5Dom();
-        }
-
-        function getL5Geom(ratio = currentRatio) {
-            if (ratio === '9-16') {
-                return {
-                    W: 1080, H: 1920, cabX: 128, cabW: 824, cabTop: 96, mqH: 146,
-                    scrH: 980, bezelPadX: 46, bezelPadY: 38, deckH: 170, frontH: 82, kickH: 210
-                };
-            }
-            if (ratio === '1-1') {
-                return {
-                    W: 1080, H: 1080, cabX: 160, cabW: 760, cabTop: 22, mqH: 106,
-                    scrH: 584, bezelPadX: 44, bezelPadY: 28, deckH: 132, frontH: 58, kickH: 46
-                };
-            }
-            return {
-                W: 1080, H: 1350, cabX: 148, cabW: 784, cabTop: 34, mqH: 124,
-                scrH: 746, bezelPadX: 46, bezelPadY: 34, deckH: 152, frontH: 72, kickH: 76
+            // Layout 5 DOM sync
+            const setL5If = (id, v) => {
+                const el = document.getElementById(id);
+                if (el) el.textContent = v;
             };
+            const l5M = getL5Metrics(E);
+            setL5If('l5OutCd', l5M.cdTxt);
+            const l5HeroEl = document.getElementById('l5OutHero');
+            if (l5HeroEl) {
+                l5HeroEl.textContent = l5M.heroLines.join('\n');
+                l5HeroEl.style.fontSize = l5M.heroFs + 'px';
+            }
+            setL5If('l5OutMenuju', l5M.menujuTxt);
+            const l5TitleEl = document.getElementById('l5OutTitle');
+            if (l5TitleEl) {
+                l5TitleEl.textContent = E.title;
+                l5TitleEl.style.fontSize = l5M.titleFs + 'px';
+            }
+            setL5If('l5OutSched', l5M.schedLine);
+            setL5If('l5OutIg', E.igHandle);
+            setL5If('l5OutCta', E.cta);
+
         }
 
-        function getL5ThemePalette(styleName = currentStyle) {
-            const P = {
-                'neubrutalism': {
-                    bgMode: 'dots', bg: '#16488E', dot: 'rgba(255,255,255,0.16)',
-                    fw: ['#FCD34D', '#CA2C2A', '#38BDF8', '#FFFFFF'],
-                    codeA: 'rgba(255,255,255,0.36)', codeB: 'rgba(252,211,77,0.80)',
-                    cabBorder: 4, cabBorderCol: '#000000', cabShadow: 12,
-                    mqFill: '#1A467C', mqScreenFill: '#FFFFFF', mqScreenBorder: 3, mqTitle: '#12305A', mqSub: '#CA2C2A', mqSoc: '#12305A', mqRad: 16,
-                    bodyFill: '#1D54A6', bezelFill: '#0B1F40', bezelRad: 8,
-                    skyStops: [[0, '#1E4D92'], [0.6, '#3B82F6'], [1, '#93C5FD']],
-                    cloudCol: 'rgba(255,255,255,0.88)', bldMain: '#12305A', bldDark: '#0B1F40', winOn: '#FCD34D', grass: '#22C55E', brick: '#CA2C2A', brickDark: '#991B1B',
-                    ringA: '#38BDF8', ringB: '#CA2C2A', ringC: '#FCD34D',
-                    hudLeft: '#FFFFFF', hudRight: '#FCD34D',
-                    badgeFam: '"Silkscreen", monospace', badgeFill: '#FFFFFF', badgeText: '#12305A', badgeBorder: 3.5, badgeBorderCol: '#000000', badgeShadow: 5, badgeRad: 0,
-                    heroFam: '"Archivo Black", sans-serif', heroW: 400, heroFill: '#CA2C2A', heroStroke: '#000000', heroSW: 16, heroEdge: null, heroShd: { off: 8, col: '#000000' }, heroGlow: null,
-                    mnFill: '#FCD34D', mnText: '#0B1F40', mnBorder: 3.5, mnBorderCol: '#000000', mnShadow: 4, mnRad: 0,
-                    stFam: '"Space Grotesk", sans-serif', stFill: '#CA2C2A', stText: '#FFFFFF', stBorder: 3.5, stBorderCol: '#000000', stShadow: 5, stRad: 0,
-                    deckTop: '#93C5FD', deckPad: '#1A467C', deckBorderCol: '#000000', deckLW: 4,
-                    joyBall: '#CA2C2A', joyHi: '#FF8A8A', btnCols: ['#CA2C2A', '#FCD34D', '#2563EB'], startCols: ['#38BDF8', '#CA2C2A'],
-                    apronFill: '#0B1F40', pillFill: '#FFFFFF', pillText: '#12305A', pillBorder: 3, pillBorderCol: '#000000', pillRad: 0,
-                    kickFill: '#1A467C', plateFill: '#CA2C2A', plateText: '#FFFFFF', darkChip: false
-                },
-                'glass': {
-                    bgMode: 'grad', stops: [[0, '#528FF5'], [0.48, '#8BB8FF'], [1, '#CBE0FF']],
-                    fw: ['#FDE047', '#F472B6', '#FFFFFF', '#38BDF8'],
-                    codeA: 'rgba(255,255,255,0.45)', codeB: 'rgba(253,224,71,0.72)',
-                    cabBorder: 2, cabBorderCol: 'rgba(255,255,255,0.95)', cabShadow: 0, soft: 'rgba(15,41,74,0.34)',
-                    mqFill: { dir: 'vert', stops: [[0, 'rgba(191,219,254,0.94)'], [1, 'rgba(147,197,253,0.92)']] },
-                    mqScreenFill: 'rgba(255,255,255,0.90)', mqScreenBorder: 1.5, mqTitle: '#12305A', mqSub: '#2563EB', mqSoc: '#1E3A8A', mqRad: 22,
-                    bodyFill: { dir: 'vert', stops: [[0, 'rgba(165,205,255,0.88)'], [1, 'rgba(125,176,248,0.90)']] },
-                    bezelFill: { dir: 'diag', stops: [[0, '#2563EB'], [1, '#60A5FA']] }, bezelRad: 14,
-                    skyStops: [[0, '#60A5FA'], [0.55, '#93C5FD'], [1, '#E0F2FE']],
-                    cloudCol: 'rgba(255,255,255,0.92)', bldMain: '#3B82F6', bldDark: '#1E40AF', winOn: '#FEF08A', grass: '#4ADE80', brick: '#F472B6', brickDark: '#DB2777',
-                    ringA: '#67E8F9', ringB: '#F472B6', ringC: '#FDE047',
-                    hudLeft: '#0F294A', hudRight: '#DC2626',
-                    badgeFam: '"Space Grotesk", sans-serif', badgeFill: 'rgba(255,255,255,0.94)', badgeText: '#1E3A8A', badgeBorder: 2, badgeBorderCol: '#FFFFFF', badgeShadow: 0, badgeRad: 12,
-                    heroFam: '"Outfit", "Plus Jakarta Sans", sans-serif', heroW: 900, heroFill: '#FFFFFF', heroStroke: '#0F4C81', heroSW: 14, heroEdge: '#F472B6', heroShd: { off: 7, col: '#0C4A6E' }, heroGlow: 'rgba(12,74,110,0.36)',
-                    mnFill: { dir: 'vert', stops: [[0, '#FDE047'], [1, '#F59E0B']] }, mnText: '#0F294A', mnBorder: 1.5, mnBorderCol: '#FFFFFF', mnShadow: 0, mnRad: 10,
-                    stFam: '"Outfit", sans-serif', stFill: { dir: 'vert', stops: [[0, '#F87171'], [1, '#DC2626']] }, stText: '#FFFFFF', stBorder: 1.5, stBorderCol: 'rgba(255,255,255,0.92)', stShadow: 0, stRad: 12,
-                    deckTop: '#DBEAFE', deckPad: '#60A5FA', deckBorderCol: 'rgba(255,255,255,0.92)', deckLW: 2,
-                    joyBall: '#F43F5E', joyHi: '#FFE4E6', btnCols: ['#EF4444', '#FACC15', '#3B82F6'], startCols: ['#3B82F6', '#EC4899'],
-                    apronFill: 'rgba(59,130,246,0.85)', pillFill: 'rgba(255,255,255,0.94)', pillText: '#0F294A', pillBorder: 1.5, pillBorderCol: '#FFFFFF', pillRad: 999,
-                    kickFill: 'rgba(147,197,253,0.92)', plateFill: 'rgba(255,255,255,0.88)', plateText: '#1E40AF', darkChip: false
-                },
-                'dark-code': {
-                    bgMode: 'dots', bg: '#0B192E', dot: 'rgba(56,189,248,0.24)',
-                    fw: ['#38BDF8', '#FCD34D', '#F87171', '#A78BFA'],
-                    codeA: 'rgba(56,189,248,0.50)', codeB: 'rgba(252,211,77,0.65)',
-                    cabBorder: 3, cabBorderCol: '#38BDF8', cabShadow: 0, soft: 'rgba(0,0,0,0.72)',
-                    mqFill: '#122645', mqScreenFill: '#0B192E', mqScreenBorder: 2, mqTitle: '#FFFFFF', mqSub: '#38BDF8', mqSoc: '#E2E8F0', mqRad: 16,
-                    bodyFill: '#122645', bezelFill: '#071120', bezelRad: 10,
-                    skyStops: [[0, '#040B16'], [1, '#0D203C']],
-                    cloudCol: 'rgba(56,189,248,0.22)', bldMain: '#1E3A5F', bldDark: '#0F2342', winOn: '#38BDF8', grass: '#10B981', brick: '#0284C7', brickDark: '#0369A1',
-                    ringA: '#38BDF8', ringB: '#EF4444', ringC: '#FCD34D',
-                    hudLeft: '#38BDF8', hudRight: '#FCD34D',
-                    badgeFam: '"Silkscreen", monospace', badgeFill: '#1A365D', badgeText: '#38BDF8', badgeBorder: 3, badgeBorderCol: '#38BDF8', badgeShadow: 6, badgeRad: 8,
-                    heroFam: '"Archivo Black", sans-serif', heroW: 400, heroFill: '#FCD34D', heroStroke: '#060D1A', heroSW: 14, heroEdge: null, heroShd: { off: 8, col: '#EF4444' }, heroGlow: null,
-                    mnFill: '#0B192E', mnText: '#38BDF8', mnBorder: 2.5, mnBorderCol: '#38BDF8', mnShadow: 4, mnRad: 8,
-                    stFam: '"Space Grotesk", sans-serif', stFill: '#CA2C2A', stText: '#FFFFFF', stBorder: 3, stBorderCol: '#FFFFFF', stShadow: 5, stRad: 10,
-                    deckTop: '#1E3A5F', deckPad: '#0B192E', deckBorderCol: '#38BDF8', deckLW: 2.5,
-                    joyBall: '#38BDF8', joyHi: '#BAE6FD', btnCols: ['#EF4444', '#FCD34D', '#38BDF8'], startCols: ['#38BDF8', '#EF4444'],
-                    apronFill: '#091529', pillFill: '#122645', pillText: '#F8FAFC', pillBorder: 2, pillBorderCol: '#38BDF8', pillRad: 999,
-                    kickFill: '#0D1E38', plateFill: '#0B192E', plateText: '#FCD34D', darkChip: true
-                },
-                'modern': {
-                    bgMode: 'radial', stops: [[0, '#2E7BD1'], [0.46, '#16488E'], [1, '#0D2D5E']],
-                    fw: ['#FDD34D', '#60A5FA', '#FFFFFF', '#F87171'],
-                    codeA: 'rgba(255,255,255,0.30)', codeB: 'rgba(253,211,77,0.65)',
-                    cabBorder: 0, cabBorderCol: 'transparent', cabShadow: 0, soft: 'rgba(6,20,44,0.48)',
-                    mqFill: '#1D4D85', mqScreenFill: 'rgba(255,255,255,0.96)', mqScreenBorder: 0, mqTitle: '#12305A', mqSub: '#2A82C6', mqSoc: '#12305A', mqRad: 24,
-                    bodyFill: '#225B9E', bezelFill: '#12305A', bezelRad: 16,
-                    skyStops: [[0, '#16488E'], [0.65, '#2563EB'], [1, '#60A5FA']],
-                    cloudCol: 'rgba(255,255,255,0.85)', bldMain: '#12305A', bldDark: '#0B1F40', winOn: '#FDD34D', grass: '#34D399', brick: '#1E40AF', brickDark: '#1E3A8A',
-                    ringA: '#60A5FA', ringB: '#FDD34D', ringC: '#FFFFFF',
-                    hudLeft: '#E2EEFF', hudRight: '#FDD34D',
-                    badgeFam: '"Silkscreen", monospace', badgeFill: '#FDD34D', badgeText: '#12305A', badgeBorder: 0, badgeBorderCol: 'transparent', badgeShadow: 0, badgeRad: 999,
-                    heroFam: '"Archivo Black", sans-serif', heroW: 400, heroFill: '#FFFFFF', heroStroke: '#0B2242', heroSW: 8, heroEdge: null, heroShd: { off: 9, col: '#FDD34D' }, heroGlow: 'rgba(6,20,44,0.42)',
-                    mnFill: '#FDD34D', mnText: '#12305A', mnBorder: 0, mnBorderCol: 'transparent', mnShadow: 0, mnRad: 999,
-                    stFam: '"Space Grotesk", sans-serif', stFill: '#CA2C2A', stText: '#FFFFFF', stBorder: 0, stBorderCol: 'transparent', stShadow: 0, stRad: 16,
-                    deckTop: '#60A5FA', deckPad: '#16488E', deckBorderCol: 'rgba(255,255,255,0.35)', deckLW: 1.5,
-                    joyBall: '#CA2C2A', joyHi: '#FCA5A5', btnCols: ['#CA2C2A', '#FDD34D', '#2563EB'], startCols: ['#38BDF8', '#CA2C2A'],
-                    apronFill: '#0F294A', pillFill: '#FFFFFF', pillText: '#12305A', pillBorder: 0, pillBorderCol: 'transparent', pillRad: 999,
-                    kickFill: '#16488E', plateFill: '#FDD34D', plateText: '#12305A', darkChip: false
-                }
-            };
-            return P[styleName] || P['neubrutalism'];
-        }
-
-        function getL5HeroMetrics(E) {
+        function getL5Metrics(E) {
             const heroLines = E.isCS ? ['COMING', 'SOON'] : [E.hero || 'H-7'];
-            const longest = Math.max(1, ...heroLines.map((l) => l.length));
-            const sc = currentRatio === '9-16' ? 1.12 : (currentRatio === '1-1' ? 0.86 : 1);
-            const rawBase = E.isCS ? 96 : Math.min(205, Math.max(48, Math.floor(475 / (0.68 * longest))));
+            const hl = Math.max(1, ...heroLines.map((l) => l.length));
+            const tl = (E.title || '').length;
+            const rs = currentRatio === '9-16' ? 1.07 : (currentRatio === '1-1' ? 0.84 : 1);
+            const baseHero = E.isCS
+                ? 116
+                : (hl >= 10 ? 74 : (hl >= 7 ? 116 : (hl >= 5 ? 168 : 228)));
+            const baseTitle = tl >= 14 ? 62 : (tl >= 11 ? 74 : 86);
             return {
                 heroLines,
-                heroFs: Math.round(rawBase * sc),
-                hudTxt: E.isCS ? 'STAGE ?? // SOON' : 'LVL 07 // IF_QUEST',
-                badgeTxt: E.isCS ? E.title : E.cd,
-                mnTxt: E.isCS ? '' : (E.mn || 'MENUJU'),
-                stampTxt: E.isCS ? 'STAY TUNED' : E.title
+                heroFs: Math.round(baseHero * rs),
+                titleFs: Math.round(baseTitle * rs),
+                cdTxt: E.isCS ? 'STAY TUNED' : (E.cd || 'COUNTDOWN'),
+                menujuTxt: E.mn || 'MENUJU',
+                schedLine: `${E.date} • ${E.time} • ${toTitleCase(E.loc)}`
             };
         }
-
-        function buildL5OrbitalBlocks(cx, cy, rX, rY, P) {
-            const blocks = [];
-            const px = 18;
-            const angles = [];
-            // Top-right & left sweep arcs with intentional breaks top-left (badge) & bottom-right (stamp)
-            for (let a = -72; a <= 22; a += 8) angles.push([a, a % 16 === 0 ? P.ringA : P.ringB]);
-            for (let a = 112; a <= 204; a += 8) angles.push([a, a % 16 === 0 ? P.ringB : P.ringA]);
-            angles.forEach(([deg, col], idx) => {
-                const rad = (deg * Math.PI) / 180;
-                const jit = (idx % 3 === 0 ? 14 : (idx % 2 === 0 ? -6 : 4));
-                const x = Math.round((cx + Math.cos(rad) * (rX + jit) - px / 2) / 4) * 4;
-                const y = Math.round((cy + Math.sin(rad) * (rY + jit) - px / 2) / 4) * 4;
-                blocks.push([x, y, px, px, col, 0.92]);
-                if (idx % 3 === 1) {
-                    const bx = Math.round((cx + Math.cos(rad) * (rX - 24) - 7) / 4) * 4;
-                    const by = Math.round((cy + Math.sin(rad) * (rY - 24) - 7) / 4) * 4;
-                    blocks.push([bx, by, 14, 14, P.ringC, 0.85]);
-                }
-            });
-            // Floating outer orbital sparks
-            [[cx - rX - 22, cy - 30, 14, P.ringC], [cx + rX + 18, cy - 58, 16, P.ringA],
-             [cx - rX + 26, cy + rY - 28, 12, P.ringB], [cx + rX - 24, cy - rY + 26, 14, P.ringC]
-            ].forEach(([sx, sy, ss, col]) => blocks.push([sx, sy, ss, ss, col, 0.9]));
-            return blocks;
-        }
-
-        function buildL5FireworkPixels(G, P) {
-            const sparks = [
-                [G.cabX * 0.48, G.H * 0.28, 48, P.fw[0]],
-                [G.W - G.cabX * 0.48, G.H * 0.34, 44, P.fw[1]],
-                [G.cabX * 0.50, G.H * 0.64, 52, P.fw[2]],
-                [G.W - G.cabX * 0.48, G.H * 0.66, 46, P.fw[3]]
-            ];
-            const rects = [];
-            sparks.forEach(([fx, fy, fr, col]) => {
-                const rays = [[1,0],[-1,0],[0,1],[0,-1],[0.7,0.7],[-0.7,0.7],[0.7,-0.7],[-0.7,-0.7]];
-                rects.push([fx - 5, fy - 5, 10, 10, '#FFFFFF', 0.95]);
-                rays.forEach(([dx, dy]) => {
-                    [0.34, 0.62, 0.90].forEach((t, ti) => {
-                        const s = ti === 1 ? 8 : 6;
-                        rects.push([Math.round(fx + dx * fr * t - s / 2), Math.round(fy + dy * fr * t - s / 2), s, s, col, 0.92 - ti * 0.14]);
-                    });
-                });
-            });
-            // Confetti pixels along left/right gutters
-            const conf = [
-                [0.04, 0.14, 12, P.fw[1]], [0.08, 0.44, 14, P.fw[0]], [0.05, 0.53, 10, P.fw[2]], [0.07, 0.80, 12, P.fw[3]],
-                [0.95, 0.13, 12, P.fw[0]], [0.91, 0.48, 14, P.fw[2]], [0.94, 0.57, 10, P.fw[1]], [0.92, 0.81, 14, P.fw[0]]
-            ];
-            conf.forEach(([px, py, ps, col]) => rects.push([Math.round(px * G.W), Math.round(py * G.H), ps, ps, col, 0.85]));
-            return rects;
-        }
-
-        function syncLayout5Dom() {
-            const setIf = (id, val) => {
-                const el = document.getElementById(id);
-                if (el) el.textContent = val;
-            };
-            const G = getL5Geom(currentRatio);
-            const P = getL5ThemePalette(currentStyle);
-            const E = getEffectiveContent();
-            const M = getL5HeroMetrics(E);
-
-            const cab = document.getElementById('l5Cabinet');
-            const mq = document.getElementById('l5Marquee');
-            const body = document.getElementById('l5Body');
-            const bezel = document.getElementById('l5Bezel');
-            const deck = document.getElementById('l5DeckWrap');
-            const apron = document.getElementById('l5Apron');
-            const kick = document.getElementById('l5Kick');
-            if (!cab || !mq || !body || !bezel || !deck || !apron || !kick) return;
-
-            cab.style.width = G.cabW + 'px';
-            cab.style.marginTop = G.cabTop + 'px';
-            mq.style.height = G.mqH + 'px';
-            body.style.height = G.scrH + 'px';
-            body.style.padding = `${G.bezelPadY}px ${G.bezelPadX}px`;
-            bezel.style.width = '100%';
-            bezel.style.height = '100%';
-            deck.style.height = (G.deckH + G.frontH) + 'px';
-            apron.style.height = G.frontH + 'px';
-            kick.style.height = G.kickH + 'px';
-
-            setIf('l5OutIg', E.igHandle);
-            setIf('l5OutCta', E.cta);
-            setIf('l5OutHud', M.hudTxt);
-            setIf('l5OutBadge', M.badgeTxt);
-            const hEl = document.getElementById('l5OutHero');
-            if (hEl) {
-                hEl.textContent = M.heroLines.join('\n');
-                hEl.style.fontSize = M.heroFs + 'px';
-            }
-            const mnEl = document.getElementById('l5OutMenuju');
-            if (mnEl) {
-                mnEl.textContent = M.mnTxt;
-                mnEl.style.display = E.isCS ? 'none' : '';
-            }
-            setIf('l5OutStamp', M.stampTxt);
-            setIf('l5OutDateTime', `${E.date} • ${E.time}`);
-            setIf('l5OutLoc', toTitleCase(E.loc));
-
-            // 1. Side Fireworks & Pixel Confetti SVG
-            const fxSvg = document.getElementById('l5SideFxSvg');
-            if (fxSvg) {
-                fxSvg.setAttribute('viewBox', `0 0 ${G.W} ${G.H}`);
-                fxSvg.innerHTML = buildL5FireworkPixels(G, P)
-                    .map(([x, y, w, h, c, op]) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${c}" opacity="${op}"/>`)
-                    .join('');
-            }
-
-            // 2. CRT Pixel Campus Art SVG (Top Clouds + Horizon IDE LPKIA)
-            const artSvg = document.getElementById('l5ScreenArtSvg');
-            if (artSvg) {
-                const scPad = P.bezelRad > 10 ? 14 : 12;
-                const sW = G.cabW - G.bezelPadX * 2 - scPad * 2;
-                const sH = G.scrH - G.bezelPadY * 2 - scPad * 2;
-                const artSc = sW / 692;
-                const horY = Math.round(sH - 678 * artSc);
-                artSvg.setAttribute('viewBox', `0 0 ${sW} ${sH}`);
-                artSvg.removeAttribute('preserveAspectRatio');
-                artSvg.innerHTML = `
-                    <rect x="${Math.round(sW * 0.06)}" y="${currentRatio === '1-1' ? 68 : 88}" width="92" height="22" fill="${P.cloudCol}"/><rect x="${Math.round(sW * 0.06) + 18}" y="${currentRatio === '1-1' ? 48 : 68}" width="50" height="20" fill="${P.cloudCol}"/>
-                    <rect x="${Math.round(sW * 0.75)}" y="${currentRatio === '1-1' ? 54 : 68}" width="106" height="22" fill="${P.cloudCol}"/><rect x="${Math.round(sW * 0.75) + 24}" y="${currentRatio === '1-1' ? 34 : 48}" width="54" height="20" fill="${P.cloudCol}"/>
-                    <g transform="translate(0 ${horY}) scale(${artSc})">
-                        <rect x="56" y="458" width="118" height="148" fill="${P.bldMain}"/><rect x="70" y="438" width="90" height="20" fill="${P.bldDark}"/>
-                        <rect x="112" y="408" width="6" height="30" fill="${P.winOn}"/>
-                        <rect x="74" y="476" width="16" height="20" fill="${P.winOn}"/><rect x="106" y="476" width="16" height="20" fill="${P.winOn}"/><rect x="138" y="476" width="16" height="20" fill="${P.winOn}"/>
-                        <rect x="74" y="514" width="16" height="20" fill="${P.winOn}"/><rect x="106" y="514" width="16" height="20" fill="${P.winOn}" opacity="0.4"/><rect x="138" y="514" width="16" height="20" fill="${P.winOn}"/>
-                        <rect x="104" y="556" width="22" height="48" fill="#FFFFFF" opacity="0.22"/>
-                        <rect x="492" y="432" width="136" height="174" fill="${P.bldDark}"/><rect x="518" y="406" width="84" height="26" fill="${P.bldMain}"/>
-                        <rect x="512" y="452" width="22" height="16" fill="${P.winOn}"/><rect x="550" y="452" width="22" height="16" fill="${P.winOn}"/><rect x="588" y="452" width="22" height="16" fill="${P.winOn}" opacity="0.45"/>
-                        <rect x="512" y="484" width="22" height="16" fill="${P.winOn}" opacity="0.45"/><rect x="550" y="484" width="22" height="16" fill="${P.winOn}"/><rect x="588" y="484" width="22" height="16" fill="${P.winOn}"/>
-                        <rect x="512" y="516" width="98" height="14" fill="${P.winOn}" opacity="0.78"/>
-                        <rect x="24" y="554" width="52" height="52" fill="${P.grass}"/><rect x="38" y="534" width="28" height="22" fill="${P.grass}"/>
-                        <rect x="626" y="548" width="56" height="58" fill="${P.grass}"/><rect x="638" y="528" width="32" height="22" fill="${P.grass}"/>
-                        <rect x="0" y="604" width="692" height="18" fill="${P.grass}"/>
-                        <rect x="0" y="622" width="692" height="56" fill="${P.brick}"/>
-                        <rect x="24" y="630" width="68" height="18" fill="${P.brickDark}"/><rect x="128" y="630" width="82" height="18" fill="${P.brickDark}"/>
-                        <rect x="360" y="630" width="76" height="18" fill="${P.brickDark}"/><rect x="540" y="630" width="90" height="18" fill="${P.brickDark}"/>
-                    </g>
-                `;
-            }
-
-            // 3. Orbital Pixel Burst Ring SVG
-            const orbSvg = document.getElementById('l5OrbitalSvg');
-            if (orbSvg) {
-                orbSvg.setAttribute('viewBox', `0 0 ${G.cabW} ${G.scrH}`);
-                const cx = G.cabW / 2;
-                const cy = G.scrH / 2 + 4;
-                const rX = G.cabW * 0.36;
-                const rY = G.scrH * (currentRatio === '9-16' ? 0.30 : 0.36);
-                orbSvg.innerHTML = buildL5OrbitalBlocks(cx, cy, rX, rY, P)
-                    .map(([x, y, w, h, c, op]) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${c}" opacity="${op}"/>`)
-                    .join('');
-            }
-
-            // 4. Control Deck Trapezoid + Joystick + Action Dome Buttons SVG
-            const deckSvg = document.getElementById('l5DeckSvg');
-            if (deckSvg) {
-                const dw = G.cabW;
-                const dh = G.deckH;
-                const fl = 34;
-                deckSvg.setAttribute('viewBox', `0 0 ${dw} ${dh + G.frontH}`);
-                const jx = dw * 0.21;
-                const jy = dh * 0.50;
-                const scX = dw * 0.42;
-                const ax = dw * 0.72;
-                const ay = dh * 0.56;
-                deckSvg.innerHTML = `
-                    <polygon points="0,0 ${dw},0 ${dw + fl},${dh} ${-fl},${dh}" fill="${P.deckTop}" stroke="${P.deckBorderCol}" stroke-width="${P.deckLW}" stroke-linejoin="round"/>
-                    <polygon points="62,18 ${dw - 62},18 ${dw - 36},${dh - 16} ${36},${dh - 16}" fill="${P.deckPad}" stroke="${P.deckBorderCol}" stroke-width="${Math.max(1.5, P.deckLW * 0.7)}"/>
-                    <ellipse cx="${jx}" cy="${jy + 14}" rx="34" ry="12" fill="rgba(0,0,0,0.42)"/>
-                    <ellipse cx="${jx}" cy="${jy + 11}" rx="28" ry="10" fill="#0F172A" stroke="${P.deckBorderCol}" stroke-width="2"/>
-                    <rect x="${jx - 5}" y="${jy - 38}" width="10" height="50" rx="4" fill="#CBD5E1" stroke="#0F172A" stroke-width="2"/>
-                    <circle cx="${jx}" cy="${jy - 44}" r="23" fill="${P.joyBall}" stroke="${P.deckBorderCol}" stroke-width="2.5"/>
-                    <circle cx="${jx - 7}" cy="${jy - 51}" r="6.5" fill="${P.joyHi}" opacity="0.88"/>
-                    <ellipse cx="${scX}" cy="${jy + 8}" rx="18" ry="8" fill="#0F172A"/>
-                    <ellipse cx="${scX}" cy="${jy + 5}" rx="16" ry="7" fill="${P.startCols[0]}" stroke="#FFFFFF" stroke-width="1.5"/>
-                    <ellipse cx="${scX + 54}" cy="${jy + 8}" rx="18" ry="8" fill="#0F172A"/>
-                    <ellipse cx="${scX + 54}" cy="${jy + 5}" rx="16" ry="7" fill="${P.startCols[1]}" stroke="#FFFFFF" stroke-width="1.5"/>
-                    <g stroke="${P.deckBorderCol}" stroke-width="2">
-                        <ellipse cx="${ax - 56}" cy="${ay + 4}" rx="24" ry="11" fill="#FFFFFF"/><ellipse cx="${ax - 56}" cy="${ay}" rx="20" ry="9" fill="${P.btnCols[0]}"/>
-                        <ellipse cx="${ax}" cy="${ay - 12}" rx="24" ry="11" fill="#FFFFFF"/><ellipse cx="${ax}" cy="${ay - 16}" rx="20" ry="9" fill="${P.btnCols[1]}"/>
-                        <ellipse cx="${ax + 56}" cy="${ay + 4}" rx="24" ry="11" fill="#FFFFFF"/><ellipse cx="${ax + 56}" cy="${ay}" rx="20" ry="9" fill="${P.btnCols[2]}"/>
-                    </g>
-                `;
-            }
-        }
-
         function getL4Metrics(E) {
             const r = currentRatio;
             const isNeu = currentStyle === 'neubrutalism';
@@ -5807,394 +6127,605 @@
             function rrPath(x, y, w, h, r) {
                 const rr = Math.min(r, w / 2, h / 2);
                 ctx.beginPath();
-                ctx.moveTo(x + rr, y); ctx.lineTo(x + w - rr, y);
-                ctx.quadraticCurveTo(x + w, y, x + w, y + rr); ctx.lineTo(x + w, y + h - rr);
-                ctx.quadraticCurveTo(x + w, y + h, x + w - rr, y + h); ctx.lineTo(x + rr, y + h);
-                ctx.quadraticCurveTo(x, y + h, x, y + h - rr); ctx.lineTo(x, y + rr);
-                ctx.quadraticCurveTo(x, y, x + rr, y); ctx.closePath();
+                ctx.moveTo(x + rr, y);
+                ctx.lineTo(x + w - rr, y);
+                ctx.quadraticCurveTo(x + w, y, x + w, y + rr);
+                ctx.lineTo(x + w, y + h - rr);
+                ctx.quadraticCurveTo(x + w, y + h, x + w - rr, y + h);
+                ctx.lineTo(x + rr, y + h);
+                ctx.quadraticCurveTo(x, y + h, x, y + h - rr);
+                ctx.lineTo(x, y + rr);
+                ctx.quadraticCurveTo(x, y, x + rr, y);
+                ctx.closePath();
             }
 
-            function resolveFill(spec, x, y, w, h) {
-                if (spec && typeof spec === 'object' && Array.isArray(spec.stops)) {
-                    const g = spec.dir === 'vert'
-                        ? ctx.createLinearGradient(x, y, x, y + h)
-                        : ctx.createLinearGradient(x, y, x + w, y + h);
-                    spec.stops.forEach(([p, c]) => g.addColorStop(p, c));
-                    return g;
-                }
-                return spec;
-            }
-
-            function drawBox5(x, y, w, h, o) {
-                const r = o.rad || 0;
-                if (o.shd > 0) {
-                    ctx.fillStyle = '#000000';
-                    rrPath(x + o.shd, y + o.shd, w, h, r); ctx.fill();
-                }
-                ctx.save();
-                if (o.soft) { ctx.shadowColor = o.soft; ctx.shadowBlur = o.blur || 26; ctx.shadowOffsetY = o.sy || 12; }
-                ctx.fillStyle = resolveFill(o.fill, x, y, w, h);
-                rrPath(x, y, w, h, r); ctx.fill();
-                ctx.restore();
-                if (o.border > 0) {
-                    ctx.lineWidth = o.border; ctx.strokeStyle = o.borderCol;
-                    rrPath(x, y, w, h, r); ctx.stroke();
-                }
-            }
-
-            function drawText5(text, x, y, font, color, track = 0, align = 'left') {
-                ctx.font = font; ctx.fillStyle = color; ctx.textBaseline = 'middle';
+            function drawTextTrack(text, x, y, font, color, tracking = 0, align = 'left') {
+                ctx.font = font;
+                ctx.fillStyle = color;
+                ctx.textBaseline = 'middle';
                 const chars = Array.from(text);
                 const ws = chars.map((c) => ctx.measureText(c).width);
-                const tot = ws.reduce((a, b) => a + b, 0) + track * Math.max(0, chars.length - 1);
+                const tot = ws.reduce((a, b) => a + b, 0) + tracking * Math.max(0, chars.length - 1);
                 let cx = align === 'center' ? x - tot / 2 : (align === 'right' ? x - tot : x);
                 ctx.textAlign = 'left';
-                chars.forEach((c, i) => { ctx.fillText(c, cx, y); cx += ws[i] + track; });
+                chars.forEach((c, idx) => {
+                    ctx.fillText(c, cx, y);
+                    cx += ws[idx] + tracking;
+                });
             }
 
-            const P = getL5ThemePalette(currentStyle);
-            const G = getL5Geom(currentRatio);
+            const L5_THEMES = {
+                'neubrutalism': {
+                    bgMode: 'solid', bg: '#16488E', grid: 'rgba(255,255,255,0.14)',
+                    orbTL: 'rgba(252,211,77,0.24)', orbBR: 'rgba(42,130,198,0.42)',
+                    bloomTL: '#FCD34D', bloomTLOp: 0.92, bloomBR: '#CA2C2A', bloomBROp: 0.92, bloomBlur: 0,
+                    codeA: 'rgba(255,255,255,0.36)', codeB: 'rgba(252,211,77,0.85)',
+                    chipRad: 0, chipBorder: '#000000', chipBW: 2.5, chipShd: 3,
+                    vsep: 'rgba(255,255,255,0.50)', orgSub: '#FCD34D', rightSub: '#93C5FD',
+                    dot: '#FCD34D', line: 'rgba(255,255,255,0.72)',
+                    backFill: '#0B1F40', backBorder: '#000000', backBW: 4, cardRad: 18,
+                    cardFill: '#FFFFFF', cardBorder: '#000000', cardBW: 4.5, cardShdOff: 10, cardSoft: null,
+                    cdFill: '#1A467C', cdText: '#FFFFFF', cdBorder: '#000000', cdBW: 2.5, cdRad: 0,
+                    heroCol: '#0B1F40',
+                    mnFill: '#FCD34D', mnText: '#0B1F40', mnBorder: '#000000', mnBW: 3, mnShdOff: 4, mnRad: 0,
+                    titleFill: '#0B1F40', titleStroke: '#FFFFFF', titleSW: 14, titleShdOff: 6, titleShdCol: '#000000', titleSoft: null,
+                    mottoCol: '#E2EEFF',
+                    schedFill: '#FFFFFF', schedText: '#0B1F40', schedBorder: '#000000', schedBW: 3, schedShdOff: 4, schedRad: 0, schedPin: '#CA2C2A',
+                    socCol: '#FFFFFF', badgeFill: '#FFFFFF', badgeCol: '#0B1F40', badgeBorder: '#000000', badgeRad: 0
+                },
+                'glass': {
+                    bgMode: 'grad', stops: [[0, '#0D3A73'], [0.46, '#1761A8'], [1, '#2482CE']], grid: 'rgba(255,255,255,0.11)',
+                    orbTL: 'rgba(253,224,71,0.34)', orbBR: 'rgba(125,211,252,0.38)',
+                    bloomTL: '#FDE047', bloomTLOp: 0.72, bloomBR: '#BAE6FD', bloomBROp: 0.75, bloomBlur: 11,
+                    codeA: 'rgba(255,255,255,0.34)', codeB: 'rgba(253,224,71,0.68)',
+                    chipRad: 10, chipBorder: 'rgba(255,255,255,0.95)', chipBW: 1.5, chipShd: 0,
+                    vsep: 'rgba(255,255,255,0.45)', orgSub: '#DBEAFE', rightSub: '#BAE6FD',
+                    dot: 'rgba(255,255,255,0.92)', line: 'rgba(255,255,255,0.65)',
+                    backFill: 'rgba(9,41,86,0.56)', backBorder: 'rgba(255,255,255,0.25)', backBW: 1.5, cardRad: 36,
+                    cardFill: ['#FFFFFF', '#EBF4FF'], cardBorder: '#FFFFFF', cardBW: 2, cardShdOff: 0, cardSoft: 'rgba(6,22,54,0.38)',
+                    cdFill: 'rgba(37,99,235,0.12)', cdText: '#1D4ED8', cdBorder: 'rgba(37,99,235,0.24)', cdBW: 1, cdRad: 999,
+                    heroCol: '#0F3568',
+                    mnFill: 'rgba(255,255,255,0.22)', mnText: '#FFFFFF', mnBorder: 'rgba(255,255,255,0.65)', mnBW: 1.5, mnShdOff: 0, mnRad: 999,
+                    titleFill: '#0D356F', titleStroke: '#FFFFFF', titleSW: 14, titleShdOff: 0, titleShdCol: null, titleSoft: { col: 'rgba(7,24,58,0.34)', blur: 18, sy: 8 },
+                    mottoCol: '#EFF6FF',
+                    schedFill: 'rgba(255,255,255,0.16)', schedText: '#FFFFFF', schedBorder: 'rgba(255,255,255,0.44)', schedBW: 1.5, schedShdOff: 0, schedRad: 999, schedPin: '#FDE047',
+                    socCol: '#FFFFFF', badgeFill: '#FFFFFF', badgeCol: '#16488E', badgeBorder: null, badgeRad: 7
+                },
+                'dark-code': {
+                    bgMode: 'solid', bg: '#091529', grid: 'rgba(56,189,248,0.11)',
+                    orbTL: 'rgba(56,189,248,0.24)', orbBR: 'rgba(252,211,77,0.18)',
+                    bloomTL: '#38BDF8', bloomTLOp: 0.48, bloomBR: '#FCD34D', bloomBROp: 0.42, bloomBlur: 12,
+                    codeA: 'rgba(56,189,248,0.46)', codeB: 'rgba(252,211,77,0.62)',
+                    chipRad: 8, chipBorder: '#38BDF8', chipBW: 2, chipShd: 0,
+                    vsep: 'rgba(56,189,248,0.45)', orgSub: '#38BDF8', rightSub: '#FCD34D',
+                    dot: '#38BDF8', line: 'rgba(56,189,248,0.55)',
+                    backFill: '#14325B', backBorder: 'rgba(56,189,248,0.55)', backBW: 2.5, cardRad: 36,
+                    cardFill: '#F8FAFC', cardBorder: '#38BDF8', cardBW: 3.5, cardShdOff: 0, cardSoft: 'rgba(0,0,0,0.58)',
+                    cdFill: '#0B192E', cdText: '#38BDF8', cdBorder: '#38BDF8', cdBW: 1.5, cdRad: 999,
+                    heroCol: '#0B192E',
+                    mnFill: '#122645', mnText: '#38BDF8', mnBorder: '#38BDF8', mnBW: 2, mnShdOff: 0, mnRad: 8,
+                    titleFill: '#0B192E', titleStroke: '#FFFFFF', titleSW: 14, titleShdOff: 0, titleShdCol: null, titleSoft: { col: 'rgba(56,189,248,0.42)', blur: 18, sy: 6 },
+                    mottoCol: '#BAE6FD',
+                    schedFill: '#122645', schedText: '#FFFFFF', schedBorder: 'rgba(56,189,248,0.55)', schedBW: 1.5, schedShdOff: 0, schedRad: 10, schedPin: '#FCD34D',
+                    socCol: '#F8FAFC', badgeFill: '#38BDF8', badgeCol: '#091529', badgeBorder: null, badgeRad: 7
+                },
+                'modern': {
+                    bgMode: 'radial', stops: [[0, '#2E7BD1'], [0.48, '#16488E'], [1, '#0C2B57']], grid: 'rgba(255,255,255,0.08)',
+                    orbTL: 'rgba(253,211,77,0.22)', orbBR: 'rgba(59,130,246,0.34)',
+                    bloomTL: '#FDD34D', bloomTLOp: 0.62, bloomBR: '#93C5FD', bloomBROp: 0.58, bloomBlur: 11,
+                    codeA: 'rgba(255,255,255,0.28)', codeB: 'rgba(253,211,77,0.58)',
+                    chipRad: 10, chipBorder: null, chipBW: 0, chipShd: 0,
+                    vsep: 'rgba(255,255,255,0.38)', orgSub: '#FDD34D', rightSub: '#CBD5E1',
+                    dot: '#FDD34D', line: 'rgba(255,255,255,0.52)',
+                    backFill: 'rgba(9,28,60,0.62)', backBorder: null, backBW: 0, cardRad: 36,
+                    cardFill: '#FFFFFF', cardBorder: null, cardBW: 0, cardShdOff: 0, cardSoft: 'rgba(6,18,42,0.45)',
+                    cdFill: '#EFF6FF', cdText: '#16488E', cdBorder: null, cdBW: 0, cdRad: 999,
+                    heroCol: '#12305A',
+                    mnFill: '#FDD34D', mnText: '#12305A', mnBorder: null, mnBW: 0, mnShdOff: 0, mnRad: 999,
+                    titleFill: '#12305A', titleStroke: '#FFFFFF', titleSW: 14, titleShdOff: 0, titleShdCol: null, titleSoft: { col: 'rgba(6,18,42,0.42)', blur: 22, sy: 10 },
+                    mottoCol: '#E2EEFF',
+                    schedFill: 'rgba(255,255,255,0.14)', schedText: '#FFFFFF', schedBorder: 'rgba(255,255,255,0.26)', schedBW: 1, schedShdOff: 0, schedRad: 999, schedPin: '#FDD34D',
+                    socCol: '#FFFFFF', badgeFill: '#FFFFFF', badgeCol: '#12305A', badgeBorder: null, badgeRad: 7
+                }
+            };
+
+            const T = L5_THEMES[currentStyle] || L5_THEMES['neubrutalism'];
             const E = getEffectiveContent();
-            const M = getL5HeroMetrics(E);
+            const M = getL5Metrics(E);
             const is11 = currentRatio === '1-1';
             const is916 = currentRatio === '9-16';
 
-            // 1. Background + Pixel Fireworks + Coding Accents
-            if (P.bgMode === 'grad') {
-                const g = ctx.createLinearGradient(0, 0, W * 0.55, H);
-                P.stops.forEach(([p, c]) => g.addColorStop(p, c));
-                ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
-            } else if (P.bgMode === 'radial') {
-                const rg = ctx.createRadialGradient(W * 0.80, H * 0.18, 0, W * 0.80, H * 0.18, Math.max(W, H) * 0.95);
-                P.stops.forEach(([p, c]) => rg.addColorStop(p, c));
-                ctx.fillStyle = rg; ctx.fillRect(0, 0, W, H);
+            // 1. Background
+            if (T.bgMode === 'radial') {
+                const rg = ctx.createRadialGradient(W * 0.80, H * 0.18, 0, W * 0.80, H * 0.18, Math.max(W, H) * 0.92);
+                T.stops.forEach(([p, c]) => rg.addColorStop(p, c));
+                ctx.fillStyle = rg;
+                ctx.fillRect(0, 0, W, H);
+            } else if (T.bgMode === 'grad') {
+                const lg = ctx.createLinearGradient(0, 0, W * 0.48, H);
+                T.stops.forEach(([p, c]) => lg.addColorStop(p, c));
+                ctx.fillStyle = lg;
+                ctx.fillRect(0, 0, W, H);
             } else {
-                ctx.fillStyle = P.bg; ctx.fillRect(0, 0, W, H);
-                ctx.fillStyle = P.dot;
-                for (let y = 12; y < H; y += 24) for (let x = 12; x < W; x += 24) {
-                    ctx.beginPath(); ctx.arc(x, y, 2, 0, Math.PI * 2); ctx.fill();
-                }
+                ctx.fillStyle = T.bg;
+                ctx.fillRect(0, 0, W, H);
             }
 
-            buildL5FireworkPixels(G, P).forEach(([fx, fy, fw, fh, fc, fop]) => {
-                ctx.save(); ctx.globalAlpha = fop; ctx.fillStyle = fc; ctx.fillRect(fx, fy, fw, fh); ctx.restore();
-            });
-            if (showAccents) {
-                [['>_', 0.055, 0.16, -12, 28, P.codeA], ['</>', 0.945, 0.18, 12, 28, P.codeB],
-                 ['{ }', 0.052, 0.85, 6, 30, P.codeB], ['01;', 0.948, 0.84, -12, 26, P.codeA]].forEach(([t, px, py, rot, sz, col]) => {
-                    ctx.save(); ctx.translate(px * W, py * H); ctx.rotate((rot * Math.PI) / 180);
-                    ctx.font = `800 ${sz}px "JetBrains Mono", monospace`; ctx.fillStyle = col;
-                    ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText(t, 0, 0); ctx.restore();
-                });
-            }
-
-            // 2. Cabinet Shell Shadow
-            const cabY = G.cabTop;
-            const totalCabH = G.mqH + G.scrH + G.deckH + G.frontH + G.kickH;
-            if (P.cabShadow > 0) {
-                ctx.fillStyle = '#000000';
-                rrPath(G.cabX + P.cabShadow, cabY + P.cabShadow, G.cabW, totalCabH, P.mqRad);
+            // Ambient corner light orbs
+            const drawOrb = (cx, cy, r, col) => {
+                const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, r);
+                g.addColorStop(0, col);
+                g.addColorStop(0.66, 'rgba(0,0,0,0)');
+                ctx.fillStyle = g;
+                ctx.beginPath();
+                ctx.arc(cx, cy, r, 0, Math.PI * 2);
                 ctx.fill();
-            }
-
-            // 3. Marquee Header (3 Wajib Logos + Org Name + Socials)
-            drawBox5(G.cabX, cabY, G.cabW, G.mqH, {
-                fill: P.mqFill, border: P.cabBorder, borderCol: P.cabBorderCol, rad: P.mqRad, soft: P.soft, blur: 36, sy: 16
-            });
-            const mqsX = G.cabX + 18;
-            const mqsY = cabY + 13;
-            const mqsW = G.cabW - 36;
-            const mqsH = G.mqH - 26;
-            drawBox5(mqsX, mqsY, mqsW, mqsH, {
-                fill: P.mqScreenFill, border: P.mqScreenBorder, borderCol: P.cabBorderCol, rad: Math.max(8, P.mqRad - 6)
-            });
-
-            const chipS = is916 ? 50 : (is11 ? 38 : 44);
-            const chipY = mqsY + (mqsH - chipS) / 2;
-            const drawCabLogo = (lx, img) => {
-                if (P.darkChip) {
-                    drawBox5(lx, chipY, chipS, chipS, { fill: '#FFFFFF', border: 0, rad: 8 });
-                }
-                const pad = P.darkChip ? 3 : 0;
-                const d = chipS - pad * 2;
-                if (img) {
-                    const sc = Math.min(d / img.width, d / img.height);
-                    ctx.drawImage(img, lx + pad + (d - img.width * sc) / 2, chipY + pad + (d - img.height * sc) / 2, img.width * sc, img.height * sc);
-                }
             };
-            [himaImg, lpkiaImg, kabinetImg].forEach((img, idx) => drawCabLogo(mqsX + 20 + idx * (chipS + 8), img));
+            drawOrb(210, 190, 310, T.orbTL);
+            drawOrb(W - 220, H - 180, 320, T.orbBR);
 
-            const mqTxtX = mqsX + 20 + chipS * 3 + 30;
-            const h1Fs = is916 ? 21 : (is11 ? 17 : 19);
-            const h2Fs = is916 ? 12.5 : (is11 ? 10.5 : 11.5);
-            drawText5('HIMA INFORMATIKA', mqTxtX, mqsY + mqsH / 2 - 9, `700 ${h1Fs}px "Space Grotesk", sans-serif`, P.mqTitle, 0.7, 'left');
-            drawText5('IDE LPKIA BANDUNG', mqTxtX, mqsY + mqsH / 2 + 11, `800 ${h2Fs}px "Plus Jakarta Sans", sans-serif`, P.mqSub, 1.8, 'left');
+            // 2. Square Graph-Grid
+            ctx.strokeStyle = T.grid;
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            for (let gx = 0; gx <= W; gx += 56) { ctx.moveTo(gx, 0); ctx.lineTo(gx, H); }
+            for (let gy = 0; gy <= H; gy += 56) { ctx.moveTo(0, gy); ctx.lineTo(W, gy); }
+            ctx.stroke();
 
-            const socFs = is916 ? 13.5 : (is11 ? 11.5 : 12.5);
-            const socRX = mqsX + mqsW - 20;
-            ctx.font = `700 ${socFs}px "Space Grotesk", sans-serif`;
-            const mTrack5 = (t, tr) => ctx.measureText(t).width + tr * Math.max(0, t.length - 1);
-            const igW = mTrack5(E.igHandle, 0.3) + 23;
-            const ctaW = mTrack5(E.cta, 0.3) + 23;
-            ctx.strokeStyle = P.mqSub; ctx.lineWidth = 1.8;
-            rrPath(socRX - igW, mqsY + mqsH / 2 - 17, 13, 13, 3); ctx.stroke();
-            ctx.beginPath(); ctx.arc(socRX - igW + 6.5, mqsY + mqsH / 2 - 10.5, 2.8, 0, Math.PI * 2); ctx.stroke();
-            drawText5(E.igHandle, socRX, mqsY + mqsH / 2 - 10, `700 ${socFs}px "Space Grotesk", sans-serif`, P.mqSoc, 0.3, 'right');
-
-            ctx.beginPath(); ctx.arc(socRX - ctaW + 6.5, mqsY + mqsH / 2 + 10.5, 6, 0, Math.PI * 2); ctx.stroke();
-            ctx.beginPath(); ctx.moveTo(socRX - ctaW + 0.5, mqsY + mqsH / 2 + 10.5); ctx.lineTo(socRX - ctaW + 12.5, mqsY + mqsH / 2 + 10.5); ctx.stroke();
-            drawText5(E.cta, socRX, mqsY + mqsH / 2 + 11, `700 ${socFs}px "Space Grotesk", sans-serif`, P.mqSoc, 0.3, 'right');
-
-            // 4. CRT Cabinet Body + Bezel + Pixel Campus Landscape
-            const bodyY = cabY + G.mqH;
-            drawBox5(G.cabX, bodyY, G.cabW, G.scrH, {
-                fill: P.bodyFill, border: P.cabBorder, borderCol: P.cabBorderCol, rad: 0
-            });
-            const bzX = G.cabX + G.bezelPadX;
-            const bzY = bodyY + G.bezelPadY;
-            const bzW = G.cabW - G.bezelPadX * 2;
-            const bzH = G.scrH - G.bezelPadY * 2;
-            drawBox5(bzX, bzY, bzW, bzH, {
-                fill: P.bezelFill, border: P.cabBorder, borderCol: P.cabBorderCol, rad: P.bezelRad
-            });
-
-            const scPad = P.bezelRad > 10 ? 14 : 12;
-            const sX = bzX + scPad;
-            const sY = bzY + scPad;
-            const sW = bzW - scPad * 2;
-            const sH = bzH - scPad * 2;
-
-            ctx.save();
-            rrPath(sX, sY, sW, sH, P.bezelRad > 10 ? 8 : 0);
-            ctx.clip();
-            const skyG = ctx.createLinearGradient(sX, sY, sX, sY + sH);
-            P.skyStops.forEach(([p, c]) => skyG.addColorStop(p, c));
-            ctx.fillStyle = skyG; ctx.fillRect(sX, sY, sW, sH);
-
-            // Top Pixel Clouds relative to screen top (never clipped in 1:1 / 9:16)
-            const c1Y = sY + (is11 ? 68 : 88);
-            const c2Y = sY + (is11 ? 54 : 68);
-            const c1X = sX + Math.round(sW * 0.06);
-            const c2X = sX + Math.round(sW * 0.75);
-            [
-                [c1X, c1Y, 92, 22], [c1X + 18, c1Y - 20, 50, 20],
-                [c2X, c2Y, 106, 22], [c2X + 24, c2Y - 20, 54, 20]
-            ].forEach(([cx, cy, cw, ch]) => { ctx.fillStyle = P.cloudCol; ctx.fillRect(cx, cy, cw, ch); });
-
-            // Pixel Campus Horizon aligned bottom of screen (mapped from 692x678 SVG units)
-            ctx.save();
-            const artSc = sW / 692;
-            ctx.translate(sX, sY + sH - 678 * artSc);
-            ctx.scale(artSc, artSc);
-            [
-                [56, 458, 118, 148, P.bldMain], [70, 438, 90, 20, P.bldDark], [112, 408, 6, 30, P.winOn],
-                [74, 476, 16, 20, P.winOn], [106, 476, 16, 20, P.winOn], [138, 476, 16, 20, P.winOn],
-                [74, 514, 16, 20, P.winOn], [138, 514, 16, 20, P.winOn],
-                [492, 432, 136, 174, P.bldDark], [518, 406, 84, 26, P.bldMain],
-                [512, 452, 22, 16, P.winOn], [550, 452, 22, 16, P.winOn],
-                [550, 484, 22, 16, P.winOn], [588, 484, 22, 16, P.winOn],
-                [24, 554, 52, 52, P.grass], [38, 534, 28, 22, P.grass],
-                [626, 548, 56, 58, P.grass], [638, 528, 32, 22, P.grass],
-                [0, 604, 692, 18, P.grass], [0, 622, 692, 56, P.brick],
-                [24, 630, 68, 18, P.brickDark], [128, 630, 82, 18, P.brickDark],
-                [360, 630, 76, 18, P.brickDark], [540, 630, 90, 18, P.brickDark]
-            ].forEach(([rx, ry, rw, rh, rc]) => { ctx.fillStyle = rc; ctx.fillRect(rx, ry, rw, rh); });
-            ctx.restore();
-
-            // CRT scanlines + HUD
-            ctx.fillStyle = 'rgba(0,0,0,0.06)';
-            for (let sy = sY + 3; sy < sY + sH; sy += 4) ctx.fillRect(sX, sy, sW, 1);
-            drawText5(M.hudTxt, sX + 18, sY + 20, '800 13px "JetBrains Mono", monospace', P.hudLeft, 1.0, 'left');
-            drawText5('>_ KADERISASI.EXE', sX + sW - 18, sY + 20, '800 13px "JetBrains Mono", monospace', P.hudRight, 1.0, 'right');
-            ctx.restore();
-            if (P.cabBorder > 0 && P.bezelRad <= 8) {
-                ctx.lineWidth = 3; ctx.strokeStyle = P.cabBorderCol; ctx.strokeRect(sX, sY, sW, sH);
-            }
-
-            // 5. Pixel Orbital Burst Ring + Diagonal Kinetic Typography Popping Out of Screen
-            const orbCX = G.cabX + G.cabW / 2;
-            const orbCY = bodyY + G.scrH / 2 + 4;
-            const orbRX = G.cabW * 0.36;
-            const orbRY = G.scrH * (is916 ? 0.30 : 0.36);
-            buildL5OrbitalBlocks(orbCX, orbCY, orbRX, orbRY, P).forEach(([ox, oy, ow, oh, oc, oop]) => {
-                ctx.save(); ctx.globalAlpha = oop; ctx.fillStyle = oc; ctx.fillRect(ox, oy, ow, oh); ctx.restore();
-            });
-
-            // Hero Stack Math
-            const badgeFs = is916 ? 30 : (is11 ? 21 : 26);
-            const badgePy = is916 ? 10 : (is11 ? 6 : 8);
-            const badgePx = is916 ? 28 : (is11 ? 18 : 24);
-            const badgeH = badgeFs + badgePy * 2;
-            const lineStep = Math.round(M.heroFs * 0.86);
-            const heroH = lineStep * M.heroLines.length;
-            const stFs = is916 ? 29 : (is11 ? 21 : 26);
-            const stPy = is916 ? 9 : (is11 ? 6 : 7);
-            const stPx = is916 ? 24 : (is11 ? 16 : 20);
-            const stH = stFs + stPy * 2;
-            const totMidH = badgeH + 10 + heroH + 14 + stH;
-            const topStartY = bodyY + (G.scrH - totMidH) / 2;
-
-            // Top-Left Diagonal Badge (-5deg)
-            ctx.font = `700 ${badgeFs}px ${P.badgeFam}`;
-            const bTrack = 0.08 * badgeFs;
-            const bW = ctx.measureText(M.badgeTxt).width + bTrack * Math.max(0, M.badgeTxt.length - 1) + badgePx * 2;
-            const bCX = G.cabX + (is11 ? 62 : 72) + bW / 2;
-            ctx.save();
-            ctx.translate(bCX, topStartY + badgeH / 2);
-            ctx.rotate((-5 * Math.PI) / 180);
-            drawBox5(-bW / 2, -badgeH / 2, bW, badgeH, {
-                fill: P.badgeFill, border: P.badgeBorder, borderCol: P.badgeBorderCol, shd: P.badgeShadow, rad: P.badgeRad, soft: P.soft
-            });
-            drawText5(M.badgeTxt, 0, 1, `700 ${badgeFs}px ${P.badgeFam}`, P.badgeText, bTrack, 'center');
-            ctx.restore();
-
-            // Center Pop-out Hero (-2deg)
-            const drawL5HeroWord = (txt, cy) => {
+            // 3. Two 4-Petal Sparkle Blooms (top-left & bottom-right)
+            const drawBloom = (bx, by, size, rotDeg, col, op, blurPx) => {
                 ctx.save();
-                ctx.translate(orbCX, cy);
-                ctx.rotate((-2 * Math.PI) / 180);
-                ctx.font = `${P.heroW} ${M.heroFs}px ${P.heroFam}`;
-                ctx.textBaseline = 'middle'; ctx.textAlign = 'left'; ctx.lineJoin = 'round'; ctx.lineCap = 'round';
-                const tr = -0.02 * M.heroFs;
-                const chs = Array.from(txt);
-                const ws = chs.map((c) => ctx.measureText(c).width);
-                const tot = ws.reduce((a, b) => a + b, 0) + tr * Math.max(0, chs.length - 1);
-                let cx = -tot / 2;
-
-                if (P.heroShd) {
-                    let sx = cx + P.heroShd.off;
-                    chs.forEach((c, idx) => {
-                        if (P.heroStroke && P.heroSW > 0) { ctx.lineWidth = P.heroSW; ctx.strokeStyle = P.heroShd.col; ctx.strokeText(c, sx, P.heroShd.off); }
-                        ctx.fillStyle = P.heroShd.col; ctx.fillText(c, sx, P.heroShd.off); sx += ws[idx] + tr;
-                    });
-                }
-                if (P.heroEdge) {
-                    let ex = cx - 5;
-                    chs.forEach((c, idx) => {
-                        if (P.heroStroke) { ctx.lineWidth = P.heroSW; ctx.strokeStyle = P.heroEdge; ctx.strokeText(c, ex, 2); }
-                        ex += ws[idx] + tr;
-                    });
-                }
-                if (P.heroGlow) { ctx.shadowColor = P.heroGlow; ctx.shadowBlur = 24; ctx.shadowOffsetY = 16; }
-                if (P.heroStroke && P.heroSW > 0) {
-                    let tx = cx; ctx.lineWidth = P.heroSW; ctx.strokeStyle = P.heroStroke;
-                    chs.forEach((c, idx) => { ctx.strokeText(c, tx, 0); tx += ws[idx] + tr; });
-                }
-                ctx.fillStyle = P.heroFill;
-                chs.forEach((c, idx) => { ctx.fillText(c, cx, 0); cx += ws[idx] + tr; });
+                ctx.translate(bx + size / 2, by + size / 2);
+                ctx.rotate((rotDeg * Math.PI) / 180);
+                ctx.scale(size / 200, size / 200);
+                ctx.translate(-100, -100);
+                ctx.globalAlpha = op;
+                if (blurPx > 0) ctx.filter = `blur(${blurPx}px)`;
+                ctx.fillStyle = col;
+                ctx.beginPath();
+                ctx.moveTo(100, 12);
+                ctx.quadraticCurveTo(118, 82, 188, 100);
+                ctx.quadraticCurveTo(118, 118, 100, 188);
+                ctx.quadraticCurveTo(82, 118, 12, 100);
+                ctx.quadraticCurveTo(82, 82, 100, 12);
+                ctx.closePath();
+                ctx.fill();
                 ctx.restore();
             };
-            const heroY0 = topStartY + badgeH + 10;
-            M.heroLines.forEach((ln, i) => drawL5HeroWord(ln, heroY0 + lineStep * (i + 0.5)));
+            const bTL = is916 ? { x: -44, y: 130, s: 340 } : (is11 ? { x: -36, y: 72, s: 240 } : { x: -44, y: 90, s: 300 });
+            const bBR = is916 ? { x: W - 280 + 36, y: H - 84 - 280, s: 280 } : (is11 ? { x: W - 205 + 28, y: H - 30 - 205, s: 205 } : { x: W - 245 + 36, y: H - 44 - 245, s: 245 });
+            drawBloom(bTL.x, bTL.y, bTL.s, -14, T.bloomTL, T.bloomTLOp, T.bloomBlur);
+            drawBloom(bBR.x, bBR.y, bBR.s, 10, T.bloomBR, T.bloomBROp, T.bloomBlur);
 
-            // Bottom-Right Diagonal MENUJU + KADERISASI / STAY TUNED (-4deg)
-            const mnFs = is916 ? 22 : (is11 ? 17 : 20);
-            const mnPy = is916 ? 7 : (is11 ? 5 : 6);
-            const mnPx = is916 ? 18 : (is11 ? 12 : 16);
-            let mnW = 0;
-            if (!E.isCS && M.mnTxt) {
-                ctx.font = `800 ${mnFs}px "Space Grotesk", sans-serif`;
-                mnW = ctx.measureText(M.mnTxt).width + 0.14 * mnFs * Math.max(0, M.mnTxt.length - 1) + mnPx * 2;
-            }
-            ctx.font = `800 ${stFs}px ${P.stFam}`;
-            const stTrack = 0.06 * stFs;
-            const stW = ctx.measureText(M.stampTxt).width + stTrack * Math.max(0, M.stampTxt.length - 1) + stPx * 2;
-            const grpW = (mnW > 0 ? mnW + 10 : 0) + stW;
-            const grpRX = G.cabX + G.cabW - (is11 ? 54 : 64);
-            const grpCX = grpRX - grpW / 2;
-            const grpCY = heroY0 + heroH + 14 + stH / 2;
-            ctx.save();
-            ctx.translate(grpCX, grpCY);
-            ctx.rotate((-4 * Math.PI) / 180);
-            if (mnW > 0) {
-                const mnH = mnFs + mnPy * 2;
-                drawBox5(-grpW / 2, -mnH / 2, mnW, mnH, {
-                    fill: P.mnFill, border: P.mnBorder, borderCol: P.mnBorderCol, shd: P.mnShadow, rad: P.mnRad, soft: P.soft
+            // 4. Subtle Code Accents
+            if (showAccents) {
+                const topAccY = is916 ? 0.30 * H : (is11 ? 0.30 * H : 0.32 * H);
+                const topRightY = is916 ? 0.21 * H : (is11 ? 0.18 * H : 0.22 * H);
+                const botAccY = is916 ? 0.79 * H : (is11 ? 0.82 * H : 0.77 * H);
+                const accList = [
+                    ['>_', 72, topAccY + 18, -10, 36, T.codeA],
+                    ['</>', W - 82, topRightY + 18, 9, 32, T.codeB],
+                    ['{ }', 82, botAccY - 12, 8, 36, T.codeB],
+                    ['01;', W - 82, botAccY + 18, -10, 32, T.codeA]
+                ];
+                accList.forEach(([txt, ax, ay, rot, fs, col]) => {
+                    ctx.save();
+                    ctx.translate(ax, ay);
+                    ctx.rotate((rot * Math.PI) / 180);
+                    ctx.font = `800 ${fs}px "JetBrains Mono", monospace`;
+                    ctx.fillStyle = col;
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'middle';
+                    ctx.fillText(txt, 0, 0);
+                    ctx.restore();
                 });
-                drawText5(M.mnTxt, -grpW / 2 + mnW / 2, 1, `800 ${mnFs}px "Space Grotesk", sans-serif`, P.mnText, 0.14 * mnFs, 'center');
             }
-            const stX0 = -grpW / 2 + (mnW > 0 ? mnW + 10 : 0);
-            drawBox5(stX0, -stH / 2, stW, stH, {
-                fill: P.stFill, border: P.stBorder, borderCol: P.stBorderCol, shd: P.stShadow, rad: P.stRad, soft: P.soft
-            });
-            drawText5(M.stampTxt, stX0 + stW / 2, 1, `800 ${stFs}px ${P.stFam}`, P.stText, stTrack, 'center');
-            ctx.restore();
 
-            // 6. Control Deck Trapezoid + Joystick + Action Buttons + Front Apron
-            const deckY = bodyY + G.scrH;
-            const fl = 34;
+            // Helper: hairline rule with circle dot end-caps
+            const drawHairline = (x1, x2, y) => {
+                ctx.fillStyle = T.dot;
+                ctx.beginPath(); ctx.arc(x1 + 3, y, 3, 0, Math.PI * 2); ctx.fill();
+                ctx.beginPath(); ctx.arc(x2 - 3, y, 3, 0, Math.PI * 2); ctx.fill();
+                ctx.fillStyle = T.line;
+                ctx.fillRect(x1 + 6, y - 0.75, x2 - x1 - 12, 1.5);
+            };
+
+            // 5. Top Editorial Header + Hairline Rule
+            const sidePad = is916 ? 60 : (is11 ? 48 : 56);
+            const topPad = is916 ? 72 : (is11 ? 30 : 44);
+            const logoS = is916 ? 38 : (is11 ? 28 : 34);
+            const chipH = logoS + 10;
+            const chipW = logoS * 3 + 16 + 16;
+            const chipY = topPad;
+
+            if (T.chipShd > 0) {
+                ctx.fillStyle = '#000000';
+                rrPath(sidePad + T.chipShd, chipY + T.chipShd, chipW, chipH, T.chipRad);
+                ctx.fill();
+            }
+            ctx.fillStyle = '#FFFFFF';
+            rrPath(sidePad, chipY, chipW, chipH, T.chipRad);
+            ctx.fill();
+            if (T.chipBW > 0 && T.chipBorder) {
+                ctx.lineWidth = T.chipBW;
+                ctx.strokeStyle = T.chipBorder;
+                rrPath(sidePad, chipY, chipW, chipH, T.chipRad);
+                ctx.stroke();
+            }
+            const drawTrioLogo = (ix, iy, img) => {
+                if (!img) return;
+                const sc = Math.min(logoS / img.width, logoS / img.height);
+                ctx.drawImage(img, ix + (logoS - img.width * sc) / 2, iy + (logoS - img.height * sc) / 2, img.width * sc, img.height * sc);
+            };
+            drawTrioLogo(sidePad + 8, chipY + 5, himaImg);
+            drawTrioLogo(sidePad + 8 + logoS + 8, chipY + 5, kabinetImg);
+            drawTrioLogo(sidePad + 8 + (logoS + 8) * 2, chipY + 5, lpkiaImg);
+
+            const midHdrY = chipY + chipH / 2;
+            const sepX = sidePad + chipW + 14;
+            ctx.fillStyle = T.vsep;
+            ctx.fillRect(sepX, midHdrY - 17, 1.5, 34);
+
+            drawTextTrack('HIMA INFORMATIKA', sepX + 15.5, midHdrY - 9, '800 16px "Space Grotesk", sans-serif', '#FFFFFF', 0.64, 'left');
+            drawTextTrack('Kabinet Aksara Nirmana', sepX + 15.5, midHdrY + 10, '600 14px "Plus Jakarta Sans", sans-serif', T.orgSub, 0, 'left');
+
+            drawTextTrack('IDE LPKIA BANDUNG', W - sidePad, midHdrY - 9, '800 15.5px "Space Grotesk", sans-serif', '#FFFFFF', 0.9, 'right');
+            drawTextTrack('Prodi Teknik Informatika', W - sidePad, midHdrY + 10, '600 13.5px "Plus Jakarta Sans", sans-serif', T.rightSub, 0, 'right');
+
+            const topRuleY = chipY + chipH + 18;
+            drawHairline(sidePad, W - sidePad, topRuleY);
+
+            // 6. Bottom Social Row + Hairline Rule
+            const botPad = is916 ? 72 : (is11 ? 28 : 42);
+            const botRuleY = H - botPad - 4;
+            drawHairline(sidePad, W - sidePad, botRuleY);
+
+            const socY = botRuleY - 29;
+            ctx.font = '700 18px "Plus Jakarta Sans", sans-serif';
+            const igTxtW = ctx.measureText(E.igHandle).width + 0.36 * E.igHandle.length;
+            const ctaTxtW = ctx.measureText(E.cta).width + 0.36 * E.cta.length;
+            const item1W = 28 + 9 + igTxtW;
+            const item2W = 28 + 9 + ctaTxtW;
+            const socTotalW = item1W + 34 + item2W;
+            let sx = W / 2 - socTotalW / 2;
+
+            const drawSocBadge = (bx, by, kind) => {
+                rrPath(bx, by - 14, 28, 28, T.badgeRad);
+                ctx.fillStyle = T.badgeFill;
+                ctx.fill();
+                if (T.badgeBorder) { ctx.lineWidth = 2; ctx.strokeStyle = T.badgeBorder; ctx.stroke(); }
+                ctx.strokeStyle = T.badgeCol;
+                ctx.lineWidth = 2;
+                if (kind === 'ig') {
+                    rrPath(bx + 6, by - 8, 16, 16, 4); ctx.stroke();
+                    ctx.beginPath(); ctx.arc(bx + 14, by, 3.6, 0, Math.PI * 2); ctx.stroke();
+                    ctx.fillStyle = T.badgeCol; ctx.beginPath(); ctx.arc(bx + 18.4, by - 4.4, 1, 0, Math.PI * 2); ctx.fill();
+                } else {
+                    ctx.beginPath(); ctx.arc(bx + 14, by, 7.2, 0, Math.PI * 2); ctx.stroke();
+                    ctx.beginPath(); ctx.moveTo(bx + 6.8, by); ctx.lineTo(bx + 21.2, by); ctx.stroke();
+                    ctx.beginPath(); ctx.ellipse(bx + 14, by, 3.2, 7.2, 0, 0, Math.PI * 2); ctx.stroke();
+                }
+            };
+
+            drawSocBadge(sx, socY, 'ig');
+            drawTextTrack(E.igHandle, sx + 37, socY + 1, '700 18px "Plus Jakarta Sans", sans-serif', T.socCol, 0.36, 'left');
+            sx += item1W + 34;
+            drawSocBadge(sx, socY, 'web');
+            drawTextTrack(E.cta, sx + 37, socY + 1, '700 18px "Plus Jakarta Sans", sans-serif', T.socCol, 0.36, 'left');
+
+            // 7. Vertical Layout Math for Center Pinned Note + Outlined Title Block
+            const cardW = is916 ? 760 : (is11 ? 630 : 720);
+            const cardH = is916 ? 470 : (is11 ? 350 : 430);
+            const cardRad = is11 ? Math.min(T.cardRad, 28) : T.cardRad;
+            const backOffX = is11 ? -14 : -18;
+            const backOffY = is11 ? -10 : -12;
+            const infoGap = is916 ? 72 : (is11 ? 34 : 52);
+            const marginT = is916 ? 24 : (is11 ? 10 : 18);
+
+            const mnH = E.isCS ? 0 : (is11 ? 26 : 30);
+            const gap1 = E.isCS ? 0 : (is11 ? 6 : (is916 ? 14 : 10));
+            const titleH = M.titleFs * 1.02;
+            const mottoH = (is916 ? 26 : (is11 ? 20 : 24)) * 1.3;
+            const schedH = E.isCS ? 0 : (is916 ? 46 : (is11 ? 32 : 40));
+            const gap2 = is11 ? 8 : (is916 ? 16 : 12);
+            const schedGap = E.isCS ? 0 : (is11 ? 10 : (is916 ? 26 : 18));
+            const infoTotalH = mnH + gap1 + titleH + gap2 + mottoH + schedGap + schedH;
+            const totalStageH = marginT + cardH + infoGap + infoTotalH;
+
+            const midAreaTop = topRuleY + 8;
+            const midAreaBot = socY - 26;
+            const startY = midAreaTop + Math.max(0, (midAreaBot - midAreaTop - totalStageH) / 2);
+
+            const cardCX = W / 2;
+            const cardCY = startY + marginT + cardH / 2;
+
+            // Back Silhouette Card
             ctx.save();
-            ctx.beginPath();
-            ctx.moveTo(G.cabX, deckY); ctx.lineTo(G.cabX + G.cabW, deckY);
-            ctx.lineTo(G.cabX + G.cabW + fl, deckY + G.deckH); ctx.lineTo(G.cabX - fl, deckY + G.deckH);
-            ctx.closePath();
-            ctx.fillStyle = P.deckTop; ctx.fill();
-            if (P.deckLW > 0) { ctx.lineWidth = P.deckLW; ctx.strokeStyle = P.deckBorderCol; ctx.lineJoin = 'round'; ctx.stroke(); }
-
-            ctx.beginPath();
-            ctx.moveTo(G.cabX + 62, deckY + 18); ctx.lineTo(G.cabX + G.cabW - 62, deckY + 18);
-            ctx.lineTo(G.cabX + G.cabW - 36, deckY + G.deckH - 16); ctx.lineTo(G.cabX + 36, deckY + G.deckH - 16);
-            ctx.closePath();
-            ctx.fillStyle = P.deckPad; ctx.fill();
-            if (P.deckLW > 0) { ctx.lineWidth = Math.max(1.5, P.deckLW * 0.7); ctx.stroke(); }
-
-            // Joystick
-            const jx = G.cabX + G.cabW * 0.21;
-            const jy = deckY + G.deckH * 0.50;
-            ctx.fillStyle = 'rgba(0,0,0,0.42)'; ctx.beginPath(); ctx.ellipse(jx, jy + 14, 34, 12, 0, 0, Math.PI * 2); ctx.fill();
-            ctx.fillStyle = '#0F172A'; ctx.beginPath(); ctx.ellipse(jx, jy + 11, 28, 10, 0, 0, Math.PI * 2); ctx.fill();
-            ctx.fillStyle = '#CBD5E1'; rrPath(jx - 5, jy - 38, 10, 50, 4); ctx.fill();
-            ctx.fillStyle = P.joyBall; ctx.beginPath(); ctx.arc(jx, jy - 44, 23, 0, Math.PI * 2); ctx.fill();
-            if (P.deckLW >= 2) { ctx.lineWidth = 2.5; ctx.strokeStyle = P.deckBorderCol; ctx.stroke(); }
-            ctx.fillStyle = P.joyHi; ctx.beginPath(); ctx.arc(jx - 7, jy - 51, 6.5, 0, Math.PI * 2); ctx.fill();
-
-            // Start/Select Pills + 3 Action Dome Buttons
-            const scX = G.cabX + G.cabW * 0.42;
-            P.startCols.forEach((sc, idx) => {
-                const bx = scX + idx * 54;
-                ctx.fillStyle = '#0F172A'; ctx.beginPath(); ctx.ellipse(bx, jy + 8, 18, 8, 0, 0, Math.PI * 2); ctx.fill();
-                ctx.fillStyle = sc; ctx.beginPath(); ctx.ellipse(bx, jy + 5, 16, 7, 0, 0, Math.PI * 2); ctx.fill();
-            });
-            const ax = G.cabX + G.cabW * 0.72;
-            const ay = deckY + G.deckH * 0.56;
-            [[ax - 56, ay + 4, P.btnCols[0]], [ax, ay - 12, P.btnCols[1]], [ax + 56, ay + 4, P.btnCols[2]]].forEach(([bx, by, bc]) => {
-                ctx.fillStyle = '#FFFFFF'; ctx.beginPath(); ctx.ellipse(bx, by, 24, 11, 0, 0, Math.PI * 2); ctx.fill();
-                ctx.lineWidth = 2; ctx.strokeStyle = P.deckBorderCol; ctx.stroke();
-                ctx.fillStyle = bc; ctx.beginPath(); ctx.ellipse(bx, by - 4, 20, 9, 0, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
-            });
+            ctx.translate(cardCX + backOffX, cardCY + backOffY);
+            ctx.rotate((-4.5 * Math.PI) / 180);
+            ctx.fillStyle = T.backFill;
+            rrPath(-cardW / 2, -cardH / 2, cardW, cardH, cardRad);
+            ctx.fill();
+            if (T.backBW > 0 && T.backBorder) {
+                ctx.lineWidth = T.backBW;
+                ctx.strokeStyle = T.backBorder;
+                rrPath(-cardW / 2, -cardH / 2, cardW, cardH, cardRad);
+                ctx.stroke();
+            }
             ctx.restore();
 
-            // Apron Schedule Strip (hidden/switched on Coming Soon)
-            const apY = deckY + G.deckH;
-            drawBox5(G.cabX, apY, G.cabW, G.frontH, {
-                fill: P.apronFill, border: P.cabBorder, borderCol: P.cabBorderCol, rad: 0
-            });
-            const apTxt = E.isCS
-                ? 'PRESS START • KADERISASI HIMA IF'
-                : `${E.date} • ${E.time}   |   ${toTitleCase(E.loc)}`;
-            const apFs = is916 ? 18 : (is11 ? 15 : 16.5);
-            const apPy = is916 ? 10 : (is11 ? 6 : 8);
-            const apPx = is916 ? 26 : (is11 ? 18 : 22);
-            ctx.font = `700 ${apFs}px "Space Grotesk", sans-serif`;
-            const apW = ctx.measureText(apTxt).width + apPx * 2 + 12;
-            const apH = apFs + apPy * 2;
-            drawBox5(orbCX - apW / 2, apY + (G.frontH - apH) / 2, apW, apH, {
-                fill: P.pillFill, border: P.pillBorder, borderCol: P.pillBorderCol, shd: P.cabBorder > 3 ? 4 : 0, rad: P.pillRad
-            });
-            drawText5(apTxt, orbCX, apY + G.frontH / 2 + 1, `700 ${apFs}px "Space Grotesk", sans-serif`, P.pillText, 0.4, 'center');
+            // Main Tilted White Note Card (-4.5deg)
+            ctx.save();
+            ctx.translate(cardCX, cardCY);
+            ctx.rotate((-4.5 * Math.PI) / 180);
 
-            // 7. Bottom Coin Door / Kickplate
-            const kY = apY + G.frontH;
-            drawBox5(G.cabX, kY, G.cabW, G.kickH, {
-                fill: P.kickFill, border: P.cabBorder, borderCol: P.cabBorderCol, rad: is916 ? 20 : 14
+            if (T.cardShdOff > 0) {
+                ctx.fillStyle = '#000000';
+                rrPath(-cardW / 2 + T.cardShdOff, -cardH / 2 + T.cardShdOff, cardW, cardH, cardRad);
+                ctx.fill();
+            }
+            ctx.save();
+            if (T.cardSoft) {
+                ctx.shadowColor = T.cardSoft;
+                ctx.shadowBlur = 54;
+                ctx.shadowOffsetY = 28;
+            }
+            if (Array.isArray(T.cardFill)) {
+                const cg = ctx.createLinearGradient(-cardW / 2, -cardH / 2, cardW / 2, cardH / 2);
+                cg.addColorStop(0, T.cardFill[0]);
+                cg.addColorStop(1, T.cardFill[1]);
+                ctx.fillStyle = cg;
+            } else {
+                ctx.fillStyle = T.cardFill;
+            }
+            rrPath(-cardW / 2, -cardH / 2, cardW, cardH, cardRad);
+            ctx.fill();
+            ctx.restore();
+
+            if (T.cardBW > 0 && T.cardBorder) {
+                ctx.lineWidth = T.cardBW;
+                ctx.strokeStyle = T.cardBorder;
+                rrPath(-cardW / 2, -cardH / 2, cardW, cardH, cardRad);
+                ctx.stroke();
+            }
+
+            // Countdown Eyebrow Cue inside Card
+            const cdFs = is916 ? 17 : (is11 ? 14 : 16);
+            const cdY = -cardH / 2 + (is916 ? 30 : (is11 ? 18 : 26)) + cdFs * 0.72;
+            ctx.font = `800 ${cdFs}px "JetBrains Mono", monospace`;
+            const cdTrack = 0.22 * cdFs;
+            const cdTxtW = ctx.measureText(M.cdTxt).width + cdTrack * Math.max(0, M.cdTxt.length - 1);
+            const cdPadX = is11 ? 13 : 16;
+            const cdBoxW = cdTxtW + cdPadX * 2;
+            const cdBoxH = is11 ? 24 : 28;
+            ctx.fillStyle = T.cdFill;
+            rrPath(-cdBoxW / 2, cdY - cdBoxH / 2, cdBoxW, cdBoxH, T.cdRad);
+            ctx.fill();
+            if (T.cdBW > 0 && T.cdBorder) {
+                ctx.lineWidth = T.cdBW;
+                ctx.strokeStyle = T.cdBorder;
+                rrPath(-cdBoxW / 2, cdY - cdBoxH / 2, cdBoxW, cdBoxH, T.cdRad);
+                ctx.stroke();
+            }
+            drawTextTrack(M.cdTxt, 0, cdY + 1, `800 ${cdFs}px "JetBrains Mono", monospace`, T.cdText, cdTrack, 'center');
+
+            // Giant Card Hero (H-7 or stacked COMING / SOON)
+            const heroLineH = M.heroFs * 0.88;
+            const heroStartY = 8 - ((M.heroLines.length - 1) * heroLineH) / 2;
+            M.heroLines.forEach((line, idx) => {
+                drawTextTrack(
+                    line,
+                    0,
+                    heroStartY + idx * heroLineH,
+                    `900 ${M.heroFs}px "Outfit", "Archivo Black", sans-serif`,
+                    T.heroCol,
+                    -0.03 * M.heroFs,
+                    'center'
+                );
             });
-            drawBox5(orbCX - 46, kY + G.kickH / 2 - 14, 92, 28, {
-                fill: P.plateFill, border: P.cabBorder > 0 ? 2 : 0, borderCol: P.cabBorderCol, rad: 6
-            });
-            drawText5('25¢ IF', orbCX, kY + G.kickH / 2 + 1, '800 14px "JetBrains Mono", monospace', P.plateText, 1.5, 'center');
-            [orbCX - 92, orbCX + 70].forEach((sx) => {
-                drawBox5(sx, kY + G.kickH / 2 - 16, 22, 32, { fill: '#0B1F40', border: P.cabBorder > 0 ? 2 : 0, borderCol: P.cabBorderCol, rad: 4 });
-            });
+
+            // Needle puncture shadow + angled paper shadow on top-right corner
+            const pinX = cardW / 2 - 38;
+            const pinY = -cardH / 2 + 32;
+            ctx.save();
+            ctx.translate(pinX, pinY);
+            ctx.rotate((-34 * Math.PI) / 180);
+            const cShd = ctx.createLinearGradient(-56, 0, 0, 0);
+            cShd.addColorStop(0, 'rgba(15,23,42,0)');
+            cShd.addColorStop(1, 'rgba(15,23,42,0.16)');
+            ctx.fillStyle = cShd;
+            rrPath(-56, -7, 56, 14, 7);
+            ctx.fill();
+            ctx.restore();
+
+            const pMark = ctx.createRadialGradient(pinX, pinY, 0, pinX, pinY, 10);
+            pMark.addColorStop(0, 'rgba(15,23,42,0.34)');
+            pMark.addColorStop(0.55, 'rgba(15,23,42,0.10)');
+            pMark.addColorStop(1, 'rgba(15,23,42,0)');
+            ctx.fillStyle = pMark;
+            ctx.beginPath();
+            ctx.arc(pinX, pinY, 10, 0, Math.PI * 2);
+            ctx.fill();
+
+            // 3D Red Pushpin anchored at (pinX, pinY) leaning +38deg
+            const pinScale = is916 ? 1.16 : (is11 ? 0.94 : 1.10);
+            ctx.save();
+            ctx.translate(pinX, pinY);
+            ctx.scale(pinScale, pinScale);
+            ctx.rotate((38 * Math.PI) / 180);
+            ctx.shadowColor = 'rgba(0,0,0,0.28)';
+            ctx.shadowBlur = 10;
+            ctx.shadowOffsetX = -4;
+            ctx.shadowOffsetY = 8;
+
+            // Tapered Steel Needle
+            const gStl = ctx.createLinearGradient(-3, 0, 3, 0);
+            gStl.addColorStop(0, '#F1F5F9'); gStl.addColorStop(0.55, '#94A3B8'); gStl.addColorStop(1, '#475569');
+            ctx.fillStyle = gStl;
+            ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(-2.6, -30); ctx.lineTo(2.6, -30); ctx.closePath(); ctx.fill();
+
+            // Under-collar shadow
+            ctx.fillStyle = 'rgba(69,10,10,0.85)';
+            ctx.beginPath(); ctx.ellipse(0, -29, 28, 11, 0, 0, Math.PI * 2); ctx.fill();
+
+            // Flared Bottom Collar
+            const gDisc = ctx.createLinearGradient(-30, -46, 30, -22);
+            gDisc.addColorStop(0, '#FF7B7B'); gDisc.addColorStop(0.45, '#DC2626'); gDisc.addColorStop(1, '#7F1D1D');
+            ctx.fillStyle = gDisc; ctx.strokeStyle = '#991B1B'; ctx.lineWidth = 1.2;
+            ctx.beginPath(); ctx.ellipse(0, -34, 30, 12.5, 0, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+
+            ctx.shadowColor = 'transparent';
+            ctx.strokeStyle = 'rgba(255,255,255,0.55)'; ctx.lineWidth = 2; ctx.lineCap = 'round';
+            ctx.beginPath(); ctx.ellipse(0, -36, 22, 8, 0, Math.PI * 1.15, Math.PI * 1.80); ctx.stroke();
+
+            // Hourglass Neck
+            const gStm = ctx.createLinearGradient(-21, 0, 21, 0);
+            gStm.addColorStop(0, '#FCA5A5'); gStm.addColorStop(0.28, '#EF4444'); gStm.addColorStop(0.72, '#DC2626'); gStm.addColorStop(1, '#7F1D1D');
+            ctx.fillStyle = gStm; ctx.strokeStyle = '#991B1B'; ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(-19, -37);
+            ctx.bezierCurveTo(-12, -48, -11, -61, -21, -76);
+            ctx.lineTo(21, -76);
+            ctx.bezierCurveTo(11, -61, 12, -48, 19, -37);
+            ctx.closePath();
+            ctx.fill();
+            ctx.stroke();
+
+            ctx.strokeStyle = 'rgba(255,255,255,0.52)'; ctx.lineWidth = 3.2;
+            ctx.beginPath();
+            ctx.moveTo(-10, -42);
+            ctx.bezierCurveTo(-7, -52, -7, -61, -12, -72);
+            ctx.stroke();
+
+            // Top Glossy Crown
+            ctx.fillStyle = '#991B1B';
+            ctx.beginPath(); ctx.ellipse(0, -74, 25, 11, 0, 0, Math.PI * 2); ctx.fill();
+            const gCap = ctx.createLinearGradient(-25, -88, 25, -68);
+            gCap.addColorStop(0, '#FCA5A5'); gCap.addColorStop(0.42, '#EF4444'); gCap.addColorStop(1, '#B91C1C');
+            ctx.fillStyle = gCap; ctx.strokeStyle = '#FCA5A5'; ctx.lineWidth = 1;
+            ctx.beginPath(); ctx.ellipse(0, -78, 25, 10.5, 0, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+            ctx.strokeStyle = 'rgba(255,255,255,0.85)'; ctx.lineWidth = 2.4;
+            ctx.beginPath(); ctx.ellipse(0, -78, 18, 6.8, 0, Math.PI * 1.12, Math.PI * 1.82); ctx.stroke();
+
+            ctx.restore();
+            ctx.restore();
+
+            // 8. Info Stack below card (MENUJU badge, Outlined Title, Motto, Schedule)
+            let curY = startY + marginT + cardH + infoGap;
+            if (!E.isCS && mnH > 0) {
+                const mFs = is11 ? 14 : 17;
+                const mFont = `800 ${mFs}px "Space Grotesk", sans-serif`;
+                const mTrack = 0.22 * mFs;
+                ctx.font = mFont;
+                const mTxtW = ctx.measureText(M.menujuTxt).width + mTrack * Math.max(0, M.menujuTxt.length - 1);
+                const mPadX = is11 ? 14 : 18;
+                const mW = mTxtW + mPadX * 2;
+                const mX = W / 2 - mW / 2;
+                if (T.mnShdOff > 0) {
+                    ctx.fillStyle = '#000000';
+                    rrPath(mX + T.mnShdOff, curY + T.mnShdOff, mW, mnH, T.mnRad);
+                    ctx.fill();
+                }
+                ctx.fillStyle = T.mnFill;
+                rrPath(mX, curY, mW, mnH, T.mnRad);
+                ctx.fill();
+                if (T.mnBW > 0 && T.mnBorder) {
+                    ctx.lineWidth = T.mnBW;
+                    ctx.strokeStyle = T.mnBorder;
+                    rrPath(mX, curY, mW, mnH, T.mnRad);
+                    ctx.stroke();
+                }
+                drawTextTrack(M.menujuTxt, W / 2, curY + mnH / 2 + 1, mFont, T.mnText, mTrack, 'center');
+                curY += mnH + gap1;
+            }
+
+            // Outlined Event Title (paint-order: stroke fill)
+            const tCenterY = curY + titleH / 2;
+            const tFont = `400 ${M.titleFs}px "Archivo Black", "Space Grotesk", sans-serif`;
+            const tTrack = 0.02 * M.titleFs;
+            ctx.save();
+            ctx.font = tFont;
+            ctx.textBaseline = 'middle';
+            ctx.lineJoin = 'round';
+            ctx.lineCap = 'round';
+            const tChars = Array.from(E.title);
+            const tWidths = tChars.map((c) => ctx.measureText(c).width);
+            const tTot = tWidths.reduce((a, b) => a + b, 0) + tTrack * Math.max(0, tChars.length - 1);
+            const paintTitle = (ox, oy, strokeCol, fillCol) => {
+                let tx = W / 2 - tTot / 2 + ox;
+                tChars.forEach((ch, idx) => {
+                    if (strokeCol) { ctx.strokeStyle = strokeCol; ctx.lineWidth = T.titleSW; ctx.strokeText(ch, tx, tCenterY + oy); }
+                    if (fillCol) { ctx.fillStyle = fillCol; ctx.fillText(ch, tx, tCenterY + oy); }
+                    tx += tWidths[idx] + tTrack;
+                });
+            };
+            if (T.titleShdOff > 0 && T.titleShdCol) {
+                paintTitle(T.titleShdOff, T.titleShdOff, T.titleShdCol, T.titleShdCol);
+            }
+            if (T.titleSoft) {
+                ctx.shadowColor = T.titleSoft.col;
+                ctx.shadowBlur = T.titleSoft.blur;
+                ctx.shadowOffsetY = T.titleSoft.sy;
+            }
+            paintTitle(0, 0, T.titleStroke, null);
+            ctx.shadowColor = 'transparent';
+            paintTitle(0, 0, null, T.titleFill);
+            ctx.restore();
+
+            curY += titleH + gap2;
+
+            // Motto
+            const mottoFs = is916 ? 26 : (is11 ? 20 : 24);
+            drawTextTrack(
+                '“Dari Ilmu, Menjadi Karya.”',
+                W / 2,
+                curY + mottoH / 2,
+                `italic 600 ${mottoFs}px "Plus Jakarta Sans", sans-serif`,
+                T.mottoCol,
+                0.01 * mottoFs,
+                'center'
+            );
+            curY += mottoH;
+
+            // Schedule + Location pill (hidden in Coming Soon)
+            if (!E.isCS && schedH > 0) {
+                curY += schedGap;
+                const scFs = is916 ? 20 : (is11 ? 15.5 : 18);
+                const scFont = `700 ${scFs}px "Space Grotesk", sans-serif`;
+                const scTrack = 0.04 * scFs;
+                ctx.font = scFont;
+                const scTxtW = ctx.measureText(M.schedLine).width + scTrack * Math.max(0, M.schedLine.length - 1);
+                const scPadX = is11 ? 16 : (is916 ? 26 : 22);
+                const pinIconW = 16 + 10;
+                const scW = scPadX * 2 + pinIconW + scTxtW;
+                const scX = W / 2 - scW / 2;
+
+                if (T.schedShdOff > 0) {
+                    ctx.fillStyle = '#000000';
+                    rrPath(scX + T.schedShdOff, curY + T.schedShdOff, scW, schedH, T.schedRad);
+                    ctx.fill();
+                }
+                ctx.fillStyle = T.schedFill;
+                rrPath(scX, curY, scW, schedH, T.schedRad);
+                ctx.fill();
+                if (T.schedBW > 0 && T.schedBorder) {
+                    ctx.lineWidth = T.schedBW;
+                    ctx.strokeStyle = T.schedBorder;
+                    rrPath(scX, curY, scW, schedH, T.schedRad);
+                    ctx.stroke();
+                }
+                const scMidY = curY + schedH / 2;
+                const mpX = scX + scPadX + 8;
+                ctx.save();
+                ctx.fillStyle = T.schedPin;
+                ctx.translate(mpX, scMidY - 1);
+                ctx.beginPath(); ctx.arc(0, -2.5, 5.5, Math.PI, 0, false); ctx.quadraticCurveTo(5.5, 2, 0, 8); ctx.quadraticCurveTo(-5.5, 2, -5.5, -2.5); ctx.closePath(); ctx.fill();
+                ctx.fillStyle = T.schedFill;
+                ctx.beginPath(); ctx.arc(0, -2.5, 2, 0, Math.PI * 2); ctx.fill();
+                ctx.restore();
+
+                drawTextTrack(M.schedLine, scX + scPadX + pinIconW, scMidY + 1, scFont, T.schedText, scTrack, 'left');
+            }
 
             return canvas;
         }
