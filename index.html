@@ -479,7 +479,22 @@
         .layout-3.style-modern .l3-bottom-dock { background: #FFFFFF; color: #16488E; border: none; box-shadow: 0 18px 36px rgba(6, 20, 44, 0.36); border-radius: 26px; }
         .layout-3.style-modern .l3-dock-icon { color: #2A82C6; }
 
-        /* ================= LAYOUT 4: IG FEED STACK (CIRI KHAS HIMA IF — 4 TEMA) ================= */
+        /* ================= LAYOUT 4: IG FEED STACK — RETRO WINDOW MEDIA (CIRI KHAS HIMA IF) ================= */
+        .poster-canvas.mode-coming-soon .layout-4-root .l4-countdown-only { display: none !important; }
+
+        .l4-bg-wall { position: absolute; inset: -40px; display: flex; flex-direction: column; justify-content: center; overflow: hidden; pointer-events: none; user-select: none; z-index: 0; }
+        .l4-bg-row { font-family: 'Space Grotesk', 'Archivo Black', sans-serif; font-weight: 800; font-size: 170px; line-height: 0.80; letter-spacing: -0.04em; white-space: nowrap; text-transform: uppercase; }
+        .ratio-9-16 .l4-bg-row { font-size: 190px; }
+        .ratio-1-1 .l4-bg-row { font-size: 150px; }
+
+        .l4-star-tr { position: absolute; top: 13%; right: -46px; width: 300px; height: 300px; z-index: 2; }
+        .l4-star-bl { position: absolute; bottom: 70px; left: -60px; width: 320px; height: 320px; z-index: 2; }
+        .ratio-9-16 .l4-star-tr { top: 11%; width: 330px; height: 330px; }
+        .ratio-9-16 .l4-star-bl { bottom: 90px; width: 350px; height: 350px; }
+        .ratio-1-1 .l4-star-tr { top: 12%; right: -40px; width: 240px; height: 240px; }
+        .ratio-1-1 .l4-star-bl { bottom: 56px; left: -50px; width: 260px; height: 260px; }
+        .l4-code { z-index: 3; }
+
         .l4-top-wrap { padding: 38px 40px 0 40px; }
         .ratio-9-16 .l4-top-wrap { padding: 66px 40px 0 40px; }
         .ratio-1-1  .l4-top-wrap { padding: 24px 36px 0 36px; }
@@ -491,134 +506,175 @@
         .ratio-1-1 .l4-top-logo { width: 34px; height: 34px; }
         .ratio-9-16 .l4-top-logo { width: 52px; height: 52px; }
 
-        .l4-stack-stage { position: relative; width: 670px; height: 690px; }
-        .ratio-9-16 .l4-stack-stage { width: 740px; height: 790px; }
-        .ratio-1-1  .l4-stack-stage { width: 560px; height: 556px; }
+        .l4-stack-stage { position: relative; width: 700px; height: 740px; }
+        .ratio-9-16 .l4-stack-stage { width: 760px; height: 820px; }
+        .ratio-1-1  .l4-stack-stage { width: 640px; height: 640px; }
 
-        .l4-card-back {
-            position: absolute;
-            inset: 0;
-            transform: translate(16px, -6px) rotate(4.2deg);
-        }
-        .l4-card-front {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            transform: rotate(-2.2deg);
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-        }
-        .l4-card-hdr { padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; flex-shrink: 0; }
-        .ratio-1-1 .l4-card-hdr { padding: 10px 16px; }
-        .l4-media-box { margin: 0 20px; flex: 1; position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .l4-card-back { position: absolute; inset: 0; transform: translate(16px, -6px) rotate(4.2deg); }
+        .l4-card-front { position: relative; width: 100%; height: 100%; transform: rotate(-2.2deg); display: flex; flex-direction: column; overflow: hidden; }
+
+        .l4-card-hdr { position: relative; height: 76px; flex-shrink: 0; }
+        .ratio-9-16 .l4-card-hdr { height: 82px; }
+        .ratio-1-1 .l4-card-hdr { height: 64px; }
+        .l4-avatar { position: absolute; left: 20px; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; border-radius: 999px; background: #FFFFFF; border: 1.5px solid #CBD5E1; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 4px; }
+        .ratio-1-1 .l4-avatar { width: 34px; height: 34px; }
+        .l4-handle-row { position: absolute; left: 72px; top: 50%; transform: translateY(-50%); display: flex; align-items: center; gap: 8px; }
+        .ratio-1-1 .l4-handle-row { left: 66px; }
+        .l4-follow-btn { position: absolute; right: 64px; top: 50%; transform: translateY(-50%); width: 86px; height: 32px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 15px; letter-spacing: 0.02em; }
+        .l4-more { position: absolute; right: 24px; top: 50%; transform: translateY(-50%); font-weight: 800; font-size: 18px; letter-spacing: 1px; line-height: 1; }
+        .l4-cursor { position: absolute; right: 58px; top: 46px; z-index: 40; pointer-events: none; filter: drop-shadow(2px 4px 3px rgba(0,0,0,0.30)); }
+        .ratio-9-16 .l4-cursor { top: 49px; }
+        .ratio-1-1 .l4-cursor { top: 40px; }
+
+        .l4-media-box { position: relative; margin: 0 20px; flex: 1; overflow: hidden; display: flex; flex-direction: column; }
         .ratio-1-1 .l4-media-box { margin: 0 16px; }
-        .l4-card-ftr { padding: 14px 22px 18px 22px; }
-        .ratio-1-1 .l4-card-ftr { padding: 10px 18px 14px 18px; }
+        .l4-media-grid { position: absolute; inset: 0; pointer-events: none; background-size: 26px 26px; }
+        .l4-win-bar { position: relative; z-index: 2; height: 36px; flex-shrink: 0; display: flex; align-items: center; justify-content: flex-start; gap: 14px; padding: 0 14px; box-sizing: border-box; }
+        .l4-win-dots { display: flex; gap: 8px; }
+        .l4-win-dot { width: 14px; height: 14px; display: block; box-sizing: border-box; }
+        .l4-win-file { font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 14px; letter-spacing: 0.04em; opacity: 0.92; }
+        .l4-media-code { position: absolute; bottom: 12px; z-index: 2; font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 22px; line-height: 1; }
+        .l4-media-body { position: relative; z-index: 2; flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0 12px 12px; }
 
-        .l4-props-cluster {
-            position: absolute;
-            right: -52px;
-            bottom: 84px;
-            width: 210px;
-            height: 210px;
-            transform: rotate(-10deg);
-            pointer-events: none;
-            z-index: 30;
-        }
+        .l4-badge { box-sizing: border-box; height: 42px; display: inline-flex; align-items: center; padding: 0 26px; font-family: 'Silkscreen', monospace; font-weight: 700; font-size: 26px; letter-spacing: 0.10em; line-height: 1; transform: rotate(-2deg); }
+        .ratio-9-16 .l4-badge { height: 47px; padding: 0 28px; font-size: 29px; }
+        .ratio-1-1 .l4-badge { height: 36px; padding: 0 22px; font-size: 22px; }
+        .l4-hero-txt { font-family: 'Archivo Black', 'Space Grotesk', sans-serif; font-weight: 400; line-height: 0.9; letter-spacing: -0.01em; text-transform: uppercase; display: block; margin-top: 14px; white-space: pre-line; }
+        .l4-script-txt { line-height: 1; display: block; margin-top: -60px; margin-bottom: -12px; transform: rotate(-4deg); position: relative; z-index: 3; }
+        .l4-stamp { box-sizing: border-box; height: 54px; display: inline-flex; align-items: center; gap: 12px; padding: 0 28px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 34px; letter-spacing: 0.07em; line-height: 1; transform: rotate(1.5deg); text-transform: uppercase; color: #FFFFFF; }
+        .l4-stamp svg { width: 0.9em; height: 0.9em; flex-shrink: 0; }
+        .ratio-9-16 .l4-stamp { height: 60px; padding: 0 30px; font-size: 38px; }
+        .ratio-1-1 .l4-stamp { height: 45px; padding: 0 24px; font-size: 29px; }
+        .poster-canvas.mode-coming-soon .layout-4-root .l4-stamp { margin-top: 10px; }
+
+        .l4-card-ftr { padding: 6px 24px 0 24px; height: 140px; flex-shrink: 0; box-sizing: border-box; }
+        .ratio-9-16 .l4-card-ftr { height: 150px; }
+        .ratio-1-1 .l4-card-ftr { height: 124px; }
+        .l4-act-row { position: relative; height: 40px; display: flex; align-items: center; gap: 14px; }
+        .l4-dots { position: absolute; left: 50%; top: 50%; transform: translateY(-50%); display: flex; align-items: center; gap: 6px; }
+        .l4-likes { line-height: 24px; font-size: 16px; font-weight: 800; }
+        .l4-cap { line-height: 26px; font-size: 16px; white-space: nowrap; overflow: hidden; }
+        .l4-loc { line-height: 24px; font-size: 15.5px; font-weight: 700; display: flex; align-items: center; gap: 6px; }
+
+        .l4-props-cluster { position: absolute; right: -52px; bottom: 84px; width: 210px; height: 210px; transform: rotate(-10deg); pointer-events: none; z-index: 30; }
         .ratio-9-16 .l4-props-cluster { right: -56px; bottom: 104px; width: 230px; height: 230px; }
-        .ratio-1-1  .l4-props-cluster { right: -42px; bottom: 62px; width: 168px; height: 168px; }
+        .ratio-1-1  .l4-props-cluster { right: -46px; bottom: 70px; width: 180px; height: 180px; }
 
         .l4-wave-wrap { position: relative; z-index: 15; width: 100%; }
         .l4-bottom-bar { padding: 14px 36px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
         .ratio-1-1 .l4-bottom-bar { padding: 11px 28px; }
         .ratio-9-16 .l4-bottom-bar { padding: 18px 42px; }
 
-        /* Layout 4 Theme 1: Neubrutalism */
+        /* Layout 4 Theme 1: Neubrutalism (Putih Grid + Merah Outline Hitam ala Layout 1) */
         .poster-canvas.layout-4.style-neubrutalism {
             background-color: #16488E;
             background-image: radial-gradient(rgba(255, 255, 255, 0.16) 2px, transparent 2px);
             background-size: 24px 24px;
             --l4-mega-hi: #FF6B6B; --l4-mega-mid: #CA2C2A; --l4-mega-dark: #991B1B; --l4-mega-deep: #3B0909; --l4-mega-edge: #000000; --l4-mega-ew: 2.4; --l4-wave-col: #FCD34D;
         }
+        .layout-4.style-neubrutalism .l4-bg-row { color: rgba(255, 255, 255, 0.08); }
+        .layout-4.style-neubrutalism .l4-star-poly { fill: #CA2C2A; stroke: #000000; stroke-width: 8; stroke-linejoin: round; }
+        .layout-4.style-neubrutalism .l4-ca { color: rgba(255, 255, 255, 0.34); }
+        .layout-4.style-neubrutalism .l4-cb { color: rgba(252, 211, 77, 0.72); }
         .layout-4.style-neubrutalism .l4-top-pill { background: #FFFFFF; color: #12305A; border: 3.5px solid #000000; box-shadow: 6px 6px 0 #000000; border-radius: 14px; }
         .layout-4.style-neubrutalism .l4-top-sub { color: #CA2C2A; }
         .layout-4.style-neubrutalism .l4-card-back { background: #DBEAFE; border: 4px solid #000000; box-shadow: 9px 9px 0 #000000; border-radius: 16px; }
         .layout-4.style-neubrutalism .l4-card-front { background: #FFFFFF; color: #0F172A; border: 4px solid #000000; box-shadow: 12px 12px 0 #000000; border-radius: 16px; }
-        .layout-4.style-neubrutalism .l4-follow-btn { background: #16488E; color: #FFFFFF; border: 2px solid #000000; border-radius: 8px; }
-        .layout-4.style-neubrutalism .l4-media-box { background: #16488E; border: 3.5px solid #000000; border-radius: 10px; }
-        .layout-4.style-neubrutalism .l4-sun-ray { fill: rgba(255, 255, 255, 0.12); }
-        .layout-4.style-neubrutalism .l4-sun-core { fill: #12305A; stroke: #FCD34D; stroke-width: 5; }
-        .layout-4.style-neubrutalism .l4-hero-txt { font-family: 'Archivo Black', sans-serif; color: #FCD34D; paint-order: stroke fill; -webkit-text-stroke: 8px #000000; text-shadow: 6px 6px 0 #000000; }
-        .layout-4.style-neubrutalism .l4-sub-pill { background: #CA2C2A; color: #FFFFFF; border: 3px solid #000000; box-shadow: 4px 4px 0 #000000; border-radius: 6px; font-family: 'Space Grotesk', sans-serif; }
+        .layout-4.style-neubrutalism .l4-follow-btn { background: #16488E; color: #FFFFFF; border: 2px solid #000000; border-radius: 8px; box-sizing: border-box; }
+        .layout-4.style-neubrutalism .l4-media-box { background: #F4F8FF; border: 3.5px solid #000000; border-radius: 8px; }
+        .layout-4.style-neubrutalism .l4-media-grid { background-image: linear-gradient(rgba(26,70,124,0.10) 1px, transparent 1px), linear-gradient(90deg, rgba(26,70,124,0.10) 1px, transparent 1px); }
+        .layout-4.style-neubrutalism .l4-win-bar { background: #1A467C; color: #FFFFFF; border-bottom: 3.5px solid #000000; }
+        .layout-4.style-neubrutalism .l4-win-dot { border: 2px solid #000000; border-radius: 0; }
+        .layout-4.style-neubrutalism .l4-wd-1 { background: #CA2C2A; } .layout-4.style-neubrutalism .l4-wd-2 { background: #FCD34D; } .layout-4.style-neubrutalism .l4-wd-3 { background: #FFFFFF; }
+        .layout-4.style-neubrutalism .l4-badge { background: #1A467C; color: #FFFFFF; border: 4px solid #000000; box-shadow: 6px 6px 0 #000000; border-radius: 0; }
+        .layout-4.style-neubrutalism .l4-hero-txt { color: #CA2C2A; -webkit-text-stroke: 16px #000000; paint-order: stroke fill; text-shadow: 8px 8px 0 #000000; }
+        .layout-4.style-neubrutalism .l4-script-txt { color: #F59E0B; -webkit-text-stroke: 5px #000000; paint-order: stroke fill; text-shadow: 3px 3px 0 #000000; }
+        .layout-4.style-neubrutalism .l4-stamp { background: #CA2C2A; border: 4px solid #000000; box-shadow: 7px 7px 0 #000000; border-radius: 0; }
         .layout-4.style-neubrutalism .l4-dot-active { background: #CA2C2A; }
-        .layout-4.style-neubrutalism .l4-chip { background: #FFFFFF; color: #16488E; border: 3px solid #000000; box-shadow: 4px 4px 0 #000000; border-radius: 10px; }
-        .layout-4.style-neubrutalism .l4-wave-fill { fill: #FFFFFF; opacity: 0.16; }
         .layout-4.style-neubrutalism .l4-bottom-bar { background: #0B1F40; color: #FFFFFF; border-top: 3.5px solid #000000; }
         .layout-4.style-neubrutalism .l4-bar-icon { color: #FCD34D; }
 
-        /* Layout 4 Theme 2: Glassmorphism */
+        /* Layout 4 Theme 2: Glassmorphism (Kaca Frosted + Outfit Glossy) */
         .poster-canvas.layout-4.style-glass {
             background: linear-gradient(150deg, #0D356F 0%, #1B5AA6 48%, #2E80D1 100%);
             --l4-mega-hi: #FF8585; --l4-mega-mid: #EF4444; --l4-mega-dark: #B91C1C; --l4-mega-deep: #450A0A; --l4-mega-edge: rgba(255,255,255,0.88); --l4-mega-ew: 1.4; --l4-wave-col: #FDE047;
         }
+        .layout-4.style-glass .l4-bg-row { color: rgba(255, 255, 255, 0.08); }
+        .layout-4.style-glass .l4-star-poly { fill: rgba(96, 165, 250, 0.28); stroke: rgba(255, 255, 255, 0.90); stroke-width: 5; stroke-linejoin: round; }
+        .layout-4.style-glass .l4-ca { color: rgba(219, 234, 254, 0.38); }
+        .layout-4.style-glass .l4-cb { color: rgba(253, 224, 71, 0.50); }
         .layout-4.style-glass .l4-top-pill { background: rgba(255, 255, 255, 0.88); color: #12305A; border: 1.5px solid rgba(255,255,255,0.95); box-shadow: 0 14px 32px rgba(8, 25, 58, 0.28); border-radius: 999px; font-family: 'Outfit', sans-serif; }
         .layout-4.style-glass .l4-top-sub { color: #DC2626; }
-        .layout-4.style-glass .l4-card-back { background: rgba(226, 240, 255, 0.45); border: 1.5px solid rgba(255,255,255,0.7); box-shadow: 0 24px 48px rgba(8, 25, 58, 0.26); border-radius: 26px; }
-        .layout-4.style-glass .l4-card-front { background: rgba(255, 255, 255, 0.88); color: #0F294A; border: 2px solid rgba(255,255,255,0.96); box-shadow: 0 28px 56px rgba(8, 25, 58, 0.36); border-radius: 26px; font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif; }
-        .layout-4.style-glass .l4-follow-btn { background: linear-gradient(135deg, #3B82F6, #1D4ED8); color: #FFFFFF; border-radius: 999px; }
-        .layout-4.style-glass .l4-media-box { background: linear-gradient(145deg, #1E40AF 0%, #2563EB 55%, #3B82F6 100%); border: 1.5px solid rgba(255,255,255,0.65); border-radius: 18px; }
-        .layout-4.style-glass .l4-sun-ray { fill: rgba(255, 255, 255, 0.14); }
-        .layout-4.style-glass .l4-sun-core { fill: rgba(15, 41, 74, 0.42); stroke: rgba(255, 255, 255, 0.55); stroke-width: 2.5; }
-        .layout-4.style-glass .l4-hero-txt { font-family: 'Outfit', sans-serif; font-weight: 900; background: linear-gradient(180deg, #FFFFFF 0%, #DBEAFE 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 8px 18px rgba(15, 23, 42, 0.38)); }
-        .layout-4.style-glass .l4-sub-pill { background: linear-gradient(180deg, #F87171 0%, #DC2626 100%); color: #FFFFFF; border: 1.5px solid rgba(255,255,255,0.85); box-shadow: 0 10px 24px rgba(220, 38, 38, 0.32); border-radius: 999px; font-family: 'Outfit', sans-serif; }
+        .layout-4.style-glass .l4-card-back { background: rgba(226, 240, 255, 0.45); border: 1.5px solid rgba(255,255,255,0.70); box-shadow: 0 24px 48px rgba(8, 25, 58, 0.26); border-radius: 26px; }
+        .layout-4.style-glass .l4-card-front { background: rgba(255, 255, 255, 0.88); color: #0F294A; border: 2px solid rgba(255,255,255,0.96); box-shadow: 0 28px 56px rgba(8, 25, 58, 0.36); border-radius: 26px; }
+        .layout-4.style-glass .l4-follow-btn { background: #2563EB; color: #FFFFFF; border-radius: 999px; }
+        .layout-4.style-glass .l4-media-box { background: linear-gradient(145deg, rgba(255,255,255,0.62) 0%, rgba(191,223,255,0.46) 55%, rgba(235,245,255,0.60) 100%); border: 1.5px solid rgba(255,255,255,0.95); border-radius: 18px; }
+        .layout-4.style-glass .l4-media-grid { background-image: linear-gradient(rgba(37,99,235,0.10) 1px, transparent 1px), linear-gradient(90deg, rgba(37,99,235,0.10) 1px, transparent 1px); }
+        .layout-4.style-glass .l4-win-bar { background: rgba(255,255,255,0.58); color: #1E40AF; border-bottom: 1.5px solid rgba(255,255,255,0.90); }
+        .layout-4.style-glass .l4-win-dot { border-radius: 999px; }
+        .layout-4.style-glass .l4-wd-1 { background: #EF4444; } .layout-4.style-glass .l4-wd-2 { background: #F59E0B; } .layout-4.style-glass .l4-wd-3 { background: #3B82F6; }
+        .layout-4.style-glass .l4-badge { background: linear-gradient(180deg, #60A5FA 0%, #2563EB 100%); color: #FFFFFF; border: 1.5px solid rgba(255,255,255,0.90); box-shadow: 0 12px 26px rgba(37, 99, 235, 0.32); border-radius: 12px; font-family: 'Space Grotesk', sans-serif; letter-spacing: 0.16em; }
+        .layout-4.style-glass .l4-hero-txt { font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif; font-weight: 900; background: linear-gradient(180deg, #FF8A8A 0%, #F84B4B 34%, #DC2626 70%, #991B1B 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; filter: drop-shadow(0 8px 16px rgba(30, 64, 175, 0.28)); }
+        .layout-4.style-glass .l4-script-txt { color: #F59E0B; text-shadow: 0 6px 14px rgba(245, 158, 11, 0.32); }
+        .layout-4.style-glass .l4-stamp { background: linear-gradient(180deg, #F87171 0%, #DC2626 100%); border: 1.5px solid rgba(255,255,255,0.85); box-shadow: 0 12px 24px rgba(220, 38, 38, 0.30); border-radius: 12px; font-family: 'Outfit', sans-serif; }
         .layout-4.style-glass .l4-dot-active { background: #DC2626; }
-        .layout-4.style-glass .l4-chip { background: rgba(255, 255, 255, 0.80); color: #1E40AF; border: 1.5px solid rgba(255,255,255,0.92); box-shadow: 0 12px 26px rgba(8, 25, 58, 0.24); border-radius: 14px; font-family: 'JetBrains Mono', monospace; }
-        .layout-4.style-glass .l4-wave-fill { fill: #FFFFFF; opacity: 0.18; }
-        .layout-4.style-glass .l4-bottom-bar { background: rgba(15, 41, 74, 0.84); color: #FFFFFF; border-top: 1.5px solid rgba(255,255,255,0.35); }
+        .layout-4.style-glass .l4-bottom-bar { background: rgba(15, 41, 74, 0.88); color: #FFFFFF; border-top: 1.5px solid rgba(255,255,255,0.35); }
         .layout-4.style-glass .l4-bar-icon { color: #93C5FD; }
 
-        /* Layout 4 Theme 3: Dark Code */
+        /* Layout 4 Theme 3: Dark Code (Terminal Navy + Cyan) */
         .poster-canvas.layout-4.style-dark-code {
             background-color: #0B192E;
             background-image: radial-gradient(rgba(56, 189, 248, 0.24) 2px, transparent 2px);
             background-size: 24px 24px;
             --l4-mega-hi: #7DD3FC; --l4-mega-mid: #0EA5E9; --l4-mega-dark: #0369A1; --l4-mega-deep: #061326; --l4-mega-edge: #38BDF8; --l4-mega-ew: 2; --l4-wave-col: #38BDF8;
         }
+        .layout-4.style-dark-code .l4-bg-row { color: rgba(56, 189, 248, 0.09); }
+        .layout-4.style-dark-code .l4-star-poly { fill: rgba(56, 189, 248, 0.16); stroke: #38BDF8; stroke-width: 7; stroke-linejoin: round; }
+        .layout-4.style-dark-code .l4-ca { color: rgba(56, 189, 248, 0.50); }
+        .layout-4.style-dark-code .l4-cb { color: rgba(252, 211, 77, 0.60); }
         .layout-4.style-dark-code .l4-top-pill { background: #122645; color: #FFFFFF; border: 2.5px solid #38BDF8; box-shadow: 5px 5px 0 #000000; border-radius: 14px; }
         .layout-4.style-dark-code .l4-top-sub { color: #38BDF8; }
         .layout-4.style-dark-code .l4-card-back { background: #0E1F3A; border: 3px solid rgba(56, 189, 248, 0.55); box-shadow: 8px 8px 0 #000000; border-radius: 18px; }
         .layout-4.style-dark-code .l4-card-front { background: #122645; color: #F8FAFC; border: 3.5px solid #38BDF8; box-shadow: 12px 12px 0 #000000; border-radius: 18px; }
         .layout-4.style-dark-code .l4-follow-btn { background: #38BDF8; color: #0B192E; border-radius: 8px; }
-        .layout-4.style-dark-code .l4-media-box { background: #081529; border: 2.5px solid rgba(56,189,248,0.6); border-radius: 12px; }
-        .layout-4.style-dark-code .l4-sun-ray { fill: rgba(56, 189, 248, 0.09); }
-        .layout-4.style-dark-code .l4-sun-core { fill: #0F2342; stroke: #38BDF8; stroke-width: 3; }
-        .layout-4.style-dark-code .l4-hero-txt { font-family: 'Archivo Black', sans-serif; color: #FCD34D; text-shadow: 0 4px 18px rgba(252, 211, 77, 0.28); }
-        .layout-4.style-dark-code .l4-sub-pill { background: #1A365D; color: #38BDF8; border: 2px solid #38BDF8; box-shadow: 4px 4px 0 #000000; border-radius: 8px; font-family: 'JetBrains Mono', monospace; }
+        .layout-4.style-dark-code .l4-media-box { background: #081529; border: 2.5px solid rgba(56,189,248,0.65); border-radius: 12px; }
+        .layout-4.style-dark-code .l4-media-grid { background-image: linear-gradient(rgba(56,189,248,0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(56,189,248,0.12) 1px, transparent 1px); }
+        .layout-4.style-dark-code .l4-win-bar { background: #0F2342; color: #38BDF8; border-bottom: 2.5px solid rgba(56,189,248,0.50); }
+        .layout-4.style-dark-code .l4-win-dot { border-radius: 999px; }
+        .layout-4.style-dark-code .l4-wd-1 { background: #EF4444; } .layout-4.style-dark-code .l4-wd-2 { background: #FCD34D; } .layout-4.style-dark-code .l4-wd-3 { background: #38BDF8; }
+        .layout-4.style-dark-code .l4-badge { background: #1A365D; color: #38BDF8; border: 3px solid #38BDF8; box-shadow: 6px 6px 0 #000000; border-radius: 8px; }
+        .layout-4.style-dark-code .l4-hero-txt { color: #FCD34D; -webkit-text-stroke: 12px #060D1A; paint-order: stroke fill; text-shadow: 8px 8px 0 #EF4444; }
+        .layout-4.style-dark-code .l4-script-txt { color: #FCD34D; text-shadow: 0 4px 12px rgba(0, 0, 0, 0.50); }
+        .layout-4.style-dark-code .l4-stamp { background: #CA2C2A; border: 3px solid #FFFFFF; box-shadow: 6px 6px 0 #000000; border-radius: 10px; }
         .layout-4.style-dark-code .l4-dot-active { background: #38BDF8; }
-        .layout-4.style-dark-code .l4-chip { background: #122645; color: #FCD34D; border: 2px solid #38BDF8; box-shadow: 4px 4px 0 #000000; border-radius: 10px; font-family: 'JetBrains Mono', monospace; }
-        .layout-4.style-dark-code .l4-wave-fill { fill: #38BDF8; opacity: 0.12; }
         .layout-4.style-dark-code .l4-bottom-bar { background: #071120; color: #F8FAFC; border-top: 2.5px solid #38BDF8; }
         .layout-4.style-dark-code .l4-bar-icon { color: #38BDF8; }
 
-        /* Layout 4 Theme 4: Modern Clean */
+        /* Layout 4 Theme 4: Modern Clean (Royal Navy + Emas) */
         .poster-canvas.layout-4.style-modern {
             background: radial-gradient(circle at 80% 18%, #2E7BD1 0%, #16488E 46%, #0D2D5E 100%);
             --l4-mega-hi: #60A5FA; --l4-mega-mid: #2563EB; --l4-mega-dark: #1E3A8A; --l4-mega-deep: #091834; --l4-mega-edge: rgba(255,255,255,0.72); --l4-mega-ew: 1.2; --l4-wave-col: #FDD34D;
         }
+        .layout-4.style-modern .l4-bg-row { color: rgba(255, 255, 255, 0.055); }
+        .layout-4.style-modern .l4-star-poly { fill: #FDD34D; stroke: none; }
+        .layout-4.style-modern .l4-star-tr, .layout-4.style-modern .l4-star-bl { filter: drop-shadow(0 16px 32px rgba(8, 22, 44, 0.34)); }
+        .layout-4.style-modern .l4-ca { color: rgba(255, 255, 255, 0.30); }
+        .layout-4.style-modern .l4-cb { color: rgba(253, 211, 77, 0.60); }
         .layout-4.style-modern .l4-top-pill { background: rgba(255, 255, 255, 0.96); color: #12305A; box-shadow: 0 14px 32px rgba(6, 20, 44, 0.34); border-radius: 999px; }
         .layout-4.style-modern .l4-top-sub { color: #2A82C6; }
         .layout-4.style-modern .l4-card-back { background: #E2EEFF; box-shadow: 0 24px 48px rgba(6, 20, 44, 0.30); border-radius: 24px; }
         .layout-4.style-modern .l4-card-front { background: #FFFFFF; color: #12305A; box-shadow: 0 30px 64px rgba(6, 20, 44, 0.44); border-radius: 24px; }
         .layout-4.style-modern .l4-follow-btn { background: #16488E; color: #FFFFFF; border-radius: 999px; }
-        .layout-4.style-modern .l4-media-box { background: linear-gradient(155deg, #16488E 0%, #2468BD 100%); border-radius: 16px; }
-        .layout-4.style-modern .l4-sun-ray { fill: rgba(255, 255, 255, 0.11); }
-        .layout-4.style-modern .l4-sun-core { fill: #103266; stroke: rgba(253, 211, 77, 0.65); stroke-width: 3; }
-        .layout-4.style-modern .l4-hero-txt { font-family: 'Archivo Black', sans-serif; color: #FFFFFF; text-shadow: 6px 6px 0 #FDD34D; }
-        .layout-4.style-modern .l4-sub-pill { background: #CA2C2A; color: #FFFFFF; box-shadow: 0 12px 24px rgba(10, 25, 58, 0.36); border-radius: 999px; font-family: 'Space Grotesk', sans-serif; }
+        .layout-4.style-modern .l4-media-box { background: linear-gradient(145deg, #1D4D85 0%, #16488E 100%); border-radius: 16px; }
+        .layout-4.style-modern .l4-media-grid { background-image: linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px); }
+        .layout-4.style-modern .l4-win-bar { background: rgba(255,255,255,0.96); color: #12305A; }
+        .layout-4.style-modern .l4-win-dot { border-radius: 999px; }
+        .layout-4.style-modern .l4-wd-1 { background: #CA2C2A; } .layout-4.style-modern .l4-wd-2 { background: #FDD34D; } .layout-4.style-modern .l4-wd-3 { background: #12305A; }
+        .layout-4.style-modern .l4-badge { background: #FDD34D; color: #12305A; box-shadow: 0 12px 24px rgba(6, 20, 44, 0.30); border-radius: 999px; }
+        .layout-4.style-modern .l4-hero-txt { color: #FFFFFF; text-shadow: 9px 9px 0 #FDD34D; }
+        .layout-4.style-modern .l4-script-txt { color: #FDD34D; text-shadow: 0 4px 12px rgba(6, 20, 44, 0.45); }
+        .layout-4.style-modern .l4-stamp { background: #CA2C2A; box-shadow: 0 14px 28px rgba(6, 20, 44, 0.40); border-radius: 16px; }
         .layout-4.style-modern .l4-dot-active { background: #16488E; }
-        .layout-4.style-modern .l4-chip { background: rgba(255, 255, 255, 0.96); color: #12305A; box-shadow: 0 14px 28px rgba(6, 20, 44, 0.32); border-radius: 14px; font-family: 'JetBrains Mono', monospace; }
-        .layout-4.style-modern .l4-wave-fill { fill: #FFFFFF; opacity: 0.14; }
         .layout-4.style-modern .l4-bottom-bar { background: #0A2044; color: #FFFFFF; }
         .layout-4.style-modern .l4-bar-icon { color: #FDD34D; }
 
@@ -1728,39 +1784,25 @@
                         </footer>
                     </div>
 
-                    <!-- ================= LAYOUT 4: IG FEED STACK (CIRI KHAS HIMA IF) ================= -->
+                    <!-- ================= LAYOUT 4: IG FEED STACK — RETRO WINDOW MEDIA (CIRI KHAS HIMA IF) ================= -->
                     <div id="layout4Root" class="layout-4-root hidden relative w-full h-full flex-col justify-between overflow-hidden">
-                        <!-- Background Tech Printilan: Bokeh Halo + Micro Dots + Sparkles + Layered Wave -->
-                        <svg viewBox="0 0 1080 1350" preserveAspectRatio="none" class="pointer-events-none absolute inset-0 w-full h-full z-0" aria-hidden="true">
-                            <circle cx="540" cy="630" r="370" fill="#60A5FA" opacity="0.12"/>
-                            <path class="l4-wave-fill" d="M0 1175 Q140 1105 290 1165 T610 1160 T920 1150 Q1010 1135 1080 1165 L1080 1350 L0 1350 Z"/>
-                            <path class="l4-wave-fill" d="M0 1225 Q180 1165 380 1215 T780 1210 T1080 1195 L1080 1350 L0 1350 Z" opacity="0.85"/>
-                            <!-- 4-Point Tech Sparkles -->
-                            <path d="M128 332 Q130 350 148 352 Q130 354 128 372 Q126 354 108 352 Q126 350 128 332 Z" fill="#FCD34D" opacity="0.82"/>
-                            <path d="M952 462 Q954 480 972 482 Q954 484 952 502 Q950 484 932 482 Q950 480 952 462 Z" fill="#FFFFFF" opacity="0.72"/>
-                            <path d="M940 1020 Q941 1034 955 1035 Q941 1036 940 1050 Q939 1036 925 1035 Q939 1034 940 1020 Z" fill="#FCD34D" opacity="0.78"/>
+                        <!-- Kinetic Wallpaper (DNA Layout 2) -->
+                        <div id="l4BgWall" class="l4-bg-wall" aria-hidden="true"></div>
+
+                        <!-- 2 Spiky Starbursts (DNA Layout 2) -->
+                        <svg viewBox="0 0 420 420" class="l4-star-tr pointer-events-none" aria-hidden="true">
+                            <polygon class="l4-star-poly" points="210,12 248,108 345,52 308,148 408,168 320,224 388,308 282,294 274,398 210,322 146,398 138,294 32,308 100,224 12,168 112,148 75,52 172,108"/>
+                        </svg>
+                        <svg viewBox="0 0 420 420" class="l4-star-bl pointer-events-none" aria-hidden="true">
+                            <polygon class="l4-star-poly" points="210,12 248,108 345,52 308,148 408,168 320,224 388,308 282,294 274,398 210,322 146,398 138,294 32,308 100,224 12,168 112,148 75,52 172,108"/>
                         </svg>
 
-                        <!-- Floating HIMA IF Coding Chips (Menggantikan Awan Batik Referensi) -->
-                        <div class="code-accent l4-chip pointer-events-none font-code px-3.5 py-2 text-[18px] font-extrabold absolute top-[15.5%] left-[6%] rotate-[-8deg] z-10">&gt;_ 2026</div>
-                        <div class="code-accent l4-chip pointer-events-none font-code px-3.5 py-2 text-[18px] font-extrabold absolute top-[18%] right-[6.5%] rotate-6 z-10">&lt;/&gt; IF</div>
-                        <div class="code-accent l4-chip pointer-events-none font-code px-3.5 py-2 text-[18px] font-extrabold absolute top-[50%] left-[4%] rotate-[-10deg] z-10">&#123; HIMA &#125;</div>
-
-                        <!-- Mini Tech Rocket Vector Bottom-Left Above Wave -->
-                        <svg viewBox="0 0 110 110" class="pointer-events-none absolute bottom-[78px] left-[62px] w-[108px] h-[108px] z-20 overflow-visible" aria-hidden="true">
-                            <g transform="rotate(-12 55 55)" style="filter: drop-shadow(0 10px 18px rgba(8,22,44,0.34));">
-                                <!-- Exhaust flame -->
-                                <path d="M34 74 L14 96 L28 84 L20 102 L44 82 Z" fill="#FCD34D"/>
-                                <path d="M35 76 L22 92 L40 80 Z" fill="#EF4444"/>
-                                <!-- Rocket fins -->
-                                <path d="M40 60 L20 66 L34 76 Z" fill="#CA2C2A" stroke="#0F264A" stroke-width="2"/>
-                                <path d="M52 72 L46 92 L36 78 Z" fill="#CA2C2A" stroke="#0F264A" stroke-width="2"/>
-                                <!-- Rocket Body -->
-                                <path d="M84 22 C66 24 44 40 34 68 L44 78 C72 68 88 46 90 28 Z" fill="#FFFFFF" stroke="#0F264A" stroke-width="2.5"/>
-                                <path d="M84 22 C76 23 68 27 61 33 L79 51 C85 44 89 36 90 28 Z" fill="#2563EB"/>
-                                <circle cx="58" cy="52" r="8" fill="#38BDF8" stroke="#0F264A" stroke-width="2.2"/>
-                            </g>
-                        </svg>
+                        <!-- Unboxed Coding Accents (DNA Layout 1) -->
+                        <span class="code-accent l4-code l4-ca pointer-events-none font-code font-extrabold absolute top-[21%] left-[7%] -rotate-12 text-[38px] leading-none">&gt;_</span>
+                        <span class="code-accent l4-code l4-cb pointer-events-none font-code font-extrabold absolute top-[50%] right-[5%] rotate-[10deg] text-[34px] leading-none">&lt;/&gt;</span>
+                        <span class="code-accent l4-code l4-cb pointer-events-none font-code font-extrabold absolute top-[46%] left-[4.5%] rotate-6 text-[40px] leading-none">&#123; &#125;</span>
+                        <span class="code-accent l4-code l4-ca pointer-events-none font-code font-extrabold absolute top-[88%] left-[33%] rotate-[-8deg] text-[34px] leading-none">//</span>
+                        <span class="code-accent l4-code l4-ca pointer-events-none font-code font-extrabold absolute top-[88%] right-[7%] rotate-12 text-[32px] leading-none">01;</span>
 
                         <!-- Top Centered Dual-Logo Org Pill -->
                         <header class="l4-top-wrap relative z-10 flex justify-center">
@@ -1777,89 +1819,79 @@
                         <!-- Centerpiece: Tilted 2-Layer Stacked Instagram Card -->
                         <section class="relative z-10 flex items-center justify-center my-auto px-8">
                             <div class="l4-stack-stage">
-                                <!-- Back Tilted Layer Card -->
                                 <div class="l4-card-back" aria-hidden="true"></div>
 
-                                <!-- Main Front IG Post Card -->
                                 <article class="l4-card-front">
-                                    <!-- Card Top Social Header -->
+                                    <!-- Card Header -->
                                     <div class="l4-card-hdr">
-                                        <div class="flex items-center gap-3 min-w-0">
-                                            <div class="w-10 h-10 rounded-full bg-white p-1 border border-slate-300 shrink-0 overflow-hidden flex items-center justify-center">
-                                                <img id="l4CardAvatar" src="" alt="Avatar HIMA IF" class="w-full h-full object-contain">
-                                            </div>
-                                            <div class="flex items-center gap-1.5 min-w-0">
-                                                <span id="l4OutIgCard" class="font-display text-[21px] font-bold truncate">hmif_LPKIA</span>
-                                                <svg class="w-5 h-5 shrink-0 text-[#1D9BF0]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                                    <path d="M12 2l2.39 1.98 3.04-.46.84 2.97 2.81 1.29-.82 2.97 1.74 2.53-1.74 2.53.82 2.97-2.81 1.29-.84 2.97-3.04-.46L12 22l-2.39-1.98-3.04.46-.84-2.97-2.81-1.29.82-2.97L2 13.28l1.74-2.53-.82-2.97 2.81-1.29.84-2.97 3.04.46L12 2zm-1.1 13.4l5.2-5.2-1.4-1.4-3.8 3.8-1.8-1.8-1.4 1.4 3.2 3.2z"/>
-                                                </svg>
-                                            </div>
+                                        <div class="l4-avatar">
+                                            <img id="l4CardAvatar" src="" alt="Avatar HIMA IF" class="w-full h-full object-contain">
                                         </div>
-                                        <div class="flex items-center gap-3 shrink-0">
-                                            <span class="l4-follow-btn px-4 py-1 text-[15px] font-extrabold tracking-wide">Follow</span>
-                                            <span class="text-[20px] font-extrabold leading-none opacity-65">•••</span>
+                                        <div class="l4-handle-row">
+                                            <span id="l4OutIgCard" class="font-display text-[21px] font-bold leading-none">hmif_LPKIA</span>
+                                            <svg class="w-[18px] h-[18px] shrink-0 text-[#1D9BF0]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                                <circle cx="12" cy="12" r="11"/>
+                                                <path d="M7 12.4l3.2 3.2L17 8.8" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
                                         </div>
+                                        <span class="l4-follow-btn">Follow</span>
+                                        <span class="l4-more">•••</span>
+                                        <!-- 8-Bit Pixel Cursor menunjuk tombol Follow (DNA Layout 2) -->
+                                        <svg id="l4CursorSvg" class="l4-cursor" width="41" height="65" viewBox="0 0 12 19" shape-rendering="crispEdges" aria-hidden="true"></svg>
                                     </div>
 
-                                    <!-- Inner Sunburst Media Square -->
+                                    <!-- Retro Window Media Frame (DNA Layout 1: Grid + Window Dots) -->
                                     <div class="l4-media-box">
-                                        <!-- 16 Radial Sunburst Rays SVG -->
-                                        <svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" class="pointer-events-none absolute inset-0 w-full h-full" aria-hidden="true">
-                                            <g transform="translate(300 300)">
-                                                <path class="l4-sun-ray" d="M0,0 L-45,-460 L45,-460 Z" transform="rotate(0)"/>
-                                                <path class="l4-sun-ray" d="M0,0 L-45,-460 L45,-460 Z" transform="rotate(22.5)"/>
-                                                <path class="l4-sun-ray" d="M0,0 L-45,-460 L45,-460 Z" transform="rotate(45)"/>
-                                                <path class="l4-sun-ray" d="M0,0 L-45,-460 L45,-460 Z" transform="rotate(67.5)"/>
-                                                <path class="l4-sun-ray" d="M0,0 L-45,-460 L45,-460 Z" transform="rotate(90)"/>
-                                                <path class="l4-sun-ray" d="M0,0 L-45,-460 L45,-460 Z" transform="rotate(112.5)"/>
-                                                <path class="l4-sun-ray" d="M0,0 L-45,-460 L45,-460 Z" transform="rotate(135)"/>
-                                                <path class="l4-sun-ray" d="M0,0 L-45,-460 L45,-460 Z" transform="rotate(157.5)"/>
-                                                <path class="l4-sun-ray" d="M0,0 L-45,-460 L45,-460 Z" transform="rotate(180)"/>
-                                                <path class="l4-sun-ray" d="M0,0 L-45,-460 L45,-460 Z" transform="rotate(202.5)"/>
-                                                <path class="l4-sun-ray" d="M0,0 L-45,-460 L45,-460 Z" transform="rotate(225)"/>
-                                                <path class="l4-sun-ray" d="M0,0 L-45,-460 L45,-460 Z" transform="rotate(247.5)"/>
-                                                <path class="l4-sun-ray" d="M0,0 L-45,-460 L45,-460 Z" transform="rotate(270)"/>
-                                                <path class="l4-sun-ray" d="M0,0 L-45,-460 L45,-460 Z" transform="rotate(292.5)"/>
-                                                <path class="l4-sun-ray" d="M0,0 L-45,-460 L45,-460 Z" transform="rotate(315)"/>
-                                                <path class="l4-sun-ray" d="M0,0 L-45,-460 L45,-460 Z" transform="rotate(337.5)"/>
-                                                <circle class="l4-sun-core" cx="0" cy="0" r="145"/>
-                                            </g>
-                                        </svg>
+                                        <div class="l4-media-grid"></div>
+                                        <div class="l4-win-bar">
+                                            <div class="l4-win-dots"><span class="l4-win-dot l4-wd-1"></span><span class="l4-win-dot l4-wd-2"></span><span class="l4-win-dot l4-wd-3"></span></div>
+                                            <span id="l4OutFile" class="l4-win-file">countdown.exe</span>
+                                        </div>
+                                        <span class="code-accent l4-media-code l4-cb" style="left: 16px;">&gt;_</span>
+                                        <span class="code-accent l4-media-code l4-cb" style="right: 16px;">01;</span>
 
-                                        <!-- Center Hero Inside Media Frame -->
-                                        <div class="relative z-10 flex flex-col items-center justify-center text-center px-4">
-                                            <span id="l4OutHero" class="l4-hero-txt uppercase leading-[0.9] block" style="font-size: 162px;">H-7</span>
-                                            <div class="l4-sub-pill -mt-2 px-6 py-2 inline-flex items-center gap-2 -rotate-1">
-                                                <span id="l4OutPill" class="font-extrabold text-[23px] uppercase tracking-[0.10em] leading-none">MENUJU KADERISASI</span>
+                                        <div class="l4-media-body">
+                                            <span id="l4OutBadge" class="l4-badge">COUNTDOWN</span>
+                                            <span id="l4OutHero" class="l4-hero-txt" style="font-size: 250px;">H-7</span>
+                                            <span id="l4OutScript" class="l4-script-txt font-script" style="font-size: 70px;">Menuju</span>
+                                            <div class="l4-stamp">
+                                                <svg fill="none" stroke="currentColor" stroke-width="2.8" viewBox="0 0 24 24" aria-hidden="true">
+                                                    <circle cx="12" cy="12" r="9"></circle>
+                                                    <path stroke-linecap="square" d="M12 7v5l3 2"></path>
+                                                </svg>
+                                                <span id="l4OutStamp">KADERISASI</span>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <!-- Card Footer Actions & Caption -->
-                                    <div class="l4-card-ftr space-y-1.5">
-                                        <div class="flex items-center justify-between">
-                                            <div class="flex items-center gap-4">
-                                                <svg class="w-7 h-7 text-[#EF4444]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-                                                </svg>
-                                                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-                                                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
-                                                </svg>
-                                                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-                                                    <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
-                                                </svg>
-                                            </div>
-                                            <div class="flex items-center gap-1.5 mr-24">
+                                    <!-- Card Footer -->
+                                    <div class="l4-card-ftr">
+                                        <div class="l4-act-row">
+                                            <svg class="w-7 h-7 text-[#EF4444]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                                            </svg>
+                                            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                                            </svg>
+                                            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                                                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                                            </svg>
+                                            <div class="l4-dots">
                                                 <span class="l4-dot-active w-2.5 h-2.5 rounded-full block"></span>
                                                 <span class="w-2 h-2 rounded-full bg-current opacity-25 block"></span>
                                                 <span class="w-2 h-2 rounded-full bg-current opacity-25 block"></span>
                                                 <span class="w-2 h-2 rounded-full bg-current opacity-25 block"></span>
                                             </div>
                                         </div>
-                                        <p class="text-[16px] font-extrabold leading-snug pt-0.5">1,024 likes</p>
-                                        <p class="text-[16px] leading-snug">
-                                            <span id="l4OutIgCap" class="font-extrabold mr-1.5">hmif_LPKIA</span>
-                                            <span id="l4OutCaption" class="font-semibold opacity-90">Menuju Kaderisasi! Jumat, 04 Des 2026 • 08.00 WIB • Kampus IDE LPKIA</span>
+                                        <p class="l4-likes">1,024 likes</p>
+                                        <p class="l4-cap">
+                                            <span id="l4OutIgCap" class="font-extrabold mr-1.5">hmif_LPKIA</span><span id="l4OutCaption" class="font-semibold opacity-90">Kaderisasi HIMA IF • Jumat, 04 Des 2026 (08.00 WIB)</span>
+                                        </p>
+                                        <p class="l4-loc l4-countdown-only">
+                                            <svg class="w-4 h-4 shrink-0 text-[#EF4444]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/>
+                                            </svg>
+                                            <span id="l4OutLoc">Kampus IDE LPKIA</span>
                                         </p>
                                     </div>
                                 </article>
@@ -1878,23 +1910,20 @@
                                         </linearGradient>
                                     </defs>
                                     <g style="filter: drop-shadow(0 16px 20px rgba(7,20,44,0.38));">
-                                        <!-- Golden Notification Bell beside top-right rim -->
                                         <g transform="translate(152 -12) rotate(18 32 32)">
                                             <circle cx="32" cy="54" r="7" fill="#B45309"/>
                                             <path d="M16 42 Q16 14 32 14 Q48 14 48 42 L54 50 L10 50 Z" fill="url(#l4BellGold)" stroke="#78350F" stroke-width="2"/>
                                             <circle cx="32" cy="11" r="4" fill="#F59E0B"/>
                                         </g>
-                                        <!-- Megaphone -->
                                         <path d="M52 126 L74 128 L66 176 Q64 185 52 184 L44 182 Q37 180 40 170 Z" fill="url(#l4MegaColor)" style="stroke: var(--l4-mega-edge); stroke-width: var(--l4-mega-ew);"/>
                                         <rect x="16" y="88" width="22" height="40" rx="10" fill="url(#l4MegaColor)" style="stroke: var(--l4-mega-edge); stroke-width: var(--l4-mega-ew);"/>
                                         <path d="M32 82 L64 78 L64 138 L32 134 Q24 132 24 108 Q24 84 32 82 Z" fill="url(#l4MegaColor)" style="stroke: var(--l4-mega-edge); stroke-width: var(--l4-mega-ew);"/>
                                         <path d="M58 79 C96 76 124 54 148 34 L152 182 C124 162 96 140 58 137 Z" fill="url(#l4MegaHorn)" style="stroke: var(--l4-mega-edge); stroke-width: var(--l4-mega-ew);"/>
-                                        <path d="M68 85 C98 81 122 64 140 48" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
+                                        <path d="M68 85 C98 81 122 64 140 48" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" opacity="0.9" fill="none"/>
                                         <ellipse cx="151" cy="108" rx="23" ry="74" fill="url(#l4MegaColor)" style="stroke: var(--l4-mega-edge); stroke-width: var(--l4-mega-ew);"/>
                                         <ellipse cx="153" cy="108" rx="15" ry="59" style="fill: var(--l4-mega-deep);"/>
                                         <ellipse cx="144" cy="108" rx="7" ry="18" fill="url(#l4MegaColor)"/>
                                     </g>
-                                    <!-- Sound wave arcs -->
                                     <g fill="none" stroke-linecap="round" style="stroke: var(--l4-wave-col)">
                                         <path d="M174 88 Q190 108 174 128" stroke-width="4.5" opacity="0.9"/>
                                         <path d="M189 74 Q212 108 189 142" stroke-width="4" opacity="0.65"/>
@@ -2026,6 +2055,8 @@
                 }
             });
             svg.innerHTML = rects;
+            const l4Cur = document.getElementById('l4CursorSvg');
+            if (l4Cur) l4Cur.innerHTML = rects;
         }
 
         function getHeroMetrics(txt, baseFs = 220) {
@@ -2164,27 +2195,59 @@
             setIf('l3OutCta', E.cta);
 
             // Layout 4 DOM sync
-            const l4HeroStr = E.isCS ? 'COMING SOON' : E.hero;
-            const l4HeroLen = l4HeroStr.length;
-            const l4Scale = currentRatio === '9-16' ? 1.1 : (currentRatio === '1-1' ? 0.78 : 1);
-            const l4BaseHero = l4HeroLen >= 10 ? 60 : (l4HeroLen >= 7 ? 90 : (l4HeroLen >= 5 ? 128 : 162));
+            const l4M = getL4Metrics(E);
+            setIf('l4OutBadge', l4M.badgeTxt);
             const l4HeroEl = document.getElementById('l4OutHero');
             if (l4HeroEl) {
-                l4HeroEl.textContent = l4HeroStr;
-                l4HeroEl.style.fontSize = Math.round(l4BaseHero * l4Scale) + 'px';
+                l4HeroEl.textContent = l4M.heroLines.join('\n');
+                l4HeroEl.style.fontSize = l4M.heroFs + 'px';
             }
-            const l4PillTxt = E.isCS
-                ? `${E.title} • STAY TUNED`
-                : `${E.mn || 'MENUJU'} ${E.title}`;
-            setIf('l4OutPill', l4PillTxt);
+            const l4ScrEl = document.getElementById('l4OutScript');
+            if (l4ScrEl) {
+                l4ScrEl.textContent = l4M.script;
+                l4ScrEl.style.fontSize = l4M.scriptFs + 'px';
+                l4ScrEl.style.display = E.isCS ? 'none' : '';
+            }
+            setIf('l4OutStamp', l4M.stampTxt);
+            setIf('l4OutFile', l4M.fileName);
             setIf('l4OutIgCard', E.igHandle);
             setIf('l4OutIgCap', E.igHandle);
             setIf('l4OutIgBar', E.igHandle);
             setIf('l4OutCta', E.cta);
-            const l4CapTxt = E.isCS
-                ? `Coming Soon — ${toTitleCase(E.title)} HIMA Informatika IDE LPKIA! Stay tuned!`
-                : `${toTitleCase(E.title)} HIMA IF • ${toTitleCase(E.date)} (${E.time}) • ${toTitleCase(E.loc)}`;
-            setIf('l4OutCaption', l4CapTxt);
+            setIf('l4OutCaption', l4M.caption);
+            setIf('l4OutLoc', toTitleCase(E.loc));
+            const l4Wall = document.getElementById('l4BgWall');
+            if (l4Wall) {
+                l4Wall.innerHTML = getL2BgRows(E.bgWord1, E.bgWord2)
+                    .map((line) => `<div class="l4-bg-row">${line}</div>`)
+                    .join('');
+            }
+        }
+
+        function getL4Metrics(E) {
+            const r = currentRatio;
+            const heroLines = E.isCS ? ['COMING', 'SOON'] : [E.hero];
+            const longest = Math.max(1, ...heroLines.map((l) => l.length));
+            const sc = r === '9-16' ? 1.08 : (r === '1-1' ? 0.82 : 1);
+            const base = Math.max(36, Math.min(250, Math.floor(600 / (0.72 * longest))));
+            return {
+                heroLines,
+                heroFs: Math.round(base * sc),
+                scriptFs: Math.round(70 * sc),
+                script: E.isCS ? '' : toTitleCase(E.mn || 'Menuju'),
+                badgeTxt: E.isCS ? E.title : E.cd,
+                stampTxt: E.isCS ? 'STAY TUNED' : E.title,
+                fileName: E.isCS ? 'coming_soon.exe' : 'countdown.exe',
+                caption: E.isCS
+                    ? `Coming Soon — ${toTitleCase(E.title)} HIMA Informatika IDE LPKIA! Stay tuned!`
+                    : `${toTitleCase(E.title)} HIMA IF • ${toTitleCase(E.date)} (${E.time})`,
+                badgeFs: r === '9-16' ? 29 : (r === '1-1' ? 22 : 26),
+                badgePy: r === '9-16' ? 9 : (r === '1-1' ? 7 : 8),
+                badgePx: r === '9-16' ? 28 : (r === '1-1' ? 22 : 26),
+                stFs: r === '9-16' ? 38 : (r === '1-1' ? 29 : 34),
+                stPy: r === '9-16' ? 11 : (r === '1-1' ? 8 : 10),
+                stPx: r === '9-16' ? 30 : (r === '1-1' ? 24 : 28)
+            };
         }
 
         function toTitleCase(s) {
@@ -4435,71 +4498,171 @@
                 });
             }
 
+            const resolveFill = (spec, x, y, w, h) => {
+                if (spec && typeof spec === 'object' && Array.isArray(spec.stops)) {
+                    const g = spec.dir === 'vert' ? ctx.createLinearGradient(x, y, x, y + h) : ctx.createLinearGradient(x, y, x + w, y + h);
+                    spec.stops.forEach(([p, c]) => g.addColorStop(p, c));
+                    return g;
+                }
+                return spec;
+            };
+
+            function drawBox(x, y, w, h, o) {
+                if (o.shadow > 0) {
+                    ctx.fillStyle = '#000000';
+                    rrPath(x + o.shadow, y + o.shadow, w, h, o.radius);
+                    ctx.fill();
+                }
+                ctx.save();
+                if (o.soft) {
+                    ctx.shadowColor = o.soft;
+                    ctx.shadowBlur = o.blur || 28;
+                    ctx.shadowOffsetY = o.sy || 14;
+                }
+                ctx.fillStyle = resolveFill(o.fill, x, y, w, h);
+                rrPath(x, y, w, h, o.radius);
+                ctx.fill();
+                ctx.restore();
+                if (o.border > 0) {
+                    ctx.lineWidth = o.border;
+                    ctx.strokeStyle = o.borderCol;
+                    rrPath(x, y, w, h, o.radius);
+                    ctx.stroke();
+                }
+            }
+
+            // Kata bergaya: stroke -> fill, hard shadow, glow (setara paint-order: stroke fill di DOM)
+            function drawWord(text, cx, cy, o) {
+                ctx.save();
+                ctx.font = o.font;
+                ctx.textBaseline = 'middle';
+                ctx.textAlign = 'left';
+                ctx.lineJoin = 'round';
+                ctx.lineCap = 'round';
+                const chars = Array.from(text);
+                const ws = chars.map((c) => ctx.measureText(c).width);
+                const tot = ws.reduce((a, b) => a + b, 0) + o.track * Math.max(0, chars.length - 1);
+                const run = (ox, oy, doStroke, doFill) => {
+                    let x = cx - tot / 2 + ox;
+                    chars.forEach((c, i) => {
+                        if (doStroke) ctx.strokeText(c, x, cy + oy);
+                        if (doFill) ctx.fillText(c, x, cy + oy);
+                        x += ws[i] + o.track;
+                    });
+                };
+                const sw = o.sw || 0;
+                if (o.shd) {
+                    ctx.fillStyle = o.shd.col;
+                    ctx.strokeStyle = o.shd.col;
+                    ctx.lineWidth = sw;
+                    run(o.shd.off, o.shd.off, sw > 0, true);
+                }
+                if (o.glow) {
+                    ctx.shadowColor = o.glow.col;
+                    ctx.shadowBlur = o.glow.blur;
+                    ctx.shadowOffsetY = o.glow.sy || 0;
+                }
+                if (sw > 0 && o.stroke) {
+                    ctx.strokeStyle = o.stroke;
+                    ctx.lineWidth = sw;
+                    run(0, 0, true, false);
+                }
+                if (o.fill === 'glassHero') {
+                    const g = ctx.createLinearGradient(0, cy - o.fs * 0.45, 0, cy + o.fs * 0.45);
+                    g.addColorStop(0, '#FF8A8A');
+                    g.addColorStop(0.34, '#F84B4B');
+                    g.addColorStop(0.70, '#DC2626');
+                    g.addColorStop(1, '#991B1B');
+                    ctx.fillStyle = g;
+                } else {
+                    ctx.fillStyle = o.fill;
+                }
+                run(0, 0, false, true);
+                ctx.restore();
+            }
+
             const L4_THEMES = {
                 'neubrutalism': {
-                    bgMode: 'dots', bg: '#16488E', dot: 'rgba(255,255,255,0.16)',
+                    bgMode: 'dots', bg: '#16488E', dot: 'rgba(255,255,255,0.16)', wallCol: 'rgba(255,255,255,0.08)',
+                    star: { fill: '#CA2C2A', stroke: '#000000', sw: 6, soft: null },
+                    codeA: 'rgba(255,255,255,0.34)', codeB: 'rgba(252,211,77,0.72)', softCol: null,
                     topFill: '#FFFFFF', topText: '#12305A', topSub: '#CA2C2A', topBorder: 3.5, topBorderCol: '#000000', topShadow: 6, topRad: 14,
                     backFill: '#DBEAFE', backBorder: 4, backBorderCol: '#000000', backShadow: 9,
-                    cardFill: '#FFFFFF', cardText: '#0F172A', cardBorder: 4, cardBorderCol: '#000000', cardShadow: 12, cardRad: 16, softCol: null,
+                    cardFill: '#FFFFFF', cardText: '#0F172A', cardBorder: 4, cardBorderCol: '#000000', cardShadow: 12, cardRad: 16,
+                    handleFam: '"Space Grotesk", sans-serif', uiFam: '"Plus Jakarta Sans", sans-serif',
                     followFill: '#16488E', followText: '#FFFFFF', followBorder: 2, followRad: 8,
-                    mediaBg: '#16488E', mediaBorder: 3.5, mediaBorderCol: '#000000', mediaRad: 10,
-                    rayCol: 'rgba(255,255,255,0.12)', coreFill: '#12305A', coreStroke: '#FCD34D', coreSW: 5,
-                    heroFont: '400 {FS}px "Archivo Black", sans-serif', heroCol: '#FCD34D', heroStroke: '#000000', heroSW: 8, heroShd: 6,
-                    pillFill: '#CA2C2A', pillText: '#FFFFFF', pillBorder: 3, pillShadow: 4, pillRad: 6, pillFont: '700 23px "Space Grotesk", sans-serif',
-                    uiFont: '"Plus Jakarta Sans", sans-serif', dotCol: '#CA2C2A',
-                    chipFill: '#FFFFFF', chipText: '#16488E', chipBorder: 3, chipBorderCol: '#000000', chipShadow: 4, chipRad: 10,
-                    waveCol: 'rgba(255,255,255,0.16)', barFill: '#0B1F40', barText: '#FFFFFF', barIcon: '#FCD34D', barBorder: '#000000',
+                    mediaFill: '#F4F8FF', mediaBorder: 3.5, mediaBorderCol: '#000000', mediaRad: 8, grid: 'rgba(26,70,124,0.10)',
+                    tbFill: '#1A467C', tbText: '#FFFFFF', tbBorder: 3.5, tbBorderCol: '#000000', wd: ['#CA2C2A', '#FCD34D', '#FFFFFF'], wdBorder: 2, wdRad: 0,
+                    badgeFam: '"Silkscreen", monospace', badgeTrack: 0.10, badgeFill: '#1A467C', badgeText: '#FFFFFF', badgeBorder: 4, badgeBorderCol: '#000000', badgeShadow: 6, badgeRad: 0, badgeSoft: null,
+                    heroFam: '"Archivo Black", "Space Grotesk", sans-serif', heroW: 400, heroFill: '#CA2C2A', heroStroke: '#000000', heroSW: 16, heroShd: { off: 8, col: '#000000' }, heroGlow: null,
+                    scriptFill: '#F59E0B', scriptStroke: '#000000', scriptSW: 5, scriptShd: { off: 3, col: '#000000' }, scriptGlow: null,
+                    stFam: '"Space Grotesk", sans-serif', stFill: '#CA2C2A', stBorder: 4, stBorderCol: '#000000', stShadow: 7, stRad: 0, stSoft: null,
+                    dotCol: '#CA2C2A', barFill: '#0B1F40', barText: '#FFFFFF', barIcon: '#FCD34D', barBorder: '#000000',
                     mega: { hi: '#FF6B6B', mid: '#CA2C2A', dark: '#991B1B', deep: '#3B0909', edge: '#000000', ew: 2.4, wave: '#FCD34D' }
                 },
                 'glass': {
-                    bgMode: 'grad', stops: [[0, '#0D356F'], [0.48, '#1B5AA6'], [1, '#2E80D1']],
+                    bgMode: 'grad', stops: [[0, '#0D356F'], [0.48, '#1B5AA6'], [1, '#2E80D1']], wallCol: 'rgba(255,255,255,0.08)',
+                    star: { fill: 'rgba(96,165,250,0.28)', stroke: 'rgba(255,255,255,0.90)', sw: 4, soft: null },
+                    codeA: 'rgba(219,234,254,0.38)', codeB: 'rgba(253,224,71,0.50)', softCol: 'rgba(8,25,58,0.34)',
                     topFill: 'rgba(255,255,255,0.88)', topText: '#12305A', topSub: '#DC2626', topBorder: 1.5, topBorderCol: 'rgba(255,255,255,0.95)', topShadow: 0, topRad: 999,
                     backFill: 'rgba(226,240,255,0.45)', backBorder: 1.5, backBorderCol: 'rgba(255,255,255,0.70)', backShadow: 0,
-                    cardFill: 'rgba(255,255,255,0.88)', cardText: '#0F294A', cardBorder: 2, cardBorderCol: 'rgba(255,255,255,0.96)', cardShadow: 0, cardRad: 26, softCol: 'rgba(8,25,58,0.36)',
+                    cardFill: 'rgba(255,255,255,0.88)', cardText: '#0F294A', cardBorder: 2, cardBorderCol: 'rgba(255,255,255,0.96)', cardShadow: 0, cardRad: 26,
+                    handleFam: '"Outfit", sans-serif', uiFam: '"Outfit", "Plus Jakarta Sans", sans-serif',
                     followFill: '#2563EB', followText: '#FFFFFF', followBorder: 0, followRad: 999,
-                    mediaBg: 'glassMedia', mediaBorder: 1.5, mediaBorderCol: 'rgba(255,255,255,0.65)', mediaRad: 18,
-                    rayCol: 'rgba(255,255,255,0.14)', coreFill: 'rgba(15,41,74,0.42)', coreStroke: 'rgba(255,255,255,0.55)', coreSW: 2.5,
-                    heroFont: '900 {FS}px "Outfit", "Plus Jakarta Sans", sans-serif', heroCol: 'glassWhiteGrad', heroStroke: null, heroSW: 0, heroShd: 0, heroGlow: 'rgba(15,23,42,0.38)',
-                    pillFill: '#DC2626', pillText: '#FFFFFF', pillBorder: 1.5, pillShadow: 0, pillRad: 999, pillFont: '800 23px "Outfit", sans-serif',
-                    uiFont: '"Outfit", "Plus Jakarta Sans", sans-serif', dotCol: '#DC2626',
-                    chipFill: 'rgba(255,255,255,0.82)', chipText: '#1E40AF', chipBorder: 1.5, chipBorderCol: 'rgba(255,255,255,0.92)', chipShadow: 0, chipRad: 14,
-                    waveCol: 'rgba(255,255,255,0.18)', barFill: 'rgba(15,41,74,0.88)', barText: '#FFFFFF', barIcon: '#93C5FD', barBorder: 'rgba(255,255,255,0.35)',
+                    mediaFill: { dir: 'diag', stops: [[0, 'rgba(255,255,255,0.62)'], [0.55, 'rgba(191,223,255,0.46)'], [1, 'rgba(235,245,255,0.60)']] },
+                    mediaBorder: 1.5, mediaBorderCol: 'rgba(255,255,255,0.95)', mediaRad: 18, grid: 'rgba(37,99,235,0.10)',
+                    tbFill: 'rgba(255,255,255,0.58)', tbText: '#1E40AF', tbBorder: 1.5, tbBorderCol: 'rgba(255,255,255,0.90)', wd: ['#EF4444', '#F59E0B', '#3B82F6'], wdBorder: 0, wdRad: 99,
+                    badgeFam: '"Space Grotesk", sans-serif', badgeTrack: 0.16, badgeFill: { dir: 'vert', stops: [[0, '#60A5FA'], [1, '#2563EB']] }, badgeText: '#FFFFFF', badgeBorder: 1.5, badgeBorderCol: 'rgba(255,255,255,0.90)', badgeShadow: 0, badgeRad: 12, badgeSoft: 'rgba(37,99,235,0.32)',
+                    heroFam: '"Outfit", "Plus Jakarta Sans", sans-serif', heroW: 900, heroFill: 'glassHero', heroStroke: null, heroSW: 0, heroShd: null, heroGlow: { col: 'rgba(30,64,175,0.28)', blur: 16, sy: 8 },
+                    scriptFill: '#F59E0B', scriptStroke: null, scriptSW: 0, scriptShd: null, scriptGlow: { col: 'rgba(245,158,11,0.32)', blur: 14, sy: 6 },
+                    stFam: '"Outfit", sans-serif', stFill: { dir: 'vert', stops: [[0, '#F87171'], [1, '#DC2626']] }, stBorder: 1.5, stBorderCol: 'rgba(255,255,255,0.85)', stShadow: 0, stRad: 12, stSoft: 'rgba(220,38,38,0.30)',
+                    dotCol: '#DC2626', barFill: 'rgba(15,41,74,0.88)', barText: '#FFFFFF', barIcon: '#93C5FD', barBorder: 'rgba(255,255,255,0.35)',
                     mega: { hi: '#FF8585', mid: '#EF4444', dark: '#B91C1C', deep: '#450A0A', edge: 'rgba(255,255,255,0.88)', ew: 1.4, wave: '#FDE047' }
                 },
                 'dark-code': {
-                    bgMode: 'dots', bg: '#0B192E', dot: 'rgba(56,189,248,0.24)',
+                    bgMode: 'dots', bg: '#0B192E', dot: 'rgba(56,189,248,0.24)', wallCol: 'rgba(56,189,248,0.09)',
+                    star: { fill: 'rgba(56,189,248,0.16)', stroke: '#38BDF8', sw: 5, soft: null },
+                    codeA: 'rgba(56,189,248,0.50)', codeB: 'rgba(252,211,77,0.60)', softCol: null,
                     topFill: '#122645', topText: '#FFFFFF', topSub: '#38BDF8', topBorder: 2.5, topBorderCol: '#38BDF8', topShadow: 5, topRad: 14,
                     backFill: '#0E1F3A', backBorder: 3, backBorderCol: 'rgba(56,189,248,0.55)', backShadow: 8,
-                    cardFill: '#122645', cardText: '#F8FAFC', cardBorder: 3.5, cardBorderCol: '#38BDF8', cardShadow: 12, cardRad: 18, softCol: null,
+                    cardFill: '#122645', cardText: '#F8FAFC', cardBorder: 3.5, cardBorderCol: '#38BDF8', cardShadow: 12, cardRad: 18,
+                    handleFam: '"Space Grotesk", sans-serif', uiFam: '"Plus Jakarta Sans", sans-serif',
                     followFill: '#38BDF8', followText: '#0B192E', followBorder: 0, followRad: 8,
-                    mediaBg: '#081529', mediaBorder: 2.5, mediaBorderCol: 'rgba(56,189,248,0.6)', mediaRad: 12,
-                    rayCol: 'rgba(56,189,248,0.09)', coreFill: '#0F2342', coreStroke: '#38BDF8', coreSW: 3,
-                    heroFont: '400 {FS}px "Archivo Black", sans-serif', heroCol: '#FCD34D', heroStroke: null, heroSW: 0, heroShd: 0, heroGlow: 'rgba(252,211,77,0.28)',
-                    pillFill: '#1A365D', pillText: '#38BDF8', pillBorder: 2, pillShadow: 4, pillRad: 8, pillFont: '700 22px "JetBrains Mono", monospace',
-                    uiFont: '"Plus Jakarta Sans", sans-serif', dotCol: '#38BDF8',
-                    chipFill: '#122645', chipText: '#FCD34D', chipBorder: 2, chipBorderCol: '#38BDF8', chipShadow: 4, chipRad: 10,
-                    waveCol: 'rgba(56,189,248,0.12)', barFill: '#071120', barText: '#F8FAFC', barIcon: '#38BDF8', barBorder: '#38BDF8',
+                    mediaFill: '#081529', mediaBorder: 2.5, mediaBorderCol: 'rgba(56,189,248,0.65)', mediaRad: 12, grid: 'rgba(56,189,248,0.12)',
+                    tbFill: '#0F2342', tbText: '#38BDF8', tbBorder: 2.5, tbBorderCol: 'rgba(56,189,248,0.50)', wd: ['#EF4444', '#FCD34D', '#38BDF8'], wdBorder: 0, wdRad: 99,
+                    badgeFam: '"Silkscreen", monospace', badgeTrack: 0.10, badgeFill: '#1A365D', badgeText: '#38BDF8', badgeBorder: 3, badgeBorderCol: '#38BDF8', badgeShadow: 6, badgeRad: 8, badgeSoft: null,
+                    heroFam: '"Archivo Black", "Space Grotesk", sans-serif', heroW: 400, heroFill: '#FCD34D', heroStroke: '#060D1A', heroSW: 12, heroShd: { off: 8, col: '#EF4444' }, heroGlow: null,
+                    scriptFill: '#FCD34D', scriptStroke: null, scriptSW: 0, scriptShd: null, scriptGlow: { col: 'rgba(0,0,0,0.50)', blur: 12, sy: 4 },
+                    stFam: '"Space Grotesk", sans-serif', stFill: '#CA2C2A', stBorder: 3, stBorderCol: '#FFFFFF', stShadow: 6, stRad: 10, stSoft: null,
+                    dotCol: '#38BDF8', barFill: '#071120', barText: '#F8FAFC', barIcon: '#38BDF8', barBorder: '#38BDF8',
                     mega: { hi: '#7DD3FC', mid: '#0EA5E9', dark: '#0369A1', deep: '#061326', edge: '#38BDF8', ew: 2, wave: '#38BDF8' }
                 },
                 'modern': {
-                    bgMode: 'radial', stops: [[0, '#2E7BD1'], [0.46, '#16488E'], [1, '#0D2D5E']],
+                    bgMode: 'radial', stops: [[0, '#2E7BD1'], [0.46, '#16488E'], [1, '#0D2D5E']], wallCol: 'rgba(255,255,255,0.055)',
+                    star: { fill: '#FDD34D', stroke: null, sw: 0, soft: 'rgba(8,22,44,0.34)' },
+                    codeA: 'rgba(255,255,255,0.30)', codeB: 'rgba(253,211,77,0.60)', softCol: 'rgba(6,20,44,0.44)',
                     topFill: 'rgba(255,255,255,0.96)', topText: '#12305A', topSub: '#2A82C6', topBorder: 0, topBorderCol: 'transparent', topShadow: 0, topRad: 999,
                     backFill: '#E2EEFF', backBorder: 0, backBorderCol: 'transparent', backShadow: 0,
-                    cardFill: '#FFFFFF', cardText: '#12305A', cardBorder: 0, cardBorderCol: 'transparent', cardShadow: 0, cardRad: 24, softCol: 'rgba(6,20,44,0.44)',
+                    cardFill: '#FFFFFF', cardText: '#12305A', cardBorder: 0, cardBorderCol: 'transparent', cardShadow: 0, cardRad: 24,
+                    handleFam: '"Space Grotesk", sans-serif', uiFam: '"Plus Jakarta Sans", sans-serif',
                     followFill: '#16488E', followText: '#FFFFFF', followBorder: 0, followRad: 999,
-                    mediaBg: 'modernMedia', mediaBorder: 0, mediaBorderCol: 'transparent', mediaRad: 16,
-                    rayCol: 'rgba(255,255,255,0.11)', coreFill: '#103266', coreStroke: 'rgba(253,211,77,0.65)', coreSW: 3,
-                    heroFont: '400 {FS}px "Archivo Black", sans-serif', heroCol: '#FFFFFF', heroStroke: '#FDD34D', heroSW: 0, heroShd: 6, heroShdCol: '#FDD34D',
-                    pillFill: '#CA2C2A', pillText: '#FFFFFF', pillBorder: 0, pillShadow: 0, pillRad: 999, pillFont: '700 23px "Space Grotesk", sans-serif',
-                    uiFont: '"Plus Jakarta Sans", sans-serif', dotCol: '#16488E',
-                    chipFill: 'rgba(255,255,255,0.96)', chipText: '#12305A', chipBorder: 0, chipBorderCol: 'transparent', chipShadow: 0, chipRad: 14,
-                    waveCol: 'rgba(255,255,255,0.14)', barFill: '#0A2044', barText: '#FFFFFF', barIcon: '#FDD34D', barBorder: 'transparent',
+                    mediaFill: { dir: 'diag', stops: [[0, '#1D4D85'], [1, '#16488E']] }, mediaBorder: 0, mediaBorderCol: 'transparent', mediaRad: 16, grid: 'rgba(255,255,255,0.06)',
+                    tbFill: 'rgba(255,255,255,0.96)', tbText: '#12305A', tbBorder: 0, tbBorderCol: 'transparent', wd: ['#CA2C2A', '#FDD34D', '#12305A'], wdBorder: 0, wdRad: 99,
+                    badgeFam: '"Silkscreen", monospace', badgeTrack: 0.10, badgeFill: '#FDD34D', badgeText: '#12305A', badgeBorder: 0, badgeBorderCol: 'transparent', badgeShadow: 0, badgeRad: 999, badgeSoft: 'rgba(6,20,44,0.30)',
+                    heroFam: '"Archivo Black", "Space Grotesk", sans-serif', heroW: 400, heroFill: '#FFFFFF', heroStroke: null, heroSW: 0, heroShd: { off: 9, col: '#FDD34D' }, heroGlow: null,
+                    scriptFill: '#FDD34D', scriptStroke: null, scriptSW: 0, scriptShd: null, scriptGlow: { col: 'rgba(6,20,44,0.45)', blur: 12, sy: 4 },
+                    stFam: '"Space Grotesk", sans-serif', stFill: '#CA2C2A', stBorder: 0, stBorderCol: 'transparent', stShadow: 0, stRad: 16, stSoft: 'rgba(6,20,44,0.40)',
+                    dotCol: '#16488E', barFill: '#0A2044', barText: '#FFFFFF', barIcon: '#FDD34D', barBorder: 'transparent',
                     mega: { hi: '#60A5FA', mid: '#2563EB', dark: '#1E3A8A', deep: '#091834', edge: 'rgba(255,255,255,0.72)', ew: 1.2, wave: '#FDD34D' }
                 }
             };
             const L = L4_THEMES[currentStyle] || L4_THEMES['neubrutalism'];
+            const E = getEffectiveContent();
+            const M = getL4Metrics(E);
+            const is11 = currentRatio === '1-1';
+            const is916 = currentRatio === '9-16';
 
-            // 1. Background + Atmospheric Tech Halo & Wave
+            // 1. Background
             if (L.bgMode === 'radial') {
                 const rad = ctx.createRadialGradient(W * 0.80, H * 0.18, 0, W * 0.80, H * 0.18, Math.max(W, H) * 0.95);
                 L.stops.forEach(([p, c]) => rad.addColorStop(p, c));
@@ -4516,82 +4679,74 @@
                 }
             }
 
-            // Halo + Sparkles + Layered Waves
-            ctx.save(); ctx.scale(W / 1080, H / 1350);
-            ctx.fillStyle = 'rgba(96, 165, 250, 0.12)';
-            ctx.beginPath(); ctx.arc(540, 630, 370, 0, Math.PI * 2); ctx.fill();
+            // 2. Kinetic Wallpaper (DNA Layout 2)
+            const wallFs = is916 ? 190 : (is11 ? 150 : 170);
+            const rowH = wallFs * 0.80;
+            const wallRows = getL2BgRows(E.bgWord1, E.bgWord2);
+            const wallStartY = (H - wallRows.length * rowH) / 2 + rowH * 0.5;
+            wallRows.forEach((line, idx) => {
+                drawTextTrack(line, -40, wallStartY + idx * rowH, `800 ${wallFs}px "Space Grotesk", "Archivo Black", sans-serif`, L.wallCol, -0.04 * wallFs, 'left');
+            });
 
-            ctx.fillStyle = L.waveCol;
-            ctx.beginPath(); ctx.moveTo(0, 1175); ctx.quadraticCurveTo(140, 1105, 290, 1165); ctx.quadraticCurveTo(450, 1225, 610, 1160); ctx.quadraticCurveTo(765, 1100, 920, 1150); ctx.quadraticCurveTo(1010, 1135, 1080, 1165); ctx.lineTo(1080, 1350); ctx.lineTo(0, 1350); ctx.closePath(); ctx.fill();
-            ctx.beginPath(); ctx.moveTo(0, 1225); ctx.quadraticCurveTo(180, 1165, 380, 1215); ctx.quadraticCurveTo(580, 1265, 780, 1210); ctx.quadraticCurveTo(930, 1180, 1080, 1195); ctx.lineTo(1080, 1350); ctx.lineTo(0, 1350); ctx.closePath(); ctx.fill();
-
-            const drawSpark = (cx, cy, s, col, al) => {
-                ctx.save(); ctx.globalAlpha = al; ctx.fillStyle = col;
-                ctx.beginPath(); ctx.moveTo(cx, cy - s); ctx.quadraticCurveTo(cx + s * 0.1, cy - s * 0.1, cx + s, cy);
-                ctx.quadraticCurveTo(cx + s * 0.1, cy + s * 0.1, cx, cy + s); ctx.quadraticCurveTo(cx - s * 0.1, cy + s * 0.1, cx - s, cy);
-                ctx.quadraticCurveTo(cx - s * 0.1, cy - s * 0.1, cx, cy - s); ctx.closePath(); ctx.fill(); ctx.restore();
-            };
-            drawSpark(128, 352, 20, '#FCD34D', 0.82);
-            drawSpark(952, 482, 20, '#FFFFFF', 0.72);
-            drawSpark(940, 1035, 15, '#FCD34D', 0.78);
-            ctx.restore();
-
-            function drawL4Box(x, y, w, h, opts) {
-                if (opts.shadow > 0) {
-                    ctx.fillStyle = '#000000';
-                    rrPath(x + opts.shadow, y + opts.shadow, w, h, opts.radius); ctx.fill();
-                }
+            // 3. 2 Starbursts (DNA Layout 2)
+            const starPts = [[210,12],[248,108],[345,52],[308,148],[408,168],[320,224],[388,308],[282,294],[274,398],[210,322],[146,398],[138,294],[32,308],[100,224],[12,168],[112,148],[75,52],[172,108]];
+            const drawStar = (x, y, size) => {
+                const tracePath = () => {
+                    ctx.beginPath();
+                    starPts.forEach(([px, py], i) => { if (i === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py); });
+                    ctx.closePath();
+                };
                 ctx.save();
-                if (opts.soft) { ctx.shadowColor = opts.soft; ctx.shadowBlur = opts.blur || 32; ctx.shadowOffsetY = opts.sy || 16; }
-                ctx.fillStyle = opts.fill;
-                rrPath(x, y, w, h, opts.radius); ctx.fill();
+                ctx.translate(x, y);
+                ctx.scale(size / 420, size / 420);
+                if (L.star.soft) { ctx.shadowColor = L.star.soft; ctx.shadowBlur = 28 * 420 / size; ctx.shadowOffsetY = 14 * 420 / size; }
+                tracePath();
+                ctx.fillStyle = L.star.fill;
+                ctx.fill();
                 ctx.restore();
-                if (opts.border > 0) {
-                    ctx.lineWidth = opts.border; ctx.strokeStyle = opts.borderCol;
-                    rrPath(x, y, w, h, opts.radius); ctx.stroke();
+                if (L.star.stroke && L.star.sw > 0) {
+                    ctx.save();
+                    ctx.translate(x, y);
+                    ctx.scale(size / 420, size / 420);
+                    tracePath();
+                    ctx.lineJoin = 'round';
+                    ctx.lineWidth = L.star.sw * 420 / size;
+                    ctx.strokeStyle = L.star.stroke;
+                    ctx.stroke();
+                    ctx.restore();
                 }
-            }
+            };
+            const starCfg = is916
+                ? { tr: { s: 330, x: W + 46 - 330, y: 0.11 * H }, bl: { s: 350, x: -60, y: H - 90 - 350 } }
+                : (is11
+                    ? { tr: { s: 240, x: W + 40 - 240, y: 0.12 * H }, bl: { s: 260, x: -50, y: H - 56 - 260 } }
+                    : { tr: { s: 300, x: W + 46 - 300, y: 0.13 * H }, bl: { s: 320, x: -60, y: H - 70 - 320 } });
+            drawStar(starCfg.tr.x, starCfg.tr.y, starCfg.tr.s);
+            drawStar(starCfg.bl.x, starCfg.bl.y, starCfg.bl.s);
 
-            // Floating Tech Chips + Mini Rocket
+            // 4. Unboxed Coding Accents (DNA Layout 1)
             if (showAccents) {
-                const chips = [
-                    ['>_ 2026', 0.06 * W + 56, 0.155 * H + 20, -8],
-                    ['</> IF',  0.935 * W - 52, 0.18 * H + 20, 6],
-                    ['{ HIMA }', 0.04 * W + 62, 0.50 * H + 20, -10]
+                const acc = [
+                    ['>_', 0.07 * W + 38, 0.21 * H + 18, -12, 38, L.codeA],
+                    ['</>', W - 0.05 * W - 48, 0.50 * H + 18, 10, 34, L.codeB],
+                    ['{ }', 0.045 * W + 46, 0.46 * H + 20, 6, 40, L.codeB],
+                    ['//', 0.33 * W + 20, 0.88 * H + 18, -8, 34, L.codeA],
+                    ['01;', W - 0.07 * W - 40, 0.88 * H + 16, 12, 32, L.codeA]
                 ];
-                chips.forEach(([txt, cx, cy, rot]) => {
-                    ctx.save(); ctx.translate(cx, cy); ctx.rotate((rot * Math.PI) / 180);
-                    ctx.font = '800 18px "JetBrains Mono", monospace';
-                    const cw = ctx.measureText(txt).width + 28;
-                    const ch = 40;
-                    drawL4Box(-cw / 2, -ch / 2, cw, ch, { fill: L.chipFill, border: L.chipBorder, borderCol: L.chipBorderCol, shadow: L.chipShadow, radius: L.chipRad, soft: L.softCol, blur: 22, sy: 10 });
-                    drawTextTrack(txt, 0, 1, '800 18px "JetBrains Mono", monospace', L.chipText, 0, 'center');
+                acc.forEach(([txt, ax, ay, rot, sz, col]) => {
+                    ctx.save();
+                    ctx.translate(ax, ay);
+                    ctx.rotate((rot * Math.PI) / 180);
+                    ctx.font = `800 ${sz}px "JetBrains Mono", monospace`;
+                    ctx.fillStyle = col;
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'middle';
+                    ctx.fillText(txt, 0, 0);
                     ctx.restore();
                 });
             }
 
-            // Mini Rocket Bottom-Left
-            ctx.save();
-            ctx.translate(116, H - 132);
-            ctx.rotate((-12 * Math.PI) / 180);
-            ctx.translate(-55, -55);
-            ctx.shadowColor = 'rgba(8,22,44,0.34)'; ctx.shadowBlur = 18; ctx.shadowOffsetY = 10;
-            ctx.fillStyle = '#FCD34D'; ctx.beginPath(); ctx.moveTo(34,74); ctx.lineTo(14,96); ctx.lineTo(28,84); ctx.lineTo(20,102); ctx.lineTo(44,82); ctx.closePath(); ctx.fill();
-            ctx.shadowColor = 'transparent';
-            ctx.fillStyle = '#EF4444'; ctx.beginPath(); ctx.moveTo(35,76); ctx.lineTo(22,92); ctx.lineTo(40,80); ctx.closePath(); ctx.fill();
-            ctx.fillStyle = '#CA2C2A'; ctx.strokeStyle = '#0F264A'; ctx.lineWidth = 2;
-            ctx.beginPath(); ctx.moveTo(40,60); ctx.lineTo(20,66); ctx.lineTo(34,76); ctx.closePath(); ctx.fill(); ctx.stroke();
-            ctx.beginPath(); ctx.moveTo(52,72); ctx.lineTo(46,92); ctx.lineTo(36,78); ctx.closePath(); ctx.fill(); ctx.stroke();
-            ctx.fillStyle = '#FFFFFF'; ctx.lineWidth = 2.5;
-            ctx.beginPath(); ctx.moveTo(84,22); ctx.bezierCurveTo(66,24,44,40,34,68); ctx.lineTo(44,78); ctx.bezierCurveTo(72,68,88,46,90,28); ctx.closePath(); ctx.fill(); ctx.stroke();
-            ctx.fillStyle = '#2563EB';
-            ctx.beginPath(); ctx.moveTo(84,22); ctx.bezierCurveTo(76,23,68,27,61,33); ctx.lineTo(79,51); ctx.bezierCurveTo(85,44,89,36,90,28); ctx.closePath(); ctx.fill();
-            ctx.fillStyle = '#38BDF8'; ctx.beginPath(); ctx.arc(58, 52, 8, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
-            ctx.restore();
-
-            // 2. Top Dual-Logo Header Pill
-            const is11 = currentRatio === '1-1';
-            const is916 = currentRatio === '9-16';
+            // 5. Top Dual-Logo Header Pill
             const topY = is916 ? 66 : (is11 ? 24 : 38);
             const logoS = is916 ? 52 : (is11 ? 34 : 44);
             const pillPy = is916 ? 12 : (is11 ? 7 : 10);
@@ -4600,7 +4755,7 @@
             ctx.font = '700 20px "Space Grotesk", sans-serif';
             const titleW = Math.max(ctx.measureText('HIMA INFORMATIKA').width + 18, 220);
             const topW = pillPx * 2 + logoS * 2 + 28 + titleW;
-            drawL4Box((W - topW) / 2, topY, topW, pillH, {
+            drawBox((W - topW) / 2, topY, topW, pillH, {
                 fill: L.topFill, border: L.topBorder, borderCol: L.topBorderCol, shadow: L.topShadow, radius: L.topRad, soft: L.softCol, blur: 28, sy: 12
             });
             const drawOrgImg = (ix, iy, s, img) => {
@@ -4613,14 +4768,11 @@
             drawTextTrack('HIMA INFORMATIKA', W / 2, topY + pillH / 2 - 9, '700 20px "Space Grotesk", sans-serif', L.topText, 0.8, 'center');
             drawTextTrack('IDE LPKIA BANDUNG', W / 2, topY + pillH / 2 + 11, '800 12px "Plus Jakarta Sans", sans-serif', L.topSub, 2.4, 'center');
 
-            // 3. Bottom Social Bar
+            // 6. Bottom Social Strip Bar
             const barH = is916 ? 62 : (is11 ? 48 : 54);
             const barY = H - barH;
             ctx.fillStyle = L.barFill; ctx.fillRect(0, barY, W, barH);
-            if (L.barBorder !== 'transparent') {
-                ctx.fillStyle = L.barBorder; ctx.fillRect(0, barY, W, 3);
-            }
-            const E = getEffectiveContent();
+            if (L.barBorder !== 'transparent') { ctx.fillStyle = L.barBorder; ctx.fillRect(0, barY, W, 3); }
             const barMidY = barY + barH / 2;
             const barPad = is916 ? 42 : (is11 ? 28 : 36);
             ctx.strokeStyle = L.barIcon; ctx.lineWidth = 2.4;
@@ -4628,7 +4780,6 @@
             ctx.beginPath(); ctx.arc(barPad + 12, barMidY, 5.2, 0, Math.PI * 2); ctx.stroke();
             ctx.fillStyle = L.barIcon; ctx.beginPath(); ctx.arc(barPad + 18, barMidY - 6, 1.4, 0, Math.PI * 2); ctx.fill();
             drawTextTrack(E.igHandle, barPad + 34, barMidY + 1, '700 19px "Space Grotesk", sans-serif', L.barText, 0.3, 'left');
-
             ctx.font = '700 18px "Space Grotesk", sans-serif';
             const ctaW = ctx.measureText(E.cta).width + 12;
             const gX = W - barPad - ctaW - 22;
@@ -4638,138 +4789,169 @@
             ctx.beginPath(); ctx.ellipse(gX, barMidY, 4.5, 10, 0, 0, Math.PI * 2); ctx.stroke();
             drawTextTrack(E.cta, gX + 20, barMidY + 1, '700 18px "Space Grotesk", sans-serif', L.barText, 0.5, 'left');
 
-            // 4. Tilted 2-Layer Instagram Post Stack
-            const stDim = is916 ? { w: 740, h: 790, hdrH: 76, mx: 20, ftrH: 150, mega: 230, rOff: -56, bOff: 104 }
-                : (is11 ? { w: 560, h: 556, hdrH: 58, mx: 16, ftrH: 124, mega: 168, rOff: -42, bOff: 62 }
-                : { w: 670, h: 690, hdrH: 72, mx: 20, ftrH: 144, mega: 210, rOff: -52, bOff: 84 });
-
+            // 7. Tilted Stacked Instagram Card
+            const S = is916 ? { cw: 760, ch: 820, hdrH: 82, ftrH: 150, mxm: 20, avS: 40 }
+                : (is11 ? { cw: 640, ch: 640, hdrH: 64, ftrH: 124, mxm: 16, avS: 34 }
+                : { cw: 700, ch: 740, hdrH: 76, ftrH: 140, mxm: 20, avS: 40 });
+            const P = is916 ? { mega: 230, r: 56, b: 104 } : (is11 ? { mega: 180, r: 46, b: 70 } : { mega: 210, r: 52, b: 84 });
             const stackCX = W / 2;
             const areaTop = topY + pillH;
-            const areaBot = barY;
-            const stackCY = areaTop + (areaBot - areaTop) / 2;
+            const stackCY = areaTop + (barY - areaTop) / 2;
 
-            // Back Layer Card
+            // Back card
             ctx.save();
             ctx.translate(stackCX + 16, stackCY - 6);
             ctx.rotate((4.2 * Math.PI) / 180);
-            drawL4Box(-stDim.w / 2, -stDim.h / 2, stDim.w, stDim.h, {
+            drawBox(-S.cw / 2, -S.ch / 2, S.cw, S.ch, {
                 fill: L.backFill, border: L.backBorder, borderCol: L.backBorderCol, shadow: L.backShadow, radius: L.cardRad, soft: L.softCol, blur: 36, sy: 18
             });
             ctx.restore();
 
-            // Front Main IG Card
+            // Front card
             ctx.save();
             ctx.translate(stackCX, stackCY);
             ctx.rotate((-2.2 * Math.PI) / 180);
-            const cx0 = -stDim.w / 2;
-            const cy0 = -stDim.h / 2;
-            drawL4Box(cx0, cy0, stDim.w, stDim.h, {
+            const cx0 = -S.cw / 2;
+            const cy0 = -S.ch / 2;
+            drawBox(cx0, cy0, S.cw, S.ch, {
                 fill: L.cardFill, border: L.cardBorder, borderCol: L.cardBorderCol, shadow: L.cardShadow, radius: L.cardRad, soft: L.softCol, blur: 48, sy: 22
             });
 
-            // Card Header
-            const avS = is11 ? 34 : 40;
+            // Header: avatar + handle + verified
+            const hdrMidY = cy0 + S.hdrH / 2;
             const avX = cx0 + 20;
-            const avY = cy0 + (stDim.hdrH - avS) / 2;
+            const avY = hdrMidY - S.avS / 2;
             ctx.fillStyle = '#FFFFFF';
-            ctx.beginPath(); ctx.arc(avX + avS / 2, avY + avS / 2, avS / 2, 0, Math.PI * 2); ctx.fill();
+            ctx.beginPath(); ctx.arc(avX + S.avS / 2, hdrMidY, S.avS / 2, 0, Math.PI * 2); ctx.fill();
             ctx.strokeStyle = '#CBD5E1'; ctx.lineWidth = 1.5; ctx.stroke();
             if (himaImg) {
                 const pad = 4;
-                const sc = Math.min((avS - pad * 2) / himaImg.width, (avS - pad * 2) / himaImg.height);
-                ctx.drawImage(himaImg, avX + (avS - himaImg.width * sc) / 2, avY + (avS - himaImg.height * sc) / 2, himaImg.width * sc, himaImg.height * sc);
+                const sc = Math.min((S.avS - pad * 2) / himaImg.width, (S.avS - pad * 2) / himaImg.height);
+                ctx.drawImage(himaImg, avX + (S.avS - himaImg.width * sc) / 2, avY + (S.avS - himaImg.height * sc) / 2, himaImg.width * sc, himaImg.height * sc);
             }
-            const igX = avX + avS + 12;
-            const hdrMidY = cy0 + stDim.hdrH / 2;
-            drawTextTrack(E.igHandle, igX, hdrMidY + 1, '700 21px "Space Grotesk", sans-serif', L.cardText, 0, 'left');
-            ctx.font = '700 21px "Space Grotesk", sans-serif';
-            const vX = igX + ctx.measureText(E.igHandle).width + 14;
+            const handleX = cx0 + (is11 ? 66 : 72);
+            drawTextTrack(E.igHandle, handleX, hdrMidY + 1, `700 21px ${L.handleFam}`, L.cardText, 0, 'left');
+            ctx.font = `700 21px ${L.handleFam}`;
+            const vX = handleX + ctx.measureText(E.igHandle).width + 8 + 9;
             ctx.fillStyle = '#1D9BF0'; ctx.beginPath(); ctx.arc(vX, hdrMidY, 9, 0, Math.PI * 2); ctx.fill();
-            ctx.strokeStyle = '#FFFFFF'; ctx.lineWidth = 2.2; ctx.lineCap = 'round';
+            ctx.strokeStyle = '#FFFFFF'; ctx.lineWidth = 2.2; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
             ctx.beginPath(); ctx.moveTo(vX - 4, hdrMidY); ctx.lineTo(vX - 1, hdrMidY + 3); ctx.lineTo(vX + 4.5, hdrMidY - 3); ctx.stroke();
 
-            // Follow pill
+            // Follow button + more dots
             const fw = 86; const fh = 32;
-            drawL4Box(cx0 + stDim.w - 64 - fw, hdrMidY - fh / 2, fw, fh, {
+            const fcx = cx0 + S.cw - 64 - fw / 2;
+            drawBox(fcx - fw / 2, hdrMidY - fh / 2, fw, fh, {
                 fill: L.followFill, border: L.followBorder, borderCol: '#000000', shadow: 0, radius: L.followRad
             });
-            drawTextTrack('Follow', cx0 + stDim.w - 64 - fw / 2, hdrMidY + 1, '800 15px "Plus Jakarta Sans", sans-serif', L.followText, 0.3, 'center');
-            drawTextTrack('•••', cx0 + stDim.w - 24, hdrMidY + 1, '800 18px sans-serif', L.cardText, 1, 'right');
+            drawTextTrack('Follow', fcx, hdrMidY + 1, '800 15px "Plus Jakarta Sans", sans-serif', L.followText, 0.3, 'center');
+            drawTextTrack('•••', cx0 + S.cw - 24, hdrMidY + 1, '800 18px sans-serif', L.cardText, 1, 'right');
 
-            // Media Sunburst Frame
-            const mX = cx0 + stDim.mx;
-            const mY = cy0 + stDim.hdrH;
-            const mW = stDim.w - stDim.mx * 2;
-            const mH = stDim.h - stDim.hdrH - stDim.ftrH;
-
+            // Retro Window Media Frame
+            const mX = cx0 + S.mxm;
+            const mY = cy0 + S.hdrH;
+            const mW = S.cw - S.mxm * 2;
+            const mH = S.ch - S.hdrH - S.ftrH;
+            const tbH = 36;
             ctx.save();
             rrPath(mX, mY, mW, mH, L.mediaRad);
-            if (L.mediaBg === 'glassMedia') {
-                const mg = ctx.createLinearGradient(mX, mY, mX + mW, mY + mH);
-                mg.addColorStop(0, '#1E40AF'); mg.addColorStop(0.55, '#2563EB'); mg.addColorStop(1, '#3B82F6');
-                ctx.fillStyle = mg;
-            } else if (L.mediaBg === 'modernMedia') {
-                const mg = ctx.createLinearGradient(mX, mY, mX + mW * 0.4, mY + mH);
-                mg.addColorStop(0, '#16488E'); mg.addColorStop(1, '#2468BD');
-                ctx.fillStyle = mg;
-            } else {
-                ctx.fillStyle = L.mediaBg;
-            }
+            ctx.fillStyle = resolveFill(L.mediaFill, mX, mY, mW, mH);
             ctx.fill();
             ctx.clip();
 
-            const mcX = mX + mW / 2;
-            const mcY = mY + mH / 2;
-            const rayR = Math.max(mW, mH);
-            ctx.fillStyle = L.rayCol;
-            for (let i = 0; i < 16; i++) {
-                ctx.save();
-                ctx.translate(mcX, mcY);
-                ctx.rotate((i * 22.5 * Math.PI) / 180);
-                ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(-rayR * 0.11, -rayR); ctx.lineTo(rayR * 0.11, -rayR); ctx.closePath(); ctx.fill();
-                ctx.restore();
-            }
-            ctx.fillStyle = L.coreFill;
-            ctx.beginPath(); ctx.arc(mcX, mcY, Math.min(mW, mH) * 0.30, 0, Math.PI * 2); ctx.fill();
-            if (L.coreSW > 0) {
-                ctx.lineWidth = L.coreSW; ctx.strokeStyle = L.coreStroke; ctx.stroke();
+            // Grid (DNA Layout 1)
+            ctx.strokeStyle = L.grid; ctx.lineWidth = 1;
+            for (let gx = mX; gx < mX + mW; gx += 26) { ctx.beginPath(); ctx.moveTo(gx, mY); ctx.lineTo(gx, mY + mH); ctx.stroke(); }
+            for (let gy = mY; gy < mY + mH; gy += 26) { ctx.beginPath(); ctx.moveTo(mX, gy); ctx.lineTo(mX + mW, gy); ctx.stroke(); }
+
+            // Window title bar: dots + file name
+            ctx.fillStyle = resolveFill(L.tbFill, mX, mY, mW, tbH);
+            ctx.fillRect(mX, mY, mW, tbH);
+            if (L.tbBorder > 0) { ctx.fillStyle = L.tbBorderCol; ctx.fillRect(mX, mY + tbH - L.tbBorder, mW, L.tbBorder); }
+            L.wd.forEach((col, i) => {
+                const dx = mX + 14 + i * 22;
+                const dy = mY + tbH / 2 - 7;
+                ctx.fillStyle = col;
+                if (L.wdRad === 0) {
+                    ctx.fillRect(dx, dy, 14, 14);
+                    if (L.wdBorder > 0) { ctx.lineWidth = L.wdBorder; ctx.strokeStyle = '#000000'; ctx.strokeRect(dx + L.wdBorder / 2, dy + L.wdBorder / 2, 14 - L.wdBorder, 14 - L.wdBorder); }
+                } else {
+                    ctx.beginPath(); ctx.arc(dx + 7, dy + 7, 7, 0, Math.PI * 2); ctx.fill();
+                }
+            });
+            drawTextTrack(M.fileName, mX + 90, mY + tbH / 2 + 1, '800 14px "JetBrains Mono", monospace', L.tbText, 0.56, 'left');
+
+            // Corner code accents inside media
+            if (showAccents) {
+                drawTextTrack('>_', mX + 16, mY + mH - 22, '800 22px "JetBrains Mono", monospace', L.codeB, 0, 'left');
+                drawTextTrack('01;', mX + mW - 16, mY + mH - 22, '800 22px "JetBrains Mono", monospace', L.codeB, 0, 'right');
             }
 
-            // Center Hero + Pill
-            const heroStr = E.isCS ? 'COMING SOON' : E.hero;
-            const l4Scale = is916 ? 1.1 : (is11 ? 0.78 : 1);
-            const hFs = Math.round((heroStr.length >= 10 ? 60 : (heroStr.length >= 7 ? 90 : (heroStr.length >= 5 ? 128 : 162))) * l4Scale);
-            const heroFontSpec = L.heroFont.replace('{FS}', hFs);
-            const hY = mcY - 20 * l4Scale;
+            // Content stack: badge -> hero -> script (overlap) -> stamp
+            const mcx = mX + mW / 2;
+            const bodyTop = mY + tbH;
+            const bodyH = mH - tbH;
+            const badgeH = M.badgeFs + M.badgePy * 2;
+            const lineH = Math.round(M.heroFs * 0.9);
+            const heroH = lineH * M.heroLines.length;
+            const stH = M.stFs + M.stPy * 2;
+            const scriptNet = E.isCS ? 10 : (M.scriptFs - 72);
+            const totalH = badgeH + 14 + heroH + scriptNet + stH;
+            const y0 = bodyTop + (bodyH - totalH) / 2 - 6;
+            const heroTop = y0 + badgeH + 14;
+            const stampTop = heroTop + heroH + scriptNet;
 
+            // Badge (pixel tag miring)
+            ctx.font = `700 ${M.badgeFs}px ${L.badgeFam}`;
+            const bTrack = L.badgeTrack * M.badgeFs;
+            const bTxtW = ctx.measureText(M.badgeTxt).width + bTrack * Math.max(0, M.badgeTxt.length - 1);
+            const bW = bTxtW + M.badgePx * 2;
             ctx.save();
-            ctx.font = heroFontSpec; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.lineJoin = 'round'; ctx.lineCap = 'round';
-            if (L.heroShd > 0) {
-                if (L.heroSW > 0) { ctx.lineWidth = L.heroSW; ctx.strokeStyle = L.heroShdCol || '#000000'; ctx.strokeText(heroStr, mcX + L.heroShd, hY + L.heroShd); }
-                ctx.fillStyle = L.heroShdCol || '#000000'; ctx.fillText(heroStr, mcX + L.heroShd, hY + L.heroShd);
-            } else if (L.heroGlow) {
-                ctx.shadowColor = L.heroGlow; ctx.shadowBlur = 18; ctx.shadowOffsetY = 8;
-            }
-            if (L.heroSW > 0 && L.heroStroke) { ctx.lineWidth = L.heroSW; ctx.strokeStyle = L.heroStroke; ctx.strokeText(heroStr, mcX, hY); }
-            if (L.heroCol === 'glassWhiteGrad') {
-                const hg = ctx.createLinearGradient(0, hY - hFs * 0.45, 0, hY + hFs * 0.45);
-                hg.addColorStop(0, '#FFFFFF'); hg.addColorStop(1, '#DBEAFE');
-                ctx.fillStyle = hg;
-            } else { ctx.fillStyle = L.heroCol; }
-            ctx.fillText(heroStr, mcX, hY);
+            ctx.translate(mcx, y0 + badgeH / 2);
+            ctx.rotate((-2 * Math.PI) / 180);
+            drawBox(-bW / 2, -badgeH / 2, bW, badgeH, {
+                fill: L.badgeFill, border: L.badgeBorder, borderCol: L.badgeBorderCol, shadow: L.badgeShadow, radius: L.badgeRad, soft: L.badgeSoft, blur: 22, sy: 10
+            });
+            drawTextTrack(M.badgeTxt, 0, 1, `700 ${M.badgeFs}px ${L.badgeFam}`, L.badgeText, bTrack, 'center');
             ctx.restore();
 
-            // Sub Pill
-            const pillTxt = E.isCS ? `${E.title} • STAY TUNED` : `${E.mn || 'MENUJU'} ${E.title}`;
-            ctx.font = L.pillFont;
-            const subW = ctx.measureText(pillTxt).width + Math.max(0, pillTxt.length - 1) * 2.2 + 48;
-            const subH = 44 * (is11 ? 0.88 : 1);
-            const subY = hY + hFs * 0.48 + 4;
-            ctx.save(); ctx.translate(mcX, subY); ctx.rotate((-1 * Math.PI) / 180);
-            drawL4Box(-subW / 2, -subH / 2, subW, subH, {
-                fill: L.pillFill, border: L.pillBorder, borderCol: '#000000', shadow: L.pillShadow, radius: L.pillRad, soft: L.softCol, blur: 20, sy: 8
+            // Hero lines
+            M.heroLines.forEach((line, i) => {
+                drawWord(line, mcx, heroTop + lineH * (i + 0.5), {
+                    font: `${L.heroW} ${M.heroFs}px ${L.heroFam}`, track: -0.01 * M.heroFs, fill: L.heroFill, stroke: L.heroStroke,
+                    sw: L.heroSW, shd: L.heroShd, glow: L.heroGlow, fs: M.heroFs
+                });
             });
-            drawTextTrack(pillTxt, 0, 1, L.pillFont, L.pillText, 2.0, 'center');
+
+            // Script overlap (hanya mode countdown)
+            if (!E.isCS && M.script) {
+                ctx.save();
+                ctx.translate(mcx, heroTop + heroH - 60 + M.scriptFs / 2);
+                ctx.rotate((-4 * Math.PI) / 180);
+                drawWord(M.script, 0, 0, {
+                    font: `400 ${M.scriptFs}px "Yellowtail", cursive`, track: 0, fill: L.scriptFill, stroke: L.scriptStroke,
+                    sw: L.scriptSW, shd: L.scriptShd, glow: L.scriptGlow, fs: M.scriptFs
+                });
+                ctx.restore();
+            }
+
+            // Stamp tilted
+            ctx.font = `700 ${M.stFs}px ${L.stFam}`;
+            const sTrack = 0.07 * M.stFs;
+            const sTxtW = ctx.measureText(M.stampTxt).width + sTrack * Math.max(0, M.stampTxt.length - 1);
+            const iconS = M.stFs * 0.9;
+            const sW = M.stPx * 2 + iconS + 12 + sTxtW;
+            ctx.save();
+            ctx.translate(mcx, stampTop + stH / 2);
+            ctx.rotate((1.5 * Math.PI) / 180);
+            drawBox(-sW / 2, -stH / 2, sW, stH, {
+                fill: L.stFill, border: L.stBorder, borderCol: L.stBorderCol, shadow: L.stShadow, radius: L.stRad, soft: L.stSoft, blur: 22, sy: 10
+            });
+            const icx = -sW / 2 + M.stPx + iconS / 2;
+            const icr = iconS * 0.42;
+            ctx.strokeStyle = '#FFFFFF'; ctx.lineWidth = Math.max(2.4, M.stFs * 0.08); ctx.lineCap = 'round';
+            ctx.beginPath(); ctx.arc(icx, 0, icr, 0, Math.PI * 2); ctx.stroke();
+            ctx.beginPath(); ctx.moveTo(icx, -icr * 0.55); ctx.lineTo(icx, 0); ctx.lineTo(icx + icr * 0.45, icr * 0.3); ctx.stroke();
+            drawTextTrack(M.stampTxt, -sW / 2 + M.stPx + iconS + 12, 1, `700 ${M.stFs}px ${L.stFam}`, '#FFFFFF', sTrack, 'left');
             ctx.restore();
             ctx.restore();
 
@@ -4778,68 +4960,87 @@
                 rrPath(mX, mY, mW, mH, L.mediaRad); ctx.stroke();
             }
 
-            // Card Footer Actions + Likes + Caption
-            const fY = cy0 + stDim.h - stDim.ftrH;
+            // 8-Bit Pixel Cursor menunjuk tombol Follow (DNA Layout 2)
+            const curUnit = 3.4;
+            const curPalette = L2_CURSOR_PALETTES[currentStyle] || L2_CURSOR_PALETTES['neubrutalism'];
+            ctx.save();
+            ctx.shadowColor = 'rgba(0,0,0,0.30)'; ctx.shadowBlur = 3; ctx.shadowOffsetX = 2; ctx.shadowOffsetY = 4;
+            L2_CURSOR_MAP.forEach((row, ry) => {
+                for (let rx = 0; rx < row.length; rx++) {
+                    const col = curPalette[row[rx]];
+                    if (!col) continue;
+                    ctx.fillStyle = col;
+                    ctx.fillRect(Math.round(fcx + 8 + rx * curUnit), Math.round(hdrMidY + 8 + ry * curUnit), Math.ceil(curUnit), Math.ceil(curUnit));
+                }
+            });
+            ctx.restore();
+
+            // Footer: actions + likes + caption + lokasi
+            const fY = cy0 + S.ch - S.ftrH;
             const actY = fY + 26;
             const actX = cx0 + 24;
             ctx.fillStyle = '#EF4444';
-            ctx.beginPath(); ctx.moveTo(actX + 12, actY + 10); ctx.bezierCurveTo(actX - 4, actY, actX - 2, actY - 12, actX + 6, actY - 12); ctx.bezierCurveTo(actX + 10, actY - 12, actX + 12, actY - 8, actX + 12, actY - 6); ctx.bezierCurveTo(actX + 12, actY - 8, actX + 14, actY - 12, actX + 18, actY - 12); ctx.bezierCurveTo(actX + 26, actY - 12, actX + 28, actY, actX + 12, actY + 10); ctx.fill();
-            ctx.strokeStyle = L.cardText; ctx.lineWidth = 2;
-            ctx.beginPath(); ctx.arc(actX + 52, actY - 1, 10, 0, Math.PI * 2); ctx.stroke();
-            ctx.beginPath(); ctx.moveTo(actX + 80, actY - 9); ctx.lineTo(actX + 100, actY - 2); ctx.lineTo(actX + 86, actY + 9); ctx.closePath(); ctx.stroke();
-
+            ctx.beginPath(); ctx.moveTo(actX + 14, actY + 12); ctx.bezierCurveTo(actX - 4, actY, actX - 2, actY - 14, actX + 7, actY - 14); ctx.bezierCurveTo(actX + 11, actY - 14, actX + 14, actY - 10, actX + 14, actY - 8); ctx.bezierCurveTo(actX + 14, actY - 10, actX + 17, actY - 14, actX + 21, actY - 14); ctx.bezierCurveTo(actX + 30, actY - 14, actX + 32, actY, actX + 14, actY + 12); ctx.fill();
+            ctx.strokeStyle = L.cardText; ctx.lineWidth = 2; ctx.lineJoin = 'round';
+            ctx.beginPath(); ctx.arc(actX + 56, actY - 1, 11, 0, Math.PI * 2); ctx.stroke();
+            ctx.beginPath(); ctx.moveTo(actX + 86, actY - 10); ctx.lineTo(actX + 108, actY - 2); ctx.lineTo(actX + 92, actY + 10); ctx.closePath(); ctx.stroke();
             for (let d = 0; d < 4; d++) {
                 ctx.save();
                 ctx.fillStyle = d === 0 ? L.dotCol : L.cardText;
                 ctx.globalAlpha = d === 0 ? 1 : 0.25;
-                ctx.beginPath(); ctx.arc(cx0 + stDim.w / 2 + d * 14, actY, d === 0 ? 5 : 4, 0, Math.PI * 2); ctx.fill();
+                ctx.beginPath(); ctx.arc(cx0 + S.cw / 2 + 5 + d * 14, actY, d === 0 ? 5 : 4, 0, Math.PI * 2); ctx.fill();
                 ctx.restore();
             }
-
-            drawTextTrack('1,024 likes', cx0 + 24, fY + 56, `800 16px ${L.uiFont}`, L.cardText, 0, 'left');
+            drawTextTrack('1,024 likes', cx0 + 24, fY + 58, `800 16px ${L.uiFam}`, L.cardText, 0, 'left');
             const capLead = E.igHandle + '  ';
-            ctx.font = `800 16px ${L.uiFont}`;
+            ctx.font = `800 16px ${L.uiFam}`;
             const leadW = ctx.measureText(capLead).width;
-            drawTextTrack(capLead, cx0 + 24, fY + 84, `800 16px ${L.uiFont}`, L.cardText, 0, 'left');
-            const bodyTxt = E.isCS
-                ? `Coming Soon — ${toTitleCase(E.title)} HIMA Informatika IDE LPKIA! Stay tuned!`
-                : `${toTitleCase(E.title)} HIMA IF • ${toTitleCase(E.date)} (${E.time})`;
-            drawTextTrack(bodyTxt, cx0 + 24 + leadW, fY + 84, `600 15.5px ${L.uiFont}`, L.cardText, 0, 'left');
+            drawTextTrack(capLead, cx0 + 24, fY + 83, `800 16px ${L.uiFam}`, L.cardText, 0, 'left');
+            drawTextTrack(M.caption, cx0 + 24 + leadW, fY + 83, `600 16px ${L.uiFam}`, L.cardText, 0, 'left');
             if (!E.isCS) {
-                drawTextTrack(`📍 ${toTitleCase(E.loc)}`, cx0 + 24, fY + 109, `700 15.5px ${L.uiFont}`, L.cardText, 0, 'left');
+                const px = cx0 + 24;
+                const py = fY + 108;
+                ctx.save();
+                ctx.translate(px + 8, py);
+                ctx.fillStyle = '#EF4444';
+                ctx.beginPath(); ctx.arc(0, -2, 6.5, Math.PI, 0, false); ctx.quadraticCurveTo(6.5, 2, 0, 9); ctx.quadraticCurveTo(-6.5, 2, -6.5, -2); ctx.closePath(); ctx.fill();
+                ctx.fillStyle = '#FFFFFF'; ctx.beginPath(); ctx.arc(0, -2, 2.4, 0, Math.PI * 2); ctx.fill();
+                ctx.restore();
+                drawTextTrack(toTitleCase(E.loc), px + 22, py + 1, `700 15.5px ${L.uiFam}`, L.cardText, 0, 'left');
             }
+            ctx.restore();
 
-            // Corner Overlay Props: Bell + 3D Megaphone
+            // 9. Props: Notification Bell + 3D Megaphone (nempel di sudut kanan-bawah kartu)
+            const MP = L.mega;
+            const pX = stackCX + S.cw / 2 + P.r - P.mega / 2;
+            const pY = stackCY + S.ch / 2 - P.b - P.mega / 2;
             ctx.save();
-            const pX = cx0 + stDim.w - stDim.rOff - stDim.mega * 0.45;
-            const pY = cy0 + stDim.h - stDim.bOff - stDim.mega * 0.45;
             ctx.translate(pX, pY);
             ctx.rotate((-10 * Math.PI) / 180);
-            ctx.scale(stDim.mega / 220, stDim.mega / 220);
+            ctx.scale(P.mega / 220, P.mega / 220);
             ctx.translate(-110, -110);
 
-            const MP = L.mega;
             ctx.save(); ctx.strokeStyle = MP.wave; ctx.lineCap = 'round';
-            [[174, 88, 190, 108, 174, 128, 4.5, 0.9], [189, 74, 212, 108, 189, 142, 4, 0.65]].forEach(([x0, y0, cx, cy, x1, y1, lw, al]) => {
-                ctx.globalAlpha = al; ctx.lineWidth = lw; ctx.beginPath(); ctx.moveTo(x0, y0); ctx.quadraticCurveTo(cx, cy, x1, y1); ctx.stroke();
+            [[174, 88, 190, 108, 174, 128, 4.5, 0.9], [189, 74, 212, 108, 189, 142, 4, 0.65]].forEach(([x0, y0, qx, qy, x1, y1, lw, al]) => {
+                ctx.globalAlpha = al; ctx.lineWidth = lw; ctx.beginPath(); ctx.moveTo(x0, y0); ctx.quadraticCurveTo(qx, qy, x1, y1); ctx.stroke();
             });
             ctx.restore();
 
             ctx.shadowColor = 'rgba(7,20,44,0.38)'; ctx.shadowBlur = 20; ctx.shadowOffsetY = 14;
-            // Notification Bell clearly visible beside upper-right rim
+            // Notification Bell
             ctx.save(); ctx.translate(184, 20); ctx.rotate((18 * Math.PI) / 180); ctx.translate(-32, -32);
             const bG = ctx.createLinearGradient(10, 10, 54, 54);
             bG.addColorStop(0, '#FEF08A'); bG.addColorStop(0.55, '#F59E0B'); bG.addColorStop(1, '#B45309');
             ctx.fillStyle = '#B45309'; ctx.beginPath(); ctx.arc(32, 54, 7, 0, Math.PI * 2); ctx.fill();
-            ctx.fillStyle = bG; ctx.strokeStyle = '#78350F'; ctx.lineWidth = 2;
+            ctx.fillStyle = bG; ctx.strokeStyle = '#78350F'; ctx.lineWidth = 2; ctx.lineJoin = 'round';
             ctx.beginPath(); ctx.moveTo(16, 42); ctx.quadraticCurveTo(16, 14, 32, 14); ctx.quadraticCurveTo(48, 14, 48, 42); ctx.lineTo(54, 50); ctx.lineTo(10, 50); ctx.closePath(); ctx.fill(); ctx.stroke();
             ctx.fillStyle = '#F59E0B'; ctx.beginPath(); ctx.arc(32, 11, 4, 0, Math.PI * 2); ctx.fill();
             ctx.restore();
 
-            // Megaphone Body
+            // Megaphone
             const mG = ctx.createLinearGradient(16, 78, 151, 184);
             mG.addColorStop(0, MP.hi); mG.addColorStop(0.52, MP.mid); mG.addColorStop(1, MP.dark);
-            ctx.fillStyle = mG; ctx.strokeStyle = MP.edge; ctx.lineWidth = MP.ew;
+            ctx.fillStyle = mG; ctx.strokeStyle = MP.edge; ctx.lineWidth = MP.ew; ctx.lineJoin = 'round';
             ctx.beginPath(); ctx.moveTo(52, 126); ctx.lineTo(74, 128); ctx.lineTo(66, 176); ctx.quadraticCurveTo(64, 185, 52, 184); ctx.lineTo(44, 182); ctx.quadraticCurveTo(37, 180, 40, 170); ctx.closePath(); ctx.fill(); if (MP.ew > 0) ctx.stroke();
             ctx.shadowColor = 'transparent';
             rrPath(16, 88, 22, 40, 10); ctx.fill(); if (MP.ew > 0) ctx.stroke();
@@ -4856,7 +5057,6 @@
             ctx.beginPath(); ctx.ellipse(151, 108, 23, 74, 0, 0, Math.PI * 2); ctx.fill(); if (MP.ew > 0) ctx.stroke();
             ctx.fillStyle = MP.deep; ctx.beginPath(); ctx.ellipse(153, 108, 15, 59, 0, 0, Math.PI * 2); ctx.fill();
             ctx.fillStyle = mG; ctx.beginPath(); ctx.ellipse(144, 108, 7, 18, 0, 0, Math.PI * 2); ctx.fill();
-            ctx.restore();
             ctx.restore();
 
             return canvas;
