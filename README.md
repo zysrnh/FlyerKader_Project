@@ -54,7 +54,7 @@ FlyerKader_Project/
 
 - **Switcher Layout:** `Layout 1 (Countdown Card)`, `Layout 2 (Retro Pop-up)`, `Layout 3 (Bubble Pop — Biru HIMA IF)`, `Layout 4 (IG Feed Stack)`, dan `Layout 5 (Pinned Note — Mading Pin 3D)`
 - **3 Logo Resmi Terintegrasi:** `HIMA Informatika`, `IDE LPKIA`, dan `Kabinet Aksara Nirmana` terpasang di seluruh Layout 1–5 (plus opsional override logo ke-3 di Layout 2)
-- **Mode / Preset Konten:** `H-7`, `H-3`, `H-1`, `HARI H`, **`COMING SOON`**, dan **`LIVE REPORT (Frame Bolong 1–5)`** — otomatis memilih format **IG Story `9:16` (`1080x1920`)** (tetap bisa diganti ke `4:5` / `1:1`) dengan viewport tengah transparan penuh (`RGBA alpha = 0`) siap ditempel foto/story di Instagram/Canva/CapCut, lengkap dengan field **Label Live** (`LIVE REPORT`, `ON AIR`, dll) & **Judul / Topik Live** besar yang bisa diubah-ubah serta opsional upload foto preview/composite
+- **Mode / Preset Konten:** `H-7`, `H-3`, `H-1`, `HARI H`, **`COMING SOON`**, dan **`LIVE REPORT (Frame Bolong 1–5)`** — otomatis memilih format **IG Story `9:16` (`1080x1920`)** dengan bingkai tipis full satu latar (`RGBA alpha = 0`) yang bersih tanpa motto/jadwal siap ditempel foto/story di Instagram/Canva/CapCut, lengkap dengan field **Label Live** (`LIVE REPORT`, `ON AIR`, dll) & **Judul / Topik Live** yang bisa diubah-ubah serta opsional upload foto preview/composite
 - **Switcher Style (Semua Layout & Mode):** `Neubrutalism` (default), `Glassmorphism`, `Dark Code`, dan `Modern Clean`
 - **Multi-Rasio IG:** `4:5 Feed (1080x1350)`, `9:16 Story (1080x1920)`, dan `1:1 Square (1080x1080)`
 - **Edit Teks & Logo Live:** Judul acara, tanggal, jam, lokasi, CTA, IG handle, serta upload logo custom ke-3 di Layout 2

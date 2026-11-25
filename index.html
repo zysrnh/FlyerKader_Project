@@ -1449,16 +1449,50 @@
             color: #12305A;
         }
 
-        /* ================= LIVE REPORT MODE (STORY 9:16 FULL FRAME + 4:5/1:1, 5 LAYOUT) ================= */
+        /* ================= LIVE REPORT MODE (CLEAN FULL SATU LATAR, 5 LAYOUT) ================= */
         .lr-only { display: none !important; }
         .poster-canvas.mode-live-report .lr-only { display: inline-flex !important; }
         .poster-canvas.mode-live-report .lr-only-block { display: flex !important; }
         .poster-canvas.mode-live-report .lr-hide { display: none !important; }
 
+        /* Clean Removal of Busy Ornaments, Motto & Schedule in Live Report */
+        .poster-canvas.mode-live-report .code-accent,
+        .poster-canvas.mode-live-report .sched-grid,
+        .poster-canvas.mode-live-report .menuju-box,
+        .poster-canvas.mode-live-report .l2-bg-wall,
+        .poster-canvas.mode-live-report .l2-star-tr,
+        .poster-canvas.mode-live-report .l2-star-bl,
+        .poster-canvas.mode-live-report .l3-bg-tile,
+        .poster-canvas.mode-live-report .l3-bg-dot,
+        .poster-canvas.mode-live-report .l3-countdown-only,
+        .poster-canvas.mode-live-report .l4-bg-wall,
+        .poster-canvas.mode-live-report .l4-star-tr,
+        .poster-canvas.mode-live-report .l4-star-bl,
+        .poster-canvas.mode-live-report .l4-top-wrap,
+        .poster-canvas.mode-live-report .l4-card-back,
+        .poster-canvas.mode-live-report .l4-avatar,
+        .poster-canvas.mode-live-report .l4-handle-row,
+        .poster-canvas.mode-live-report .l4-follow-btn,
+        .poster-canvas.mode-live-report .l4-more,
+        .poster-canvas.mode-live-report .l4-cursor,
+        .poster-canvas.mode-live-report .l4-win-bar,
+        .poster-canvas.mode-live-report .l4-act-row,
+        .poster-canvas.mode-live-report .l4-likes,
+        .poster-canvas.mode-live-report .l4-cap,
+        .poster-canvas.mode-live-report .l4-loc,
+        .poster-canvas.mode-live-report .l5-card-back,
+        .poster-canvas.mode-live-report .l5-menuju-pill,
+        .poster-canvas.mode-live-report .l5-motto,
+        .poster-canvas.mode-live-report .l5-sched-row,
+        .poster-canvas.layout-5.style-neubrutalism.mode-live-report .l5-bloom-tl,
+        .poster-canvas.layout-5.style-dark-code.mode-live-report .l5-bloom-tl {
+            display: none !important;
+        }
+
         .lr-live-dot {
             display: none;
-            width: 11px;
-            height: 11px;
+            width: 10px;
+            height: 10px;
             border-radius: 999px;
             background: #EF4444;
             border: 2px solid #FFFFFF;
@@ -1510,233 +1544,185 @@
             pointer-events: none;
         }
 
-        /* Layout 1 Live Report Cutout (Full Story Width Frame) */
-        .poster-canvas.layout-1.ratio-4-5.mode-live-report  { padding: 34px 46px 34px 46px; }
-        .poster-canvas.layout-1.ratio-9-16.mode-live-report { padding: 44px 44px 44px 44px; }
-        .poster-canvas.layout-1.ratio-1-1.mode-live-report  { padding: 26px 42px 26px 42px; }
-        .poster-canvas.layout-1.mode-live-report .hdr-box { padding: 11px 18px !important; }
-        .poster-canvas.layout-1.mode-live-report .hdr-logo { width: 54px !important; height: 54px !important; }
-        .poster-canvas.layout-1.mode-live-report .hdr-title { font-size: 24px !important; }
-        .poster-canvas.layout-1.mode-live-report .hdr-sub { font-size: 14px !important; }
-        .poster-canvas.layout-1.ratio-1-1.mode-live-report .hdr-logo { width: 46px !important; height: 46px !important; }
-        .poster-canvas.layout-1.ratio-1-1.mode-live-report .hdr-title { font-size: 20px !important; }
-        .poster-canvas.layout-1.ratio-1-1.mode-live-report .hdr-sub { font-size: 12px !important; }
+        /* Layout 1 Clean Full-Latar Story Frame */
+        .poster-canvas.layout-1.ratio-4-5.mode-live-report  { padding: 20px 22px; }
+        .poster-canvas.layout-1.ratio-9-16.mode-live-report { padding: 22px 22px; }
+        .poster-canvas.layout-1.ratio-1-1.mode-live-report  { padding: 18px 20px; }
+        .poster-canvas.layout-1.mode-live-report .hdr-box { padding: 9px 16px !important; }
+        .poster-canvas.layout-1.mode-live-report .hdr-logo { width: 42px !important; height: 42px !important; }
+        .poster-canvas.layout-1.mode-live-report .hdr-title { font-size: 22px !important; }
+        .poster-canvas.layout-1.mode-live-report .hdr-sub { font-size: 13px !important; }
+        .poster-canvas.layout-1.ratio-1-1.mode-live-report .hdr-logo { width: 38px !important; height: 38px !important; }
+        .poster-canvas.layout-1.ratio-1-1.mode-live-report .hdr-title { font-size: 19px !important; }
+        .poster-canvas.layout-1.ratio-1-1.mode-live-report .hdr-sub { font-size: 11px !important; }
 
+        .poster-canvas.layout-1.mode-live-report section.my-auto > div { width: 1036px; }
         .poster-canvas.layout-1.mode-live-report .countdown-box {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
-            padding: 8px 20px !important;
+            gap: 9px;
+            padding: 7px 18px !important;
         }
-        .poster-canvas.layout-1.mode-live-report .hero-countdown { font-size: 32px !important; }
+        .poster-canvas.layout-1.mode-live-report .hero-countdown { font-size: 28px !important; }
         .poster-canvas.layout-1.ratio-1-1.mode-live-report .hero-countdown { font-size: 24px !important; }
-        .poster-canvas.layout-1.mode-live-report .menuju-box { padding: 4px 18px !important; }
-        .poster-canvas.layout-1.mode-live-report .hero-menuju { font-size: 19px !important; }
-        .poster-canvas.layout-1.ratio-1-1.mode-live-report .hero-menuju { font-size: 15px !important; }
 
         .poster-canvas.layout-1.mode-live-report .hero-card {
-            width: 840px !important;
-            padding: 38px 16px 26px 16px !important;
-            margin-top: 10px !important;
-        }
-        .poster-canvas.layout-1.ratio-9-16.mode-live-report .hero-card {
-            width: 964px !important;
-            padding: 40px 16px 28px 16px !important;
-            margin-top: 12px !important;
-        }
-        .poster-canvas.layout-1.ratio-1-1.mode-live-report .hero-card {
-            width: 760px !important;
-            padding: 34px 14px 20px 14px !important;
+            width: 1036px !important;
+            padding: 32px 10px 10px 10px !important;
             margin-top: 8px !important;
         }
-        .poster-canvas.layout-1.mode-live-report section.my-auto > div { width: 980px; }
+        .poster-canvas.layout-1.ratio-1-1.mode-live-report .hero-card {
+            width: 1040px !important;
+            padding: 30px 10px 10px 10px !important;
+        }
+        .poster-canvas.layout-1.mode-live-report .win-dot { width: 11px !important; height: 11px !important; }
 
         .l1-lr-hole {
             width: 100%;
-            height: 490px;
+            height: 980px;
             border-radius: 14px;
-            border: 2.5px solid rgba(15, 23, 42, 0.25);
+            border: 2px solid rgba(15, 23, 42, 0.18);
         }
-        .ratio-9-16 .l1-lr-hole { height: 1120px; border-radius: 18px; }
-        .ratio-1-1  .l1-lr-hole { height: 300px; border-radius: 12px; }
-        .layout-1.style-neubrutalism .l1-lr-hole { border: 3.5px solid #000000; border-radius: 0px; }
-        .layout-1.style-dark-code .l1-lr-hole { border: 2.5px solid #38BDF8; border-radius: 12px; }
+        .ratio-9-16 .l1-lr-hole { height: 1510px; border-radius: 18px; }
+        .ratio-1-1  .l1-lr-hole { height: 730px; border-radius: 12px; }
+        .layout-1.style-neubrutalism .l1-lr-hole { border: 3px solid #000000; border-radius: 0px; }
+        .layout-1.style-dark-code .l1-lr-hole { border: 2px solid #38BDF8; border-radius: 12px; }
         .layout-1.style-glass .l1-lr-hole { border: 2px solid rgba(255, 255, 255, 0.92); border-radius: 16px; }
 
         .poster-canvas.layout-1.mode-live-report .hero-stamp {
-            margin-top: -30px !important;
-            padding: 11px 28px !important;
-            max-width: 920px;
-        }
-        .poster-canvas.layout-1.ratio-9-16.mode-live-report .hero-stamp {
-            margin-top: -34px !important;
-            padding: 12px 32px !important;
+            margin-top: -28px !important;
+            padding: 10px 30px !important;
+            max-width: 960px;
         }
         .poster-canvas.layout-1.ratio-1-1.mode-live-report .hero-stamp {
             margin-top: -24px !important;
-            padding: 8px 22px !important;
+            padding: 8px 24px !important;
         }
-        .poster-canvas.layout-1.mode-live-report .hero-stamp-text { font-size: 38px; white-space: nowrap; }
-        .poster-canvas.layout-1.ratio-9-16.mode-live-report .hero-stamp-text { font-size: 44px; }
-        .poster-canvas.layout-1.ratio-1-1.mode-live-report .hero-stamp-text { font-size: 30px; }
-        .poster-canvas.layout-1.mode-live-report .hero-stamp-icon { width: 32px !important; height: 32px !important; }
-        .poster-canvas.layout-1.ratio-1-1.mode-live-report .hero-stamp-icon { width: 24px !important; height: 24px !important; }
+        .poster-canvas.layout-1.mode-live-report .hero-stamp-text { font-size: 40px; white-space: nowrap; }
+        .poster-canvas.layout-1.ratio-9-16.mode-live-report .hero-stamp-text { font-size: 42px; }
+        .poster-canvas.layout-1.ratio-1-1.mode-live-report .hero-stamp-text { font-size: 32px; }
+        .poster-canvas.layout-1.mode-live-report .hero-stamp-icon { width: 30px !important; height: 30px !important; }
+        .poster-canvas.layout-1.mode-live-report .sched-wrap { max-width: 100% !important; gap: 0 !important; }
+        .poster-canvas.layout-1.mode-live-report .cta-btn { padding: 10px 28px !important; }
+        .poster-canvas.layout-1.mode-live-report .cta-text { font-size: 19px !important; }
 
-        .poster-canvas.layout-1.mode-live-report .sched-wrap { max-width: 940px !important; gap: 14px !important; }
-        .poster-canvas.layout-1.mode-live-report .sched-grid { gap: 12px !important; }
-        .poster-canvas.layout-1.mode-live-report .sched-date-card { padding: 10px 20px !important; gap: 16px !important; }
-        .poster-canvas.layout-1.mode-live-report .sched-num-badge { padding: 8px 18px !important; }
-        .poster-canvas.layout-1.mode-live-report .sched-num { font-size: 42px !important; }
-        .poster-canvas.layout-1.mode-live-report .sched-date { font-size: 28px !important; }
-        .poster-canvas.layout-1.mode-live-report .sched-bot-cell { padding: 12px 20px !important; }
-        .poster-canvas.layout-1.mode-live-report .sched-bot-val { font-size: 21px !important; }
-        .poster-canvas.layout-1.mode-live-report .cta-btn { padding: 11px 32px !important; }
-        .poster-canvas.layout-1.mode-live-report .cta-text { font-size: 21px !important; }
-        .poster-canvas.layout-1.ratio-1-1.mode-live-report .sched-wrap { gap: 10px !important; }
-        .poster-canvas.layout-1.ratio-1-1.mode-live-report .sched-grid { gap: 10px !important; }
-        .poster-canvas.layout-1.ratio-1-1.mode-live-report .sched-date-card { padding: 8px 16px !important; }
-        .poster-canvas.layout-1.ratio-1-1.mode-live-report .sched-num { font-size: 34px !important; }
-        .poster-canvas.layout-1.ratio-1-1.mode-live-report .sched-date { font-size: 22px !important; }
-        .poster-canvas.layout-1.ratio-1-1.mode-live-report .sched-bot-cell { padding: 9px 16px !important; }
-        .poster-canvas.layout-1.ratio-1-1.mode-live-report .sched-bot-val { font-size: 18px !important; }
-        .poster-canvas.layout-1.ratio-1-1.mode-live-report .cta-btn { padding: 9px 26px !important; }
-        .poster-canvas.layout-1.ratio-1-1.mode-live-report .cta-text { font-size: 18px !important; }
-        .poster-canvas.layout-1.mode-live-report .acc-1 { top: 10.5% !important; left: 10% !important; }
-        .poster-canvas.layout-1.mode-live-report .acc-2 { top: 10.5% !important; right: 10% !important; }
-        .poster-canvas.layout-1.mode-live-report .acc-3 { display: none !important; }
-        .poster-canvas.layout-1.mode-live-report .acc-4 { display: none !important; }
-        .poster-canvas.layout-1.mode-live-report .acc-5 { top: 81.5% !important; left: 10% !important; }
-        .poster-canvas.layout-1.mode-live-report .acc-6 { top: 81.5% !important; right: 10% !important; }
-        .poster-canvas.layout-1:not(.ratio-9-16).mode-live-report .acc-1 { left: 5% !important; top: 14% !important; }
-        .poster-canvas.layout-1:not(.ratio-9-16).mode-live-report .acc-2 { right: 5% !important; top: 14% !important; }
-        .poster-canvas.layout-1:not(.ratio-9-16).mode-live-report .acc-5 { left: 5% !important; top: 71% !important; }
-        .poster-canvas.layout-1:not(.ratio-9-16).mode-live-report .acc-6 { right: 5% !important; top: 71% !important; }
+        /* Layout 2 Clean Minimal Retro Story Frame */
+        .poster-canvas.layout-2.mode-live-report .l2-logos-top { top: 20px; gap: 14px; }
+        .poster-canvas.layout-2.ratio-9-16.mode-live-report .l2-logos-top { top: 22px; gap: 16px; }
+        .poster-canvas.layout-2.ratio-1-1.mode-live-report  .l2-logos-top { top: 16px; gap: 12px; }
+        .poster-canvas.layout-2.mode-live-report .l2-logo-box { width: 42px; height: 42px; }
+        .poster-canvas.layout-2.ratio-9-16.mode-live-report .l2-logo-box { width: 44px; height: 44px; }
+        .poster-canvas.layout-2.ratio-1-1.mode-live-report  .l2-logo-box { width: 38px; height: 38px; }
 
-        /* Layout 2 Live Report Cutout (Full Story Browser Frame) */
-        .poster-canvas.layout-2.mode-live-report .l2-logos-top { top: 30px; gap: 16px; }
-        .poster-canvas.layout-2.ratio-9-16.mode-live-report .l2-logos-top { top: 54px; gap: 18px; }
-        .poster-canvas.layout-2.ratio-1-1.mode-live-report  .l2-logos-top { top: 22px; gap: 14px; }
-        .poster-canvas.layout-2.mode-live-report .l2-logo-box { width: 54px; height: 54px; }
-        .poster-canvas.layout-2.ratio-9-16.mode-live-report .l2-logo-box { width: 56px; height: 56px; }
-        .poster-canvas.layout-2.ratio-1-1.mode-live-report  .l2-logo-box { width: 46px; height: 46px; }
-
-        .poster-canvas.layout-2.mode-live-report .l2-window { width: 940px; }
-        .poster-canvas.layout-2.ratio-9-16.mode-live-report .l2-window { width: 976px; }
-        .poster-canvas.layout-2.ratio-1-1.mode-live-report  .l2-window { width: 900px; }
-        .poster-canvas.layout-2.mode-live-report .l2-titlebar { padding: 13px 22px !important; }
-        .poster-canvas.layout-2.mode-live-report .l2-body-wrap { padding: 14px 16px 44px 16px !important; }
-        .poster-canvas.layout-2.ratio-9-16.mode-live-report .l2-body-wrap { padding: 14px 16px 48px 16px !important; }
-        .poster-canvas.layout-2.ratio-1-1.mode-live-report  .l2-body-wrap { padding: 12px 14px 36px 14px !important; }
+        .poster-canvas.layout-2.mode-live-report .l2-window { width: 1036px; }
+        .poster-canvas.layout-2.mode-live-report .l2-titlebar { padding: 9px 18px !important; }
+        .poster-canvas.layout-2.mode-live-report .l2-hdr-title { font-size: 20px !important; }
+        .poster-canvas.layout-2.mode-live-report .l2-hdr-sub { font-size: 11px !important; }
+        .poster-canvas.layout-2.mode-live-report .l2-body-wrap { padding: 10px 10px 38px 10px !important; }
+        .poster-canvas.layout-2.ratio-1-1.mode-live-report  .l2-body-wrap { padding: 8px 10px 32px 10px !important; }
 
         .l2-lr-hole {
             width: 100%;
-            height: 710px;
+            height: 980px;
             border-radius: 14px;
-            border: 2.5px solid rgba(15, 23, 42, 0.25);
+            border: 2px solid rgba(15, 23, 42, 0.20);
         }
-        .ratio-9-16 .l2-lr-hole { height: 1280px; border-radius: 16px; }
-        .ratio-1-1  .l2-lr-hole { height: 520px; border-radius: 12px; }
-        .layout-2.style-neubrutalism .l2-lr-hole { border: 3.5px solid #000000; border-radius: 0px; }
-        .layout-2.style-dark-code .l2-lr-hole { border: 2.5px solid #38BDF8; border-radius: 10px; }
+        .ratio-9-16 .l2-lr-hole { height: 1520px; border-radius: 16px; }
+        .ratio-1-1  .l2-lr-hole { height: 730px; border-radius: 12px; }
+        .layout-2.style-neubrutalism .l2-lr-hole { border: 3px solid #000000; border-radius: 0px; }
+        .layout-2.style-dark-code .l2-lr-hole { border: 2px solid #38BDF8; border-radius: 10px; }
         .layout-2.style-glass .l2-lr-hole { border: 2px solid rgba(255, 255, 255, 0.92); border-radius: 14px; }
         .poster-canvas.layout-2.mode-live-report .l2-sticker-top {
             display: inline-flex;
             align-items: center;
             gap: 9px;
+            left: 14px;
+            top: -12px;
         }
         .poster-canvas.layout-2.mode-live-report .l2-sticker-stamp {
-            margin-top: -24px !important;
+            margin-top: -22px !important;
             position: relative;
             z-index: 25;
-            padding: 11px 30px !important;
+            padding: 10px 30px !important;
         }
-        .poster-canvas.layout-2.ratio-9-16.mode-live-report .l2-sticker-stamp {
-            padding: 13px 34px !important;
-        }
-        .poster-canvas.layout-2.mode-live-report .l2-star-tr { transform: translateY(-510px); }
-        .poster-canvas.layout-2.mode-live-report .l2-star-bl { transform: translateY(80px); }
-        .poster-canvas.layout-2.ratio-9-16.mode-live-report .l2-star-tr { transform: translateY(-880px); }
-        .poster-canvas.layout-2.ratio-9-16.mode-live-report .l2-star-bl { transform: translateY(450px); }
-        .poster-canvas.layout-2.ratio-1-1.mode-live-report  .l2-star-tr { transform: translateY(-420px); }
-        .poster-canvas.layout-2.ratio-1-1.mode-live-report  .l2-star-bl { transform: translateY(40px); }
-        .poster-canvas.layout-2.mode-live-report .l2-cursor-wrap { right: -14px; bottom: -210px; transform: scale(0.90625); transform-origin: bottom right; }
-        .poster-canvas.layout-2.ratio-9-16.mode-live-report .l2-cursor-wrap { right: -12px; bottom: -165px; transform: scale(0.875); transform-origin: bottom right; }
-        .poster-canvas.layout-2.ratio-1-1.mode-live-report  .l2-cursor-wrap { right: -14px; bottom: -170px; transform: scale(0.8); transform-origin: bottom right; }
+        .poster-canvas.layout-2.mode-live-report .l2-ig-sticker { left: 16px; bottom: -22px; }
+        .poster-canvas.layout-2.mode-live-report .l2-cursor-wrap { right: 6px; bottom: -125px; transform: scale(0.65625); transform-origin: bottom right; }
 
-        /* Layout 3 Live Report Cutout (Pinterest Story Curved Twibbon + 3D Megaphone) */
-        .poster-canvas.layout-3.mode-live-report .l3-header-area { padding: 34px 46px 0 46px; }
-        .poster-canvas.layout-3.ratio-9-16.mode-live-report .l3-header-area { padding: 44px 46px 0 46px; }
-        .poster-canvas.layout-3.ratio-1-1.mode-live-report  .l3-header-area { padding: 24px 40px 0 40px; }
-        .poster-canvas.layout-3.mode-live-report .l3-org-pill { padding: 10px 22px 10px 14px; gap: 12px; }
-        .poster-canvas.layout-3.mode-live-report .l3-org-logo { width: 44px; height: 44px; }
-        .poster-canvas.layout-3.ratio-9-16.mode-live-report .l3-org-logo { width: 46px; height: 46px; }
-        .poster-canvas.layout-3.ratio-1-1.mode-live-report  .l3-org-logo { width: 36px; height: 36px; }
-        .poster-canvas.layout-3.mode-live-report .l3-org-div { height: 34px; }
-        .poster-canvas.layout-3.mode-live-report .l3-footer-wrap { padding: 0 44px 30px 44px; }
-        .poster-canvas.layout-3.ratio-9-16.mode-live-report .l3-footer-wrap { padding: 0 46px 44px 46px; }
-        .poster-canvas.layout-3.ratio-1-1.mode-live-report  .l3-footer-wrap { padding: 0 38px 22px 38px; }
-        .poster-canvas.layout-3.mode-live-report .l3-bottom-dock { padding: 16px 32px; }
+        /* Layout 3 Clean Curved Blue Twibbon Frame */
+        .poster-canvas.layout-3.mode-live-report .l3-header-area { padding: 20px 22px 0 22px; }
+        .poster-canvas.layout-3.ratio-9-16.mode-live-report .l3-header-area { padding: 24px 22px 0 22px; }
+        .poster-canvas.layout-3.ratio-1-1.mode-live-report  .l3-header-area { padding: 16px 20px 0 20px; }
+        .poster-canvas.layout-3.mode-live-report .l3-org-pill { padding: 8px 18px 8px 12px; gap: 10px; }
+        .poster-canvas.layout-3.mode-live-report .l3-org-logo { width: 38px; height: 38px; }
+        .poster-canvas.layout-3.mode-live-report .l3-org-div { height: 28px; }
+        .poster-canvas.layout-3.mode-live-report .l3-footer-wrap { padding: 0 22px 20px 22px; }
+        .poster-canvas.layout-3.ratio-9-16.mode-live-report .l3-footer-wrap { padding: 0 22px 24px 22px; }
+        .poster-canvas.layout-3.ratio-1-1.mode-live-report  .l3-footer-wrap { padding: 0 20px 16px 20px; }
+        .poster-canvas.layout-3.mode-live-report .l3-bottom-dock { padding: 12px 28px; }
 
+        .poster-canvas.layout-3.mode-live-report section.my-auto { padding-left: 0 !important; padding-right: 0 !important; }
         .poster-canvas.layout-3.mode-live-report .l3-bubble-wrap {
-            width: 880px;
-            height: 730px;
-            --l3-lr-hole-bot: 78px;
+            width: 1036px;
+            height: 1002px;
+            --l3-lr-hole-bot: 54px;
         }
         .poster-canvas.layout-3.ratio-9-16.mode-live-report .l3-bubble-wrap {
-            width: 976px;
-            height: 1276px;
-            --l3-lr-hole-bot: 94px;
+            width: 1036px;
+            height: 1548px;
+            --l3-lr-hole-bot: 60px;
         }
         .poster-canvas.layout-3.ratio-1-1.mode-live-report .l3-bubble-wrap {
-            width: 780px;
-            height: 540px;
-            --l3-lr-hole-bot: 68px;
+            width: 1040px;
+            height: 758px;
+            --l3-lr-hole-bot: 48px;
         }
         .l3-lr-hole {
             position: absolute;
-            top: 18px;
-            left: 18px;
-            right: 18px;
-            bottom: var(--l3-lr-hole-bot, 94px);
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: var(--l3-lr-hole-bot, 60px);
             border-radius: 26px;
             z-index: 5;
-            border: 2.5px solid rgba(15, 23, 42, 0.22);
+            border: 2px solid rgba(15, 23, 42, 0.16);
         }
-        .layout-3.style-neubrutalism .l3-lr-hole { border: 3.5px solid #000000; border-radius: 22px; }
-        .layout-3.style-dark-code .l3-lr-hole { border: 2.5px solid #38BDF8; border-radius: 22px; }
+        .layout-3.style-neubrutalism .l3-lr-hole { border: 3px solid #000000; border-radius: 20px; }
+        .layout-3.style-dark-code .l3-lr-hole { border: 2px solid #38BDF8; border-radius: 20px; }
         .layout-3.style-glass .l3-lr-hole { border: 2px solid rgba(255, 255, 255, 0.95); }
 
-        .poster-canvas.layout-3.mode-live-report .l3-megaphone { right: -34px; top: -78px; width: 222px; height: 222px; }
-        .poster-canvas.layout-3.ratio-9-16.mode-live-report .l3-megaphone { right: -44px; top: -86px; width: 248px; height: 248px; }
-        .poster-canvas.layout-3.ratio-1-1.mode-live-report  .l3-megaphone { right: -30px; top: -64px; width: 184px; height: 184px; }
+        .poster-canvas.layout-3.mode-live-report .l3-megaphone { right: -22px; top: -54px; width: 164px; height: 164px; }
+        .poster-canvas.layout-3.ratio-9-16.mode-live-report .l3-megaphone { right: -24px; top: -58px; width: 172px; height: 172px; }
+        .poster-canvas.layout-3.ratio-1-1.mode-live-report  .l3-megaphone { right: -18px; top: -46px; width: 142px; height: 142px; }
 
         .l3-lr-badge {
             display: none;
             position: absolute;
-            top: -16px;
-            left: 26px;
+            top: -14px;
+            left: 20px;
             z-index: 25;
-            padding: 8px 20px;
+            padding: 7px 18px;
             align-items: center;
-            gap: 9px;
+            gap: 8px;
             font-family: 'Space Grotesk', sans-serif;
             font-weight: 800;
-            font-size: 19px;
+            font-size: 17px;
             letter-spacing: 0.14em;
             text-transform: uppercase;
-            transform: rotate(-2deg);
+            transform: rotate(-1.5deg);
         }
         .poster-canvas.layout-3.mode-live-report .l3-lr-badge { display: inline-flex; }
-        .layout-3.style-neubrutalism .l3-lr-badge { background: #FCD34D; color: #0B1F40; border: 3.5px solid #000000; box-shadow: 5px 5px 0 #000000; }
+        .layout-3.style-neubrutalism .l3-lr-badge { background: #FCD34D; color: #0B1F40; border: 3px solid #000000; box-shadow: 4px 4px 0 #000000; }
         .layout-3.style-glass .l3-lr-badge { background: linear-gradient(135deg, #F87171 0%, #DC2626 100%); color: #FFFFFF; border: 1.5px solid rgba(255, 255, 255, 0.9); border-radius: 999px; box-shadow: 0 10px 22px rgba(220, 38, 38, 0.35); }
-        .layout-3.style-dark-code .l3-lr-badge { background: #0B192E; color: #38BDF8; border: 2.5px solid #38BDF8; border-radius: 8px; box-shadow: 4px 4px 0 #000000; }
+        .layout-3.style-dark-code .l3-lr-badge { background: #0B192E; color: #38BDF8; border: 2px solid #38BDF8; border-radius: 8px; box-shadow: 4px 4px 0 #000000; }
         .layout-3.style-modern .l3-lr-badge { background: #CA2C2A; color: #FFFFFF; border-radius: 999px; box-shadow: 0 10px 24px rgba(8, 22, 44, 0.36); }
 
         .l3-lr-capbox { max-width: 680px; }
         .poster-canvas.layout-3.mode-live-report .l3-lr-capbox {
-            max-width: 960px !important;
-            margin-top: 12px !important;
+            max-width: 980px !important;
+            margin-top: 8px !important;
         }
+        .poster-canvas.layout-3.mode-live-report .l3-cap-main br { display: none; }
+        .poster-canvas.layout-3.mode-live-report .l3-cap-main { font-size: 19px !important; opacity: 0.92; margin-top: 4px !important; }
         .l3-lr-topic {
             display: none;
             font-family: 'Archivo Black', 'Space Grotesk', sans-serif;
@@ -1749,61 +1735,51 @@
             white-space: nowrap;
             text-shadow: 4px 4px 0 #000000;
         }
-        .ratio-9-16 .l3-lr-topic { font-size: 58px; }
+        .ratio-9-16 .l3-lr-topic { font-size: 52px; }
         .ratio-1-1  .l3-lr-topic { font-size: 36px; }
         .poster-canvas.layout-3.mode-live-report .l3-lr-topic { display: block; }
         .layout-3.style-dark-code .l3-lr-topic { color: #38BDF8; text-shadow: 4px 4px 0 #000000; }
         .layout-3.style-glass .l3-lr-topic { color: #FFFFFF; text-shadow: 0 6px 20px rgba(6, 20, 56, 0.42); }
         .layout-3.style-modern .l3-lr-topic { color: #FCD34D; text-shadow: 0 6px 18px rgba(4, 15, 34, 0.42); }
 
-        /* Layout 4 Live Report Cutout (Full Story IG Frame) */
-        .poster-canvas.layout-4.mode-live-report .l4-top-wrap { padding: 30px 40px 0 40px; }
-        .poster-canvas.layout-4.ratio-9-16.mode-live-report .l4-top-wrap { padding: 38px 40px 0 40px; }
-        .poster-canvas.layout-4.ratio-1-1.mode-live-report  .l4-top-wrap { padding: 20px 36px 0 36px; }
-        .poster-canvas.layout-4.mode-live-report .l4-top-pill { padding: 9px 22px; gap: 14px; }
-        .poster-canvas.layout-4.mode-live-report .l4-top-logo { width: 40px; height: 40px; }
-        .poster-canvas.layout-4.ratio-9-16.mode-live-report .l4-top-logo { width: 44px; height: 44px; }
-        .poster-canvas.layout-4.ratio-1-1.mode-live-report  .l4-top-logo { width: 32px; height: 32px; }
-        .poster-canvas.layout-4.ratio-9-16.mode-live-report .l4-bottom-bar { padding: 16px 40px; }
+        /* Layout 4 Clean Edge-to-Edge Frame (Zero Social Clutter) */
+        .poster-canvas.layout-4.mode-live-report section.my-auto { padding-left: 0 !important; padding-right: 0 !important; }
+        .poster-canvas.layout-4.mode-live-report .l4-bottom-bar { padding: 12px 32px; }
+        .poster-canvas.layout-4.mode-live-report .l4-stack-stage { width: 1044px; height: 1260px; }
+        .poster-canvas.layout-4.ratio-9-16.mode-live-report .l4-stack-stage { width: 1044px; height: 1824px; }
+        .poster-canvas.layout-4.ratio-1-1.mode-live-report  .l4-stack-stage { width: 1044px; height: 996px; }
 
-        .poster-canvas.layout-4.mode-live-report .l4-stack-stage { width: 820px; height: 1010px; }
-        .poster-canvas.layout-4.ratio-9-16.mode-live-report .l4-stack-stage { width: 936px; height: 1616px; }
-        .poster-canvas.layout-4.ratio-1-1.mode-live-report  .l4-stack-stage { width: 760px; height: 790px; }
-
-        .poster-canvas.layout-4.mode-live-report .l4-card-back { transform: translate(12px, -4px) rotate(2.3deg); }
-        .poster-canvas.layout-4.mode-live-report .l4-card-front { transform: rotate(-1.3deg); }
-        .poster-canvas.layout-4.mode-live-report .l4-card-hdr { height: 70px; }
-        .poster-canvas.layout-4.ratio-9-16.mode-live-report .l4-card-hdr { height: 74px; }
-        .poster-canvas.layout-4.ratio-1-1.mode-live-report  .l4-card-hdr { height: 62px; }
-        .poster-canvas.layout-4.mode-live-report .l4-media-box { margin: 0 16px; }
-        .poster-canvas.layout-4.ratio-1-1.mode-live-report  .l4-media-box { margin: 0 14px; }
-        .poster-canvas.layout-4.mode-live-report .l4-card-ftr { height: 146px; }
-        .poster-canvas.layout-4.ratio-9-16.mode-live-report .l4-card-ftr { height: 174px; padding: 10px 26px 0 26px; }
-        .poster-canvas.layout-4.ratio-1-1.mode-live-report  .l4-card-ftr { height: 128px; }
-        .poster-canvas.layout-4.ratio-9-16.mode-live-report .l4-likes { font-size: 18px; line-height: 28px; }
-        .poster-canvas.layout-4.ratio-9-16.mode-live-report .l4-cap   { font-size: 19px; line-height: 30px; }
-        .poster-canvas.layout-4.ratio-9-16.mode-live-report .l4-loc   { font-size: 17px; line-height: 26px; }
-
-        .poster-canvas.layout-4.mode-live-report .l4-props-cluster { right: -34px; bottom: 112px; width: 210px; height: 210px; }
-        .poster-canvas.layout-4.ratio-9-16.mode-live-report .l4-props-cluster { right: -30px; bottom: 146px; width: 235px; height: 235px; }
-        .poster-canvas.layout-4.ratio-1-1.mode-live-report  .l4-props-cluster { right: -30px; bottom: 92px; width: 175px; height: 175px; }
-
-        .l4-lr-pill {
-            display: none;
-            margin-left: 14px;
+        .poster-canvas.layout-4.mode-live-report .l4-card-front { transform: none !important; }
+        .poster-canvas.layout-4.mode-live-report .l4-card-hdr {
+            height: 62px;
+            display: flex;
             align-items: center;
-            gap: 6px;
-            padding: 3px 10px;
+            justify-content: space-between;
+            padding: 0 18px;
+        }
+        .poster-canvas.layout-4.ratio-1-1.mode-live-report .l4-card-hdr { height: 54px; }
+        .l4-lr-hdr-left { display: none; align-items: center; gap: 10px; min-width: 0; }
+        .l4-lr-hdr-logo { width: 32px; height: 32px; object-fit: contain; }
+        .l4-lr-hdr-org { font-family: 'Space Grotesk', sans-serif; font-weight: 800; font-size: 16px; letter-spacing: 0.04em; text-transform: uppercase; line-height: 1; }
+        .l4-lr-hdr-sub { font-size: 11px; font-weight: 700; letter-spacing: 0.16em; opacity: 0.72; text-transform: uppercase; margin-top: 2px; line-height: 1; }
+        .l4-lr-hdr-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 14px;
             border-radius: 999px;
             background: #CA2C2A;
             color: #FFFFFF;
             font-family: 'Space Grotesk', sans-serif;
             font-weight: 800;
-            font-size: 11px;
+            font-size: 13px;
             letter-spacing: 0.12em;
             text-transform: uppercase;
+            flex-shrink: 0;
         }
-        .l4-lr-pill .lr-live-dot,
+        .layout-4.style-neubrutalism .l4-lr-hdr-badge { border: 2.5px solid #000000; border-radius: 0px; }
+        .layout-4.style-dark-code .l4-lr-hdr-badge { background: #0B192E; color: #38BDF8; border: 1.5px solid #38BDF8; }
+        .l4-lr-hdr-badge .lr-live-dot,
         .layout-3.style-glass .l3-lr-badge .lr-live-dot,
         .layout-3.style-modern .l3-lr-badge .lr-live-dot,
         .layout-5:not(.style-dark-code) .l5-lr-chin-badge .lr-live-dot {
@@ -1811,95 +1787,120 @@
             border: none;
             box-shadow: 0 0 0 2.5px rgba(255, 255, 255, 0.35);
         }
-        .poster-canvas.layout-4.mode-live-report .l4-lr-pill { display: inline-flex; }
-        .layout-4.style-neubrutalism .l4-lr-pill { border: 2px solid #000000; border-radius: 0px; }
-        .l4-lr-hole {
+        .poster-canvas.layout-4.mode-live-report .l4-media-box { margin: 0 12px; }
+        .l4-lr-hole { width: 100%; flex: 1; z-index: 3; }
+
+        .poster-canvas.layout-4.mode-live-report .l4-card-ftr {
+            height: 108px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 24px !important;
+        }
+        .poster-canvas.layout-4.ratio-1-1.mode-live-report .l4-card-ftr { height: 92px; }
+        .l4-lr-ftr-clean {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 4px;
             width: 100%;
-            flex: 1;
-            z-index: 3;
+        }
+        .l4-lr-ftr-topic {
+            font-family: 'Archivo Black', 'Space Grotesk', sans-serif;
+            font-weight: 400;
+            font-size: 38px;
+            line-height: 1.05;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+        .ratio-1-1 .l4-lr-ftr-topic { font-size: 30px; }
+        .l4-lr-ftr-sub {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            opacity: 0.72;
         }
 
-        /* Layout 5 Live Report Cutout (Full Story Polaroid Mading Frame) */
-        .poster-canvas.layout-5.mode-live-report .l5-c1,
-        .poster-canvas.layout-5.mode-live-report .l5-c2 { display: none !important; }
-        .poster-canvas.layout-5.mode-live-report .l5-top-wrap { padding: 32px 48px 0 48px; }
-        .poster-canvas.layout-5.ratio-9-16.mode-live-report .l5-top-wrap { padding: 42px 52px 0 52px; }
-        .poster-canvas.layout-5.ratio-1-1.mode-live-report  .l5-top-wrap { padding: 24px 44px 0 44px; }
-        .poster-canvas.layout-5.mode-live-report .l5-bottom-wrap { padding: 0 48px 30px 48px; }
-        .poster-canvas.layout-5.ratio-9-16.mode-live-report .l5-bottom-wrap { padding: 0 52px 42px 52px; }
-        .poster-canvas.layout-5.ratio-1-1.mode-live-report  .l5-bottom-wrap { padding: 0 44px 22px 44px; }
+        .poster-canvas.layout-4.mode-live-report .l4-props-cluster { right: -8px; bottom: 88px; width: 154px; height: 154px; }
+        .poster-canvas.layout-4.ratio-9-16.mode-live-report .l4-props-cluster { right: -6px; bottom: 92px; width: 164px; height: 164px; }
+        .poster-canvas.layout-4.ratio-1-1.mode-live-report  .l4-props-cluster { right: -8px; bottom: 76px; width: 136px; height: 136px; }
+
+        /* Layout 5 Clean Editorial Pin Story Frame (No Motto / No Schedule / Full-Latar) */
+        .poster-canvas.layout-5.mode-live-report .l5-top-wrap { padding: 20px 26px 0 26px; }
+        .poster-canvas.layout-5.ratio-9-16.mode-live-report .l5-top-wrap { padding: 24px 26px 0 26px; }
+        .poster-canvas.layout-5.ratio-1-1.mode-live-report  .l5-top-wrap { padding: 16px 24px 0 24px; }
+        .poster-canvas.layout-5.mode-live-report .l5-center-stage { padding: 6px 26px 4px 26px !important; }
+        .poster-canvas.layout-5.mode-live-report .l5-bottom-wrap { padding: 0 26px 20px 26px; }
+        .poster-canvas.layout-5.ratio-9-16.mode-live-report .l5-bottom-wrap { padding: 0 26px 24px 26px; }
+        .poster-canvas.layout-5.ratio-1-1.mode-live-report  .l5-bottom-wrap { padding: 0 24px 16px 24px; }
 
         .poster-canvas.layout-5.mode-live-report .l5-card-wrap {
-            width: 810px;
-            height: 710px;
-            margin-top: 8px;
-        }
-        .poster-canvas.layout-5.ratio-9-16.mode-live-report .l5-card-wrap {
-            width: 912px;
-            height: 1280px;
-            margin-top: 10px;
-        }
-        .poster-canvas.layout-5.ratio-1-1.mode-live-report .l5-card-wrap {
-            width: 720px;
-            height: 520px;
+            width: 1028px;
+            height: 1010px;
             margin-top: 6px;
         }
-        .poster-canvas.layout-5.mode-live-report .l5-card-back {
-            transform: translate(-11px, -4px) rotate(-4.2deg);
-            border-radius: 30px;
+        .poster-canvas.layout-5.ratio-9-16.mode-live-report .l5-card-wrap {
+            width: 1028px;
+            height: 1560px;
+            margin-top: 8px;
         }
-        .poster-canvas.layout-5.ratio-9-16.mode-live-report .l5-card-back {
-            transform: translate(-10px, -4px) rotate(-3.4deg);
-            border-radius: 30px;
+        .poster-canvas.layout-5.ratio-1-1.mode-live-report .l5-card-wrap {
+            width: 1032px;
+            height: 750px;
+            margin-top: 4px;
         }
         .poster-canvas.layout-5.mode-live-report .l5-note-card {
-            transform: rotate(-2.6deg);
-            border-radius: 30px;
-            padding: 18px 18px 16px 18px !important;
+            transform: none !important;
+            border-radius: 26px;
+            padding: 12px 12px 10px 12px !important;
             justify-content: flex-start;
         }
-        .poster-canvas.layout-5.ratio-9-16.mode-live-report .l5-note-card {
-            transform: rotate(-2.0deg);
-            border-radius: 30px;
-            padding: 18px 18px 16px 18px !important;
+        .poster-canvas.layout-5.mode-live-report .l5-pushpin {
+            transform: scale(0.94);
+            transform-origin: 46px 128px;
         }
         .poster-canvas.layout-5.mode-live-report .l5-info-stack {
-            margin-top: 30px;
-            gap: 6px;
+            margin-top: 18px;
+            gap: 0px;
         }
-        .poster-canvas.layout-5.ratio-9-16.mode-live-report .l5-info-stack { margin-top: 40px; gap: 8px; }
-        .poster-canvas.layout-5.ratio-1-1.mode-live-report .l5-info-stack { margin-top: 22px; gap: 4px; }
+        .poster-canvas.layout-5.ratio-9-16.mode-live-report .l5-info-stack { margin-top: 22px; }
+        .poster-canvas.layout-5.ratio-1-1.mode-live-report  .l5-info-stack { margin-top: 12px; }
 
         .l5-lr-hole {
             width: 100%;
             flex: 1;
-            border-radius: 18px;
-            border: 2px solid rgba(15, 23, 42, 0.16);
+            border-radius: 16px;
+            border: 2px solid rgba(15, 23, 42, 0.14);
         }
-        .layout-5.style-neubrutalism .l5-lr-hole { border: 3.5px solid #000000; border-radius: 10px; }
-        .layout-5.style-dark-code .l5-lr-hole { border: 2.5px solid #38BDF8; border-radius: 18px; }
+        .layout-5.style-neubrutalism .l5-lr-hole { border: 3px solid #000000; border-radius: 8px; }
+        .layout-5.style-dark-code .l5-lr-hole { border: 2px solid #38BDF8; border-radius: 16px; }
 
         .l5-lr-chin {
             display: none;
             width: 100%;
-            height: 54px;
+            height: 44px;
             align-items: center;
             justify-content: space-between;
-            padding: 8px 8px 0 8px;
+            padding: 6px 8px 0 8px;
             flex-shrink: 0;
             box-sizing: border-box;
         }
-        .ratio-1-1 .l5-lr-chin { height: 42px; padding-top: 6px; }
+        .ratio-1-1 .l5-lr-chin { height: 38px; padding-top: 4px; }
         .poster-canvas.layout-5.mode-live-report .l5-lr-chin { display: flex; }
 
         .l5-lr-chin-badge {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 5px 14px;
+            padding: 4px 14px;
             font-family: 'Space Grotesk', sans-serif;
             font-weight: 800;
-            font-size: 14px;
+            font-size: 13px;
             letter-spacing: 0.14em;
             text-transform: uppercase;
             border-radius: 999px;
@@ -1911,7 +1912,7 @@
         .l5-lr-chin-meta {
             font-family: 'JetBrains Mono', monospace;
             font-weight: 800;
-            font-size: 13px;
+            font-size: 12.5px;
             letter-spacing: 0.08em;
             color: #475569;
             text-transform: uppercase;
@@ -2448,6 +2449,7 @@
                         </div>
                     </div>
 
+                    <div id="scheduleFieldsWrap" class="space-y-2.5 transition-opacity">
                     <div class="grid grid-cols-3 gap-2.5">
                         <div>
                             <label class="text-[10px] font-bold uppercase text-white/70 block mb-1">Tgl</label>
@@ -2468,6 +2470,7 @@
                             <label class="text-[10px] font-bold uppercase text-white/70 block mb-1">Lokasi</label>
                             <input id="inLoc" type="text" value="Kampus IDE LPKIA" oninput="syncAllDom()" class="w-full px-2.5 py-1.5 bg-[#0B192E] border-2 border-black text-xs font-bold text-white focus:border-[#38BDF8] focus:outline-none">
                         </div>
+                    </div>
                     </div>
                 </div>
 
@@ -3132,6 +3135,16 @@
                                 <article class="l4-card-front">
                                     <!-- Card Header -->
                                     <div class="l4-card-hdr">
+                                        <div class="l4-lr-hdr-left lr-only">
+                                            <img id="l4LrHima" src="" alt="HIMA IF" class="l4-lr-hdr-logo">
+                                            <img id="l4LrKabinet" src="" alt="Kabinet" class="l4-lr-hdr-logo">
+                                            <img id="l4LrLpkia" src="" alt="LPKIA" class="l4-lr-hdr-logo">
+                                            <div class="pl-1">
+                                                <p class="l4-lr-hdr-org">HIMA INFORMATIKA</p>
+                                                <p class="l4-lr-hdr-sub">IDE LPKIA BANDUNG</p>
+                                            </div>
+                                        </div>
+                                        <span class="l4-lr-hdr-badge lr-only"><span class="lr-live-dot"></span><span id="l4OutLrHdrBadge">LIVE REPORT</span></span>
                                         <div class="l4-avatar">
                                             <img id="l4CardAvatar" src="" alt="Avatar HIMA IF" class="w-full h-full object-contain">
                                         </div>
@@ -3179,6 +3192,10 @@
 
                                     <!-- Card Footer -->
                                     <div class="l4-card-ftr">
+                                        <div class="l4-lr-ftr-clean lr-only-block">
+                                            <p id="l4OutLrTopic" class="l4-lr-ftr-topic">OPENING CEREMONY</p>
+                                            <p id="l4OutLrSub" class="l4-lr-ftr-sub">KADERISASI &bull; HIMA INFORMATIKA IDE LPKIA</p>
+                                        </div>
                                         <div class="l4-act-row">
                                             <svg class="w-7 h-7 text-[#EF4444]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                                 <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
@@ -3223,7 +3240,7 @@
                                         </linearGradient>
                                     </defs>
                                     <g style="filter: drop-shadow(0 16px 20px rgba(7,20,44,0.38));">
-                                        <g transform="translate(152 -12) rotate(18 32 32)">
+                                        <g class="lr-hide" transform="translate(152 -12) rotate(18 32 32)">
                                             <circle cx="32" cy="54" r="7" fill="#B45309"/>
                                             <path d="M16 42 Q16 14 32 14 Q48 14 48 42 L54 50 L10 50 Z" fill="url(#l4BellGold)" stroke="#78350F" stroke-width="2"/>
                                             <circle cx="32" cy="11" r="4" fill="#F59E0B"/>
@@ -3675,9 +3692,9 @@
         }
 
         function getL3LrBubbleDim(ratio) {
-            if (ratio === '9-16') return { w: 976, bodyH: 1200, tailW: 112, tailH: 76, rad: 38, mega: 248, mOffX: 44, mOffY: -86 };
-            if (ratio === '1-1')  return { w: 780, bodyH: 490,  tailW: 84,  tailH: 50, rad: 30, mega: 184, mOffX: 30, mOffY: -64 };
-            return { w: 880, bodyH: 670, tailW: 96, tailH: 60, rad: 36, mega: 222, mOffX: 34, mOffY: -78 };
+            if (ratio === '9-16') return { w: 1036, bodyH: 1500, tailW: 84, tailH: 48, rad: 30, mega: 172, mOffX: 24, mOffY: -58 };
+            if (ratio === '1-1')  return { w: 1040, bodyH: 720,  tailW: 72, tailH: 38, rad: 26, mega: 142, mOffX: 18, mOffY: -46 };
+            return { w: 1036, bodyH: 960, tailW: 78, tailH: 42, rad: 28, mega: 164, mOffX: 22, mOffY: -54 };
         }
 
         function getEffectiveContent() {
@@ -3739,8 +3756,10 @@
             const heroWrap = document.getElementById('heroTextFieldWrap');
             const cdWrap = document.getElementById('countdownFieldsWrap');
             const lrWrap = document.getElementById('liveReportFieldsWrap');
+            const schedWrapEl = document.getElementById('scheduleFieldsWrap');
             if (heroWrap) heroWrap.classList.toggle('opacity-50', E.isCS || E.isLR);
             if (cdWrap) cdWrap.classList.toggle('opacity-50', E.isCS);
+            if (schedWrapEl) schedWrapEl.classList.toggle('opacity-40', E.isLR && !E.isCS);
             if (lrWrap) lrWrap.classList.toggle('hidden', !E.isLR);
 
             document.querySelectorAll('.lr-hole').forEach((hole) => {
@@ -3855,8 +3874,8 @@
             setIf('l3OutLrTopic', E.liveTopic);
             const l3TopicEl = document.getElementById('l3OutLrTopic');
             if (l3TopicEl) {
-                const baseT3 = currentRatio === '9-16' ? 58 : (currentRatio === '1-1' ? 36 : 46);
-                l3TopicEl.style.fontSize = computeFitFont(E.liveTopic, baseT3, 28, '400', '"Archivo Black", "Space Grotesk", sans-serif', 0.02, 920) + 'px';
+                const baseT3 = currentRatio === '9-16' ? 52 : (currentRatio === '1-1' ? 36 : 46);
+                l3TopicEl.style.fontSize = computeFitFont(E.liveTopic, baseT3, 28, '400', '"Archivo Black", "Space Grotesk", sans-serif', 0.02, 960) + 'px';
             }
             const l3BubSvg = document.getElementById('l3BubbleSvg');
             const l3BubPath = document.getElementById('l3BubblePath');
@@ -3871,7 +3890,7 @@
                     l3BubPath.setAttribute('d', 'M 52 14 L 588 14 A 38 38 0 0 1 626 52 L 626 334 A 38 38 0 0 1 588 372 L 366 372 L 320 422 L 274 372 L 52 372 A 38 38 0 0 1 14 334 L 14 52 A 38 38 0 0 1 52 14 Z');
                 }
             }
-            setIf('l3OutSubTitle', toTitleCase(E.title));
+            setIf('l3OutSubTitle', E.isLR ? `${toTitleCase(E.title)} •` : toTitleCase(E.title));
             setIf('l3OutDateTime', `${E.date} • ${E.time}`);
             setIf('l3OutLoc', toTitleCase(E.loc));
             setIf('l3OutIg', E.igHandle);
@@ -3894,6 +3913,14 @@
             setIf('l4OutStamp', l4M.stampTxt);
             setIf('l4OutFile', l4M.fileName);
             setIf('l4OutLrTxt', E.liveLabel);
+            setIf('l4OutLrHdrBadge', E.liveLabel);
+            setIf('l4OutLrTopic', E.liveTopic);
+            setIf('l4OutLrSub', `${E.title} • HIMA INFORMATIKA IDE LPKIA`);
+            const l4LrT = document.getElementById('l4OutLrTopic');
+            if (l4LrT) {
+                const baseT4 = currentRatio === '1-1' ? 30 : 38;
+                l4LrT.style.fontSize = computeFitFont(E.liveTopic, baseT4, 24, '400', '"Archivo Black", "Space Grotesk", sans-serif', 0.02, 960) + 'px';
+            }
             setIf('l4OutIgCard', E.igHandle);
             setIf('l4OutIgCap', E.igHandle);
             setIf('l4OutIgBar', E.igHandle);
@@ -3931,7 +3958,7 @@
                 l5MainEl.setAttribute('letter-spacing', l5M.titleTrack);
             }
             setL5If('l5OutLrBadge', E.liveLabel);
-            setL5If('l5OutLrMeta', 'HIMA IF // ON AIR');
+            setL5If('l5OutLrMeta', `${E.title} • HIMA IF`);
             setL5If('l5OutSched', l5M.schedLine);
             setL5If('l5OutIg', E.igHandle);
             setL5If('l5OutCta', E.cta);
@@ -4303,10 +4330,10 @@
             const isL1LR = currentLayout === 1 && posterMode === 'live-report';
             const dims = isL1LR
                 ? ({
-                    '4-5':  { w: 1080, h: 1350, px: 46, pt: 34, pb: 34 },
-                    '9-16': { w: 1080, h: 1920, px: 44, pt: 44, pb: 44 },
-                    '1-1':  { w: 1080, h: 1080, px: 42, pt: 26, pb: 26 }
-                }[currentRatio] || { w: 1080, h: 1350, px: 46, pt: 34, pb: 34 })
+                    '4-5':  { w: 1080, h: 1350, px: 22, pt: 20, pb: 20 },
+                    '9-16': { w: 1080, h: 1920, px: 22, pt: 22, pb: 22 },
+                    '1-1':  { w: 1080, h: 1080, px: 20, pt: 18, pb: 18 }
+                }[currentRatio] || { w: 1080, h: 1350, px: 22, pt: 20, pb: 20 })
                 : ({
                     '4-5':  { w: 1080, h: 1350, px: 64, pt: 46, pb: 48 },
                     '9-16': { w: 1080, h: 1920, px: 68, pt: 78, pb: 86 },
@@ -4681,8 +4708,8 @@
             const innerW = W - dims.px * 2;
             const hdrCfg = E.isLR
                 ? (currentRatio === '1-1'
-                    ? { py: 11, px: 18, logo: 46, title: 20, sub: 12 }
-                    : { py: 11, px: 18, logo: 54, title: 24, sub: 14 })
+                    ? { py: 9, px: 16, logo: 38, title: 19, sub: 11 }
+                    : { py: 9, px: 16, logo: 42, title: 22, sub: 13 })
                 : (currentRatio === '9-16'
                     ? { py: 16, px: 24, logo: 78, title: 30, sub: 18 }
                     : (currentRatio === '1-1'
@@ -4720,8 +4747,8 @@
             drawTrackedText('HIMA INFORMATIKA', hdrCenterX, hdrCenterY - hdrCfg.sub * 0.65, `700 ${hdrCfg.title}px "Space Grotesk", sans-serif`, T.hdrTitle, 1.2, 'center');
             drawTrackedText('IDE LPKIA', hdrCenterX, hdrCenterY + hdrCfg.title * 0.58, `800 ${hdrCfg.sub}px "Plus Jakarta Sans", sans-serif`, T.hdrSub, 4.2, 'center');
 
-            // 3. Coding Accents
-            if (showAccents) {
+            // 3. Coding Accents (dihide di mode Live Report agar clean)
+            if (showAccents && !E.isLR) {
                 const is916_1 = currentRatio === '9-16';
                 const accCoords = E.isLR
                     ? (is916_1
@@ -4766,8 +4793,8 @@
             // 4. Schedule Cards & CTA
             const sCfg = E.isLR
                 ? (currentRatio === '1-1'
-                    ? { wrapGap: 10, gridGap: 10, numSize: 34, numPx: 14, numPy: 6, dateSize: 22, cardPx: 16, cardPy: 8, botPx: 16, botPy: 9, botVal: 18, ctaPx: 26, ctaPy: 9, ctaText: 18 }
-                    : { wrapGap: 14, gridGap: 12, numSize: 42, numPx: 18, numPy: 8, dateSize: 28, cardPx: 20, cardPy: 10, botPx: 20, botPy: 12, botVal: 21, ctaPx: 32, ctaPy: 11, ctaText: 21 })
+                    ? { wrapGap: 0, gridGap: 0, numSize: 34, numPx: 14, numPy: 6, dateSize: 22, cardPx: 16, cardPy: 8, botPx: 16, botPy: 9, botVal: 18, ctaPx: 26, ctaPy: 9, ctaText: 18 }
+                    : { wrapGap: 0, gridGap: 0, numSize: 42, numPx: 18, numPy: 8, dateSize: 28, cardPx: 20, cardPy: 10, botPx: 20, botPy: 12, botVal: 21, ctaPx: 28, ctaPy: 10, ctaText: 19 })
                 : (currentRatio === '9-16'
                     ? { wrapGap: 28, gridGap: 18, numSize: 58, numPx: 22, numPy: 12, dateSize: 34, cardPx: 24, cardPy: 16, botPx: 26, botPy: 20, botVal: 24, ctaPx: 40, ctaPy: 16, ctaText: 26 }
                     : (currentRatio === '1-1'
@@ -4782,7 +4809,7 @@
             const ctaTxt = E.cta;
 
             let dateCardY = ctaY;
-            if (!E.isCS) {
+            if (!E.isCS && !E.isLR) {
                 const botH = 48 + sCfg.botPy * 2;
                 const botY = ctaY - sCfg.wrapGap - botH;
 
@@ -4853,27 +4880,27 @@
                 : null;
             const hCfg = E.isLR
                 ? (currentRatio === '9-16'
-                    ? { cdFont: 32, cdPx: 20, cdPy: 8, mnFont: 19, mnPx: 18, mnPy: 4, cardW: 964, cardPt: 40, cardPb: 28, svgW: 680, svgH: 295, cardMt: 12, stFont: l1StFit, stPx: 32, stPy: 12, stIcon: 32, stMt: -34 }
+                    ? { cdFont: 28, cdPx: 18, cdPy: 7, mnFont: 0, mnPx: 0, mnPy: 0, cardW: 1036, cardPt: 32, cardPb: 10, svgW: 680, svgH: 295, cardMt: 8, stFont: l1StFit, stPx: 30, stPy: 10, stIcon: 30, stMt: -28 }
                     : (currentRatio === '1-1'
-                        ? { cdFont: 24, cdPx: 18, cdPy: 7, mnFont: 15, mnPx: 16, mnPy: 4, cardW: 760, cardPt: 34, cardPb: 20, svgW: 540, svgH: 175, cardMt: 8,  stFont: l1StFit, stPx: 22, stPy: 8,  stIcon: 24, stMt: -24 }
-                        : { cdFont: 32, cdPx: 20, cdPy: 8, mnFont: 19, mnPx: 18, mnPy: 4, cardW: 840, cardPt: 38, cardPb: 26, svgW: 660, svgH: 235, cardMt: 10, stFont: l1StFit, stPx: 28, stPy: 11, stIcon: 30, stMt: -30 }))
+                        ? { cdFont: 24, cdPx: 18, cdPy: 7, mnFont: 0, mnPx: 0, mnPy: 0, cardW: 1040, cardPt: 30, cardPb: 10, svgW: 540, svgH: 175, cardMt: 8, stFont: l1StFit, stPx: 24, stPy: 8,  stIcon: 26, stMt: -24 }
+                        : { cdFont: 28, cdPx: 18, cdPy: 7, mnFont: 0, mnPx: 0, mnPy: 0, cardW: 1036, cardPt: 32, cardPb: 10, svgW: 660, svgH: 235, cardMt: 8, stFont: l1StFit, stPx: 30, stPy: 10, stIcon: 30, stMt: -28 }))
                 : (currentRatio === '9-16'
                     ? { cdFont: 52, cdPx: 32, cdPy: 12, mnFont: 28, mnPx: 28, mnPy: 8, cardW: 760, cardPt: 40, cardPb: 80, svgW: 680, svgH: 295, cardMt: 24, stFont: 54, stPx: 40, stPy: 16, stIcon: 40, stMt: -44 }
                     : (currentRatio === '1-1'
                         ? { cdFont: 32, cdPx: 22, cdPy: 8, mnFont: 19, mnPx: 18, mnPy: 5, cardW: 620, cardPt: 22, cardPb: 42, svgW: 540, svgH: 175, cardMt: 12, stFont: 34, stPx: 26, stPy: 9, stIcon: 28, stMt: -28 }
                         : { cdFont: 42, cdPx: 28, cdPy: 10, mnFont: 24, mnPx: 24, mnPy: 6, cardW: 710, cardPt: 36, cardPb: 56, svgW: 660, svgH: 235, cardMt: 16, stFont: 44, stPx: 32, stPy: 12, stIcon: 32, stMt: -36 }));
 
-            const lrHoleH = currentRatio === '9-16' ? 1120 : (currentRatio === '1-1' ? 300 : 490);
-            const lrPt = currentRatio === '9-16' ? 40 : (currentRatio === '1-1' ? 34 : 38);
-            const lrPb = currentRatio === '9-16' ? 28 : (currentRatio === '1-1' ? 20 : 26);
-            const lrPx = currentRatio === '1-1' ? 14 : 16;
+            const lrHoleH = currentRatio === '9-16' ? 1510 : (currentRatio === '1-1' ? 730 : 980);
+            const lrPt = currentRatio === '1-1' ? 30 : 32;
+            const lrPb = 10;
+            const lrPx = 10;
 
             const cdH = hCfg.cdFont + hCfg.cdPy * 2 + 8;
             const mnH = hCfg.mnFont + hCfg.mnPy * 2 + 7;
             const heroCardH = E.isLR ? (lrPt + lrHoleH + lrPb) : (hCfg.cardPt + hCfg.svgH + hCfg.cardPb);
             const stH = hCfg.stFont + hCfg.stPy * 2 + 8;
             const mnGap = currentStyle === 'modern' ? 8 : (currentStyle === 'glass' ? 6 : -8);
-            const mnBlockH = E.isCS ? 0 : (mnGap + mnH);
+            const mnBlockH = (E.isCS || E.isLR) ? 0 : (mnGap + mnH);
             const totalHeroH = cdH + mnBlockH + hCfg.cardMt + heroCardH + (hCfg.stMt + stH);
 
             const areaTop = hdrY + hdrH;
@@ -4998,8 +5025,8 @@
             drawTrackedText(cdTxt, E.isLR ? (-cdW / 2 + hCfg.cdPx + dotExtra) : 0, 1, `700 ${hCfg.cdFont}px ${cdFontFam}`, T.cdText, cdTrack, E.isLR ? 'left' : 'center');
             ctx.restore();
 
-            // MENUJU Tag (hidden on Coming Soon mode)
-            if (!E.isCS && E.mn) {
+            // MENUJU Tag (hidden on Coming Soon & Clean Live Report mode)
+            if (!E.isCS && !E.isLR && E.mn) {
                 const mnTxt = E.mn;
                 ctx.font = `700 ${hCfg.mnFont}px "Space Grotesk", sans-serif`;
                 const mnW = ctx.measureText(mnTxt).width + Math.max(0, mnTxt.length - 1) * 4.6 + hCfg.mnPx * 2;
@@ -5274,14 +5301,16 @@
             const stampTxt = E.l2Stamp;
             const igHandle = E.igHandle;
 
-            const bgFs = currentRatio === '9-16' ? 260 : (currentRatio === '1-1' ? 210 : 235);
-            const rowH = bgFs * 0.80;
-            const bgRows = getL2BgRows(E.bgWord1, E.bgWord2);
-            const totalWallH = bgRows.length * rowH;
-            const wallStartY = (H - totalWallH) / 2 + rowH * 0.5;
-            bgRows.forEach((line, idx) => {
-                drawTextTrack(line, -40, wallStartY + idx * rowH, `800 ${bgFs}px "Space Grotesk", "Archivo Black", sans-serif`, L.wallCol, -0.04 * bgFs, 'left');
-            });
+            if (!E.isLR) {
+                const bgFs = currentRatio === '9-16' ? 260 : (currentRatio === '1-1' ? 210 : 235);
+                const rowH = bgFs * 0.80;
+                const bgRows = getL2BgRows(E.bgWord1, E.bgWord2);
+                const totalWallH = bgRows.length * rowH;
+                const wallStartY = (H - totalWallH) / 2 + rowH * 0.5;
+                bgRows.forEach((line, idx) => {
+                    drawTextTrack(line, -40, wallStartY + idx * rowH, `800 ${bgFs}px "Space Grotesk", "Archivo Black", sans-serif`, L.wallCol, -0.04 * bgFs, 'left');
+                });
+            }
 
             // 2. 2 Spiky Starbursts Behind Dialog
             const starPts = [
@@ -5336,30 +5365,32 @@
                         ? { trSize: 340, trY: 320, blSize: 360, blY: 35 }
                         : { trSize: 410, trY: 355, blSize: 440, blY: 35 }));
 
-            drawStar(W - 20 - starCfg.trSize, H / 2 - starCfg.trY, starCfg.trSize);
-            drawStar(10, H / 2 - starCfg.blY, starCfg.blSize);
+            if (!E.isLR) {
+                drawStar(W - 20 - starCfg.trSize, H / 2 - starCfg.trY, starCfg.trSize);
+                drawStar(10, H / 2 - starCfg.blY, starCfg.blSize);
+            }
 
             // 3. Top Logos + Centered Window + Stickers
             const winW = E.isLR
-                ? (currentRatio === '9-16' ? 976 : (currentRatio === '1-1' ? 900 : 940))
+                ? 1036
                 : (currentRatio === '9-16' ? 920 : (currentRatio === '1-1' ? 880 : 900));
             const winX = (W - winW) / 2;
             const logoBoxS = E.isLR
-                ? (currentRatio === '9-16' ? 56 : (currentRatio === '1-1' ? 46 : 54))
+                ? (currentRatio === '9-16' ? 44 : (currentRatio === '1-1' ? 38 : 42))
                 : (currentRatio === '1-1' ? 52 : 62);
             const logoGap = E.isLR
-                ? (currentRatio === '9-16' ? 18 : (currentRatio === '1-1' ? 14 : 16))
+                ? (currentRatio === '9-16' ? 16 : (currentRatio === '1-1' ? 12 : 14))
                 : (currentRatio === '9-16' ? 22 : (currentRatio === '1-1' ? 16 : 18));
             const logosTopY = E.isLR
-                ? (currentRatio === '9-16' ? 54 : (currentRatio === '1-1' ? 22 : 30))
+                ? (currentRatio === '9-16' ? 22 : (currentRatio === '1-1' ? 16 : 20))
                 : (currentRatio === '9-16' ? 74 : (currentRatio === '1-1' ? 30 : 44));
-            const tbH = E.isLR ? 68 : 74;
+            const tbH = E.isLR ? 56 : 74;
             const heroSvgDim = currentRatio === '9-16' ? { w: 680, h: 225 } : (currentRatio === '1-1' ? { w: 560, h: 160 } : { w: 640, h: 205 });
             const lrL2Dim = currentRatio === '9-16'
-                ? { h: 1280, px: 16, pt: 14, pb: 48, rad: 16 }
+                ? { h: 1520, px: 10, pt: 10, pb: 38, rad: 16 }
                 : (currentRatio === '1-1'
-                    ? { h: 520,  px: 14, pt: 12, pb: 36, rad: 12 }
-                    : { h: 710,  px: 16, pt: 14, pb: 44, rad: 14 });
+                    ? { h: 730,  px: 10, pt: 8,  pb: 32, rad: 12 }
+                    : { h: 980,  px: 10, pt: 10, pb: 38, rad: 14 });
             const l2StFs = E.isLR
                 ? computeFitFont(stampTxt, currentRatio === '9-16' ? 44 : (currentRatio === '1-1' ? 32 : 38), 24, '700', '"Space Grotesk", sans-serif', 0.06, 720)
                 : 40;
@@ -5433,8 +5464,8 @@
             }
 
             const tbMidY = winY + (tbH - L.tbDivW) / 2;
-            drawTextTrack('HIMA INFORMATIKA', winX + winW - 24, tbMidY - 8, '700 23px "Space Grotesk", sans-serif', L.tbTitleCol, 0.9, 'right');
-            drawTextTrack('IDE LPKIA', winX + winW - 24, tbMidY + 13, '800 12px "Plus Jakarta Sans", sans-serif', L.tbSubCol, 2.8, 'right');
+            drawTextTrack('HIMA INFORMATIKA', winX + winW - (E.isLR ? 18 : 24), tbMidY - (E.isLR ? 7 : 8), E.isLR ? '700 20px "Space Grotesk", sans-serif' : '700 23px "Space Grotesk", sans-serif', L.tbTitleCol, 0.9, 'right');
+            drawTextTrack('IDE LPKIA', winX + winW - (E.isLR ? 18 : 24), tbMidY + (E.isLR ? 11 : 13), E.isLR ? '800 11px "Plus Jakarta Sans", sans-serif' : '800 12px "Plus Jakarta Sans", sans-serif', L.tbSubCol, 2.8, 'right');
 
             if (E.isLR) {
                 const holeX = winX + lrL2Dim.px;
@@ -5571,11 +5602,7 @@
 
             // 4. Giant 8-Bit Pixelated Arrow Cursor anchored to bottom-right of window
             const curCfg = E.isLR
-                ? (currentRatio === '9-16'
-                    ? { unit: 14, rOff: -12, bOff: -165 }
-                    : (currentRatio === '1-1'
-                        ? { unit: 12.8, rOff: -14, bOff: -170 }
-                        : { unit: 14.5, rOff: -14, bOff: -210 }))
+                ? { unit: 10.5, rOff: 6, bOff: -125 }
                 : (currentRatio === '9-16'
                     ? { unit: 16 * 1.12, rOff: -26, bOff: -275 }
                     : (currentRatio === '1-1'
@@ -5819,32 +5846,35 @@
             ctx.beginPath(); ctx.arc(920, 210, 142, 0, Math.PI * 2); ctx.stroke();
             ctx.restore();
 
-            // Diagonal Geometric Tiles
-            const bgTiles = [
-                { x: 875, y: 135, w: 128, h: 72, r: 16, rot: 18, sw: 1.8 },
-                { x: 72,  y: 290, w: 96,  h: 96, r: 20, rot: -16, sw: 1.8 },
-                { x: 905, y: 965, w: 110, h: 74, r: 16, rot: -18, sw: 1.8 },
-                { x: 70,  y: 1090, w: 84, h: 58, r: 14, rot: 14, sw: 1.6 }
-            ];
-            bgTiles.forEach((t) => {
-                ctx.save();
-                ctx.translate(t.x + t.w / 2, t.y + t.h / 2);
-                ctx.rotate((t.rot * Math.PI) / 180);
-                ctx.fillStyle = L.tileFill;
-                ctx.strokeStyle = L.tileStroke;
-                ctx.lineWidth = t.sw;
-                rrPath(-t.w / 2, -t.h / 2, t.w, t.h, t.r);
-                ctx.fill(); ctx.stroke();
-                ctx.restore();
-            });
+            const E = getEffectiveContent();
+            if (!E.isLR) {
+                // Diagonal Geometric Tiles
+                const bgTiles = [
+                    { x: 875, y: 135, w: 128, h: 72, r: 16, rot: 18, sw: 1.8 },
+                    { x: 72,  y: 290, w: 96,  h: 96, r: 20, rot: -16, sw: 1.8 },
+                    { x: 905, y: 965, w: 110, h: 74, r: 16, rot: -18, sw: 1.8 },
+                    { x: 70,  y: 1090, w: 84, h: 58, r: 14, rot: 14, sw: 1.6 }
+                ];
+                bgTiles.forEach((t) => {
+                    ctx.save();
+                    ctx.translate(t.x + t.w / 2, t.y + t.h / 2);
+                    ctx.rotate((t.rot * Math.PI) / 180);
+                    ctx.fillStyle = L.tileFill;
+                    ctx.strokeStyle = L.tileStroke;
+                    ctx.lineWidth = t.sw;
+                    rrPath(-t.w / 2, -t.h / 2, t.w, t.h, t.r);
+                    ctx.fill(); ctx.stroke();
+                    ctx.restore();
+                });
 
-            // Micro Dot Clusters
-            ctx.fillStyle = L.dotCol;
-            for (let r = 0; r < 3; r++) for (let c = 0; c < 4; c++) {
-                ctx.beginPath(); ctx.arc(888 + c * 24, 410 + r * 24, 4, 0, Math.PI * 2); ctx.fill();
-            }
-            for (let r = 0; r < 2; r++) for (let c = 0; c < 3; c++) {
-                ctx.beginPath(); ctx.arc(110 + c * 22, 545 + r * 22, 3.5, 0, Math.PI * 2); ctx.fill();
+                // Micro Dot Clusters
+                ctx.fillStyle = L.dotCol;
+                for (let r = 0; r < 3; r++) for (let c = 0; c < 4; c++) {
+                    ctx.beginPath(); ctx.arc(888 + c * 24, 410 + r * 24, 4, 0, Math.PI * 2); ctx.fill();
+                }
+                for (let r = 0; r < 2; r++) for (let c = 0; c < 3; c++) {
+                    ctx.beginPath(); ctx.arc(110 + c * 22, 545 + r * 22, 3.5, 0, Math.PI * 2); ctx.fill();
+                }
             }
 
             // 4-Point Sparkle Stars
@@ -5876,7 +5906,7 @@
             ctx.restore();
             ctx.restore();
 
-            if (showAccents) {
+            if (showAccents && !E.isLR) {
                 const cAcc = [
                     ['</>', 0.84, 0.19, 12, 32, L.codeCol],
                     ['>_',  0.09, 0.33, -12, 30, L.codeAlt],
@@ -5921,13 +5951,12 @@
                 }
             }
 
-            const E = getEffectiveContent();
             const is11 = currentRatio === '1-1';
             const is916 = currentRatio === '9-16';
             const topPad = E.isLR
-                ? (is916 ? { x: 46, y: 44, logo: 46, py: 10, pl: 14, pr: 22, gap: 12, divH: 34 }
-                    : (is11 ? { x: 40, y: 24, logo: 36, py: 9,  pl: 12, pr: 18, gap: 10, divH: 32 }
-                    : { x: 46, y: 34, logo: 44, py: 10, pl: 14, pr: 22, gap: 12, divH: 34 }))
+                ? (is916 ? { x: 22, y: 24, logo: 38, py: 8, pl: 12, pr: 18, gap: 10, divH: 28 }
+                    : (is11 ? { x: 20, y: 16, logo: 34, py: 7, pl: 10, pr: 16, gap: 9,  divH: 26 }
+                    : { x: 22, y: 20, logo: 38, py: 8, pl: 12, pr: 18, gap: 10, divH: 28 }))
                 : (is916 ? { x: 56, y: 72, logo: 54, py: 14, pl: 18, pr: 28, gap: 16, divH: 40 }
                     : (is11 ? { x: 46, y: 28, logo: 38, py: 9, pl: 12, pr: 18, gap: 10, divH: 32 }
                     : { x: 52, y: 42, logo: 46, py: 12, pl: 16, pr: 24, gap: 14, divH: 40 }));
@@ -5973,9 +6002,9 @@
 
             // 4. Bottom Dock Bar
             const dockCfg = E.isLR
-                ? (is916 ? { px: 46, pb: 44, py: 16 }
-                    : (is11 ? { px: 38, pb: 22, py: 14 }
-                    : { px: 44, pb: 30, py: 16 }))
+                ? (is916 ? { px: 22, pb: 24, py: 12 }
+                    : (is11 ? { px: 20, pb: 16, py: 11 }
+                    : { px: 22, pb: 20, py: 12 }))
                 : (is916 ? { px: 50, pb: 72, py: 22 }
                     : (is11 ? { px: 40, pb: 26, py: 14 }
                     : { px: 46, pb: 36, py: 18 }));
@@ -6035,10 +6064,10 @@
                     : { w: 632, bodyH: 360, tailW: 90, tailH: 48, rad: 36, mega: 222, mOffX: 26, mOffY: -82 }));
 
             const l3TopicFs = E.isLR
-                ? computeFitFont(E.liveTopic, is916 ? 58 : (is11 ? 36 : 46), 28, '400', '"Archivo Black", "Space Grotesk", sans-serif', 0.02, 920)
+                ? computeFitFont(E.liveTopic, is916 ? 52 : (is11 ? 36 : 46), 28, '400', '"Archivo Black", "Space Grotesk", sans-serif', 0.02, 960)
                 : 0;
-            const capGap = E.isLR ? (is11 ? 10 : 14) : (is11 ? 20 : 28);
-            const capBlockH = E.isLR ? (Math.round(l3TopicFs * 1.04) + 12 + 132) : (E.isCS ? 58 : 132);
+            const capGap = E.isLR ? (is11 ? 6 : 10) : (is11 ? 20 : 28);
+            const capBlockH = E.isLR ? (Math.round(l3TopicFs * 1.04) + 36) : (E.isCS ? 58 : 132);
             const totalMidH = bDim.bodyH + bDim.tailH + capGap + capBlockH;
             const areaTop = topPad.y + pillH;
             const areaBot = dockY;
@@ -6077,10 +6106,10 @@
             }
 
             if (E.isLR) {
-                const holeX = bubX + 18;
-                const holeY = bubY + 18;
-                const holeW = bDim.w - 36;
-                const holeH = bDim.bodyH - 36;
+                const holeX = bubX + 10;
+                const holeY = bubY + 10;
+                const holeW = bDim.w - 20;
+                const holeH = bDim.bodyH - 22;
                 const holeRad = currentStyle === 'neubrutalism' || currentStyle === 'dark-code' ? 22 : 26;
                 const rimCol = currentStyle === 'neubrutalism' ? '#000000' : (currentStyle === 'dark-code' ? '#38BDF8' : (currentStyle === 'glass' ? '#FFFFFF' : 'rgba(15,23,42,0.22)'));
                 const rimW = currentStyle === 'neubrutalism' ? 3.5 : 2.5;
@@ -6402,11 +6431,16 @@
                 ctx.restore();
                 capOff = Math.round(tFs3 * 1.04) + 12;
             }
-            const titleLine = `${toTitleCase(E.title)} HIMA Informatika`;
-            drawTextTrack(titleLine, W / 2, capY + capOff + 12, `700 21px ${L.capFont}`, L.capCol, 0, 'center');
-            drawTextTrack('Institut Digital Ekonomi LPKIA', W / 2, capY + capOff + 41, `600 21px ${L.capFont}`, L.capCol, 0, 'center');
+            if (E.isLR) {
+                const subL3Clean = `${toTitleCase(E.title)} • HIMA Informatika Institut Digital Ekonomi LPKIA`;
+                drawTextTrack(subL3Clean, W / 2, capY + capOff + 14, `600 19px ${L.capFont}`, L.capCol, 0, 'center');
+            } else {
+                const titleLine = `${toTitleCase(E.title)} HIMA Informatika`;
+                drawTextTrack(titleLine, W / 2, capY + capOff + 12, `700 21px ${L.capFont}`, L.capCol, 0, 'center');
+                drawTextTrack('Institut Digital Ekonomi LPKIA', W / 2, capY + capOff + 41, `600 21px ${L.capFont}`, L.capCol, 0, 'center');
+            }
 
-            if (!E.isCS) {
+            if (!E.isCS && !E.isLR) {
                 const dtTxt = `${E.date} • ${E.time}`;
                 drawTextTrack(dtTxt, W / 2, capY + capOff + 76, `700 19px ${L.dateFont}`, L.dateCol, 1.4, 'center');
 
@@ -6670,53 +6704,53 @@
                 }
             }
 
-            // 2. Kinetic Wallpaper (DNA Layout 2)
-            const wallFs = is916 ? 190 : (is11 ? 150 : 170);
-            const rowH = wallFs * 0.80;
-            const wallRows = getL2BgRows(E.bgWord1, E.bgWord2);
-            const wallStartY = (H - wallRows.length * rowH) / 2 + rowH * 0.5;
-            wallRows.forEach((line, idx) => {
-                drawTextTrack(line, -40, wallStartY + idx * rowH, `800 ${wallFs}px "Space Grotesk", "Archivo Black", sans-serif`, L.wallCol, -0.04 * wallFs, 'left');
-            });
+            // 2. Kinetic Wallpaper & Starbursts & Code Accents (hanya mode poster, bukan Live Report)
+            if (!E.isLR) {
+                const wallFs = is916 ? 190 : (is11 ? 150 : 170);
+                const rowH = wallFs * 0.80;
+                const wallRows = getL2BgRows(E.bgWord1, E.bgWord2);
+                const wallStartY = (H - wallRows.length * rowH) / 2 + rowH * 0.5;
+                wallRows.forEach((line, idx) => {
+                    drawTextTrack(line, -40, wallStartY + idx * rowH, `800 ${wallFs}px "Space Grotesk", "Archivo Black", sans-serif`, L.wallCol, -0.04 * wallFs, 'left');
+                });
 
-            // 3. 2 Starbursts (DNA Layout 2)
-            const starPts = [[210,12],[248,108],[345,52],[308,148],[408,168],[320,224],[388,308],[282,294],[274,398],[210,322],[146,398],[138,294],[32,308],[100,224],[12,168],[112,148],[75,52],[172,108]];
-            const drawStar = (x, y, size) => {
-                const tracePath = () => {
-                    ctx.beginPath();
-                    starPts.forEach(([px, py], i) => { if (i === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py); });
-                    ctx.closePath();
-                };
-                ctx.save();
-                ctx.translate(x, y);
-                ctx.scale(size / 420, size / 420);
-                if (L.star.soft) { ctx.shadowColor = L.star.soft; ctx.shadowBlur = 28 * 420 / size; ctx.shadowOffsetY = 14 * 420 / size; }
-                tracePath();
-                ctx.fillStyle = L.star.fill;
-                ctx.fill();
-                ctx.restore();
-                if (L.star.stroke && L.star.sw > 0) {
+                const starPts = [[210,12],[248,108],[345,52],[308,148],[408,168],[320,224],[388,308],[282,294],[274,398],[210,322],[146,398],[138,294],[32,308],[100,224],[12,168],[112,148],[75,52],[172,108]];
+                const drawStar = (x, y, size) => {
+                    const tracePath = () => {
+                        ctx.beginPath();
+                        starPts.forEach(([px, py], i) => { if (i === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py); });
+                        ctx.closePath();
+                    };
                     ctx.save();
                     ctx.translate(x, y);
                     ctx.scale(size / 420, size / 420);
+                    if (L.star.soft) { ctx.shadowColor = L.star.soft; ctx.shadowBlur = 28 * 420 / size; ctx.shadowOffsetY = 14 * 420 / size; }
                     tracePath();
-                    ctx.lineJoin = 'round';
-                    ctx.lineWidth = L.star.sw * 420 / size;
-                    ctx.strokeStyle = L.star.stroke;
-                    ctx.stroke();
+                    ctx.fillStyle = L.star.fill;
+                    ctx.fill();
                     ctx.restore();
-                }
-            };
-            const starCfg = is916
-                ? { tr: { s: 330, x: W + 46 - 330, y: 0.11 * H }, bl: { s: 350, x: -60, y: H - 90 - 350 } }
-                : (is11
-                    ? { tr: { s: 240, x: W + 40 - 240, y: 0.12 * H }, bl: { s: 260, x: -50, y: H - 56 - 260 } }
-                    : { tr: { s: 300, x: W + 46 - 300, y: 0.13 * H }, bl: { s: 320, x: -60, y: H - 70 - 320 } });
-            drawStar(starCfg.tr.x, starCfg.tr.y, starCfg.tr.s);
-            drawStar(starCfg.bl.x, starCfg.bl.y, starCfg.bl.s);
+                    if (L.star.stroke && L.star.sw > 0) {
+                        ctx.save();
+                        ctx.translate(x, y);
+                        ctx.scale(size / 420, size / 420);
+                        tracePath();
+                        ctx.lineJoin = 'round';
+                        ctx.lineWidth = L.star.sw * 420 / size;
+                        ctx.strokeStyle = L.star.stroke;
+                        ctx.stroke();
+                        ctx.restore();
+                    }
+                };
+                const starCfg = is916
+                    ? { tr: { s: 330, x: W + 46 - 330, y: 0.11 * H }, bl: { s: 350, x: -60, y: H - 90 - 350 } }
+                    : (is11
+                        ? { tr: { s: 240, x: W + 40 - 240, y: 0.12 * H }, bl: { s: 260, x: -50, y: H - 56 - 260 } }
+                        : { tr: { s: 300, x: W + 46 - 300, y: 0.13 * H }, bl: { s: 320, x: -60, y: H - 70 - 320 } });
+                drawStar(starCfg.tr.x, starCfg.tr.y, starCfg.tr.s);
+                drawStar(starCfg.bl.x, starCfg.bl.y, starCfg.bl.s);
+            }
 
-            // 4. Unboxed Coding Accents (DNA Layout 1)
-            if (showAccents) {
+            if (showAccents && !E.isLR) {
                 const acc = [
                     ['>_', 0.07 * W + 38, 0.21 * H + 18, -12, 38, L.codeA],
                     ['</>', W - 0.05 * W - 48, 0.50 * H + 18, 10, 34, L.codeB],
@@ -6737,22 +6771,14 @@
                 });
             }
 
-            // 5. Top 3-Logo Header Pill
-            const topY = E.isLR ? (is916 ? 38 : (is11 ? 20 : 30)) : (is916 ? 66 : (is11 ? 24 : 38));
-            const logoS = E.isLR ? (is916 ? 44 : (is11 ? 32 : 40)) : (is916 ? 52 : (is11 ? 34 : 44));
+            // 5. Top 3-Logo Header Pill (skip top pill on Live Report — logos rendered cleanly inside card header)
+            const topY = is916 ? 66 : (is11 ? 24 : 38);
+            const logoS = is916 ? 52 : (is11 ? 34 : 44);
             const chipWrap4 = currentStyle === 'dark-code';
             const slot4 = chipWrap4 ? logoS + 6 : logoS;
-            const pillPy = E.isLR ? (is916 ? 9 : (is11 ? 7 : 9)) : (is916 ? 12 : (is11 ? 7 : 10));
-            const pillPx = E.isLR ? (is916 ? 22 : (is11 ? 18 : 22)) : (is916 ? 28 : (is11 ? 18 : 24));
-            const pillH = slot4 + pillPy * 2;
-            ctx.font = '700 20px "Space Grotesk", sans-serif';
-            const titleW = Math.max(ctx.measureText('HIMA INFORMATIKA').width + 18, 220);
-            const leftGrpW = slot4 * 2 + 8;
-            const topW = pillPx * 2 + leftGrpW + slot4 + 34 + titleW;
-            const pillX0 = (W - topW) / 2;
-            drawBox(pillX0, topY, topW, pillH, {
-                fill: L.topFill, border: L.topBorder, borderCol: L.topBorderCol, shadow: L.topShadow, radius: L.topRad, soft: L.softCol, blur: 28, sy: 12
-            });
+            const pillPy = is916 ? 12 : (is11 ? 7 : 10);
+            const pillPx = is916 ? 28 : (is11 ? 18 : 24);
+            const pillH = E.isLR ? 0 : (slot4 + pillPy * 2);
             const drawOrgImg = (ix, iy, s, img) => {
                 if (chipWrap4) {
                     ctx.fillStyle = '#FFFFFF';
@@ -6764,20 +6790,30 @@
                 const sc = Math.min(d / img.width, d / img.height);
                 ctx.drawImage(img, ix + pad + (d - img.width * sc) / 2, iy + pad + (d - img.height * sc) / 2, img.width * sc, img.height * sc);
             };
-            drawOrgImg(pillX0 + pillPx, topY + pillPy, slot4, himaImg);
-            drawOrgImg(pillX0 + pillPx + slot4 + 8, topY + pillPy, slot4, kabinetImg);
-            drawOrgImg(pillX0 + topW - pillPx - slot4, topY + pillPy, slot4, lpkiaImg);
-            const titleCX4 = pillX0 + pillPx + leftGrpW + 17 + titleW / 2;
-            drawTextTrack('HIMA INFORMATIKA', titleCX4, topY + pillH / 2 - 9, '700 20px "Space Grotesk", sans-serif', L.topText, 0.8, 'center');
-            drawTextTrack('IDE LPKIA BANDUNG', titleCX4, topY + pillH / 2 + 11, '800 12px "Plus Jakarta Sans", sans-serif', L.topSub, 2.4, 'center');
+            if (!E.isLR) {
+                ctx.font = '700 20px "Space Grotesk", sans-serif';
+                const titleW = Math.max(ctx.measureText('HIMA INFORMATIKA').width + 18, 220);
+                const leftGrpW = slot4 * 2 + 8;
+                const topW = pillPx * 2 + leftGrpW + slot4 + 34 + titleW;
+                const pillX0 = (W - topW) / 2;
+                drawBox(pillX0, topY, topW, pillH, {
+                    fill: L.topFill, border: L.topBorder, borderCol: L.topBorderCol, shadow: L.topShadow, radius: L.topRad, soft: L.softCol, blur: 28, sy: 12
+                });
+                drawOrgImg(pillX0 + pillPx, topY + pillPy, slot4, himaImg);
+                drawOrgImg(pillX0 + pillPx + slot4 + 8, topY + pillPy, slot4, kabinetImg);
+                drawOrgImg(pillX0 + topW - pillPx - slot4, topY + pillPy, slot4, lpkiaImg);
+                const titleCX4 = pillX0 + pillPx + leftGrpW + 17 + titleW / 2;
+                drawTextTrack('HIMA INFORMATIKA', titleCX4, topY + pillH / 2 - 9, '700 20px "Space Grotesk", sans-serif', L.topText, 0.8, 'center');
+                drawTextTrack('IDE LPKIA BANDUNG', titleCX4, topY + pillH / 2 + 11, '800 12px "Plus Jakarta Sans", sans-serif', L.topSub, 2.4, 'center');
+            }
 
             // 6. Bottom Social Strip Bar
-            const barH = (E.isLR && is916) ? 58 : (is916 ? 62 : (is11 ? 48 : 54));
+            const barH = E.isLR ? 48 : (is916 ? 62 : (is11 ? 48 : 54));
             const barY = H - barH;
             ctx.fillStyle = L.barFill; ctx.fillRect(0, barY, W, barH);
             if (L.barBorder !== 'transparent') { ctx.fillStyle = L.barBorder; ctx.fillRect(0, barY, W, 3); }
             const barMidY = barY + barH / 2;
-            const barPad = is916 ? 42 : (is11 ? 28 : 36);
+            const barPad = is916 ? 32 : (is11 ? 26 : 30);
             ctx.strokeStyle = L.barIcon; ctx.lineWidth = 2.4;
             rrPath(barPad, barMidY - 12, 24, 24, 6); ctx.stroke();
             ctx.beginPath(); ctx.arc(barPad + 12, barMidY, 5.2, 0, Math.PI * 2); ctx.stroke();
@@ -6792,33 +6828,32 @@
             ctx.beginPath(); ctx.ellipse(gX, barMidY, 4.5, 10, 0, 0, Math.PI * 2); ctx.stroke();
             drawTextTrack(E.cta, gX + 20, barMidY + 1, '700 18px "Space Grotesk", sans-serif', L.barText, 0.5, 'left');
 
-            // 7. Tilted Stacked Instagram Card
+            // 7. Stacked Card (Poster) OR Clean Straight Edge-to-Edge Story Frame (Live Report)
             const S = E.isLR
-                ? (is916 ? { cw: 936, ch: 1616, hdrH: 74, ftrH: 174, mxm: 16, avS: 38 }
-                    : (is11 ? { cw: 760, ch: 790,  hdrH: 62, ftrH: 128, mxm: 14, avS: 34 }
-                    : { cw: 820, ch: 1010, hdrH: 70, ftrH: 146, mxm: 16, avS: 38 }))
+                ? (is916 ? { cw: 1044, ch: 1824, hdrH: 62, ftrH: 108, mxm: 12, avS: 32 }
+                    : (is11 ? { cw: 1044, ch: 996,  hdrH: 54, ftrH: 92,  mxm: 12, avS: 28 }
+                    : { cw: 1044, ch: 1260, hdrH: 62, ftrH: 108, mxm: 12, avS: 32 }))
                 : (is916 ? { cw: 760, ch: 820, hdrH: 82, ftrH: 150, mxm: 20, avS: 40 }
                     : (is11 ? { cw: 640, ch: 640, hdrH: 64, ftrH: 124, mxm: 16, avS: 34 }
                     : { cw: 700, ch: 740, hdrH: 76, ftrH: 140, mxm: 20, avS: 40 }));
             const P = E.isLR
-                ? (is916 ? { mega: 235, r: 30, b: 146 } : (is11 ? { mega: 175, r: 30, b: 92 } : { mega: 210, r: 34, b: 112 }))
+                ? (is916 ? { mega: 164, r: 6, b: 92 } : (is11 ? { mega: 136, r: 8, b: 76 } : { mega: 154, r: 8, b: 88 }))
                 : (is916 ? { mega: 230, r: 56, b: 104 } : (is11 ? { mega: 180, r: 46, b: 70 } : { mega: 210, r: 52, b: 84 }));
             const stackCX = W / 2;
-            const areaTop = topY + pillH;
+            const areaTop = E.isLR ? 0 : (topY + pillH);
             const stackCY = areaTop + (barY - areaTop) / 2;
-            const rotBack4 = E.isLR ? 2.3 : 4.2;
-            const rotFront4 = E.isLR ? -1.3 : -2.2;
-            const backOx4 = E.isLR ? 12 : 16;
-            const backOy4 = E.isLR ? -4 : -6;
+            const rotFront4 = E.isLR ? 0 : -2.2;
 
-            // Back card
-            ctx.save();
-            ctx.translate(stackCX + backOx4, stackCY + backOy4);
-            ctx.rotate((rotBack4 * Math.PI) / 180);
-            drawBox(-S.cw / 2, -S.ch / 2, S.cw, S.ch, {
-                fill: L.backFill, border: L.backBorder, borderCol: L.backBorderCol, shadow: L.backShadow, radius: L.cardRad, soft: L.softCol, blur: 36, sy: 18
-            });
-            ctx.restore();
+            if (!E.isLR) {
+                // Back card
+                ctx.save();
+                ctx.translate(stackCX + 16, stackCY - 6);
+                ctx.rotate((4.2 * Math.PI) / 180);
+                drawBox(-S.cw / 2, -S.ch / 2, S.cw, S.ch, {
+                    fill: L.backFill, border: L.backBorder, borderCol: L.backBorderCol, shadow: L.backShadow, radius: L.cardRad, soft: L.softCol, blur: 36, sy: 18
+                });
+                ctx.restore();
+            }
 
             // Front card
             ctx.save();
@@ -6830,36 +6865,69 @@
                 fill: L.cardFill, border: L.cardBorder, borderCol: L.cardBorderCol, shadow: L.cardShadow, radius: L.cardRad, soft: L.softCol, blur: 48, sy: 22
             });
 
-            // Header: avatar + handle + verified
+            // Card Header
             const hdrMidY = cy0 + S.hdrH / 2;
-            const avX = cx0 + 20;
-            const avY = hdrMidY - S.avS / 2;
-            ctx.fillStyle = '#FFFFFF';
-            ctx.beginPath(); ctx.arc(avX + S.avS / 2, hdrMidY, S.avS / 2, 0, Math.PI * 2); ctx.fill();
-            ctx.strokeStyle = '#CBD5E1'; ctx.lineWidth = 1.5; ctx.stroke();
-            if (himaImg) {
-                const pad = 4;
-                const sc = Math.min((S.avS - pad * 2) / himaImg.width, (S.avS - pad * 2) / himaImg.height);
-                ctx.drawImage(himaImg, avX + (S.avS - himaImg.width * sc) / 2, avY + (S.avS - himaImg.height * sc) / 2, himaImg.width * sc, himaImg.height * sc);
+            const fcx = cx0 + S.cw - 64 - 43;
+            if (E.isLR) {
+                const l4Logo = S.avS;
+                let lx4 = cx0 + 18;
+                [himaImg, kabinetImg, lpkiaImg].forEach((im4) => {
+                    if (im4) {
+                        const sc4 = Math.min(l4Logo / im4.width, l4Logo / im4.height);
+                        ctx.drawImage(im4, lx4 + (l4Logo - im4.width * sc4) / 2, hdrMidY - (im4.height * sc4) / 2, im4.width * sc4, im4.height * sc4);
+                    }
+                    lx4 += l4Logo + 10;
+                });
+                drawTextTrack('HIMA INFORMATIKA', lx4 + 4, hdrMidY - 7, '800 16px "Space Grotesk", sans-serif', L.cardText, 0.64, 'left');
+                drawTextTrack('IDE LPKIA BANDUNG', lx4 + 4, hdrMidY + 9, '700 11px "Plus Jakarta Sans", sans-serif', L.cardText, 1.76, 'left');
+
+                ctx.font = '800 13px "Space Grotesk", sans-serif';
+                const p4Track = 1.56;
+                const p4W = ctx.measureText(E.liveLabel).width + Math.max(0, E.liveLabel.length - 1) * p4Track + 42;
+                const p4H = 30;
+                const p4X = cx0 + S.cw - 18 - p4W;
+                const p4Y = hdrMidY - p4H / 2;
+                const isNeu4 = currentStyle === 'neubrutalism';
+                const isDk4 = currentStyle === 'dark-code';
+                ctx.fillStyle = isDk4 ? '#0B192E' : '#CA2C2A';
+                rrPath(p4X, p4Y, p4W, p4H, isNeu4 ? 0 : 999);
+                ctx.fill();
+                if (isNeu4 || isDk4) {
+                    ctx.lineWidth = isNeu4 ? 2.5 : 1.5;
+                    ctx.strokeStyle = isDk4 ? '#38BDF8' : '#000000';
+                    rrPath(p4X, p4Y, p4W, p4H, isNeu4 ? 0 : 999);
+                    ctx.stroke();
+                }
+                drawLiveDot(ctx, p4X + 16, hdrMidY, 5, !isDk4);
+                drawTextTrack(E.liveLabel, p4X + 28, hdrMidY + 0.5, '800 13px "Space Grotesk", sans-serif', isDk4 ? '#38BDF8' : '#FFFFFF', p4Track, 'left');
+            } else {
+                const avX = cx0 + 20;
+                const avY = hdrMidY - S.avS / 2;
+                ctx.fillStyle = '#FFFFFF';
+                ctx.beginPath(); ctx.arc(avX + S.avS / 2, hdrMidY, S.avS / 2, 0, Math.PI * 2); ctx.fill();
+                ctx.strokeStyle = '#CBD5E1'; ctx.lineWidth = 1.5; ctx.stroke();
+                if (himaImg) {
+                    const pad = 4;
+                    const sc = Math.min((S.avS - pad * 2) / himaImg.width, (S.avS - pad * 2) / himaImg.height);
+                    ctx.drawImage(himaImg, avX + (S.avS - himaImg.width * sc) / 2, avY + (S.avS - himaImg.height * sc) / 2, himaImg.width * sc, himaImg.height * sc);
+                }
+                const handleX = cx0 + (is11 ? 66 : 72);
+                drawTextTrack(E.igHandle, handleX, hdrMidY + 1, `700 21px ${L.handleFam}`, L.cardText, 0, 'left');
+                ctx.font = `700 21px ${L.handleFam}`;
+                const vX = handleX + ctx.measureText(E.igHandle).width + 8 + 9;
+                ctx.fillStyle = '#1D9BF0'; ctx.beginPath(); ctx.arc(vX, hdrMidY, 9, 0, Math.PI * 2); ctx.fill();
+                ctx.strokeStyle = '#FFFFFF'; ctx.lineWidth = 2.2; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+                ctx.beginPath(); ctx.moveTo(vX - 4, hdrMidY); ctx.lineTo(vX - 1, hdrMidY + 3); ctx.lineTo(vX + 4.5, hdrMidY - 3); ctx.stroke();
+
+                const fw = 86; const fh = 32;
+                drawBox(fcx - fw / 2, hdrMidY - fh / 2, fw, fh, {
+                    fill: L.followFill, border: L.followBorder, borderCol: '#000000', shadow: 0, radius: L.followRad
+                });
+                drawTextTrack('Follow', fcx, hdrMidY + 1, '800 15px "Plus Jakarta Sans", sans-serif', L.followText, 0.3, 'center');
+                drawTextTrack('•••', cx0 + S.cw - 24, hdrMidY + 1, '800 18px sans-serif', L.cardText, 1, 'right');
             }
-            const handleX = cx0 + (is11 ? 66 : 72);
-            drawTextTrack(E.igHandle, handleX, hdrMidY + 1, `700 21px ${L.handleFam}`, L.cardText, 0, 'left');
-            ctx.font = `700 21px ${L.handleFam}`;
-            const vX = handleX + ctx.measureText(E.igHandle).width + 8 + 9;
-            ctx.fillStyle = '#1D9BF0'; ctx.beginPath(); ctx.arc(vX, hdrMidY, 9, 0, Math.PI * 2); ctx.fill();
-            ctx.strokeStyle = '#FFFFFF'; ctx.lineWidth = 2.2; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
-            ctx.beginPath(); ctx.moveTo(vX - 4, hdrMidY); ctx.lineTo(vX - 1, hdrMidY + 3); ctx.lineTo(vX + 4.5, hdrMidY - 3); ctx.stroke();
 
-            // Follow button + more dots
-            const fw = 86; const fh = 32;
-            const fcx = cx0 + S.cw - 64 - fw / 2;
-            drawBox(fcx - fw / 2, hdrMidY - fh / 2, fw, fh, {
-                fill: L.followFill, border: L.followBorder, borderCol: '#000000', shadow: 0, radius: L.followRad
-            });
-            drawTextTrack('Follow', fcx, hdrMidY + 1, '800 15px "Plus Jakarta Sans", sans-serif', L.followText, 0.3, 'center');
-            drawTextTrack('•••', cx0 + S.cw - 24, hdrMidY + 1, '800 18px sans-serif', L.cardText, 1, 'right');
-
-            // Retro Window Media Frame
+            // Media Frame
             const mX = cx0 + S.mxm;
             const mY = cy0 + S.hdrH;
             const mW = S.cw - S.mxm * 2;
@@ -6874,55 +6942,28 @@
             ctx.clip();
 
             if (!E.isLR) {
-                // Grid (DNA Layout 1)
                 ctx.strokeStyle = L.grid; ctx.lineWidth = 1;
                 for (let gx = mX; gx < mX + mW; gx += 26) { ctx.beginPath(); ctx.moveTo(gx, mY); ctx.lineTo(gx, mY + mH); ctx.stroke(); }
                 for (let gy = mY; gy < mY + mH; gy += 26) { ctx.beginPath(); ctx.moveTo(mX, gy); ctx.lineTo(mX + mW, gy); ctx.stroke(); }
+                ctx.fillStyle = resolveFill(L.tbFill, mX, mY, mW, tbH);
+                ctx.fillRect(mX, mY, mW, tbH);
+                if (L.tbBorder > 0) { ctx.fillStyle = L.tbBorderCol; ctx.fillRect(mX, mY + tbH - L.tbBorder, mW, L.tbBorder); }
+                L.wd.forEach((col, i) => {
+                    const dx = mX + 14 + i * 22;
+                    const dy = mY + tbH / 2 - 7;
+                    ctx.fillStyle = col;
+                    if (L.wdRad === 0) {
+                        ctx.fillRect(dx, dy, 14, 14);
+                        if (L.wdBorder > 0) { ctx.lineWidth = L.wdBorder; ctx.strokeStyle = '#000000'; ctx.strokeRect(dx + L.wdBorder / 2, dy + L.wdBorder / 2, 14 - L.wdBorder, 14 - L.wdBorder); }
+                    } else {
+                        ctx.beginPath(); ctx.arc(dx + 7, dy + 7, 7, 0, Math.PI * 2); ctx.fill();
+                    }
+                });
+                drawTextTrack(M.fileName, mX + 90, mY + tbH / 2 + 1, '800 14px "JetBrains Mono", monospace', L.tbText, 0.56, 'left');
             } else {
-                const holeY4 = mY + tbH;
-                const holeH4 = mH - tbH;
                 punchLiveHole(ctx, () => {
-                    ctx.beginPath();
-                    ctx.rect(mX, holeY4, mW, holeH4);
-                    ctx.closePath();
-                }, { x: mX, y: holeY4, w: mW, h: holeH4 }, liveImg, null, 0);
-            }
-
-            // Window title bar: dots + file name + optional Live Pill
-            ctx.fillStyle = resolveFill(L.tbFill, mX, mY, mW, tbH);
-            ctx.fillRect(mX, mY, mW, tbH);
-            if (L.tbBorder > 0) { ctx.fillStyle = L.tbBorderCol; ctx.fillRect(mX, mY + tbH - L.tbBorder, mW, L.tbBorder); }
-            L.wd.forEach((col, i) => {
-                const dx = mX + 14 + i * 22;
-                const dy = mY + tbH / 2 - 7;
-                ctx.fillStyle = col;
-                if (L.wdRad === 0) {
-                    ctx.fillRect(dx, dy, 14, 14);
-                    if (L.wdBorder > 0) { ctx.lineWidth = L.wdBorder; ctx.strokeStyle = '#000000'; ctx.strokeRect(dx + L.wdBorder / 2, dy + L.wdBorder / 2, 14 - L.wdBorder, 14 - L.wdBorder); }
-                } else {
-                    ctx.beginPath(); ctx.arc(dx + 7, dy + 7, 7, 0, Math.PI * 2); ctx.fill();
-                }
-            });
-            drawTextTrack(M.fileName, mX + 90, mY + tbH / 2 + 1, '800 14px "JetBrains Mono", monospace', L.tbText, 0.56, 'left');
-            if (E.isLR) {
-                ctx.font = '800 14px "JetBrains Mono", monospace';
-                const fW4 = ctx.measureText(M.fileName).width + Math.max(0, M.fileName.length - 1) * 0.56;
-                ctx.font = '800 11px "Space Grotesk", sans-serif';
-                const p4Track = 1.3;
-                const p4W = ctx.measureText(E.liveLabel).width + Math.max(0, E.liveLabel.length - 1) * p4Track + 34;
-                const p4H = 22;
-                const p4X = mX + 90 + fW4 + 16;
-                const p4Y = mY + (tbH - p4H) / 2;
-                const p4Rad = currentStyle === 'neubrutalism' ? 0 : 999;
-                ctx.fillStyle = '#CA2C2A';
-                rrPath(p4X, p4Y, p4W, p4H, p4Rad);
-                ctx.fill();
-                if (currentStyle === 'neubrutalism') {
-                    ctx.lineWidth = 2; ctx.strokeStyle = '#000000';
-                    rrPath(p4X, p4Y, p4W, p4H, 0); ctx.stroke();
-                }
-                drawLiveDot(ctx, p4X + 12, p4Y + p4H / 2, 4, true);
-                drawTextTrack(E.liveLabel, p4X + 21, p4Y + p4H / 2 + 0.5, '800 11px "Space Grotesk", sans-serif', '#FFFFFF', p4Track, 'left');
+                    rrPath(mX, mY, mW, mH, L.mediaRad);
+                }, { x: mX, y: mY, w: mW, h: mH }, liveImg, null, 0);
             }
 
             if (!E.isLR) {
@@ -7025,65 +7066,68 @@
                 rrPath(mX, mY, mW, mH, L.mediaRad); ctx.stroke();
             }
 
-            // 8-Bit Pixel Cursor menunjuk tombol Follow (DNA Layout 2)
-            const curUnit = 3.4;
-            const curPalette = L2_CURSOR_PALETTES[currentStyle] || L2_CURSOR_PALETTES['neubrutalism'];
-            ctx.save();
-            ctx.shadowColor = 'rgba(0,0,0,0.30)'; ctx.shadowBlur = 3; ctx.shadowOffsetX = 2; ctx.shadowOffsetY = 4;
-            L2_CURSOR_MAP.forEach((row, ry) => {
-                for (let rx = 0; rx < row.length; rx++) {
-                    const col = curPalette[row[rx]];
-                    if (!col) continue;
-                    ctx.fillStyle = col;
-                    ctx.fillRect(Math.round(fcx + 8 + rx * curUnit), Math.round(hdrMidY + 8 + ry * curUnit), Math.ceil(curUnit), Math.ceil(curUnit));
-                }
-            });
-            ctx.restore();
+            if (!E.isLR) {
+                const curUnit = 3.4;
+                const curPalette = L2_CURSOR_PALETTES[currentStyle] || L2_CURSOR_PALETTES['neubrutalism'];
+                ctx.save();
+                ctx.shadowColor = 'rgba(0,0,0,0.30)'; ctx.shadowBlur = 3; ctx.shadowOffsetX = 2; ctx.shadowOffsetY = 4;
+                L2_CURSOR_MAP.forEach((row, ry) => {
+                    for (let rx = 0; rx < row.length; rx++) {
+                        const col = curPalette[row[rx]];
+                        if (!col) continue;
+                        ctx.fillStyle = col;
+                        ctx.fillRect(Math.round(fcx + 8 + rx * curUnit), Math.round(hdrMidY + 8 + ry * curUnit), Math.ceil(curUnit), Math.ceil(curUnit));
+                    }
+                });
+                ctx.restore();
+            }
 
-            // Footer: actions + likes + caption + lokasi
+            // Card Footer
             const fY = cy0 + S.ch - S.ftrH;
-            const actY = fY + 26;
-            const actX = cx0 + 24;
-            ctx.fillStyle = '#EF4444';
-            ctx.beginPath(); ctx.moveTo(actX + 14, actY + 12); ctx.bezierCurveTo(actX - 4, actY, actX - 2, actY - 14, actX + 7, actY - 14); ctx.bezierCurveTo(actX + 11, actY - 14, actX + 14, actY - 10, actX + 14, actY - 8); ctx.bezierCurveTo(actX + 14, actY - 10, actX + 17, actY - 14, actX + 21, actY - 14); ctx.bezierCurveTo(actX + 30, actY - 14, actX + 32, actY, actX + 14, actY + 12); ctx.fill();
-            ctx.strokeStyle = L.cardText; ctx.lineWidth = 2; ctx.lineJoin = 'round';
-            ctx.beginPath(); ctx.arc(actX + 56, actY - 1, 11, 0, Math.PI * 2); ctx.stroke();
-            ctx.beginPath(); ctx.moveTo(actX + 86, actY - 10); ctx.lineTo(actX + 108, actY - 2); ctx.lineTo(actX + 92, actY + 10); ctx.closePath(); ctx.stroke();
-            for (let d = 0; d < 4; d++) {
+            if (E.isLR) {
+                const fMidY = fY + S.ftrH / 2;
+                const tFs4 = computeFitFont(E.liveTopic, is11 ? 30 : 38, 24, '400', '"Archivo Black", "Space Grotesk", sans-serif', 0.02, 960);
+                drawTextTrack(E.liveTopic, cx0 + S.cw / 2, fMidY - 12, `400 ${tFs4}px "Archivo Black", "Space Grotesk", sans-serif`, L.cardText, 0.02 * tFs4, 'center');
                 ctx.save();
-                ctx.fillStyle = d === 0 ? L.dotCol : L.cardText;
-                ctx.globalAlpha = d === 0 ? 1 : 0.25;
-                ctx.beginPath(); ctx.arc(cx0 + S.cw / 2 + 5 + d * 14, actY, d === 0 ? 5 : 4, 0, Math.PI * 2); ctx.fill();
+                ctx.globalAlpha = 0.72;
+                drawTextTrack(`${E.title} • HIMA INFORMATIKA IDE LPKIA`, cx0 + S.cw / 2, fMidY + 21, '700 14px "Space Grotesk", sans-serif', L.cardText, 2.24, 'center');
                 ctx.restore();
-            }
-            const isL4Lr916 = E.isLR && is916;
-            const likeFs4 = isL4Lr916 ? 18 : 16;
-            const capFs4 = isL4Lr916 ? 19 : 16;
-            const locFs4 = isL4Lr916 ? 17 : 15.5;
-            const likeY4 = fY + (isL4Lr916 ? 64 : 58);
-            const capY4 = fY + (isL4Lr916 ? 94 : 83);
-            const locY4 = fY + (isL4Lr916 ? 124 : 108);
-            const fPadX4 = isL4Lr916 ? 26 : 24;
-            drawTextTrack('1,024 likes', cx0 + fPadX4, likeY4, `800 ${likeFs4}px ${L.uiFam}`, L.cardText, 0, 'left');
-            const capLead = E.igHandle + '  ';
-            ctx.font = `800 ${capFs4}px ${L.uiFam}`;
-            const leadW = ctx.measureText(capLead).width;
-            drawTextTrack(capLead, cx0 + fPadX4, capY4, `800 ${capFs4}px ${L.uiFam}`, L.cardText, 0, 'left');
-            drawTextTrack(M.caption, cx0 + fPadX4 + leadW, capY4, `600 ${capFs4}px ${L.uiFam}`, L.cardText, 0, 'left');
-            if (!E.isCS) {
-                const px = cx0 + fPadX4;
-                const py = locY4;
-                ctx.save();
-                ctx.translate(px + 8, py);
+            } else {
+                const actY = fY + 26;
+                const actX = cx0 + 24;
                 ctx.fillStyle = '#EF4444';
-                ctx.beginPath(); ctx.arc(0, -2, 6.5, Math.PI, 0, false); ctx.quadraticCurveTo(6.5, 2, 0, 9); ctx.quadraticCurveTo(-6.5, 2, -6.5, -2); ctx.closePath(); ctx.fill();
-                ctx.fillStyle = '#FFFFFF'; ctx.beginPath(); ctx.arc(0, -2, 2.4, 0, Math.PI * 2); ctx.fill();
-                ctx.restore();
-                drawTextTrack(toTitleCase(E.loc), px + 22, py + 1, `700 ${locFs4}px ${L.uiFam}`, L.cardText, 0, 'left');
+                ctx.beginPath(); ctx.moveTo(actX + 14, actY + 12); ctx.bezierCurveTo(actX - 4, actY, actX - 2, actY - 14, actX + 7, actY - 14); ctx.bezierCurveTo(actX + 11, actY - 14, actX + 14, actY - 10, actX + 14, actY - 8); ctx.bezierCurveTo(actX + 14, actY - 10, actX + 17, actY - 14, actX + 21, actY - 14); ctx.bezierCurveTo(actX + 30, actY - 14, actX + 32, actY, actX + 14, actY + 12); ctx.fill();
+                ctx.strokeStyle = L.cardText; ctx.lineWidth = 2; ctx.lineJoin = 'round';
+                ctx.beginPath(); ctx.arc(actX + 56, actY - 1, 11, 0, Math.PI * 2); ctx.stroke();
+                ctx.beginPath(); ctx.moveTo(actX + 86, actY - 10); ctx.lineTo(actX + 108, actY - 2); ctx.lineTo(actX + 92, actY + 10); ctx.closePath(); ctx.stroke();
+                for (let d = 0; d < 4; d++) {
+                    ctx.save();
+                    ctx.fillStyle = d === 0 ? L.dotCol : L.cardText;
+                    ctx.globalAlpha = d === 0 ? 1 : 0.25;
+                    ctx.beginPath(); ctx.arc(cx0 + S.cw / 2 + 5 + d * 14, actY, d === 0 ? 5 : 4, 0, Math.PI * 2); ctx.fill();
+                    ctx.restore();
+                }
+                drawTextTrack('1,024 likes', cx0 + 24, fY + 58, `800 16px ${L.uiFam}`, L.cardText, 0, 'left');
+                const capLead = E.igHandle + '  ';
+                ctx.font = `800 16px ${L.uiFam}`;
+                const leadW = ctx.measureText(capLead).width;
+                drawTextTrack(capLead, cx0 + 24, fY + 83, `800 16px ${L.uiFam}`, L.cardText, 0, 'left');
+                drawTextTrack(M.caption, cx0 + 24 + leadW, fY + 83, `600 16px ${L.uiFam}`, L.cardText, 0, 'left');
+                if (!E.isCS) {
+                    const px = cx0 + 24;
+                    const py = fY + 108;
+                    ctx.save();
+                    ctx.translate(px + 8, py);
+                    ctx.fillStyle = '#EF4444';
+                    ctx.beginPath(); ctx.arc(0, -2, 6.5, Math.PI, 0, false); ctx.quadraticCurveTo(6.5, 2, 0, 9); ctx.quadraticCurveTo(-6.5, 2, -6.5, -2); ctx.closePath(); ctx.fill();
+                    ctx.fillStyle = '#FFFFFF'; ctx.beginPath(); ctx.arc(0, -2, 2.4, 0, Math.PI * 2); ctx.fill();
+                    ctx.restore();
+                    drawTextTrack(toTitleCase(E.loc), px + 22, py + 1, `700 15.5px ${L.uiFam}`, L.cardText, 0, 'left');
+                }
             }
             ctx.restore();
 
-            // 9. Props: Notification Bell + 3D Megaphone (nempel di sudut kanan-bawah kartu)
+            // 9. Props: 3D Megaphone (and Bell hanya mode poster, di-hide di Live Report)
             const MP = L.mega;
             const pX = stackCX + S.cw / 2 + P.r - P.mega / 2;
             const pY = stackCY + S.ch / 2 - P.b - P.mega / 2;
@@ -7100,15 +7144,16 @@
             ctx.restore();
 
             ctx.shadowColor = 'rgba(7,20,44,0.38)'; ctx.shadowBlur = 20; ctx.shadowOffsetY = 14;
-            // Notification Bell
-            ctx.save(); ctx.translate(184, 20); ctx.rotate((18 * Math.PI) / 180); ctx.translate(-32, -32);
-            const bG = ctx.createLinearGradient(10, 10, 54, 54);
-            bG.addColorStop(0, '#FEF08A'); bG.addColorStop(0.55, '#F59E0B'); bG.addColorStop(1, '#B45309');
-            ctx.fillStyle = '#B45309'; ctx.beginPath(); ctx.arc(32, 54, 7, 0, Math.PI * 2); ctx.fill();
-            ctx.fillStyle = bG; ctx.strokeStyle = '#78350F'; ctx.lineWidth = 2; ctx.lineJoin = 'round';
-            ctx.beginPath(); ctx.moveTo(16, 42); ctx.quadraticCurveTo(16, 14, 32, 14); ctx.quadraticCurveTo(48, 14, 48, 42); ctx.lineTo(54, 50); ctx.lineTo(10, 50); ctx.closePath(); ctx.fill(); ctx.stroke();
-            ctx.fillStyle = '#F59E0B'; ctx.beginPath(); ctx.arc(32, 11, 4, 0, Math.PI * 2); ctx.fill();
-            ctx.restore();
+            if (!E.isLR) {
+                ctx.save(); ctx.translate(184, 20); ctx.rotate((18 * Math.PI) / 180); ctx.translate(-32, -32);
+                const bG = ctx.createLinearGradient(10, 10, 54, 54);
+                bG.addColorStop(0, '#FEF08A'); bG.addColorStop(0.55, '#F59E0B'); bG.addColorStop(1, '#B45309');
+                ctx.fillStyle = '#B45309'; ctx.beginPath(); ctx.arc(32, 54, 7, 0, Math.PI * 2); ctx.fill();
+                ctx.fillStyle = bG; ctx.strokeStyle = '#78350F'; ctx.lineWidth = 2; ctx.lineJoin = 'round';
+                ctx.beginPath(); ctx.moveTo(16, 42); ctx.quadraticCurveTo(16, 14, 32, 14); ctx.quadraticCurveTo(48, 14, 48, 42); ctx.lineTo(54, 50); ctx.lineTo(10, 50); ctx.closePath(); ctx.fill(); ctx.stroke();
+                ctx.fillStyle = '#F59E0B'; ctx.beginPath(); ctx.arc(32, 11, 4, 0, Math.PI * 2); ctx.fill();
+                ctx.restore();
+            }
 
             // Megaphone
             const mG = ctx.createLinearGradient(16, 78, 151, 184);
@@ -7390,12 +7435,12 @@
                 drawSoftClover(bTL.x, bTL.y, bTL.s, -16, 28, 44, T.bloomTL, T.bloomTLOp, T.bloomTLBlur);
                 drawSoftClover(bBR.x, bBR.y, bBR.s, 14, 26, 42, T.bloomBR, T.bloomBROp, T.bloomBRBlur);
             } else {
-                drawStarPair(bTL.x, bTL.y, bTL.s, true, T.starTL);
+                if (!E.isLR) drawStarPair(bTL.x, bTL.y, bTL.s, true, T.starTL);
                 drawStarPair(bBR.x, bBR.y, bBR.s, false, T.starBR);
             }
 
-            // 4. Subtle Code Accents
-            if (showAccents) {
+            // 4. Subtle Code Accents (dihide di mode Live Report agar super clean)
+            if (showAccents && !E.isLR) {
                 const topAccY = is916 ? 0.32 * H : (is11 ? 0.31 * H : 0.34 * H);
                 const topRightY = is916 ? 0.21 * H : (is11 ? 0.18 * H : 0.22 * H);
                 const botAccY = is916 ? 0.79 * H : (is11 ? 0.82 * H : 0.77 * H);
@@ -7432,8 +7477,8 @@
             };
 
             // 5. Top Editorial Header + Hairline Rule
-            const sidePad = E.isLR ? (is916 ? 52 : (is11 ? 44 : 48)) : (is916 ? 60 : (is11 ? 48 : 56));
-            const topPad = E.isLR ? (is916 ? 42 : (is11 ? 24 : 32)) : (is916 ? 72 : (is11 ? 30 : 44));
+            const sidePad = E.isLR ? (is11 ? 24 : 26) : (is916 ? 60 : (is11 ? 48 : 56));
+            const topPad = E.isLR ? (is916 ? 24 : (is11 ? 16 : 20)) : (is916 ? 72 : (is11 ? 30 : 44));
             const logoS = is916 ? 36 : (is11 ? 27 : 32);
             const chipH = logoS + 10;
             const chipW = logoS * 3 + 16 + T.chipPx * 2;
@@ -7477,7 +7522,7 @@
             drawHairline(sidePad, W - sidePad, topRuleY);
 
             // 6. Bottom Social Row + Separator + Hairline Rule
-            const botPad = E.isLR ? (is916 ? 42 : (is11 ? 22 : 30)) : (is916 ? 72 : (is11 ? 28 : 42));
+            const botPad = E.isLR ? (is916 ? 24 : (is11 ? 16 : 20)) : (is916 ? 72 : (is11 ? 28 : 42));
             const botRuleY = H - botPad - 4;
             drawHairline(sidePad, W - sidePad, botRuleY);
 
@@ -7517,33 +7562,32 @@
             drawSocBadge(sx, socY, 'web');
             drawTextTrack(E.cta, sx + 37, socY + 1, '700 18px "Plus Jakarta Sans", sans-serif', T.socCol, 0.36, 'left');
 
-            // 7. Vertical Layout Math for Pinned Note / Live Polaroid + Smooth Outlined Title Block
+            // 7. Vertical Layout Math for Pinned Note / Straight Full-Latar Live Frame + Clean Title Block
             const cardW = E.isLR
-                ? (is916 ? 912 : (is11 ? 720 : 810))
+                ? (is11 ? 1032 : 1028)
                 : (is916 ? 760 : (is11 ? 630 : 720));
             const cardH = E.isLR
-                ? (is916 ? 1280 : (is11 ? 520 : 710))
+                ? (is916 ? 1560 : (is11 ? 750 : 1010))
                 : (is916 ? 470 : (is11 ? 350 : 430));
-            const cardRad = E.isLR ? 30 : (is11 ? Math.min(T.cardRad, 28) : T.cardRad);
-            const [rawBx, rawBy, rawBackDeg] = T.backOff;
-            const cardDeg = E.isLR ? (is916 ? -2.0 : -2.6) : -4.2;
-            const backDeg = E.isLR ? (is916 ? -3.4 : -4.2) : rawBackDeg;
-            const backOffX = E.isLR ? (is916 ? -10 : -11) : (is11 ? Math.round(rawBx * 0.8) : rawBx);
-            const backOffY = E.isLR ? -4 : (is11 ? Math.round(rawBy * 0.8) : rawBy);
+            const cardRad = E.isLR ? 26 : (is11 ? Math.min(T.cardRad, 28) : T.cardRad);
+            const [rawBx, rawBy, backDeg] = T.backOff;
+            const cardDeg = E.isLR ? 0 : -4.2;
+            const backOffX = is11 ? Math.round(rawBx * 0.8) : rawBx;
+            const backOffY = is11 ? Math.round(rawBy * 0.8) : rawBy;
             const infoGap = E.isLR
-                ? (is916 ? 40 : (is11 ? 22 : 30))
+                ? (is916 ? 22 : (is11 ? 12 : 18))
                 : (is916 ? 68 : (is11 ? 32 : 50));
             const marginT = E.isLR
-                ? (is916 ? 10 : (is11 ? 6 : 8))
+                ? (is916 ? 8 : (is11 ? 4 : 6))
                 : (is916 ? 24 : (is11 ? 10 : 18));
 
-            const mnH = E.isCS ? 0 : (is11 ? 26 : 30);
-            const gap1 = E.isCS ? 0 : (is11 ? 5 : (is916 ? 12 : 8));
+            const mnH = (E.isCS || E.isLR) ? 0 : (is11 ? 26 : 30);
+            const gap1 = (E.isCS || E.isLR) ? 0 : (is11 ? 5 : (is916 ? 12 : 8));
             const titleBoxH = is11 ? 96 : 112;
-            const mottoH = (is916 ? 25 : (is11 ? 20 : 23)) * 1.3;
-            const schedH = E.isCS ? 0 : (is916 ? 46 : (is11 ? 32 : 40));
-            const gap2 = is11 ? 5 : (is916 ? 12 : 8);
-            const schedGap = E.isCS ? 0 : (is11 ? 9 : (is916 ? 24 : 16));
+            const mottoH = E.isLR ? 0 : ((is916 ? 25 : (is11 ? 20 : 23)) * 1.3);
+            const schedH = (E.isCS || E.isLR) ? 0 : (is916 ? 46 : (is11 ? 32 : 40));
+            const gap2 = E.isLR ? 0 : (is11 ? 5 : (is916 ? 12 : 8));
+            const schedGap = (E.isCS || E.isLR) ? 0 : (is11 ? 9 : (is916 ? 24 : 16));
             const infoTotalH = mnH + gap1 + titleBoxH + gap2 + mottoH + schedGap + schedH;
             const totalStageH = marginT + cardH + infoGap + infoTotalH;
 
@@ -7554,20 +7598,21 @@
             const cardCX = W / 2;
             const cardCY = startY + marginT + cardH / 2;
 
-            // Back Silhouette Plate
-            ctx.save();
-            ctx.translate(cardCX + backOffX, cardCY + backOffY);
-            ctx.rotate((backDeg * Math.PI) / 180);
-            ctx.fillStyle = T.backFill;
-            rrPath(-cardW / 2, -cardH / 2, cardW, cardH, cardRad);
-            ctx.fill();
-            if (T.backBW > 0 && T.backBorder) {
-                ctx.lineWidth = T.backBW;
-                ctx.strokeStyle = T.backBorder;
+            if (!E.isLR) {
+                ctx.save();
+                ctx.translate(cardCX + backOffX, cardCY + backOffY);
+                ctx.rotate((backDeg * Math.PI) / 180);
+                ctx.fillStyle = T.backFill;
                 rrPath(-cardW / 2, -cardH / 2, cardW, cardH, cardRad);
-                ctx.stroke();
+                ctx.fill();
+                if (T.backBW > 0 && T.backBorder) {
+                    ctx.lineWidth = T.backBW;
+                    ctx.strokeStyle = T.backBorder;
+                    rrPath(-cardW / 2, -cardH / 2, cardW, cardH, cardRad);
+                    ctx.stroke();
+                }
+                ctx.restore();
             }
-            ctx.restore();
 
             // Main Tilted White Note Card / Live Polaroid
             ctx.save();
@@ -7600,12 +7645,12 @@
             }
 
             if (E.isLR) {
-                const chinH = is11 ? 42 : 54;
-                const holeX5 = -cardW / 2 + 18;
-                const holeY5 = -cardH / 2 + 18;
-                const holeW5 = cardW - 36;
-                const holeH5 = cardH - 34 - chinH;
-                const holeRad5 = currentStyle === 'neubrutalism' ? 10 : 18;
+                const chinH = is11 ? 38 : 44;
+                const holeX5 = -cardW / 2 + 12;
+                const holeY5 = -cardH / 2 + 12;
+                const holeW5 = cardW - 24;
+                const holeH5 = cardH - 22 - chinH;
+                const holeRad5 = currentStyle === 'neubrutalism' ? 8 : 16;
                 const rimCol5 = currentStyle === 'neubrutalism' ? '#000000' : (currentStyle === 'dark-code' ? '#38BDF8' : 'rgba(15,23,42,0.16)');
                 const rimW5 = currentStyle === 'neubrutalism' ? 3.5 : (currentStyle === 'dark-code' ? 2.5 : 2);
                 punchLiveHole(ctx, () => rrPath(holeX5, holeY5, holeW5, holeH5, holeRad5), { x: holeX5, y: holeY5, w: holeW5, h: holeH5 }, liveImg, rimCol5, rimW5);
@@ -7637,7 +7682,7 @@
                 }
                 drawLiveDot(ctx, bX5 + 17, chinMidY, 4.5, !isDk5);
                 drawTextTrack(E.liveLabel, bX5 + 28, chinMidY + 0.5, bFont5, isDk5 ? '#38BDF8' : '#FFFFFF', bTrack5, 'left');
-                drawTextTrack('HIMA IF // ON AIR', holeX5 + holeW5 - 8, chinMidY + 0.5, '800 13px "JetBrains Mono", monospace', '#475569', 1.04, 'right');
+                drawTextTrack(`${E.title} • HIMA IF`, holeX5 + holeW5 - 8, chinMidY + 0.5, '800 12.5px "JetBrains Mono", monospace', '#475569', 1.0, 'right');
             } else {
             // Unified Centered Inner Block: Eyebrow Cue + Hero
             const cdFs = is916 ? 17 : (is11 ? 14 : 16);
@@ -7691,7 +7736,7 @@
             ctx.arc(pinX, pinY, 12, 0, Math.PI * 2);
             ctx.fill();
 
-            const pinScale = is916 ? 1.18 : (is11 ? 0.95 : 1.12);
+            const pinScale = E.isLR ? 0.94 : (is916 ? 1.18 : (is11 ? 0.95 : 1.12));
             ctx.save();
             ctx.translate(pinX, pinY);
             ctx.scale(pinScale, pinScale);
@@ -7750,7 +7795,7 @@
 
             // 8. Info Stack below card (MENUJU badge, Smooth Round-Stroked Title, Motto, Schedule)
             let curY = startY + marginT + cardH + infoGap;
-            if (!E.isCS && mnH > 0) {
+            if (!E.isCS && !E.isLR && mnH > 0) {
                 const mFs = is11 ? 14 : 17;
                 const mFont = `800 ${mFs}px "Space Grotesk", sans-serif`;
                 const mTrack = 0.22 * mFs;
@@ -7812,19 +7857,21 @@
 
             curY += titleBoxH + gap2;
 
-            const mottoFs = is916 ? 25 : (is11 ? 20 : 23);
-            drawTextTrack(
-                '“Dari Ilmu, Menjadi Karya.”',
-                W / 2,
-                curY + mottoH / 2,
-                `italic 600 ${mottoFs}px "Plus Jakarta Sans", sans-serif`,
-                T.mottoCol,
-                0.01 * mottoFs,
-                'center'
-            );
-            curY += mottoH;
+            if (!E.isLR) {
+                const mottoFs = is916 ? 25 : (is11 ? 20 : 23);
+                drawTextTrack(
+                    '“Dari Ilmu, Menjadi Karya.”',
+                    W / 2,
+                    curY + mottoH / 2,
+                    `italic 600 ${mottoFs}px "Plus Jakarta Sans", sans-serif`,
+                    T.mottoCol,
+                    0.01 * mottoFs,
+                    'center'
+                );
+                curY += mottoH;
+            }
 
-            if (!E.isCS && schedH > 0) {
+            if (!E.isCS && !E.isLR && schedH > 0) {
                 curY += schedGap;
                 const scFs = is916 ? 20 : (is11 ? 15.5 : 18);
                 const scFont = `700 ${scFs}px "Space Grotesk", sans-serif`;
@@ -7902,6 +7949,9 @@
             document.getElementById('l4LpkiaLogo').src = lpkiaSrc;
             document.getElementById('l4KabinetLogo').src = kabinetSrc;
             document.getElementById('l4CardAvatar').src = himaSrc;
+            document.getElementById('l4LrHima').src = himaSrc;
+            document.getElementById('l4LrKabinet').src = kabinetSrc;
+            document.getElementById('l4LrLpkia').src = lpkiaSrc;
             document.getElementById('l5HimaLogo').src = himaSrc;
             document.getElementById('l5LpkiaLogo').src = lpkiaSrc;
             document.getElementById('l5KabinetLogo').src = kabinetSrc;
