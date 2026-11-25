@@ -374,6 +374,10 @@
             border-width: 3px;
             box-shadow: 3px 3px 0 #000000;
         }
+        .poster-canvas.mode-coming-soon.layout-3.style-neubrutalism .l3-script-txt {
+            margin: 10px 0 10px 0;
+            padding: 5px 18px;
+        }
         .layout-3.style-neubrutalism .l3-cap-main { color: #FFFFFF; }
         .layout-3.style-neubrutalism .l3-cap-date { color: #FCD34D; }
         .layout-3.style-neubrutalism .l3-cap-loc { color: #FFFFFF; }
@@ -595,6 +599,7 @@
         .layout-4.style-neubrutalism .l4-star-poly { fill: #CA2C2A; stroke: #000000; stroke-width: 8; stroke-linejoin: round; }
         .layout-4.style-neubrutalism .l4-ca { color: rgba(255, 255, 255, 0.34); }
         .layout-4.style-neubrutalism .l4-cb { color: rgba(252, 211, 77, 0.72); }
+        .layout-4.style-neubrutalism .l4-media-code { color: rgba(26, 70, 124, 0.38); }
         .layout-4.style-neubrutalism .l4-top-pill { background: #FFFFFF; color: #12305A; border: 3.5px solid #000000; box-shadow: 6px 6px 0 #000000; border-radius: 14px; }
         .layout-4.style-neubrutalism .l4-top-sub { color: #CA2C2A; }
         .layout-4.style-neubrutalism .l4-card-back { background: #DBEAFE; border: 4px solid #000000; box-shadow: 9px 9px 0 #000000; border-radius: 16px; }
@@ -623,6 +628,7 @@
         .layout-4.style-glass .l4-star-poly { fill: rgba(96, 165, 250, 0.28); stroke: rgba(255, 255, 255, 0.90); stroke-width: 5; stroke-linejoin: round; }
         .layout-4.style-glass .l4-ca { color: rgba(219, 234, 254, 0.38); }
         .layout-4.style-glass .l4-cb { color: rgba(253, 224, 71, 0.50); }
+        .layout-4.style-glass .l4-media-code { color: rgba(37, 99, 235, 0.40); }
         .layout-4.style-glass .l4-top-pill { background: rgba(255, 255, 255, 0.88); color: #12305A; border: 1.5px solid rgba(255,255,255,0.95); box-shadow: 0 14px 32px rgba(8, 25, 58, 0.28); border-radius: 999px; font-family: 'Outfit', sans-serif; }
         .layout-4.style-glass .l4-top-sub { color: #DC2626; }
         .layout-4.style-glass .l4-card-back { background: rgba(226, 240, 255, 0.45); border: 1.5px solid rgba(255,255,255,0.70); box-shadow: 0 24px 48px rgba(8, 25, 58, 0.26); border-radius: 26px; }
@@ -891,7 +897,7 @@
 
         /* ================= THEME 4 (NEW #2): GLASSMORPHISM ================= */
         .glass-bg-layer { display: none; }
-        .style-glass .glass-bg-layer { display: block; }
+        .poster-canvas.layout-1.style-glass .glass-bg-layer { display: block; }
         .style-glass {
             background: radial-gradient(circle at 20% 15%, #F4F9FF 0%, #D9EBFF 48%, #BEDBFF 100%);
             color: #0F294A;
@@ -1745,7 +1751,7 @@
 
                                 <!-- 3-Layer Hero Typography Inside Bubble -->
                                 <div class="l3-bubble-inner relative z-10 w-full h-full flex flex-col items-center justify-center text-center">
-                                    <span id="l3OutHero" class="l3-hero-txt font-hero uppercase leading-[0.88] tracking-[-0.02em] block" style="font-size: 136px;">
+                                    <span id="l3OutHero" class="l3-hero-txt font-hero uppercase leading-[0.88] tracking-[-0.02em] block whitespace-pre-line" style="font-size: 136px;">
                                         H-7
                                     </span>
                                     <span id="l3OutScript" class="l3-script-txt font-script leading-none block -mt-6 -mb-3 -rotate-3 select-none" style="font-size: 56px;">
@@ -1868,7 +1874,6 @@
                                             <span id="l4OutFile" class="l4-win-file">countdown.exe</span>
                                         </div>
                                         <span class="code-accent l4-media-code l4-cb" style="left: 16px;">&gt;_</span>
-                                        <span class="code-accent l4-media-code l4-cb" style="right: 16px;">01;</span>
 
                                         <div class="l4-media-body">
                                             <span id="l4OutBadge" class="l4-badge">COUNTDOWN</span>
@@ -2194,9 +2199,9 @@
             const l3HeroEl = document.getElementById('l3OutHero');
             const l3ScriptEl = document.getElementById('l3OutScript');
             const l3TitleEl = document.getElementById('l3OutTitle');
-            const l3M = getL3BubbleMetrics(E.isCS ? 'COMING SOON' : E.hero, E.title);
+            const l3M = getL3BubbleMetrics(E.hero, E.title, E.isCS);
             if (l3HeroEl) {
-                l3HeroEl.textContent = E.isCS ? 'COMING SOON' : E.hero;
+                l3HeroEl.textContent = l3M.heroLines.join('\n');
                 l3HeroEl.style.fontSize = l3M.heroFs + 'px';
             }
             if (l3ScriptEl) {
@@ -2284,17 +2289,21 @@
                 .replace(/\bWib\b/g, 'WIB');
         }
 
-        function getL3BubbleMetrics(heroTxt, titleTxt) {
-            const hl = (heroTxt || '').length;
+        function getL3BubbleMetrics(heroTxt, titleTxt, isCS = false) {
+            const heroLines = isCS ? ['COMING', 'SOON'] : [heroTxt || 'H-7'];
+            const hl = Math.max(1, ...heroLines.map((l) => l.length));
             const tl = (titleTxt || '').length;
             const ratioScale = currentRatio === '9-16' ? 1.08 : (currentRatio === '1-1' ? 0.84 : 1);
-            const baseHero = hl >= 10 ? 52 : (hl >= 7 ? 84 : (hl >= 5 ? 116 : 146));
-            const baseTitle = tl >= 13 ? 44 : (tl >= 10 ? 60 : (tl >= 7 ? 68 : 78));
-            const baseScript = hl >= 10 ? 56 : 72;
+            const baseHero = isCS ? 78 : (hl >= 10 ? 52 : (hl >= 7 ? 84 : (hl >= 5 ? 116 : 146)));
+            const rawTitle = tl >= 13 ? 44 : (tl >= 10 ? 60 : (tl >= 7 ? 68 : 78));
+            const baseTitle = isCS ? Math.min(48, rawTitle) : rawTitle;
+            const baseScript = isCS ? 48 : (hl >= 10 ? 56 : 72);
+            const basePill = isCS ? 19 : 21;
             return {
+                heroLines,
                 heroFs: Math.round(baseHero * ratioScale),
                 scriptFs: Math.round(baseScript * ratioScale),
-                pillFs: Math.round(21 * ratioScale),
+                pillFs: Math.round(basePill * ratioScale),
                 titleFs: Math.round(baseTitle * ratioScale)
             };
         }
@@ -2403,6 +2412,7 @@
                 }
             });
             renderL2CursorSvg(styleName);
+            syncAllDom();
         }
 
         function setRatio(ratio) {
@@ -4195,14 +4205,14 @@
 
             // Stacked 3-Layer Hero Text Inside Bubble (Theme-Distinct Typography)
             const isL3Pill = Boolean(L.scriptPill);
-            const heroStr = E.isCS ? 'COMING SOON' : E.hero;
             const scriptStr = isL3Pill
                 ? (E.isCS ? 'STAY TUNED' : (E.mn || 'MENUJU').toUpperCase())
                 : (E.isCS ? 'Stay Tuned' : toTitleCase(E.mn || 'Menuju'));
-            const m = getL3BubbleMetrics(heroStr, E.title);
-            const heroCenterY = bubY + bDim.bodyH * (isL3Pill ? 0.28 : 0.34);
-            const titleCenterY = bubY + bDim.bodyH * (isL3Pill ? 0.78 : 0.72);
-            const scriptCenterY = bubY + bDim.bodyH * (isL3Pill ? 0.54 : 0.51);
+            const m = getL3BubbleMetrics(E.hero, E.title, E.isCS);
+            const heroLineStep = Math.round(m.heroFs * 0.88);
+            const heroCenterY = bubY + bDim.bodyH * (E.isCS ? (isL3Pill ? 0.22 : 0.24) : (isL3Pill ? 0.28 : 0.34));
+            const titleCenterY = bubY + bDim.bodyH * (E.isCS ? 0.81 : (isL3Pill ? 0.78 : 0.72));
+            const scriptCenterY = bubY + bDim.bodyH * (E.isCS ? (isL3Pill ? 0.59 : 0.60) : (isL3Pill ? 0.54 : 0.51));
 
             const drawBubbleWord = (txt, cy, fontSpec, colorSpec, strokeCol, strokeW, shdOff, tracking, glowCol = null, fsPx = 100) => {
                 ctx.save();
@@ -4275,12 +4285,14 @@
                 ctx.restore();
             };
 
-            drawBubbleWord(
-                heroStr, heroCenterY,
-                `${L.heroWeight} ${m.heroFs}px ${L.heroFont}`,
-                L.heroCol, L.heroStroke, L.heroSW, L.heroShdOff,
-                L.heroTrack * m.heroFs, L.heroGlow, m.heroFs
-            );
+            m.heroLines.forEach((line, idx) => {
+                drawBubbleWord(
+                    line, heroCenterY + idx * heroLineStep,
+                    `${L.heroWeight} ${m.heroFs}px ${L.heroFont}`,
+                    L.heroCol, L.heroStroke, L.heroSW, L.heroShdOff,
+                    L.heroTrack * m.heroFs, L.heroGlow, m.heroFs
+                );
+            });
             drawBubbleWord(
                 E.title, titleCenterY,
                 `${L.titleWeight} ${m.titleFs}px ${L.titleFont}`,
@@ -4637,7 +4649,7 @@
                 'neubrutalism': {
                     bgMode: 'dots', bg: '#16488E', dot: 'rgba(255,255,255,0.16)', wallCol: 'rgba(255,255,255,0.08)',
                     star: { fill: '#CA2C2A', stroke: '#000000', sw: 6, soft: null },
-                    codeA: 'rgba(255,255,255,0.34)', codeB: 'rgba(252,211,77,0.72)', softCol: null,
+                    codeA: 'rgba(255,255,255,0.34)', codeB: 'rgba(252,211,77,0.72)', codeM: 'rgba(26,70,124,0.38)', softCol: null,
                     topFill: '#FFFFFF', topText: '#12305A', topSub: '#CA2C2A', topBorder: 3.5, topBorderCol: '#000000', topShadow: 6, topRad: 14,
                     backFill: '#DBEAFE', backBorder: 4, backBorderCol: '#000000', backShadow: 9,
                     cardFill: '#FFFFFF', cardText: '#0F172A', cardBorder: 4, cardBorderCol: '#000000', cardShadow: 12, cardRad: 16,
@@ -4655,7 +4667,7 @@
                 'glass': {
                     bgMode: 'grad', stops: [[0, '#0D356F'], [0.48, '#1B5AA6'], [1, '#2E80D1']], wallCol: 'rgba(255,255,255,0.08)',
                     star: { fill: 'rgba(96,165,250,0.28)', stroke: 'rgba(255,255,255,0.90)', sw: 4, soft: null },
-                    codeA: 'rgba(219,234,254,0.38)', codeB: 'rgba(253,224,71,0.50)', softCol: 'rgba(8,25,58,0.34)',
+                    codeA: 'rgba(219,234,254,0.38)', codeB: 'rgba(253,224,71,0.50)', codeM: 'rgba(37,99,235,0.40)', softCol: 'rgba(8,25,58,0.34)',
                     topFill: 'rgba(255,255,255,0.88)', topText: '#12305A', topSub: '#DC2626', topBorder: 1.5, topBorderCol: 'rgba(255,255,255,0.95)', topShadow: 0, topRad: 999,
                     backFill: 'rgba(226,240,255,0.45)', backBorder: 1.5, backBorderCol: 'rgba(255,255,255,0.70)', backShadow: 0,
                     cardFill: 'rgba(255,255,255,0.88)', cardText: '#0F294A', cardBorder: 2, cardBorderCol: 'rgba(255,255,255,0.96)', cardShadow: 0, cardRad: 26,
@@ -4932,10 +4944,9 @@
             });
             drawTextTrack(M.fileName, mX + 90, mY + tbH / 2 + 1, '800 14px "JetBrains Mono", monospace', L.tbText, 0.56, 'left');
 
-            // Corner code accents inside media
+            // Corner code accent inside media
             if (showAccents) {
-                drawTextTrack('>_', mX + 16, mY + mH - 22, '800 22px "JetBrains Mono", monospace', L.codeB, 0, 'left');
-                drawTextTrack('01;', mX + mW - 16, mY + mH - 22, '800 22px "JetBrains Mono", monospace', L.codeB, 0, 'right');
+                drawTextTrack('>_', mX + 16, mY + mH - 22, '800 22px "JetBrains Mono", monospace', L.codeM || L.codeB, 0, 'left');
             }
 
             // Content stack: badge -> hero -> script (overlap) -> stamp
