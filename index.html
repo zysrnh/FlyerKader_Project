@@ -26,7 +26,6 @@
             width: 1080px;
             height: 1350px;
             transform-origin: top left;
-            transition: background 0.2s ease;
         }
         .poster-canvas.ratio-4-5  { width: 1080px; height: 1350px; padding: 46px 64px 48px 64px; }
         .poster-canvas.ratio-9-16 { width: 1080px; height: 1920px; padding: 78px 68px 86px 68px; }
@@ -77,18 +76,26 @@
         .ratio-9-16 .cta-btn { padding: 16px 40px; }
         .ratio-9-16 .cta-text { font-size: 26px; }
 
-        /* ================= LAYOUT 2: RETRO POP-UP (4 TEMA) ================= */
+        /* ================= LAYOUT 2, 3, 4 VISIBILITY ================= */
         .poster-canvas.layout-2,
-        .poster-canvas.layout-3 { padding: 0 !important; }
+        .poster-canvas.layout-3,
+        .poster-canvas.layout-4 { padding: 0 !important; }
         .poster-canvas.layout-2 .layout-1-root,
-        .poster-canvas.layout-2 .layout-3-root { display: none !important; }
+        .poster-canvas.layout-2 .layout-3-root,
+        .poster-canvas.layout-2 .layout-4-root { display: none !important; }
         .poster-canvas.layout-2 .layout-2-root { display: block !important; }
 
         .poster-canvas.layout-3 .layout-1-root,
-        .poster-canvas.layout-3 .layout-2-root { display: none !important; }
+        .poster-canvas.layout-3 .layout-2-root,
+        .poster-canvas.layout-3 .layout-4-root { display: none !important; }
         .poster-canvas.layout-3 .layout-3-root { display: flex !important; }
 
-        /* Mode Coming Soon (berlaku di Layout 1, 2 & 3 — tanpa tanggal/lokasi) */
+        .poster-canvas.layout-4 .layout-1-root,
+        .poster-canvas.layout-4 .layout-2-root,
+        .poster-canvas.layout-4 .layout-3-root { display: none !important; }
+        .poster-canvas.layout-4 .layout-4-root { display: flex !important; }
+
+        /* Mode Coming Soon (berlaku di Layout 1, 2, 3 & 4 — tanpa tanggal/lokasi) */
         .poster-canvas.mode-coming-soon .layout-1-root .menuju-box,
         .poster-canvas.mode-coming-soon .layout-1-root .sched-grid,
         .poster-canvas.mode-coming-soon .layout-3-root .l3-countdown-only { display: none !important; }
@@ -472,6 +479,149 @@
         .layout-3.style-modern .l3-bottom-dock { background: #FFFFFF; color: #16488E; border: none; box-shadow: 0 18px 36px rgba(6, 20, 44, 0.36); border-radius: 26px; }
         .layout-3.style-modern .l3-dock-icon { color: #2A82C6; }
 
+        /* ================= LAYOUT 4: IG FEED STACK (CIRI KHAS HIMA IF — 4 TEMA) ================= */
+        .l4-top-wrap { padding: 38px 40px 0 40px; }
+        .ratio-9-16 .l4-top-wrap { padding: 66px 40px 0 40px; }
+        .ratio-1-1  .l4-top-wrap { padding: 24px 36px 0 36px; }
+
+        .l4-top-pill { display: inline-flex; align-items: center; gap: 14px; padding: 10px 24px; }
+        .ratio-1-1 .l4-top-pill { padding: 7px 18px; gap: 10px; }
+        .ratio-9-16 .l4-top-pill { padding: 12px 28px; gap: 16px; }
+        .l4-top-logo { width: 44px; height: 44px; object-fit: contain; }
+        .ratio-1-1 .l4-top-logo { width: 34px; height: 34px; }
+        .ratio-9-16 .l4-top-logo { width: 52px; height: 52px; }
+
+        .l4-stack-stage { position: relative; width: 670px; height: 690px; }
+        .ratio-9-16 .l4-stack-stage { width: 740px; height: 790px; }
+        .ratio-1-1  .l4-stack-stage { width: 560px; height: 556px; }
+
+        .l4-card-back {
+            position: absolute;
+            inset: 0;
+            transform: translate(16px, -6px) rotate(4.2deg);
+        }
+        .l4-card-front {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform: rotate(-2.2deg);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .l4-card-hdr { padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; flex-shrink: 0; }
+        .ratio-1-1 .l4-card-hdr { padding: 10px 16px; }
+        .l4-media-box { margin: 0 20px; flex: 1; position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .ratio-1-1 .l4-media-box { margin: 0 16px; }
+        .l4-card-ftr { padding: 14px 22px 18px 22px; }
+        .ratio-1-1 .l4-card-ftr { padding: 10px 18px 14px 18px; }
+
+        .l4-props-cluster {
+            position: absolute;
+            right: -52px;
+            bottom: 84px;
+            width: 210px;
+            height: 210px;
+            transform: rotate(-10deg);
+            pointer-events: none;
+            z-index: 30;
+        }
+        .ratio-9-16 .l4-props-cluster { right: -56px; bottom: 104px; width: 230px; height: 230px; }
+        .ratio-1-1  .l4-props-cluster { right: -42px; bottom: 62px; width: 168px; height: 168px; }
+
+        .l4-wave-wrap { position: relative; z-index: 15; width: 100%; }
+        .l4-bottom-bar { padding: 14px 36px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+        .ratio-1-1 .l4-bottom-bar { padding: 11px 28px; }
+        .ratio-9-16 .l4-bottom-bar { padding: 18px 42px; }
+
+        /* Layout 4 Theme 1: Neubrutalism */
+        .poster-canvas.layout-4.style-neubrutalism {
+            background-color: #16488E;
+            background-image: radial-gradient(rgba(255, 255, 255, 0.16) 2px, transparent 2px);
+            background-size: 24px 24px;
+            --l4-mega-hi: #FF6B6B; --l4-mega-mid: #CA2C2A; --l4-mega-dark: #991B1B; --l4-mega-deep: #3B0909; --l4-mega-edge: #000000; --l4-mega-ew: 2.4; --l4-wave-col: #FCD34D;
+        }
+        .layout-4.style-neubrutalism .l4-top-pill { background: #FFFFFF; color: #12305A; border: 3.5px solid #000000; box-shadow: 6px 6px 0 #000000; border-radius: 14px; }
+        .layout-4.style-neubrutalism .l4-top-sub { color: #CA2C2A; }
+        .layout-4.style-neubrutalism .l4-card-back { background: #DBEAFE; border: 4px solid #000000; box-shadow: 9px 9px 0 #000000; border-radius: 16px; }
+        .layout-4.style-neubrutalism .l4-card-front { background: #FFFFFF; color: #0F172A; border: 4px solid #000000; box-shadow: 12px 12px 0 #000000; border-radius: 16px; }
+        .layout-4.style-neubrutalism .l4-follow-btn { background: #16488E; color: #FFFFFF; border: 2px solid #000000; border-radius: 8px; }
+        .layout-4.style-neubrutalism .l4-media-box { background: #16488E; border: 3.5px solid #000000; border-radius: 10px; }
+        .layout-4.style-neubrutalism .l4-sun-ray { fill: rgba(255, 255, 255, 0.12); }
+        .layout-4.style-neubrutalism .l4-sun-core { fill: #12305A; stroke: #FCD34D; stroke-width: 5; }
+        .layout-4.style-neubrutalism .l4-hero-txt { font-family: 'Archivo Black', sans-serif; color: #FCD34D; paint-order: stroke fill; -webkit-text-stroke: 8px #000000; text-shadow: 6px 6px 0 #000000; }
+        .layout-4.style-neubrutalism .l4-sub-pill { background: #CA2C2A; color: #FFFFFF; border: 3px solid #000000; box-shadow: 4px 4px 0 #000000; border-radius: 6px; font-family: 'Space Grotesk', sans-serif; }
+        .layout-4.style-neubrutalism .l4-dot-active { background: #CA2C2A; }
+        .layout-4.style-neubrutalism .l4-chip { background: #FFFFFF; color: #16488E; border: 3px solid #000000; box-shadow: 4px 4px 0 #000000; border-radius: 10px; }
+        .layout-4.style-neubrutalism .l4-wave-fill { fill: #FFFFFF; opacity: 0.16; }
+        .layout-4.style-neubrutalism .l4-bottom-bar { background: #0B1F40; color: #FFFFFF; border-top: 3.5px solid #000000; }
+        .layout-4.style-neubrutalism .l4-bar-icon { color: #FCD34D; }
+
+        /* Layout 4 Theme 2: Glassmorphism */
+        .poster-canvas.layout-4.style-glass {
+            background: linear-gradient(150deg, #0D356F 0%, #1B5AA6 48%, #2E80D1 100%);
+            --l4-mega-hi: #FF8585; --l4-mega-mid: #EF4444; --l4-mega-dark: #B91C1C; --l4-mega-deep: #450A0A; --l4-mega-edge: rgba(255,255,255,0.88); --l4-mega-ew: 1.4; --l4-wave-col: #FDE047;
+        }
+        .layout-4.style-glass .l4-top-pill { background: rgba(255, 255, 255, 0.88); color: #12305A; border: 1.5px solid rgba(255,255,255,0.95); box-shadow: 0 14px 32px rgba(8, 25, 58, 0.28); border-radius: 999px; font-family: 'Outfit', sans-serif; }
+        .layout-4.style-glass .l4-top-sub { color: #DC2626; }
+        .layout-4.style-glass .l4-card-back { background: rgba(226, 240, 255, 0.45); border: 1.5px solid rgba(255,255,255,0.7); box-shadow: 0 24px 48px rgba(8, 25, 58, 0.26); border-radius: 26px; }
+        .layout-4.style-glass .l4-card-front { background: rgba(255, 255, 255, 0.88); color: #0F294A; border: 2px solid rgba(255,255,255,0.96); box-shadow: 0 28px 56px rgba(8, 25, 58, 0.36); border-radius: 26px; font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif; }
+        .layout-4.style-glass .l4-follow-btn { background: linear-gradient(135deg, #3B82F6, #1D4ED8); color: #FFFFFF; border-radius: 999px; }
+        .layout-4.style-glass .l4-media-box { background: linear-gradient(145deg, #1E40AF 0%, #2563EB 55%, #3B82F6 100%); border: 1.5px solid rgba(255,255,255,0.65); border-radius: 18px; }
+        .layout-4.style-glass .l4-sun-ray { fill: rgba(255, 255, 255, 0.14); }
+        .layout-4.style-glass .l4-sun-core { fill: rgba(15, 41, 74, 0.42); stroke: rgba(255, 255, 255, 0.55); stroke-width: 2.5; }
+        .layout-4.style-glass .l4-hero-txt { font-family: 'Outfit', sans-serif; font-weight: 900; background: linear-gradient(180deg, #FFFFFF 0%, #DBEAFE 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 8px 18px rgba(15, 23, 42, 0.38)); }
+        .layout-4.style-glass .l4-sub-pill { background: linear-gradient(180deg, #F87171 0%, #DC2626 100%); color: #FFFFFF; border: 1.5px solid rgba(255,255,255,0.85); box-shadow: 0 10px 24px rgba(220, 38, 38, 0.32); border-radius: 999px; font-family: 'Outfit', sans-serif; }
+        .layout-4.style-glass .l4-dot-active { background: #DC2626; }
+        .layout-4.style-glass .l4-chip { background: rgba(255, 255, 255, 0.80); color: #1E40AF; border: 1.5px solid rgba(255,255,255,0.92); box-shadow: 0 12px 26px rgba(8, 25, 58, 0.24); border-radius: 14px; font-family: 'JetBrains Mono', monospace; }
+        .layout-4.style-glass .l4-wave-fill { fill: #FFFFFF; opacity: 0.18; }
+        .layout-4.style-glass .l4-bottom-bar { background: rgba(15, 41, 74, 0.84); color: #FFFFFF; border-top: 1.5px solid rgba(255,255,255,0.35); }
+        .layout-4.style-glass .l4-bar-icon { color: #93C5FD; }
+
+        /* Layout 4 Theme 3: Dark Code */
+        .poster-canvas.layout-4.style-dark-code {
+            background-color: #0B192E;
+            background-image: radial-gradient(rgba(56, 189, 248, 0.24) 2px, transparent 2px);
+            background-size: 24px 24px;
+            --l4-mega-hi: #7DD3FC; --l4-mega-mid: #0EA5E9; --l4-mega-dark: #0369A1; --l4-mega-deep: #061326; --l4-mega-edge: #38BDF8; --l4-mega-ew: 2; --l4-wave-col: #38BDF8;
+        }
+        .layout-4.style-dark-code .l4-top-pill { background: #122645; color: #FFFFFF; border: 2.5px solid #38BDF8; box-shadow: 5px 5px 0 #000000; border-radius: 14px; }
+        .layout-4.style-dark-code .l4-top-sub { color: #38BDF8; }
+        .layout-4.style-dark-code .l4-card-back { background: #0E1F3A; border: 3px solid rgba(56, 189, 248, 0.55); box-shadow: 8px 8px 0 #000000; border-radius: 18px; }
+        .layout-4.style-dark-code .l4-card-front { background: #122645; color: #F8FAFC; border: 3.5px solid #38BDF8; box-shadow: 12px 12px 0 #000000; border-radius: 18px; }
+        .layout-4.style-dark-code .l4-follow-btn { background: #38BDF8; color: #0B192E; border-radius: 8px; }
+        .layout-4.style-dark-code .l4-media-box { background: #081529; border: 2.5px solid rgba(56,189,248,0.6); border-radius: 12px; }
+        .layout-4.style-dark-code .l4-sun-ray { fill: rgba(56, 189, 248, 0.09); }
+        .layout-4.style-dark-code .l4-sun-core { fill: #0F2342; stroke: #38BDF8; stroke-width: 3; }
+        .layout-4.style-dark-code .l4-hero-txt { font-family: 'Archivo Black', sans-serif; color: #FCD34D; text-shadow: 0 4px 18px rgba(252, 211, 77, 0.28); }
+        .layout-4.style-dark-code .l4-sub-pill { background: #1A365D; color: #38BDF8; border: 2px solid #38BDF8; box-shadow: 4px 4px 0 #000000; border-radius: 8px; font-family: 'JetBrains Mono', monospace; }
+        .layout-4.style-dark-code .l4-dot-active { background: #38BDF8; }
+        .layout-4.style-dark-code .l4-chip { background: #122645; color: #FCD34D; border: 2px solid #38BDF8; box-shadow: 4px 4px 0 #000000; border-radius: 10px; font-family: 'JetBrains Mono', monospace; }
+        .layout-4.style-dark-code .l4-wave-fill { fill: #38BDF8; opacity: 0.12; }
+        .layout-4.style-dark-code .l4-bottom-bar { background: #071120; color: #F8FAFC; border-top: 2.5px solid #38BDF8; }
+        .layout-4.style-dark-code .l4-bar-icon { color: #38BDF8; }
+
+        /* Layout 4 Theme 4: Modern Clean */
+        .poster-canvas.layout-4.style-modern {
+            background: radial-gradient(circle at 80% 18%, #2E7BD1 0%, #16488E 46%, #0D2D5E 100%);
+            --l4-mega-hi: #60A5FA; --l4-mega-mid: #2563EB; --l4-mega-dark: #1E3A8A; --l4-mega-deep: #091834; --l4-mega-edge: rgba(255,255,255,0.72); --l4-mega-ew: 1.2; --l4-wave-col: #FDD34D;
+        }
+        .layout-4.style-modern .l4-top-pill { background: rgba(255, 255, 255, 0.96); color: #12305A; box-shadow: 0 14px 32px rgba(6, 20, 44, 0.34); border-radius: 999px; }
+        .layout-4.style-modern .l4-top-sub { color: #2A82C6; }
+        .layout-4.style-modern .l4-card-back { background: #E2EEFF; box-shadow: 0 24px 48px rgba(6, 20, 44, 0.30); border-radius: 24px; }
+        .layout-4.style-modern .l4-card-front { background: #FFFFFF; color: #12305A; box-shadow: 0 30px 64px rgba(6, 20, 44, 0.44); border-radius: 24px; }
+        .layout-4.style-modern .l4-follow-btn { background: #16488E; color: #FFFFFF; border-radius: 999px; }
+        .layout-4.style-modern .l4-media-box { background: linear-gradient(155deg, #16488E 0%, #2468BD 100%); border-radius: 16px; }
+        .layout-4.style-modern .l4-sun-ray { fill: rgba(255, 255, 255, 0.11); }
+        .layout-4.style-modern .l4-sun-core { fill: #103266; stroke: rgba(253, 211, 77, 0.65); stroke-width: 3; }
+        .layout-4.style-modern .l4-hero-txt { font-family: 'Archivo Black', sans-serif; color: #FFFFFF; text-shadow: 6px 6px 0 #FDD34D; }
+        .layout-4.style-modern .l4-sub-pill { background: #CA2C2A; color: #FFFFFF; box-shadow: 0 12px 24px rgba(10, 25, 58, 0.36); border-radius: 999px; font-family: 'Space Grotesk', sans-serif; }
+        .layout-4.style-modern .l4-dot-active { background: #16488E; }
+        .layout-4.style-modern .l4-chip { background: rgba(255, 255, 255, 0.96); color: #12305A; box-shadow: 0 14px 28px rgba(6, 20, 44, 0.32); border-radius: 14px; font-family: 'JetBrains Mono', monospace; }
+        .layout-4.style-modern .l4-wave-fill { fill: #FFFFFF; opacity: 0.14; }
+        .layout-4.style-modern .l4-bottom-bar { background: #0A2044; color: #FFFFFF; }
+        .layout-4.style-modern .l4-bar-icon { color: #FDD34D; }
+
         /* ================= THEME 1: NEUBRUTALISM ================= */
         .style-neubrutalism {
             background-color: #FFFFFF;
@@ -833,24 +983,28 @@
         <!-- Scrollable Inspector Controls -->
         <div class="builder-scroll flex-1 overflow-y-auto p-4 space-y-5">
 
-            <!-- 0. PILIH LAYOUT (3 LAYOUT) -->
+            <!-- 0. PILIH LAYOUT (4 LAYOUT) -->
             <div class="space-y-2">
                 <div class="flex items-center justify-between">
                     <span class="text-[11px] font-extrabold uppercase tracking-wider text-[#93C5FD]">0. Pilih Layout</span>
                     <span id="lblActiveLayout" class="text-[10px] font-code text-[#FCD34D]">layout-1</span>
                 </div>
-                <div class="grid grid-cols-3 gap-1.5">
-                    <button type="button" onclick="setLayout(1)" id="btn-layout-1" class="btn-brutal px-2 py-2 bg-[#FCD34D] text-black border-2 border-black shadow-[3px_3px_0_#000000] text-left cursor-pointer">
-                        <span class="text-[10px] font-extrabold uppercase block leading-tight">Layout 1</span>
-                        <span class="text-[8.5px] font-bold opacity-80 block mt-0.5 truncate">Countdown</span>
+                <div class="grid grid-cols-2 gap-1.5">
+                    <button type="button" onclick="setLayout(1)" id="btn-layout-1" class="btn-brutal px-2.5 py-2 bg-[#FCD34D] text-black border-2 border-black shadow-[3px_3px_0_#000000] text-left cursor-pointer">
+                        <span class="text-[10.5px] font-extrabold uppercase block leading-tight">Layout 1</span>
+                        <span class="text-[9px] font-bold opacity-80 block mt-0.5 truncate">Countdown Card</span>
                     </button>
-                    <button type="button" onclick="setLayout(2)" id="btn-layout-2" class="btn-brutal px-2 py-2 bg-[#162C4E] text-white border-2 border-black shadow-[3px_3px_0_#000000] text-left cursor-pointer">
-                        <span class="text-[10px] font-extrabold uppercase block leading-tight">Layout 2</span>
-                        <span class="text-[8.5px] font-bold opacity-80 block mt-0.5 truncate">Retro Pop</span>
+                    <button type="button" onclick="setLayout(2)" id="btn-layout-2" class="btn-brutal px-2.5 py-2 bg-[#162C4E] text-white border-2 border-black shadow-[3px_3px_0_#000000] text-left cursor-pointer">
+                        <span class="text-[10.5px] font-extrabold uppercase block leading-tight">Layout 2</span>
+                        <span class="text-[9px] font-bold opacity-80 block mt-0.5 truncate">Retro Pop-up</span>
                     </button>
-                    <button type="button" onclick="setLayout(3)" id="btn-layout-3" class="btn-brutal px-2 py-2 bg-[#162C4E] text-white border-2 border-black shadow-[3px_3px_0_#000000] text-left cursor-pointer">
-                        <span class="text-[10px] font-extrabold uppercase block leading-tight">Layout 3</span>
-                        <span class="text-[8.5px] font-bold opacity-80 block mt-0.5 truncate">Bubble Pop</span>
+                    <button type="button" onclick="setLayout(3)" id="btn-layout-3" class="btn-brutal px-2.5 py-2 bg-[#162C4E] text-white border-2 border-black shadow-[3px_3px_0_#000000] text-left cursor-pointer">
+                        <span class="text-[10.5px] font-extrabold uppercase block leading-tight">Layout 3</span>
+                        <span class="text-[9px] font-bold opacity-80 block mt-0.5 truncate">Bubble Pop</span>
+                    </button>
+                    <button type="button" onclick="setLayout(4)" id="btn-layout-4" class="btn-brutal px-2.5 py-2 bg-[#162C4E] text-white border-2 border-black shadow-[3px_3px_0_#000000] text-left cursor-pointer">
+                        <span class="text-[10.5px] font-extrabold uppercase block leading-tight">Layout 4</span>
+                        <span class="text-[9px] font-bold opacity-80 block mt-0.5 truncate">IG Feed Stack</span>
                     </button>
                 </div>
             </div>
@@ -983,11 +1137,11 @@
 
                 <div class="grid grid-cols-2 gap-2.5">
                     <div>
-                        <label class="text-[10px] font-bold uppercase text-white/70 block mb-1">Link CTA (L1 &amp; L3)</label>
+                        <label class="text-[10px] font-bold uppercase text-white/70 block mb-1">Link CTA (L1, L3 &amp; L4)</label>
                         <input id="inCta" type="text" value="GO.HMIF-LPKIA.MY.ID" oninput="syncAllDom()" class="w-full px-2.5 py-1.5 bg-[#0B192E] border-2 border-black text-xs font-bold text-white focus:border-[#38BDF8] focus:outline-none">
                     </div>
                     <div>
-                        <label class="text-[10px] font-bold uppercase text-white/70 block mb-1">IG Handle (L2 &amp; L3)</label>
+                        <label class="text-[10px] font-bold uppercase text-white/70 block mb-1">IG Handle (L2, L3 &amp; L4)</label>
                         <input id="inIg" type="text" value="hmif_LPKIA" oninput="syncAllDom()" class="w-full px-2.5 py-1.5 bg-[#0B192E] border-2 border-black text-xs font-bold text-white focus:border-[#38BDF8] focus:outline-none">
                     </div>
                 </div>
@@ -1574,6 +1728,203 @@
                         </footer>
                     </div>
 
+                    <!-- ================= LAYOUT 4: IG FEED STACK (CIRI KHAS HIMA IF) ================= -->
+                    <div id="layout4Root" class="layout-4-root hidden relative w-full h-full flex-col justify-between overflow-hidden">
+                        <!-- Background Tech Printilan: Bokeh Halo + Micro Dots + Sparkles + Layered Wave -->
+                        <svg viewBox="0 0 1080 1350" preserveAspectRatio="none" class="pointer-events-none absolute inset-0 w-full h-full z-0" aria-hidden="true">
+                            <circle cx="540" cy="630" r="370" fill="#60A5FA" opacity="0.12"/>
+                            <path class="l4-wave-fill" d="M0 1175 Q140 1105 290 1165 T610 1160 T920 1150 Q1010 1135 1080 1165 L1080 1350 L0 1350 Z"/>
+                            <path class="l4-wave-fill" d="M0 1225 Q180 1165 380 1215 T780 1210 T1080 1195 L1080 1350 L0 1350 Z" opacity="0.85"/>
+                            <!-- 4-Point Tech Sparkles -->
+                            <path d="M128 332 Q130 350 148 352 Q130 354 128 372 Q126 354 108 352 Q126 350 128 332 Z" fill="#FCD34D" opacity="0.82"/>
+                            <path d="M952 462 Q954 480 972 482 Q954 484 952 502 Q950 484 932 482 Q950 480 952 462 Z" fill="#FFFFFF" opacity="0.72"/>
+                            <path d="M940 1020 Q941 1034 955 1035 Q941 1036 940 1050 Q939 1036 925 1035 Q939 1034 940 1020 Z" fill="#FCD34D" opacity="0.78"/>
+                        </svg>
+
+                        <!-- Floating HIMA IF Coding Chips (Menggantikan Awan Batik Referensi) -->
+                        <div class="code-accent l4-chip pointer-events-none font-code px-3.5 py-2 text-[18px] font-extrabold absolute top-[15.5%] left-[6%] rotate-[-8deg] z-10">&gt;_ 2026</div>
+                        <div class="code-accent l4-chip pointer-events-none font-code px-3.5 py-2 text-[18px] font-extrabold absolute top-[18%] right-[6.5%] rotate-6 z-10">&lt;/&gt; IF</div>
+                        <div class="code-accent l4-chip pointer-events-none font-code px-3.5 py-2 text-[18px] font-extrabold absolute top-[50%] left-[4%] rotate-[-10deg] z-10">&#123; HIMA &#125;</div>
+
+                        <!-- Mini Tech Rocket Vector Bottom-Left Above Wave -->
+                        <svg viewBox="0 0 110 110" class="pointer-events-none absolute bottom-[78px] left-[62px] w-[108px] h-[108px] z-20 overflow-visible" aria-hidden="true">
+                            <g transform="rotate(-12 55 55)" style="filter: drop-shadow(0 10px 18px rgba(8,22,44,0.34));">
+                                <!-- Exhaust flame -->
+                                <path d="M34 74 L14 96 L28 84 L20 102 L44 82 Z" fill="#FCD34D"/>
+                                <path d="M35 76 L22 92 L40 80 Z" fill="#EF4444"/>
+                                <!-- Rocket fins -->
+                                <path d="M40 60 L20 66 L34 76 Z" fill="#CA2C2A" stroke="#0F264A" stroke-width="2"/>
+                                <path d="M52 72 L46 92 L36 78 Z" fill="#CA2C2A" stroke="#0F264A" stroke-width="2"/>
+                                <!-- Rocket Body -->
+                                <path d="M84 22 C66 24 44 40 34 68 L44 78 C72 68 88 46 90 28 Z" fill="#FFFFFF" stroke="#0F264A" stroke-width="2.5"/>
+                                <path d="M84 22 C76 23 68 27 61 33 L79 51 C85 44 89 36 90 28 Z" fill="#2563EB"/>
+                                <circle cx="58" cy="52" r="8" fill="#38BDF8" stroke="#0F264A" stroke-width="2.2"/>
+                            </g>
+                        </svg>
+
+                        <!-- Top Centered Dual-Logo Org Pill -->
+                        <header class="l4-top-wrap relative z-10 flex justify-center">
+                            <div class="l4-top-pill">
+                                <img id="l4HimaLogo" src="" alt="Logo HIMA IF" class="l4-top-logo shrink-0">
+                                <div class="text-center leading-none px-1">
+                                    <p class="font-display text-[20px] font-bold uppercase tracking-[0.04em] leading-none">HIMA INFORMATIKA</p>
+                                    <p class="l4-top-sub text-[12px] font-extrabold uppercase tracking-[0.22em] mt-1 leading-none">IDE LPKIA BANDUNG</p>
+                                </div>
+                                <img id="l4LpkiaLogo" src="" alt="Logo IDE LPKIA" class="l4-top-logo shrink-0">
+                            </div>
+                        </header>
+
+                        <!-- Centerpiece: Tilted 2-Layer Stacked Instagram Card -->
+                        <section class="relative z-10 flex items-center justify-center my-auto px-8">
+                            <div class="l4-stack-stage">
+                                <!-- Back Tilted Layer Card -->
+                                <div class="l4-card-back" aria-hidden="true"></div>
+
+                                <!-- Main Front IG Post Card -->
+                                <article class="l4-card-front">
+                                    <!-- Card Top Social Header -->
+                                    <div class="l4-card-hdr">
+                                        <div class="flex items-center gap-3 min-w-0">
+                                            <div class="w-10 h-10 rounded-full bg-white p-1 border border-slate-300 shrink-0 overflow-hidden flex items-center justify-center">
+                                                <img id="l4CardAvatar" src="" alt="Avatar HIMA IF" class="w-full h-full object-contain">
+                                            </div>
+                                            <div class="flex items-center gap-1.5 min-w-0">
+                                                <span id="l4OutIgCard" class="font-display text-[21px] font-bold truncate">hmif_LPKIA</span>
+                                                <svg class="w-5 h-5 shrink-0 text-[#1D9BF0]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                                    <path d="M12 2l2.39 1.98 3.04-.46.84 2.97 2.81 1.29-.82 2.97 1.74 2.53-1.74 2.53.82 2.97-2.81 1.29-.84 2.97-3.04-.46L12 22l-2.39-1.98-3.04.46-.84-2.97-2.81-1.29.82-2.97L2 13.28l1.74-2.53-.82-2.97 2.81-1.29.84-2.97 3.04.46L12 2zm-1.1 13.4l5.2-5.2-1.4-1.4-3.8 3.8-1.8-1.8-1.4 1.4 3.2 3.2z"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-3 shrink-0">
+                                            <span class="l4-follow-btn px-4 py-1 text-[15px] font-extrabold tracking-wide">Follow</span>
+                                            <span class="text-[20px] font-extrabold leading-none opacity-65">•••</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Inner Sunburst Media Square -->
+                                    <div class="l4-media-box">
+                                        <!-- 16 Radial Sunburst Rays SVG -->
+                                        <svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" class="pointer-events-none absolute inset-0 w-full h-full" aria-hidden="true">
+                                            <g transform="translate(300 300)">
+                                                <path class="l4-sun-ray" d="M0,0 L-45,-460 L45,-460 Z" transform="rotate(0)"/>
+                                                <path class="l4-sun-ray" d="M0,0 L-45,-460 L45,-460 Z" transform="rotate(22.5)"/>
+                                                <path class="l4-sun-ray" d="M0,0 L-45,-460 L45,-460 Z" transform="rotate(45)"/>
+                                                <path class="l4-sun-ray" d="M0,0 L-45,-460 L45,-460 Z" transform="rotate(67.5)"/>
+                                                <path class="l4-sun-ray" d="M0,0 L-45,-460 L45,-460 Z" transform="rotate(90)"/>
+                                                <path class="l4-sun-ray" d="M0,0 L-45,-460 L45,-460 Z" transform="rotate(112.5)"/>
+                                                <path class="l4-sun-ray" d="M0,0 L-45,-460 L45,-460 Z" transform="rotate(135)"/>
+                                                <path class="l4-sun-ray" d="M0,0 L-45,-460 L45,-460 Z" transform="rotate(157.5)"/>
+                                                <path class="l4-sun-ray" d="M0,0 L-45,-460 L45,-460 Z" transform="rotate(180)"/>
+                                                <path class="l4-sun-ray" d="M0,0 L-45,-460 L45,-460 Z" transform="rotate(202.5)"/>
+                                                <path class="l4-sun-ray" d="M0,0 L-45,-460 L45,-460 Z" transform="rotate(225)"/>
+                                                <path class="l4-sun-ray" d="M0,0 L-45,-460 L45,-460 Z" transform="rotate(247.5)"/>
+                                                <path class="l4-sun-ray" d="M0,0 L-45,-460 L45,-460 Z" transform="rotate(270)"/>
+                                                <path class="l4-sun-ray" d="M0,0 L-45,-460 L45,-460 Z" transform="rotate(292.5)"/>
+                                                <path class="l4-sun-ray" d="M0,0 L-45,-460 L45,-460 Z" transform="rotate(315)"/>
+                                                <path class="l4-sun-ray" d="M0,0 L-45,-460 L45,-460 Z" transform="rotate(337.5)"/>
+                                                <circle class="l4-sun-core" cx="0" cy="0" r="145"/>
+                                            </g>
+                                        </svg>
+
+                                        <!-- Center Hero Inside Media Frame -->
+                                        <div class="relative z-10 flex flex-col items-center justify-center text-center px-4">
+                                            <span id="l4OutHero" class="l4-hero-txt uppercase leading-[0.9] block" style="font-size: 162px;">H-7</span>
+                                            <div class="l4-sub-pill -mt-2 px-6 py-2 inline-flex items-center gap-2 -rotate-1">
+                                                <span id="l4OutPill" class="font-extrabold text-[23px] uppercase tracking-[0.10em] leading-none">MENUJU KADERISASI</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Card Footer Actions & Caption -->
+                                    <div class="l4-card-ftr space-y-1.5">
+                                        <div class="flex items-center justify-between">
+                                            <div class="flex items-center gap-4">
+                                                <svg class="w-7 h-7 text-[#EF4444]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                                                </svg>
+                                                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                                                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                                                </svg>
+                                                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                                                    <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="flex items-center gap-1.5 mr-24">
+                                                <span class="l4-dot-active w-2.5 h-2.5 rounded-full block"></span>
+                                                <span class="w-2 h-2 rounded-full bg-current opacity-25 block"></span>
+                                                <span class="w-2 h-2 rounded-full bg-current opacity-25 block"></span>
+                                                <span class="w-2 h-2 rounded-full bg-current opacity-25 block"></span>
+                                            </div>
+                                        </div>
+                                        <p class="text-[16px] font-extrabold leading-snug pt-0.5">1,024 likes</p>
+                                        <p class="text-[16px] leading-snug">
+                                            <span id="l4OutIgCap" class="font-extrabold mr-1.5">hmif_LPKIA</span>
+                                            <span id="l4OutCaption" class="font-semibold opacity-90">Menuju Kaderisasi! Jumat, 04 Des 2026 • 08.00 WIB • Kampus IDE LPKIA</span>
+                                        </p>
+                                    </div>
+                                </article>
+
+                                <!-- Attached 3D Megaphone + Golden Notification Bell Props (Corner Overlay) -->
+                                <svg viewBox="0 0 220 220" class="l4-props-cluster overflow-visible" aria-hidden="true">
+                                    <defs>
+                                        <linearGradient id="l4MegaHorn" x1="15%" y1="10%" x2="35%" y2="95%">
+                                            <stop offset="0%" stop-color="#FFFFFF"/><stop offset="65%" stop-color="#F1F5F9"/><stop offset="100%" stop-color="#94A3B8"/>
+                                        </linearGradient>
+                                        <linearGradient id="l4MegaColor" x1="10%" y1="0%" x2="90%" y2="100%">
+                                            <stop offset="0%" style="stop-color: var(--l4-mega-hi)"/><stop offset="52%" style="stop-color: var(--l4-mega-mid)"/><stop offset="100%" style="stop-color: var(--l4-mega-dark)"/>
+                                        </linearGradient>
+                                        <linearGradient id="l4BellGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#FEF08A"/><stop offset="55%" stop-color="#F59E0B"/><stop offset="100%" stop-color="#B45309"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <g style="filter: drop-shadow(0 16px 20px rgba(7,20,44,0.38));">
+                                        <!-- Golden Notification Bell beside top-right rim -->
+                                        <g transform="translate(152 -12) rotate(18 32 32)">
+                                            <circle cx="32" cy="54" r="7" fill="#B45309"/>
+                                            <path d="M16 42 Q16 14 32 14 Q48 14 48 42 L54 50 L10 50 Z" fill="url(#l4BellGold)" stroke="#78350F" stroke-width="2"/>
+                                            <circle cx="32" cy="11" r="4" fill="#F59E0B"/>
+                                        </g>
+                                        <!-- Megaphone -->
+                                        <path d="M52 126 L74 128 L66 176 Q64 185 52 184 L44 182 Q37 180 40 170 Z" fill="url(#l4MegaColor)" style="stroke: var(--l4-mega-edge); stroke-width: var(--l4-mega-ew);"/>
+                                        <rect x="16" y="88" width="22" height="40" rx="10" fill="url(#l4MegaColor)" style="stroke: var(--l4-mega-edge); stroke-width: var(--l4-mega-ew);"/>
+                                        <path d="M32 82 L64 78 L64 138 L32 134 Q24 132 24 108 Q24 84 32 82 Z" fill="url(#l4MegaColor)" style="stroke: var(--l4-mega-edge); stroke-width: var(--l4-mega-ew);"/>
+                                        <path d="M58 79 C96 76 124 54 148 34 L152 182 C124 162 96 140 58 137 Z" fill="url(#l4MegaHorn)" style="stroke: var(--l4-mega-edge); stroke-width: var(--l4-mega-ew);"/>
+                                        <path d="M68 85 C98 81 122 64 140 48" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
+                                        <ellipse cx="151" cy="108" rx="23" ry="74" fill="url(#l4MegaColor)" style="stroke: var(--l4-mega-edge); stroke-width: var(--l4-mega-ew);"/>
+                                        <ellipse cx="153" cy="108" rx="15" ry="59" style="fill: var(--l4-mega-deep);"/>
+                                        <ellipse cx="144" cy="108" rx="7" ry="18" fill="url(#l4MegaColor)"/>
+                                    </g>
+                                    <!-- Sound wave arcs -->
+                                    <g fill="none" stroke-linecap="round" style="stroke: var(--l4-wave-col)">
+                                        <path d="M174 88 Q190 108 174 128" stroke-width="4.5" opacity="0.9"/>
+                                        <path d="M189 74 Q212 108 189 142" stroke-width="4" opacity="0.65"/>
+                                    </g>
+                                </svg>
+                            </div>
+                        </section>
+
+                        <!-- Full-Width Bottom Social Strip Bar -->
+                        <footer class="l4-wave-wrap">
+                            <div class="l4-bottom-bar">
+                                <div class="inline-flex items-center gap-2.5 min-w-0">
+                                    <svg class="l4-bar-icon w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true">
+                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                        <circle cx="12" cy="12" r="4.5"></circle>
+                                        <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"></circle>
+                                    </svg>
+                                    <span id="l4OutIgBar" class="font-display text-[19px] font-bold truncate">hmif_LPKIA</span>
+                                </div>
+                                <div class="inline-flex items-center gap-2.5 min-w-0">
+                                    <svg class="l4-bar-icon w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true">
+                                        <circle cx="12" cy="12" r="9"></circle>
+                                        <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path>
+                                    </svg>
+                                    <span id="l4OutCta" class="font-display text-[18px] font-bold uppercase tracking-[0.03em] truncate">GO.HMIF-LPKIA.MY.ID</span>
+                                </div>
+                            </div>
+                        </footer>
+                    </div>
+
                 </main>
             </div>
         </div>
@@ -1811,6 +2162,29 @@
             setIf('l3OutLoc', toTitleCase(E.loc));
             setIf('l3OutIg', E.igHandle);
             setIf('l3OutCta', E.cta);
+
+            // Layout 4 DOM sync
+            const l4HeroStr = E.isCS ? 'COMING SOON' : E.hero;
+            const l4HeroLen = l4HeroStr.length;
+            const l4Scale = currentRatio === '9-16' ? 1.1 : (currentRatio === '1-1' ? 0.78 : 1);
+            const l4BaseHero = l4HeroLen >= 10 ? 60 : (l4HeroLen >= 7 ? 90 : (l4HeroLen >= 5 ? 128 : 162));
+            const l4HeroEl = document.getElementById('l4OutHero');
+            if (l4HeroEl) {
+                l4HeroEl.textContent = l4HeroStr;
+                l4HeroEl.style.fontSize = Math.round(l4BaseHero * l4Scale) + 'px';
+            }
+            const l4PillTxt = E.isCS
+                ? `${E.title} • STAY TUNED`
+                : `${E.mn || 'MENUJU'} ${E.title}`;
+            setIf('l4OutPill', l4PillTxt);
+            setIf('l4OutIgCard', E.igHandle);
+            setIf('l4OutIgCap', E.igHandle);
+            setIf('l4OutIgBar', E.igHandle);
+            setIf('l4OutCta', E.cta);
+            const l4CapTxt = E.isCS
+                ? `Coming Soon — ${toTitleCase(E.title)} HIMA Informatika IDE LPKIA! Stay tuned!`
+                : `${toTitleCase(E.title)} HIMA IF • ${toTitleCase(E.date)} (${E.time}) • ${toTitleCase(E.loc)}`;
+            setIf('l4OutCaption', l4CapTxt);
         }
 
         function toTitleCase(s) {
@@ -1837,13 +2211,13 @@
 
         function setLayout(layoutNum) {
             const n = Number(layoutNum);
-            currentLayout = [1, 2, 3].includes(n) ? n : 1;
+            currentLayout = [1, 2, 3, 4].includes(n) ? n : 1;
             const canvas = document.getElementById('posterCanvas');
-            canvas.classList.remove('layout-1', 'layout-2', 'layout-3');
+            canvas.classList.remove('layout-1', 'layout-2', 'layout-3', 'layout-4');
             canvas.classList.add('layout-' + currentLayout);
             document.getElementById('lblActiveLayout').textContent = 'layout-' + currentLayout;
 
-            [1, 2, 3].forEach((num) => {
+            [1, 2, 3, 4].forEach((num) => {
                 const btn = document.getElementById('btn-layout-' + num);
                 if (!btn) return;
                 if (num === currentLayout) {
@@ -2100,6 +2474,9 @@
             }
             if (currentLayout === 3) {
                 return renderLayout3Canvas(dims);
+            }
+            if (currentLayout === 4) {
+                return renderLayout4Canvas(dims);
             }
 
             const THEMES = {
@@ -4009,6 +4386,482 @@
             return canvas;
         }
 
+        async function renderLayout4Canvas(dims) {
+            const W = dims.w;
+            const H = dims.h;
+            const canvas = document.createElement('canvas');
+            canvas.width = W;
+            canvas.height = H;
+            const ctx = canvas.getContext('2d');
+
+            const loadImg = (src) => new Promise((resolve) => {
+                const img = new Image();
+                img.onload = () => resolve(img);
+                img.onerror = () => resolve(null);
+                img.src = src;
+            });
+            const [himaImg, lpkiaImg] = await Promise.all([
+                loadImg(document.querySelector('#himaLogoSlot img').src),
+                loadImg(document.querySelector('#lpkiaLogoSlot img').src)
+            ]);
+
+            function rrPath(x, y, w, h, r) {
+                const rr = Math.min(r, w / 2, h / 2);
+                ctx.beginPath();
+                ctx.moveTo(x + rr, y);
+                ctx.lineTo(x + w - rr, y);
+                ctx.quadraticCurveTo(x + w, y, x + w, y + rr);
+                ctx.lineTo(x + w, y + h - rr);
+                ctx.quadraticCurveTo(x + w, y + h, x + w - rr, y + h);
+                ctx.lineTo(x + rr, y + h);
+                ctx.quadraticCurveTo(x, y + h, x, y + h - rr);
+                ctx.lineTo(x, y + rr);
+                ctx.quadraticCurveTo(x, y, x + rr, y);
+                ctx.closePath();
+            }
+
+            function drawTextTrack(text, x, y, font, color, tracking = 0, align = 'left') {
+                ctx.font = font;
+                ctx.fillStyle = color;
+                ctx.textBaseline = 'middle';
+                const chars = Array.from(text);
+                const ws = chars.map((c) => ctx.measureText(c).width);
+                const tot = ws.reduce((a, b) => a + b, 0) + tracking * Math.max(0, chars.length - 1);
+                let cx = align === 'center' ? x - tot / 2 : (align === 'right' ? x - tot : x);
+                ctx.textAlign = 'left';
+                chars.forEach((c, idx) => {
+                    ctx.fillText(c, cx, y);
+                    cx += ws[idx] + tracking;
+                });
+            }
+
+            const L4_THEMES = {
+                'neubrutalism': {
+                    bgMode: 'dots', bg: '#16488E', dot: 'rgba(255,255,255,0.16)',
+                    topFill: '#FFFFFF', topText: '#12305A', topSub: '#CA2C2A', topBorder: 3.5, topBorderCol: '#000000', topShadow: 6, topRad: 14,
+                    backFill: '#DBEAFE', backBorder: 4, backBorderCol: '#000000', backShadow: 9,
+                    cardFill: '#FFFFFF', cardText: '#0F172A', cardBorder: 4, cardBorderCol: '#000000', cardShadow: 12, cardRad: 16, softCol: null,
+                    followFill: '#16488E', followText: '#FFFFFF', followBorder: 2, followRad: 8,
+                    mediaBg: '#16488E', mediaBorder: 3.5, mediaBorderCol: '#000000', mediaRad: 10,
+                    rayCol: 'rgba(255,255,255,0.12)', coreFill: '#12305A', coreStroke: '#FCD34D', coreSW: 5,
+                    heroFont: '400 {FS}px "Archivo Black", sans-serif', heroCol: '#FCD34D', heroStroke: '#000000', heroSW: 8, heroShd: 6,
+                    pillFill: '#CA2C2A', pillText: '#FFFFFF', pillBorder: 3, pillShadow: 4, pillRad: 6, pillFont: '700 23px "Space Grotesk", sans-serif',
+                    uiFont: '"Plus Jakarta Sans", sans-serif', dotCol: '#CA2C2A',
+                    chipFill: '#FFFFFF', chipText: '#16488E', chipBorder: 3, chipBorderCol: '#000000', chipShadow: 4, chipRad: 10,
+                    waveCol: 'rgba(255,255,255,0.16)', barFill: '#0B1F40', barText: '#FFFFFF', barIcon: '#FCD34D', barBorder: '#000000',
+                    mega: { hi: '#FF6B6B', mid: '#CA2C2A', dark: '#991B1B', deep: '#3B0909', edge: '#000000', ew: 2.4, wave: '#FCD34D' }
+                },
+                'glass': {
+                    bgMode: 'grad', stops: [[0, '#0D356F'], [0.48, '#1B5AA6'], [1, '#2E80D1']],
+                    topFill: 'rgba(255,255,255,0.88)', topText: '#12305A', topSub: '#DC2626', topBorder: 1.5, topBorderCol: 'rgba(255,255,255,0.95)', topShadow: 0, topRad: 999,
+                    backFill: 'rgba(226,240,255,0.45)', backBorder: 1.5, backBorderCol: 'rgba(255,255,255,0.70)', backShadow: 0,
+                    cardFill: 'rgba(255,255,255,0.88)', cardText: '#0F294A', cardBorder: 2, cardBorderCol: 'rgba(255,255,255,0.96)', cardShadow: 0, cardRad: 26, softCol: 'rgba(8,25,58,0.36)',
+                    followFill: '#2563EB', followText: '#FFFFFF', followBorder: 0, followRad: 999,
+                    mediaBg: 'glassMedia', mediaBorder: 1.5, mediaBorderCol: 'rgba(255,255,255,0.65)', mediaRad: 18,
+                    rayCol: 'rgba(255,255,255,0.14)', coreFill: 'rgba(15,41,74,0.42)', coreStroke: 'rgba(255,255,255,0.55)', coreSW: 2.5,
+                    heroFont: '900 {FS}px "Outfit", "Plus Jakarta Sans", sans-serif', heroCol: 'glassWhiteGrad', heroStroke: null, heroSW: 0, heroShd: 0, heroGlow: 'rgba(15,23,42,0.38)',
+                    pillFill: '#DC2626', pillText: '#FFFFFF', pillBorder: 1.5, pillShadow: 0, pillRad: 999, pillFont: '800 23px "Outfit", sans-serif',
+                    uiFont: '"Outfit", "Plus Jakarta Sans", sans-serif', dotCol: '#DC2626',
+                    chipFill: 'rgba(255,255,255,0.82)', chipText: '#1E40AF', chipBorder: 1.5, chipBorderCol: 'rgba(255,255,255,0.92)', chipShadow: 0, chipRad: 14,
+                    waveCol: 'rgba(255,255,255,0.18)', barFill: 'rgba(15,41,74,0.88)', barText: '#FFFFFF', barIcon: '#93C5FD', barBorder: 'rgba(255,255,255,0.35)',
+                    mega: { hi: '#FF8585', mid: '#EF4444', dark: '#B91C1C', deep: '#450A0A', edge: 'rgba(255,255,255,0.88)', ew: 1.4, wave: '#FDE047' }
+                },
+                'dark-code': {
+                    bgMode: 'dots', bg: '#0B192E', dot: 'rgba(56,189,248,0.24)',
+                    topFill: '#122645', topText: '#FFFFFF', topSub: '#38BDF8', topBorder: 2.5, topBorderCol: '#38BDF8', topShadow: 5, topRad: 14,
+                    backFill: '#0E1F3A', backBorder: 3, backBorderCol: 'rgba(56,189,248,0.55)', backShadow: 8,
+                    cardFill: '#122645', cardText: '#F8FAFC', cardBorder: 3.5, cardBorderCol: '#38BDF8', cardShadow: 12, cardRad: 18, softCol: null,
+                    followFill: '#38BDF8', followText: '#0B192E', followBorder: 0, followRad: 8,
+                    mediaBg: '#081529', mediaBorder: 2.5, mediaBorderCol: 'rgba(56,189,248,0.6)', mediaRad: 12,
+                    rayCol: 'rgba(56,189,248,0.09)', coreFill: '#0F2342', coreStroke: '#38BDF8', coreSW: 3,
+                    heroFont: '400 {FS}px "Archivo Black", sans-serif', heroCol: '#FCD34D', heroStroke: null, heroSW: 0, heroShd: 0, heroGlow: 'rgba(252,211,77,0.28)',
+                    pillFill: '#1A365D', pillText: '#38BDF8', pillBorder: 2, pillShadow: 4, pillRad: 8, pillFont: '700 22px "JetBrains Mono", monospace',
+                    uiFont: '"Plus Jakarta Sans", sans-serif', dotCol: '#38BDF8',
+                    chipFill: '#122645', chipText: '#FCD34D', chipBorder: 2, chipBorderCol: '#38BDF8', chipShadow: 4, chipRad: 10,
+                    waveCol: 'rgba(56,189,248,0.12)', barFill: '#071120', barText: '#F8FAFC', barIcon: '#38BDF8', barBorder: '#38BDF8',
+                    mega: { hi: '#7DD3FC', mid: '#0EA5E9', dark: '#0369A1', deep: '#061326', edge: '#38BDF8', ew: 2, wave: '#38BDF8' }
+                },
+                'modern': {
+                    bgMode: 'radial', stops: [[0, '#2E7BD1'], [0.46, '#16488E'], [1, '#0D2D5E']],
+                    topFill: 'rgba(255,255,255,0.96)', topText: '#12305A', topSub: '#2A82C6', topBorder: 0, topBorderCol: 'transparent', topShadow: 0, topRad: 999,
+                    backFill: '#E2EEFF', backBorder: 0, backBorderCol: 'transparent', backShadow: 0,
+                    cardFill: '#FFFFFF', cardText: '#12305A', cardBorder: 0, cardBorderCol: 'transparent', cardShadow: 0, cardRad: 24, softCol: 'rgba(6,20,44,0.44)',
+                    followFill: '#16488E', followText: '#FFFFFF', followBorder: 0, followRad: 999,
+                    mediaBg: 'modernMedia', mediaBorder: 0, mediaBorderCol: 'transparent', mediaRad: 16,
+                    rayCol: 'rgba(255,255,255,0.11)', coreFill: '#103266', coreStroke: 'rgba(253,211,77,0.65)', coreSW: 3,
+                    heroFont: '400 {FS}px "Archivo Black", sans-serif', heroCol: '#FFFFFF', heroStroke: '#FDD34D', heroSW: 0, heroShd: 6, heroShdCol: '#FDD34D',
+                    pillFill: '#CA2C2A', pillText: '#FFFFFF', pillBorder: 0, pillShadow: 0, pillRad: 999, pillFont: '700 23px "Space Grotesk", sans-serif',
+                    uiFont: '"Plus Jakarta Sans", sans-serif', dotCol: '#16488E',
+                    chipFill: 'rgba(255,255,255,0.96)', chipText: '#12305A', chipBorder: 0, chipBorderCol: 'transparent', chipShadow: 0, chipRad: 14,
+                    waveCol: 'rgba(255,255,255,0.14)', barFill: '#0A2044', barText: '#FFFFFF', barIcon: '#FDD34D', barBorder: 'transparent',
+                    mega: { hi: '#60A5FA', mid: '#2563EB', dark: '#1E3A8A', deep: '#091834', edge: 'rgba(255,255,255,0.72)', ew: 1.2, wave: '#FDD34D' }
+                }
+            };
+            const L = L4_THEMES[currentStyle] || L4_THEMES['neubrutalism'];
+
+            // 1. Background + Atmospheric Tech Halo & Wave
+            if (L.bgMode === 'radial') {
+                const rad = ctx.createRadialGradient(W * 0.80, H * 0.18, 0, W * 0.80, H * 0.18, Math.max(W, H) * 0.95);
+                L.stops.forEach(([p, c]) => rad.addColorStop(p, c));
+                ctx.fillStyle = rad; ctx.fillRect(0, 0, W, H);
+            } else if (L.bgMode === 'grad') {
+                const g = ctx.createLinearGradient(0, 0, W * 0.55, H);
+                L.stops.forEach(([p, c]) => g.addColorStop(p, c));
+                ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+            } else {
+                ctx.fillStyle = L.bg; ctx.fillRect(0, 0, W, H);
+                ctx.fillStyle = L.dot;
+                for (let y = 12; y < H; y += 24) for (let x = 12; x < W; x += 24) {
+                    ctx.beginPath(); ctx.arc(x, y, 2, 0, Math.PI * 2); ctx.fill();
+                }
+            }
+
+            // Halo + Sparkles + Layered Waves
+            ctx.save(); ctx.scale(W / 1080, H / 1350);
+            ctx.fillStyle = 'rgba(96, 165, 250, 0.12)';
+            ctx.beginPath(); ctx.arc(540, 630, 370, 0, Math.PI * 2); ctx.fill();
+
+            ctx.fillStyle = L.waveCol;
+            ctx.beginPath(); ctx.moveTo(0, 1175); ctx.quadraticCurveTo(140, 1105, 290, 1165); ctx.quadraticCurveTo(450, 1225, 610, 1160); ctx.quadraticCurveTo(765, 1100, 920, 1150); ctx.quadraticCurveTo(1010, 1135, 1080, 1165); ctx.lineTo(1080, 1350); ctx.lineTo(0, 1350); ctx.closePath(); ctx.fill();
+            ctx.beginPath(); ctx.moveTo(0, 1225); ctx.quadraticCurveTo(180, 1165, 380, 1215); ctx.quadraticCurveTo(580, 1265, 780, 1210); ctx.quadraticCurveTo(930, 1180, 1080, 1195); ctx.lineTo(1080, 1350); ctx.lineTo(0, 1350); ctx.closePath(); ctx.fill();
+
+            const drawSpark = (cx, cy, s, col, al) => {
+                ctx.save(); ctx.globalAlpha = al; ctx.fillStyle = col;
+                ctx.beginPath(); ctx.moveTo(cx, cy - s); ctx.quadraticCurveTo(cx + s * 0.1, cy - s * 0.1, cx + s, cy);
+                ctx.quadraticCurveTo(cx + s * 0.1, cy + s * 0.1, cx, cy + s); ctx.quadraticCurveTo(cx - s * 0.1, cy + s * 0.1, cx - s, cy);
+                ctx.quadraticCurveTo(cx - s * 0.1, cy - s * 0.1, cx, cy - s); ctx.closePath(); ctx.fill(); ctx.restore();
+            };
+            drawSpark(128, 352, 20, '#FCD34D', 0.82);
+            drawSpark(952, 482, 20, '#FFFFFF', 0.72);
+            drawSpark(940, 1035, 15, '#FCD34D', 0.78);
+            ctx.restore();
+
+            function drawL4Box(x, y, w, h, opts) {
+                if (opts.shadow > 0) {
+                    ctx.fillStyle = '#000000';
+                    rrPath(x + opts.shadow, y + opts.shadow, w, h, opts.radius); ctx.fill();
+                }
+                ctx.save();
+                if (opts.soft) { ctx.shadowColor = opts.soft; ctx.shadowBlur = opts.blur || 32; ctx.shadowOffsetY = opts.sy || 16; }
+                ctx.fillStyle = opts.fill;
+                rrPath(x, y, w, h, opts.radius); ctx.fill();
+                ctx.restore();
+                if (opts.border > 0) {
+                    ctx.lineWidth = opts.border; ctx.strokeStyle = opts.borderCol;
+                    rrPath(x, y, w, h, opts.radius); ctx.stroke();
+                }
+            }
+
+            // Floating Tech Chips + Mini Rocket
+            if (showAccents) {
+                const chips = [
+                    ['>_ 2026', 0.06 * W + 56, 0.155 * H + 20, -8],
+                    ['</> IF',  0.935 * W - 52, 0.18 * H + 20, 6],
+                    ['{ HIMA }', 0.04 * W + 62, 0.50 * H + 20, -10]
+                ];
+                chips.forEach(([txt, cx, cy, rot]) => {
+                    ctx.save(); ctx.translate(cx, cy); ctx.rotate((rot * Math.PI) / 180);
+                    ctx.font = '800 18px "JetBrains Mono", monospace';
+                    const cw = ctx.measureText(txt).width + 28;
+                    const ch = 40;
+                    drawL4Box(-cw / 2, -ch / 2, cw, ch, { fill: L.chipFill, border: L.chipBorder, borderCol: L.chipBorderCol, shadow: L.chipShadow, radius: L.chipRad, soft: L.softCol, blur: 22, sy: 10 });
+                    drawTextTrack(txt, 0, 1, '800 18px "JetBrains Mono", monospace', L.chipText, 0, 'center');
+                    ctx.restore();
+                });
+            }
+
+            // Mini Rocket Bottom-Left
+            ctx.save();
+            ctx.translate(116, H - 132);
+            ctx.rotate((-12 * Math.PI) / 180);
+            ctx.translate(-55, -55);
+            ctx.shadowColor = 'rgba(8,22,44,0.34)'; ctx.shadowBlur = 18; ctx.shadowOffsetY = 10;
+            ctx.fillStyle = '#FCD34D'; ctx.beginPath(); ctx.moveTo(34,74); ctx.lineTo(14,96); ctx.lineTo(28,84); ctx.lineTo(20,102); ctx.lineTo(44,82); ctx.closePath(); ctx.fill();
+            ctx.shadowColor = 'transparent';
+            ctx.fillStyle = '#EF4444'; ctx.beginPath(); ctx.moveTo(35,76); ctx.lineTo(22,92); ctx.lineTo(40,80); ctx.closePath(); ctx.fill();
+            ctx.fillStyle = '#CA2C2A'; ctx.strokeStyle = '#0F264A'; ctx.lineWidth = 2;
+            ctx.beginPath(); ctx.moveTo(40,60); ctx.lineTo(20,66); ctx.lineTo(34,76); ctx.closePath(); ctx.fill(); ctx.stroke();
+            ctx.beginPath(); ctx.moveTo(52,72); ctx.lineTo(46,92); ctx.lineTo(36,78); ctx.closePath(); ctx.fill(); ctx.stroke();
+            ctx.fillStyle = '#FFFFFF'; ctx.lineWidth = 2.5;
+            ctx.beginPath(); ctx.moveTo(84,22); ctx.bezierCurveTo(66,24,44,40,34,68); ctx.lineTo(44,78); ctx.bezierCurveTo(72,68,88,46,90,28); ctx.closePath(); ctx.fill(); ctx.stroke();
+            ctx.fillStyle = '#2563EB';
+            ctx.beginPath(); ctx.moveTo(84,22); ctx.bezierCurveTo(76,23,68,27,61,33); ctx.lineTo(79,51); ctx.bezierCurveTo(85,44,89,36,90,28); ctx.closePath(); ctx.fill();
+            ctx.fillStyle = '#38BDF8'; ctx.beginPath(); ctx.arc(58, 52, 8, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+            ctx.restore();
+
+            // 2. Top Dual-Logo Header Pill
+            const is11 = currentRatio === '1-1';
+            const is916 = currentRatio === '9-16';
+            const topY = is916 ? 66 : (is11 ? 24 : 38);
+            const logoS = is916 ? 52 : (is11 ? 34 : 44);
+            const pillPy = is916 ? 12 : (is11 ? 7 : 10);
+            const pillPx = is916 ? 28 : (is11 ? 18 : 24);
+            const pillH = logoS + pillPy * 2;
+            ctx.font = '700 20px "Space Grotesk", sans-serif';
+            const titleW = Math.max(ctx.measureText('HIMA INFORMATIKA').width + 18, 220);
+            const topW = pillPx * 2 + logoS * 2 + 28 + titleW;
+            drawL4Box((W - topW) / 2, topY, topW, pillH, {
+                fill: L.topFill, border: L.topBorder, borderCol: L.topBorderCol, shadow: L.topShadow, radius: L.topRad, soft: L.softCol, blur: 28, sy: 12
+            });
+            const drawOrgImg = (ix, iy, s, img) => {
+                if (!img) return;
+                const sc = Math.min(s / img.width, s / img.height);
+                ctx.drawImage(img, ix + (s - img.width * sc) / 2, iy + (s - img.height * sc) / 2, img.width * sc, img.height * sc);
+            };
+            drawOrgImg((W - topW) / 2 + pillPx, topY + pillPy, logoS, himaImg);
+            drawOrgImg((W + topW) / 2 - pillPx - logoS, topY + pillPy, logoS, lpkiaImg);
+            drawTextTrack('HIMA INFORMATIKA', W / 2, topY + pillH / 2 - 9, '700 20px "Space Grotesk", sans-serif', L.topText, 0.8, 'center');
+            drawTextTrack('IDE LPKIA BANDUNG', W / 2, topY + pillH / 2 + 11, '800 12px "Plus Jakarta Sans", sans-serif', L.topSub, 2.4, 'center');
+
+            // 3. Bottom Social Bar
+            const barH = is916 ? 62 : (is11 ? 48 : 54);
+            const barY = H - barH;
+            ctx.fillStyle = L.barFill; ctx.fillRect(0, barY, W, barH);
+            if (L.barBorder !== 'transparent') {
+                ctx.fillStyle = L.barBorder; ctx.fillRect(0, barY, W, 3);
+            }
+            const E = getEffectiveContent();
+            const barMidY = barY + barH / 2;
+            const barPad = is916 ? 42 : (is11 ? 28 : 36);
+            ctx.strokeStyle = L.barIcon; ctx.lineWidth = 2.4;
+            rrPath(barPad, barMidY - 12, 24, 24, 6); ctx.stroke();
+            ctx.beginPath(); ctx.arc(barPad + 12, barMidY, 5.2, 0, Math.PI * 2); ctx.stroke();
+            ctx.fillStyle = L.barIcon; ctx.beginPath(); ctx.arc(barPad + 18, barMidY - 6, 1.4, 0, Math.PI * 2); ctx.fill();
+            drawTextTrack(E.igHandle, barPad + 34, barMidY + 1, '700 19px "Space Grotesk", sans-serif', L.barText, 0.3, 'left');
+
+            ctx.font = '700 18px "Space Grotesk", sans-serif';
+            const ctaW = ctx.measureText(E.cta).width + 12;
+            const gX = W - barPad - ctaW - 22;
+            ctx.strokeStyle = L.barIcon; ctx.lineWidth = 2.4;
+            ctx.beginPath(); ctx.arc(gX, barMidY, 10, 0, Math.PI * 2); ctx.stroke();
+            ctx.beginPath(); ctx.moveTo(gX - 10, barMidY); ctx.lineTo(gX + 10, barMidY); ctx.stroke();
+            ctx.beginPath(); ctx.ellipse(gX, barMidY, 4.5, 10, 0, 0, Math.PI * 2); ctx.stroke();
+            drawTextTrack(E.cta, gX + 20, barMidY + 1, '700 18px "Space Grotesk", sans-serif', L.barText, 0.5, 'left');
+
+            // 4. Tilted 2-Layer Instagram Post Stack
+            const stDim = is916 ? { w: 740, h: 790, hdrH: 76, mx: 20, ftrH: 150, mega: 230, rOff: -56, bOff: 104 }
+                : (is11 ? { w: 560, h: 556, hdrH: 58, mx: 16, ftrH: 124, mega: 168, rOff: -42, bOff: 62 }
+                : { w: 670, h: 690, hdrH: 72, mx: 20, ftrH: 144, mega: 210, rOff: -52, bOff: 84 });
+
+            const stackCX = W / 2;
+            const areaTop = topY + pillH;
+            const areaBot = barY;
+            const stackCY = areaTop + (areaBot - areaTop) / 2;
+
+            // Back Layer Card
+            ctx.save();
+            ctx.translate(stackCX + 16, stackCY - 6);
+            ctx.rotate((4.2 * Math.PI) / 180);
+            drawL4Box(-stDim.w / 2, -stDim.h / 2, stDim.w, stDim.h, {
+                fill: L.backFill, border: L.backBorder, borderCol: L.backBorderCol, shadow: L.backShadow, radius: L.cardRad, soft: L.softCol, blur: 36, sy: 18
+            });
+            ctx.restore();
+
+            // Front Main IG Card
+            ctx.save();
+            ctx.translate(stackCX, stackCY);
+            ctx.rotate((-2.2 * Math.PI) / 180);
+            const cx0 = -stDim.w / 2;
+            const cy0 = -stDim.h / 2;
+            drawL4Box(cx0, cy0, stDim.w, stDim.h, {
+                fill: L.cardFill, border: L.cardBorder, borderCol: L.cardBorderCol, shadow: L.cardShadow, radius: L.cardRad, soft: L.softCol, blur: 48, sy: 22
+            });
+
+            // Card Header
+            const avS = is11 ? 34 : 40;
+            const avX = cx0 + 20;
+            const avY = cy0 + (stDim.hdrH - avS) / 2;
+            ctx.fillStyle = '#FFFFFF';
+            ctx.beginPath(); ctx.arc(avX + avS / 2, avY + avS / 2, avS / 2, 0, Math.PI * 2); ctx.fill();
+            ctx.strokeStyle = '#CBD5E1'; ctx.lineWidth = 1.5; ctx.stroke();
+            if (himaImg) {
+                const pad = 4;
+                const sc = Math.min((avS - pad * 2) / himaImg.width, (avS - pad * 2) / himaImg.height);
+                ctx.drawImage(himaImg, avX + (avS - himaImg.width * sc) / 2, avY + (avS - himaImg.height * sc) / 2, himaImg.width * sc, himaImg.height * sc);
+            }
+            const igX = avX + avS + 12;
+            const hdrMidY = cy0 + stDim.hdrH / 2;
+            drawTextTrack(E.igHandle, igX, hdrMidY + 1, '700 21px "Space Grotesk", sans-serif', L.cardText, 0, 'left');
+            ctx.font = '700 21px "Space Grotesk", sans-serif';
+            const vX = igX + ctx.measureText(E.igHandle).width + 14;
+            ctx.fillStyle = '#1D9BF0'; ctx.beginPath(); ctx.arc(vX, hdrMidY, 9, 0, Math.PI * 2); ctx.fill();
+            ctx.strokeStyle = '#FFFFFF'; ctx.lineWidth = 2.2; ctx.lineCap = 'round';
+            ctx.beginPath(); ctx.moveTo(vX - 4, hdrMidY); ctx.lineTo(vX - 1, hdrMidY + 3); ctx.lineTo(vX + 4.5, hdrMidY - 3); ctx.stroke();
+
+            // Follow pill
+            const fw = 86; const fh = 32;
+            drawL4Box(cx0 + stDim.w - 64 - fw, hdrMidY - fh / 2, fw, fh, {
+                fill: L.followFill, border: L.followBorder, borderCol: '#000000', shadow: 0, radius: L.followRad
+            });
+            drawTextTrack('Follow', cx0 + stDim.w - 64 - fw / 2, hdrMidY + 1, '800 15px "Plus Jakarta Sans", sans-serif', L.followText, 0.3, 'center');
+            drawTextTrack('•••', cx0 + stDim.w - 24, hdrMidY + 1, '800 18px sans-serif', L.cardText, 1, 'right');
+
+            // Media Sunburst Frame
+            const mX = cx0 + stDim.mx;
+            const mY = cy0 + stDim.hdrH;
+            const mW = stDim.w - stDim.mx * 2;
+            const mH = stDim.h - stDim.hdrH - stDim.ftrH;
+
+            ctx.save();
+            rrPath(mX, mY, mW, mH, L.mediaRad);
+            if (L.mediaBg === 'glassMedia') {
+                const mg = ctx.createLinearGradient(mX, mY, mX + mW, mY + mH);
+                mg.addColorStop(0, '#1E40AF'); mg.addColorStop(0.55, '#2563EB'); mg.addColorStop(1, '#3B82F6');
+                ctx.fillStyle = mg;
+            } else if (L.mediaBg === 'modernMedia') {
+                const mg = ctx.createLinearGradient(mX, mY, mX + mW * 0.4, mY + mH);
+                mg.addColorStop(0, '#16488E'); mg.addColorStop(1, '#2468BD');
+                ctx.fillStyle = mg;
+            } else {
+                ctx.fillStyle = L.mediaBg;
+            }
+            ctx.fill();
+            ctx.clip();
+
+            const mcX = mX + mW / 2;
+            const mcY = mY + mH / 2;
+            const rayR = Math.max(mW, mH);
+            ctx.fillStyle = L.rayCol;
+            for (let i = 0; i < 16; i++) {
+                ctx.save();
+                ctx.translate(mcX, mcY);
+                ctx.rotate((i * 22.5 * Math.PI) / 180);
+                ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(-rayR * 0.11, -rayR); ctx.lineTo(rayR * 0.11, -rayR); ctx.closePath(); ctx.fill();
+                ctx.restore();
+            }
+            ctx.fillStyle = L.coreFill;
+            ctx.beginPath(); ctx.arc(mcX, mcY, Math.min(mW, mH) * 0.30, 0, Math.PI * 2); ctx.fill();
+            if (L.coreSW > 0) {
+                ctx.lineWidth = L.coreSW; ctx.strokeStyle = L.coreStroke; ctx.stroke();
+            }
+
+            // Center Hero + Pill
+            const heroStr = E.isCS ? 'COMING SOON' : E.hero;
+            const l4Scale = is916 ? 1.1 : (is11 ? 0.78 : 1);
+            const hFs = Math.round((heroStr.length >= 10 ? 60 : (heroStr.length >= 7 ? 90 : (heroStr.length >= 5 ? 128 : 162))) * l4Scale);
+            const heroFontSpec = L.heroFont.replace('{FS}', hFs);
+            const hY = mcY - 20 * l4Scale;
+
+            ctx.save();
+            ctx.font = heroFontSpec; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.lineJoin = 'round'; ctx.lineCap = 'round';
+            if (L.heroShd > 0) {
+                if (L.heroSW > 0) { ctx.lineWidth = L.heroSW; ctx.strokeStyle = L.heroShdCol || '#000000'; ctx.strokeText(heroStr, mcX + L.heroShd, hY + L.heroShd); }
+                ctx.fillStyle = L.heroShdCol || '#000000'; ctx.fillText(heroStr, mcX + L.heroShd, hY + L.heroShd);
+            } else if (L.heroGlow) {
+                ctx.shadowColor = L.heroGlow; ctx.shadowBlur = 18; ctx.shadowOffsetY = 8;
+            }
+            if (L.heroSW > 0 && L.heroStroke) { ctx.lineWidth = L.heroSW; ctx.strokeStyle = L.heroStroke; ctx.strokeText(heroStr, mcX, hY); }
+            if (L.heroCol === 'glassWhiteGrad') {
+                const hg = ctx.createLinearGradient(0, hY - hFs * 0.45, 0, hY + hFs * 0.45);
+                hg.addColorStop(0, '#FFFFFF'); hg.addColorStop(1, '#DBEAFE');
+                ctx.fillStyle = hg;
+            } else { ctx.fillStyle = L.heroCol; }
+            ctx.fillText(heroStr, mcX, hY);
+            ctx.restore();
+
+            // Sub Pill
+            const pillTxt = E.isCS ? `${E.title} • STAY TUNED` : `${E.mn || 'MENUJU'} ${E.title}`;
+            ctx.font = L.pillFont;
+            const subW = ctx.measureText(pillTxt).width + Math.max(0, pillTxt.length - 1) * 2.2 + 48;
+            const subH = 44 * (is11 ? 0.88 : 1);
+            const subY = hY + hFs * 0.48 + 4;
+            ctx.save(); ctx.translate(mcX, subY); ctx.rotate((-1 * Math.PI) / 180);
+            drawL4Box(-subW / 2, -subH / 2, subW, subH, {
+                fill: L.pillFill, border: L.pillBorder, borderCol: '#000000', shadow: L.pillShadow, radius: L.pillRad, soft: L.softCol, blur: 20, sy: 8
+            });
+            drawTextTrack(pillTxt, 0, 1, L.pillFont, L.pillText, 2.0, 'center');
+            ctx.restore();
+            ctx.restore();
+
+            if (L.mediaBorder > 0) {
+                ctx.lineWidth = L.mediaBorder; ctx.strokeStyle = L.mediaBorderCol;
+                rrPath(mX, mY, mW, mH, L.mediaRad); ctx.stroke();
+            }
+
+            // Card Footer Actions + Likes + Caption
+            const fY = cy0 + stDim.h - stDim.ftrH;
+            const actY = fY + 26;
+            const actX = cx0 + 24;
+            ctx.fillStyle = '#EF4444';
+            ctx.beginPath(); ctx.moveTo(actX + 12, actY + 10); ctx.bezierCurveTo(actX - 4, actY, actX - 2, actY - 12, actX + 6, actY - 12); ctx.bezierCurveTo(actX + 10, actY - 12, actX + 12, actY - 8, actX + 12, actY - 6); ctx.bezierCurveTo(actX + 12, actY - 8, actX + 14, actY - 12, actX + 18, actY - 12); ctx.bezierCurveTo(actX + 26, actY - 12, actX + 28, actY, actX + 12, actY + 10); ctx.fill();
+            ctx.strokeStyle = L.cardText; ctx.lineWidth = 2;
+            ctx.beginPath(); ctx.arc(actX + 52, actY - 1, 10, 0, Math.PI * 2); ctx.stroke();
+            ctx.beginPath(); ctx.moveTo(actX + 80, actY - 9); ctx.lineTo(actX + 100, actY - 2); ctx.lineTo(actX + 86, actY + 9); ctx.closePath(); ctx.stroke();
+
+            for (let d = 0; d < 4; d++) {
+                ctx.save();
+                ctx.fillStyle = d === 0 ? L.dotCol : L.cardText;
+                ctx.globalAlpha = d === 0 ? 1 : 0.25;
+                ctx.beginPath(); ctx.arc(cx0 + stDim.w / 2 + d * 14, actY, d === 0 ? 5 : 4, 0, Math.PI * 2); ctx.fill();
+                ctx.restore();
+            }
+
+            drawTextTrack('1,024 likes', cx0 + 24, fY + 56, `800 16px ${L.uiFont}`, L.cardText, 0, 'left');
+            const capLead = E.igHandle + '  ';
+            ctx.font = `800 16px ${L.uiFont}`;
+            const leadW = ctx.measureText(capLead).width;
+            drawTextTrack(capLead, cx0 + 24, fY + 84, `800 16px ${L.uiFont}`, L.cardText, 0, 'left');
+            const bodyTxt = E.isCS
+                ? `Coming Soon — ${toTitleCase(E.title)} HIMA Informatika IDE LPKIA! Stay tuned!`
+                : `${toTitleCase(E.title)} HIMA IF • ${toTitleCase(E.date)} (${E.time})`;
+            drawTextTrack(bodyTxt, cx0 + 24 + leadW, fY + 84, `600 15.5px ${L.uiFont}`, L.cardText, 0, 'left');
+            if (!E.isCS) {
+                drawTextTrack(`📍 ${toTitleCase(E.loc)}`, cx0 + 24, fY + 109, `700 15.5px ${L.uiFont}`, L.cardText, 0, 'left');
+            }
+
+            // Corner Overlay Props: Bell + 3D Megaphone
+            ctx.save();
+            const pX = cx0 + stDim.w - stDim.rOff - stDim.mega * 0.45;
+            const pY = cy0 + stDim.h - stDim.bOff - stDim.mega * 0.45;
+            ctx.translate(pX, pY);
+            ctx.rotate((-10 * Math.PI) / 180);
+            ctx.scale(stDim.mega / 220, stDim.mega / 220);
+            ctx.translate(-110, -110);
+
+            const MP = L.mega;
+            ctx.save(); ctx.strokeStyle = MP.wave; ctx.lineCap = 'round';
+            [[174, 88, 190, 108, 174, 128, 4.5, 0.9], [189, 74, 212, 108, 189, 142, 4, 0.65]].forEach(([x0, y0, cx, cy, x1, y1, lw, al]) => {
+                ctx.globalAlpha = al; ctx.lineWidth = lw; ctx.beginPath(); ctx.moveTo(x0, y0); ctx.quadraticCurveTo(cx, cy, x1, y1); ctx.stroke();
+            });
+            ctx.restore();
+
+            ctx.shadowColor = 'rgba(7,20,44,0.38)'; ctx.shadowBlur = 20; ctx.shadowOffsetY = 14;
+            // Notification Bell clearly visible beside upper-right rim
+            ctx.save(); ctx.translate(184, 20); ctx.rotate((18 * Math.PI) / 180); ctx.translate(-32, -32);
+            const bG = ctx.createLinearGradient(10, 10, 54, 54);
+            bG.addColorStop(0, '#FEF08A'); bG.addColorStop(0.55, '#F59E0B'); bG.addColorStop(1, '#B45309');
+            ctx.fillStyle = '#B45309'; ctx.beginPath(); ctx.arc(32, 54, 7, 0, Math.PI * 2); ctx.fill();
+            ctx.fillStyle = bG; ctx.strokeStyle = '#78350F'; ctx.lineWidth = 2;
+            ctx.beginPath(); ctx.moveTo(16, 42); ctx.quadraticCurveTo(16, 14, 32, 14); ctx.quadraticCurveTo(48, 14, 48, 42); ctx.lineTo(54, 50); ctx.lineTo(10, 50); ctx.closePath(); ctx.fill(); ctx.stroke();
+            ctx.fillStyle = '#F59E0B'; ctx.beginPath(); ctx.arc(32, 11, 4, 0, Math.PI * 2); ctx.fill();
+            ctx.restore();
+
+            // Megaphone Body
+            const mG = ctx.createLinearGradient(16, 78, 151, 184);
+            mG.addColorStop(0, MP.hi); mG.addColorStop(0.52, MP.mid); mG.addColorStop(1, MP.dark);
+            ctx.fillStyle = mG; ctx.strokeStyle = MP.edge; ctx.lineWidth = MP.ew;
+            ctx.beginPath(); ctx.moveTo(52, 126); ctx.lineTo(74, 128); ctx.lineTo(66, 176); ctx.quadraticCurveTo(64, 185, 52, 184); ctx.lineTo(44, 182); ctx.quadraticCurveTo(37, 180, 40, 170); ctx.closePath(); ctx.fill(); if (MP.ew > 0) ctx.stroke();
+            ctx.shadowColor = 'transparent';
+            rrPath(16, 88, 22, 40, 10); ctx.fill(); if (MP.ew > 0) ctx.stroke();
+            ctx.beginPath(); ctx.moveTo(32, 82); ctx.lineTo(64, 78); ctx.lineTo(64, 138); ctx.lineTo(32, 134); ctx.quadraticCurveTo(24, 132, 24, 108); ctx.quadraticCurveTo(24, 84, 32, 82); ctx.closePath(); ctx.fill(); if (MP.ew > 0) ctx.stroke();
+
+            const hG = ctx.createLinearGradient(70, 40, 95, 175);
+            hG.addColorStop(0, '#FFFFFF'); hG.addColorStop(0.65, '#F1F5F9'); hG.addColorStop(1, '#94A3B8');
+            ctx.fillStyle = hG;
+            ctx.beginPath(); ctx.moveTo(58, 79); ctx.bezierCurveTo(96, 76, 124, 54, 148, 34); ctx.lineTo(152, 182); ctx.bezierCurveTo(124, 162, 96, 140, 58, 137); ctx.closePath(); ctx.fill(); if (MP.ew > 0) ctx.stroke();
+            ctx.strokeStyle = 'rgba(255,255,255,0.9)'; ctx.lineWidth = 6; ctx.lineCap = 'round';
+            ctx.beginPath(); ctx.moveTo(68, 85); ctx.bezierCurveTo(98, 81, 122, 64, 140, 48); ctx.stroke();
+
+            ctx.fillStyle = mG; ctx.strokeStyle = MP.edge; ctx.lineWidth = MP.ew;
+            ctx.beginPath(); ctx.ellipse(151, 108, 23, 74, 0, 0, Math.PI * 2); ctx.fill(); if (MP.ew > 0) ctx.stroke();
+            ctx.fillStyle = MP.deep; ctx.beginPath(); ctx.ellipse(153, 108, 15, 59, 0, 0, Math.PI * 2); ctx.fill();
+            ctx.fillStyle = mG; ctx.beginPath(); ctx.ellipse(144, 108, 7, 18, 0, 0, Math.PI * 2); ctx.fill();
+            ctx.restore();
+            ctx.restore();
+
+            return canvas;
+        }
+
         async function downloadPng() {
             const btn = document.getElementById('btnDownload');
             btn.disabled = true;
@@ -4021,7 +4874,7 @@
                 const heroSlug = E.isCS
                     ? 'coming-soon'
                     : E.hero.toLowerCase().replace(/\s+/g, '-');
-                const layoutTag = currentLayout === 2 ? 'layout2-' : (currentLayout === 3 ? 'layout3-' : '');
+                const layoutTag = currentLayout === 2 ? 'layout2-' : (currentLayout === 3 ? 'layout3-' : (currentLayout === 4 ? 'layout4-' : ''));
                 link.download = `poster-${heroSlug}-${layoutTag}${currentStyle}-${currentRatio}.png`;
                 link.href = rendered.toDataURL('image/png');
                 link.click();
@@ -4040,6 +4893,9 @@
             document.getElementById('l2LpkiaLogo').src = lpkiaSrc;
             document.getElementById('l3HimaLogo').src = himaSrc;
             document.getElementById('l3LpkiaLogo').src = lpkiaSrc;
+            document.getElementById('l4HimaLogo').src = himaSrc;
+            document.getElementById('l4LpkiaLogo').src = lpkiaSrc;
+            document.getElementById('l4CardAvatar').src = himaSrc;
             renderL2CursorSvg();
             syncAllDom();
             applyScale();
