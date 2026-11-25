@@ -7,7 +7,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=JetBrains+Mono:wght@700;800&family=Outfit:wght@700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Silkscreen:wght@700&family=Space+Grotesk:wght@700&family=Yellowtail&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bricolage+Grotesque:wght@800&family=Chakra+Petch:ital,wght@1,700&family=JetBrains+Mono:wght@700;800&family=Outfit:wght@700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Silkscreen:wght@700&family=Space+Grotesk:wght@700&family=Syne:wght@800&family=Unbounded:wght@900&family=Yellowtail&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
@@ -1743,35 +1743,96 @@
             justify-content: center;
             margin-bottom: 8px;
         }
-        .l1-lr-hand-wrap {
+        .l1-lr-washi-tag {
             position: absolute;
-            left: 26px;
-            bottom: 12px;
-            width: 128px;
-            height: 112px;
-            z-index: 22;
+            top: -12px;
+            right: 26px;
+            width: 78px;
+            height: 22px;
+            transform: rotate(16deg);
+            background: rgba(250, 204, 21, 0.72);
+            border: 1.5px dashed rgba(15, 23, 42, 0.28);
+            z-index: 4;
+            pointer-events: none;
         }
-        .ratio-1-1 .l1-lr-hand-wrap { left: 22px; bottom: 8px; width: 98px; height: 86px; }
-        .l1-lr-mega-wrap {
+        .layout-1.style-glass .l1-lr-washi-tag     { background: rgba(147, 197, 253, 0.78); border-color: rgba(255,255,255,0.85); }
+        .layout-1.style-dark-code .l1-lr-washi-tag { background: rgba(56, 189, 248, 0.45); border-color: rgba(56, 189, 248, 0.85); }
+        .layout-1.style-modern .l1-lr-washi-tag    { background: rgba(253, 211, 77, 0.78); border-color: rgba(18, 48, 90, 0.35); }
+
+        .l1-lr-winpill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 4px 12px;
+            border-radius: 999px;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 800;
+            font-size: 12px;
+            letter-spacing: 0.12em;
+            background: #1A467C;
+            color: #FFFFFF;
+            margin-bottom: 2px;
+            box-shadow: 0 4px 10px rgba(15, 23, 42, 0.22);
+        }
+        .layout-1.style-neubrutalism .l1-lr-winpill { border: 2px solid #000000; box-shadow: 3px 3px 0 #000000; border-radius: 0px; background: #16488E; }
+        .layout-1.style-dark-code .l1-lr-winpill    { background: #0B192E; border: 1.5px solid #38BDF8; color: #38BDF8; border-radius: 6px; }
+        .layout-1.style-glass .l1-lr-winpill        { background: rgba(29, 78, 216, 0.92); border: 1px solid rgba(255,255,255,0.85); }
+        .layout-1.style-modern .l1-lr-winpill       { background: #FDD34D; color: #12305A; }
+        .l1-lr-mdot { width: 8px; height: 8px; border-radius: 999px; display: inline-block; }
+        .layout-1.style-neubrutalism .l1-lr-mdot { border-radius: 0px; }
+
+        .l1-lr-code-prop {
             position: absolute;
-            right: 16px;
-            bottom: 4px;
-            width: 146px;
-            height: 146px;
+            left: 24px;
+            bottom: 18px;
+            padding: 8px 16px;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 800;
+            font-size: 18px;
+            letter-spacing: 0.04em;
+            transform: rotate(-8deg);
+            z-index: 24;
+            background: #0F172A;
+            color: #38BDF8;
+            border: 2.5px solid #FFFFFF;
+            box-shadow: 0 8px 18px rgba(15, 23, 42, 0.26);
+            border-radius: 10px;
+        }
+        .layout-1.style-neubrutalism .l1-lr-code-prop { background: #1A467C; color: #FCD34D; border: 3px solid #000000; box-shadow: 4px 4px 0 #000000; border-radius: 0px; }
+        .layout-1.style-glass .l1-lr-code-prop        { background: rgba(255,255,255,0.92); color: #1D4ED8; border: 2px solid #2563EB; }
+        .layout-1.style-modern .l1-lr-code-prop       { background: #FDD34D; color: #12305A; border: 2px solid #FFFFFF; }
+        .ratio-1-1 .l1-lr-code-prop { left: 18px; bottom: 12px; font-size: 14px; padding: 6px 12px; }
+        .l1-lr-code-prop::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 16px;
+            width: 36px;
+            height: 12px;
+            background: rgba(250, 204, 21, 0.78);
+            transform: rotate(6deg);
+        }
+
+        .l1-lr-tech-prop {
+            position: absolute;
+            right: 24px;
+            bottom: 14px;
+            width: 118px;
+            height: 98px;
             z-index: 26;
-            transform: rotate(-12deg);
+            pointer-events: none;
         }
-        .ratio-1-1 .l1-lr-mega-wrap { right: 12px; bottom: 2px; width: 112px; height: 112px; }
+        .ratio-1-1 .l1-lr-tech-prop { right: 18px; bottom: 8px; width: 92px; height: 76px; }
 
         .l1-lr-topic-svg {
             position: relative;
             z-index: 25;
-            width: 820px;
-            height: 92px;
+            width: 720px;
+            height: 94px;
             overflow: visible;
         }
-        .ratio-9-16 .l1-lr-topic-svg { width: 840px; height: 98px; }
-        .ratio-1-1  .l1-lr-topic-svg { width: 760px; height: 74px; }
+        .ratio-9-16 .l1-lr-topic-svg { width: 730px; height: 100px; }
+        .ratio-1-1  .l1-lr-topic-svg { width: 650px; height: 74px; }
 
         .l1-lr-ribbon {
             display: inline-flex;
@@ -3101,7 +3162,7 @@
                                 <span class="lr-hole-hint">AREA FOTO (TRANSPARAN)</span>
                             </div>
 
-                            <!-- Dual-layer Torn Paper Outline + ClipPath for DOM Hole -->
+                            <!-- Dual-layer Torn Paper Outline + ClipPath + Corner Viewfinder Marks -->
                             <svg id="l1LrTornEdgeSvg" class="l1-lr-torn-svg overflow-visible" viewBox="0 0 1080 1920" width="1080" height="1920" aria-hidden="true">
                                 <defs>
                                     <clipPath id="l1LrHoleClip" clipPathUnits="userSpaceOnUse">
@@ -3114,6 +3175,8 @@
                                 <path id="l1LrOuterLipShadow" d="" fill="#0F172A" opacity="0.14"/>
                                 <path id="l1LrGreyBandPath" fill-rule="evenodd" d="" fill="#E2E8F0"/>
                                 <path id="l1LrInnerEdgeStroke" d="" fill="none" stroke="#FFFFFF" stroke-width="4" filter="url(#l1LrRipShadow)"/>
+                                <!-- Subtle Viewfinder Corner Brackets on Torn Lip -->
+                                <g id="l1LrViewfinder" fill="none" stroke="#165BA3" stroke-width="3" stroke-linecap="square" opacity="0.72"></g>
                             </svg>
 
                             <!-- Enlarged Top-Center 3 Official Logos (NO Org Text) -->
@@ -3123,63 +3186,50 @@
                                 <span class="l1-lr-logo-chip"><img src="data:image/jpeg;base64,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" alt="Logo IDE LPKIA"/></span>
                             </div>
 
-                            <!-- Top-Left Camera + Stacked Outline "LIVE REPORT" Sticker -->
+                            <!-- Top-Left Layout-1 Tech Window Bar + Distinctive Font "LIVE REPORT" Sticker -->
                             <div class="l1-lr-top-left-collage">
-                                <svg id="l1LrBadgeSvg" width="420" height="160" viewBox="0 0 420 160" class="overflow-visible" aria-hidden="true">
-                                    <g id="l1LrCamGrp" transform="translate(8, 2) rotate(-14 48 34)">
-                                        <rect x="6" y="16" width="84" height="52" rx="9" fill="#1E293B" stroke="#FFFFFF" stroke-width="3.5"/>
-                                        <rect x="24" y="8" width="26" height="12" rx="4" fill="#334155" stroke="#FFFFFF" stroke-width="2.5"/>
-                                        <rect x="14" y="24" width="68" height="36" rx="5" fill="#165BA3"/>
-                                        <circle cx="52" cy="42" r="16" fill="#0F172A" stroke="#E2E8F0" stroke-width="3"/>
-                                        <circle cx="52" cy="42" r="9.5" fill="#38BDF8"/>
-                                        <circle cx="48" cy="38" r="3" fill="#FFFFFF" opacity="0.85"/>
-                                        <circle cx="24" cy="30" r="4.5" fill="#EF4444" stroke="#FFFFFF" stroke-width="1.5"/>
-                                    </g>
-                                    <g id="l1LrBadgeTextGrp" transform="translate(88, 10)">
-                                        <text id="l1LrLbl1Shd" x="4" y="54" font-family="Archivo Black, Space Grotesk, sans-serif" font-size="60" font-weight="400" fill="#0B1F40" stroke="#0B1F40" stroke-width="16" stroke-linejoin="round" stroke-linecap="round">LIVE</text>
-                                        <text id="l1LrLbl1Txt" x="0" y="50" font-family="Archivo Black, Space Grotesk, sans-serif" font-size="60" font-weight="400" fill="#FFFFFF" stroke="#165BA3" stroke-width="16" stroke-linejoin="round" stroke-linecap="round" style="paint-order: stroke fill;">LIVE</text>
-                                        <text id="l1LrLbl2Shd" x="-32" y="112" font-family="Archivo Black, Space Grotesk, sans-serif" font-size="60" font-weight="400" fill="#0B1F40" stroke="#0B1F40" stroke-width="16" stroke-linejoin="round" stroke-linecap="round">REPORT</text>
-                                        <text id="l1LrLbl2Txt" x="-36" y="108" font-family="Archivo Black, Space Grotesk, sans-serif" font-size="60" font-weight="400" fill="#FFFFFF" stroke="#165BA3" stroke-width="16" stroke-linejoin="round" stroke-linecap="round" style="paint-order: stroke fill;">REPORT</text>
-                                        <circle id="l1LrLiveDot" cx="-48" cy="86" r="10" fill="#EF4444" stroke="#FFFFFF" stroke-width="3"/>
+                                <div class="l1-lr-winpill">
+                                    <span class="l1-lr-mdot" style="background:#EF4444;"></span>
+                                    <span class="l1-lr-mdot" style="background:#38BDF8;"></span>
+                                    <span class="l1-lr-mdot" style="background:#FFFFFF;"></span>
+                                    <span class="ml-1">&gt;_ REC</span>
+                                </div>
+                                <svg id="l1LrBadgeSvg" width="420" height="126" viewBox="0 0 420 126" class="overflow-visible block" aria-hidden="true">
+                                    <g id="l1LrBadgeTextGrp" transform="translate(8, 2)">
+                                        <text id="l1LrLbl1Shd" x="5" y="48" font-family="Silkscreen, monospace" font-size="40" font-weight="700" fill="#0B1F40" stroke="#0B1F40" stroke-width="14" stroke-linejoin="round" stroke-linecap="round">LIVE</text>
+                                        <text id="l1LrLbl1Txt" x="0" y="43" font-family="Silkscreen, monospace" font-size="40" font-weight="700" fill="#FFFFFF" stroke="#165BA3" stroke-width="14" stroke-linejoin="round" stroke-linecap="round" style="paint-order: stroke fill;">LIVE</text>
+                                        <text id="l1LrLbl2Shd" x="5" y="96" font-family="Silkscreen, monospace" font-size="40" font-weight="700" fill="#0B1F40" stroke="#0B1F40" stroke-width="14" stroke-linejoin="round" stroke-linecap="round">REPORT</text>
+                                        <text id="l1LrLbl2Txt" x="0" y="91" font-family="Silkscreen, monospace" font-size="40" font-weight="700" fill="#FFFFFF" stroke="#165BA3" stroke-width="14" stroke-linejoin="round" stroke-linecap="round" style="paint-order: stroke fill;">REPORT</text>
                                     </g>
                                 </svg>
                             </div>
 
-                            <!-- Top-Right Torn Paper Label Note -->
+                            <!-- Top-Right Washi-Taped Torn Paper Note -->
                             <div class="l1-lr-tag-wrap">
+                                <div class="l1-lr-washi-tag"></div>
                                 <svg id="l1LrTagSvg" viewBox="0 0 370 84" class="absolute inset-0 w-full h-full overflow-visible" aria-hidden="true">
                                     <path id="l1LrTagBg" d="" fill="#FFFFFF" stroke="#165BA3" stroke-width="7" stroke-linejoin="round" style="filter: drop-shadow(0 6px 14px rgba(15,23,42,0.22));"/>
                                 </svg>
                                 <span id="l1LrOutTag" class="l1-lr-tag-text">KADERISASI</span>
                             </div>
 
-                            <!-- Bottom Headline Sticker + Hand-Pen + Megaphone + Ribbon CTA + Social Footer -->
+                            <!-- Bottom Headline Sticker + Taped Code Prop + Tech Cursor/Sparkle + Ribbon CTA -->
                             <div class="l1-lr-bot-zone">
                                 <div class="l1-lr-headline-row">
-                                    <!-- Writing Hand + Stylus Prop (Bottom-Left) -->
-                                    <svg class="l1-lr-hand-wrap overflow-visible" viewBox="0 0 140 120" aria-hidden="true">
-                                        <g transform="rotate(-8 70 60)" style="filter: drop-shadow(0 6px 10px rgba(15,23,42,0.25));">
-                                            <path d="M12 96 C26 70 48 54 74 52 C88 50 100 58 98 68 C95 78 78 82 64 82 C78 86 88 94 82 104 C74 114 44 112 22 108 Z" fill="#E2E8F0" stroke="#16488E" stroke-width="3.5" stroke-linejoin="round"/>
-                                            <path d="M6 68 L118 52 L134 57 L118 64 L6 78 Z" fill="#1E293B" stroke="#FFFFFF" stroke-width="2.2" stroke-linejoin="round"/>
-                                            <polygon points="118,52 136,57 118,64" fill="#38BDF8"/>
-                                        </g>
+                                    <!-- Original HIMA IF Prop Left: Washi-Taped Code Tag -->
+                                    <div class="l1-lr-code-prop">&lt;/&gt; IF_LIVE</div>
+
+                                    <svg id="l1LrTopicSvg" class="l1-lr-topic-svg" viewBox="0 0 730 100" aria-hidden="true">
+                                        <text id="l1LrTopicShd" x="370" y="55" text-anchor="middle" dominant-baseline="central" font-family="Syne, sans-serif" font-size="56" font-weight="800" fill="#0B1F40" stroke="#0B1F40" stroke-width="18" stroke-linejoin="round" stroke-linecap="round">OPENING CEREMONY</text>
+                                        <text id="l1LrTopicMain" x="365" y="49" text-anchor="middle" dominant-baseline="central" font-family="Syne, sans-serif" font-size="56" font-weight="800" fill="#FFFFFF" stroke="#165BA3" stroke-width="18" stroke-linejoin="round" stroke-linecap="round" style="paint-order: stroke fill;">OPENING CEREMONY</text>
                                     </svg>
 
-                                    <svg id="l1LrTopicSvg" class="l1-lr-topic-svg" viewBox="0 0 840 98" aria-hidden="true">
-                                        <text id="l1LrTopicShd" x="425" y="54" text-anchor="middle" dominant-baseline="central" font-family="Archivo Black, Space Grotesk, sans-serif" font-size="66" font-weight="400" fill="#0B1F40" stroke="#0B1F40" stroke-width="20" stroke-linejoin="round" stroke-linecap="round">OPENING CEREMONY</text>
-                                        <text id="l1LrTopicMain" x="420" y="48" text-anchor="middle" dominant-baseline="central" font-family="Archivo Black, Space Grotesk, sans-serif" font-size="66" font-weight="400" fill="#FFFFFF" stroke="#165BA3" stroke-width="20" stroke-linejoin="round" stroke-linecap="round" style="paint-order: stroke fill;">OPENING CEREMONY</text>
-                                    </svg>
-
-                                    <!-- 3D Megaphone Prop (Bottom-Right) -->
-                                    <svg class="l1-lr-mega-wrap overflow-visible" viewBox="0 0 220 220" aria-hidden="true">
-                                        <g style="filter: drop-shadow(0 12px 18px rgba(7, 20, 44, 0.34));">
-                                            <path d="M52 126 L74 128 L66 176 Q64 185 52 184 L44 182 Q37 180 40 170 Z" fill="#165BA3" stroke="#FFFFFF" stroke-width="2.5" stroke-linejoin="round"/>
-                                            <rect x="16" y="88" width="22" height="40" rx="10" fill="#165BA3" stroke="#FFFFFF" stroke-width="2.5"/>
-                                            <path d="M32 82 L64 78 L64 138 L32 134 Q24 132 24 108 Q24 84 32 82 Z" fill="#1E40AF" stroke="#FFFFFF" stroke-width="2.5"/>
-                                            <path d="M58 79 C96 76 124 54 148 34 L152 182 C124 162 96 140 58 137 Z" fill="#F8FAFC" stroke="#16488E" stroke-width="3"/>
-                                            <ellipse cx="151" cy="108" rx="23" ry="74" fill="#165BA3" stroke="#FFFFFF" stroke-width="2.5"/>
-                                            <ellipse cx="153" cy="108" rx="15" ry="59" fill="#0B1F40"/>
-                                            <ellipse cx="144" cy="108" rx="7" ry="18" fill="#38BDF8"/>
+                                    <!-- Original HIMA IF Prop Right: 01; Monospace + Tech Sparkle Stars -->
+                                    <svg class="l1-lr-tech-prop overflow-visible" viewBox="0 0 120 100" aria-hidden="true">
+                                        <g style="filter: drop-shadow(0 6px 12px rgba(15,23,42,0.24));">
+                                            <path id="l1LrStarMain" d="M74 12 Q80 40 108 46 Q80 52 74 80 Q68 52 40 46 Q68 40 74 12 Z" fill="#CA2C2A" stroke="#FFFFFF" stroke-width="3.5" stroke-linejoin="round"/>
+                                            <path id="l1LrStarSub" d="M30 58 Q33 70 45 73 Q33 76 30 88 Q27 76 15 73 Q27 70 30 58 Z" fill="#FCD34D" stroke="#0B1F40" stroke-width="2.5" stroke-linejoin="round"/>
+                                            <text id="l1LrCode01" x="8" y="30" font-family="JetBrains Mono, monospace" font-weight="800" font-size="24" fill="#16488E" stroke="#FFFFFF" stroke-width="6" style="paint-order: stroke fill;">01;</text>
                                         </g>
                                     </svg>
                                 </div>
@@ -4443,11 +4493,50 @@
         }
         function getL1ScrapPalette(styleName) {
             return {
-                'neubrutalism': { rip: '#E2E8F0', stroke: '#165BA3', shd: '#0B1F40', tagFill: '#FFFFFF', dot: '#EF4444', mega: '#165BA3', megaDark: '#0B1F40', megaDeep: '#07142C' },
-                'glass':        { rip: 'rgba(219,234,254,0.88)', stroke: '#1D4ED8', shd: '#0F294A', tagFill: '#FFFFFF', dot: '#EF4444', mega: '#2563EB', megaDark: '#1E3A8A', megaDeep: '#0B1F40' },
-                'dark-code':    { rip: '#173258', stroke: '#38BDF8', shd: '#020617', tagFill: '#0B192E', dot: '#EF4444', mega: '#38BDF8', megaDark: '#0284C7', megaDeep: '#091529' },
-                'modern':       { rip: '#275996', stroke: '#12305A', shd: '#071428', tagFill: '#FFFFFF', dot: '#CA2C2A', mega: '#FDD34D', megaDark: '#D97706', megaDeep: '#12305A' }
-            }[styleName] || { rip: '#E2E8F0', stroke: '#165BA3', shd: '#0B1F40', tagFill: '#FFFFFF', dot: '#EF4444', mega: '#165BA3', megaDark: '#0B1F40', megaDeep: '#07142C' };
+                // Option A: Pixel-Tech Silkscreen x Syne ExtraBold
+                'neubrutalism': {
+                    rip: '#E2E8F0', stroke: '#16488E', shd: '#000000', tagFill: '#FFFFFF', tagStroke: '#16488E', badgeSW: 11, dot: '#EF4444',
+                    badgeFont: '"Silkscreen", monospace', badgeWeight: '700', badgeBase916: 40, badgeBase45: 36, badgeBase11: 30, badgeItalic: false,
+                    headFont: '"Syne", "Space Grotesk", sans-serif', headWeight: '800', headBase916: 58, headBase45: 52, headBase11: 42,
+                    starFill: '#CA2C2A', starStroke: '#000000', starSub: '#FCD34D', codeCol: '#1A467C',
+                    winFill: '#16488E', winTxt: '#FFFFFF', winBorder: '#000000', winDots: ['#CA2C2A', '#38BDF8', '#FFFFFF'],
+                    codeBg: '#1A467C', codeTxt: '#FCD34D', codeBorder: '#000000', tape: 'rgba(250, 204, 21, 0.72)'
+                },
+                // Option B (Glass blend): Chakra Petch Bold Italic x Syne ExtraBold
+                'glass': {
+                    rip: 'rgba(219,234,254,0.88)', stroke: '#1D4ED8', shd: '#0F294A', tagFill: '#FFFFFF', dot: '#EF4444',
+                    badgeFont: '"Chakra Petch", sans-serif', badgeWeight: '700', badgeBase916: 46, badgeBase45: 42, badgeBase11: 34, badgeItalic: true,
+                    headFont: '"Syne", "Space Grotesk", sans-serif', headWeight: '800', headBase916: 58, headBase45: 52, headBase11: 42,
+                    starFill: '#2563EB', starStroke: '#FFFFFF', starSub: '#93C5FD', codeCol: '#1D4ED8',
+                    winFill: 'rgba(29, 78, 216, 0.92)', winTxt: '#FFFFFF', winBorder: 'rgba(255,255,255,0.85)', winDots: ['#F87171', '#93C5FD', '#FFFFFF'],
+                    codeBg: 'rgba(255,255,255,0.94)', codeTxt: '#1D4ED8', codeBorder: '#2563EB', tape: 'rgba(147, 197, 253, 0.78)'
+                },
+                // Option C: JetBrains Mono Terminal x Bricolage Grotesque ExtraBold
+                'dark-code': {
+                    rip: '#173258', stroke: '#091529', shd: '#38BDF8', tagFill: '#122645', tagStroke: '#38BDF8', badgeSW: 10, dot: '#EF4444',
+                    badgeFont: '"JetBrains Mono", monospace', badgeWeight: '800', badgeBase916: 38, badgeBase45: 34, badgeBase11: 28, badgeItalic: false,
+                    headFont: '"Bricolage Grotesque", "Space Grotesk", sans-serif', headWeight: '800', headBase916: 62, headBase45: 56, headBase11: 44,
+                    starFill: '#38BDF8', starStroke: '#091529', starSub: '#FCD34D', codeCol: '#38BDF8',
+                    winFill: '#0B192E', winTxt: '#38BDF8', winBorder: '#38BDF8', winDots: ['#EF4444', '#FCD34D', '#38BDF8'],
+                    codeBg: '#0B192E', codeTxt: '#38BDF8', codeBorder: '#38BDF8', tape: 'rgba(56, 189, 248, 0.45)'
+                },
+                // Option B: Chakra Petch Bold Italic x Unbounded Black 900
+                'modern': {
+                    rip: '#275996', stroke: '#12305A', shd: '#071428', tagFill: '#FFFFFF', dot: '#CA2C2A',
+                    badgeFont: '"Chakra Petch", sans-serif', badgeWeight: '700', badgeBase916: 46, badgeBase45: 42, badgeBase11: 34, badgeItalic: true,
+                    headFont: '"Unbounded", "Space Grotesk", sans-serif', headWeight: '900', headBase916: 50, headBase45: 46, headBase11: 36,
+                    starFill: '#FDD34D', starStroke: '#12305A', starSub: '#FFFFFF', codeCol: '#FDD34D',
+                    winFill: '#FDD34D', winTxt: '#12305A', winBorder: null, winDots: ['#CA2C2A', '#12305A', '#FFFFFF'],
+                    codeBg: '#FDD34D', codeTxt: '#12305A', codeBorder: '#FFFFFF', tape: 'rgba(253, 211, 77, 0.78)'
+                }
+            }[styleName] || {
+                rip: '#E2E8F0', stroke: '#16488E', shd: '#000000', tagFill: '#FFFFFF', dot: '#EF4444',
+                badgeFont: '"Silkscreen", monospace', badgeWeight: '700', badgeBase916: 40, badgeBase45: 36, badgeBase11: 30, badgeItalic: false,
+                headFont: '"Syne", "Space Grotesk", sans-serif', headWeight: '800', headBase916: 58, headBase45: 52, headBase11: 42,
+                starFill: '#CA2C2A', starStroke: '#000000', starSub: '#FCD34D', codeCol: '#1A467C',
+                winFill: '#16488E', winTxt: '#FFFFFF', winBorder: '#000000', winDots: ['#CA2C2A', '#38BDF8', '#FFFFFF'],
+                codeBg: '#1A467C', codeTxt: '#FCD34D', codeBorder: '#000000', tape: 'rgba(250, 204, 21, 0.72)'
+            };
         }
 
         function syncAllDom() {
@@ -4525,24 +4614,44 @@
                     tagSvg.setAttribute('viewBox', `0 0 ${sp.tagW} ${sp.tagH}`);
                     tagBg.setAttribute('d', ptsToSvgPath(sp.tagPts));
                     tagBg.setAttribute('fill', pal.tagFill);
-                    tagBg.setAttribute('stroke', pal.stroke);
+                    tagBg.setAttribute('stroke', pal.tagStroke || pal.stroke);
                 }
                 setIf('l1LrOutTag', E.title);
                 setIf('l1LrOutCta', E.cta);
                 setIf('l1LrOutIg', E.igHandle);
 
-                // Two-line smart stack for LIVE REPORT sticker + stroke theme color
+                // Viewfinder thin corner brackets on torn paper lip
+                const vfEl = document.getElementById('l1LrViewfinder');
+                if (vfEl) {
+                    const vx1 = sp.hx + 18, vx2 = sp.hx + sp.hw - 18, vy1 = sp.hy + 18, vy2 = sp.hy + sp.hh - 18, vl = 24;
+                    vfEl.setAttribute('stroke', currentStyle === 'dark-code' ? '#38BDF8' : (currentStyle === 'modern' ? '#FDD34D' : pal.stroke));
+                    vfEl.innerHTML = `<path d="M ${vx1} ${vy1 + vl} L ${vx1} ${vy1} L ${vx1 + vl} ${vy1}"/><path d="M ${vx2 - vl} ${vy1} L ${vx2} ${vy1} L ${vx2} ${vy1 + vl}"/><path d="M ${vx1} ${vy2 - vl} L ${vx1} ${vy2} L ${vx1 + vl} ${vy2}"/><path d="M ${vx2 - vl} ${vy2} L ${vx2} ${vy2} L ${vx2} ${vy2 - vl}"/>`;
+                }
+
+                // Dynamic Theme Font Stack for LIVE REPORT Badge
                 const parts = E.liveLabel.split(/\s+/).filter(Boolean);
                 const l1 = parts.length >= 2 ? parts[0] : (E.liveLabel || 'LIVE');
                 const l2 = parts.length >= 2 ? parts.slice(1).join(' ') : '';
-                const bFs = sp.is11 ? 46 : (sp.is916 ? 60 : 54);
+                const bBase = sp.is916 ? pal.badgeBase916 : (sp.is11 ? pal.badgeBase11 : pal.badgeBase45);
+                const bFs = Math.min(
+                    computeFitFont(l1, bBase, 20, pal.badgeWeight, pal.badgeFont, 0.04, 340),
+                    l2 ? computeFitFont(l2, bBase, 20, pal.badgeWeight, pal.badgeFont, 0.04, 340) : bBase
+                );
+                const bLineGap = Math.round(bFs * 1.08);
+                const bSw = pal.badgeSW || 14;
                 ['l1LrLbl1Shd', 'l1LrLbl1Txt'].forEach((id, idx) => {
                     const el = document.getElementById(id);
                     if (el) {
                         el.textContent = l1;
+                        el.setAttribute('font-family', pal.badgeFont);
+                        el.setAttribute('font-weight', pal.badgeWeight);
+                        el.setAttribute('font-style', pal.badgeItalic ? 'italic' : 'normal');
                         el.setAttribute('font-size', String(bFs));
+                        el.setAttribute('stroke-width', String(bSw));
+                        el.setAttribute('y', String(idx === 0 ? 48 : 43));
                         el.setAttribute('stroke', idx === 0 ? pal.shd : pal.stroke);
                         if (idx === 0) el.setAttribute('fill', pal.shd);
+                        if (idx === 1) el.setAttribute('fill', currentStyle === 'dark-code' ? '#38BDF8' : '#FFFFFF');
                     }
                 });
                 ['l1LrLbl2Shd', 'l1LrLbl2Txt'].forEach((id, idx) => {
@@ -4550,24 +4659,44 @@
                     if (el) {
                         el.textContent = l2;
                         el.style.display = l2 ? '' : 'none';
+                        el.setAttribute('font-family', pal.badgeFont);
+                        el.setAttribute('font-weight', pal.badgeWeight);
+                        el.setAttribute('font-style', pal.badgeItalic ? 'italic' : 'normal');
                         el.setAttribute('font-size', String(bFs));
+                        el.setAttribute('stroke-width', String(bSw));
+                        el.setAttribute('y', String((idx === 0 ? 48 : 43) + bLineGap));
                         el.setAttribute('stroke', idx === 0 ? pal.shd : pal.stroke);
                         if (idx === 0) el.setAttribute('fill', pal.shd);
+                        if (idx === 1) el.setAttribute('fill', currentStyle === 'dark-code' ? '#38BDF8' : '#FFFFFF');
                     }
                 });
 
-                // Topic Sticker Outline Headline
-                const tFs = computeFitFont(E.liveTopic, sp.is916 ? 68 : (sp.is11 ? 50 : 62), 30, '400', '"Archivo Black", "Space Grotesk", sans-serif', 0.02, 740);
+                // Sync Tech Sparkle Colors
+                const sm = document.getElementById('l1LrStarMain');
+                const ss = document.getElementById('l1LrStarSub');
+                const c01 = document.getElementById('l1LrCode01');
+                if (sm) { sm.setAttribute('fill', pal.starFill); sm.setAttribute('stroke', pal.starStroke); }
+                if (ss) ss.setAttribute('fill', pal.starSub);
+                if (c01) { c01.setAttribute('fill', pal.codeCol); c01.setAttribute('stroke', currentStyle === 'dark-code' ? '#091529' : '#FFFFFF'); }
+
+                // Dynamic Theme Display Font for Topic Headline
+                const hBase = sp.is916 ? pal.headBase916 : (sp.is11 ? pal.headBase11 : pal.headBase45);
+                const tFs = computeFitFont(E.liveTopic, hBase, 24, pal.headWeight, pal.headFont, 0.02, 760);
                 const tShd = document.getElementById('l1LrTopicShd');
                 const tMain = document.getElementById('l1LrTopicMain');
                 if (tShd && tMain) {
                     tShd.textContent = E.liveTopic;
                     tMain.textContent = E.liveTopic;
+                    tShd.setAttribute('font-family', pal.headFont);
+                    tMain.setAttribute('font-family', pal.headFont);
+                    tShd.setAttribute('font-weight', pal.headWeight);
+                    tMain.setAttribute('font-weight', pal.headWeight);
                     tShd.setAttribute('font-size', String(tFs));
                     tMain.setAttribute('font-size', String(tFs));
                     tShd.setAttribute('stroke', pal.shd);
                     tShd.setAttribute('fill', pal.shd);
                     tMain.setAttribute('stroke', pal.stroke);
+                    tMain.setAttribute('fill', currentStyle === 'dark-code' ? '#38BDF8' : '#FFFFFF');
                 }
             }
             setIf('outCountdown', E.cd);
@@ -5595,54 +5724,74 @@
                     ctx.drawImage(img, lx + (lSize - dw) / 2, logosTopY + (lSize - dh) / 2, dw, dh);
                 });
 
-                // 4. Top-Left Camera + Stacked Outline "LIVE REPORT" Sticker Collage
+                // Subtle Viewfinder Corner Brackets on Torn Paper Lip
+                ctx.save();
+                ctx.strokeStyle = currentStyle === 'dark-code' ? '#38BDF8' : (currentStyle === 'modern' ? '#FDD34D' : pal.stroke);
+                ctx.lineWidth = 3; ctx.globalAlpha = 0.72; ctx.lineCap = 'square';
+                const vx1 = sp.hx + 18, vx2 = sp.hx + sp.hw - 18, vy1 = sp.hy + 18, vy2 = sp.hy + sp.hh - 18, vl = 24;
+                [
+                    [vx1, vy1 + vl, vx1, vy1, vx1 + vl, vy1],
+                    [vx2 - vl, vy1, vx2, vy1, vx2, vy1 + vl],
+                    [vx1, vy2 - vl, vx1, vy2, vx1 + vl, vy2],
+                    [vx2 - vl, vy2, vx2, vy2, vx2, vy2 - vl]
+                ].forEach(([a, b, c, d, e, f]) => {
+                    ctx.beginPath(); ctx.moveTo(a, b); ctx.lineTo(c, d); ctx.lineTo(e, f); ctx.stroke();
+                });
+                ctx.restore();
+
+                // 4. Top-Left Layout-1 Tech Window Bar + Distinctive Font "LIVE REPORT" Sticker
                 const parts = E.liveLabel.split(/\s+/).filter(Boolean);
                 const lbl1 = parts.length >= 2 ? parts[0] : (E.liveLabel || 'LIVE');
                 const lbl2 = parts.length >= 2 ? parts.slice(1).join(' ') : '';
-                const bFs = sp.is11 ? 46 : (sp.is916 ? 60 : 54);
+                const bBase = sp.is916 ? pal.badgeBase916 : (sp.is11 ? pal.badgeBase11 : pal.badgeBase45);
+                const bFs = Math.min(
+                    computeFitFont(lbl1, bBase, 20, pal.badgeWeight, pal.badgeFont, 0.04, 340),
+                    lbl2 ? computeFitFont(lbl2, bBase, 20, pal.badgeWeight, pal.badgeFont, 0.04, 340) : bBase
+                );
+                const bLineGap = Math.round(bFs * 1.08);
                 ctx.save();
                 ctx.translate(sp.is11 ? 18 : 24, sp.is916 ? 76 : (sp.is11 ? 44 : 56));
                 ctx.rotate((-4 * Math.PI) / 180);
 
-                // Camera Icon top-left of badge
-                ctx.save();
-                ctx.translate(8, 2);
-                ctx.translate(48, 34); ctx.rotate((-14 * Math.PI) / 180); ctx.translate(-48, -34);
-                ctx.shadowColor = 'rgba(15,23,42,0.28)'; ctx.shadowBlur = 10; ctx.shadowOffsetY = 4;
-                roundRectPath(6, 16, 84, 52, 9); ctx.fillStyle = '#1E293B'; ctx.fill();
-                ctx.shadowColor = 'transparent'; ctx.lineWidth = 3.5; ctx.strokeStyle = '#FFFFFF'; ctx.stroke();
-                roundRectPath(24, 8, 26, 12, 4); ctx.fillStyle = '#334155'; ctx.fill(); ctx.lineWidth = 2.5; ctx.stroke();
-                roundRectPath(14, 24, 68, 36, 5); ctx.fillStyle = '#165BA3'; ctx.fill();
-                ctx.beginPath(); ctx.arc(52, 42, 16, 0, Math.PI * 2); ctx.fillStyle = '#0F172A'; ctx.fill(); ctx.lineWidth = 3; ctx.strokeStyle = '#E2E8F0'; ctx.stroke();
-                ctx.beginPath(); ctx.arc(52, 42, 9.5, 0, Math.PI * 2); ctx.fillStyle = '#38BDF8'; ctx.fill();
-                ctx.beginPath(); ctx.arc(48, 38, 3, 0, Math.PI * 2); ctx.fillStyle = 'rgba(255,255,255,0.85)'; ctx.fill();
-                ctx.beginPath(); ctx.arc(24, 30, 4.5, 0, Math.PI * 2); ctx.fillStyle = '#EF4444'; ctx.fill(); ctx.lineWidth = 1.5; ctx.strokeStyle = '#FFFFFF'; ctx.stroke();
-                ctx.restore();
+                // Mini L1 3-Dot Tech Window Pill (`●●● >_ REC`)
+                const wpW = 128, wpH = 24;
+                drawBox(0, 0, wpW, wpH, {
+                    fill: pal.winFill, border: pal.winBorder ? 2 : 0, borderColor: pal.winBorder || 'transparent',
+                    shadow: currentStyle === 'neubrutalism' ? 3 : 0, radius: currentStyle === 'neubrutalism' ? 0 : (currentStyle === 'dark-code' ? 6 : 999), softShadow: true
+                });
+                pal.winDots.forEach((dc, di) => {
+                    ctx.fillStyle = dc;
+                    if (currentStyle === 'neubrutalism') {
+                        ctx.fillRect(10 + di * 13, 8, 8, 8);
+                    } else {
+                        ctx.beginPath(); ctx.arc(14 + di * 13, 12, 4, 0, Math.PI * 2); ctx.fill();
+                    }
+                });
+                drawTrackedText('>_ REC', 56, 13, '800 12px "JetBrains Mono", monospace', pal.winTxt, 1.4, 'left');
 
-                // Sticker Lines Helper
+                // Theme-Distinct Font LIVE REPORT Sticker
+                const bSw = pal.badgeSW || 14;
                 const drawStickerWord = (txt, x, y, fs) => {
                     ctx.save();
-                    ctx.font = `400 ${fs}px "Archivo Black", "Space Grotesk", sans-serif`;
+                    const italicStr = pal.badgeItalic ? 'italic ' : '';
+                    ctx.font = `${italicStr}${pal.badgeWeight} ${fs}px ${pal.badgeFont}`;
                     ctx.textBaseline = 'alphabetic'; ctx.textAlign = 'left';
-                    ctx.lineJoin = 'round'; ctx.lineCap = 'round';
-                    ctx.lineWidth = 16; ctx.strokeStyle = pal.shd; ctx.strokeText(txt, x + 4, y + 4);
+                    ctx.lineJoin = 'round'; ctx.lineCap = 'round'; ctx.miterLimit = 2;
+                    ctx.lineWidth = bSw; ctx.strokeStyle = pal.shd; ctx.strokeText(txt, x + 4, y + 4);
                     ctx.fillStyle = pal.shd; ctx.fillText(txt, x + 4, y + 4);
-                    ctx.lineWidth = 16; ctx.strokeStyle = pal.stroke; ctx.strokeText(txt, x, y);
-                    ctx.fillStyle = '#FFFFFF'; ctx.fillText(txt, x, y);
+                    ctx.lineWidth = bSw; ctx.strokeStyle = pal.stroke; ctx.strokeText(txt, x, y);
+                    ctx.fillStyle = currentStyle === 'dark-code' ? '#38BDF8' : '#FFFFFF';
+                    ctx.fillText(txt, x, y);
                     ctx.restore();
                 };
                 ctx.save();
-                ctx.translate(88, 10);
-                drawStickerWord(lbl1, 0, 50, bFs);
-                if (lbl2) {
-                    drawStickerWord(lbl2, -36, 108, bFs);
-                    ctx.beginPath(); ctx.arc(-48, 86, 10, 0, Math.PI * 2);
-                    ctx.fillStyle = pal.dot; ctx.fill(); ctx.lineWidth = 3; ctx.strokeStyle = '#FFFFFF'; ctx.stroke();
-                }
+                ctx.translate(8, 28);
+                drawStickerWord(lbl1, 0, 43, bFs);
+                if (lbl2) drawStickerWord(lbl2, 0, 43 + bLineGap, bFs);
                 ctx.restore();
                 ctx.restore();
 
-                // 5. Top-Right Torn Paper Label Note (E.title e.g. KADERISASI)
+                // 5. Top-Right Torn Paper Label Note + Washi Tape Strip
                 const tagX = W - (sp.is11 ? 30 : 38) - sp.tagW;
                 const tagY = sp.is916 ? 96 : (sp.is11 ? 58 : 78);
                 ctx.save();
@@ -5653,12 +5802,18 @@
                 tracePts(sp.tagPts);
                 ctx.fillStyle = pal.tagFill; ctx.fill();
                 ctx.shadowColor = 'transparent';
-                ctx.lineWidth = 7; ctx.lineJoin = 'round'; ctx.strokeStyle = pal.stroke; ctx.stroke();
+                ctx.lineWidth = 7; ctx.lineJoin = 'round'; ctx.strokeStyle = pal.tagStroke || pal.stroke; ctx.stroke();
                 const tagFs = computeFitFont(E.title, sp.is11 ? 19 : 24, 15, '800', '"Space Grotesk", sans-serif', 0.08, sp.tagW - 44);
                 drawTrackedText(E.title, sp.tagW / 2, sp.tagH / 2 + 1, `800 ${tagFs}px "Space Grotesk", sans-serif`, currentStyle === 'dark-code' ? '#38BDF8' : '#16488E', tagFs * 0.08, 'center');
+                // Washi tape strip over top-right corner of note
+                ctx.save();
+                ctx.translate(sp.tagW - 65, -2);
+                ctx.rotate((16 * Math.PI) / 180);
+                ctx.fillStyle = pal.tape; ctx.fillRect(-38, -10, 76, 20);
+                ctx.restore();
                 ctx.restore();
 
-                // 6. Bottom Headline Sticker + Hand-Pen + Megaphone + Ribbon + IG Handle
+                // 6. Bottom Headline Sticker (Distinct Theme Display Font) + </> Code Prop + Tech Sparkle + Ribbon CTA
                 const padBtm = sp.is916 ? 26 : (sp.is11 ? 14 : 22);
                 const socFs = sp.is11 ? 15 : 17;
                 const socY = H - padBtm - 10;
@@ -5667,59 +5822,62 @@
                 const ribY = socY - (sp.is11 ? 18 : 24) - ribH;
                 const topicCY = ribY - (sp.is11 ? 42 : 52);
 
-                // Left Writing Hand + Stylus
-                const handS = sp.is11 ? 0.72 : 0.92;
+                // Original Left Prop: Washi-Taped Code Sticker `</> IF_LIVE`
                 ctx.save();
-                ctx.translate(sp.is11 ? 22 : 26, topicCY - (sp.is11 ? 54 : 68));
-                ctx.scale(handS, handS);
-                ctx.translate(70, 60); ctx.rotate((-8 * Math.PI) / 180); ctx.translate(-70, -60);
-                ctx.shadowColor = 'rgba(15,23,42,0.25)'; ctx.shadowBlur = 10; ctx.shadowOffsetY = 6;
-                ctx.beginPath();
-                ctx.moveTo(12, 96); ctx.bezierCurveTo(26, 70, 48, 54, 74, 52); ctx.bezierCurveTo(88, 50, 100, 58, 98, 68);
-                ctx.bezierCurveTo(95, 78, 78, 82, 64, 82); ctx.bezierCurveTo(78, 86, 88, 94, 82, 104);
-                ctx.bezierCurveTo(74, 114, 44, 112, 22, 108); ctx.closePath();
-                ctx.fillStyle = '#E2E8F0'; ctx.fill(); ctx.shadowColor = 'transparent';
-                ctx.lineWidth = 3.5; ctx.strokeStyle = '#16488E'; ctx.lineJoin = 'round'; ctx.stroke();
-                ctx.beginPath(); ctx.moveTo(6, 68); ctx.lineTo(118, 52); ctx.lineTo(134, 57); ctx.lineTo(118, 64); ctx.lineTo(6, 78); ctx.closePath();
-                ctx.fillStyle = '#1E293B'; ctx.fill(); ctx.lineWidth = 2.2; ctx.strokeStyle = '#FFFFFF'; ctx.stroke();
-                ctx.beginPath(); ctx.moveTo(118, 52); ctx.lineTo(136, 57); ctx.lineTo(118, 64); ctx.closePath();
-                ctx.fillStyle = '#38BDF8'; ctx.fill();
+                const cpScale = sp.is11 ? 0.78 : 1.0;
+                ctx.translate(sp.is11 ? 18 : 24, topicCY - 8);
+                ctx.scale(cpScale, cpScale);
+                ctx.rotate((-8 * Math.PI) / 180);
+                const cpTxt = '</> IF_LIVE';
+                ctx.font = '800 18px "JetBrains Mono", monospace';
+                const cpW = ctx.measureText(cpTxt).width + 32;
+                const cpH = 40;
+                drawBox(0, 0, cpW, cpH, {
+                    fill: pal.codeBg, border: 2.5, borderColor: pal.codeBorder,
+                    shadow: currentStyle === 'neubrutalism' ? 4 : 0, radius: currentStyle === 'neubrutalism' ? 0 : 10, softShadow: currentStyle !== 'neubrutalism'
+                });
+                drawTrackedText(cpTxt, cpW / 2, cpH / 2 + 1, '800 18px "JetBrains Mono", monospace', pal.codeTxt, 0.7, 'center');
+                ctx.save(); ctx.translate(34, -4); ctx.rotate((6 * Math.PI) / 180); ctx.fillStyle = pal.tape; ctx.fillRect(-18, -6, 36, 12); ctx.restore();
                 ctx.restore();
 
-                // Center Outlined Headline Topic
-                const topicFs = computeFitFont(E.liveTopic, sp.is916 ? 68 : (sp.is11 ? 50 : 62), 30, '400', '"Archivo Black", "Space Grotesk", sans-serif', 0.02, 740);
+                // Center Outlined Headline Topic (Theme Display Font + AutoFit width 760px)
+                const hBase = sp.is916 ? pal.headBase916 : (sp.is11 ? pal.headBase11 : pal.headBase45);
+                const topicFs = computeFitFont(E.liveTopic, hBase, 24, pal.headWeight, pal.headFont, 0.02, 760);
                 ctx.save();
-                ctx.font = `400 ${topicFs}px "Archivo Black", "Space Grotesk", sans-serif`;
+                ctx.font = `${pal.headWeight} ${topicFs}px ${pal.headFont}`;
                 ctx.textBaseline = 'middle'; ctx.textAlign = 'center';
                 ctx.lineJoin = 'round'; ctx.lineCap = 'round';
-                ctx.lineWidth = 20; ctx.strokeStyle = pal.shd; ctx.strokeText(E.liveTopic, W / 2 + 5, topicCY + 6);
+                ctx.lineWidth = 18; ctx.strokeStyle = pal.shd; ctx.strokeText(E.liveTopic, W / 2 + 5, topicCY + 6);
                 ctx.fillStyle = pal.shd; ctx.fillText(E.liveTopic, W / 2 + 5, topicCY + 6);
-                ctx.lineWidth = 20; ctx.strokeStyle = pal.stroke; ctx.strokeText(E.liveTopic, W / 2, topicCY);
-                ctx.fillStyle = '#FFFFFF'; ctx.fillText(E.liveTopic, W / 2, topicCY);
+                ctx.lineWidth = 18; ctx.strokeStyle = pal.stroke; ctx.strokeText(E.liveTopic, W / 2, topicCY);
+                ctx.fillStyle = currentStyle === 'dark-code' ? '#38BDF8' : '#FFFFFF';
+                ctx.fillText(E.liveTopic, W / 2, topicCY);
                 ctx.restore();
 
-                // Right 3D Megaphone
-                const megaSz = sp.is11 ? 112 : 146;
+                // Original Right Prop: `01;` Code Accent + Crisp 4-Point Tech Sparkles
                 ctx.save();
-                ctx.translate(W - (sp.is11 ? 12 : 16) - megaSz / 2, topicCY - (sp.is11 ? 18 : 26));
-                ctx.rotate((-12 * Math.PI) / 180);
-                ctx.scale(megaSz / 220, megaSz / 220);
-                ctx.translate(-110, -110);
-                ctx.shadowColor = 'rgba(7,20,44,0.34)'; ctx.shadowBlur = 18; ctx.shadowOffsetY = 12;
-                ctx.strokeStyle = '#FFFFFF'; ctx.lineWidth = 2.5; ctx.lineJoin = 'round';
-                ctx.fillStyle = pal.mega;
-                ctx.beginPath(); ctx.moveTo(52, 126); ctx.lineTo(74, 128); ctx.lineTo(66, 176); ctx.quadraticCurveTo(64, 185, 52, 184); ctx.lineTo(44, 182); ctx.quadraticCurveTo(37, 180, 40, 170); ctx.closePath(); ctx.fill(); ctx.stroke();
-                roundRectPath(16, 88, 22, 40, 10); ctx.fill(); ctx.stroke();
-                ctx.fillStyle = pal.megaDark;
-                ctx.beginPath(); ctx.moveTo(32, 82); ctx.lineTo(64, 78); ctx.lineTo(64, 138); ctx.lineTo(32, 134); ctx.quadraticCurveTo(24, 132, 24, 108); ctx.quadraticCurveTo(24, 84, 32, 82); ctx.closePath(); ctx.fill(); ctx.stroke();
-                ctx.fillStyle = '#F8FAFC'; ctx.strokeStyle = '#16488E'; ctx.lineWidth = 3;
-                ctx.beginPath(); ctx.moveTo(58, 79); ctx.bezierCurveTo(96, 76, 124, 54, 148, 34); ctx.lineTo(152, 182); ctx.bezierCurveTo(124, 162, 96, 140, 58, 137); ctx.closePath(); ctx.fill(); ctx.stroke();
-                ctx.fillStyle = pal.mega; ctx.strokeStyle = '#FFFFFF'; ctx.lineWidth = 2.5;
-                ctx.beginPath(); ctx.ellipse(151, 108, 23, 74, 0, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
-                ctx.fillStyle = pal.megaDeep;
-                ctx.beginPath(); ctx.ellipse(153, 108, 15, 59, 0, 0, Math.PI * 2); ctx.fill();
-                ctx.fillStyle = '#38BDF8';
-                ctx.beginPath(); ctx.ellipse(144, 108, 7, 18, 0, 0, Math.PI * 2); ctx.fill();
+                const tpSc = sp.is11 ? 0.78 : 1.0;
+                ctx.translate(W - (sp.is11 ? 18 : 24) - 118 * tpSc, topicCY - 48 * tpSc);
+                ctx.scale(tpSc, tpSc);
+                ctx.shadowColor = 'rgba(15,23,42,0.24)'; ctx.shadowBlur = 12; ctx.shadowOffsetY = 6;
+                // Main Star
+                ctx.beginPath(); ctx.moveTo(74, 12);
+                ctx.quadraticCurveTo(80, 40, 108, 46); ctx.quadraticCurveTo(80, 52, 74, 80);
+                ctx.quadraticCurveTo(68, 52, 40, 46); ctx.quadraticCurveTo(68, 40, 74, 12);
+                ctx.closePath(); ctx.fillStyle = pal.starFill; ctx.fill();
+                ctx.shadowColor = 'transparent'; ctx.lineWidth = 3.5; ctx.strokeStyle = pal.starStroke; ctx.lineJoin = 'round'; ctx.stroke();
+                // Sub Star
+                ctx.beginPath(); ctx.moveTo(30, 58);
+                ctx.quadraticCurveTo(33, 70, 45, 73); ctx.quadraticCurveTo(33, 76, 30, 88);
+                ctx.quadraticCurveTo(27, 76, 15, 73); ctx.quadraticCurveTo(27, 70, 30, 58);
+                ctx.closePath(); ctx.fillStyle = pal.starSub; ctx.fill();
+                ctx.lineWidth = 2.5; ctx.strokeStyle = '#0B1F40'; ctx.stroke();
+                // `01;` Text
+                ctx.font = '800 24px "JetBrains Mono", monospace';
+                ctx.textAlign = 'left'; ctx.textBaseline = 'alphabetic';
+                ctx.lineWidth = 6; ctx.strokeStyle = currentStyle === 'dark-code' ? '#091529' : '#FFFFFF';
+                ctx.strokeText('01;', 8, 30);
+                ctx.fillStyle = pal.codeCol; ctx.fillText('01;', 8, 30);
                 ctx.restore();
 
                 // CTA Ribbon Pill
