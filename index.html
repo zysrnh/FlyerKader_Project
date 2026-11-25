@@ -7,7 +7,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=JetBrains+Mono:wght@700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Silkscreen:wght@700&family=Space+Grotesk:wght@700&family=Yellowtail&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=JetBrains+Mono:wght@700;800&family=Outfit:wght@700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Silkscreen:wght@700&family=Space+Grotesk:wght@700&family=Yellowtail&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
@@ -326,16 +326,35 @@
         .layout-3.style-neubrutalism .l3-org-div { background: #000000; opacity: 0.85; }
         .layout-3.style-neubrutalism .l3-bubble-path { fill: #FFFFFF; stroke: #000000; stroke-width: 7; }
         .layout-3.style-neubrutalism .l3-bubble-shape { filter: drop-shadow(10px 10px 0 #000000); }
-        .layout-3.style-neubrutalism .l3-hero-txt,
-        .layout-3.style-neubrutalism .l3-title-txt { color: #CA2C2A; }
-        .layout-3.style-neubrutalism .l3-script-txt { color: #F59E0B; text-shadow: 2px 2px 0 rgba(18, 48, 90, 0.24); }
+        .layout-3.style-neubrutalism .l3-hero-txt {
+            font-family: 'Archivo Black', 'Space Grotesk', sans-serif;
+            font-weight: 400;
+            color: #CA2C2A;
+            paint-order: stroke fill;
+            -webkit-text-stroke: 9px #000000;
+            text-shadow: 7px 7px 0 #000000;
+        }
+        .layout-3.style-neubrutalism .l3-title-txt {
+            font-family: 'Archivo Black', 'Space Grotesk', sans-serif;
+            font-weight: 400;
+            color: #CA2C2A;
+            paint-order: stroke fill;
+            -webkit-text-stroke: 5px #000000;
+            text-shadow: 4px 4px 0 #000000;
+        }
+        .layout-3.style-neubrutalism .l3-script-txt {
+            color: #FCD34D;
+            paint-order: stroke fill;
+            -webkit-text-stroke: 4px #000000;
+            text-shadow: 3px 3px 0 #000000;
+        }
         .layout-3.style-neubrutalism .l3-cap-main { color: #FFFFFF; }
         .layout-3.style-neubrutalism .l3-cap-date { color: #FCD34D; }
         .layout-3.style-neubrutalism .l3-cap-loc { color: #FFFFFF; }
         .layout-3.style-neubrutalism .l3-bottom-dock { background: #FFFFFF; color: #CA2C2A; border: 3.5px solid #000000; box-shadow: 7px 7px 0 #000000; border-radius: 16px; }
         .layout-3.style-neubrutalism .l3-dock-icon { color: #16488E; }
 
-        /* Layout 3 Theme 2: Glassmorphism (Sky-Blue Frosted + Aksen Merah) */
+        /* Layout 3 Theme 2: Glassmorphism (Sky-Blue Frosted + Font Outfit Glossy) */
         .poster-canvas.layout-3.style-glass {
             background: linear-gradient(150deg, #0D356F 0%, #1B5AA6 48%, #2E80D1 100%);
             --l3-mega-hi: #FF8585;
@@ -352,19 +371,39 @@
         .layout-3.style-glass .l3-bg-dot { fill: rgba(255, 255, 255, 0.34); }
         .layout-3.style-glass .l3-bg-code { color: rgba(219, 234, 254, 0.32); }
         .layout-3.style-glass .l3-bg-code-alt { color: rgba(253, 224, 71, 0.42); }
-        .layout-3.style-glass .l3-org-pill { background: rgba(255, 255, 255, 0.88); border: 1.5px solid rgba(255,255,255,0.95); box-shadow: 0 12px 28px rgba(10, 30, 68, 0.28); border-radius: 20px; }
-        .layout-3.style-glass .l3-org-title { color: #12305A; }
-        .layout-3.style-glass .l3-org-sub { color: #DC2626; }
+        .layout-3.style-glass .l3-org-pill { background: rgba(255, 255, 255, 0.86); border: 1.5px solid rgba(255,255,255,0.95); box-shadow: 0 12px 28px rgba(10, 30, 68, 0.28); border-radius: 20px; }
+        .layout-3.style-glass .l3-org-title { color: #12305A; font-family: 'Outfit', sans-serif; font-weight: 800; }
+        .layout-3.style-glass .l3-org-sub { color: #DC2626; font-family: 'Outfit', sans-serif; font-weight: 700; }
         .layout-3.style-glass .l3-org-div { background: #2563EB; opacity: 0.3; }
-        .layout-3.style-glass .l3-bubble-path { fill: rgba(255, 255, 255, 0.90); stroke: rgba(255, 255, 255, 0.98); stroke-width: 3; }
+        .layout-3.style-glass .l3-bubble-path { fill: url(#l3GlassBubFill); stroke: rgba(255, 255, 255, 0.96); stroke-width: 3; }
         .layout-3.style-glass .l3-bubble-shape { filter: drop-shadow(0 24px 40px rgba(8, 25, 58, 0.36)); }
-        .layout-3.style-glass .l3-hero-txt,
-        .layout-3.style-glass .l3-title-txt { color: #DC2626; }
-        .layout-3.style-glass .l3-script-txt { color: #F59E0B; text-shadow: 0 4px 10px rgba(15, 23, 42, 0.16); }
-        .layout-3.style-glass .l3-cap-main { color: #EFF6FF; }
-        .layout-3.style-glass .l3-cap-date { color: #FDE047; }
-        .layout-3.style-glass .l3-cap-loc { color: #FFFFFF; }
-        .layout-3.style-glass .l3-bottom-dock { background: rgba(255, 255, 255, 0.90); color: #DC2626; border: 1.5px solid rgba(255,255,255,0.95); box-shadow: 0 16px 36px rgba(8, 25, 58, 0.32); border-radius: 24px; }
+        .layout-3.style-glass .l3-hero-txt {
+            font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+            font-weight: 900;
+            letter-spacing: -0.01em;
+            background: linear-gradient(180deg, #FF8A8A 0%, #F84B4B 34%, #DC2626 70%, #991B1B 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            filter: drop-shadow(0 8px 16px rgba(30, 64, 175, 0.28));
+        }
+        .layout-3.style-glass .l3-title-txt {
+            font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+            font-weight: 800;
+            letter-spacing: 0.12em !important;
+            background: linear-gradient(180deg, #F87171 0%, #DC2626 55%, #991B1B 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            filter: drop-shadow(0 5px 12px rgba(30, 64, 175, 0.22));
+        }
+        .layout-3.style-glass .l3-script-txt { color: #F59E0B; text-shadow: 0 5px 12px rgba(245, 158, 11, 0.28); }
+        .layout-3.style-glass .l3-cap-main { color: #EFF6FF; font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif; }
+        .layout-3.style-glass .l3-cap-date { color: #FDE047; font-family: 'Outfit', sans-serif; }
+        .layout-3.style-glass .l3-cap-loc { color: #FFFFFF; font-family: 'Outfit', sans-serif; }
+        .layout-3.style-glass .l3-bottom-dock { background: rgba(255, 255, 255, 0.88); color: #DC2626; border: 1.5px solid rgba(255,255,255,0.95); box-shadow: 0 16px 36px rgba(8, 25, 58, 0.32); border-radius: 24px; }
         .layout-3.style-glass .l3-dock-icon { color: #2563EB; }
 
         /* Layout 3 Theme 3: Dark Code (Deep Navy + Cyan) */
@@ -1392,6 +1431,13 @@
                             <div class="l3-bubble-wrap flex items-center justify-center">
                                 <!-- Unified Speech Bubble Shape with Pointer Tail -->
                                 <svg viewBox="0 0 640 430" preserveAspectRatio="none" class="l3-bubble-shape absolute inset-0 w-full h-full overflow-visible" aria-hidden="true">
+                                    <defs>
+                                        <linearGradient id="l3GlassBubFill" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="rgba(255, 255, 255, 0.88)"/>
+                                            <stop offset="50%" stop-color="rgba(222, 238, 255, 0.72)"/>
+                                            <stop offset="100%" stop-color="rgba(255, 255, 255, 0.84)"/>
+                                        </linearGradient>
+                                    </defs>
                                     <path class="l3-bubble-path" d="M 52 14 L 588 14 A 38 38 0 0 1 626 52 L 626 334 A 38 38 0 0 1 588 372 L 366 372 L 320 422 L 274 372 L 52 372 A 38 38 0 0 1 14 334 L 14 52 A 38 38 0 0 1 52 14 Z"/>
                                 </svg>
 
@@ -3318,7 +3364,12 @@
                     pillFill: '#FFFFFF', pillBorder: 3.5, pillBorderCol: '#000000', pillShadow: 6, pillRad: 14,
                     orgTitle: '#12305A', orgSub: '#CA2C2A', orgDiv: 'rgba(0,0,0,0.85)',
                     bubFill: '#FFFFFF', bubBorder: 7, bubBorderCol: '#000000', bubShadow: 10, bubSoft: null,
-                    heroCol: '#CA2C2A', titleCol: '#CA2C2A', scriptCol: '#F59E0B', scriptShd: 'rgba(18, 48, 90, 0.24)',
+                    heroFont: '"Archivo Black", "Space Grotesk", sans-serif', heroWeight: 400, heroCol: '#CA2C2A',
+                    heroStroke: '#000000', heroSW: 9, heroShdOff: 7, heroTrack: -0.02,
+                    titleFont: '"Archivo Black", "Space Grotesk", sans-serif', titleWeight: 400, titleCol: '#CA2C2A',
+                    titleStroke: '#000000', titleSW: 5, titleShdOff: 4, titleTrack: 0.02,
+                    scriptCol: '#FCD34D', scriptStroke: '#000000', scriptSW: 4, scriptShdOff: 3, scriptShd: 'rgba(0, 0, 0, 1)',
+                    capFont: '"Plus Jakarta Sans", sans-serif', dateFont: '"Space Grotesk", sans-serif',
                     capCol: '#FFFFFF', dateCol: '#FCD34D', locCol: '#FFFFFF',
                     dockFill: '#FFFFFF', dockText: '#CA2C2A', dockIcon: '#16488E', dockBorder: 3.5, dockBorderCol: '#000000', dockShadow: 7, dockRad: 16,
                     mega: { hi: '#FF6B6B', mid: '#CA2C2A', dark: '#991B1B', deep: '#3B0909', edge: '#111827', ew: 2.4, wave: '#FCD34D' }
@@ -3329,12 +3380,17 @@
                     tileFill: 'rgba(255, 255, 255, 0.12)', tileStroke: 'rgba(255, 255, 255, 0.42)',
                     sparkCol: 'rgba(255, 255, 255, 0.65)', dotCol: 'rgba(255, 255, 255, 0.34)',
                     codeCol: 'rgba(219, 234, 254, 0.32)', codeAlt: 'rgba(253, 224, 71, 0.42)',
-                    pillFill: 'rgba(255, 255, 255, 0.88)', pillBorder: 1.5, pillBorderCol: 'rgba(255,255,255,0.95)', pillShadow: 0, pillRad: 20, soft: 'rgba(10, 30, 68, 0.30)',
+                    pillFill: 'rgba(255, 255, 255, 0.86)', pillBorder: 1.5, pillBorderCol: 'rgba(255,255,255,0.95)', pillShadow: 0, pillRad: 20, soft: 'rgba(10, 30, 68, 0.30)',
                     orgTitle: '#12305A', orgSub: '#DC2626', orgDiv: 'rgba(37, 99, 235, 0.30)',
-                    bubFill: 'rgba(255, 255, 255, 0.90)', bubBorder: 3, bubBorderCol: 'rgba(255,255,255,0.98)', bubShadow: 0, bubSoft: 'rgba(8, 25, 58, 0.36)',
-                    heroCol: '#DC2626', titleCol: '#DC2626', scriptCol: '#F59E0B', scriptShd: 'rgba(15, 23, 42, 0.16)',
+                    bubFill: 'glassBubGrad', bubBorder: 3, bubBorderCol: 'rgba(255,255,255,0.96)', bubShadow: 0, bubSoft: 'rgba(8, 25, 58, 0.36)',
+                    heroFont: '"Outfit", "Plus Jakarta Sans", sans-serif', heroWeight: 900, heroCol: 'glassHeroGrad',
+                    heroStroke: null, heroSW: 0, heroShdOff: 0, heroGlow: 'rgba(30, 64, 175, 0.28)', heroTrack: -0.01,
+                    titleFont: '"Outfit", "Plus Jakarta Sans", sans-serif', titleWeight: 800, titleCol: 'glassTitleGrad',
+                    titleStroke: null, titleSW: 0, titleShdOff: 0, titleGlow: 'rgba(30, 64, 175, 0.22)', titleTrack: 0.12,
+                    scriptCol: '#F59E0B', scriptStroke: null, scriptSW: 0, scriptShdOff: 0, scriptShd: 'rgba(245, 158, 11, 0.28)',
+                    capFont: '"Outfit", "Plus Jakarta Sans", sans-serif', dateFont: '"Outfit", sans-serif',
                     capCol: '#EFF6FF', dateCol: '#FDE047', locCol: '#FFFFFF',
-                    dockFill: 'rgba(255, 255, 255, 0.90)', dockText: '#DC2626', dockIcon: '#2563EB', dockBorder: 1.5, dockBorderCol: 'rgba(255,255,255,0.95)', dockShadow: 0, dockRad: 24,
+                    dockFill: 'rgba(255, 255, 255, 0.88)', dockText: '#DC2626', dockIcon: '#2563EB', dockBorder: 1.5, dockBorderCol: 'rgba(255,255,255,0.95)', dockShadow: 0, dockRad: 24,
                     mega: { hi: '#FF8585', mid: '#EF4444', dark: '#B91C1C', deep: '#450A0A', edge: 'rgba(255,255,255,0.85)', ew: 1.4, wave: '#FDE047' }
                 },
                 'dark-code': {
@@ -3346,7 +3402,12 @@
                     pillFill: '#122645', pillBorder: 2.5, pillBorderCol: '#38BDF8', pillShadow: 5, pillRad: 14,
                     orgTitle: '#FFFFFF', orgSub: '#38BDF8', orgDiv: 'rgba(56, 189, 248, 0.60)',
                     bubFill: '#122645', bubBorder: 6, bubBorderCol: '#38BDF8', bubShadow: 10, bubSoft: null,
-                    heroCol: '#38BDF8', titleCol: '#FFFFFF', scriptCol: '#FCD34D', scriptShd: 'rgba(0, 0, 0, 0.45)',
+                    heroFont: '"Archivo Black", "Space Grotesk", sans-serif', heroWeight: 400, heroCol: '#38BDF8',
+                    heroStroke: null, heroSW: 0, heroShdOff: 0, heroTrack: -0.02,
+                    titleFont: '"Archivo Black", "Space Grotesk", sans-serif', titleWeight: 400, titleCol: '#FFFFFF',
+                    titleStroke: null, titleSW: 0, titleShdOff: 0, titleTrack: 0.02,
+                    scriptCol: '#FCD34D', scriptStroke: null, scriptSW: 0, scriptShdOff: 0, scriptShd: 'rgba(0, 0, 0, 0.45)',
+                    capFont: '"Plus Jakarta Sans", sans-serif', dateFont: '"Space Grotesk", sans-serif',
                     capCol: '#E2E8F0', dateCol: '#38BDF8', locCol: '#FFFFFF',
                     dockFill: '#122645', dockText: '#FFFFFF', dockIcon: '#38BDF8', dockBorder: 2.5, dockBorderCol: '#38BDF8', dockShadow: 6, dockRad: 16,
                     mega: { hi: '#7DD3FC', mid: '#0EA5E9', dark: '#0369A1', deep: '#061326', edge: '#38BDF8', ew: 2, wave: '#38BDF8' }
@@ -3360,7 +3421,12 @@
                     pillFill: 'rgba(255, 255, 255, 0.96)', pillBorder: 0, pillBorderCol: 'transparent', pillShadow: 0, pillRad: 18, soft: 'rgba(6, 20, 44, 0.36)',
                     orgTitle: '#12305A', orgSub: '#2A82C6', orgDiv: '#CBD5E1',
                     bubFill: '#FFFFFF', bubBorder: 0, bubBorderCol: 'transparent', bubShadow: 0, bubSoft: 'rgba(6, 20, 44, 0.44)',
-                    heroCol: '#16488E', titleCol: '#16488E', scriptCol: '#F59E0B', scriptShd: 'rgba(18, 48, 90, 0.14)',
+                    heroFont: '"Archivo Black", "Space Grotesk", sans-serif', heroWeight: 400, heroCol: '#16488E',
+                    heroStroke: null, heroSW: 0, heroShdOff: 0, heroTrack: -0.02,
+                    titleFont: '"Archivo Black", "Space Grotesk", sans-serif', titleWeight: 400, titleCol: '#16488E',
+                    titleStroke: null, titleSW: 0, titleShdOff: 0, titleTrack: 0.02,
+                    scriptCol: '#F59E0B', scriptStroke: null, scriptSW: 0, scriptShdOff: 0, scriptShd: 'rgba(18, 48, 90, 0.14)',
+                    capFont: '"Plus Jakarta Sans", sans-serif', dateFont: '"Space Grotesk", sans-serif',
                     capCol: '#E2EEFF', dateCol: '#FDD34D', locCol: '#FFFFFF',
                     dockFill: '#FFFFFF', dockText: '#16488E', dockIcon: '#2A82C6', dockBorder: 0, dockBorderCol: 'transparent', dockShadow: 0, dockRad: 26,
                     mega: { hi: '#60A5FA', mid: '#2563EB', dark: '#1E3A8A', deep: '#091834', edge: 'rgba(255,255,255,0.72)', ew: 1.2, wave: '#FDD34D' }
@@ -3641,7 +3707,15 @@
                 ctx.shadowBlur = 42;
                 ctx.shadowOffsetY = 20;
             }
-            ctx.fillStyle = L.bubFill;
+            if (L.bubFill === 'glassBubGrad') {
+                const bg = ctx.createLinearGradient(bubX, bubY, bubX + bDim.w, bubY + bDim.bodyH);
+                bg.addColorStop(0, 'rgba(255, 255, 255, 0.88)');
+                bg.addColorStop(0.5, 'rgba(222, 238, 255, 0.72)');
+                bg.addColorStop(1, 'rgba(255, 255, 255, 0.84)');
+                ctx.fillStyle = bg;
+            } else {
+                ctx.fillStyle = L.bubFill;
+            }
             bubblePath(bubX, bubY, bDim.w, bDim.bodyH, bDim.rad, bDim.tailW, bDim.tailH);
             ctx.fill();
             ctx.restore();
@@ -3652,7 +3726,7 @@
                 ctx.stroke();
             }
 
-            // Stacked 3-Layer Hero Text Inside Bubble
+            // Stacked 3-Layer Hero Text Inside Bubble (Theme-Distinct Typography)
             const heroStr = E.isCS ? 'COMING SOON' : E.hero;
             const scriptStr = E.isCS ? 'Stay Tuned' : toTitleCase(E.mn || 'Menuju');
             const m = getL3BubbleMetrics(heroStr, E.title);
@@ -3660,8 +3734,89 @@
             const titleCenterY = bubY + bDim.bodyH * 0.72;
             const scriptCenterY = bubY + bDim.bodyH * 0.51;
 
-            drawTextTrack(heroStr, W / 2, heroCenterY, `400 ${m.heroFs}px "Archivo Black", "Space Grotesk", sans-serif`, L.heroCol, -0.02 * m.heroFs, 'center');
-            drawTextTrack(E.title, W / 2, titleCenterY, `400 ${m.titleFs}px "Archivo Black", "Space Grotesk", sans-serif`, L.titleCol, 0.02 * m.titleFs, 'center');
+            const drawBubbleWord = (txt, cy, fontSpec, colorSpec, strokeCol, strokeW, shdOff, tracking, glowCol = null, fsPx = 100) => {
+                ctx.save();
+                ctx.font = fontSpec;
+                ctx.textBaseline = 'middle';
+                ctx.lineJoin = 'round';
+                ctx.lineCap = 'round';
+                const chars = Array.from(txt);
+                const ws = chars.map((c) => ctx.measureText(c).width);
+                const tot = ws.reduce((a, b) => a + b, 0) + tracking * Math.max(0, chars.length - 1);
+                let cx = W / 2 - tot / 2;
+                ctx.textAlign = 'left';
+
+                const resolveWordFill = (col) => {
+                    if (col === 'glassHeroGrad') {
+                        const g = ctx.createLinearGradient(0, cy - fsPx * 0.45, 0, cy + fsPx * 0.45);
+                        g.addColorStop(0, '#FF8A8A');
+                        g.addColorStop(0.34, '#F84B4B');
+                        g.addColorStop(0.70, '#DC2626');
+                        g.addColorStop(1, '#991B1B');
+                        return g;
+                    }
+                    if (col === 'glassTitleGrad') {
+                        const g = ctx.createLinearGradient(0, cy - fsPx * 0.45, 0, cy + fsPx * 0.45);
+                        g.addColorStop(0, '#F87171');
+                        g.addColorStop(0.55, '#DC2626');
+                        g.addColorStop(1, '#991B1B');
+                        return g;
+                    }
+                    return col;
+                };
+
+                // Hard Neubrutalism offset shadow pass
+                if (shdOff > 0) {
+                    let sx = cx + shdOff;
+                    chars.forEach((c, idx) => {
+                        if (strokeCol && strokeW > 0) {
+                            ctx.lineWidth = strokeW;
+                            ctx.strokeStyle = '#000000';
+                            ctx.strokeText(c, sx, cy + shdOff);
+                        }
+                        ctx.fillStyle = '#000000';
+                        ctx.fillText(c, sx, cy + shdOff);
+                        sx += ws[idx] + tracking;
+                    });
+                }
+
+                if (glowCol) {
+                    ctx.shadowColor = glowCol;
+                    ctx.shadowBlur = 16;
+                    ctx.shadowOffsetY = 8;
+                }
+
+                // Stroke pass before fill (= paint-order: stroke fill)
+                if (strokeCol && strokeW > 0) {
+                    let tx = cx;
+                    ctx.lineWidth = strokeW;
+                    ctx.strokeStyle = strokeCol;
+                    chars.forEach((c, idx) => {
+                        ctx.strokeText(c, tx, cy);
+                        tx += ws[idx] + tracking;
+                    });
+                }
+
+                ctx.fillStyle = resolveWordFill(colorSpec);
+                chars.forEach((c, idx) => {
+                    ctx.fillText(c, cx, cy);
+                    cx += ws[idx] + tracking;
+                });
+                ctx.restore();
+            };
+
+            drawBubbleWord(
+                heroStr, heroCenterY,
+                `${L.heroWeight} ${m.heroFs}px ${L.heroFont}`,
+                L.heroCol, L.heroStroke, L.heroSW, L.heroShdOff,
+                L.heroTrack * m.heroFs, L.heroGlow, m.heroFs
+            );
+            drawBubbleWord(
+                E.title, titleCenterY,
+                `${L.titleWeight} ${m.titleFs}px ${L.titleFont}`,
+                L.titleCol, L.titleStroke, L.titleSW, L.titleShdOff,
+                L.titleTrack * m.titleFs, L.titleGlow, m.titleFs
+            );
 
             ctx.save();
             ctx.translate(W / 2, scriptCenterY);
@@ -3669,10 +3824,27 @@
             ctx.font = `400 ${m.scriptFs}px "Yellowtail", cursive`;
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
-            ctx.shadowColor = L.scriptShd;
-            ctx.shadowBlur = 8;
-            ctx.shadowOffsetX = 2;
-            ctx.shadowOffsetY = 3;
+            ctx.lineJoin = 'round';
+            ctx.lineCap = 'round';
+            if (L.scriptShdOff > 0) {
+                if (L.scriptSW > 0) {
+                    ctx.lineWidth = L.scriptSW;
+                    ctx.strokeStyle = '#000000';
+                    ctx.strokeText(scriptStr, L.scriptShdOff, L.scriptShdOff);
+                }
+                ctx.fillStyle = '#000000';
+                ctx.fillText(scriptStr, L.scriptShdOff, L.scriptShdOff);
+            } else {
+                ctx.shadowColor = L.scriptShd;
+                ctx.shadowBlur = 12;
+                ctx.shadowOffsetX = 0;
+                ctx.shadowOffsetY = 5;
+            }
+            if (L.scriptStroke && L.scriptSW > 0) {
+                ctx.lineWidth = L.scriptSW;
+                ctx.strokeStyle = L.scriptStroke;
+                ctx.strokeText(scriptStr, 0, 0);
+            }
             ctx.fillStyle = L.scriptCol;
             ctx.fillText(scriptStr, 0, 0);
             ctx.restore();
@@ -3802,15 +3974,15 @@
             // 6. Centered Org Description + Schedule + Location
             const capY = bubY + bDim.bodyH + bDim.tailH + capGap;
             const titleLine = `${toTitleCase(E.title)} HIMA Informatika`;
-            drawTextTrack(titleLine, W / 2, capY + 12, '700 21px "Plus Jakarta Sans", sans-serif', L.capCol, 0, 'center');
-            drawTextTrack('Institut Digital Ekonomi LPKIA', W / 2, capY + 41, '600 21px "Plus Jakarta Sans", sans-serif', L.capCol, 0, 'center');
+            drawTextTrack(titleLine, W / 2, capY + 12, `700 21px ${L.capFont}`, L.capCol, 0, 'center');
+            drawTextTrack('Institut Digital Ekonomi LPKIA', W / 2, capY + 41, `600 21px ${L.capFont}`, L.capCol, 0, 'center');
 
             if (!E.isCS) {
                 const dtTxt = `${E.date} • ${E.time}`;
-                drawTextTrack(dtTxt, W / 2, capY + 76, '700 19px "Space Grotesk", sans-serif', L.dateCol, 1.4, 'center');
+                drawTextTrack(dtTxt, W / 2, capY + 76, `700 19px ${L.dateFont}`, L.dateCol, 1.4, 'center');
 
                 const locTxt = toTitleCase(E.loc);
-                ctx.font = '800 22px "Plus Jakarta Sans", sans-serif';
+                ctx.font = `800 22px ${L.capFont}`;
                 const locW = ctx.measureText(locTxt).width;
                 const locStartX = W / 2 - (26 + 8 + locW) / 2;
                 const locY = capY + 114;
@@ -3831,7 +4003,7 @@
                 ctx.fill();
                 ctx.restore();
 
-                drawTextTrack(locTxt, locStartX + 32, locY, '800 22px "Plus Jakarta Sans", sans-serif', L.locCol, 0, 'left');
+                drawTextTrack(locTxt, locStartX + 32, locY, `800 22px ${L.capFont}`, L.locCol, 0, 'left');
             }
 
             return canvas;
