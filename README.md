@@ -41,7 +41,13 @@ FlyerKader_Project/
 │   ├── poster-h7-layout5-glass-9x16.png
 │   ├── poster-h7-layout5-dark-4x5.png
 │   ├── poster-h7-layout5-modern-4x5.png
-│   └── poster-coming-soon-layout5-glass-4x5.png
+│   ├── poster-coming-soon-layout5-glass-4x5.png
+│   ├── poster-live-report-neubrutalism-4x5.png
+│   ├── poster-live-report-layout2-dark-4x5.png
+│   ├── poster-live-report-layout3-glass-4x5.png
+│   ├── poster-live-report-layout4-modern-4x5.png
+│   ├── poster-live-report-layout5-glass-4x5.png
+│   └── poster-live-report-layout5-glass-9x16.png
 └── archive/            # Eksplorasi desain sebelumnya (H-3)
 ```
 
@@ -49,8 +55,8 @@ FlyerKader_Project/
 
 - **Switcher Layout:** `Layout 1 (Countdown Card)`, `Layout 2 (Retro Pop-up)`, `Layout 3 (Bubble Pop — Biru HIMA IF)`, `Layout 4 (IG Feed Stack)`, dan `Layout 5 (Pinned Note — Mading Pin 3D)`
 - **3 Logo Resmi Terintegrasi:** `HIMA Informatika`, `IDE LPKIA`, dan `Kabinet Aksara Nirmana` terpasang di seluruh Layout 1–5 (plus opsional override logo ke-3 di Layout 2)
-- **Mode / Preset Konten:** `H-7`, `H-3`, `H-1`, `HARI H`, dan **`COMING SOON` (tersedia di semua layout 1–5 — tanpa tanggal/lokasi)**
+- **Mode / Preset Konten:** `H-7`, `H-3`, `H-1`, `HARI H`, **`COMING SOON`**, dan **`LIVE REPORT (Frame Bolong 1–5)`** — bagian tengah frame otomatis transparan (`RGBA alpha = 0`) siap ditempel foto/story di Instagram/Canva/CapCut, lengkap dengan field **Label Live** (`LIVE REPORT`, `ON AIR`, dll) & **Judul / Topik Live** yang bisa diubah-ubah serta opsional upload foto preview/composite
 - **Switcher Style (Semua Layout & Mode):** `Neubrutalism` (default), `Glassmorphism`, `Dark Code`, dan `Modern Clean`
 - **Multi-Rasio IG:** `4:5 Feed (1080x1350)`, `9:16 Story (1080x1920)`, dan `1:1 Square (1080x1080)`
 - **Edit Teks & Logo Live:** Judul acara, tanggal, jam, lokasi, CTA, IG handle, serta upload logo custom ke-3 di Layout 2
-- **Export PNG 1080px:** Menggunakan native HTML5 Canvas 2D renderer tanpa library eksternal
+- **Export PNG 1080px:** Menggunakan native HTML5 Canvas 2D renderer tanpa library eksternal (otomatis mendukung transparansi alpha di mode Live Report)

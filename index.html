@@ -1449,6 +1449,297 @@
             color: #12305A;
         }
 
+        /* ================= LIVE REPORT MODE (FRAME BOLONG 5 LAYOUT) ================= */
+        .lr-only { display: none !important; }
+        .poster-canvas.mode-live-report .lr-only { display: inline-flex !important; }
+        .poster-canvas.mode-live-report .lr-only-block { display: flex !important; }
+        .poster-canvas.mode-live-report .lr-hide { display: none !important; }
+
+        .lr-live-dot {
+            display: none;
+            width: 11px;
+            height: 11px;
+            border-radius: 999px;
+            background: #EF4444;
+            border: 2px solid #FFFFFF;
+            box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.35);
+            flex-shrink: 0;
+        }
+        .poster-canvas.mode-live-report .lr-live-dot { display: inline-block; }
+
+        .lr-hole {
+            display: none;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background-color: #F8FAFC;
+            background-image:
+                linear-gradient(45deg, #DBEAFE 25%, transparent 25%),
+                linear-gradient(-45deg, #DBEAFE 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, #DBEAFE 75%),
+                linear-gradient(-45deg, transparent 75%, #DBEAFE 75%);
+            background-size: 28px 28px;
+            background-position: 0 0, 0 14px, 14px -14px, -14px 0;
+            box-sizing: border-box;
+        }
+        .poster-canvas.mode-live-report .lr-hole { display: flex; }
+
+        .lr-preview-img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            z-index: 2;
+        }
+        .lr-hole-hint {
+            position: relative;
+            z-index: 1;
+            padding: 7px 16px;
+            border-radius: 999px;
+            background: rgba(15, 23, 42, 0.72);
+            color: #FFFFFF;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 800;
+            font-size: 13px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            border: 1.5px solid rgba(255, 255, 255, 0.35);
+            pointer-events: none;
+        }
+
+        /* Layout 1 Live Report Cutout */
+        .poster-canvas.layout-1.mode-live-report .countdown-box {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .poster-canvas.layout-1.mode-live-report .hero-card {
+            padding: 44px 18px 28px 18px !important;
+        }
+        .poster-canvas.layout-1.ratio-9-16.mode-live-report .hero-card {
+            padding: 48px 20px 34px 20px !important;
+        }
+        .poster-canvas.layout-1.ratio-1-1.mode-live-report .hero-card {
+            padding: 38px 16px 22px 16px !important;
+        }
+        .l1-lr-hole {
+            width: 100%;
+            height: 295px;
+            border-radius: 14px;
+            border: 2.5px solid rgba(15, 23, 42, 0.25);
+        }
+        .ratio-9-16 .l1-lr-hole { height: 430px; }
+        .ratio-1-1  .l1-lr-hole { height: 210px; }
+        .layout-1.style-neubrutalism .l1-lr-hole { border: 3.5px solid #000000; border-radius: 0px; }
+        .layout-1.style-dark-code .l1-lr-hole { border: 2.5px solid #38BDF8; border-radius: 12px; }
+        .layout-1.style-glass .l1-lr-hole { border: 2px solid rgba(255, 255, 255, 0.92); border-radius: 16px; }
+
+        /* Layout 2 Live Report Cutout */
+        .poster-canvas.layout-2.mode-live-report .l2-body-wrap {
+            padding: 16px 18px 46px 18px !important;
+        }
+        .poster-canvas.layout-2.ratio-9-16.mode-live-report .l2-body-wrap {
+            padding: 16px 20px 52px 20px !important;
+        }
+        .poster-canvas.layout-2.ratio-1-1.mode-live-report .l2-body-wrap {
+            padding: 14px 16px 38px 16px !important;
+        }
+        .l2-lr-hole {
+            width: 100%;
+            height: 420px;
+            border-radius: 14px;
+            border: 2.5px solid rgba(15, 23, 42, 0.25);
+        }
+        .ratio-9-16 .l2-lr-hole { height: 600px; border-radius: 16px; }
+        .ratio-1-1  .l2-lr-hole { height: 325px; border-radius: 12px; }
+        .layout-2.style-neubrutalism .l2-lr-hole { border: 3.5px solid #000000; border-radius: 0px; }
+        .layout-2.style-dark-code .l2-lr-hole { border: 2.5px solid #38BDF8; border-radius: 10px; }
+        .layout-2.style-glass .l2-lr-hole { border: 2px solid rgba(255, 255, 255, 0.92); border-radius: 14px; }
+        .poster-canvas.layout-2.mode-live-report .l2-sticker-top {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+        }
+        .poster-canvas.layout-2.mode-live-report .l2-sticker-stamp {
+            margin-top: -24px !important;
+            position: relative;
+            z-index: 25;
+        }
+
+        /* Layout 3 Live Report Cutout */
+        .poster-canvas.layout-3.mode-live-report .l3-bubble-wrap {
+            width: 690px;
+            height: 518px;
+        }
+        .poster-canvas.layout-3.ratio-9-16.mode-live-report .l3-bubble-wrap {
+            width: 750px;
+            height: 680px;
+        }
+        .poster-canvas.layout-3.ratio-1-1.mode-live-report .l3-bubble-wrap {
+            width: 580px;
+            height: 408px;
+        }
+        .l3-lr-hole {
+            position: absolute;
+            top: 22px;
+            left: 22px;
+            right: 22px;
+            bottom: calc(13.5% + 18px);
+            border-radius: 26px;
+            z-index: 5;
+            border: 2.5px solid rgba(15, 23, 42, 0.22);
+        }
+        .layout-3.style-neubrutalism .l3-lr-hole { border: 3.5px solid #000000; border-radius: 22px; }
+        .layout-3.style-dark-code .l3-lr-hole { border: 2.5px solid #38BDF8; border-radius: 22px; }
+        .layout-3.style-glass .l3-lr-hole { border: 2px solid rgba(255, 255, 255, 0.95); }
+
+        .l3-lr-badge {
+            display: none;
+            position: absolute;
+            top: -16px;
+            left: 24px;
+            z-index: 25;
+            padding: 7px 18px;
+            align-items: center;
+            gap: 9px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 800;
+            font-size: 18px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            transform: rotate(-2deg);
+        }
+        .poster-canvas.layout-3.mode-live-report .l3-lr-badge { display: inline-flex; }
+        .layout-3.style-neubrutalism .l3-lr-badge { background: #FCD34D; color: #0B1F40; border: 3.5px solid #000000; box-shadow: 5px 5px 0 #000000; }
+        .layout-3.style-glass .l3-lr-badge { background: linear-gradient(135deg, #F87171 0%, #DC2626 100%); color: #FFFFFF; border: 1.5px solid rgba(255, 255, 255, 0.9); border-radius: 999px; box-shadow: 0 10px 22px rgba(220, 38, 38, 0.35); }
+        .layout-3.style-dark-code .l3-lr-badge { background: #0B192E; color: #38BDF8; border: 2.5px solid #38BDF8; border-radius: 8px; box-shadow: 4px 4px 0 #000000; }
+        .layout-3.style-modern .l3-lr-badge { background: #CA2C2A; color: #FFFFFF; border-radius: 999px; box-shadow: 0 10px 24px rgba(8, 22, 44, 0.36); }
+
+        .l3-lr-topic {
+            display: none;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 800;
+            font-size: 32px;
+            line-height: 1.1;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #FCD34D;
+        }
+        .ratio-9-16 .l3-lr-topic { font-size: 36px; }
+        .ratio-1-1  .l3-lr-topic { font-size: 26px; }
+        .poster-canvas.layout-3.mode-live-report .l3-lr-topic { display: block; }
+        .layout-3.style-dark-code .l3-lr-topic { color: #38BDF8; }
+        .layout-3.style-glass .l3-lr-topic { color: #FFFFFF; text-shadow: 0 4px 12px rgba(6, 20, 56, 0.35); }
+
+        /* Layout 4 Live Report Cutout */
+        .l4-lr-pill {
+            display: none;
+            margin-left: 14px;
+            align-items: center;
+            gap: 6px;
+            padding: 3px 10px;
+            border-radius: 999px;
+            background: #CA2C2A;
+            color: #FFFFFF;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 800;
+            font-size: 11px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+        .l4-lr-pill .lr-live-dot,
+        .layout-3.style-glass .l3-lr-badge .lr-live-dot,
+        .layout-3.style-modern .l3-lr-badge .lr-live-dot,
+        .layout-5:not(.style-dark-code) .l5-lr-chin-badge .lr-live-dot {
+            background: #FFFFFF;
+            border: none;
+            box-shadow: 0 0 0 2.5px rgba(255, 255, 255, 0.35);
+        }
+        .poster-canvas.layout-4.mode-live-report .l4-lr-pill { display: inline-flex; }
+        .layout-4.style-neubrutalism .l4-lr-pill { border: 2px solid #000000; border-radius: 0px; }
+        .l4-lr-hole {
+            width: 100%;
+            flex: 1;
+            z-index: 3;
+        }
+
+        /* Layout 5 Live Report Cutout (Polaroid Mading Frame) */
+        .poster-canvas.layout-5.mode-live-report .l5-card-wrap {
+            width: 720px;
+            height: 506px;
+            margin-top: 12px;
+        }
+        .poster-canvas.layout-5.ratio-9-16.mode-live-report .l5-card-wrap {
+            width: 760px;
+            height: 650px;
+            margin-top: 18px;
+        }
+        .poster-canvas.layout-5.ratio-1-1.mode-live-report .l5-card-wrap {
+            width: 630px;
+            height: 392px;
+            margin-top: 8px;
+        }
+        .poster-canvas.layout-5.mode-live-report .l5-note-card {
+            padding: 20px 20px 18px 20px !important;
+            justify-content: flex-start;
+        }
+        .poster-canvas.layout-5.mode-live-report .l5-info-stack {
+            margin-top: 38px;
+            gap: 6px;
+        }
+        .poster-canvas.layout-5.ratio-9-16.mode-live-report .l5-info-stack { margin-top: 52px; }
+        .poster-canvas.layout-5.ratio-1-1.mode-live-report .l5-info-stack { margin-top: 24px; gap: 4px; }
+
+        .l5-lr-hole {
+            width: 100%;
+            flex: 1;
+            border-radius: 18px;
+            border: 2px solid rgba(15, 23, 42, 0.16);
+        }
+        .layout-5.style-neubrutalism .l5-lr-hole { border: 3.5px solid #000000; border-radius: 10px; }
+        .layout-5.style-dark-code .l5-lr-hole { border: 2.5px solid #38BDF8; border-radius: 18px; }
+
+        .l5-lr-chin {
+            display: none;
+            width: 100%;
+            height: 52px;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 8px 0 8px;
+            flex-shrink: 0;
+            box-sizing: border-box;
+        }
+        .ratio-1-1 .l5-lr-chin { height: 42px; padding-top: 6px; }
+        .poster-canvas.layout-5.mode-live-report .l5-lr-chin { display: flex; }
+
+        .l5-lr-chin-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 5px 14px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 800;
+            font-size: 14px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            border-radius: 999px;
+            background: #CA2C2A;
+            color: #FFFFFF;
+        }
+        .layout-5.style-neubrutalism .l5-lr-chin-badge { border: 2.5px solid #000000; box-shadow: 3px 3px 0 #000000; border-radius: 0px; }
+        .layout-5.style-dark-code .l5-lr-chin-badge { background: #0B192E; color: #38BDF8; border: 1.5px solid #38BDF8; }
+        .l5-lr-chin-meta {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 800;
+            font-size: 13px;
+            letter-spacing: 0.08em;
+            color: #475569;
+            text-transform: uppercase;
+        }
+
         /* ================= THEME 1: NEUBRUTALISM ================= */
         .style-neubrutalism {
             background-color: #FFFFFF;
@@ -1921,6 +2212,40 @@
                     <button type="button" onclick="setHeroPreset('COMING SOON')" id="preset-COMING SOON" class="btn-brutal w-full py-1.5 bg-[#162C4E] text-[#FCD34D] border-2 border-black text-[11px] font-extrabold uppercase tracking-wider shadow-[2px_2px_0_#000000] cursor-pointer">
                         COMING SOON (Tanpa Tanggal)
                     </button>
+                    <button type="button" onclick="setHeroPreset('LIVE REPORT')" id="preset-LIVE REPORT" class="btn-brutal w-full py-1.5 bg-[#162C4E] text-white border-2 border-black text-[11px] font-extrabold uppercase tracking-wider shadow-[2px_2px_0_#000000] flex items-center justify-center gap-2 cursor-pointer">
+                        <span class="w-2.5 h-2.5 rounded-full bg-[#EF4444] border border-white inline-block"></span>
+                        <span>LIVE REPORT (Frame Bolong 1-5)</span>
+                    </button>
+                </div>
+
+                <!-- PANEL KHUSUS LIVE REPORT (MUNCUL SAAT MODE LIVE REPORT) -->
+                <div id="liveReportFieldsWrap" class="hidden bg-[#0B192E] border-2 border-[#EF4444] p-2.5 space-y-2 shadow-[3px_3px_0_#000000]">
+                    <div class="flex items-center justify-between">
+                        <span class="text-[10px] font-extrabold uppercase tracking-wider text-[#F87171] flex items-center gap-1.5">
+                            <span class="w-2 h-2 rounded-full bg-[#EF4444] inline-block"></span> Pengaturan Live Report
+                        </span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2">
+                        <div>
+                            <label class="text-[9.5px] font-bold uppercase text-white/75 block mb-1">Label Badge Live</label>
+                            <input id="inLiveLabel" type="text" value="LIVE REPORT" oninput="syncAllDom()" class="w-full px-2 py-1.5 bg-[#122645] border border-black text-xs font-bold text-white focus:border-[#FCD34D] focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="text-[9.5px] font-bold uppercase text-white/75 block mb-1">Judul / Topik Live</label>
+                            <input id="inLiveTopic" type="text" value="OPENING CEREMONY" oninput="syncAllDom()" class="w-full px-2 py-1.5 bg-[#122645] border border-black text-xs font-bold text-white focus:border-[#FCD34D] focus:outline-none">
+                        </div>
+                    </div>
+                    <div class="pt-1 border-t border-white/10 space-y-1.5">
+                        <div class="flex items-center justify-between gap-2">
+                            <span class="text-[9.5px] font-bold text-white/80">Uji Foto di Belakang Frame</span>
+                            <button type="button" onclick="clearLivePhoto()" id="btnClearLivePhoto" class="hidden px-2 py-0.5 bg-[#CA2C2A] text-white border border-black text-[9px] font-extrabold uppercase cursor-pointer">Hapus</button>
+                        </div>
+                        <input id="inLivePhotoFile" type="file" accept="image/*" onchange="handleLivePhotoUpload(this)" class="w-full text-[10px] text-white/80 file:mr-2 file:py-1 file:px-2 file:border file:border-black file:bg-[#FCD34D] file:text-black file:text-[9.5px] file:font-extrabold file:uppercase file:cursor-pointer cursor-pointer">
+                        <label class="flex items-center gap-2 text-[10px] font-semibold text-[#93C5FD] cursor-pointer select-none pt-0.5">
+                            <input id="chkIncludeLivePhoto" type="checkbox" onchange="syncAllDom()" class="accent-[#FCD34D]">
+                            <span>Gabungkan foto saat Download (kosongkan = PNG Bolong)</span>
+                        </label>
+                    </div>
                 </div>
 
                 <div class="grid grid-cols-2 gap-2.5">
@@ -2120,6 +2445,7 @@
                         <div class="relative w-[840px] max-w-full flex flex-col items-center">
 
                             <div class="countdown-box px-7 py-2.5">
+                                <span class="lr-live-dot"></span>
                                 <span id="outCountdown" class="hero-countdown font-pixel text-[42px] font-bold tracking-[0.06em] leading-none block">
                                     COUNTDOWN
                                 </span>
@@ -2140,7 +2466,12 @@
                                     <span class="win-dot win-dot-3 w-3.5 h-3.5 block"></span>
                                 </div>
 
-                                <svg viewBox="0 0 680 250" class="hero-svg relative z-10 w-[660px] h-[235px] overflow-visible" aria-label="H-7">
+                                <div class="l1-lr-hole lr-hole">
+                                    <img class="lr-preview-img hidden" alt="Live Report Photo">
+                                    <span class="lr-hole-hint">AREA FOTO (TRANSPARAN)</span>
+                                </div>
+
+                                <svg viewBox="0 0 680 250" class="hero-svg lr-hide relative z-10 w-[660px] h-[235px] overflow-visible" aria-label="H-7">
                                     <defs>
                                         <linearGradient id="glassHeroGrad" gradientUnits="userSpaceOnUse" x1="0" y1="36" x2="0" y2="212">
                                             <stop offset="0%" stop-color="#FF8585"/>
@@ -2273,6 +2604,7 @@
                             <div class="relative">
                                 <!-- Top-Left Tilted Sticker (Zona Oren): COUNTDOWN • MENUJU -->
                                 <div class="l2-sticker-top px-5 py-2">
+                                    <span class="lr-live-dot"></span>
                                     <span id="l2OutBanner" class="l2-sticker-top-txt font-pixel text-[23px] font-bold uppercase tracking-[0.06em] leading-none block">
                                         COUNTDOWN • MENUJU
                                     </span>
@@ -2291,10 +2623,14 @@
                                         </div>
                                     </div>
 
-                                    <!-- White Dialog Hero Highlight (Fokus H-7 + Stamp KADERISASI) -->
-                                    <div class="px-8 pt-9 pb-14 flex flex-col items-center">
+                                    <!-- White Dialog Hero Highlight / Live Report Cutout -->
+                                    <div class="l2-body-wrap px-8 pt-9 pb-14 flex flex-col items-center">
+                                        <div class="l2-lr-hole lr-hole">
+                                            <img class="lr-preview-img hidden" alt="Live Report Photo">
+                                            <span class="lr-hole-hint">AREA FOTO (TRANSPARAN)</span>
+                                        </div>
                                         <!-- Giant H-7 Highlight SVG -->
-                                        <svg viewBox="0 0 680 220" class="l2-hero-svg overflow-visible" aria-label="H-7">
+                                        <svg viewBox="0 0 680 220" class="l2-hero-svg lr-hide overflow-visible" aria-label="H-7">
                                             <defs>
                                                 <linearGradient id="l2GlassHeroGrad" gradientUnits="userSpaceOnUse" x1="0" y1="26" x2="0" y2="196">
                                                     <stop offset="0%" stop-color="#FF8585"/>
@@ -2504,8 +2840,18 @@
                                     </g>
                                 </svg>
 
+                                <!-- Live Report Badge + Cutout Hole Inside Speech Bubble -->
+                                <div class="l3-lr-badge">
+                                    <span class="lr-live-dot"></span>
+                                    <span id="l3OutLrBadge">LIVE REPORT</span>
+                                </div>
+                                <div class="l3-lr-hole lr-hole">
+                                    <img class="lr-preview-img hidden" alt="Live Report Photo">
+                                    <span class="lr-hole-hint">AREA FOTO (TRANSPARAN)</span>
+                                </div>
+
                                 <!-- 3-Layer Hero Typography Inside Bubble -->
-                                <div class="l3-bubble-inner relative z-10 w-full h-full flex flex-col items-center justify-center text-center">
+                                <div class="l3-bubble-inner lr-hide relative z-10 w-full h-full flex flex-col items-center justify-center text-center">
                                     <span id="l3OutHero" class="l3-hero-txt font-hero uppercase leading-[0.88] tracking-[-0.02em] block whitespace-pre-line" style="font-size: 136px;">
                                         H-7
                                     </span>
@@ -2519,7 +2865,8 @@
                             </div>
 
                             <!-- Centered Org Description + Schedule + Location -->
-                            <div class="mt-6 text-center space-y-2 max-w-[660px]">
+                            <div class="mt-6 text-center space-y-2 max-w-[680px]">
+                                <p id="l3OutLrTopic" class="l3-lr-topic">OPENING CEREMONY</p>
                                 <p class="l3-cap-main font-semibold text-[21px] leading-snug">
                                     <span id="l3OutSubTitle" class="font-bold">Kaderisasi</span> HIMA Informatika<br>
                                     Institut Digital Ekonomi LPKIA
@@ -2630,10 +2977,16 @@
                                         <div class="l4-win-bar">
                                             <div class="l4-win-dots"><span class="l4-win-dot l4-wd-1"></span><span class="l4-win-dot l4-wd-2"></span><span class="l4-win-dot l4-wd-3"></span></div>
                                             <span id="l4OutFile" class="l4-win-file">countdown.exe</span>
+                                            <span id="l4OutLrPill" class="l4-lr-pill"><span class="lr-live-dot"></span><span id="l4OutLrTxt">LIVE REPORT</span></span>
                                         </div>
-                                        <span class="code-accent l4-media-code l4-cb" style="left: 16px;">&gt;_</span>
+                                        <span class="code-accent l4-media-code l4-cb lr-hide" style="left: 16px;">&gt;_</span>
 
-                                        <div class="l4-media-body">
+                                        <div class="l4-lr-hole lr-hole">
+                                            <img class="lr-preview-img hidden" alt="Live Report Photo">
+                                            <span class="lr-hole-hint">AREA FOTO (TRANSPARAN)</span>
+                                        </div>
+
+                                        <div class="l4-media-body lr-hide">
                                             <span id="l4OutBadge" class="l4-badge">COUNTDOWN</span>
                                             <span id="l4OutHero" class="l4-hero-txt" style="font-size: 250px;">H-7</span>
                                             <span id="l4OutScript" class="l4-script-txt font-script" style="font-size: 70px;">Menuju</span>
@@ -2856,7 +3209,15 @@
                                         </g>
                                     </svg>
 
-                                    <div class="l5-card-inner">
+                                    <div class="l5-lr-hole lr-hole">
+                                        <img class="lr-preview-img hidden" alt="Live Report Photo">
+                                        <span class="lr-hole-hint">AREA FOTO (TRANSPARAN)</span>
+                                    </div>
+                                    <div class="l5-lr-chin">
+                                        <span class="l5-lr-chin-badge"><span class="lr-live-dot"></span><span id="l5OutLrBadge">LIVE REPORT</span></span>
+                                        <span id="l5OutLrMeta" class="l5-lr-chin-meta">HIMA IF // ON AIR</span>
+                                    </div>
+                                    <div class="l5-card-inner lr-hide">
                                         <span id="l5OutCd" class="l5-card-cd">COUNTDOWN</span>
                                         <span id="l5OutHero" class="l5-card-hero">H-7</span>
                                     </div>
@@ -2924,6 +3285,98 @@
         let zoomSetting = 'fit';
         let showAccents = true;
         let customLogo3DataUrl = null;
+        let livePhotoDataUrl = null;
+
+        function handleLivePhotoUpload(input) {
+            const file = input?.files?.[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                livePhotoDataUrl = e.target.result;
+                const clr = document.getElementById('btnClearLivePhoto');
+                if (clr) clr.classList.remove('hidden');
+                syncAllDom();
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function clearLivePhoto() {
+            livePhotoDataUrl = null;
+            const inp = document.getElementById('inLivePhotoFile');
+            const clr = document.getElementById('btnClearLivePhoto');
+            if (inp) inp.value = '';
+            if (clr) clr.classList.add('hidden');
+            syncAllDom();
+        }
+
+        function shouldBakeLivePhoto() {
+            const chk = document.getElementById('chkIncludeLivePhoto');
+            return Boolean(livePhotoDataUrl && chk && chk.checked);
+        }
+
+        function drawCoverImage(ctx, img, x, y, w, h) {
+            if (!img || !img.width || !img.height) return;
+            const ir = img.width / img.height;
+            const br = w / h;
+            let sx = 0, sy = 0, sw = img.width, sh = img.height;
+            if (ir > br) {
+                sw = img.height * br;
+                sx = (img.width - sw) / 2;
+            } else {
+                sh = img.width / br;
+                sy = (img.height - sh) / 2;
+            }
+            ctx.drawImage(img, sx, sy, sw, sh, x, y, w, h);
+        }
+
+        function punchLiveHole(ctx, tracePathFn, box, liveImg, rimCol, rimW) {
+            ctx.save();
+            ctx.globalCompositeOperation = 'destination-out';
+            tracePathFn();
+            ctx.fillStyle = '#000000';
+            ctx.fill();
+            ctx.restore();
+
+            if (liveImg && shouldBakeLivePhoto()) {
+                ctx.save();
+                tracePathFn();
+                ctx.clip();
+                drawCoverImage(ctx, liveImg, box.x, box.y, box.w, box.h);
+                ctx.restore();
+            }
+
+            if (rimCol && rimW > 0) {
+                ctx.save();
+                tracePathFn();
+                ctx.lineWidth = rimW;
+                ctx.strokeStyle = rimCol;
+                ctx.stroke();
+                ctx.restore();
+            }
+        }
+
+        function drawLiveDot(ctx, cx, cy, r = 5.5, onRedBg = false) {
+            ctx.save();
+            if (onRedBg) {
+                ctx.fillStyle = 'rgba(255, 255, 255, 0.32)';
+                ctx.beginPath();
+                ctx.arc(cx, cy, r * 1.48, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.fillStyle = '#FFFFFF';
+                ctx.beginPath();
+                ctx.arc(cx, cy, r * 0.92, 0, Math.PI * 2);
+                ctx.fill();
+            } else {
+                ctx.fillStyle = '#EF4444';
+                ctx.beginPath();
+                ctx.arc(cx, cy, r, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.lineWidth = 2;
+                ctx.strokeStyle = '#FFFFFF';
+                ctx.stroke();
+            }
+            ctx.restore();
+        }
 
         function handleLogo3Upload(input) {
             const file = input?.files?.[0];
@@ -3038,16 +3491,23 @@
             const loc = (document.getElementById('inLoc')?.value || 'Kampus IDE LPKIA').trim().toUpperCase();
             const igHandle = (document.getElementById('inIg')?.value || 'hmif_LPKIA').trim() || 'hmif_LPKIA';
             const cta = (document.getElementById('inCta')?.value || 'GO.HMIF-LPKIA.MY.ID').trim().toUpperCase() || 'GO.HMIF-LPKIA.MY.ID';
+            const liveLabel = (document.getElementById('inLiveLabel')?.value || 'LIVE REPORT').trim().toUpperCase() || 'LIVE REPORT';
+            const liveTopic = (document.getElementById('inLiveTopic')?.value || 'OPENING CEREMONY').trim().toUpperCase() || 'OPENING CEREMONY';
             const isCS = posterMode === 'coming-soon';
+            const isLR = posterMode === 'live-report';
             return {
                 isCS,
+                isLR,
                 title,
+                liveLabel,
+                liveTopic,
                 hero: isCS ? title : rawHero,
-                cd: isCS ? 'COMING SOON' : rawCd,
-                mn: isCS ? '' : rawMn,
-                l2Banner: isCS ? 'COMING SOON' : `${rawCd} • ${rawMn}`,
-                stamp: isCS ? 'STAY TUNED' : title,
-                bgWord1: isCS ? 'COMINGSOON' : rawCd,
+                cd: isLR ? liveLabel : (isCS ? 'COMING SOON' : rawCd),
+                mn: isLR ? liveTopic : (isCS ? '' : rawMn),
+                l2Banner: isLR ? liveLabel : (isCS ? 'COMING SOON' : `${rawCd} • ${rawMn}`),
+                stamp: isLR ? title : (isCS ? 'STAY TUNED' : title),
+                l2Stamp: isLR ? liveTopic : (isCS ? 'STAY TUNED' : title),
+                bgWord1: isLR ? liveLabel.replace(/\s+/g, '') : (isCS ? 'COMINGSOON' : rawCd),
                 bgWord2: title,
                 num, date, time, loc, igHandle, cta
             };
@@ -3069,14 +3529,39 @@
         function syncAllDom() {
             const E = getEffectiveContent();
             const canvas = document.getElementById('posterCanvas');
-            if (canvas) canvas.classList.toggle('mode-coming-soon', E.isCS);
+            if (canvas) {
+                canvas.classList.toggle('mode-coming-soon', E.isCS);
+                canvas.classList.toggle('mode-live-report', E.isLR);
+            }
 
             const modeLbl = document.getElementById('lblActiveMode');
             if (modeLbl) modeLbl.textContent = posterMode;
             const heroWrap = document.getElementById('heroTextFieldWrap');
             const cdWrap = document.getElementById('countdownFieldsWrap');
-            if (heroWrap) heroWrap.classList.toggle('opacity-50', E.isCS);
+            const lrWrap = document.getElementById('liveReportFieldsWrap');
+            if (heroWrap) heroWrap.classList.toggle('opacity-50', E.isCS || E.isLR);
             if (cdWrap) cdWrap.classList.toggle('opacity-50', E.isCS);
+            if (lrWrap) lrWrap.classList.toggle('hidden', !E.isLR);
+
+            document.querySelectorAll('.lr-hole').forEach((hole) => {
+                const img = hole.querySelector('.lr-preview-img');
+                const hint = hole.querySelector('.lr-hole-hint');
+                if (livePhotoDataUrl && img) {
+                    img.src = livePhotoDataUrl;
+                    img.classList.remove('hidden');
+                    if (hint) hint.classList.add('hidden');
+                } else {
+                    if (img) { img.src = ''; img.classList.add('hidden'); }
+                    if (hint) hint.classList.remove('hidden');
+                }
+            });
+
+            const dlBtn = document.getElementById('btnDownload');
+            if (dlBtn && !dlBtn.disabled) {
+                dlBtn.textContent = (E.isLR && !shouldBakeLivePhoto())
+                    ? 'Download PNG Frame Bolong (1080px)'
+                    : 'Download PNG (1080px)';
+            }
 
             // Layout 1 DOM sync
             const setIf = (id, v) => {
@@ -3117,7 +3602,7 @@
                 l2Shd.setAttribute('letter-spacing', l2M.ls);
                 l2Main.setAttribute('letter-spacing', l2M.ls);
             }
-            setIf('l2OutTitle', E.stamp);
+            setIf('l2OutTitle', E.l2Stamp);
             setIf('l2OutIg', E.igHandle);
 
             const wall = document.getElementById('l2BgWall');
@@ -3148,6 +3633,8 @@
                 l3TitleEl.textContent = E.title;
                 l3TitleEl.style.fontSize = l3M.titleFs + 'px';
             }
+            setIf('l3OutLrBadge', E.liveLabel);
+            setIf('l3OutLrTopic', E.liveTopic);
             setIf('l3OutSubTitle', toTitleCase(E.title));
             setIf('l3OutDateTime', `${E.date} • ${E.time}`);
             setIf('l3OutLoc', toTitleCase(E.loc));
@@ -3170,6 +3657,7 @@
             }
             setIf('l4OutStamp', l4M.stampTxt);
             setIf('l4OutFile', l4M.fileName);
+            setIf('l4OutLrTxt', E.liveLabel);
             setIf('l4OutIgCard', E.igHandle);
             setIf('l4OutIgCap', E.igHandle);
             setIf('l4OutIgBar', E.igHandle);
@@ -3206,6 +3694,8 @@
                 l5ShdEl.setAttribute('letter-spacing', l5M.titleTrack);
                 l5MainEl.setAttribute('letter-spacing', l5M.titleTrack);
             }
+            setL5If('l5OutLrBadge', E.liveLabel);
+            setL5If('l5OutLrMeta', 'HIMA IF // ON AIR');
             setL5If('l5OutSched', l5M.schedLine);
             setL5If('l5OutIg', E.igHandle);
             setL5If('l5OutCta', E.cta);
@@ -3248,10 +3738,12 @@
                 script: E.isCS ? '' : (isNeu ? (E.mn || 'MENUJU').toUpperCase() : toTitleCase(E.mn || 'Menuju')),
                 badgeTxt: E.isCS ? E.title : E.cd,
                 stampTxt: E.isCS ? 'STAY TUNED' : E.title,
-                fileName: E.isCS ? 'coming_soon.exe' : 'countdown.exe',
-                caption: E.isCS
-                    ? `Coming Soon — ${toTitleCase(E.title)} HIMA Informatika IDE LPKIA! Stay tuned!`
-                    : `${toTitleCase(E.title)} HIMA IF • ${toTitleCase(E.date)} (${E.time})`,
+                fileName: E.isLR ? 'live_report.exe' : (E.isCS ? 'coming_soon.exe' : 'countdown.exe'),
+                caption: E.isLR
+                    ? `${toTitleCase(E.liveTopic)} — ${toTitleCase(E.title)} HIMA IF`
+                    : (E.isCS
+                        ? `Coming Soon — ${toTitleCase(E.title)} HIMA Informatika IDE LPKIA! Stay tuned!`
+                        : `${toTitleCase(E.title)} HIMA IF • ${toTitleCase(E.date)} (${E.time})`),
                 badgeFs: r === '9-16' ? 29 : (r === '1-1' ? 22 : 26),
                 badgePy: r === '9-16' ? 9 : (r === '1-1' ? 7 : 8),
                 badgePx: r === '9-16' ? 28 : (r === '1-1' ? 22 : 26),
@@ -3437,12 +3929,28 @@
                     csBtn.classList.add('bg-[#162C4E]', 'text-[#FCD34D]');
                 }
             }
+            const lrBtn = document.getElementById('preset-LIVE REPORT');
+            if (lrBtn) {
+                if (activeVal === 'LIVE REPORT') {
+                    lrBtn.classList.remove('bg-[#162C4E]', 'text-white');
+                    lrBtn.classList.add('bg-[#CA2C2A]', 'text-white');
+                } else {
+                    lrBtn.classList.remove('bg-[#CA2C2A]');
+                    lrBtn.classList.add('bg-[#162C4E]', 'text-white');
+                }
+            }
         }
 
         function setHeroPreset(val) {
             if (val === 'COMING SOON') {
                 posterMode = 'coming-soon';
                 updatePresetButtons('COMING SOON');
+                syncAllDom();
+                return;
+            }
+            if (val === 'LIVE REPORT') {
+                posterMode = 'live-report';
+                updatePresetButtons('LIVE REPORT');
                 syncAllDom();
                 return;
             }
@@ -3490,6 +3998,11 @@
             document.getElementById('inLoc').value = 'Kampus IDE LPKIA';
             document.getElementById('inCta').value = 'GO.HMIF-LPKIA.MY.ID';
             document.getElementById('inIg').value = 'hmif_LPKIA';
+            document.getElementById('inLiveLabel').value = 'LIVE REPORT';
+            document.getElementById('inLiveTopic').value = 'OPENING CEREMONY';
+            const chk = document.getElementById('chkIncludeLivePhoto');
+            if (chk) chk.checked = false;
+            clearLivePhoto();
             setHeroPreset('H-7');
             clearLogo3();
             if (!showAccents) toggleAccents();
@@ -3690,10 +4203,11 @@
                 img.src = src;
             });
 
-            const [himaImg, lpkiaImg, kabinetImg] = await Promise.all([
+            const [himaImg, lpkiaImg, kabinetImg, liveImg] = await Promise.all([
                 loadImg(document.querySelector('#himaLogoSlot img').src),
                 loadImg(document.querySelector('#lpkiaLogoSlot img').src),
-                loadImg(document.querySelector('#kabinetLogoSlot img').src)
+                loadImg(document.querySelector('#kabinetLogoSlot img').src),
+                livePhotoDataUrl ? loadImg(livePhotoDataUrl) : Promise.resolve(null)
             ]);
 
             function roundRectPath(x, y, w, h, r) {
@@ -4066,9 +4580,14 @@
                     ? { cdFont: 32, cdPx: 22, cdPy: 8, mnFont: 19, mnPx: 18, mnPy: 5, cardW: 620, cardPt: 22, cardPb: 42, svgW: 540, svgH: 175, cardMt: 12, stFont: 34, stPx: 26, stPy: 9, stIcon: 28, stMt: -28 }
                     : { cdFont: 42, cdPx: 28, cdPy: 10, mnFont: 24, mnPx: 24, mnPy: 6, cardW: 710, cardPt: 36, cardPb: 56, svgW: 660, svgH: 235, cardMt: 16, stFont: 44, stPx: 32, stPy: 12, stIcon: 32, stMt: -36 });
 
+            const lrHoleH = currentRatio === '9-16' ? 430 : (currentRatio === '1-1' ? 210 : 295);
+            const lrPt = currentRatio === '9-16' ? 48 : (currentRatio === '1-1' ? 38 : 44);
+            const lrPb = currentRatio === '9-16' ? 34 : (currentRatio === '1-1' ? 22 : 28);
+            const lrPx = currentRatio === '9-16' ? 20 : (currentRatio === '1-1' ? 16 : 18);
+
             const cdH = hCfg.cdFont + hCfg.cdPy * 2 + 8;
             const mnH = hCfg.mnFont + hCfg.mnPy * 2 + 7;
-            const heroCardH = hCfg.cardPt + hCfg.svgH + hCfg.cardPb;
+            const heroCardH = E.isLR ? (lrPt + lrHoleH + lrPb) : (hCfg.cardPt + hCfg.svgH + hCfg.cardPb);
             const stH = hCfg.stFont + hCfg.stPy * 2 + 8;
             const mnGap = currentStyle === 'modern' ? 8 : (currentStyle === 'glass' ? 6 : -8);
             const mnBlockH = E.isCS ? 0 : (mnGap + mnH);
@@ -4118,68 +4637,82 @@
                 });
             });
 
-            const heroStr = E.hero;
-            const { fs: vFs, ls: vLs } = getHeroMetrics(heroStr, 220);
-            const svgScale = hCfg.svgW / 680;
-            const heroCenterX = W / 2;
-            const heroCenterY = heroCardY + hCfg.cardPt + hCfg.svgH / 2;
+            if (E.isLR) {
+                const holeX = heroCardX + lrPx;
+                const holeY = heroCardY + lrPt;
+                const holeW = hCfg.cardW - lrPx * 2;
+                const holeRad = currentStyle === 'neubrutalism' ? 0 : (currentStyle === 'dark-code' ? 12 : (currentStyle === 'glass' ? 16 : 14));
+                const rimCol = currentStyle === 'neubrutalism' ? '#000000' : (currentStyle === 'dark-code' ? '#38BDF8' : (currentStyle === 'glass' ? 'rgba(255,255,255,0.92)' : 'rgba(255,255,255,0.38)'));
+                const rimW = currentStyle === 'neubrutalism' ? 3.5 : 2.5;
+                punchLiveHole(ctx, () => roundRectPath(holeX, holeY, holeW, lrHoleH, holeRad), { x: holeX, y: holeY, w: holeW, h: lrHoleH }, liveImg, rimCol, rimW);
+            } else {
+                const heroStr = E.hero;
+                const { fs: vFs, ls: vLs } = getHeroMetrics(heroStr, 220);
+                const svgScale = hCfg.svgW / 680;
+                const heroCenterX = W / 2;
+                const heroCenterY = heroCardY + hCfg.cardPt + hCfg.svgH / 2;
 
-            const drawHeroSvgLayer = (ox, oy, fillCol, strokeCol, strokeW, blurGlow = false) => {
-                ctx.save();
-                ctx.translate(heroCenterX, heroCenterY);
-                ctx.scale(svgScale, svgScale);
-                if (blurGlow) {
-                    ctx.shadowColor = 'rgba(30, 64, 175, 0.34)';
-                    ctx.shadowBlur = 18;
-                    ctx.shadowOffsetY = 12;
-                }
-                ctx.font = `400 ${vFs}px "Archivo Black", "Space Grotesk", sans-serif`;
-                ctx.textBaseline = 'middle';
-                ctx.lineJoin = 'round';
-                ctx.lineCap = 'round';
-
-                const chars = Array.from(heroStr);
-                const ws = chars.map(ch => ctx.measureText(ch).width);
-                const tot = ws.reduce((a, b) => a + b, 0) + vLs * Math.max(0, chars.length - 1);
-                let cx = -tot / 2 + ox;
-                ctx.textAlign = 'left';
-                const resolvedHeroFill = (() => {
-                    if (fillCol !== 'glassGrad') return fillCol;
-                    const hg = ctx.createLinearGradient(0, oy - vFs * 0.36, 0, oy + vFs * 0.36);
-                    hg.addColorStop(0, '#FF8585');
-                    hg.addColorStop(0.28, '#F84B4B');
-                    hg.addColorStop(0.68, '#DC2626');
-                    hg.addColorStop(1, '#991B1B');
-                    return hg;
-                })();
-                chars.forEach((ch, idx) => {
-                    if (strokeCol && strokeW > 0) {
-                        ctx.lineWidth = strokeW;
-                        ctx.strokeStyle = strokeCol;
-                        ctx.strokeText(ch, cx, oy);
+                const drawHeroSvgLayer = (ox, oy, fillCol, strokeCol, strokeW, blurGlow = false) => {
+                    ctx.save();
+                    ctx.translate(heroCenterX, heroCenterY);
+                    ctx.scale(svgScale, svgScale);
+                    if (blurGlow) {
+                        ctx.shadowColor = 'rgba(30, 64, 175, 0.34)';
+                        ctx.shadowBlur = 18;
+                        ctx.shadowOffsetY = 12;
                     }
-                    ctx.fillStyle = resolvedHeroFill;
-                    ctx.fillText(ch, cx, oy);
-                    cx += ws[idx] + vLs;
-                });
-                ctx.restore();
-            };
-            drawHeroSvgLayer(T.heroShadowOff, T.heroShadowOff, T.heroShadowFill, T.heroShadowStroke, T.heroShadowSW, !!T.heroShadowBlur);
-            drawHeroSvgLayer(0, 0, T.heroMainFill, T.heroMainStroke, T.heroMainSW, !!T.heroMainBlur);
+                    ctx.font = `400 ${vFs}px "Archivo Black", "Space Grotesk", sans-serif`;
+                    ctx.textBaseline = 'middle';
+                    ctx.lineJoin = 'round';
+                    ctx.lineCap = 'round';
 
-            // COUNTDOWN / COMING SOON Badge
+                    const chars = Array.from(heroStr);
+                    const ws = chars.map(ch => ctx.measureText(ch).width);
+                    const tot = ws.reduce((a, b) => a + b, 0) + vLs * Math.max(0, chars.length - 1);
+                    let cx = -tot / 2 + ox;
+                    ctx.textAlign = 'left';
+                    const resolvedHeroFill = (() => {
+                        if (fillCol !== 'glassGrad') return fillCol;
+                        const hg = ctx.createLinearGradient(0, oy - vFs * 0.36, 0, oy + vFs * 0.36);
+                        hg.addColorStop(0, '#FF8585');
+                        hg.addColorStop(0.28, '#F84B4B');
+                        hg.addColorStop(0.68, '#DC2626');
+                        hg.addColorStop(1, '#991B1B');
+                        return hg;
+                    })();
+                    chars.forEach((ch, idx) => {
+                        if (strokeCol && strokeW > 0) {
+                            ctx.lineWidth = strokeW;
+                            ctx.strokeStyle = strokeCol;
+                            ctx.strokeText(ch, cx, oy);
+                        }
+                        ctx.fillStyle = resolvedHeroFill;
+                        ctx.fillText(ch, cx, oy);
+                        cx += ws[idx] + vLs;
+                    });
+                    ctx.restore();
+                };
+                drawHeroSvgLayer(T.heroShadowOff, T.heroShadowOff, T.heroShadowFill, T.heroShadowStroke, T.heroShadowSW, !!T.heroShadowBlur);
+                drawHeroSvgLayer(0, 0, T.heroMainFill, T.heroMainStroke, T.heroMainSW, !!T.heroMainBlur);
+            }
+
+            // COUNTDOWN / COMING SOON / LIVE REPORT Badge
             const cdTxt = E.cd;
             const cdFontFam = T.cdFontName || '"Silkscreen", monospace';
             const cdTrack = T.cdTrackRatio ? Math.round(hCfg.cdFont * T.cdTrackRatio * 10) / 10 : 2.4;
             ctx.font = `700 ${hCfg.cdFont}px ${cdFontFam}`;
-            const cdW = ctx.measureText(cdTxt).width + Math.max(0, cdTxt.length - 1) * cdTrack + hCfg.cdPx * 2;
+            const dotExtra = E.isLR ? 24 : 0;
+            const cdW = ctx.measureText(cdTxt).width + Math.max(0, cdTxt.length - 1) * cdTrack + hCfg.cdPx * 2 + dotExtra;
             ctx.save();
             ctx.translate(W / 2, heroStartY + cdH / 2);
             ctx.rotate((T.cdRot * Math.PI) / 180);
             drawBox(-cdW / 2, -cdH / 2, cdW, cdH, {
                 fill: T.cdFill, border: T.cdBorder, borderColor: T.cdBorderCol, shadow: T.cdShadow, radius: T.cdRad, softShadow: true
             });
-            drawTrackedText(cdTxt, 0, 1, `700 ${hCfg.cdFont}px ${cdFontFam}`, T.cdText, cdTrack, 'center');
+            if (E.isLR) {
+                drawLiveDot(ctx, -cdW / 2 + hCfg.cdPx + 7, 0, 7);
+            }
+            drawTrackedText(cdTxt, E.isLR ? (-cdW / 2 + hCfg.cdPx + dotExtra) : 0, 1, `700 ${hCfg.cdFont}px ${cdFontFam}`, T.cdText, cdTrack, E.isLR ? 'left' : 'center');
             ctx.restore();
 
             // MENUJU Tag (hidden on Coming Soon mode)
@@ -4231,10 +4764,11 @@
                 img.onerror = () => resolve(null);
                 img.src = src;
             });
-            const [himaImg, lpkiaImg, logo3Img] = await Promise.all([
+            const [himaImg, lpkiaImg, logo3Img, liveImg] = await Promise.all([
                 loadImg(document.querySelector('#himaLogoSlot img').src),
                 loadImg(document.querySelector('#lpkiaLogoSlot img').src),
-                loadImg(customLogo3DataUrl || document.querySelector('#kabinetLogoSlot img').src)
+                loadImg(customLogo3DataUrl || document.querySelector('#kabinetLogoSlot img').src),
+                livePhotoDataUrl ? loadImg(livePhotoDataUrl) : Promise.resolve(null)
             ]);
 
             function rrPath(x, y, w, h, r) {
@@ -4454,7 +4988,7 @@
 
             const E = getEffectiveContent();
             const hero = E.hero;
-            const stampTxt = E.stamp;
+            const stampTxt = E.l2Stamp;
             const igHandle = E.igHandle;
 
             const bgFs = currentRatio === '9-16' ? 260 : (currentRatio === '1-1' ? 210 : 235);
@@ -4524,10 +5058,13 @@
             const logosTopY = currentRatio === '9-16' ? 74 : (currentRatio === '1-1' ? 30 : 44);
             const tbH = 74;
             const heroSvgDim = currentRatio === '9-16' ? { w: 680, h: 225 } : (currentRatio === '1-1' ? { w: 560, h: 160 } : { w: 640, h: 205 });
+            const lrL2Dim = currentRatio === '9-16' ? { h: 600, px: 20, pt: 16, pb: 52, rad: 16 } : (currentRatio === '1-1' ? { h: 325, px: 16, pt: 14, pb: 38, rad: 12 } : { h: 420, px: 18, pt: 16, pb: 46, rad: 14 });
             const stampBoxH = 62;
-            const bodyPt = 36;
-            const bodyPb = 56;
-            const winH = tbH + bodyPt + heroSvgDim.h - 12 + stampBoxH + bodyPb;
+            const bodyPt = E.isLR ? lrL2Dim.pt : 36;
+            const bodyPb = E.isLR ? lrL2Dim.pb : 56;
+            const winH = E.isLR
+                ? (tbH + bodyPt + lrL2Dim.h - 24 + stampBoxH + bodyPb)
+                : (tbH + bodyPt + heroSvgDim.h - 12 + stampBoxH + bodyPb);
             const winY = Math.round((H - winH) / 2);
 
             // Top 3 Logos
@@ -4595,10 +5132,69 @@
             drawTextTrack('HIMA INFORMATIKA', winX + winW - 24, tbMidY - 8, '700 23px "Space Grotesk", sans-serif', L.tbTitleCol, 0.9, 'right');
             drawTextTrack('IDE LPKIA', winX + winW - 24, tbMidY + 13, '800 12px "Plus Jakarta Sans", sans-serif', L.tbSubCol, 2.8, 'right');
 
-            // Top-Left Tilted Sticker (Zona Oren): COUNTDOWN • MENUJU / COMING SOON
+            if (E.isLR) {
+                const holeX = winX + lrL2Dim.px;
+                const holeY = winY + tbH + bodyPt;
+                const holeW = winW - lrL2Dim.px * 2;
+                const holeH = lrL2Dim.h;
+                const holeRad = currentStyle === 'neubrutalism' ? 0 : (currentStyle === 'dark-code' ? 10 : lrL2Dim.rad);
+                const rimCol = currentStyle === 'neubrutalism' ? '#000000' : (currentStyle === 'dark-code' ? '#38BDF8' : (currentStyle === 'glass' ? 'rgba(255,255,255,0.92)' : 'rgba(255,255,255,0.38)'));
+                const rimW = currentStyle === 'neubrutalism' ? 3.5 : 2.5;
+                punchLiveHole(ctx, () => rrPath(holeX, holeY, holeW, holeH, holeRad), { x: holeX, y: holeY, w: holeW, h: holeH }, liveImg, rimCol, rimW);
+            } else {
+                // Giant Hero Text
+                const { fs: hFs, ls: hLs } = getHeroMetrics(hero, 225);
+                const svgScale = heroSvgDim.w / 680;
+                const heroCY = winY + tbH + bodyPt + heroSvgDim.h / 2;
+
+                const drawL2HeroLayer = (ox, oy, fillCol, strokeCol, strokeW, blurGlow = false) => {
+                    ctx.save();
+                    ctx.translate(winX + winW / 2, heroCY);
+                    ctx.scale(svgScale, svgScale);
+                    if (blurGlow) {
+                        ctx.shadowColor = 'rgba(30, 64, 175, 0.34)';
+                        ctx.shadowBlur = 18;
+                        ctx.shadowOffsetY = 12;
+                    }
+                    ctx.font = `400 ${hFs}px "Archivo Black", "Space Grotesk", sans-serif`;
+                    ctx.textBaseline = 'middle';
+                    ctx.lineJoin = 'round';
+                    ctx.lineCap = 'round';
+                    const chars = Array.from(hero);
+                    const ws = chars.map((c) => ctx.measureText(c).width);
+                    const tot = ws.reduce((a, b) => a + b, 0) + hLs * Math.max(0, chars.length - 1);
+                    let cx = -tot / 2 + ox;
+                    ctx.textAlign = 'left';
+                    const resolvedFill = (() => {
+                        if (fillCol !== 'glassGrad') return fillCol;
+                        const hg = ctx.createLinearGradient(0, oy - hFs * 0.36, 0, oy + hFs * 0.36);
+                        hg.addColorStop(0, '#FF8585');
+                        hg.addColorStop(0.28, '#F84B4B');
+                        hg.addColorStop(0.68, '#DC2626');
+                        hg.addColorStop(1, '#991B1B');
+                        return hg;
+                    })();
+                    chars.forEach((c, idx) => {
+                        if (strokeCol && strokeW > 0) {
+                            ctx.lineWidth = strokeW;
+                            ctx.strokeStyle = strokeCol;
+                            ctx.strokeText(c, cx, oy);
+                        }
+                        ctx.fillStyle = resolvedFill;
+                        ctx.fillText(c, cx, oy);
+                        cx += ws[idx] + hLs;
+                    });
+                    ctx.restore();
+                };
+                drawL2HeroLayer(L.heroShdOff, L.heroShdOff, L.heroShdFill, L.heroShdStroke, L.heroShdSW, L.heroShdBlur);
+                drawL2HeroLayer(0, 0, L.heroMainFill, L.heroMainStroke, L.heroMainSW, false);
+            }
+
+            // Top-Left Tilted Sticker (drawn AFTER cutout so it stays crisp over hole!)
             const topTagTxt = E.l2Banner;
             ctx.font = L.topTagFont;
-            const topTagW = ctx.measureText(topTagTxt).width + Math.max(0, topTagTxt.length - 1) * L.topTagTrack + 40;
+            const l2DotExtra = E.isLR ? 20 : 0;
+            const topTagW = ctx.measureText(topTagTxt).width + Math.max(0, topTagTxt.length - 1) * L.topTagTrack + 40 + l2DotExtra;
             const topTagH = 42;
             const topTagCX = winX - 14 + topTagW / 2;
             const topTagCY = winY - 12 + topTagH / 2;
@@ -4608,61 +5204,17 @@
             drawL2Box(-topTagW / 2, -topTagH / 2, topTagW, topTagH, {
                 fill: L.topTagFill, border: L.topTagBorder, borderColor: L.topTagBorderCol, shadow: L.topTagShadow, radius: L.topTagRad, soft: true
             });
-            drawTextTrack(topTagTxt, 0, 1, L.topTagFont, L.topTagText, L.topTagTrack, 'center');
+            if (E.isLR) drawLiveDot(ctx, -topTagW / 2 + 22, 0, 5.5);
+            drawTextTrack(topTagTxt, E.isLR ? (-topTagW / 2 + 20 + l2DotExtra) : 0, 1, L.topTagFont, L.topTagText, L.topTagTrack, E.isLR ? 'left' : 'center');
             ctx.restore();
 
-            // Giant Hero Text
-            const { fs: hFs, ls: hLs } = getHeroMetrics(hero, 225);
-            const svgScale = heroSvgDim.w / 680;
-            const heroCY = winY + tbH + bodyPt + heroSvgDim.h / 2;
-
-            const drawL2HeroLayer = (ox, oy, fillCol, strokeCol, strokeW, blurGlow = false) => {
-                ctx.save();
-                ctx.translate(winX + winW / 2, heroCY);
-                ctx.scale(svgScale, svgScale);
-                if (blurGlow) {
-                    ctx.shadowColor = 'rgba(30, 64, 175, 0.34)';
-                    ctx.shadowBlur = 18;
-                    ctx.shadowOffsetY = 12;
-                }
-                ctx.font = `400 ${hFs}px "Archivo Black", "Space Grotesk", sans-serif`;
-                ctx.textBaseline = 'middle';
-                ctx.lineJoin = 'round';
-                ctx.lineCap = 'round';
-                const chars = Array.from(hero);
-                const ws = chars.map((c) => ctx.measureText(c).width);
-                const tot = ws.reduce((a, b) => a + b, 0) + hLs * Math.max(0, chars.length - 1);
-                let cx = -tot / 2 + ox;
-                ctx.textAlign = 'left';
-                const resolvedFill = (() => {
-                    if (fillCol !== 'glassGrad') return fillCol;
-                    const hg = ctx.createLinearGradient(0, oy - hFs * 0.36, 0, oy + hFs * 0.36);
-                    hg.addColorStop(0, '#FF8585');
-                    hg.addColorStop(0.28, '#F84B4B');
-                    hg.addColorStop(0.68, '#DC2626');
-                    hg.addColorStop(1, '#991B1B');
-                    return hg;
-                })();
-                chars.forEach((c, idx) => {
-                    if (strokeCol && strokeW > 0) {
-                        ctx.lineWidth = strokeW;
-                        ctx.strokeStyle = strokeCol;
-                        ctx.strokeText(c, cx, oy);
-                    }
-                    ctx.fillStyle = resolvedFill;
-                    ctx.fillText(c, cx, oy);
-                    cx += ws[idx] + hLs;
-                });
-                ctx.restore();
-            };
-            drawL2HeroLayer(L.heroShdOff, L.heroShdOff, L.heroShdFill, L.heroShdStroke, L.heroShdSW, L.heroShdBlur);
-            drawL2HeroLayer(0, 0, L.heroMainFill, L.heroMainStroke, L.heroMainSW, false);
-
-            // Tilted Event Sticker Stamp (KADERISASI / STAY TUNED)
+            // Tilted Event Sticker Stamp (KADERISASI / STAY TUNED / LIVE TOPIC)
             ctx.font = '700 40px "Space Grotesk", sans-serif';
             const stTxtW = ctx.measureText(stampTxt).width + Math.max(0, stampTxt.length - 1) * 2.4;
             const stW = 56 + 28 + 12 + stTxtW;
-            const stampCY = heroCY + heroSvgDim.h / 2 - 12 + stampBoxH / 2;
+            const stampCY = E.isLR
+                ? (winY + tbH + bodyPt + lrL2Dim.h - 24 + stampBoxH / 2)
+                : (winY + tbH + bodyPt + heroSvgDim.h - 12 + stampBoxH / 2);
             ctx.save();
             ctx.translate(winX + winW / 2, stampCY);
             ctx.rotate((1.5 * Math.PI) / 180);
@@ -4761,10 +5313,11 @@
                 img.onerror = () => resolve(null);
                 img.src = src;
             });
-            const [himaImg, lpkiaImg, kabinetImg] = await Promise.all([
+            const [himaImg, lpkiaImg, kabinetImg, liveImg] = await Promise.all([
                 loadImg(document.querySelector('#himaLogoSlot img').src),
                 loadImg(document.querySelector('#lpkiaLogoSlot img').src),
-                loadImg(document.querySelector('#kabinetLogoSlot img').src)
+                loadImg(document.querySelector('#kabinetLogoSlot img').src),
+                livePhotoDataUrl ? loadImg(livePhotoDataUrl) : Promise.resolve(null)
             ]);
 
             function rrPath(x, y, w, h, r) {
@@ -5155,12 +5708,16 @@
             drawTextTrack(E.cta, ctaStartX + 34, midDockY + 1, '700 19px "Space Grotesk", sans-serif', L.dockText, 0.5, 'left');
 
             // 5. Center Speech Bubble + Megaphone + Caption
-            const bDim = is916 ? { w: 690, bodyH: 392, tailW: 96, tailH: 52, rad: 38, mega: 244, mOffX: 28, mOffY: -90 }
-                : (is11 ? { w: 536, bodyH: 304, tailW: 76, tailH: 42, rad: 30, mega: 178, mOffX: 20, mOffY: -68 }
-                : { w: 632, bodyH: 360, tailW: 90, tailH: 48, rad: 36, mega: 222, mOffX: 26, mOffY: -82 });
+            const bDim = E.isLR
+                ? (is916 ? { w: 750, bodyH: 588, tailW: 104, tailH: 92, rad: 40, mega: 244, mOffX: 28, mOffY: -90 }
+                    : (is11 ? { w: 580, bodyH: 354, tailW: 82, tailH: 54, rad: 30, mega: 178, mOffX: 20, mOffY: -68 }
+                    : { w: 690, bodyH: 450, tailW: 96, tailH: 68, rad: 38, mega: 222, mOffX: 26, mOffY: -82 }))
+                : (is916 ? { w: 690, bodyH: 392, tailW: 96, tailH: 52, rad: 38, mega: 244, mOffX: 28, mOffY: -90 }
+                    : (is11 ? { w: 536, bodyH: 304, tailW: 76, tailH: 42, rad: 30, mega: 178, mOffX: 20, mOffY: -68 }
+                    : { w: 632, bodyH: 360, tailW: 90, tailH: 48, rad: 36, mega: 222, mOffX: 26, mOffY: -82 }));
 
             const capGap = is11 ? 20 : 28;
-            const capBlockH = E.isCS ? 58 : 132;
+            const capBlockH = E.isLR ? 174 : (E.isCS ? 58 : 132);
             const totalMidH = bDim.bodyH + bDim.tailH + capGap + capBlockH;
             const areaTop = topPad.y + pillH;
             const areaBot = dockY;
@@ -5198,6 +5755,38 @@
                 ctx.stroke();
             }
 
+            if (E.isLR) {
+                const holeX = bubX + 22;
+                const holeY = bubY + 22;
+                const holeW = bDim.w - 44;
+                const holeH = bDim.bodyH - 22;
+                const holeRad = currentStyle === 'neubrutalism' || currentStyle === 'dark-code' ? 22 : 26;
+                const rimCol = currentStyle === 'neubrutalism' ? '#000000' : (currentStyle === 'dark-code' ? '#38BDF8' : (currentStyle === 'glass' ? '#FFFFFF' : 'rgba(15,23,42,0.22)'));
+                const rimW = currentStyle === 'neubrutalism' ? 3.5 : 2.5;
+                punchLiveHole(ctx, () => rrPath(holeX, holeY, holeW, holeH, holeRad), { x: holeX, y: holeY, w: holeW, h: holeH }, liveImg, rimCol, rimW);
+
+                // Top-left Live Report badge on bubble edge (drawn AFTER hole punch)
+                ctx.font = '800 18px "Space Grotesk", sans-serif';
+                const bTrack3 = 2.5;
+                const lrTxtW = ctx.measureText(E.liveLabel).width + Math.max(0, E.liveLabel.length - 1) * bTrack3;
+                const lrW = lrTxtW + 36 + 20;
+                const lrH = 38;
+                ctx.save();
+                ctx.translate(bubX + 24 + lrW / 2, bubY - 16 + lrH / 2);
+                ctx.rotate((-2 * Math.PI) / 180);
+                const bFill3 = currentStyle === 'neubrutalism' ? '#FCD34D' : (currentStyle === 'dark-code' ? '#0B192E' : '#CA2C2A');
+                const bCol3 = currentStyle === 'neubrutalism' ? '#0B1F40' : (currentStyle === 'dark-code' ? '#38BDF8' : '#FFFFFF');
+                const bBrd3 = currentStyle === 'neubrutalism' ? '#000000' : (currentStyle === 'dark-code' ? '#38BDF8' : (currentStyle === 'glass' ? 'rgba(255,255,255,0.9)' : null));
+                drawBox3(-lrW / 2, -lrH / 2, lrW, lrH, {
+                    fill: bFill3, border: bBrd3 ? 2.5 : 0, borderCol: bBrd3 || 'transparent',
+                    shadow: currentStyle === 'neubrutalism' || currentStyle === 'dark-code' ? 4 : 0,
+                    radius: currentStyle === 'neubrutalism' ? 0 : (currentStyle === 'dark-code' ? 8 : 999),
+                    soft: L.soft
+                });
+                drawLiveDot(ctx, -lrW / 2 + 20, 0, 5.5, currentStyle === 'glass' || currentStyle === 'modern');
+                drawTextTrack(E.liveLabel, -lrW / 2 + 34, 1, '800 18px "Space Grotesk", sans-serif', bCol3, bTrack3, 'left');
+                ctx.restore();
+            } else {
             // Stacked 3-Layer Hero Text Inside Bubble (Theme-Distinct Typography)
             const isL3Pill = Boolean(L.scriptPill);
             const scriptStr = isL3Pill
@@ -5347,6 +5936,7 @@
                 ctx.fillText(scriptStr, 0, 0);
             }
             ctx.restore();
+            }
 
             // Upgraded 3D Sculpted Studio Megaphone + Sound Waves (Theme-Aware Red/Blue)
             ctx.save();
@@ -5472,19 +6062,26 @@
 
             // 6. Centered Org Description + Schedule + Location
             const capY = bubY + bDim.bodyH + bDim.tailH + capGap;
+            let capOff = 0;
+            if (E.isLR) {
+                const tFs3 = is916 ? 36 : (is11 ? 26 : 32);
+                const tCol3 = currentStyle === 'dark-code' ? '#38BDF8' : (currentStyle === 'glass' ? '#FFFFFF' : '#FCD34D');
+                drawTextTrack(E.liveTopic, W / 2, capY + tFs3 * 0.52, `800 ${tFs3}px "Space Grotesk", sans-serif`, tCol3, 0.04 * tFs3, 'center');
+                capOff = tFs3 + 10;
+            }
             const titleLine = `${toTitleCase(E.title)} HIMA Informatika`;
-            drawTextTrack(titleLine, W / 2, capY + 12, `700 21px ${L.capFont}`, L.capCol, 0, 'center');
-            drawTextTrack('Institut Digital Ekonomi LPKIA', W / 2, capY + 41, `600 21px ${L.capFont}`, L.capCol, 0, 'center');
+            drawTextTrack(titleLine, W / 2, capY + capOff + 12, `700 21px ${L.capFont}`, L.capCol, 0, 'center');
+            drawTextTrack('Institut Digital Ekonomi LPKIA', W / 2, capY + capOff + 41, `600 21px ${L.capFont}`, L.capCol, 0, 'center');
 
             if (!E.isCS) {
                 const dtTxt = `${E.date} • ${E.time}`;
-                drawTextTrack(dtTxt, W / 2, capY + 76, `700 19px ${L.dateFont}`, L.dateCol, 1.4, 'center');
+                drawTextTrack(dtTxt, W / 2, capY + capOff + 76, `700 19px ${L.dateFont}`, L.dateCol, 1.4, 'center');
 
                 const locTxt = toTitleCase(E.loc);
                 ctx.font = `800 22px ${L.capFont}`;
                 const locW = ctx.measureText(locTxt).width;
                 const locStartX = W / 2 - (26 + 8 + locW) / 2;
-                const locY = capY + 114;
+                const locY = capY + capOff + 114;
 
                 // Map pin filled icon
                 ctx.save();
@@ -5522,10 +6119,11 @@
                 img.onerror = () => resolve(null);
                 img.src = src;
             });
-            const [himaImg, lpkiaImg, kabinetImg] = await Promise.all([
+            const [himaImg, lpkiaImg, kabinetImg, liveImg] = await Promise.all([
                 loadImg(document.querySelector('#himaLogoSlot img').src),
                 loadImg(document.querySelector('#lpkiaLogoSlot img').src),
-                loadImg(document.querySelector('#kabinetLogoSlot img').src)
+                loadImg(document.querySelector('#kabinetLogoSlot img').src),
+                livePhotoDataUrl ? loadImg(livePhotoDataUrl) : Promise.resolve(null)
             ]);
 
             function rrPath(x, y, w, h, r) {
@@ -5926,16 +6524,28 @@
             const tbH = 36;
             ctx.save();
             rrPath(mX, mY, mW, mH, L.mediaRad);
-            ctx.fillStyle = resolveFill(L.mediaFill, mX, mY, mW, mH);
-            ctx.fill();
+            if (!E.isLR) {
+                ctx.fillStyle = resolveFill(L.mediaFill, mX, mY, mW, mH);
+                ctx.fill();
+            }
             ctx.clip();
 
-            // Grid (DNA Layout 1)
-            ctx.strokeStyle = L.grid; ctx.lineWidth = 1;
-            for (let gx = mX; gx < mX + mW; gx += 26) { ctx.beginPath(); ctx.moveTo(gx, mY); ctx.lineTo(gx, mY + mH); ctx.stroke(); }
-            for (let gy = mY; gy < mY + mH; gy += 26) { ctx.beginPath(); ctx.moveTo(mX, gy); ctx.lineTo(mX + mW, gy); ctx.stroke(); }
+            if (!E.isLR) {
+                // Grid (DNA Layout 1)
+                ctx.strokeStyle = L.grid; ctx.lineWidth = 1;
+                for (let gx = mX; gx < mX + mW; gx += 26) { ctx.beginPath(); ctx.moveTo(gx, mY); ctx.lineTo(gx, mY + mH); ctx.stroke(); }
+                for (let gy = mY; gy < mY + mH; gy += 26) { ctx.beginPath(); ctx.moveTo(mX, gy); ctx.lineTo(mX + mW, gy); ctx.stroke(); }
+            } else {
+                const holeY4 = mY + tbH;
+                const holeH4 = mH - tbH;
+                punchLiveHole(ctx, () => {
+                    ctx.beginPath();
+                    ctx.rect(mX, holeY4, mW, holeH4);
+                    ctx.closePath();
+                }, { x: mX, y: holeY4, w: mW, h: holeH4 }, liveImg, null, 0);
+            }
 
-            // Window title bar: dots + file name
+            // Window title bar: dots + file name + optional Live Pill
             ctx.fillStyle = resolveFill(L.tbFill, mX, mY, mW, tbH);
             ctx.fillRect(mX, mY, mW, tbH);
             if (L.tbBorder > 0) { ctx.fillStyle = L.tbBorderCol; ctx.fillRect(mX, mY + tbH - L.tbBorder, mW, L.tbBorder); }
@@ -5951,7 +6561,28 @@
                 }
             });
             drawTextTrack(M.fileName, mX + 90, mY + tbH / 2 + 1, '800 14px "JetBrains Mono", monospace', L.tbText, 0.56, 'left');
+            if (E.isLR) {
+                ctx.font = '800 14px "JetBrains Mono", monospace';
+                const fW4 = ctx.measureText(M.fileName).width + Math.max(0, M.fileName.length - 1) * 0.56;
+                ctx.font = '800 11px "Space Grotesk", sans-serif';
+                const p4Track = 1.3;
+                const p4W = ctx.measureText(E.liveLabel).width + Math.max(0, E.liveLabel.length - 1) * p4Track + 34;
+                const p4H = 22;
+                const p4X = mX + 90 + fW4 + 16;
+                const p4Y = mY + (tbH - p4H) / 2;
+                const p4Rad = currentStyle === 'neubrutalism' ? 0 : 999;
+                ctx.fillStyle = '#CA2C2A';
+                rrPath(p4X, p4Y, p4W, p4H, p4Rad);
+                ctx.fill();
+                if (currentStyle === 'neubrutalism') {
+                    ctx.lineWidth = 2; ctx.strokeStyle = '#000000';
+                    rrPath(p4X, p4Y, p4W, p4H, 0); ctx.stroke();
+                }
+                drawLiveDot(ctx, p4X + 12, p4Y + p4H / 2, 4, true);
+                drawTextTrack(E.liveLabel, p4X + 21, p4Y + p4H / 2 + 0.5, '800 11px "Space Grotesk", sans-serif', '#FFFFFF', p4Track, 'left');
+            }
 
+            if (!E.isLR) {
             // Corner code accent inside media
             if (showAccents) {
                 drawTextTrack('>_', mX + 16, mY + mH - 22, '800 22px "JetBrains Mono", monospace', L.codeM || L.codeB, 0, 'left');
@@ -6043,6 +6674,7 @@
             ctx.beginPath(); ctx.moveTo(icx, -icr * 0.55); ctx.lineTo(icx, 0); ctx.lineTo(icx + icr * 0.45, icr * 0.3); ctx.stroke();
             drawTextTrack(M.stampTxt, -sW / 2 + M.stPx + iconS + 12, 1, `700 ${M.stFs}px ${L.stFam}`, '#FFFFFF', sTrack, 'left');
             ctx.restore();
+            }
             ctx.restore();
 
             if (L.mediaBorder > 0) {
@@ -6166,10 +6798,11 @@
                 img.onerror = () => resolve(null);
                 img.src = src;
             });
-            const [himaImg, lpkiaImg, kabinetImg] = await Promise.all([
+            const [himaImg, lpkiaImg, kabinetImg, liveImg] = await Promise.all([
                 loadImg(document.querySelector('#himaLogoSlot img').src),
                 loadImg(document.querySelector('#lpkiaLogoSlot img').src),
-                loadImg(document.querySelector('#kabinetLogoSlot img').src)
+                loadImg(document.querySelector('#kabinetLogoSlot img').src),
+                livePhotoDataUrl ? loadImg(livePhotoDataUrl) : Promise.resolve(null)
             ]);
 
             function rrPath(x, y, w, h, r) {
@@ -6528,15 +7161,21 @@
             drawSocBadge(sx, socY, 'web');
             drawTextTrack(E.cta, sx + 37, socY + 1, '700 18px "Plus Jakarta Sans", sans-serif', T.socCol, 0.36, 'left');
 
-            // 7. Vertical Layout Math for Pinned Note + Smooth Rounded Outlined Title Block
+            // 7. Vertical Layout Math for Pinned Note / Live Polaroid + Smooth Outlined Title Block
             const cardW = is916 ? 760 : (is11 ? 630 : 720);
-            const cardH = is916 ? 470 : (is11 ? 350 : 430);
+            const cardH = E.isLR
+                ? (is916 ? 650 : (is11 ? 392 : 506))
+                : (is916 ? 470 : (is11 ? 350 : 430));
             const cardRad = is11 ? Math.min(T.cardRad, 28) : T.cardRad;
             const [rawBx, rawBy, backDeg] = T.backOff;
             const backOffX = is11 ? Math.round(rawBx * 0.8) : rawBx;
             const backOffY = is11 ? Math.round(rawBy * 0.8) : rawBy;
-            const infoGap = is916 ? 68 : (is11 ? 32 : 50);
-            const marginT = is916 ? 24 : (is11 ? 10 : 18);
+            const infoGap = E.isLR
+                ? (is916 ? 52 : (is11 ? 24 : 38))
+                : (is916 ? 68 : (is11 ? 32 : 50));
+            const marginT = E.isLR
+                ? (is916 ? 18 : (is11 ? 8 : 12))
+                : (is916 ? 24 : (is11 ? 10 : 18));
 
             const mnH = E.isCS ? 0 : (is11 ? 26 : 30);
             const gap1 = E.isCS ? 0 : (is11 ? 5 : (is916 ? 12 : 8));
@@ -6600,6 +7239,46 @@
                 ctx.stroke();
             }
 
+            if (E.isLR) {
+                const chinH = is11 ? 42 : 52;
+                const holeX5 = -cardW / 2 + 20;
+                const holeY5 = -cardH / 2 + 20;
+                const holeW5 = cardW - 40;
+                const holeH5 = cardH - 34 - chinH;
+                const holeRad5 = currentStyle === 'neubrutalism' ? 10 : 18;
+                const rimCol5 = currentStyle === 'neubrutalism' ? '#000000' : (currentStyle === 'dark-code' ? '#38BDF8' : 'rgba(15,23,42,0.16)');
+                const rimW5 = currentStyle === 'neubrutalism' ? 3.5 : (currentStyle === 'dark-code' ? 2.5 : 2);
+                punchLiveHole(ctx, () => rrPath(holeX5, holeY5, holeW5, holeH5, holeRad5), { x: holeX5, y: holeY5, w: holeW5, h: holeH5 }, liveImg, rimCol5, rimW5);
+
+                // Polaroid Bottom Chin Badge (drawn cleanly below cutout)
+                const chinMidY = holeY5 + holeH5 + chinH / 2 + 4;
+                const bFont5 = '800 14px "Space Grotesk", sans-serif';
+                const bTrack5 = 1.96;
+                ctx.font = bFont5;
+                const bTxtW5 = ctx.measureText(E.liveLabel).width + Math.max(0, E.liveLabel.length - 1) * bTrack5;
+                const bW5 = bTxtW5 + 28 + 20;
+                const bH5 = 28;
+                const bX5 = holeX5 + 8;
+                const bY5 = chinMidY - bH5 / 2;
+                const isNeu5 = currentStyle === 'neubrutalism';
+                const isDk5 = currentStyle === 'dark-code';
+                if (isNeu5) {
+                    ctx.fillStyle = '#000000';
+                    ctx.fillRect(bX5 + 3, bY5 + 3, bW5, bH5);
+                }
+                ctx.fillStyle = isDk5 ? '#0B192E' : '#CA2C2A';
+                rrPath(bX5, bY5, bW5, bH5, isNeu5 ? 0 : 999);
+                ctx.fill();
+                if (isNeu5 || isDk5) {
+                    ctx.lineWidth = isNeu5 ? 2.5 : 1.5;
+                    ctx.strokeStyle = isDk5 ? '#38BDF8' : '#000000';
+                    rrPath(bX5, bY5, bW5, bH5, isNeu5 ? 0 : 999);
+                    ctx.stroke();
+                }
+                drawLiveDot(ctx, bX5 + 17, chinMidY, 4.5, !isDk5);
+                drawTextTrack(E.liveLabel, bX5 + 28, chinMidY + 0.5, bFont5, isDk5 ? '#38BDF8' : '#FFFFFF', bTrack5, 'left');
+                drawTextTrack('HIMA IF // ON AIR', holeX5 + holeW5 - 8, chinMidY + 0.5, '800 13px "JetBrains Mono", monospace', '#475569', 1.04, 'right');
+            } else {
             // Unified Centered Inner Block: Eyebrow Cue + Hero
             const cdFs = is916 ? 17 : (is11 ? 14 : 16);
             const innerGap = is916 ? 16 : (is11 ? 10 : 14);
@@ -6637,6 +7316,8 @@
                     'center'
                 );
             });
+
+            }
 
             // Soft Paper Dent Shadow + 3D Glossy Red Pushpin inward at (cardW/2 - 52, -cardH/2 + 40)
             const pinX = cardW / 2 - 52;
@@ -6833,16 +7514,16 @@
                 const rendered = await renderPosterCanvas();
                 const link = document.createElement('a');
                 const E = getEffectiveContent();
-                const heroSlug = E.isCS
-                    ? 'coming-soon'
-                    : E.hero.toLowerCase().replace(/\s+/g, '-');
+                const heroSlug = E.isLR
+                    ? 'live-report'
+                    : (E.isCS ? 'coming-soon' : E.hero.toLowerCase().replace(/\s+/g, '-'));
                 const layoutTag = currentLayout === 2 ? 'layout2-' : (currentLayout === 3 ? 'layout3-' : (currentLayout === 4 ? 'layout4-' : (currentLayout === 5 ? 'layout5-' : '')));
                 link.download = `poster-${heroSlug}-${layoutTag}${currentStyle}-${currentRatio}.png`;
                 link.href = rendered.toDataURL('image/png');
                 link.click();
             } finally {
                 btn.disabled = false;
-                btn.textContent = 'Download PNG (1080px)';
+                syncAllDom();
             }
         }
 
