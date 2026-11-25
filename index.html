@@ -7,7 +7,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=JetBrains+Mono:wght@700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Silkscreen:wght@700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=JetBrains+Mono:wght@700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Silkscreen:wght@700&family=Space+Grotesk:wght@700&family=Yellowtail&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
@@ -78,13 +78,20 @@
         .ratio-9-16 .cta-text { font-size: 26px; }
 
         /* ================= LAYOUT 2: RETRO POP-UP (4 TEMA) ================= */
-        .poster-canvas.layout-2 { padding: 0 !important; }
-        .poster-canvas.layout-2 .layout-1-root { display: none !important; }
+        .poster-canvas.layout-2,
+        .poster-canvas.layout-3 { padding: 0 !important; }
+        .poster-canvas.layout-2 .layout-1-root,
+        .poster-canvas.layout-2 .layout-3-root { display: none !important; }
         .poster-canvas.layout-2 .layout-2-root { display: block !important; }
 
-        /* Mode Coming Soon (berlaku di Layout 1 & Layout 2, tanpa tanggal) */
+        .poster-canvas.layout-3 .layout-1-root,
+        .poster-canvas.layout-3 .layout-2-root { display: none !important; }
+        .poster-canvas.layout-3 .layout-3-root { display: flex !important; }
+
+        /* Mode Coming Soon (berlaku di Layout 1, 2 & 3 — tanpa tanggal/lokasi) */
         .poster-canvas.mode-coming-soon .layout-1-root .menuju-box,
-        .poster-canvas.mode-coming-soon .layout-1-root .sched-grid { display: none !important; }
+        .poster-canvas.mode-coming-soon .layout-1-root .sched-grid,
+        .poster-canvas.mode-coming-soon .layout-3-root .l3-countdown-only { display: none !important; }
 
         .l2-bg-wall {
             position: absolute;
@@ -245,6 +252,186 @@
         .layout-2.style-modern .l2-ig-sticker { background: #FFFFFF; color: #12305A; border: none; box-shadow: 0 14px 32px rgba(8, 22, 44, 0.34); border-radius: 999px; }
         .layout-2.style-modern .l2-ig-icon { color: #CA2C2A; }
         .layout-2.style-modern .l2-cursor-svg { filter: drop-shadow(0 14px 26px rgba(8, 22, 44, 0.38)); }
+
+        /* ================= LAYOUT 3: SPEECH BUBBLE + MEGAPHONE (BIRU HIMA IF, 4 TEMA) ================= */
+        .l3-header-area { padding: 42px 52px 0 52px; }
+        .ratio-9-16 .l3-header-area { padding: 72px 56px 0 56px; }
+        .ratio-1-1  .l3-header-area { padding: 28px 46px 0 46px; }
+
+        .l3-org-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            padding: 12px 24px 12px 16px;
+        }
+        .ratio-1-1 .l3-org-pill { padding: 9px 18px 9px 12px; gap: 10px; }
+        .ratio-9-16 .l3-org-pill { padding: 14px 28px 14px 18px; gap: 16px; }
+
+        .l3-org-logo { width: 46px; height: 46px; object-fit: contain; }
+        .ratio-1-1 .l3-org-logo { width: 38px; height: 38px; }
+        .ratio-9-16 .l3-org-logo { width: 54px; height: 54px; }
+
+        .l3-org-div { width: 2px; height: 40px; opacity: 0.25; }
+        .ratio-1-1 .l3-org-div { height: 32px; }
+
+        .l3-bubble-wrap { width: 660px; height: 432px; position: relative; }
+        .ratio-9-16 .l3-bubble-wrap { width: 720px; height: 472px; }
+        .ratio-1-1  .l3-bubble-wrap { width: 560px; height: 366px; }
+
+        .l3-bubble-inner { padding: 22px 42px 66px 42px; }
+        .ratio-1-1 .l3-bubble-inner { padding: 16px 34px 56px 34px; }
+
+        .l3-megaphone {
+            position: absolute;
+            right: -68px;
+            top: -82px;
+            width: 222px;
+            height: 222px;
+            transform: rotate(-18deg);
+            pointer-events: none;
+        }
+        .ratio-9-16 .l3-megaphone { right: -74px; top: -90px; width: 244px; height: 244px; }
+        .ratio-1-1  .l3-megaphone { right: -56px; top: -68px; width: 178px; height: 178px; }
+
+        .l3-footer-wrap { padding: 0 46px 36px 46px; }
+        .ratio-9-16 .l3-footer-wrap { padding: 0 50px 72px 50px; }
+        .ratio-1-1  .l3-footer-wrap { padding: 0 40px 26px 40px; }
+
+        .l3-bottom-dock { padding: 18px 34px; }
+        .ratio-9-16 .l3-bottom-dock { padding: 22px 38px; }
+        .ratio-1-1  .l3-bottom-dock { padding: 14px 28px; }
+
+        /* Layout 3 Theme 1: Neubrutalism (Biru Solid + Putih + Aksen Merah) */
+        .poster-canvas.layout-3.style-neubrutalism {
+            background-color: #16488E;
+            background-image: radial-gradient(rgba(255, 255, 255, 0.16) 2px, transparent 2px);
+            background-size: 24px 24px;
+            --l3-mega-hi: #FF6B6B;
+            --l3-mega-mid: #CA2C2A;
+            --l3-mega-dark: #991B1B;
+            --l3-mega-deep: #3B0909;
+            --l3-mega-edge: #111827;
+            --l3-mega-ew: 2.4;
+            --l3-wave: #FCD34D;
+        }
+        .layout-3.style-neubrutalism .l3-line-stroke { stroke: rgba(252, 211, 77, 0.78); }
+        .layout-3.style-neubrutalism .l3-bg-tile { fill: rgba(255, 255, 255, 0.06); stroke: rgba(255, 255, 255, 0.20); }
+        .layout-3.style-neubrutalism .l3-bg-spark { fill: #FCD34D; }
+        .layout-3.style-neubrutalism .l3-bg-dot { fill: rgba(255, 255, 255, 0.28); }
+        .layout-3.style-neubrutalism .l3-bg-code { color: rgba(255, 255, 255, 0.24); }
+        .layout-3.style-neubrutalism .l3-bg-code-alt { color: rgba(252, 211, 77, 0.42); }
+        .layout-3.style-neubrutalism .l3-org-pill { background: #FFFFFF; border: 3.5px solid #000000; box-shadow: 6px 6px 0 #000000; border-radius: 14px; }
+        .layout-3.style-neubrutalism .l3-org-title { color: #12305A; }
+        .layout-3.style-neubrutalism .l3-org-sub { color: #CA2C2A; }
+        .layout-3.style-neubrutalism .l3-org-div { background: #000000; opacity: 0.85; }
+        .layout-3.style-neubrutalism .l3-bubble-path { fill: #FFFFFF; stroke: #000000; stroke-width: 7; }
+        .layout-3.style-neubrutalism .l3-bubble-shape { filter: drop-shadow(10px 10px 0 #000000); }
+        .layout-3.style-neubrutalism .l3-hero-txt,
+        .layout-3.style-neubrutalism .l3-title-txt { color: #CA2C2A; }
+        .layout-3.style-neubrutalism .l3-script-txt { color: #F59E0B; text-shadow: 2px 2px 0 rgba(18, 48, 90, 0.24); }
+        .layout-3.style-neubrutalism .l3-cap-main { color: #FFFFFF; }
+        .layout-3.style-neubrutalism .l3-cap-date { color: #FCD34D; }
+        .layout-3.style-neubrutalism .l3-cap-loc { color: #FFFFFF; }
+        .layout-3.style-neubrutalism .l3-bottom-dock { background: #FFFFFF; color: #CA2C2A; border: 3.5px solid #000000; box-shadow: 7px 7px 0 #000000; border-radius: 16px; }
+        .layout-3.style-neubrutalism .l3-dock-icon { color: #16488E; }
+
+        /* Layout 3 Theme 2: Glassmorphism (Sky-Blue Frosted + Aksen Merah) */
+        .poster-canvas.layout-3.style-glass {
+            background: linear-gradient(150deg, #0D356F 0%, #1B5AA6 48%, #2E80D1 100%);
+            --l3-mega-hi: #FF8585;
+            --l3-mega-mid: #EF4444;
+            --l3-mega-dark: #B91C1C;
+            --l3-mega-deep: #450A0A;
+            --l3-mega-edge: rgba(255, 255, 255, 0.85);
+            --l3-mega-ew: 1.4;
+            --l3-wave: #FDE047;
+        }
+        .layout-3.style-glass .l3-line-stroke { stroke: rgba(191, 219, 254, 0.48); }
+        .layout-3.style-glass .l3-bg-tile { fill: rgba(255, 255, 255, 0.12); stroke: rgba(255, 255, 255, 0.42); }
+        .layout-3.style-glass .l3-bg-spark { fill: rgba(255, 255, 255, 0.65); }
+        .layout-3.style-glass .l3-bg-dot { fill: rgba(255, 255, 255, 0.34); }
+        .layout-3.style-glass .l3-bg-code { color: rgba(219, 234, 254, 0.32); }
+        .layout-3.style-glass .l3-bg-code-alt { color: rgba(253, 224, 71, 0.42); }
+        .layout-3.style-glass .l3-org-pill { background: rgba(255, 255, 255, 0.88); border: 1.5px solid rgba(255,255,255,0.95); box-shadow: 0 12px 28px rgba(10, 30, 68, 0.28); border-radius: 20px; }
+        .layout-3.style-glass .l3-org-title { color: #12305A; }
+        .layout-3.style-glass .l3-org-sub { color: #DC2626; }
+        .layout-3.style-glass .l3-org-div { background: #2563EB; opacity: 0.3; }
+        .layout-3.style-glass .l3-bubble-path { fill: rgba(255, 255, 255, 0.90); stroke: rgba(255, 255, 255, 0.98); stroke-width: 3; }
+        .layout-3.style-glass .l3-bubble-shape { filter: drop-shadow(0 24px 40px rgba(8, 25, 58, 0.36)); }
+        .layout-3.style-glass .l3-hero-txt,
+        .layout-3.style-glass .l3-title-txt { color: #DC2626; }
+        .layout-3.style-glass .l3-script-txt { color: #F59E0B; text-shadow: 0 4px 10px rgba(15, 23, 42, 0.16); }
+        .layout-3.style-glass .l3-cap-main { color: #EFF6FF; }
+        .layout-3.style-glass .l3-cap-date { color: #FDE047; }
+        .layout-3.style-glass .l3-cap-loc { color: #FFFFFF; }
+        .layout-3.style-glass .l3-bottom-dock { background: rgba(255, 255, 255, 0.90); color: #DC2626; border: 1.5px solid rgba(255,255,255,0.95); box-shadow: 0 16px 36px rgba(8, 25, 58, 0.32); border-radius: 24px; }
+        .layout-3.style-glass .l3-dock-icon { color: #2563EB; }
+
+        /* Layout 3 Theme 3: Dark Code (Deep Navy + Cyan) */
+        .poster-canvas.layout-3.style-dark-code {
+            background-color: #0B192E;
+            background-image: radial-gradient(rgba(56, 189, 248, 0.24) 2px, transparent 2px);
+            background-size: 24px 24px;
+            --l3-mega-hi: #7DD3FC;
+            --l3-mega-mid: #0EA5E9;
+            --l3-mega-dark: #0369A1;
+            --l3-mega-deep: #061326;
+            --l3-mega-edge: #38BDF8;
+            --l3-mega-ew: 2;
+            --l3-wave: #38BDF8;
+        }
+        .layout-3.style-dark-code .l3-line-stroke { stroke: rgba(56, 189, 248, 0.50); }
+        .layout-3.style-dark-code .l3-bg-tile { fill: rgba(56, 189, 248, 0.06); stroke: rgba(56, 189, 248, 0.26); }
+        .layout-3.style-dark-code .l3-bg-spark { fill: #FCD34D; }
+        .layout-3.style-dark-code .l3-bg-dot { fill: rgba(56, 189, 248, 0.36); }
+        .layout-3.style-dark-code .l3-bg-code { color: rgba(56, 189, 248, 0.26); }
+        .layout-3.style-dark-code .l3-bg-code-alt { color: rgba(252, 211, 77, 0.34); }
+        .layout-3.style-dark-code .l3-org-pill { background: #122645; border: 2.5px solid #38BDF8; box-shadow: 5px 5px 0 #000000; border-radius: 14px; }
+        .layout-3.style-dark-code .l3-org-title { color: #FFFFFF; }
+        .layout-3.style-dark-code .l3-org-sub { color: #38BDF8; }
+        .layout-3.style-dark-code .l3-org-div { background: #38BDF8; opacity: 0.6; }
+        .layout-3.style-dark-code .l3-bubble-path { fill: #122645; stroke: #38BDF8; stroke-width: 6; }
+        .layout-3.style-dark-code .l3-bubble-shape { filter: drop-shadow(10px 10px 0 #000000); }
+        .layout-3.style-dark-code .l3-hero-txt { color: #38BDF8; }
+        .layout-3.style-dark-code .l3-title-txt { color: #FFFFFF; }
+        .layout-3.style-dark-code .l3-script-txt { color: #FCD34D; text-shadow: 0 3px 10px rgba(0, 0, 0, 0.45); }
+        .layout-3.style-dark-code .l3-cap-main { color: #E2E8F0; }
+        .layout-3.style-dark-code .l3-cap-date { color: #38BDF8; }
+        .layout-3.style-dark-code .l3-cap-loc { color: #FFFFFF; }
+        .layout-3.style-dark-code .l3-bottom-dock { background: #122645; color: #FFFFFF; border: 2.5px solid #38BDF8; box-shadow: 6px 6px 0 #000000; border-radius: 16px; }
+        .layout-3.style-dark-code .l3-dock-icon { color: #38BDF8; }
+
+        /* Layout 3 Theme 4: Modern Clean (Royal Studio Gradient Biru) */
+        .poster-canvas.layout-3.style-modern {
+            background: radial-gradient(circle at 82% 22%, #2E7BD1 0%, #16488E 46%, #0D2D5E 100%);
+            --l3-mega-hi: #60A5FA;
+            --l3-mega-mid: #2563EB;
+            --l3-mega-dark: #1E3A8A;
+            --l3-mega-deep: #091834;
+            --l3-mega-edge: rgba(255, 255, 255, 0.72);
+            --l3-mega-ew: 1.2;
+            --l3-wave: #FDD34D;
+        }
+        .layout-3.style-modern .l3-line-stroke { stroke: rgba(253, 211, 77, 0.66); }
+        .layout-3.style-modern .l3-bg-tile { fill: rgba(255, 255, 255, 0.065); stroke: rgba(255, 255, 255, 0.22); }
+        .layout-3.style-modern .l3-bg-spark { fill: #FDD34D; }
+        .layout-3.style-modern .l3-bg-dot { fill: rgba(255, 255, 255, 0.26); }
+        .layout-3.style-modern .l3-bg-code { color: rgba(255, 255, 255, 0.20); }
+        .layout-3.style-modern .l3-bg-code-alt { color: rgba(253, 211, 77, 0.36); }
+        .layout-3.style-modern .l3-org-pill { background: rgba(255, 255, 255, 0.96); border: none; box-shadow: 0 12px 26px rgba(6, 20, 44, 0.34); border-radius: 18px; }
+        .layout-3.style-modern .l3-org-title { color: #12305A; }
+        .layout-3.style-modern .l3-org-sub { color: #2A82C6; }
+        .layout-3.style-modern .l3-org-div { background: #CBD5E1; opacity: 1; }
+        .layout-3.style-modern .l3-bubble-path { fill: #FFFFFF; stroke: none; stroke-width: 0; }
+        .layout-3.style-modern .l3-bubble-shape { filter: drop-shadow(0 28px 46px rgba(6, 20, 44, 0.44)); }
+        .layout-3.style-modern .l3-hero-txt,
+        .layout-3.style-modern .l3-title-txt { color: #16488E; }
+        .layout-3.style-modern .l3-script-txt { color: #F59E0B; text-shadow: 0 3px 8px rgba(18, 48, 90, 0.14); }
+        .layout-3.style-modern .l3-cap-main { color: #E2EEFF; }
+        .layout-3.style-modern .l3-cap-date { color: #FDD34D; }
+        .layout-3.style-modern .l3-cap-loc { color: #FFFFFF; }
+        .layout-3.style-modern .l3-bottom-dock { background: #FFFFFF; color: #16488E; border: none; box-shadow: 0 18px 36px rgba(6, 20, 44, 0.36); border-radius: 26px; }
+        .layout-3.style-modern .l3-dock-icon { color: #2A82C6; }
 
         /* ================= THEME 1: NEUBRUTALISM ================= */
         .style-neubrutalism {
@@ -558,6 +745,7 @@
         .font-hero { font-family: 'Archivo Black', 'Space Grotesk', sans-serif; }
         .font-pixel { font-family: 'Silkscreen', monospace; }
         .font-code { font-family: 'JetBrains Mono', monospace; }
+        .font-script { font-family: 'Yellowtail', cursive; }
         .svg-stroke {
             paint-order: stroke fill;
             stroke-linejoin: round;
@@ -606,20 +794,24 @@
         <!-- Scrollable Inspector Controls -->
         <div class="builder-scroll flex-1 overflow-y-auto p-4 space-y-5">
 
-            <!-- 0. PILIH LAYOUT (2 LAYOUT) -->
+            <!-- 0. PILIH LAYOUT (3 LAYOUT) -->
             <div class="space-y-2">
                 <div class="flex items-center justify-between">
                     <span class="text-[11px] font-extrabold uppercase tracking-wider text-[#93C5FD]">0. Pilih Layout</span>
                     <span id="lblActiveLayout" class="text-[10px] font-code text-[#FCD34D]">layout-1</span>
                 </div>
-                <div class="grid grid-cols-2 gap-2">
-                    <button type="button" onclick="setLayout(1)" id="btn-layout-1" class="btn-brutal px-2.5 py-2 bg-[#FCD34D] text-black border-2 border-black shadow-[3px_3px_0_#000000] text-left cursor-pointer">
-                        <span class="text-[11px] font-extrabold uppercase block leading-tight">Layout 1</span>
-                        <span class="text-[9.5px] font-bold opacity-80 block mt-0.5 truncate">Countdown Card</span>
+                <div class="grid grid-cols-3 gap-1.5">
+                    <button type="button" onclick="setLayout(1)" id="btn-layout-1" class="btn-brutal px-2 py-2 bg-[#FCD34D] text-black border-2 border-black shadow-[3px_3px_0_#000000] text-left cursor-pointer">
+                        <span class="text-[10px] font-extrabold uppercase block leading-tight">Layout 1</span>
+                        <span class="text-[8.5px] font-bold opacity-80 block mt-0.5 truncate">Countdown</span>
                     </button>
-                    <button type="button" onclick="setLayout(2)" id="btn-layout-2" class="btn-brutal px-2.5 py-2 bg-[#162C4E] text-white border-2 border-black shadow-[3px_3px_0_#000000] text-left cursor-pointer">
-                        <span class="text-[11px] font-extrabold uppercase block leading-tight">Layout 2</span>
-                        <span class="text-[9.5px] font-bold opacity-80 block mt-0.5 truncate">Retro Pop-up</span>
+                    <button type="button" onclick="setLayout(2)" id="btn-layout-2" class="btn-brutal px-2 py-2 bg-[#162C4E] text-white border-2 border-black shadow-[3px_3px_0_#000000] text-left cursor-pointer">
+                        <span class="text-[10px] font-extrabold uppercase block leading-tight">Layout 2</span>
+                        <span class="text-[8.5px] font-bold opacity-80 block mt-0.5 truncate">Retro Pop</span>
+                    </button>
+                    <button type="button" onclick="setLayout(3)" id="btn-layout-3" class="btn-brutal px-2 py-2 bg-[#162C4E] text-white border-2 border-black shadow-[3px_3px_0_#000000] text-left cursor-pointer">
+                        <span class="text-[10px] font-extrabold uppercase block leading-tight">Layout 3</span>
+                        <span class="text-[8.5px] font-bold opacity-80 block mt-0.5 truncate">Bubble Pop</span>
                     </button>
                 </div>
             </div>
@@ -752,11 +944,11 @@
 
                 <div class="grid grid-cols-2 gap-2.5">
                     <div>
-                        <label class="text-[10px] font-bold uppercase text-white/70 block mb-1">Link CTA (Layout 1)</label>
+                        <label class="text-[10px] font-bold uppercase text-white/70 block mb-1">Link CTA (L1 &amp; L3)</label>
                         <input id="inCta" type="text" value="GO.HMIF-LPKIA.MY.ID" oninput="syncAllDom()" class="w-full px-2.5 py-1.5 bg-[#0B192E] border-2 border-black text-xs font-bold text-white focus:border-[#38BDF8] focus:outline-none">
                     </div>
                     <div>
-                        <label class="text-[10px] font-bold uppercase text-white/70 block mb-1">IG Handle (Layout 2)</label>
+                        <label class="text-[10px] font-bold uppercase text-white/70 block mb-1">IG Handle (L2 &amp; L3)</label>
                         <input id="inIg" type="text" value="hmif_LPKIA" oninput="syncAllDom()" class="w-full px-2.5 py-1.5 bg-[#0B192E] border-2 border-black text-xs font-bold text-white focus:border-[#38BDF8] focus:outline-none">
                     </div>
                 </div>
@@ -1127,6 +1319,215 @@
                         </div>
                     </div>
 
+                    <!-- ================= LAYOUT 3: SPEECH BUBBLE + MEGAPHONE (BIRU HIMA IF) ================= -->
+                    <div id="layout3Root" class="layout-3-root hidden relative w-full h-full flex-col justify-between overflow-hidden">
+                        <!-- Atmospheric Printilan Layer: Wireframes, Frosted Tiles, Sparkles & Micro Dots -->
+                        <svg viewBox="0 0 1080 1350" preserveAspectRatio="none" class="pointer-events-none absolute inset-0 w-full h-full z-0" aria-hidden="true">
+                            <!-- Ambient Halo Behind Bubble -->
+                            <circle cx="540" cy="600" r="340" fill="#60A5FA" opacity="0.10"/>
+                            <circle cx="885" cy="215" r="210" fill="#3B82F6" opacity="0.12"/>
+
+                            <!-- Architectural Gold/Blue Wireframe Curves -->
+                            <path class="l3-line-stroke" d="M-30 920 L155 715 Q195 670 225 715 L225 1390" fill="none" stroke-width="2.5"/>
+                            <path class="l3-line-stroke" d="M-30 1030 C95 1015 160 1125 225 1190 L225 1390" fill="none" stroke-width="2.2" opacity="0.65"/>
+                            <path class="l3-line-stroke" d="M1110 280 C940 310 890 190 935 60 L935 -40" fill="none" stroke-width="2" opacity="0.45"/>
+                            <circle class="l3-line-stroke" cx="920" cy="210" r="190" fill="none" stroke-width="1.6" opacity="0.28"/>
+                            <circle class="l3-line-stroke" cx="920" cy="210" r="142" fill="none" stroke-width="1.5" stroke-dasharray="10 10" opacity="0.25"/>
+
+                            <!-- Diagonal Tilted Frosted Geometric Tiles -->
+                            <rect class="l3-bg-tile" x="875" y="135" width="128" height="72" rx="16" stroke-width="1.8" transform="rotate(18 939 171)"/>
+                            <rect class="l3-bg-tile" x="72" y="290" width="96" height="96" rx="20" stroke-width="1.8" transform="rotate(-16 120 338)"/>
+                            <rect class="l3-bg-tile" x="905" y="965" width="110" height="74" rx="16" stroke-width="1.8" transform="rotate(-18 960 1002)"/>
+                            <rect class="l3-bg-tile" x="70" y="1090" width="84" height="58" rx="14" stroke-width="1.6" transform="rotate(14 112 1119)"/>
+
+                            <!-- Micro Dot Grids -->
+                            <g class="l3-bg-dot">
+                                <circle cx="888" cy="410" r="4"/><circle cx="912" cy="410" r="4"/><circle cx="936" cy="410" r="4"/><circle cx="960" cy="410" r="4"/>
+                                <circle cx="888" cy="434" r="4"/><circle cx="912" cy="434" r="4"/><circle cx="936" cy="434" r="4"/><circle cx="960" cy="434" r="4"/>
+                                <circle cx="888" cy="458" r="4"/><circle cx="912" cy="458" r="4"/><circle cx="936" cy="458" r="4"/><circle cx="960" cy="458" r="4"/>
+                                <circle cx="110" cy="545" r="3.5"/><circle cx="132" cy="545" r="3.5"/><circle cx="154" cy="545" r="3.5"/>
+                                <circle cx="110" cy="567" r="3.5"/><circle cx="132" cy="567" r="3.5"/><circle cx="154" cy="567" r="3.5"/>
+                            </g>
+
+                            <!-- 4-Point Star Sparkles & Plus Accents -->
+                            <path class="l3-bg-spark" d="M770 112 Q772 132 792 134 Q772 136 770 156 Q768 136 748 134 Q768 132 770 112 Z" opacity="0.82"/>
+                            <path class="l3-bg-spark" d="M148 216 Q149 229 162 230 Q149 231 148 244 Q147 231 134 230 Q147 229 148 216 Z" opacity="0.65"/>
+                            <path class="l3-bg-spark" d="M928 845 Q930 864 949 866 Q930 868 928 887 Q926 868 907 866 Q926 864 928 845 Z" opacity="0.78"/>
+                            <path class="l3-bg-spark" d="M292 982 Q293 994 305 995 Q293 996 292 1008 Q291 996 279 995 Q291 994 292 982 Z" opacity="0.68"/>
+                            <g class="l3-line-stroke" stroke-width="2.8" stroke-linecap="round" opacity="0.58">
+                                <path d="M510 120v20M500 130h20"/>
+                                <path d="M972 670v18M963 679h18"/>
+                                <path d="M114 820v18M105 829h18"/>
+                            </g>
+                        </svg>
+
+                        <!-- Coding Printilan Accents (Follows Optional Toggle) -->
+                        <span class="code-accent l3-bg-code pointer-events-none font-code font-extrabold absolute top-[18%] right-[13%] rotate-12 text-[32px] leading-none z-0">&lt;/&gt;</span>
+                        <span class="code-accent l3-bg-code-alt pointer-events-none font-code font-extrabold absolute top-[32%] left-[7%] -rotate-12 text-[30px] leading-none z-0">&gt;_</span>
+                        <span class="code-accent l3-bg-code pointer-events-none font-code font-extrabold absolute top-[55%] right-[5.5%] -rotate-6 text-[34px] leading-none z-0">&#123; &#125;</span>
+                        <span class="code-accent l3-bg-code-alt pointer-events-none font-code font-extrabold absolute bottom-[16%] left-[8%] rotate-12 text-[28px] leading-none z-0">//</span>
+                        <span class="code-accent l3-bg-code pointer-events-none font-code font-extrabold absolute bottom-[17%] right-[11%] -rotate-12 text-[28px] leading-none z-0">01;</span>
+
+                        <!-- Top-Left Org Pill Badge -->
+                        <header class="l3-header-area relative z-10 flex items-start justify-start">
+                            <div class="l3-org-pill">
+                                <div class="flex items-center gap-2 shrink-0">
+                                    <img id="l3HimaLogo" src="" alt="Logo HIMA IF" class="l3-org-logo">
+                                    <img id="l3LpkiaLogo" src="" alt="Logo IDE LPKIA" class="l3-org-logo">
+                                </div>
+                                <div class="l3-org-div shrink-0"></div>
+                                <div class="leading-none pr-1">
+                                    <p class="l3-org-title font-display text-[19px] font-bold uppercase tracking-[0.03em] leading-none">
+                                        HIMA INFORMATIKA
+                                    </p>
+                                    <p class="l3-org-sub text-[13px] font-extrabold uppercase tracking-[0.18em] mt-1 leading-none">
+                                        IDE LPKIA
+                                    </p>
+                                </div>
+                            </div>
+                        </header>
+
+                        <!-- Centerpiece: Speech Bubble + Megaphone + Info Caption -->
+                        <section class="relative z-10 flex flex-col items-center justify-center my-auto px-8">
+                            <div class="l3-bubble-wrap flex items-center justify-center">
+                                <!-- Unified Speech Bubble Shape with Pointer Tail -->
+                                <svg viewBox="0 0 640 430" preserveAspectRatio="none" class="l3-bubble-shape absolute inset-0 w-full h-full overflow-visible" aria-hidden="true">
+                                    <path class="l3-bubble-path" d="M 52 14 L 588 14 A 38 38 0 0 1 626 52 L 626 334 A 38 38 0 0 1 588 372 L 366 372 L 320 422 L 274 372 L 52 372 A 38 38 0 0 1 14 334 L 14 52 A 38 38 0 0 1 52 14 Z"/>
+                                </svg>
+
+                                <!-- Upgraded 3D Sculpted Studio Megaphone + Sound Waves (Theme-Aware Red/Blue) -->
+                                <svg viewBox="0 0 220 220" class="l3-megaphone z-20 overflow-visible" aria-hidden="true">
+                                    <defs>
+                                        <linearGradient id="l3MegaHorn" x1="15%" y1="10%" x2="35%" y2="95%">
+                                            <stop offset="0%" stop-color="#FFFFFF"/>
+                                            <stop offset="48%" stop-color="#F8FAFC"/>
+                                            <stop offset="82%" stop-color="#E2E8F0"/>
+                                            <stop offset="100%" stop-color="#94A3B8"/>
+                                        </linearGradient>
+                                        <linearGradient id="l3MegaColor" x1="10%" y1="0%" x2="90%" y2="100%">
+                                            <stop offset="0%" style="stop-color: var(--l3-mega-hi)"/>
+                                            <stop offset="52%" style="stop-color: var(--l3-mega-mid)"/>
+                                            <stop offset="100%" style="stop-color: var(--l3-mega-dark)"/>
+                                        </linearGradient>
+                                        <linearGradient id="l3MegaGrip" x1="0%" y1="0%" x2="100%" y2="0%">
+                                            <stop offset="0%" style="stop-color: var(--l3-mega-dark)"/>
+                                            <stop offset="45%" style="stop-color: var(--l3-mega-hi)"/>
+                                            <stop offset="100%" style="stop-color: var(--l3-mega-dark)"/>
+                                        </linearGradient>
+                                        <radialGradient id="l3MegaChamber" cx="42%" cy="48%" r="60%">
+                                            <stop offset="0%" style="stop-color: var(--l3-mega-dark)"/>
+                                            <stop offset="72%" style="stop-color: var(--l3-mega-deep)"/>
+                                            <stop offset="100%" stop-color="#050814"/>
+                                        </radialGradient>
+                                    </defs>
+
+                                    <!-- Sound Wave Arcs Radiating Outward -->
+                                    <g fill="none" stroke-linecap="round" style="stroke: var(--l3-wave)">
+                                        <path d="M174 86 Q190 108 174 130" stroke-width="5" opacity="0.92"/>
+                                        <path d="M189 72 Q212 108 189 144" stroke-width="4.5" opacity="0.68"/>
+                                        <path d="M204 58 Q232 108 204 158" stroke-width="4" opacity="0.40"/>
+                                    </g>
+
+                                    <g style="filter: drop-shadow(0 16px 20px rgba(7, 20, 44, 0.42));">
+                                        <!-- Ergonomic Trigger & Grip Handle -->
+                                        <path d="M74 132 Q88 134 90 148 Q88 158 76 158" fill="none" style="stroke: var(--l3-mega-dark)" stroke-width="4.5" stroke-linecap="round"/>
+                                        <rect x="73" y="137" width="11" height="12" rx="4" style="fill: var(--l3-mega-hi)"/>
+                                        <path d="M52 126 L74 128 L66 176 Q64 185 52 184 L46 183 Q38 181 40 171 Z"
+                                              fill="url(#l3MegaGrip)" style="stroke: var(--l3-mega-edge); stroke-width: var(--l3-mega-ew);" stroke-linejoin="round"/>
+                                        <!-- Handle bottom ring -->
+                                        <ellipse cx="52" cy="180" rx="10" ry="4" style="fill: var(--l3-mega-dark)"/>
+
+                                        <!-- Rear Back Barrel + Switch Cap -->
+                                        <rect x="16" y="88" width="22" height="40" rx="10"
+                                              fill="url(#l3MegaColor)" style="stroke: var(--l3-mega-edge); stroke-width: var(--l3-mega-ew);"/>
+                                        <path d="M32 82 L64 78 L64 138 L32 134 Q24 132 24 108 Q24 84 32 82 Z"
+                                              fill="url(#l3MegaColor)" style="stroke: var(--l3-mega-edge); stroke-width: var(--l3-mega-ew);" stroke-linejoin="round"/>
+
+                                        <!-- Smooth Flared Trumpet Bell Cone -->
+                                        <path d="M58 79 C96 76 124 54 148 34 L152 182 C124 162 96 140 58 137 Z"
+                                              fill="url(#l3MegaHorn)" style="stroke: var(--l3-mega-edge); stroke-width: var(--l3-mega-ew);" stroke-linejoin="round"/>
+
+                                        <!-- Collar Joint Ring -->
+                                        <ellipse cx="58" cy="108" rx="6" ry="30" fill="url(#l3MegaColor)"/>
+
+                                        <!-- Top Gloss Specular Reflection Ribbon -->
+                                        <path d="M68 85 C98 81 122 64 140 48" stroke="#FFFFFF" stroke-width="6.5" stroke-linecap="round" opacity="0.92"/>
+                                        <path d="M72 95 C100 92 122 78 136 66" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" opacity="0.55"/>
+
+                                        <!-- Bold 3D Outer Bell Lip Ring -->
+                                        <ellipse cx="151" cy="108" rx="23" ry="74"
+                                                 fill="url(#l3MegaColor)" style="stroke: var(--l3-mega-edge); stroke-width: var(--l3-mega-ew);"/>
+                                        <!-- Inner Bevel Catchlight Rim -->
+                                        <ellipse cx="152" cy="108" rx="18" ry="64" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="2"/>
+                                        <!-- Deep Acoustic Mouth Chamber -->
+                                        <ellipse cx="153" cy="108" rx="15" ry="59" fill="url(#l3MegaChamber)"/>
+                                        <!-- Inner Acoustic Phase Dome -->
+                                        <ellipse cx="144" cy="108" rx="7" ry="18" fill="url(#l3MegaColor)" opacity="0.88"/>
+                                        <ellipse cx="146" cy="105" rx="3" ry="8" fill="#FFFFFF" opacity="0.35"/>
+                                    </g>
+                                </svg>
+
+                                <!-- 3-Layer Hero Typography Inside Bubble -->
+                                <div class="l3-bubble-inner relative z-10 w-full h-full flex flex-col items-center justify-center text-center">
+                                    <span id="l3OutHero" class="l3-hero-txt font-hero uppercase leading-[0.88] tracking-[-0.02em] block" style="font-size: 136px;">
+                                        H-7
+                                    </span>
+                                    <span id="l3OutScript" class="l3-script-txt font-script leading-none block -mt-6 -mb-3 -rotate-3 select-none" style="font-size: 56px;">
+                                        Menuju
+                                    </span>
+                                    <span id="l3OutTitle" class="l3-title-txt font-hero uppercase leading-[0.94] tracking-[0.02em] block" style="font-size: 62px;">
+                                        KADERISASI
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Centered Org Description + Schedule + Location -->
+                            <div class="mt-6 text-center space-y-2 max-w-[660px]">
+                                <p class="l3-cap-main font-semibold text-[21px] leading-snug">
+                                    <span id="l3OutSubTitle" class="font-bold">Kaderisasi</span> HIMA Informatika<br>
+                                    Institut Digital Ekonomi LPKIA
+                                </p>
+
+                                <div class="l3-countdown-only pt-1.5 space-y-2">
+                                    <p id="l3OutDateTime" class="l3-cap-date font-display text-[19px] font-bold uppercase tracking-[0.08em]">
+                                        JUMAT, 04 DES 2026 • 08.00 WIB
+                                    </p>
+                                    <div class="l3-cap-loc inline-flex items-center justify-center gap-2 text-[22px] font-extrabold">
+                                        <svg class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/>
+                                        </svg>
+                                        <span id="l3OutLoc">Kampus IDE LPKIA</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Bottom Rounded Dock Bar (IG + Website CTA) -->
+                        <footer class="l3-footer-wrap relative z-10 w-full">
+                            <div class="l3-bottom-dock w-full flex items-center justify-around gap-6">
+                                <div class="inline-flex items-center gap-2.5 min-w-0">
+                                    <svg class="l3-dock-icon w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true">
+                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                        <circle cx="12" cy="12" r="4.5"></circle>
+                                        <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"></circle>
+                                    </svg>
+                                    <span id="l3OutIg" class="font-display text-[20px] font-bold tracking-[0.01em] truncate">
+                                        hmif_LPKIA
+                                    </span>
+                                </div>
+                                <div class="inline-flex items-center gap-2.5 min-w-0">
+                                    <svg class="l3-dock-icon w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true">
+                                        <circle cx="12" cy="12" r="9"></circle>
+                                        <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path>
+                                    </svg>
+                                    <span id="l3OutCta" class="font-display text-[19px] font-bold uppercase tracking-[0.03em] truncate">
+                                        GO.HMIF-LPKIA.MY.ID
+                                    </span>
+                                </div>
+                            </div>
+                        </footer>
+                    </div>
+
                 </main>
             </div>
         </div>
@@ -1340,19 +1741,66 @@
                     .map((line) => `<div class="l2-bg-row">${line}</div>`)
                     .join('');
             }
+
+            // Layout 3 DOM sync
+            const l3HeroEl = document.getElementById('l3OutHero');
+            const l3ScriptEl = document.getElementById('l3OutScript');
+            const l3TitleEl = document.getElementById('l3OutTitle');
+            const l3M = getL3BubbleMetrics(E.isCS ? 'COMING SOON' : E.hero, E.title);
+            if (l3HeroEl) {
+                l3HeroEl.textContent = E.isCS ? 'COMING SOON' : E.hero;
+                l3HeroEl.style.fontSize = l3M.heroFs + 'px';
+            }
+            if (l3ScriptEl) {
+                const rawScript = E.isCS ? 'Stay Tuned' : toTitleCase(E.mn || 'Menuju');
+                l3ScriptEl.textContent = rawScript;
+                l3ScriptEl.style.fontSize = l3M.scriptFs + 'px';
+            }
+            if (l3TitleEl) {
+                l3TitleEl.textContent = E.title;
+                l3TitleEl.style.fontSize = l3M.titleFs + 'px';
+            }
+            setIf('l3OutSubTitle', toTitleCase(E.title));
+            setIf('l3OutDateTime', `${E.date} • ${E.time}`);
+            setIf('l3OutLoc', toTitleCase(E.loc));
+            setIf('l3OutIg', E.igHandle);
+            setIf('l3OutCta', E.cta);
+        }
+
+        function toTitleCase(s) {
+            return String(s || '')
+                .toLowerCase()
+                .replace(/\b([a-z])/g, (m) => m.toUpperCase())
+                .replace(/\bIde Lpkia\b/g, 'IDE LPKIA')
+                .replace(/\bWib\b/g, 'WIB');
+        }
+
+        function getL3BubbleMetrics(heroTxt, titleTxt) {
+            const hl = (heroTxt || '').length;
+            const tl = (titleTxt || '').length;
+            const ratioScale = currentRatio === '9-16' ? 1.08 : (currentRatio === '1-1' ? 0.84 : 1);
+            const baseHero = hl >= 10 ? 52 : (hl >= 7 ? 84 : (hl >= 5 ? 116 : 146));
+            const baseTitle = tl >= 13 ? 44 : (tl >= 10 ? 60 : (tl >= 7 ? 68 : 78));
+            const baseScript = hl >= 10 ? 56 : 72;
+            return {
+                heroFs: Math.round(baseHero * ratioScale),
+                scriptFs: Math.round(baseScript * ratioScale),
+                titleFs: Math.round(baseTitle * ratioScale)
+            };
         }
 
         function setLayout(layoutNum) {
-            currentLayout = Number(layoutNum) === 2 ? 2 : 1;
+            const n = Number(layoutNum);
+            currentLayout = [1, 2, 3].includes(n) ? n : 1;
             const canvas = document.getElementById('posterCanvas');
-            canvas.classList.remove('layout-1', 'layout-2');
+            canvas.classList.remove('layout-1', 'layout-2', 'layout-3');
             canvas.classList.add('layout-' + currentLayout);
             document.getElementById('lblActiveLayout').textContent = 'layout-' + currentLayout;
 
-            [1, 2].forEach((n) => {
-                const btn = document.getElementById('btn-layout-' + n);
+            [1, 2, 3].forEach((num) => {
+                const btn = document.getElementById('btn-layout-' + num);
                 if (!btn) return;
-                if (n === currentLayout) {
+                if (num === currentLayout) {
                     btn.classList.remove('bg-[#162C4E]', 'text-white');
                     btn.classList.add('bg-[#FCD34D]', 'text-black');
                 } else {
@@ -1463,6 +1911,7 @@
                     btn.classList.add('bg-white', 'text-black');
                 }
             });
+            syncAllDom();
             applyScale();
         }
 
@@ -1561,6 +2010,7 @@
                     btn.classList.add('bg-white');
                 }
             });
+            syncAllDom();
             applyScale();
         }
 
@@ -1601,6 +2051,9 @@
 
             if (currentLayout === 2) {
                 return renderLayout2Canvas(dims);
+            }
+            if (currentLayout === 3) {
+                return renderLayout3Canvas(dims);
             }
 
             const THEMES = {
@@ -2787,6 +3240,603 @@
             return canvas;
         }
 
+        async function renderLayout3Canvas(dims) {
+            const W = dims.w;
+            const H = dims.h;
+            const canvas = document.createElement('canvas');
+            canvas.width = W;
+            canvas.height = H;
+            const ctx = canvas.getContext('2d');
+
+            const loadImg = (src) => new Promise((resolve) => {
+                const img = new Image();
+                img.onload = () => resolve(img);
+                img.onerror = () => resolve(null);
+                img.src = src;
+            });
+            const [himaImg, lpkiaImg] = await Promise.all([
+                loadImg(document.querySelector('#himaLogoSlot img').src),
+                loadImg(document.querySelector('#lpkiaLogoSlot img').src)
+            ]);
+
+            function rrPath(x, y, w, h, r) {
+                const rr = Math.min(r, w / 2, h / 2);
+                ctx.beginPath();
+                ctx.moveTo(x + rr, y);
+                ctx.lineTo(x + w - rr, y);
+                ctx.quadraticCurveTo(x + w, y, x + w, y + rr);
+                ctx.lineTo(x + w, y + h - rr);
+                ctx.quadraticCurveTo(x + w, y + h, x + w - rr, y + h);
+                ctx.lineTo(x + rr, y + h);
+                ctx.quadraticCurveTo(x, y + h, x, y + h - rr);
+                ctx.lineTo(x, y + rr);
+                ctx.quadraticCurveTo(x, y, x + rr, y);
+                ctx.closePath();
+            }
+
+            function bubblePath(x, y, w, bodyH, r, tailW, tailH) {
+                const rr = Math.min(r, w / 2, bodyH / 2);
+                const cx = x + w / 2;
+                ctx.beginPath();
+                ctx.moveTo(x + rr, y);
+                ctx.lineTo(x + w - rr, y);
+                ctx.quadraticCurveTo(x + w, y, x + w, y + rr);
+                ctx.lineTo(x + w, y + bodyH - rr);
+                ctx.quadraticCurveTo(x + w, y + bodyH, x + w - rr, y + bodyH);
+                ctx.lineTo(cx + tailW / 2, y + bodyH);
+                ctx.lineTo(cx, y + bodyH + tailH);
+                ctx.lineTo(cx - tailW / 2, y + bodyH);
+                ctx.lineTo(x + rr, y + bodyH);
+                ctx.quadraticCurveTo(x, y + bodyH, x, y + bodyH - rr);
+                ctx.lineTo(x, y + rr);
+                ctx.quadraticCurveTo(x, y, x + rr, y);
+                ctx.closePath();
+            }
+
+            function drawTextTrack(text, x, y, font, color, tracking = 0, align = 'left') {
+                ctx.font = font;
+                ctx.fillStyle = color;
+                ctx.textBaseline = 'middle';
+                const chars = Array.from(text);
+                const ws = chars.map((c) => ctx.measureText(c).width);
+                const tot = ws.reduce((a, b) => a + b, 0) + tracking * Math.max(0, chars.length - 1);
+                let cx = align === 'center' ? x - tot / 2 : (align === 'right' ? x - tot : x);
+                ctx.textAlign = 'left';
+                chars.forEach((c, idx) => {
+                    ctx.fillText(c, cx, y);
+                    cx += ws[idx] + tracking;
+                });
+            }
+
+            const L3_THEMES = {
+                'neubrutalism': {
+                    bgMode: 'dots', bg: '#16488E', dot: 'rgba(255, 255, 255, 0.16)',
+                    lineCol: 'rgba(252, 211, 77, 0.78)',
+                    tileFill: 'rgba(255, 255, 255, 0.06)', tileStroke: 'rgba(255, 255, 255, 0.20)',
+                    sparkCol: '#FCD34D', dotCol: 'rgba(255, 255, 255, 0.28)',
+                    codeCol: 'rgba(255, 255, 255, 0.24)', codeAlt: 'rgba(252, 211, 77, 0.42)',
+                    pillFill: '#FFFFFF', pillBorder: 3.5, pillBorderCol: '#000000', pillShadow: 6, pillRad: 14,
+                    orgTitle: '#12305A', orgSub: '#CA2C2A', orgDiv: 'rgba(0,0,0,0.85)',
+                    bubFill: '#FFFFFF', bubBorder: 7, bubBorderCol: '#000000', bubShadow: 10, bubSoft: null,
+                    heroCol: '#CA2C2A', titleCol: '#CA2C2A', scriptCol: '#F59E0B', scriptShd: 'rgba(18, 48, 90, 0.24)',
+                    capCol: '#FFFFFF', dateCol: '#FCD34D', locCol: '#FFFFFF',
+                    dockFill: '#FFFFFF', dockText: '#CA2C2A', dockIcon: '#16488E', dockBorder: 3.5, dockBorderCol: '#000000', dockShadow: 7, dockRad: 16,
+                    mega: { hi: '#FF6B6B', mid: '#CA2C2A', dark: '#991B1B', deep: '#3B0909', edge: '#111827', ew: 2.4, wave: '#FCD34D' }
+                },
+                'glass': {
+                    bgMode: 'grad', stops: [[0, '#0D356F'], [0.48, '#1B5AA6'], [1, '#2E80D1']],
+                    lineCol: 'rgba(191, 219, 254, 0.48)',
+                    tileFill: 'rgba(255, 255, 255, 0.12)', tileStroke: 'rgba(255, 255, 255, 0.42)',
+                    sparkCol: 'rgba(255, 255, 255, 0.65)', dotCol: 'rgba(255, 255, 255, 0.34)',
+                    codeCol: 'rgba(219, 234, 254, 0.32)', codeAlt: 'rgba(253, 224, 71, 0.42)',
+                    pillFill: 'rgba(255, 255, 255, 0.88)', pillBorder: 1.5, pillBorderCol: 'rgba(255,255,255,0.95)', pillShadow: 0, pillRad: 20, soft: 'rgba(10, 30, 68, 0.30)',
+                    orgTitle: '#12305A', orgSub: '#DC2626', orgDiv: 'rgba(37, 99, 235, 0.30)',
+                    bubFill: 'rgba(255, 255, 255, 0.90)', bubBorder: 3, bubBorderCol: 'rgba(255,255,255,0.98)', bubShadow: 0, bubSoft: 'rgba(8, 25, 58, 0.36)',
+                    heroCol: '#DC2626', titleCol: '#DC2626', scriptCol: '#F59E0B', scriptShd: 'rgba(15, 23, 42, 0.16)',
+                    capCol: '#EFF6FF', dateCol: '#FDE047', locCol: '#FFFFFF',
+                    dockFill: 'rgba(255, 255, 255, 0.90)', dockText: '#DC2626', dockIcon: '#2563EB', dockBorder: 1.5, dockBorderCol: 'rgba(255,255,255,0.95)', dockShadow: 0, dockRad: 24,
+                    mega: { hi: '#FF8585', mid: '#EF4444', dark: '#B91C1C', deep: '#450A0A', edge: 'rgba(255,255,255,0.85)', ew: 1.4, wave: '#FDE047' }
+                },
+                'dark-code': {
+                    bgMode: 'dots', bg: '#0B192E', dot: 'rgba(56, 189, 248, 0.24)',
+                    lineCol: 'rgba(56, 189, 248, 0.50)',
+                    tileFill: 'rgba(56, 189, 248, 0.06)', tileStroke: 'rgba(56, 189, 248, 0.26)',
+                    sparkCol: '#FCD34D', dotCol: 'rgba(56, 189, 248, 0.36)',
+                    codeCol: 'rgba(56, 189, 248, 0.26)', codeAlt: 'rgba(252, 211, 77, 0.34)',
+                    pillFill: '#122645', pillBorder: 2.5, pillBorderCol: '#38BDF8', pillShadow: 5, pillRad: 14,
+                    orgTitle: '#FFFFFF', orgSub: '#38BDF8', orgDiv: 'rgba(56, 189, 248, 0.60)',
+                    bubFill: '#122645', bubBorder: 6, bubBorderCol: '#38BDF8', bubShadow: 10, bubSoft: null,
+                    heroCol: '#38BDF8', titleCol: '#FFFFFF', scriptCol: '#FCD34D', scriptShd: 'rgba(0, 0, 0, 0.45)',
+                    capCol: '#E2E8F0', dateCol: '#38BDF8', locCol: '#FFFFFF',
+                    dockFill: '#122645', dockText: '#FFFFFF', dockIcon: '#38BDF8', dockBorder: 2.5, dockBorderCol: '#38BDF8', dockShadow: 6, dockRad: 16,
+                    mega: { hi: '#7DD3FC', mid: '#0EA5E9', dark: '#0369A1', deep: '#061326', edge: '#38BDF8', ew: 2, wave: '#38BDF8' }
+                },
+                'modern': {
+                    bgMode: 'radial', stops: [[0, '#2E7BD1'], [0.46, '#16488E'], [1, '#0D2D5E']],
+                    lineCol: 'rgba(253, 211, 77, 0.66)',
+                    tileFill: 'rgba(255, 255, 255, 0.065)', tileStroke: 'rgba(255, 255, 255, 0.22)',
+                    sparkCol: '#FDD34D', dotCol: 'rgba(255, 255, 255, 0.26)',
+                    codeCol: 'rgba(255, 255, 255, 0.20)', codeAlt: 'rgba(253, 211, 77, 0.36)',
+                    pillFill: 'rgba(255, 255, 255, 0.96)', pillBorder: 0, pillBorderCol: 'transparent', pillShadow: 0, pillRad: 18, soft: 'rgba(6, 20, 44, 0.36)',
+                    orgTitle: '#12305A', orgSub: '#2A82C6', orgDiv: '#CBD5E1',
+                    bubFill: '#FFFFFF', bubBorder: 0, bubBorderCol: 'transparent', bubShadow: 0, bubSoft: 'rgba(6, 20, 44, 0.44)',
+                    heroCol: '#16488E', titleCol: '#16488E', scriptCol: '#F59E0B', scriptShd: 'rgba(18, 48, 90, 0.14)',
+                    capCol: '#E2EEFF', dateCol: '#FDD34D', locCol: '#FFFFFF',
+                    dockFill: '#FFFFFF', dockText: '#16488E', dockIcon: '#2A82C6', dockBorder: 0, dockBorderCol: 'transparent', dockShadow: 0, dockRad: 26,
+                    mega: { hi: '#60A5FA', mid: '#2563EB', dark: '#1E3A8A', deep: '#091834', edge: 'rgba(255,255,255,0.72)', ew: 1.2, wave: '#FDD34D' }
+                }
+            };
+            const L = L3_THEMES[currentStyle] || L3_THEMES['neubrutalism'];
+
+            // 1. Background
+            if (L.bgMode === 'radial') {
+                const rad = ctx.createRadialGradient(W * 0.82, H * 0.22, 0, W * 0.82, H * 0.22, Math.max(W, H) * 0.95);
+                L.stops.forEach(([p, c]) => rad.addColorStop(p, c));
+                ctx.fillStyle = rad;
+                ctx.fillRect(0, 0, W, H);
+            } else if (L.bgMode === 'grad') {
+                const g = ctx.createLinearGradient(0, 0, W * 0.55, H);
+                L.stops.forEach(([p, c]) => g.addColorStop(p, c));
+                ctx.fillStyle = g;
+                ctx.fillRect(0, 0, W, H);
+            } else {
+                ctx.fillStyle = L.bg;
+                ctx.fillRect(0, 0, W, H);
+                ctx.fillStyle = L.dot;
+                for (let y = 12; y < H; y += 24) {
+                    for (let x = 12; x < W; x += 24) {
+                        ctx.beginPath();
+                        ctx.arc(x, y, 2, 0, Math.PI * 2);
+                        ctx.fill();
+                    }
+                }
+            }
+
+            // 2. Background Printilan (Atmospheric Glows, Wireframes, Tiles, Dot Matrices, Sparkles, Coding Accents)
+            ctx.save();
+            ctx.scale(W / 1080, H / 1350);
+
+            // Soft Halo Orbs
+            ctx.fillStyle = 'rgba(96, 165, 250, 0.10)';
+            ctx.beginPath(); ctx.arc(540, 600, 340, 0, Math.PI * 2); ctx.fill();
+            ctx.fillStyle = 'rgba(59, 130, 246, 0.12)';
+            ctx.beginPath(); ctx.arc(885, 215, 210, 0, Math.PI * 2); ctx.fill();
+
+            // Wireframe Curves
+            ctx.strokeStyle = L.lineCol;
+            ctx.lineWidth = 2.5;
+            ctx.beginPath();
+            ctx.moveTo(-30, 920); ctx.lineTo(155, 715);
+            ctx.quadraticCurveTo(195, 670, 225, 715); ctx.lineTo(225, 1390);
+            ctx.stroke();
+
+            ctx.save(); ctx.globalAlpha = 0.65; ctx.lineWidth = 2.2;
+            ctx.beginPath(); ctx.moveTo(-30, 1030);
+            ctx.bezierCurveTo(95, 1015, 160, 1125, 225, 1190); ctx.lineTo(225, 1390);
+            ctx.stroke(); ctx.restore();
+
+            ctx.save(); ctx.globalAlpha = 0.45; ctx.lineWidth = 2;
+            ctx.beginPath(); ctx.moveTo(1110, 280);
+            ctx.bezierCurveTo(940, 310, 890, 190, 935, 60); ctx.lineTo(935, -40);
+            ctx.stroke(); ctx.restore();
+
+            ctx.save(); ctx.globalAlpha = 0.28; ctx.lineWidth = 1.6;
+            ctx.beginPath(); ctx.arc(920, 210, 190, 0, Math.PI * 2); ctx.stroke();
+            ctx.setLineDash([10, 10]); ctx.lineWidth = 1.5;
+            ctx.beginPath(); ctx.arc(920, 210, 142, 0, Math.PI * 2); ctx.stroke();
+            ctx.restore();
+
+            // Diagonal Geometric Tiles
+            const bgTiles = [
+                { x: 875, y: 135, w: 128, h: 72, r: 16, rot: 18, sw: 1.8 },
+                { x: 72,  y: 290, w: 96,  h: 96, r: 20, rot: -16, sw: 1.8 },
+                { x: 905, y: 965, w: 110, h: 74, r: 16, rot: -18, sw: 1.8 },
+                { x: 70,  y: 1090, w: 84, h: 58, r: 14, rot: 14, sw: 1.6 }
+            ];
+            bgTiles.forEach((t) => {
+                ctx.save();
+                ctx.translate(t.x + t.w / 2, t.y + t.h / 2);
+                ctx.rotate((t.rot * Math.PI) / 180);
+                ctx.fillStyle = L.tileFill;
+                ctx.strokeStyle = L.tileStroke;
+                ctx.lineWidth = t.sw;
+                rrPath(-t.w / 2, -t.h / 2, t.w, t.h, t.r);
+                ctx.fill(); ctx.stroke();
+                ctx.restore();
+            });
+
+            // Micro Dot Clusters
+            ctx.fillStyle = L.dotCol;
+            for (let r = 0; r < 3; r++) for (let c = 0; c < 4; c++) {
+                ctx.beginPath(); ctx.arc(888 + c * 24, 410 + r * 24, 4, 0, Math.PI * 2); ctx.fill();
+            }
+            for (let r = 0; r < 2; r++) for (let c = 0; c < 3; c++) {
+                ctx.beginPath(); ctx.arc(110 + c * 22, 545 + r * 22, 3.5, 0, Math.PI * 2); ctx.fill();
+            }
+
+            // 4-Point Sparkle Stars
+            const drawSpark = (cx, cy, s, alpha) => {
+                ctx.save();
+                ctx.globalAlpha = alpha;
+                ctx.fillStyle = L.sparkCol;
+                ctx.beginPath();
+                ctx.moveTo(cx, cy - s);
+                ctx.quadraticCurveTo(cx + s * 0.1, cy - s * 0.1, cx + s, cy);
+                ctx.quadraticCurveTo(cx + s * 0.1, cy + s * 0.1, cx, cy + s);
+                ctx.quadraticCurveTo(cx - s * 0.1, cy + s * 0.1, cx - s, cy);
+                ctx.quadraticCurveTo(cx - s * 0.1, cy - s * 0.1, cx, cy - s);
+                ctx.closePath(); ctx.fill();
+                ctx.restore();
+            };
+            drawSpark(770, 134, 22, 0.82);
+            drawSpark(148, 230, 14, 0.65);
+            drawSpark(928, 866, 21, 0.78);
+            drawSpark(292, 995, 13, 0.68);
+
+            // Grid Plus Crosses
+            ctx.save();
+            ctx.strokeStyle = L.lineCol; ctx.globalAlpha = 0.58; ctx.lineWidth = 2.8; ctx.lineCap = 'round';
+            [[510, 130, 10], [972, 679, 9], [114, 829, 9]].forEach(([px, py, s]) => {
+                ctx.beginPath(); ctx.moveTo(px, py - s); ctx.lineTo(px, py + s);
+                ctx.moveTo(px - s, py); ctx.lineTo(px + s, py); ctx.stroke();
+            });
+            ctx.restore();
+            ctx.restore();
+
+            if (showAccents) {
+                const cAcc = [
+                    ['</>', 0.84, 0.19, 12, 32, L.codeCol],
+                    ['>_',  0.09, 0.33, -12, 30, L.codeAlt],
+                    ['{ }', 0.92, 0.56, -6, 34, L.codeCol],
+                    ['//',  0.09, 0.83, 12, 28, L.codeAlt],
+                    ['01;', 0.87, 0.82, -12, 28, L.codeCol]
+                ];
+                cAcc.forEach(([txt, px, py, rot, sz, col]) => {
+                    ctx.save();
+                    ctx.translate(px * W, py * H);
+                    ctx.rotate((rot * Math.PI) / 180);
+                    ctx.font = `800 ${sz}px "JetBrains Mono", monospace`;
+                    ctx.fillStyle = col;
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'middle';
+                    ctx.fillText(txt, 0, 0);
+                    ctx.restore();
+                });
+            }
+
+            function drawBox3(x, y, w, h, opts) {
+                if (opts.shadow > 0) {
+                    ctx.fillStyle = '#000000';
+                    rrPath(x + opts.shadow, y + opts.shadow, w, h, opts.radius);
+                    ctx.fill();
+                }
+                ctx.save();
+                if (opts.soft) {
+                    ctx.shadowColor = opts.soft;
+                    ctx.shadowBlur = 28;
+                    ctx.shadowOffsetY = 14;
+                }
+                ctx.fillStyle = opts.fill;
+                rrPath(x, y, w, h, opts.radius);
+                ctx.fill();
+                ctx.restore();
+                if (opts.border > 0) {
+                    ctx.lineWidth = opts.border;
+                    ctx.strokeStyle = opts.borderCol;
+                    rrPath(x, y, w, h, opts.radius);
+                    ctx.stroke();
+                }
+            }
+
+            const E = getEffectiveContent();
+            const is11 = currentRatio === '1-1';
+            const is916 = currentRatio === '9-16';
+            const topPad = is916 ? { x: 56, y: 72, logo: 54, py: 14, pl: 18, pr: 28, gap: 16, divH: 40 }
+                : (is11 ? { x: 46, y: 28, logo: 38, py: 9, pl: 12, pr: 18, gap: 10, divH: 32 }
+                : { x: 52, y: 42, logo: 46, py: 12, pl: 16, pr: 24, gap: 14, divH: 40 });
+
+            // 3. Top-Left Org Pill Badge
+            ctx.font = '700 19px "Space Grotesk", sans-serif';
+            const orgTitleW = ctx.measureText('HIMA INFORMATIKA').width + 10;
+            const logosW = topPad.logo * 2 + 8;
+            const pillW = topPad.pl + logosW + topPad.gap + 2 + topPad.gap + orgTitleW + topPad.pr;
+            const pillH = topPad.logo + topPad.py * 2;
+            drawBox3(topPad.x, topPad.y, pillW, pillH, {
+                fill: L.pillFill, border: L.pillBorder, borderColor: L.pillBorderCol, borderCol: L.pillBorderCol,
+                shadow: L.pillShadow, radius: L.pillRad, soft: L.soft
+            });
+            const drawOrgImg = (ix, iy, img) => {
+                if (!img) return;
+                const sc = Math.min(topPad.logo / img.width, topPad.logo / img.height);
+                const dw = img.width * sc;
+                const dh = img.height * sc;
+                ctx.drawImage(img, ix + (topPad.logo - dw) / 2, iy + (topPad.logo - dh) / 2, dw, dh);
+            };
+            const lY = topPad.y + topPad.py;
+            drawOrgImg(topPad.x + topPad.pl, lY, himaImg);
+            drawOrgImg(topPad.x + topPad.pl + topPad.logo + 8, lY, lpkiaImg);
+
+            const divX = topPad.x + topPad.pl + logosW + topPad.gap;
+            ctx.fillStyle = L.orgDiv;
+            ctx.fillRect(divX, topPad.y + (pillH - topPad.divH) / 2, 2, topPad.divH);
+
+            const txtX = divX + 2 + topPad.gap;
+            drawTextTrack('HIMA INFORMATIKA', txtX, topPad.y + pillH / 2 - 9, '700 19px "Space Grotesk", sans-serif', L.orgTitle, 0.6, 'left');
+            drawTextTrack('IDE LPKIA', txtX, topPad.y + pillH / 2 + 11, '800 13px "Plus Jakarta Sans", sans-serif', L.orgSub, 2.3, 'left');
+
+            // 4. Bottom Dock Bar
+            const dockCfg = is916 ? { px: 50, pb: 72, py: 22 }
+                : (is11 ? { px: 40, pb: 26, py: 14 }
+                : { px: 46, pb: 36, py: 18 });
+            const dockH = 26 + dockCfg.py * 2;
+            const dockW = W - dockCfg.px * 2;
+            const dockX = dockCfg.px;
+            const dockY = H - dockCfg.pb - dockH;
+            drawBox3(dockX, dockY, dockW, dockH, {
+                fill: L.dockFill, border: L.dockBorder, borderCol: L.dockBorderCol,
+                shadow: L.dockShadow, radius: L.dockRad, soft: L.soft
+            });
+
+            // Dock Left: IG, Right: CTA
+            const midDockY = dockY + dockH / 2;
+            ctx.font = '700 20px "Space Grotesk", sans-serif';
+            const igW = ctx.measureText(E.igHandle).width + 34;
+            ctx.font = '700 19px "Space Grotesk", sans-serif';
+            const ctaW = ctx.measureText(E.cta).width + 34;
+            const colGap = (dockW - igW - ctaW) / 3;
+            const igStartX = dockX + Math.max(28, colGap);
+            const ctaStartX = igStartX + igW + Math.max(28, colGap);
+
+            ctx.strokeStyle = L.dockIcon;
+            ctx.lineWidth = 2.4;
+            rrPath(igStartX, midDockY - 12, 24, 24, 6);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.arc(igStartX + 12, midDockY, 5.2, 0, Math.PI * 2);
+            ctx.stroke();
+            ctx.fillStyle = L.dockIcon;
+            ctx.beginPath();
+            ctx.arc(igStartX + 18, midDockY - 6, 1.4, 0, Math.PI * 2);
+            ctx.fill();
+            drawTextTrack(E.igHandle, igStartX + 34, midDockY + 1, '700 20px "Space Grotesk", sans-serif', L.dockText, 0.3, 'left');
+
+            // Globe icon
+            const gX = ctaStartX + 12;
+            ctx.strokeStyle = L.dockIcon;
+            ctx.lineWidth = 2.4;
+            ctx.beginPath();
+            ctx.arc(gX, midDockY, 10, 0, Math.PI * 2);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(gX - 10, midDockY);
+            ctx.lineTo(gX + 10, midDockY);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.ellipse(gX, midDockY, 4.5, 10, 0, 0, Math.PI * 2);
+            ctx.stroke();
+            drawTextTrack(E.cta, ctaStartX + 34, midDockY + 1, '700 19px "Space Grotesk", sans-serif', L.dockText, 0.5, 'left');
+
+            // 5. Center Speech Bubble + Megaphone + Caption
+            const bDim = is916 ? { w: 690, bodyH: 392, tailW: 96, tailH: 52, rad: 38, mega: 244, mOffX: 28, mOffY: -90 }
+                : (is11 ? { w: 536, bodyH: 304, tailW: 76, tailH: 42, rad: 30, mega: 178, mOffX: 20, mOffY: -68 }
+                : { w: 632, bodyH: 360, tailW: 90, tailH: 48, rad: 36, mega: 222, mOffX: 26, mOffY: -82 });
+
+            const capGap = is11 ? 20 : 28;
+            const capBlockH = E.isCS ? 58 : 132;
+            const totalMidH = bDim.bodyH + bDim.tailH + capGap + capBlockH;
+            const areaTop = topPad.y + pillH;
+            const areaBot = dockY;
+            const bubX = (W - bDim.w) / 2;
+            const bubY = areaTop + (areaBot - areaTop - totalMidH) / 2;
+
+            // Draw Speech Bubble
+            if (L.bubShadow > 0) {
+                ctx.fillStyle = '#000000';
+                bubblePath(bubX + L.bubShadow, bubY + L.bubShadow, bDim.w, bDim.bodyH, bDim.rad, bDim.tailW, bDim.tailH);
+                ctx.fill();
+            }
+            ctx.save();
+            if (L.bubSoft) {
+                ctx.shadowColor = L.bubSoft;
+                ctx.shadowBlur = 42;
+                ctx.shadowOffsetY = 20;
+            }
+            ctx.fillStyle = L.bubFill;
+            bubblePath(bubX, bubY, bDim.w, bDim.bodyH, bDim.rad, bDim.tailW, bDim.tailH);
+            ctx.fill();
+            ctx.restore();
+            if (L.bubBorder > 0) {
+                ctx.lineWidth = L.bubBorder;
+                ctx.strokeStyle = L.bubBorderCol;
+                bubblePath(bubX, bubY, bDim.w, bDim.bodyH, bDim.rad, bDim.tailW, bDim.tailH);
+                ctx.stroke();
+            }
+
+            // Stacked 3-Layer Hero Text Inside Bubble
+            const heroStr = E.isCS ? 'COMING SOON' : E.hero;
+            const scriptStr = E.isCS ? 'Stay Tuned' : toTitleCase(E.mn || 'Menuju');
+            const m = getL3BubbleMetrics(heroStr, E.title);
+            const heroCenterY = bubY + bDim.bodyH * 0.34;
+            const titleCenterY = bubY + bDim.bodyH * 0.72;
+            const scriptCenterY = bubY + bDim.bodyH * 0.51;
+
+            drawTextTrack(heroStr, W / 2, heroCenterY, `400 ${m.heroFs}px "Archivo Black", "Space Grotesk", sans-serif`, L.heroCol, -0.02 * m.heroFs, 'center');
+            drawTextTrack(E.title, W / 2, titleCenterY, `400 ${m.titleFs}px "Archivo Black", "Space Grotesk", sans-serif`, L.titleCol, 0.02 * m.titleFs, 'center');
+
+            ctx.save();
+            ctx.translate(W / 2, scriptCenterY);
+            ctx.rotate((-3 * Math.PI) / 180);
+            ctx.font = `400 ${m.scriptFs}px "Yellowtail", cursive`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.shadowColor = L.scriptShd;
+            ctx.shadowBlur = 8;
+            ctx.shadowOffsetX = 2;
+            ctx.shadowOffsetY = 3;
+            ctx.fillStyle = L.scriptCol;
+            ctx.fillText(scriptStr, 0, 0);
+            ctx.restore();
+
+            // Upgraded 3D Sculpted Studio Megaphone + Sound Waves (Theme-Aware Red/Blue)
+            ctx.save();
+            const MP = L.mega;
+            const megaCX = bubX + bDim.w - bDim.mOffX;
+            const megaCY = bubY + bDim.mOffY + bDim.mega * 0.45;
+            ctx.translate(megaCX, megaCY);
+            ctx.rotate((-18 * Math.PI) / 180);
+            ctx.scale(bDim.mega / 220, bDim.mega / 220);
+            ctx.translate(-110, -110);
+
+            // Sound Waves
+            ctx.save();
+            ctx.strokeStyle = MP.wave;
+            ctx.lineCap = 'round';
+            [[174, 86, 190, 108, 174, 130, 5, 0.92],
+             [189, 72, 212, 108, 189, 144, 4.5, 0.68],
+             [204, 58, 232, 108, 204, 158, 4, 0.40]].forEach(([x0, y0, cx, cy, x1, y1, lw, al]) => {
+                ctx.globalAlpha = al;
+                ctx.lineWidth = lw;
+                ctx.beginPath(); ctx.moveTo(x0, y0); ctx.quadraticCurveTo(cx, cy, x1, y1); ctx.stroke();
+            });
+            ctx.restore();
+
+            ctx.shadowColor = 'rgba(7, 20, 44, 0.42)';
+            ctx.shadowBlur = 20;
+            ctx.shadowOffsetY = 16;
+
+            // Trigger guard + button
+            ctx.strokeStyle = MP.dark;
+            ctx.lineWidth = 4.5;
+            ctx.lineCap = 'round';
+            ctx.beginPath(); ctx.moveTo(74, 132); ctx.quadraticCurveTo(88, 134, 90, 148); ctx.quadraticCurveTo(88, 158, 76, 158); ctx.stroke();
+            ctx.fillStyle = MP.hi;
+            rrPath(73, 137, 11, 12, 4); ctx.fill();
+
+            // Ergonomic handle grip
+            const gripG = ctx.createLinearGradient(38, 126, 74, 126);
+            gripG.addColorStop(0, MP.dark);
+            gripG.addColorStop(0.45, MP.hi);
+            gripG.addColorStop(1, MP.dark);
+            ctx.fillStyle = gripG;
+            ctx.strokeStyle = MP.edge;
+            ctx.lineWidth = MP.ew;
+            ctx.lineJoin = 'round';
+            ctx.beginPath();
+            ctx.moveTo(52, 126); ctx.lineTo(74, 128); ctx.lineTo(66, 176);
+            ctx.quadraticCurveTo(64, 185, 52, 184); ctx.lineTo(46, 183);
+            ctx.quadraticCurveTo(38, 181, 40, 171); ctx.closePath();
+            ctx.fill(); if (MP.ew > 0) ctx.stroke();
+
+            ctx.shadowColor = 'transparent';
+            ctx.fillStyle = MP.dark;
+            ctx.beginPath(); ctx.ellipse(52, 180, 10, 4, 0, 0, Math.PI * 2); ctx.fill();
+
+            // Back Barrel + Cap
+            const colG = ctx.createLinearGradient(16, 78, 64, 138);
+            colG.addColorStop(0, MP.hi);
+            colG.addColorStop(0.52, MP.mid);
+            colG.addColorStop(1, MP.dark);
+            ctx.fillStyle = colG;
+            ctx.strokeStyle = MP.edge;
+            ctx.lineWidth = MP.ew;
+            rrPath(16, 88, 22, 40, 10); ctx.fill(); if (MP.ew > 0) ctx.stroke();
+
+            ctx.beginPath();
+            ctx.moveTo(32, 82); ctx.lineTo(64, 78); ctx.lineTo(64, 138); ctx.lineTo(32, 134);
+            ctx.quadraticCurveTo(24, 132, 24, 108); ctx.quadraticCurveTo(24, 84, 32, 82); ctx.closePath();
+            ctx.fill(); if (MP.ew > 0) ctx.stroke();
+
+            // Smooth Flared Trumpet Bell Cone
+            const hornG = ctx.createLinearGradient(70, 40, 95, 175);
+            hornG.addColorStop(0, '#FFFFFF');
+            hornG.addColorStop(0.48, '#F8FAFC');
+            hornG.addColorStop(0.82, '#E2E8F0');
+            hornG.addColorStop(1, '#94A3B8');
+            ctx.fillStyle = hornG;
+            ctx.beginPath();
+            ctx.moveTo(58, 79);
+            ctx.bezierCurveTo(96, 76, 124, 54, 148, 34);
+            ctx.lineTo(152, 182);
+            ctx.bezierCurveTo(124, 162, 96, 140, 58, 137);
+            ctx.closePath();
+            ctx.fill(); if (MP.ew > 0) ctx.stroke();
+
+            ctx.fillStyle = colG;
+            ctx.beginPath(); ctx.ellipse(58, 108, 6, 30, 0, 0, Math.PI * 2); ctx.fill();
+
+            // Top Gloss Specular Reflection Ribbon
+            ctx.strokeStyle = 'rgba(255,255,255,0.92)';
+            ctx.lineWidth = 6.5;
+            ctx.lineCap = 'round';
+            ctx.beginPath(); ctx.moveTo(68, 85); ctx.bezierCurveTo(98, 81, 122, 64, 140, 48); ctx.stroke();
+            ctx.strokeStyle = 'rgba(255,255,255,0.55)';
+            ctx.lineWidth = 2.5;
+            ctx.beginPath(); ctx.moveTo(72, 95); ctx.bezierCurveTo(100, 92, 122, 78, 136, 66); ctx.stroke();
+
+            // Outer 3D Bell Lip Ring + Inner Bevel
+            ctx.fillStyle = colG;
+            ctx.strokeStyle = MP.edge;
+            ctx.lineWidth = MP.ew;
+            ctx.beginPath(); ctx.ellipse(151, 108, 23, 74, 0, 0, Math.PI * 2); ctx.fill(); if (MP.ew > 0) ctx.stroke();
+
+            ctx.strokeStyle = 'rgba(255,255,255,0.45)';
+            ctx.lineWidth = 2;
+            ctx.beginPath(); ctx.ellipse(152, 108, 18, 64, 0, 0, Math.PI * 2); ctx.stroke();
+
+            // Deep Acoustic Chamber
+            const chG = ctx.createRadialGradient(148, 106, 4, 153, 108, 60);
+            chG.addColorStop(0, MP.dark);
+            chG.addColorStop(0.72, MP.deep);
+            chG.addColorStop(1, '#050814');
+            ctx.fillStyle = chG;
+            ctx.beginPath(); ctx.ellipse(153, 108, 15, 59, 0, 0, Math.PI * 2); ctx.fill();
+
+            // Inner Phase Dome
+            ctx.save(); ctx.globalAlpha = 0.88; ctx.fillStyle = colG;
+            ctx.beginPath(); ctx.ellipse(144, 108, 7, 18, 0, 0, Math.PI * 2); ctx.fill();
+            ctx.globalAlpha = 0.35; ctx.fillStyle = '#FFFFFF';
+            ctx.beginPath(); ctx.ellipse(146, 105, 3, 8, 0, 0, Math.PI * 2); ctx.fill();
+            ctx.restore();
+            ctx.restore();
+
+            // 6. Centered Org Description + Schedule + Location
+            const capY = bubY + bDim.bodyH + bDim.tailH + capGap;
+            const titleLine = `${toTitleCase(E.title)} HIMA Informatika`;
+            drawTextTrack(titleLine, W / 2, capY + 12, '700 21px "Plus Jakarta Sans", sans-serif', L.capCol, 0, 'center');
+            drawTextTrack('Institut Digital Ekonomi LPKIA', W / 2, capY + 41, '600 21px "Plus Jakarta Sans", sans-serif', L.capCol, 0, 'center');
+
+            if (!E.isCS) {
+                const dtTxt = `${E.date} • ${E.time}`;
+                drawTextTrack(dtTxt, W / 2, capY + 76, '700 19px "Space Grotesk", sans-serif', L.dateCol, 1.4, 'center');
+
+                const locTxt = toTitleCase(E.loc);
+                ctx.font = '800 22px "Plus Jakarta Sans", sans-serif';
+                const locW = ctx.measureText(locTxt).width;
+                const locStartX = W / 2 - (26 + 8 + locW) / 2;
+                const locY = capY + 114;
+
+                // Map pin filled icon
+                ctx.save();
+                ctx.fillStyle = L.locCol;
+                ctx.translate(locStartX + 12, locY);
+                ctx.beginPath();
+                ctx.arc(0, -3, 8, Math.PI, 0, false);
+                ctx.quadraticCurveTo(8, 3, 0, 11);
+                ctx.quadraticCurveTo(-8, 3, -8, -3);
+                ctx.closePath();
+                ctx.fill();
+                ctx.fillStyle = L.bgMode === 'dots' ? L.bg : '#16488E';
+                ctx.beginPath();
+                ctx.arc(0, -3, 3, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.restore();
+
+                drawTextTrack(locTxt, locStartX + 32, locY, '800 22px "Plus Jakarta Sans", sans-serif', L.locCol, 0, 'left');
+            }
+
+            return canvas;
+        }
+
         async function downloadPng() {
             const btn = document.getElementById('btnDownload');
             btn.disabled = true;
@@ -2799,7 +3849,7 @@
                 const heroSlug = E.isCS
                     ? 'coming-soon'
                     : E.hero.toLowerCase().replace(/\s+/g, '-');
-                const layoutTag = currentLayout === 2 ? 'layout2-' : '';
+                const layoutTag = currentLayout === 2 ? 'layout2-' : (currentLayout === 3 ? 'layout3-' : '');
                 link.download = `poster-${heroSlug}-${layoutTag}${currentStyle}-${currentRatio}.png`;
                 link.href = rendered.toDataURL('image/png');
                 link.click();
@@ -2816,6 +3866,8 @@
             document.getElementById('sidebarLogo').src = himaSrc;
             document.getElementById('l2HimaLogo').src = himaSrc;
             document.getElementById('l2LpkiaLogo').src = lpkiaSrc;
+            document.getElementById('l3HimaLogo').src = himaSrc;
+            document.getElementById('l3LpkiaLogo').src = lpkiaSrc;
             renderL2CursorSvg();
             syncAllDom();
             applyScale();
