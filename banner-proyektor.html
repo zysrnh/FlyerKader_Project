@@ -7,7 +7,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Chakra+Petch:wght@700&family=JetBrains+Mono:wght@600;700;800&family=Outfit:wght@700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Silkscreen:wght@700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Barlow+Condensed:wght@700;800;900&family=Chakra+Petch:wght@700&family=JetBrains+Mono:wght@600;700;800&family=Outfit:wght@700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Silkscreen:wght@400;700&family=Space+Grotesk:wght@700&family=Yellowtail&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
@@ -116,7 +116,7 @@
                     </button>
                     <button type="button" onclick="setTheme('dark-code')" id="btn-thm-dark-code" class="thm-btn btn-brutal px-3 py-2 bg-[#162C4E] text-white border-2 border-black shadow-[2px_2px_0_#000] flex items-center justify-between cursor-pointer">
                         <span class="text-[11px] font-extrabold uppercase">Dark Code (Ruang Gelap)</span>
-                        <span class="flex gap-1"><span class="w-3.5 h-3.5 bg-[#0B192E] border border-black"></span><span class="w-3.5 h-3.5 bg-[#38BDF8] border border-black"></span><span class="w-3.5 h-3.5 bg-[#FCD34D] border border-black"></span></span>
+                        <span class="flex gap-1"><span class="w-3.5 h-3.5 bg-[#091322] border border-black"></span><span class="w-3.5 h-3.5 bg-[#E2E8F0] border border-black"></span><span class="w-3.5 h-3.5 bg-[#CA2C2A] border border-black"></span></span>
                     </button>
                     <button type="button" onclick="setTheme('modern')" id="btn-thm-modern" class="thm-btn btn-brutal px-3 py-2 bg-[#162C4E] text-white border-2 border-black shadow-[2px_2px_0_#000] flex items-center justify-between cursor-pointer">
                         <span class="text-[11px] font-extrabold uppercase">Modern Clean Blue</span>
@@ -168,7 +168,7 @@
                 </div>
                 <div>
                     <label class="text-[10px] font-bold uppercase text-white/60 block mb-1">Judul Utama Proyektor</label>
-                    <input id="inTitle" type="text" oninput="onLiveEdit()" class="w-full px-2.5 py-1.5 bg-[#081426] border-2 border-black text-white text-xs font-extrabold uppercase focus:outline-none focus:border-[#FCD34D]">
+                    <input id="inTitle" type="text" oninput="onLiveEdit()" class="w-full px-2.5 py-1.5 bg-[#081426] border-2 border-black text-white text-xs font-extrabold focus:outline-none focus:border-[#FCD34D]">
                 </div>
                 <div>
                     <label class="text-[10px] font-bold uppercase text-white/60 block mb-1">Tema / Subjudul</label>
@@ -295,11 +295,11 @@ const CURSOR_MAP = [
 ];
 
 const SESSION_PRESETS = {
-    main:    { badge: "SELAMAT DATANG", title: "KADERISASI", sub: "HIMA INFORMATIKA • KABINET AKSARA NIRMANA", tag: "Membentuk Generasi Unggul, Kritis & Inovatif" },
+    main:    { badge: "KADERISASI HIMA INFORMATIKA", title: "Code the Future, Build the Leadership", sub: "HIMA INFORMATIKA • KABINET AKSARA NIRMANA", tag: "Berpikir Kritis, Bergerak Progresif, Memimpin dengan Solutif." },
     regis:   { badge: "OPEN GATE & REGISTRASI", title: "SELAMAT DATANG", sub: "PESERTA KADERISASI HIMA INFORMATIKA", tag: "Silakan Melakukan Konfirmasi Kehadiran di Meja Panitia" },
-    materi:  { badge: "SESI BERLANGSUNG", title: "SESI MATERI", sub: "KEPEMIMPINAN & KEORGANISASIAN", tag: "Dari Ilmu, Menjadi Karya • Mohon Fokus Selama Pemaparan" },
+    materi:  { badge: "SESI BERLANGSUNG", title: "SESI MATERI", sub: "KEPEMIMPINAN & KEORGANISASIAN", tag: "Berpikir Kritis, Bergerak Progresif, Memimpin dengan Solutif." },
     ishoma:  { badge: "JEDA KEGIATAN", title: "WAKTU ISHOMA", sub: "SHALAT & ISTIRAHAT SEJENAK", tag: "Kegiatan Dilanjutkan Kembali Sesuai Jadwal Panitia" },
-    closing: { badge: "TERIMA KASIH", title: "CLOSING CEREMONY", sub: "KADERISASI HIMA INFORMATIKA", tag: "Dari Ilmu, Menjadi Karya • Sampai Jumpa di Agenda Berikutnya" }
+    closing: { badge: "TERIMA KASIH", title: "CLOSING CEREMONY", sub: "KADERISASI HIMA INFORMATIKA", tag: "Berpikir Kritis, Bergerak Progresif, Memimpin dengan Solutif." }
 };
 
 let state = {
@@ -326,46 +326,50 @@ const RATIOS = {
 const BANNER_THEMES = {
     "neubrutalism": {
         bgSolid: "#16488E",
-        l1Bg: "#FFFFFF",
-        l1Dot: "rgba(42,130,198,0.28)",
-        l2Bg: "#2A82C6",
-        dot: "rgba(255,255,255,0.16)",
-        wall: "rgba(255,255,255,0.065)",
-        hdrFill: "#FFFFFF", hdrBorder: "#000000", hdrBW: 4, hdrShd: 7, hdrRad: 12,
-        hdrTitle: "#12305A", hdrSub: "#CA2C2A",
-        cardFill: "#FFFFFF", cardBack: "#DBEAFE", cardBorder: "#000000", cardBW: 5, cardShd: 12, cardRad: 14,
-        tbFill: "#1A467C", tbText: "#FFFFFF", tbDots: ["#CA2C2A", "#FCD34D", "#FFFFFF"], tbSq: true,
-        badgeFill: "#1A467C", badgeText: "#FFFFFF", badgeBorder: "#000000", badgeBW: 3.5, badgeShd: 5, badgeRad: 0,
-        heroFill: "#CA2C2A", heroStroke: "#000000", heroSW: 14, heroShdCol: "#000000", heroShdOff: 10,
-        heroLightFill: "#0B1F40", heroLightStroke: "transparent", heroLightSW: 0,
+        l1Bg: "#F8FAFC",
+        l1Dot: "rgba(22,72,142,0.18)",
+        l2Bg: "#2563EB",
+        dot: "rgba(255,255,255,0.18)",
+        gridLine: "rgba(255,255,255,0.11)",
+        wall: "rgba(255,255,255,0.075)",
+        hdrFill: "#FFFFFF", hdrBorder: "#000000", hdrBW: 4.5, hdrShd: 8, hdrShdCol: "#000000", hdrRad: 4,
+        hdrTitle: "#0B1F40", hdrSub: "#CA2C2A",
+        cardFill: "#FFFFFF", cardBack: "#FCD34D", cardMid: "#DBEAFE", cardBorder: "#000000", cardBW: 5.5, cardShd: 14, cardShdCol: "#000000", cardRad: 0, cardRadL3: 38, cardRadL5: 18,
+        tbFill: "#0B1F40", tbText: "#FFFFFF", tbDots: ["#CA2C2A", "#FCD34D", "#FFFFFF"], tbSq: true,
+        badgeFill: "#CA2C2A", badgeText: "#FFFFFF", badgeBorder: "#000000", badgeBW: 4, badgeShd: 6, badgeShdCol: "#000000", badgeRad: 0,
+        heroFill: "#16488E", heroAltFill: "#CA2C2A", heroStroke: "#000000", heroSW: 9, heroShdCol: "#000000", heroShdOff: 7,
         subPillFill: "#FCD34D", subPillText: "#0B1F40", subPillBorder: "#000000",
-        tagDark: "#0F172A", tagLight: "#E2EEFF",
-        dockFill: "#0B1F40", dockText: "#FFFFFF", dockIcon: "#FCD34D", dockBorder: "#000000", dockBW: 3.5,
-        starFill: "#CA2C2A", starStroke: "#000000", starSW: 4,
-        mega: { hi: "#FF6B6B", mid: "#CA2C2A", dark: "#991B1B", deep: "#3B0909", edge: "#111827", wave: "#FCD34D" },
-        cursor: { B: "#000000", W: "#FFFFFF", G: "#CBD5E1" },
+        tagDark: "#0B1F40", tagLight: "#FFFFFF",
+        dockFill: "#0B1F40", dockText: "#FFFFFF", dockIcon: "#FCD34D", dockBorder: "#000000", dockBW: 4, dockRad: 0,
+        starFill: "#FCD34D", starStroke: "#000000", starSW: 4.5,
+        sparkFill: "#CA2C2A", sparkAlt: "#FCD34D", sparkStroke: "#000000",
+        radarStroke: "rgba(255,255,255,0.22)", tileStroke: "rgba(255,255,255,0.20)",
+        mega: { hi: "#FF7878", mid: "#CA2C2A", dark: "#991B1B", deep: "#2B0505", edge: "#000000", wave: "#FCD34D" },
+        cursor: { B: "#000000", W: "#FFFFFF", G: "#94A3B8" },
         soft: false
     },
     "dark-code": {
-        bgSolid: "#0B192E",
-        l1Bg: "#091529",
-        l1Dot: "rgba(56,189,248,0.22)",
-        l2Bg: "#0B192E",
-        dot: "rgba(56,189,248,0.20)",
-        wall: "rgba(56,189,248,0.065)",
-        hdrFill: "#122645", hdrBorder: "#38BDF8", hdrBW: 3, hdrShd: 6, hdrRad: 14,
-        hdrTitle: "#FFFFFF", hdrSub: "#38BDF8",
-        cardFill: "#122645", cardBack: "#0E1F3A", cardBorder: "#38BDF8", cardBW: 3.5, cardShd: 10, cardRad: 18,
-        tbFill: "#0F2342", tbText: "#38BDF8", tbDots: ["#EF4444", "#FCD34D", "#38BDF8"], tbSq: false,
-        badgeFill: "#1A365D", badgeText: "#38BDF8", badgeBorder: "#38BDF8", badgeBW: 2.5, badgeShd: 5, badgeRad: 8,
-        heroFill: "#FCD34D", heroStroke: "#060D1A", heroSW: 12, heroShdCol: "#EF4444", heroShdOff: 9,
-        heroLightFill: "#FFFFFF", heroLightStroke: "transparent", heroLightSW: 0,
-        subPillFill: "#CA2C2A", subPillText: "#FFFFFF", subPillBorder: "#FFFFFF",
-        tagDark: "#F1F5F9", tagLight: "#BAE6FD",
-        dockFill: "#071120", dockText: "#F8FAFC", dockIcon: "#38BDF8", dockBorder: "#38BDF8", dockBW: 2.5,
-        starFill: "#0284C7", starStroke: "#38BDF8", starSW: 3.5,
-        mega: { hi: "#7DD3FC", mid: "#0EA5E9", dark: "#0369A1", deep: "#061326", edge: "#38BDF8", wave: "#38BDF8" },
-        cursor: { B: "#000000", W: "#FFFFFF", G: "#38BDF8" },
+        bgSolid: "#091322",
+        l1Bg: "#07101E",
+        l1Dot: "rgba(226,232,240,0.10)",
+        l2Bg: "#0A172B",
+        dot: "rgba(226,232,240,0.10)",
+        gridLine: "rgba(148,163,184,0.08)",
+        wall: "rgba(255,255,255,0.04)",
+        hdrFill: "#10203A", hdrBorder: "#E2E8F0", hdrBW: 3, hdrShd: 7, hdrShdCol: "#020617", hdrRad: 4,
+        hdrTitle: "#FFFFFF", hdrSub: "#FCD34D",
+        cardFill: "#10203A", cardBack: "#CA2C2A", cardMid: "#1E3A5F", cardBorder: "#E2E8F0", cardBW: 4, cardShd: 12, cardShdCol: "#020617", cardRad: 4, cardRadL3: 38, cardRadL5: 18,
+        tbFill: "#07101E", tbText: "#E2E8F0", tbDots: ["#CA2C2A", "#FCD34D", "#4ADE80"], tbSq: true,
+        badgeFill: "#CA2C2A", badgeText: "#FFFFFF", badgeBorder: "#FFFFFF", badgeBW: 3, badgeShd: 6, badgeShdCol: "#020617", badgeRad: 0,
+        heroFill: "#FFFFFF", heroAltFill: "#FCD34D", heroStroke: "#020617", heroSW: 8, heroShdCol: "#CA2C2A", heroShdOff: 7,
+        subPillFill: "#FFFFFF", subPillText: "#091322", subPillBorder: "#020617",
+        tagDark: "#F1F5F9", tagLight: "#E2E8F0",
+        dockFill: "#07101E", dockText: "#F8FAFC", dockIcon: "#FCD34D", dockBorder: "#E2E8F0", dockBW: 3, dockRad: 4,
+        starFill: "#FCD34D", starStroke: "#020617", starSW: 4.5,
+        sparkFill: "#FCD34D", sparkAlt: "#CA2C2A", sparkStroke: "#020617",
+        radarStroke: "rgba(226,232,240,0.16)", tileStroke: "rgba(226,232,240,0.14)",
+        mega: { hi: "#FCA5A5", mid: "#CA2C2A", dark: "#991B1B", deep: "#2B0505", edge: "#FFFFFF", wave: "#FCD34D" },
+        cursor: { B: "#000000", W: "#FFFFFF", G: "#CBD5E1" },
         soft: false
     },
     "modern": {
@@ -374,44 +378,48 @@ const BANNER_THEMES = {
         l1Bg: "#0D2D5E",
         l1Dot: "rgba(255,255,255,0.08)",
         l2Bg: "#16488E",
-        dot: "rgba(255,255,255,0.08)",
+        dot: "rgba(255,255,255,0.09)",
+        gridLine: "rgba(255,255,255,0.07)",
         wall: "rgba(255,255,255,0.055)",
-        hdrFill: "rgba(255,255,255,0.96)", hdrBorder: "transparent", hdrBW: 0, hdrShd: 0, hdrRad: 999,
-        hdrTitle: "#12305A", hdrSub: "#2A82C6",
-        cardFill: "#FFFFFF", cardBack: "#E2EEFF", cardBorder: "transparent", cardBW: 0, cardShd: 0, cardRad: 26,
-        tbFill: "#F1F5F9", tbText: "#12305A", tbDots: ["#CA2C2A", "#FDD34D", "#12305A"], tbSq: false,
-        badgeFill: "#FDD34D", badgeText: "#12305A", badgeBorder: "transparent", badgeBW: 0, badgeShd: 0, badgeRad: 999,
-        heroFill: "#FFFFFF", heroStroke: "transparent", heroSW: 0, heroShdCol: "#FDD34D", heroShdOff: 8,
-        heroLightFill: "#12305A", heroLightStroke: "transparent", heroLightSW: 0,
+        hdrFill: "rgba(255,255,255,0.97)", hdrBorder: "rgba(255,255,255,0.95)", hdrBW: 1.5, hdrShd: 0, hdrShdCol: "transparent", hdrRad: 999,
+        hdrTitle: "#0F294A", hdrSub: "#1D4ED8",
+        cardFill: "#FFFFFF", cardBack: "#DBEAFE", cardMid: "#BFDBFE", cardBorder: "rgba(255,255,255,0.9)", cardBW: 2, cardShd: 0, cardShdCol: "transparent", cardRad: 22, cardRadL3: 42, cardRadL5: 26,
+        tbFill: "#EEF4FC", tbText: "#0F294A", tbDots: ["#CA2C2A", "#F59E0B", "#16488E"], tbSq: false,
+        badgeFill: "#FDD34D", badgeText: "#0F294A", badgeBorder: "transparent", badgeBW: 0, badgeShd: 0, badgeShdCol: "transparent", badgeRad: 999,
+        heroFill: "#0C2B57", heroAltFill: "#CA2C2A", heroStroke: "transparent", heroSW: 0, heroShdCol: "#DBEAFE", heroShdOff: 5,
         subPillFill: "#CA2C2A", subPillText: "#FFFFFF", subPillBorder: "transparent",
-        tagDark: "#334155", tagLight: "#E2EEFF",
-        dockFill: "#0A2044", dockText: "#FFFFFF", dockIcon: "#FDD34D", dockBorder: "transparent", dockBW: 0,
-        starFill: "#FDD34D", starStroke: "transparent", starSW: 0,
-        mega: { hi: "#60A5FA", mid: "#2563EB", dark: "#1E3A8A", deep: "#091834", edge: "rgba(255,255,255,0.8)", wave: "#FDD34D" },
-        cursor: { B: "#12305A", W: "#FFFFFF", G: "#FDD34D" },
+        tagDark: "#334155", tagLight: "#F1F5F9",
+        dockFill: "#091E42", dockText: "#FFFFFF", dockIcon: "#FDD34D", dockBorder: "rgba(255,255,255,0.22)", dockBW: 1.5, dockRad: 999,
+        starFill: "#FDD34D", starStroke: "#0C2B57", starSW: 3,
+        sparkFill: "#FDD34D", sparkAlt: "#FFFFFF", sparkStroke: "transparent",
+        radarStroke: "rgba(255,255,255,0.16)", tileStroke: "rgba(255,255,255,0.14)",
+        mega: { hi: "#60A5FA", mid: "#2563EB", dark: "#1E3A8A", deep: "#091834", edge: "rgba(255,255,255,0.9)", wave: "#FDD34D" },
+        cursor: { B: "#0F294A", W: "#FFFFFF", G: "#FDD34D" },
         soft: true
     },
     "glass": {
         bgSolid: "#165AA4",
-        bgGrad: ["#0D356F", "#1B5AA6", "#2E80D1"],
-        l1Bg: "#0D356F",
+        bgGrad: ["#0B2D62", "#1856A3", "#287AD0"],
+        l1Bg: "#0B2D62",
         l1Dot: "rgba(255,255,255,0.09)",
         l2Bg: "#165AA4",
         dot: "rgba(255,255,255,0.09)",
-        wall: "rgba(255,255,255,0.065)",
-        hdrFill: "rgba(255,255,255,0.88)", hdrBorder: "rgba(255,255,255,0.96)", hdrBW: 2, hdrShd: 0, hdrRad: 999,
-        hdrTitle: "#0F2F5E", hdrSub: "#2563EB",
-        cardFill: "rgba(255,255,255,0.90)", cardBack: "rgba(226,240,255,0.44)", cardBorder: "rgba(255,255,255,0.96)", cardBW: 2.5, cardShd: 0, cardRad: 28,
-        tbFill: "rgba(255,255,255,0.75)", tbText: "#1E40AF", tbDots: ["#EF4444", "#F59E0B", "#3B82F6"], tbSq: false,
-        badgeFill: "#2563EB", badgeText: "#FFFFFF", badgeBorder: "rgba(255,255,255,0.9)", badgeBW: 2, badgeShd: 0, badgeRad: 999,
-        heroFill: "#16488E", heroStroke: "#FFFFFF", heroSW: 0, heroShdCol: "rgba(15,41,74,0.28)", heroShdOff: 6,
-        heroLightFill: "#0F294A", heroLightStroke: "transparent", heroLightSW: 0,
-        subPillFill: "#DC2626", subPillText: "#FFFFFF", subPillBorder: "rgba(255,255,255,0.85)",
+        gridLine: "rgba(255,255,255,0.075)",
+        wall: "rgba(255,255,255,0.06)",
+        hdrFill: "rgba(255,255,255,0.90)", hdrBorder: "rgba(255,255,255,0.98)", hdrBW: 2.5, hdrShd: 0, hdrShdCol: "transparent", hdrRad: 999,
+        hdrTitle: "#0F294A", hdrSub: "#2563EB",
+        cardFill: "rgba(255,255,255,0.92)", cardBack: "rgba(226,240,255,0.34)", cardMid: "rgba(191,219,254,0.45)", cardBorder: "rgba(255,255,255,0.98)", cardBW: 3, cardShd: 0, cardShdCol: "transparent", cardRad: 26, cardRadL3: 44, cardRadL5: 28,
+        tbFill: "rgba(255,255,255,0.78)", tbText: "#1E3A8A", tbDots: ["#EF4444", "#F59E0B", "#3B82F6"], tbSq: false,
+        badgeFill: "#1D4ED8", badgeText: "#FFFFFF", badgeBorder: "rgba(255,255,255,0.95)", badgeBW: 2, badgeShd: 0, badgeShdCol: "transparent", badgeRad: 999,
+        heroFill: "#0F294A", heroAltFill: "#DC2626", heroStroke: "#FFFFFF", heroSW: 0, heroShdCol: "rgba(15,41,74,0.22)", heroShdOff: 5,
+        subPillFill: "#DC2626", subPillText: "#FFFFFF", subPillBorder: "rgba(255,255,255,0.9)",
         tagDark: "#1E3A5F", tagLight: "#EFF6FF",
-        dockFill: "rgba(15,41,74,0.90)", dockText: "#FFFFFF", dockIcon: "#93C5FD", dockBorder: "rgba(255,255,255,0.42)", dockBW: 2,
-        starFill: "rgba(96,165,250,0.34)", starStroke: "rgba(255,255,255,0.92)", starSW: 3.5,
-        mega: { hi: "#FF8585", mid: "#EF4444", dark: "#B91C1C", deep: "#450A0A", edge: "rgba(255,255,255,0.88)", wave: "#FDE047" },
-        cursor: { B: "#1E40AF", W: "#FFFFFF", G: "#BFDBFE" },
+        dockFill: "rgba(11,30,66,0.90)", dockText: "#FFFFFF", dockIcon: "#93C5FD", dockBorder: "rgba(255,255,255,0.46)", dockBW: 2, dockRad: 999,
+        starFill: "#FDE047", starStroke: "rgba(255,255,255,0.95)", starSW: 3.5,
+        sparkFill: "#FFFFFF", sparkAlt: "#FDE047", sparkStroke: "rgba(15,41,74,0.25)",
+        radarStroke: "rgba(255,255,255,0.20)", tileStroke: "rgba(255,255,255,0.18)",
+        mega: { hi: "#FF8585", mid: "#EF4444", dark: "#B91C1C", deep: "#450A0A", edge: "rgba(255,255,255,0.92)", wave: "#FDE047" },
+        cursor: { B: "#1E3A8A", W: "#FFFFFF", G: "#BFDBFE" },
         soft: true
     }
 };
@@ -423,12 +431,17 @@ function escapeXml(str) {
 const _mCan = document.createElement("canvas");
 const _mCtx = _mCan.getContext("2d");
 
-function fitFontSize(text, weight, fam, maxW, startPx, minPx) {
+function measureTextW(text, weight, fam, px, ls = 0) {
+    _mCtx.font = `${weight} ${px}px ${fam}`;
+    const s = String(text || "");
+    return _mCtx.measureText(s).width + Math.max(0, s.length - 1) * Math.max(0, ls);
+}
+
+function fitFontSize(text, weight, fam, maxW, startPx, minPx, ls = 0) {
     let px = startPx;
     while (px > minPx) {
-        _mCtx.font = `${weight} ${px}px ${fam}`;
-        if (_mCtx.measureText(text).width <= maxW) break;
-        px -= 3;
+        if (measureTextW(text, weight, fam, px, ls) <= maxW) break;
+        px -= 2;
     }
     return px;
 }
@@ -445,6 +458,40 @@ function wrapLines(text, fontSpec, maxW) {
     }
     if (cur) out.push(cur);
     return out.length ? out : [""];
+}
+
+function splitBalancedTwoLines(up) {
+    const commaIdx = up.indexOf(",");
+    if (commaIdx > 2 && commaIdx < up.length - 3) {
+        const a = up.slice(0, commaIdx + 1).trim();
+        const b = up.slice(commaIdx + 1).trim();
+        if (a && b) return [a, b];
+    }
+    const words = up.split(/\s+/).filter(Boolean);
+    if (words.length <= 1) return [up];
+    let best = [words.slice(0, Math.ceil(words.length / 2)).join(" "), words.slice(Math.ceil(words.length / 2)).join(" ")];
+    let bestDiff = Infinity;
+    for (let i = 1; i < words.length; i++) {
+        const a = words.slice(0, i).join(" ");
+        const b = words.slice(i).join(" ");
+        const diff = Math.abs(a.length - b.length);
+        if (diff < bestDiff) { bestDiff = diff; best = [a, b]; }
+    }
+    return best;
+}
+
+function fitTitleLines(rawTitle, wt, fam, maxW, maxPx1, maxPx2, minPx, ls = 0) {
+    const up = String(rawTitle || "").trim().toUpperCase() || "HIMA INFORMATIKA";
+    const oneLineThreshold = Math.max(minPx + 26, Math.round(maxPx1 * 0.72));
+    if (up.length <= 18 && measureTextW(up, wt, fam, oneLineThreshold, ls) <= maxW) {
+        return { lines: [up], px: fitFontSize(up, wt, fam, maxW, maxPx1, minPx, ls) };
+    }
+    const two = splitBalancedTwoLines(up);
+    if (two.length === 1) {
+        return { lines: two, px: fitFontSize(two[0], wt, fam, maxW, maxPx1, minPx, ls) };
+    }
+    const px = Math.min(...two.map(ln => fitFontSize(ln, wt, fam, maxW, maxPx2, minPx, ls)));
+    return { lines: two, px };
 }
 
 // Unified Graphics Adapter: Zero duplication between live SVG & Full-HD Canvas 2D PNG!
@@ -489,7 +536,12 @@ function makeSvgAdapter(W, H, uid) {
         },
         circle(cx, cy, r, o = {}) {
             const op = o.alpha != null ? ` opacity="${o.alpha}"` : "";
-            body.push(`<circle cx="${cx}" cy="${cy}" r="${r}" fill="${resolveColor(o.fill)}" stroke="${o.stroke || 'none'}" stroke-width="${o.sw || 0}"${op}/>`);
+            const da = o.dash ? ` stroke-dasharray="${o.dash}"` : "";
+            body.push(`<circle cx="${cx}" cy="${cy}" r="${r}" fill="${resolveColor(o.fill)}" stroke="${o.stroke || 'none'}" stroke-width="${o.sw || 0}"${da}${op}/>`);
+        },
+        ellipse(cx, cy, rx, ry, o = {}) {
+            const op = o.alpha != null ? ` opacity="${o.alpha}"` : "";
+            body.push(`<ellipse cx="${cx}" cy="${cy}" rx="${rx}" ry="${ry}" fill="${resolveColor(o.fill)}" stroke="${o.stroke || 'none'}" stroke-width="${o.sw || 0}"${op}/>`);
         },
         line(x1, y1, x2, y2, o = {}) {
             const op = o.alpha != null ? ` opacity="${o.alpha}"` : "";
@@ -509,13 +561,13 @@ function makeSvgAdapter(W, H, uid) {
         },
         text(str, x, y, o = {}) {
             const fam = o.fam || "'Archivo Black', sans-serif";
-            const wt = o.wt || 900;
+            const wt = o.wt || 400;
             const px = o.px || 48;
             const anchor = o.align === "center" ? "middle" : (o.align === "right" ? "end" : "start");
             const ls = o.ls ? ` letter-spacing="${o.ls}"` : "";
             const op = o.alpha != null ? ` opacity="${o.alpha}"` : "";
             if (o.shdOff && o.shdOff > 0) {
-                const sStroke = o.shdStroke ? ` stroke="${o.shdStroke}" stroke-width="${o.shdSW || o.sw || 0}" stroke-linejoin="round" style="paint-order:stroke fill;"` : "";
+                const sStroke = o.shdStroke && (o.shdSW || o.sw) ? ` stroke="${o.shdStroke}" stroke-width="${o.shdSW || o.sw || 0}" stroke-linejoin="round" style="paint-order:stroke fill;"` : "";
                 body.push(`<text x="${x + o.shdOff}" y="${y + o.shdOff}" text-anchor="${anchor}" font-family="${fam}" font-weight="${wt}" font-size="${px}"${ls} fill="${o.shdCol || '#000000'}"${sStroke}${op}>${escapeXml(str)}</text>`);
             }
             const mainStroke = (o.sw && o.sw > 0 && o.stroke && o.stroke !== "transparent")
@@ -528,6 +580,8 @@ function makeSvgAdapter(W, H, uid) {
         },
         pushRot(deg, cx, cy) { body.push(`<g transform="rotate(${deg} ${cx} ${cy})">`); },
         popRot() { body.push(`</g>`); },
+        pushSkew(deg, cx, cy) { body.push(`<g transform="translate(${cx} ${cy}) skewX(${deg}) translate(${-cx} ${-cy})">`); },
+        popSkew() { body.push(`</g>`); },
         pushTr(tx, ty, sc = 1) { body.push(`<g transform="translate(${tx}, ${ty}) scale(${sc})">`); },
         popTr() { body.push(`</g>`); },
         finish() {
@@ -607,8 +661,19 @@ function makeCanvasAdapter(ctx, W, H) {
         circle(cx, cy, r, o = {}) {
             ctx.save();
             if (o.alpha != null) ctx.globalAlpha = o.alpha;
+            if (o.dash) ctx.setLineDash(String(o.dash).split(" ").map(Number));
             ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI * 2);
             if (o.fill && o.fill !== "none") { ctx.fillStyle = resolveFill(o.fill, cx - r, cy - r, r * 2, r * 2); ctx.fill(); }
+            if (o.sw && o.sw > 0 && o.stroke && o.stroke !== "none" && o.stroke !== "transparent") {
+                ctx.strokeStyle = o.stroke; ctx.lineWidth = o.sw; ctx.stroke();
+            }
+            ctx.restore();
+        },
+        ellipse(cx, cy, rx, ry, o = {}) {
+            ctx.save();
+            if (o.alpha != null) ctx.globalAlpha = o.alpha;
+            ctx.beginPath(); ctx.ellipse(cx, cy, rx, ry, 0, 0, Math.PI * 2);
+            if (o.fill && o.fill !== "none") { ctx.fillStyle = o.fill; ctx.fill(); }
             if (o.sw && o.sw > 0 && o.stroke && o.stroke !== "none" && o.stroke !== "transparent") {
                 ctx.strokeStyle = o.stroke; ctx.lineWidth = o.sw; ctx.stroke();
             }
@@ -648,11 +713,12 @@ function makeCanvasAdapter(ctx, W, H) {
         },
         text(str, x, y, o = {}) {
             const fam = o.fam || "'Archivo Black', sans-serif";
-            const wt = o.wt || 900;
+            const wt = o.wt || 400;
             const px = o.px || 48;
             ctx.save();
             if (o.alpha != null) ctx.globalAlpha = o.alpha;
             ctx.font = `${wt} ${px}px ${fam}`;
+            if (o.ls && "letterSpacing" in ctx) ctx.letterSpacing = `${o.ls}px`;
             ctx.textAlign = o.align || "left";
             ctx.textBaseline = "alphabetic";
             ctx.lineJoin = "round";
@@ -682,6 +748,8 @@ function makeCanvasAdapter(ctx, W, H) {
         },
         pushRot(deg, cx, cy) { ctx.save(); ctx.translate(cx, cy); ctx.rotate(deg * Math.PI / 180); ctx.translate(-cx, -cy); },
         popRot() { ctx.restore(); },
+        pushSkew(deg, cx, cy) { ctx.save(); ctx.translate(cx, cy); ctx.transform(1, 0, Math.tan(deg * Math.PI / 180), 1, 0, 0); ctx.translate(-cx, -cy); },
+        popSkew() { ctx.restore(); },
         pushTr(tx, ty, sc = 1) { ctx.save(); ctx.translate(tx, ty); ctx.scale(sc, sc); },
         popTr() { ctx.restore(); }
     };
@@ -690,8 +758,9 @@ function makeCanvasAdapter(ctx, W, H) {
 function drawThreeLogos(D, x, y, size, gap, T) {
     ["hima", "kab", "lpkia"].forEach((k, i) => {
         const lx = x + i * (size + gap);
-        D.rect(lx, y, size, size, { fill: "#FFFFFF", stroke: T.hdrBorder === "transparent" ? "rgba(18,48,90,0.14)" : T.hdrBorder, sw: T.soft ? 1.5 : 2.5, rx: T.soft ? 10 : 4 });
-        D.logo(k, lx + 6, y + 6, size - 12, size - 12);
+        const st = T.hdrBorder === "transparent" ? "rgba(18,48,90,0.16)" : (T.soft ? T.hdrBorder : "#000000");
+        D.rect(lx, y, size, size, { fill: "#FFFFFF", stroke: st, sw: T.soft ? 1.5 : 2.5, rx: T.soft ? 10 : 3 });
+        D.logo(k, lx + 5, y + 5, size - 10, size - 10);
     });
 }
 
@@ -708,14 +777,69 @@ function drawPixelCursor(D, x, y, sc, pal) {
 
 function drawMegaphone(D, x, y, sc, m) {
     D.pushTr(x, y, sc);
-    D.rect(34, 62, 16, 30, { fill: m.dark, stroke: m.edge, sw: 3, rx: 4 });
-    D.path("M20 44 L86 18 L86 78 L20 56 Z", { fill: m.mid, stroke: m.edge, sw: 3.5 });
-    D.path("M26 44 L82 23 L82 40 L26 48 Z", { fill: m.hi, alpha: 0.7 });
-    D.rect(8, 42, 18, 18, { fill: m.deep, stroke: m.edge, sw: 3, rx: 6 });
-    D.path("M86 18 L94 16 L94 80 L86 78 Z", { fill: m.deep, stroke: m.edge, sw: 3 });
-    D.path("M106 34 Q118 48 106 62", { fill: "none", stroke: m.wave, sw: 5 });
-    D.path("M120 24 Q138 48 120 72", { fill: "none", stroke: m.wave, sw: 4.5 });
+    D.rect(34, 62, 16, 30, { fill: m.dark, stroke: m.edge, sw: 3.5, rx: 3 });
+    D.path("M20 44 L86 18 L86 78 L20 56 Z", { fill: m.mid, stroke: m.edge, sw: 3.8 });
+    D.path("M26 44 L82 23 L82 40 L26 48 Z", { fill: m.hi, alpha: 0.72 });
+    D.rect(8, 42, 18, 18, { fill: m.deep, stroke: m.edge, sw: 3.5, rx: 5 });
+    D.path("M86 18 L94 16 L94 80 L86 78 Z", { fill: m.deep, stroke: m.edge, sw: 3.5 });
+    D.path("M106 34 Q118 48 106 62", { fill: "none", stroke: m.wave, sw: 5.5 });
+    D.path("M120 24 Q138 48 120 72", { fill: "none", stroke: m.wave, sw: 5 });
     D.popTr();
+}
+
+function drawSparkle(D, cx, cy, r, fill, stroke, sw = 2.5) {
+    const d = `M ${cx} ${cy - r} Q ${cx} ${cy} ${cx + r} ${cy} Q ${cx} ${cy} ${cx} ${cy + r} Q ${cx} ${cy} ${cx - r} ${cy} Q ${cx} ${cy} ${cx} ${cy - r} Z`;
+    D.path(d, { fill, stroke, sw });
+}
+
+function drawPushpin3D(D, x, y, sc = 1) {
+    D.pushTr(x, y, sc);
+    D.ellipse(14, 24, 24, 15, { fill: "rgba(0,0,0,0.36)" });
+    D.polygon([[-5, 8], [7, 12], [-20, 38]], { fill: "#E2E8F0", stroke: "#0F172A", sw: 2.5 });
+    D.polygon([[-3, 10], [4, 12], [-18, 34]], { fill: "#94A3B8" });
+    D.circle(3, 5, 23, { fill: "#7F1D1D", stroke: "#000000", sw: 3.2 });
+    D.circle(-1, -1, 23, { fill: "#CA2C2A", stroke: "#000000", sw: 3.2 });
+    D.circle(-1, -1, 14, { fill: "#B91C1C", stroke: "#7F1D1D", sw: 2 });
+    D.ellipse(-7, -8, 6, 4, { fill: "#FCA5A5" });
+    D.popTr();
+}
+
+function drawSkewRibbon(D, label, x, y, bw, bh, o = {}) {
+    const deg = o.deg != null ? o.deg : -4;
+    const cx = x + bw / 2, cy = y + bh / 2;
+    D.pushSkew(deg, cx, cy);
+    D.rect(x, y, bw, bh, {
+        fill: o.fill || "#CA2C2A", stroke: o.stroke || "#000000", sw: o.sw != null ? o.sw : 3.5,
+        shdOff: o.shdOff || 0, shdCol: o.shdCol || "#000000", rx: o.rx || 0, soft: o.soft
+    });
+    D.text(label, cx, cy + Math.round((o.px || 22) * 0.34), {
+        align: "center", fam: o.fam || "'JetBrains Mono', monospace", wt: o.wt || 800,
+        px: o.px || 22, fill: o.textCol || "#FFFFFF", ls: o.ls || 1.5
+    });
+    D.popSkew();
+}
+
+function drawDisplayHeadline(D, lines, x, centerY, T, fam, wt, px, align = "center", opts = {}) {
+    const lh = Math.round(px * (opts.lhMul || 0.94));
+    const totalH = (lines.length - 1) * lh;
+    const topBase = centerY - Math.round(totalH / 2) + Math.round(px * 0.34);
+    const col1 = opts.fill1 || T.heroFill;
+    const col2 = opts.fill2 || T.heroAltFill || T.heroFill;
+    const strokeCol = opts.stroke != null ? opts.stroke : T.heroStroke;
+    const sw = opts.sw != null ? opts.sw : T.heroSW;
+    const shdOff = opts.shdOff != null ? opts.shdOff : T.heroShdOff;
+    const shdCol = opts.shdCol != null ? opts.shdCol : T.heroShdCol;
+    lines.forEach((ln, i) => {
+        const y = topBase + i * lh;
+        D.text(ln, x, y, {
+            align, fam, wt, px,
+            fill: i === 0 ? col1 : col2,
+            stroke: strokeCol, sw,
+            shdOff, shdCol, shdStroke: T.soft ? null : shdCol, shdSW: T.soft ? 0 : sw,
+            ls: opts.ls != null ? opts.ls : -0.5
+        });
+    });
+    return topBase + totalH;
 }
 
 function renderBannerScene(D, W, H, includeGuides) {
@@ -734,27 +858,30 @@ function renderBannerScene(D, W, H, includeGuides) {
             : { type: "linear", stops: [[0, T.bgGrad[0]], [0.5, T.bgGrad[1]], [1, T.bgGrad[2]]] };
     }
     D.rect(0, 0, W, H, { fill: bgFill });
-    D.dotPattern(38, 2.8, lay === 1 ? T.l1Dot : T.dot);
+    D.dotPattern(42, 2.5, lay === 1 ? T.l1Dot : T.dot);
 
-    // Subtle Watermark Wallpaper for Layout 2 & 4
+    // Subtle Architectural Wall Watermark for Layout 2 & 4
     if (lay === 2 || lay === 4) {
-        const wm = (state.title || "KADERISASI").toUpperCase();
-        const rowTxt = `${wm}   ${wm}   ${wm}`;
+        const rawWm = String(state.title || "HIMA IF").toUpperCase();
+        const wmUnit = rawWm.length > 22 ? rawWm.split(",")[0].trim() : rawWm;
+        const rowTxt = `${wmUnit}   ${wmUnit}   ${wmUnit}`;
         for (let r = 0; r < 6; r++) {
-            D.text(rowTxt, (r % 2 === 0 ? -80 : -320), 185 + r * 195, { fam: "'Archivo Black', sans-serif", wt: 900, px: 160, fill: T.wall, ls: -2 });
+            D.text(rowTxt, (r % 2 === 0 ? -70 : -290), 190 + r * 195, { fam: "'Barlow Condensed', sans-serif", wt: 900, px: 170, fill: T.wall, ls: 2 });
         }
     }
 
     // Shared Org Header Bar helper
-    function drawTopHeaderBar(wBar = 1480, yBar = 54) {
+    function drawTopHeaderBar(wBar = 1500, yBar = 46) {
         const bx = (W - wBar) / 2;
-        const bh = 82;
-        D.rect(bx, yBar, wBar, bh, { fill: T.hdrFill, stroke: T.hdrBorder, sw: T.hdrBW, shdOff: T.hdrShd, rx: T.hdrRad, soft: T.soft });
-        drawThreeLogos(D, bx + 20, yBar + 13, 56, 10, T);
-        const tx = bx + 228;
-        D.text("HIMA INFORMATIKA", tx, yBar + 41, { fam: "'Space Grotesk', sans-serif", wt: 700, px: 28, fill: T.hdrTitle, ls: 1 });
-        D.text("KABINET AKSARA NIRMANA • IDE LPKIA BANDUNG", tx, yBar + 67, { fam: "'Plus Jakarta Sans', sans-serif", wt: 700, px: 16, fill: T.hdrSub, ls: 1.5 });
-        D.text("@hmif_LPKIA", bx + wBar - 28, yBar + 50, { align: "right", fam: "'JetBrains Mono', monospace", wt: 700, px: 21, fill: T.hdrSub });
+        const bh = 80;
+        D.rect(bx, yBar, wBar, bh, { fill: T.hdrFill, stroke: T.hdrBorder, sw: T.hdrBW, shdOff: T.hdrShd, shdCol: T.hdrShdCol, rx: T.hdrRad, soft: T.soft });
+        drawThreeLogos(D, bx + 18, yBar + 12, 56, 10, T);
+        const tx = bx + 226;
+        D.text("HIMA INFORMATIKA", tx, yBar + 42, { fam: "'Barlow Condensed', sans-serif", wt: 900, px: 34, fill: T.hdrTitle, ls: 1 });
+        D.text("KABINET AKSARA NIRMANA • IDE LPKIA BANDUNG", tx, yBar + 66, { fam: "'Plus Jakarta Sans', sans-serif", wt: 700, px: 14.5, fill: T.hdrSub, ls: 1.4 });
+        const hPillW = 198;
+        D.rect(bx + wBar - hPillW - 18, yBar + 19, hPillW, 42, { fill: T.subPillFill, stroke: T.subPillBorder, sw: T.soft ? 0 : 2.5, rx: T.soft ? 999 : 2 });
+        D.text("@hmif_LPKIA", bx + wBar - 18 - hPillW / 2, yBar + 47, { align: "center", fam: "'JetBrains Mono', monospace", wt: 800, px: 18, fill: T.subPillText, ls: 0.6 });
         return yBar + bh;
     }
 
@@ -762,71 +889,88 @@ function renderBannerScene(D, W, H, includeGuides) {
     // LAYOUT 1: WINDOW HERO WIDESCREEN
     // =========================================================================
     if (lay === 1) {
-        drawTopHeaderBar(is43 ? 1360 : 1520, 56);
-        const cw = is43 ? 1320 : 1480;
-        const ch = is43 ? 690 : 620;
+        drawTopHeaderBar(is43 ? 1360 : 1520, 44);
+        const cw = is43 ? 1320 : 1500;
+        const ch = is43 ? 710 : 636;
         const cx = (W - cw) / 2;
-        const cy = 194;
-        const tbH = 62;
+        const cy = 160;
+        const tbH = 60;
 
-        D.rect(cx, cy, cw, ch, { fill: T.cardFill, stroke: T.cardBorder, sw: T.cardBW, shdOff: T.cardShd, rx: T.cardRad, soft: T.soft });
-        D.grid(cx + 4, cy + tbH, cw - 8, ch - tbH - 4, 44, "rgba(42,130,198,0.08)", 1);
+        D.rect(cx, cy, cw, ch, { fill: T.cardFill, stroke: T.cardBorder, sw: T.cardBW, shdOff: T.cardShd, shdCol: T.cardShdCol, rx: T.cardRad, soft: T.soft });
+        D.grid(cx + 4, cy + tbH, cw - 8, ch - tbH - 4, 44, state.theme === "dark-code" ? "rgba(255,255,255,0.045)" : "rgba(22,72,142,0.075)", 1);
         D.rect(cx, cy, cw, tbH, { fill: T.tbFill, stroke: T.cardBorder, sw: Math.max(0, T.cardBW - 1), rx: 0 });
         T.tbDots.forEach((col, i) => {
-            if (T.tbSq) D.rect(cx + 28 + i * 32, cy + 21, 20, 20, { fill: col, stroke: "#000", sw: 2 });
-            else D.circle(cx + 38 + i * 30, cy + 31, 9.5, { fill: col });
+            if (T.tbSq) D.rect(cx + 26 + i * 32, cy + 20, 20, 20, { fill: col, stroke: state.theme === "dark-code" ? "#020617" : "#000000", sw: 2 });
+            else D.circle(cx + 36 + i * 30, cy + 30, 9.5, { fill: col });
         });
-        D.text("kaderisasi_stage.exe", cx + 148, cy + 39, { fam: "'JetBrains Mono', monospace", wt: 700, px: 22, fill: T.tbText });
+        D.text("kaderisasi_stage.exe", cx + 144, cy + 38, { fam: "'JetBrains Mono', monospace", wt: 700, px: 21, fill: T.tbText });
+        D.rect(cx + cw - 208, cy + 14, 184, 32, { fill: "#CA2C2A", stroke: state.theme === "dark-code" ? "#FFFFFF" : "#000000", sw: T.soft ? 0 : 2, rx: T.soft ? 999 : 2 });
+        D.text("● STAGE LIVE", cx + cw - 116, cy + 36, { align: "center", fam: "'JetBrains Mono', monospace", wt: 800, px: 15, fill: "#FFFFFF", ls: 1 });
 
-        // Top Badge
-        const bPx = fitFontSize(state.badge.toUpperCase(), 800, "'JetBrains Mono', monospace", cw - 200, 28, 18);
-        const bw = Math.min(cw - 140, state.badge.length * bPx * 0.72 + 80);
-        D.rect((W - bw) / 2, cy + 106, bw, 56, { fill: T.badgeFill, stroke: T.badgeBorder, sw: T.badgeBW, shdOff: T.badgeShd, rx: T.badgeRad });
-        D.text(state.badge.toUpperCase(), W / 2, cy + 144, { align: "center", fam: "'JetBrains Mono', monospace", wt: 800, px: bPx, fill: T.badgeText, ls: 2 });
+        // Top Skewed Badge
+        const bTxt = state.badge.toUpperCase();
+        const bPx = fitFontSize(bTxt, 700, "'Silkscreen', monospace", cw - 240, 23, 14, 1.2);
+        const bw = Math.min(cw - 140, Math.round(measureTextW(bTxt, 700, "'Silkscreen', monospace", bPx, 1.2) + 74));
+        drawSkewRibbon(D, bTxt, (W - bw) / 2, cy + 100, bw, 52, {
+            deg: T.soft ? 0 : -3.5, fill: T.badgeFill, stroke: T.badgeBorder, sw: T.badgeBW,
+            shdOff: T.badgeShd, shdCol: T.badgeShdCol, rx: T.badgeRad,
+            fam: "'Silkscreen', monospace", wt: 700, px: bPx, textCol: T.badgeText, ls: 1.2, soft: T.soft
+        });
 
-        // Hero Event Headline
-        const hPx = fitFontSize(state.title.toUpperCase(), 900, "'Archivo Black', sans-serif", cw - 120, 144, 62);
-        D.text(state.title.toUpperCase(), W / 2, cy + 324 + Math.round(hPx * 0.3), {
-            align: "center", fam: "'Archivo Black', sans-serif", wt: 900, px: hPx,
-            fill: T.heroFill, stroke: T.heroStroke, sw: T.heroSW,
-            shdOff: T.heroShdOff, shdCol: T.heroShdCol, shdStroke: T.heroShdCol, shdSW: T.heroSW, ls: -2
+        // Balanced Condensed Headline
+        const tFit = fitTitleLines(state.title, 900, "'Barlow Condensed', sans-serif", cw - 130, 154, 122, 60, 0);
+        drawDisplayHeadline(D, tFit.lines, W / 2, cy + 308, T, "'Barlow Condensed', sans-serif", 900, tFit.px, "center", {
+            lhMul: 0.90, sw: T.soft ? 0 : Math.max(6, Math.round(tFit.px * 0.068))
         });
 
         // Sub-theme Ribbon Pill
         const subTxt = state.sub.toUpperCase();
-        const sPx = fitFontSize(subTxt, 800, "'Space Grotesk', sans-serif", cw - 200, 32, 18);
-        const sw = Math.min(cw - 100, subTxt.length * sPx * 0.68 + 80);
-        D.rect((W - sw) / 2, cy + 435, sw, 64, { fill: T.subPillFill, stroke: T.subPillBorder, sw: T.badgeBW, shdOff: T.badgeShd, rx: T.badgeRad });
-        D.text(subTxt, W / 2, cy + 477, { align: "center", fam: "'Space Grotesk', sans-serif", wt: 800, px: sPx, fill: T.subPillText, ls: 1.5 });
+        const sPx = fitFontSize(subTxt, 800, "'Space Grotesk', sans-serif", cw - 220, 28, 16, 1.2);
+        const sw = Math.min(cw - 120, Math.round(measureTextW(subTxt, 800, "'Space Grotesk', sans-serif", sPx, 1.2) + 78));
+        drawSkewRibbon(D, subTxt, (W - sw) / 2, cy + 470, sw, 58, {
+            deg: T.soft ? 0 : -2, fill: T.subPillFill, stroke: T.subPillBorder, sw: T.badgeBW,
+            shdOff: T.badgeShd, shdCol: T.badgeShdCol, rx: T.badgeRad,
+            fam: "'Space Grotesk', sans-serif", wt: 800, px: sPx, textCol: T.subPillText, ls: 1.2, soft: T.soft
+        });
+
+        // Subtle Code Props anchored cleanly inside window footer corners
+        D.text(">_ init_leadership()", cx + 32, cy + ch - 24, { fam: "'JetBrains Mono', monospace", wt: 700, px: 18, fill: state.theme === "dark-code" ? "#4ADE80" : "#16488E", alpha: 0.62 });
+        D.text("</>", cx + cw - 32, cy + ch - 24, { align: "right", fam: "'JetBrains Mono', monospace", wt: 800, px: 20, fill: state.theme === "dark-code" ? "#FCD34D" : "#CA2C2A", alpha: 0.62 });
 
         // Bottom Tagline + Optional Schedule + Dock CTA
         const tagY = cy + ch + 74;
-        D.text(state.tag, W / 2, tagY, { align: "center", fam: "'Plus Jakarta Sans', sans-serif", wt: 700, px: 30, fill: state.theme === "neubrutalism" ? T.tagDark : T.tagLight });
+        const tagFill = state.theme === "neubrutalism" ? T.tagDark : T.tagLight;
+        const tagPx = fitFontSize(state.tag, 800, "'Plus Jakarta Sans', sans-serif", W - 220, 31, 20);
+        D.text(state.tag, W / 2, tagY, {
+            align: "center", fam: "'Plus Jakarta Sans', sans-serif", wt: 800, px: tagPx, fill: tagFill,
+            shdOff: state.theme === "dark-code" || T.soft ? 3 : 0, shdCol: "rgba(0,0,0,0.45)"
+        });
         if (schedTxt) {
-            D.text(schedTxt, W / 2, tagY + 46, { align: "center", fam: "'JetBrains Mono', monospace", wt: 700, px: 23, fill: T.heroFill });
+            D.text(schedTxt, W / 2, tagY + 42, { align: "center", fam: "'JetBrains Mono', monospace", wt: 700, px: 22, fill: state.theme === "neubrutalism" ? "#CA2C2A" : "#FCD34D" });
         }
-        const dockY = H - 104;
-        const dw = 540;
-        D.rect((W - dw) / 2, dockY, dw, 58, { fill: T.dockFill, stroke: T.dockBorder, sw: T.dockBW, shdOff: T.soft ? 0 : 5, rx: 14, soft: T.soft });
-        D.text("GO.HMIF-LPKIA.MY.ID", W / 2, dockY + 37, { align: "center", fam: "'JetBrains Mono', monospace", wt: 800, px: 23, fill: T.dockText, ls: 1.6 });
 
-        // Subtle Corner Tech Marks
-        D.text(">_", 110, 260, { fam: "'JetBrains Mono', monospace", wt: 800, px: 34, fill: T.dockIcon === "#FCD34D" ? "#2A82C6" : T.dockIcon, alpha: 0.45 });
-        D.text("</>", W - 155, H - 140, { fam: "'JetBrains Mono', monospace", wt: 800, px: 34, fill: T.badgeFill === "#1A467C" ? "#CA2C2A" : T.badgeFill, alpha: 0.45 });
+        const dockY = H - 96;
+        const dw = 650;
+        D.rect((W - dw) / 2, dockY, dw, 54, { fill: T.dockFill, stroke: T.dockBorder, sw: T.dockBW, shdOff: T.soft ? 0 : 6, shdCol: "#000000", rx: T.dockRad, soft: T.soft });
+        D.text("HIMA INFORMATIKA   |   GO.HMIF-LPKIA.MY.ID", W / 2, dockY + 35, { align: "center", fam: "'JetBrains Mono', monospace", wt: 800, px: 21, fill: T.dockText, ls: 1.2 });
+
+        // Margin Code Symbols
+        D.text("{ }", 88, H - 102, { fam: "'JetBrains Mono', monospace", wt: 800, px: 34, fill: state.theme === "neubrutalism" ? "#0B1F40" : "#FCD34D", alpha: 0.36 });
+        D.text("01;", W - 88, H - 102, { align: "right", fam: "'JetBrains Mono', monospace", wt: 800, px: 34, fill: "#CA2C2A", alpha: 0.44 });
     }
 
     // =========================================================================
     // LAYOUT 2: RETRO OS POP-UP WIDESCREEN
     // =========================================================================
     else if (lay === 2) {
-        drawTopHeaderBar(is43 ? 1320 : 1460, 48);
-        const cw = is43 ? 1320 : 1480;
-        const ch = is43 ? 720 : 650;
+        drawTopHeaderBar(is43 ? 1320 : 1480, 42);
+        const cw = is43 ? 1320 : 1460;
+        const ch = is43 ? 720 : 644;
         const cx = (W - cw) / 2;
-        const cy = 188;
-        const tbH = 66;
+        const cy = 186;
+        const tbH = 64;
 
-        // Decorative Corner Starbursts strictly outside card
+        // Decorative Corner Starbursts strictly outside dialog
         const sPts = (ox, oy, r1, r2) => {
             const arr = [];
             for (let i = 0; i < 16; i++) {
@@ -836,275 +980,392 @@ function renderBannerScene(D, W, H, includeGuides) {
             }
             return arr;
         };
-        D.polygon(sPts(W - 145, 225, 84, 42), { fill: T.starFill, stroke: T.starStroke, sw: T.starSW });
-        D.polygon(sPts(145, H - 235, 84, 42), { fill: T.starFill, stroke: T.starStroke, sw: T.starSW });
+        if (!T.soft) {
+            D.polygon(sPts(W - 132 + 6, 218 + 6, 84, 42), { fill: "#000000" });
+            D.polygon(sPts(132 + 6, H - 208 + 6, 84, 42), { fill: "#000000" });
+        }
+        D.polygon(sPts(W - 132, 218, 84, 42), { fill: T.starFill, stroke: T.starStroke, sw: T.starSW });
+        D.polygon(sPts(132, H - 208, 84, 42), { fill: T.starFill, stroke: T.starStroke, sw: T.starSW });
+        drawSparkle(D, W - 210, 326, 20, T.sparkFill, T.sparkStroke, T.soft ? 0 : 2.5);
+        drawSparkle(D, 198, 250, 22, T.sparkAlt, T.sparkStroke, T.soft ? 0 : 2.5);
 
-        D.rect(cx, cy, cw, ch, { fill: T.cardFill, stroke: T.cardBorder, sw: T.cardBW, shdOff: T.cardShd, rx: 10, soft: T.soft });
+        D.rect(cx, cy, cw, ch, { fill: T.cardFill, stroke: T.cardBorder, sw: T.cardBW, shdOff: T.cardShd, shdCol: T.cardShdCol, rx: T.cardRad, soft: T.soft });
+        D.grid(cx + 4, cy + tbH, cw - 8, ch - tbH - 4, 46, state.theme === "dark-code" ? "rgba(255,255,255,0.035)" : "rgba(22,72,142,0.055)", 1);
         D.rect(cx, cy, cw, tbH, { fill: T.tbFill, stroke: T.cardBorder, sw: Math.max(0, T.cardBW - 1), rx: 0 });
-        T.tbDots.forEach((col, i) => D.circle(cx + 38 + i * 28, cy + 33, 9, { fill: col }));
-        D.text("HIMA_IF_DISPLAY.SYS", cx + 145, cy + 41, { fam: "'JetBrains Mono', monospace", wt: 800, px: 23, fill: T.tbText, ls: 1 });
 
-        // Retro OS Controls on Right
-        [0, 32, 64].forEach((off, i) => {
-            D.rect(cx + cw - 122 + off, cy + 20, 24, 24, { fill: "none", stroke: T.tbText, sw: 2.2, alpha: 0.8 });
-            if (i === 0) D.line(cx + cw - 117 + off, cy + 37, cx + cw - 103 + off, cy + 37, { stroke: T.tbText, sw: 2.2 });
+        // Signature H7 L2 Overlapping Skewed Ribbon straddling top-left dialog chrome!
+        const bTxt = state.badge.toUpperCase();
+        const bPx = fitFontSize(bTxt, 700, "'Silkscreen', monospace", 620, 21, 14, 1);
+        const ribW = Math.min(680, Math.round(measureTextW(bTxt, 700, "'Silkscreen', monospace", bPx, 1) + 56));
+        drawSkewRibbon(D, bTxt, cx - 22, cy - 22, ribW, 54, {
+            deg: T.soft ? 0 : -4, fill: T.badgeFill, stroke: state.theme === "dark-code" ? "#FFFFFF" : "#000000",
+            sw: T.soft ? 2 : 4, shdOff: T.soft ? 0 : 7, shdCol: "#000000", rx: T.soft ? 999 : 0,
+            fam: "'Silkscreen', monospace", wt: 700, px: bPx, textCol: T.badgeText, ls: 1, soft: T.soft
         });
 
-        // Floating Badge
-        const bPx = fitFontSize(state.badge.toUpperCase(), 700, "'Silkscreen', monospace", cw - 200, 25, 16);
-        const bw = Math.min(cw - 140, state.badge.length * bPx * 0.78 + 70);
-        D.rect((W - bw) / 2, cy + 114, bw, 54, { fill: T.badgeFill, stroke: T.badgeBorder, sw: T.badgeBW, shdOff: T.badgeShd, rx: T.badgeRad });
-        D.text(state.badge.toUpperCase(), W / 2, cy + 150, { align: "center", fam: "'Silkscreen', monospace", wt: 700, px: bPx, fill: T.badgeText });
+        // OS Chrome label positioned cleanly to the right of overlapping ribbon
+        const osLblX = cx + ribW + 18;
+        T.tbDots.forEach((col, i) => D.circle(osLblX + i * 24, cy + 32, 7.5, { fill: col }));
+        D.text("HIMA_IF_DISPLAY.SYS", osLblX + 82, cy + 39, { fam: "'JetBrains Mono', monospace", wt: 800, px: 20, fill: T.tbText, ls: 1 });
 
-        const hPx = fitFontSize(state.title.toUpperCase(), 900, "'Archivo Black', sans-serif", cw - 120, 146, 62);
-        D.text(state.title.toUpperCase(), W / 2, cy + 336 + Math.round(hPx * 0.28), {
-            align: "center", fam: "'Archivo Black', sans-serif", wt: 900, px: hPx,
-            fill: T.heroFill, stroke: T.heroStroke, sw: T.heroSW,
-            shdOff: T.heroShdOff, shdCol: T.heroShdCol, shdStroke: T.heroShdCol, shdSW: T.heroSW, ls: -2
+        // Solid Boxed Retro OS Window Buttons on top-right
+        [["_", "#1E3A5F"], ["□", "#1E3A5F"], ["×", "#CA2C2A"]].forEach(([sym, bgc], i) => {
+            const bxBtn = cx + cw - 128 + i * 36;
+            const byBtn = cy + 18;
+            D.rect(bxBtn, byBtn, 28, 28, { fill: T.soft ? "rgba(255,255,255,0.85)" : bgc, stroke: T.tbText, sw: 2, rx: T.soft ? 6 : 0 });
+            D.text(sym, bxBtn + 14, byBtn + 21, { align: "center", fam: "'JetBrains Mono', monospace", wt: 800, px: 19, fill: T.soft ? "#0F294A" : "#FFFFFF" });
         });
 
+        // Chunky Retro Display Title
+        const tFit = fitTitleLines(state.title, 400, "'Archivo Black', sans-serif", cw - 140, 146, 98, 52, -1);
+        drawDisplayHeadline(D, tFit.lines, W / 2, cy + 258, T, "'Archivo Black', sans-serif", 400, tFit.px, "center", {
+            lhMul: 1.04, ls: -1, sw: T.soft ? 0 : Math.max(6, Math.round(tFit.px * 0.08))
+        });
+
+        // Contrast Subtheme Strip inside dialog
         const subTxt = state.sub.toUpperCase();
-        const sPx = fitFontSize(subTxt, 800, "'Space Grotesk', sans-serif", cw - 200, 32, 18);
-        D.text(subTxt, W / 2, cy + 474, { align: "center", fam: "'Space Grotesk', sans-serif", wt: 800, px: sPx, fill: state.theme === "neubrutalism" || state.theme === "modern" || state.theme === "glass" ? "#12305A" : "#FFFFFF", ls: 2 });
+        const sPx = fitFontSize(subTxt, 800, "'Space Grotesk', sans-serif", cw - 200, 27, 16, 1.2);
+        const sw = Math.min(cw - 140, Math.round(measureTextW(subTxt, 800, "'Space Grotesk', sans-serif", sPx, 1.2) + 74));
+        D.rect((W - sw) / 2, cy + 422, sw, 56, {
+            fill: T.subPillFill, stroke: T.subPillBorder, sw: T.soft ? 0 : 3.5,
+            shdOff: T.soft ? 0 : 6, shdCol: "#000000", rx: T.soft ? 999 : 0
+        });
+        D.text(subTxt, W / 2, cy + 459, { align: "center", fam: "'Space Grotesk', sans-serif", wt: 800, px: sPx, fill: T.subPillText, ls: 1.2 });
 
-        D.text(state.tag, W / 2, cy + 542, { align: "center", fam: "'Plus Jakarta Sans', sans-serif", wt: 700, px: 28, fill: state.theme === "dark-code" ? "#BAE6FD" : "#475569" });
+        // Tagline inside dialog
+        const tagPx = fitFontSize(state.tag, 800, "'Plus Jakarta Sans', sans-serif", cw - 180, 28, 18);
+        D.text(state.tag, W / 2, cy + 536, { align: "center", fam: "'Plus Jakarta Sans', sans-serif", wt: 800, px: tagPx, fill: state.theme === "dark-code" ? "#E2E8F0" : "#1E293B" });
         if (schedTxt) {
-            D.text(schedTxt, W / 2, cy + 594, { align: "center", fam: "'JetBrains Mono', monospace", wt: 700, px: 22, fill: "#CA2C2A" });
+            D.text(schedTxt, W / 2, cy + 586, { align: "center", fam: "'JetBrains Mono', monospace", wt: 700, px: 22, fill: state.theme === "dark-code" ? "#FCD34D" : "#CA2C2A" });
         }
 
-        // Pixel Cursor at bottom-right of dialog
-        drawPixelCursor(D, cx + cw - 52, cy + ch - 44, 3.4, T.cursor);
+        // Large Iconic Retro Pixel Arrow Cursor bottom-right
+        drawPixelCursor(D, cx + cw - 58, cy + ch - 48, 4.4, T.cursor);
 
         // Footer Bar
         const fy = H - 72;
-        D.rect(120, fy - 24, W - 240, 56, { fill: T.dockFill, stroke: T.dockBorder, sw: T.dockBW, rx: 12, soft: T.soft });
-        D.text("@hmif_LPKIA", 156, fy + 12, { fam: "'Space Grotesk', sans-serif", wt: 700, px: 22, fill: T.dockText });
-        D.text("GO.HMIF-LPKIA.MY.ID", W - 156, fy + 12, { align: "right", fam: "'JetBrains Mono', monospace", wt: 700, px: 21, fill: T.dockIcon });
+        D.rect(120, fy - 22, W - 240, 54, { fill: T.dockFill, stroke: T.dockBorder, sw: T.dockBW, shdOff: T.soft ? 0 : 6, shdCol: "#000000", rx: T.dockRad, soft: T.soft });
+        D.text("@hmif_LPKIA", 156, fy + 13, { fam: "'Space Grotesk', sans-serif", wt: 700, px: 22, fill: T.dockText });
+        D.text("GO.HMIF-LPKIA.MY.ID", W - 156, fy + 13, { align: "right", fam: "'JetBrains Mono', monospace", wt: 800, px: 21, fill: T.dockIcon });
     }
 
     // =========================================================================
     // LAYOUT 3: BUBBLE POP HIMA IF WIDESCREEN
     // =========================================================================
     else if (lay === 3) {
-        D.circle(W / 2, H * 0.48, 520, { fill: { type: "radial", stops: [[0, "rgba(56,189,248,0.22)"], [1, "rgba(0,0,0,0)"]] } });
-        drawTopHeaderBar(is43 ? 1320 : 1480, 54);
+        // Signature H7 L3 Backdrop: Radial Glow + Dashed Radar Rings + Corner Tiles + Sparkles
+        D.circle(W / 2, H * 0.48, 560, { fill: { type: "radial", stops: [[0, state.theme === "dark-code" ? "rgba(202,44,42,0.16)" : "rgba(56,189,248,0.22)"], [1, "rgba(0,0,0,0)"]] } });
+        D.circle(W / 2, H * 0.48, 450, { fill: "none", stroke: T.radarStroke, sw: 2.5, dash: "14 14" });
+        D.circle(W / 2, H * 0.48, 670, { fill: "none", stroke: T.radarStroke, sw: 2, dash: "10 18" });
+
+        D.pushRot(16, 118, H * 0.44);
+        D.rect(68, H * 0.44 - 50, 100, 100, { fill: "none", stroke: T.tileStroke, sw: 3, rx: 10 });
+        D.popRot();
+        D.pushRot(-14, W - 118, H * 0.72);
+        D.rect(W - 168, H * 0.72 - 50, 100, 100, { fill: "none", stroke: T.tileStroke, sw: 3, rx: 10 });
+        D.popRot();
+        drawSparkle(D, 152, 290, 28, T.sparkAlt, T.sparkStroke, T.soft ? 0 : 2.5);
+        drawSparkle(D, W - 140, H - 230, 26, T.sparkFill, T.sparkStroke, T.soft ? 0 : 2.5);
+
+        drawTopHeaderBar(is43 ? 1320 : 1480, 44);
 
         const bw = is43 ? 1300 : 1440;
-        const bh = is43 ? 590 : 530;
+        const bh = is43 ? 590 : 526;
         const bx = (W - bw) / 2;
-        const by = 196;
+        const by = 184;
 
-        // Speech Bubble with Bottom Pointer Tail
-        const br = 44;
+        // Speech Bubble with Pointer Tail
+        const br = T.cardRadL3 || 38;
         const tx = W / 2;
         const ty = by + bh;
-        const bubPath = `M ${bx+br} ${by} H ${bx+bw-br} Q ${bx+bw} ${by} ${bx+bw} ${by+br} V ${ty-br} Q ${bx+bw} ${ty} ${bx+bw-br} ${ty} H ${tx+46} L ${tx} ${ty+58} L ${tx-46} ${ty} H ${bx+br} Q ${bx} ${ty} ${bx} ${ty-br} V ${by+br} Q ${bx} ${by} ${bx+br} ${by} Z`;
+        const bubPath = `M ${bx+br} ${by} H ${bx+bw-br} Q ${bx+bw} ${by} ${bx+bw} ${by+br} V ${ty-br} Q ${bx+bw} ${ty} ${bx+bw-br} ${ty} H ${tx+48} L ${tx} ${ty+56} L ${tx-48} ${ty} H ${bx+br} Q ${bx} ${ty} ${bx} ${ty-br} V ${by+br} Q ${bx} ${by} ${bx+br} ${by} Z`;
         if (!T.soft && T.cardShd > 0) {
             D.pushTr(T.cardShd, T.cardShd, 1);
-            D.path(bubPath, { fill: "#000000" });
+            D.path(bubPath, { fill: T.cardShdCol || "#000000" });
             D.popTr();
         }
         D.path(bubPath, { fill: T.cardFill, stroke: T.cardBorder, sw: T.cardBW, soft: T.soft });
 
         // Top-right 3D Vector Megaphone Illustration
-        drawMegaphone(D, bx + bw - 115, by - 45, 1.45, T.mega);
+        drawMegaphone(D, bx + bw - 114, by - 46, 1.5, T.mega);
 
-        // Centered Hero inside Speech Bubble
-        const bPx = fitFontSize(state.badge.toUpperCase(), 800, "'Space Grotesk', sans-serif", bw - 260, 28, 18);
-        const tagW = Math.min(bw - 200, state.badge.length * bPx * 0.72 + 80);
-        D.rect((W - tagW) / 2, by + 64, tagW, 54, { fill: T.subPillFill, stroke: T.cardBorder, sw: T.badgeBW, shdOff: T.badgeShd, rx: T.badgeRad });
-        D.text(state.badge.toUpperCase(), W / 2, by + 100, { align: "center", fam: "'Space Grotesk', sans-serif", wt: 800, px: bPx, fill: T.subPillText, ls: 2 });
-
-        const hPx = fitFontSize(state.title.toUpperCase(), 900, "'Archivo Black', sans-serif", bw - 140, 152, 62);
-        D.text(state.title.toUpperCase(), W / 2, by + 266 + Math.round(hPx * 0.30), {
-            align: "center", fam: "'Archivo Black', sans-serif", wt: 900, px: hPx,
-            fill: state.theme === "dark-code" ? "#38BDF8" : (state.theme === "modern" || state.theme === "glass" ? "#16488E" : "#CA2C2A"),
-            stroke: T.heroStroke, sw: T.heroSW,
-            shdOff: T.soft ? 0 : 10, shdCol: "#000000", shdStroke: "#000000", shdSW: T.heroSW, ls: -2
+        // Top Skewed Badge Inside Bubble
+        const bTxt = state.badge.toUpperCase();
+        const bPx = fitFontSize(bTxt, 800, "'Space Grotesk', sans-serif", bw - 300, 25, 16, 1.6);
+        const tagW = Math.min(bw - 200, Math.round(measureTextW(bTxt, 800, "'Space Grotesk', sans-serif", bPx, 1.6) + 76));
+        drawSkewRibbon(D, bTxt, (W - tagW) / 2, by + 44, tagW, 50, {
+            deg: T.soft ? 0 : -3, fill: T.badgeFill, stroke: T.cardBorder, sw: T.badgeBW,
+            shdOff: T.badgeShd, shdCol: "#000000", rx: T.badgeRad,
+            fam: "'Space Grotesk', sans-serif", wt: 800, px: bPx, textCol: T.badgeText, ls: 1.6, soft: T.soft
         });
 
-        const subTxt = state.sub.toUpperCase();
-        const sPx = fitFontSize(subTxt, 800, "'Space Grotesk', sans-serif", bw - 180, 32, 18);
-        D.text(subTxt, W / 2, by + bh - 62, { align: "center", fam: "'Space Grotesk', sans-serif", wt: 800, px: sPx, fill: state.theme === "dark-code" ? "#FFFFFF" : "#0B1F40", ls: 1.5 });
+        // Bold Condensed Headline inside Bubble
+        const tFit = fitTitleLines(state.title, 900, "'Barlow Condensed', sans-serif", bw - 150, 158, 122, 62, 0);
+        const l3Fill1 = state.theme === "dark-code" ? "#FFFFFF" : (T.soft ? "#0F294A" : "#CA2C2A");
+        const l3Fill2 = state.theme === "dark-code" ? "#FCD34D" : (T.soft ? "#DC2626" : "#0B1F40");
+        drawDisplayHeadline(D, tFit.lines, W / 2, by + 248, T, "'Barlow Condensed', sans-serif", 900, tFit.px, "center", {
+            lhMul: 0.90, fill1: l3Fill1, fill2: l3Fill2,
+            sw: T.soft ? 0 : Math.max(6, Math.round(tFit.px * 0.068)),
+            shdOff: T.soft ? 5 : 8, shdCol: state.theme === "dark-code" ? "#CA2C2A" : (T.soft ? "rgba(15,41,74,0.16)" : "#000000")
+        });
 
-        // Subtitle Below Bubble Tail
-        const capY = ty + 114;
-        D.text(state.tag, W / 2, capY, { align: "center", fam: "'Plus Jakarta Sans', sans-serif", wt: 700, px: 32, fill: "#FFFFFF" });
+        // Contrast Skewed Sub-Pill Strip inside bottom of Bubble
+        const subTxt = state.sub.toUpperCase();
+        const sPx = fitFontSize(subTxt, 800, "'Space Grotesk', sans-serif", bw - 220, 27, 16, 1.2);
+        const sw = Math.min(bw - 160, Math.round(measureTextW(subTxt, 800, "'Space Grotesk', sans-serif", sPx, 1.2) + 72));
+        drawSkewRibbon(D, subTxt, (W - sw) / 2, by + bh - 92, sw, 52, {
+            deg: T.soft ? 0 : -2, fill: state.theme === "dark-code" ? "#FCD34D" : "#0B1F40",
+            stroke: T.cardBorder, sw: T.soft ? 0 : 3.5, shdOff: T.soft ? 0 : 5, shdCol: "#000000", rx: T.soft ? 999 : 0,
+            fam: "'Space Grotesk', sans-serif", wt: 800, px: sPx,
+            textCol: state.theme === "dark-code" ? "#091322" : "#FFFFFF", ls: 1.2
+        });
+
+        // Tagline Below Bubble Tail
+        const capY = ty + 112;
+        const tagPx = fitFontSize(state.tag, 800, "'Plus Jakarta Sans', sans-serif", W - 240, 31, 20);
+        D.text(state.tag, W / 2, capY, { align: "center", fam: "'Plus Jakarta Sans', sans-serif", wt: 800, px: tagPx, fill: "#FFFFFF", shdOff: 3, shdCol: "rgba(0,0,0,0.45)" });
         if (schedTxt) {
-            D.text(schedTxt, W / 2, capY + 46, { align: "center", fam: "'JetBrains Mono', monospace", wt: 700, px: 23, fill: "#FCD34D" });
+            D.text(schedTxt, W / 2, capY + 42, { align: "center", fam: "'JetBrains Mono', monospace", wt: 700, px: 22, fill: "#FCD34D" });
         }
 
         const dockW = 920;
-        const dockY = H - 100;
-        D.rect((W - dockW) / 2, dockY, dockW, 56, { fill: T.cardFill, stroke: T.cardBorder, sw: T.cardBW, shdOff: T.soft ? 0 : 5, rx: 16, soft: T.soft });
-        D.text("@hmif_LPKIA   •   GO.HMIF-LPKIA.MY.ID", W / 2, dockY + 36, { align: "center", fam: "'JetBrains Mono', monospace", wt: 800, px: 22, fill: state.theme === "dark-code" ? "#38BDF8" : "#16488E", ls: 1.4 });
+        const dockY = H - 94;
+        D.rect((W - dockW) / 2, dockY, dockW, 54, { fill: T.dockFill, stroke: T.dockBorder, sw: T.dockBW, shdOff: T.soft ? 0 : 6, shdCol: "#000000", rx: T.dockRad, soft: T.soft });
+        D.text("@hmif_LPKIA   •   GO.HMIF-LPKIA.MY.ID", W / 2, dockY + 35, { align: "center", fam: "'JetBrains Mono', monospace", wt: 800, px: 21, fill: T.dockText, ls: 1.4 });
     }
 
     // =========================================================================
     // LAYOUT 4: IG FEED STACK DUAL SPLIT WIDESCREEN
     // =========================================================================
     else if (lay === 4) {
-        const padL = 110;
-        const leftW = Math.round(W * 0.48);
+        const padL = 98;
+        const leftW = Math.round(W * 0.47);
 
-        // Left Column: Org Pill + Badge + Huge Display Title + Sub + Tagline + Schedule
+        drawSparkle(D, padL + 16, H - 150, 22, T.sparkFill, T.sparkStroke, T.soft ? 0 : 2);
+        drawSparkle(D, W - 78, 86, 26, T.sparkAlt, T.sparkStroke, T.soft ? 0 : 2.5);
+
+        // Left Column: Org Pill + Skewed Badge + Monumental Headline + Sub + Tagline
         const pillW = Math.min(leftW, 740);
-        D.rect(padL, 120, pillW, 78, { fill: T.hdrFill, stroke: T.hdrBorder, sw: T.hdrBW, shdOff: T.hdrShd, rx: 999, soft: T.soft });
-        drawThreeLogos(D, padL + 16, 132, 54, 8, T);
-        D.text("HIMA INFORMATIKA", padL + 216, 157, { fam: "'Space Grotesk', sans-serif", wt: 700, px: 24, fill: T.hdrTitle, ls: 0.8 });
-        D.text("AKSARA NIRMANA • IDE LPKIA", padL + 216, 182, { fam: "'Plus Jakarta Sans', sans-serif", wt: 700, px: 14.5, fill: T.hdrSub, ls: 1.2 });
+        D.rect(padL, 84, pillW, 78, { fill: T.hdrFill, stroke: T.hdrBorder, sw: T.hdrBW, shdOff: T.hdrShd, shdCol: T.hdrShdCol, rx: 999, soft: T.soft });
+        drawThreeLogos(D, padL + 16, 96, 54, 8, T);
+        D.text("HIMA INFORMATIKA", padL + 216, 123, { fam: "'Barlow Condensed', sans-serif", wt: 900, px: 30, fill: T.hdrTitle, ls: 0.8 });
+        D.text("KABINET AKSARA NIRMANA • IDE LPKIA", padL + 216, 147, { fam: "'Plus Jakarta Sans', sans-serif", wt: 700, px: 14, fill: T.hdrSub, ls: 1.2 });
 
-        // Badge
-        const bPx = fitFontSize(state.badge.toUpperCase(), 800, "'JetBrains Mono', monospace", leftW - 60, 25, 16);
-        const bw = Math.min(leftW, state.badge.length * bPx * 0.72 + 64);
-        D.rect(padL, 266, bw, 52, { fill: T.subPillFill, stroke: T.cardBorder, sw: T.badgeBW, shdOff: T.badgeShd, rx: T.badgeRad });
-        D.text(state.badge.toUpperCase(), padL + 32, 301, { fam: "'JetBrains Mono', monospace", wt: 800, px: bPx, fill: T.subPillText, ls: 1.6 });
+        // Skewed Badge
+        const bTxt = state.badge.toUpperCase();
+        const bPx = fitFontSize(bTxt, 800, "'JetBrains Mono', monospace", leftW - 60, 23, 15, 1.4);
+        const bw = Math.min(leftW, Math.round(measureTextW(bTxt, 800, "'JetBrains Mono', monospace", bPx, 1.4) + 64));
+        drawSkewRibbon(D, bTxt, padL, 210, bw, 50, {
+            deg: T.soft ? 0 : -3, fill: T.badgeFill, stroke: T.badgeBorder, sw: T.badgeBW,
+            shdOff: T.badgeShd, shdCol: "#000000", rx: T.badgeRad,
+            fam: "'JetBrains Mono', monospace", wt: 800, px: bPx, textCol: T.badgeText, ls: 1.4, soft: T.soft
+        });
 
-        // Left-aligned Wrapped Hero Headline
-        const tLines = wrapLines(state.title.toUpperCase(), `900 112px 'Archivo Black', sans-serif`, leftW - 10).slice(0, 2);
-        const hPx = tLines.length > 1
-            ? Math.min(...tLines.map(ln => fitFontSize(ln, 900, "'Archivo Black', sans-serif", leftW, 108, 60)))
-            : fitFontSize(tLines[0], 900, "'Archivo Black', sans-serif", leftW, 130, 62);
-        tLines.forEach((ln, idx) => {
-            D.text(ln, padL, 456 + idx * Math.round(hPx * 1.12), {
-                fam: "'Archivo Black', sans-serif", wt: 900, px: hPx,
-                fill: "#FFFFFF", stroke: T.soft ? "transparent" : "#000000", sw: T.soft ? 0 : 12,
-                shdOff: T.soft ? 0 : 8, shdCol: "#000000", shdStroke: "#000000", shdSW: 12, ls: -2
+        // Left-aligned Wrapped Condensed Hero Headline
+        const tFit4 = fitTitleLines(state.title, 900, "'Barlow Condensed', sans-serif", leftW - 10, 146, 114, 58, 0);
+        const lh4 = Math.round(tFit4.px * 0.92);
+        const topY4 = 382;
+        tFit4.lines.forEach((ln, idx) => {
+            D.text(ln, padL, topY4 + idx * lh4, {
+                fam: "'Barlow Condensed', sans-serif", wt: 900, px: tFit4.px,
+                fill: idx === 0 ? "#FFFFFF" : "#FCD34D",
+                stroke: T.soft ? "transparent" : "#000000", sw: T.soft ? 0 : 9,
+                shdOff: T.soft ? 5 : 7, shdCol: T.soft ? "rgba(5,19,44,0.35)" : "#000000",
+                shdStroke: T.soft ? null : "#000000", shdSW: T.soft ? 0 : 9, ls: 0
             });
         });
-        const afterHeadY = 456 + (tLines.length - 1) * Math.round(hPx * 1.12) + 34;
-        D.rect(padL, afterHeadY, 150, 10, { fill: "#FCD34D", rx: T.soft ? 5 : 0 });
+        const afterHeadY = topY4 + (tFit4.lines.length - 1) * lh4 + 34;
+        D.rect(padL, afterHeadY, 156, 10, { fill: state.theme === "dark-code" ? "#CA2C2A" : "#FCD34D", stroke: T.soft ? "none" : "#000000", sw: T.soft ? 0 : 2, rx: T.soft ? 5 : 0 });
 
-        const subL4Px = fitFontSize(state.sub.toUpperCase(), 700, "'Space Grotesk', sans-serif", leftW, 28, 16);
-        D.text(state.sub.toUpperCase(), padL, afterHeadY + 64, { fam: "'Space Grotesk', sans-serif", wt: 700, px: subL4Px, fill: "#FCD34D", ls: 1.2 });
-        const tagLines = wrapLines(state.tag, "600 28px 'Plus Jakarta Sans', sans-serif", leftW).slice(0, 2);
-        tagLines.forEach((ln, idx) => D.text(ln, padL, afterHeadY + 114 + idx * 40, { fam: "'Plus Jakarta Sans', sans-serif", wt: 600, px: 28, fill: "#E2EEFF" }));
+        const subL4Px = fitFontSize(state.sub.toUpperCase(), 800, "'Space Grotesk', sans-serif", leftW, 27, 16, 1);
+        D.text(state.sub.toUpperCase(), padL, afterHeadY + 62, { fam: "'Space Grotesk', sans-serif", wt: 800, px: subL4Px, fill: "#FCD34D", ls: 1 });
+        const tagLines = wrapLines(state.tag, "700 28px 'Plus Jakarta Sans', sans-serif", leftW).slice(0, 2);
+        tagLines.forEach((ln, idx) => D.text(ln, padL, afterHeadY + 110 + idx * 39, { fam: "'Plus Jakarta Sans', sans-serif", wt: 700, px: 28, fill: "#F1F5F9" }));
         if (schedTxt) {
-            D.text(schedTxt, padL, afterHeadY + 216, { fam: "'JetBrains Mono', monospace", wt: 700, px: 21, fill: "#38BDF8" });
+            D.text(schedTxt, padL, afterHeadY + 114 + tagLines.length * 39 + 12, { fam: "'JetBrains Mono', monospace", wt: 700, px: 21, fill: state.theme === "dark-code" ? "#4ADE80" : "#FCD34D" });
         }
 
-        // Right Column: Stacked Double IG Feed Card!
-        const rCardW = is43 ? 620 : 720;
-        const rCardH = is43 ? 780 : 720;
-        const rx0 = W - 110 - rCardW;
-        const ry0 = (H - 96 - rCardH) / 2;
+        // Right Column: 3-Layer Stacked Physical IG Carousel Card
+        const rCardW = is43 ? 610 : 720;
+        const rCardH = is43 ? 780 : 728;
+        const rx0 = W - 98 - rCardW;
+        const ry0 = (H - 94 - rCardH) / 2;
         const rcx = rx0 + rCardW / 2;
         const rcy = ry0 + rCardH / 2;
+        const stackRad = T.soft ? 24 : 8;
 
-        D.pushRot(3, rcx, rcy);
-        D.rect(rx0, ry0, rCardW, rCardH, { fill: T.cardBack, stroke: T.cardBorder, sw: T.cardBW, shdOff: T.soft ? 0 : 8, rx: T.cardRad });
+        D.pushRot(-4, rcx, rcy);
+        D.rect(rx0, ry0, rCardW, rCardH, { fill: T.cardBack, stroke: T.cardBorder, sw: T.cardBW, shdOff: T.soft ? 0 : 8, shdCol: "#000000", rx: stackRad });
+        D.popRot();
+        D.pushRot(2.8, rcx, rcy);
+        D.rect(rx0, ry0, rCardW, rCardH, { fill: T.cardMid, stroke: T.cardBorder, sw: Math.max(1.5, T.cardBW - 1), rx: stackRad });
         D.popRot();
 
-        D.rect(rx0, ry0, rCardW, rCardH, { fill: T.cardFill, stroke: T.cardBorder, sw: T.cardBW, shdOff: T.cardShd, rx: T.cardRad, soft: T.soft });
-        // IG Card Top
-        D.circle(rx0 + 48, ry0 + 46, 22, { fill: "#FFFFFF", stroke: T.cardBorder, sw: 2 });
-        D.logo("hima", rx0 + 34, ry0 + 32, 28, 28);
-        D.text("hmif_LPKIA", rx0 + 82, ry0 + 54, { fam: "'Space Grotesk', sans-serif", wt: 700, px: 23, fill: state.theme === "dark-code" ? "#FFFFFF" : "#0F172A" });
-        _mCtx.font = "700 23px 'Space Grotesk', sans-serif";
-        const vx4 = rx0 + 82 + _mCtx.measureText("hmif_LPKIA").width + 10;
-        D.circle(vx4 + 10, ry0 + 46, 9.5, { fill: state.theme === "dark-code" ? "#38BDF8" : "#1D9BF0" });
-        D.pushTr(vx4 - 1, ry0 + 34, 0.95);
-        D.path("M6 12.2l3.1 3.1 6-6.2", { fill: "none", stroke: "#FFFFFF", sw: 2.6 });
-        D.popTr();
-        D.rect(rx0 + rCardW - 150, ry0 + 28, 102, 36, { fill: state.theme === "dark-code" ? "#38BDF8" : "#16488E", rx: 8 });
-        D.text("Follow", rx0 + rCardW - 99, ry0 + 53, { align: "center", fam: "'Space Grotesk', sans-serif", wt: 700, px: 17, fill: state.theme === "dark-code" ? "#0B192E" : "#FFFFFF" });
-        drawPixelCursor(D, rx0 + rCardW - 70, ry0 + 54, 2.2, T.cursor);
+        D.rect(rx0, ry0, rCardW, rCardH, { fill: T.cardFill, stroke: T.cardBorder, sw: T.cardBW, shdOff: T.cardShd, shdCol: T.cardShdCol, rx: stackRad, soft: T.soft });
 
-        // Inner Media Box inside IG Card
+        // IG Card Profile Chrome
+        const igTxt = state.theme === "dark-code" ? "#FFFFFF" : "#0F172A";
+        D.circle(rx0 + 48, ry0 + 48, 22, { fill: "#FFFFFF", stroke: T.cardBorder, sw: 2 });
+        D.logo("hima", rx0 + 34, ry0 + 34, 28, 28);
+        D.text("hmif_LPKIA", rx0 + 82, ry0 + 55, { fam: "'Space Grotesk', sans-serif", wt: 700, px: 23, fill: igTxt });
+        const vx4 = rx0 + 82 + measureTextW("hmif_LPKIA", 700, "'Space Grotesk', sans-serif", 23) + 10;
+        D.circle(vx4 + 10, ry0 + 47, 9.5, { fill: state.theme === "dark-code" ? "#FCD34D" : "#1D9BF0" });
+        D.pushTr(vx4 - 1, ry0 + 35, 0.95);
+        D.path("M6 12.2l3.1 3.1 6-6.2", { fill: "none", stroke: state.theme === "dark-code" ? "#091322" : "#FFFFFF", sw: 2.8 });
+        D.popTr();
+        D.rect(rx0 + rCardW - 152, ry0 + 30, 108, 36, { fill: state.theme === "dark-code" ? "#CA2C2A" : "#16488E", stroke: T.soft ? "none" : "#000000", sw: T.soft ? 0 : 2, rx: T.soft ? 999 : 4 });
+        D.text("Follow", rx0 + rCardW - 98, ry0 + 54, { align: "center", fam: "'Space Grotesk', sans-serif", wt: 700, px: 17, fill: "#FFFFFF" });
+        drawPixelCursor(D, rx0 + rCardW - 72, ry0 + 56, 2.3, T.cursor);
+
+        // Inner Terminal Media Box inside IG Card
         const mw = rCardW - 56;
-        const mh = rCardH - 220;
+        const mh = rCardH - 270;
         const mx = rx0 + 28;
         const my = ry0 + 96;
-        const mBg = state.theme === "dark-code" ? "#081529" : (state.theme === "modern" ? "#154688" : "#F4F8FF");
-        const mTxt = (state.theme === "dark-code" || state.theme === "modern") ? "#FFFFFF" : "#0B1F40";
-        D.rect(mx, my, mw, mh, { fill: mBg, stroke: T.cardBorder, sw: T.soft ? 0 : 3, rx: 12 });
-        D.grid(mx + 2, my + 48, mw - 4, mh - 50, 34, (state.theme === "dark-code" || state.theme === "modern") ? "rgba(56,189,248,0.12)" : "rgba(22,72,142,0.08)", 1);
-        D.rect(mx, my, mw, 48, { fill: T.tbFill, rx: 12 });
-        D.rect(mx, my + 24, mw, 24, { fill: T.tbFill, rx: 0 });
-        D.line(mx, my + 48, mx + mw, my + 48, { stroke: T.cardBorder, sw: T.soft ? 0 : 2.5 });
-        T.tbDots.forEach((col, i) => D.circle(mx + 26 + i * 24, my + 24, 7, { fill: col }));
-        D.text("stage_live.sh", mx + 106, my + 31, { fam: "'JetBrains Mono', monospace", wt: 700, px: 17, fill: T.tbText });
+        const mBg = state.theme === "dark-code" ? "#07101E" : (state.theme === "modern" ? "#0F2B5B" : "#F4F8FF");
+        const isDarkTerm = (state.theme === "dark-code" || state.theme === "modern");
+        const mTxt = isDarkTerm ? "#FFFFFF" : "#0B1F40";
+        D.rect(mx, my, mw, mh, { fill: mBg, stroke: state.theme === "dark-code" ? "#334155" : T.cardBorder, sw: T.soft ? 0 : 3, rx: 10 });
+        D.grid(mx + 2, my + 46, mw - 4, mh - 48, 34, isDarkTerm ? "rgba(255,255,255,0.045)" : "rgba(22,72,142,0.075)", 1);
+        D.rect(mx, my, mw, 46, { fill: T.tbFill, rx: 10 });
+        D.rect(mx, my + 24, mw, 22, { fill: T.tbFill, rx: 0 });
+        D.line(mx, my + 46, mx + mw, my + 46, { stroke: state.theme === "dark-code" ? "#334155" : T.cardBorder, sw: T.soft ? 0 : 2.5 });
+        T.tbDots.forEach((col, i) => D.circle(mx + 26 + i * 24, my + 23, 7, { fill: col }));
+        D.text("stage_live.sh", mx + 104, my + 29, { fam: "'JetBrains Mono', monospace", wt: 700, px: 16.5, fill: T.tbText });
 
-        const sCodeX = mx + 44;
-        const sCodeTop = my + Math.round((mh - 160) / 2);
-        D.text(`> event   : ${state.title}`, sCodeX, sCodeTop, { fam: "'JetBrains Mono', monospace", wt: 700, px: 25, fill: state.theme === "dark-code" || state.theme === "modern" ? "#38BDF8" : "#16488E" });
-        D.text(`> mode    : ${state.badge}`, sCodeX, sCodeTop + 56, { fam: "'JetBrains Mono', monospace", wt: 700, px: 25, fill: state.theme === "dark-code" || state.theme === "modern" ? "#FCD34D" : "#CA2C2A" });
-        D.text(`> kabinet : Aksara Nirmana`, sCodeX, sCodeTop + 112, { fam: "'JetBrains Mono', monospace", wt: 700, px: 25, fill: mTxt });
-        D.text(`> motto   : Dari Ilmu, Menjadi Karya.`, sCodeX, sCodeTop + 168, { fam: "'JetBrains Mono', monospace", wt: 700, px: 24, fill: state.theme === "dark-code" || state.theme === "modern" ? "#86EFAC" : "#0F766E" });
+        const sCodeX = mx + 34;
+        const sMaxW = mw - 68;
+        const pfxW = measureTextW("> kabinet : ", 700, "'JetBrains Mono', monospace", 19);
+        const valMaxW = sMaxW - pfxW;
+        const evLines = wrapLines(state.title, "700 19px 'JetBrains Mono', monospace", valMaxW).slice(0, 2);
+        const moLines = wrapLines(state.tag, "700 18.5px 'JetBrains Mono', monospace", valMaxW).slice(0, 2);
+        const tRows = [
+            [`> event   : ${evLines[0]}`, isDarkTerm ? "#FCD34D" : "#16488E"],
+            ...(evLines[1] ? [[`            ${evLines[1]}`, isDarkTerm ? "#FCD34D" : "#16488E"]] : []),
+            [`> mode    : ${state.badge}`, isDarkTerm ? "#FB7185" : "#CA2C2A"],
+            [`> kabinet : Aksara Nirmana`, mTxt],
+            [`> motto   : ${moLines[0]}`, isDarkTerm ? "#4ADE80" : "#0F766E"],
+            ...(moLines[1] ? [[`            ${moLines[1]}`, isDarkTerm ? "#4ADE80" : "#0F766E"]] : [])
+        ];
+        const rowStep = tRows.length > 5 ? 43 : (tRows.length > 4 ? 48 : 54);
+        const sCodeTop = my + Math.round((mh - (tRows.length - 1) * rowStep) / 2) + 28;
+        const baseTermPx = Math.min(20, ...tRows.map(([txt]) => fitFontSize(txt, 700, "'JetBrains Mono', monospace", sMaxW, 20, 15.5)));
+        tRows.forEach(([txt, col], idx) => {
+            D.text(txt, sCodeX, sCodeTop + idx * rowStep, { fam: "'JetBrains Mono', monospace", wt: 700, px: baseTermPx, fill: col });
+        });
+
+        // IG Action Row (Heart, Comment, Share, Pagination Dots, Bookmark)
+        const actY = my + mh + 22;
+        D.pushTr(mx + 2, actY, 1.15);
+        D.path("M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z", { fill: "#CA2C2A", stroke: igTxt, sw: 1.8 });
+        D.popTr();
+        D.pushTr(mx + 44, actY, 1.15);
+        D.path("M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z", { fill: "none", stroke: igTxt, sw: 2.1 });
+        D.popTr();
+        D.pushTr(mx + 86, actY, 1.15);
+        D.path("M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z", { fill: "none", stroke: igTxt, sw: 2.1 });
+        D.popTr();
+        // Carousel dots
+        [-16, 0, 16].forEach((dx, di) => {
+            D.circle(mx + mw / 2 + dx, actY + 14, di === 0 ? 5.5 : 4.5, { fill: di === 0 ? (state.theme === "dark-code" ? "#FCD34D" : "#CA2C2A") : "rgba(148,163,184,0.55)" });
+        });
+        // Bookmark
+        D.pushTr(mx + mw - 28, actY, 1.15);
+        D.path("M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z", { fill: "none", stroke: igTxt, sw: 2.1 });
+        D.popTr();
 
         // IG Caption Bottom
-        D.text("hmif_LPKIA", mx, ry0 + rCardH - 56, { fam: "'Space Grotesk', sans-serif", wt: 800, px: 23, fill: state.theme === "dark-code" ? "#FFFFFF" : "#0F172A" });
-        const igCapPx = fitFontSize(state.sub, 600, "'Plus Jakarta Sans', sans-serif", mw - 165, 22, 13);
-        D.text(state.sub, mx + 145, ry0 + rCardH - 56, { fam: "'Plus Jakarta Sans', sans-serif", wt: 600, px: igCapPx, fill: state.theme === "dark-code" ? "#CBD5E1" : "#334155" });
+        const capBtmY = ry0 + rCardH - 36;
+        D.text("hmif_LPKIA", mx, capBtmY, { fam: "'Space Grotesk', sans-serif", wt: 800, px: 22, fill: igTxt });
+        const igCapPx = fitFontSize(state.sub, 600, "'Plus Jakarta Sans', sans-serif", mw - 165, 20, 12.5);
+        D.text(state.sub, mx + 144, capBtmY, { fam: "'Plus Jakarta Sans', sans-serif", wt: 600, px: igCapPx, fill: state.theme === "dark-code" ? "#CBD5E1" : "#334155" });
 
         // Full Bottom Dock
         const fy = H - 72;
-        D.rect(padL, fy - 18, W - padL * 2, 56, { fill: T.dockFill, stroke: T.dockBorder, sw: T.dockBW, rx: 14, soft: T.soft });
-        D.text("@hmif_LPKIA", padL + 30, fy + 18, { fam: "'Space Grotesk', sans-serif", wt: 700, px: 22, fill: T.dockText });
-        D.text("GO.HMIF-LPKIA.MY.ID", W - padL - 30, fy + 18, { align: "right", fam: "'JetBrains Mono', monospace", wt: 700, px: 21, fill: T.dockIcon });
+        D.rect(padL, fy - 18, W - padL * 2, 54, { fill: T.dockFill, stroke: T.dockBorder, sw: T.dockBW, shdOff: T.soft ? 0 : 6, shdCol: "#000000", rx: T.dockRad, soft: T.soft });
+        D.text("@hmif_LPKIA", padL + 30, fy + 17, { fam: "'Space Grotesk', sans-serif", wt: 700, px: 21, fill: T.dockText });
+        D.text("GO.HMIF-LPKIA.MY.ID", W - padL - 30, fy + 17, { align: "right", fam: "'JetBrains Mono', monospace", wt: 800, px: 20, fill: T.dockIcon });
     }
 
     // =========================================================================
     // LAYOUT 5: MADING PIN 3D WIDESCREEN STAGE
     // =========================================================================
     else if (lay === 5) {
-        D.grid(0, 0, W, H, 58, "rgba(255,255,255,0.09)", 1.5);
-        // Open Editorial Top Header (Layout 5 signature!)
-        drawThreeLogos(D, 110, 48, 56, 10, T);
-        D.text("HIMA INFORMATIKA", 322, 74, { fam: "'Space Grotesk', sans-serif", wt: 700, px: 27, fill: "#FFFFFF" });
-        D.text("Kabinet Aksara Nirmana", 322, 102, { fam: "'Plus Jakarta Sans', sans-serif", wt: 700, px: 19, fill: "#FCD34D" });
-        D.text("IDE LPKIA BANDUNG", W - 110, 74, { align: "right", fam: "'Space Grotesk', sans-serif", wt: 700, px: 24, fill: "#FFFFFF" });
-        D.text("Prodi Teknik Informatika", W - 110, 102, { align: "right", fam: "'Plus Jakarta Sans', sans-serif", wt: 600, px: 18, fill: "#93C5FD" });
-        D.line(110, 126, W - 110, 126, { stroke: "rgba(255,255,255,0.45)", sw: 2 });
+        D.grid(0, 0, W, H, 58, T.gridLine, 1.5);
 
-        // Tilted Back Card + Slightly Tilted Pinned Main Card
+        // Open Editorial Top Header with Double Rule
+        drawThreeLogos(D, 100, 42, 56, 10, T);
+        D.text("HIMA INFORMATIKA", 312, 74, { fam: "'Barlow Condensed', sans-serif", wt: 900, px: 34, fill: "#FFFFFF", ls: 0.8 });
+        D.text("Kabinet Aksara Nirmana", 312, 102, { fam: "'Plus Jakarta Sans', sans-serif", wt: 700, px: 19, fill: "#FCD34D" });
+        D.text("IDE LPKIA BANDUNG", W - 100, 74, { align: "right", fam: "'Barlow Condensed', sans-serif", wt: 800, px: 29, fill: "#FFFFFF", ls: 0.6 });
+        D.text("Prodi Teknik Informatika", W - 100, 102, { align: "right", fam: "'Plus Jakarta Sans', sans-serif", wt: 600, px: 18, fill: "#CBD5E1" });
+        D.line(100, 120, W - 100, 120, { stroke: "rgba(255,255,255,0.52)", sw: 2.5 });
+        D.line(100, 127, W - 100, 127, { stroke: "rgba(255,255,255,0.22)", sw: 1 });
+
+        // Corner 4-Point Sparkle Accents
+        drawSparkle(D, 140, 260, 28, T.sparkAlt, T.sparkStroke, T.soft ? 0 : 2.5);
+        drawSparkle(D, W - 140, H - 240, 30, T.sparkFill, T.sparkStroke, T.soft ? 0 : 2.5);
+
+        // Tilted Back Card + Pinned Main Paper Card
         const cw = is43 ? 1180 : 1340;
-        const ch = is43 ? 520 : 470;
+        const ch = is43 ? 520 : 464;
         const cx = (W - cw) / 2;
-        const cy = 204;
+        const cy = 186;
         const midX = W / 2, midY = cy + ch / 2;
+        const rad5 = T.cardRadL5 || 20;
 
-        D.pushRot(-3.4, midX, midY);
-        D.rect(cx - 10, cy + 12, cw, ch, { fill: "#0B1F40", stroke: "#000000", sw: 4, rx: 28 });
+        D.pushRot(-3.6, midX, midY);
+        D.rect(cx - 10, cy + 12, cw, ch, { fill: state.theme === "dark-code" ? "#CA2C2A" : "#0B1F40", stroke: "#000000", sw: 4.5, rx: rad5 });
         D.popRot();
 
         D.pushRot(-1.4, midX, midY);
-        D.rect(cx, cy, cw, ch, { fill: T.cardFill, stroke: T.cardBorder, sw: T.cardBW, shdOff: T.soft ? 0 : 8, rx: 28, soft: T.soft });
+        D.rect(cx, cy, cw, ch, { fill: T.cardFill, stroke: T.cardBorder, sw: T.cardBW, shdOff: T.soft ? 0 : 10, shdCol: "#000000", rx: rad5, soft: T.soft });
 
-        const bPx = fitFontSize(state.badge.toUpperCase(), 800, "'JetBrains Mono', monospace", cw - 240, 26, 17);
-        const bw = Math.min(cw - 200, state.badge.length * bPx * 0.72 + 76);
-        D.rect((W - bw) / 2, cy + 68, bw, 52, { fill: T.badgeFill, stroke: T.badgeBorder, sw: 2.5, rx: 8 });
-        D.text(state.badge.toUpperCase(), W / 2, cy + 102, { align: "center", fam: "'JetBrains Mono', monospace", wt: 800, px: bPx, fill: T.badgeText, ls: 2 });
-
-        const hPx = fitFontSize(state.title.toUpperCase(), 900, "'Archivo Black', sans-serif", cw - 120, 150, 62);
-        D.text(state.title.toUpperCase(), W / 2, cy + 286 + Math.round(hPx * 0.28), {
-            align: "center", fam: "'Archivo Black', sans-serif", wt: 900, px: hPx,
-            fill: state.theme === "dark-code" ? "#FFFFFF" : "#0B1F40", ls: -2
+        const bTxt = state.badge.toUpperCase();
+        const bPx = fitFontSize(bTxt, 700, "'Silkscreen', monospace", cw - 260, 23, 14, 1.2);
+        const bw = Math.min(cw - 200, Math.round(measureTextW(bTxt, 700, "'Silkscreen', monospace", bPx, 1.2) + 74));
+        drawSkewRibbon(D, bTxt, (W - bw) / 2, cy + 46, bw, 48, {
+            deg: T.soft ? 0 : -3, fill: T.badgeFill, stroke: T.badgeBorder, sw: T.soft ? 0 : 3,
+            shdOff: T.soft ? 0 : 5, shdCol: "#000000", rx: T.badgeRad,
+            fam: "'Silkscreen', monospace", wt: 700, px: bPx, textCol: T.badgeText, ls: 1.2
         });
 
-        // 3D Red Pushpin top-right of pinned card!
-        const px = cx + cw - 76, py = cy + 36;
-        D.circle(px + 8, py + 12, 24, { fill: "rgba(0,0,0,0.34)" });
-        D.circle(px, py, 24, { fill: "#CA2C2A", stroke: "#000000", sw: 3.5 });
-        D.circle(px - 6, py - 6, 8, { fill: "#FCA5A5" });
+        const tFit5 = fitTitleLines(state.title, 400, "'Archivo Black', sans-serif", cw - 130, 148, 98, 52, -1);
+        const l5Fill1 = state.theme === "dark-code" ? "#FFFFFF" : "#0B1F40";
+        const l5Fill2 = state.theme === "dark-code" ? "#FCD34D" : "#CA2C2A";
+        drawDisplayHeadline(D, tFit5.lines, W / 2, cy + 258, T, "'Archivo Black', sans-serif", 400, tFit5.px, "center", {
+            lhMul: 1.04, ls: -1, fill1: l5Fill1, fill2: l5Fill2,
+            sw: state.theme === "dark-code" ? 6 : 0,
+            stroke: state.theme === "dark-code" ? "#020617" : "transparent",
+            shdOff: state.theme === "dark-code" ? 6 : 5,
+            shdCol: state.theme === "dark-code" ? "#CA2C2A" : "rgba(11,31,64,0.16)"
+        });
+
+        // Expressive Warm Editorial Script Sign-off inside pinned card corner
+        D.text("Dari Ilmu, Menjadi Karya", cx + cw - 42, cy + ch - 26, { align: "right", fam: "'Yellowtail', cursive", wt: 400, px: 25, fill: state.theme === "dark-code" ? "rgba(252,211,77,0.72)" : "rgba(100,116,139,0.78)" });
+
+        // True 3D Layered Pushpin pinning top-right corner
+        drawPushpin3D(D, cx + cw - 72, cy + 28, 1.15);
         D.popRot();
 
-        // Outlined/Bold Subtheme Below Card + Motto + Schedule
-        const subY = cy + ch + 115;
-        const sPx = fitFontSize(state.sub.toUpperCase(), 900, "'Space Grotesk', sans-serif", W - 260, 44, 24);
+        // Outlined Heavy Display Subtheme Below Pinned Card + Tagline + Optional Schedule
+        const subY = cy + ch + 108;
+        const sPx = fitFontSize(state.sub.toUpperCase(), 900, "'Barlow Condensed', sans-serif", W - 240, 52, 28, 1.4);
         D.text(state.sub.toUpperCase(), W / 2, subY, {
-            align: "center", fam: "'Space Grotesk', sans-serif", wt: 900, px: sPx,
-            fill: "#FFFFFF", stroke: "#0B1F40", sw: 10, shdOff: 5, shdCol: "#000000", shdStroke: "#000000", shdSW: 10, ls: 1.4
+            align: "center", fam: "'Barlow Condensed', sans-serif", wt: 900, px: sPx,
+            fill: "#FFFFFF", stroke: "#020617", sw: 6.5, shdOff: 5, shdCol: "#020617", shdStroke: "#020617", shdSW: 6.5, ls: 1.4
         });
-        D.text(`"${state.tag}"`, W / 2, subY + 58, { align: "center", fam: "'Plus Jakarta Sans', sans-serif", wt: 700, px: 28, fill: "#FCD34D" });
+        const tagPx = fitFontSize(`"${state.tag}"`, 800, "'Plus Jakarta Sans', sans-serif", W - 220, 29, 19);
+        D.text(`"${state.tag}"`, W / 2, subY + 56, { align: "center", fam: "'Plus Jakarta Sans', sans-serif", wt: 800, px: tagPx, fill: "#FCD34D" });
         if (schedTxt) {
-            D.text(schedTxt, W / 2, subY + 104, { align: "center", fam: "'JetBrains Mono', monospace", wt: 700, px: 22, fill: "#FFFFFF" });
+            D.text(schedTxt, W / 2, subY + 98, { align: "center", fam: "'JetBrains Mono', monospace", wt: 700, px: 22, fill: "#FFFFFF" });
         }
 
-        // Open Footer Rule
-        const fy = H - 78;
-        D.line(110, fy - 34, W - 110, fy - 34, { stroke: "rgba(255,255,255,0.45)", sw: 2 });
-        D.text("@hmif_LPKIA   |   GO.HMIF-LPKIA.MY.ID", W / 2, fy + 8, { align: "center", fam: "'Space Grotesk', sans-serif", wt: 700, px: 23, fill: "#FFFFFF" });
+        // Open Double-Rule Footer
+        const fy = H - 72;
+        D.line(100, fy - 34, W - 100, fy - 34, { stroke: "rgba(255,255,255,0.48)", sw: 2.5 });
+        D.line(100, fy - 28, W - 100, fy - 28, { stroke: "rgba(255,255,255,0.20)", sw: 1 });
+        D.text("@hmif_LPKIA   |   GO.HMIF-LPKIA.MY.ID", W / 2, fy + 8, { align: "center", fam: "'JetBrains Mono', monospace", wt: 700, px: 22, fill: "#FFFFFF", ls: 1.2 });
     }
 
     // 5% Projector Overscan Safe Guide
