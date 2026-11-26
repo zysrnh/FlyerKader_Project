@@ -160,10 +160,6 @@
                 <button type="button" onclick="closeModal('editModal')" class="px-2.5 py-1 bg-[#CA2C2A] border border-black text-xs font-extrabold text-white cursor-pointer">✕</button>
             </div>
             <div class="space-y-3 text-xs">
-                <div>
-                    <label class="block font-bold text-sky-300 uppercase mb-1">Eyebrow / Sub-label Atas</label>
-                    <input id="edEyebrow" type="text" class="w-full px-3 py-2 bg-[#071224] border border-sky-400/40 text-white font-semibold">
-                </div>
                 <div class="grid grid-cols-2 gap-3">
                     <div>
                         <label class="block font-bold text-sky-300 uppercase mb-1">Judul Baris 1</label>
@@ -232,13 +228,11 @@ const DEFAULT_FRAMES = [
         slug: "bingkai-1-kepemimpinan",
         layout: "L1",
         theme: "paper-neu",
-        eyebrow: "PRINSIP KEPEMIMPINAN",
         head1: "PIMPIN DENGAN",
         head2: "TELADAN.",
         filename: "kepemimpinan.js",
         lang: "JS",
         code: [
-            "// Prinsip Utama #01",
             "const pemimpin = {",
             "  peran: \"Tindakan, bukan jabatan\",",
             "  fokus: \"Memberdayakan tim\",",
@@ -257,18 +251,15 @@ const DEFAULT_FRAMES = [
         slug: "bingkai-2-konsistensi",
         layout: "L3",
         theme: "royal-blue",
-        eyebrow: "ETOS EKSEKUSI",
         head1: "KONSISTENSI",
         head2: "MENANG.",
         filename: "eksekusi.py",
         lang: "PY",
         code: [
-            "# Prinsip Utama #02",
             "def bangun_karya(visi, konsisten):",
             "    if not konsisten:",
             "        return \"Sekadar wacana\"",
             "",
-            "    # Eksekusi setiap hari",
             "    while visi.berjalan():",
             "        visi.eksekusi()",
             "",
@@ -282,19 +273,16 @@ const DEFAULT_FRAMES = [
         slug: "bingkai-3-visi",
         layout: "L5",
         theme: "dark-code",
-        eyebrow: "KOLABORASI & KARYA",
         head1: "WUJUDKAN VISI",
         head2: "BERSAMA.",
-        filename: "terminal — hmi-if",
+        filename: "terminal",
         lang: "GIT",
         code: [
-            "# Alur Aksara Nirmana",
             "$ git commit -m \"ubah tantangan jadi karya\"",
             "$ git push origin aksara-nirmana",
             "",
-            "> status : Siap menginspirasi",
-            "> misi   : Dari Ilmu, Menjadi Karya.",
-            "> langkah: Bangun masa depan bersama."
+            "> Misi   : Dari Ilmu, Menjadi Karya.",
+            "> Target : Tumbuh & berdampak."
         ].join("\n"),
         quote: "Masa depan adalah milik mereka yang berani membangunnya bersama."
     }
@@ -735,62 +723,61 @@ function computePosterMetrics(frame) {
     const safeX = 165;
     const safeW = 1150;
 
-    // 1. Header bar: y = 175 .. 285
-    const hdr = { x: safeX, y: 175, w: safeW, h: 108 };
+    // 1. Header bar: y = 172 .. 280
+    const hdr = { x: safeX, y: 172, w: safeW, h: 108 };
 
-    // 2. Headline block: y = 328 .. 510
+    // 2. Headline block (direct, zero extra eyebrow): y = 330 .. 525
     const linesHead = [frame.head1, frame.head2].map(s => (s || "").trim()).filter(Boolean);
     const headFontFam = "'Archivo Black', 'Space Grotesk', sans-serif";
-    const headMaxW = safeW - 20;
-    const startHeadPx = linesHead.length > 1 ? 84 : 88;
+    const headMaxW = safeW - 10;
+    const startHeadPx = linesHead.length > 1 ? 92 : 98;
     let headPx = startHeadPx;
     for (const ln of linesHead) {
-        headPx = Math.min(headPx, fitSingleLineFontSize(ln, px => `900 ${px}px ${headFontFam}`, headMaxW, startHeadPx, 46));
+        headPx = Math.min(headPx, fitSingleLineFontSize(ln, px => `900 ${px}px ${headFontFam}`, headMaxW, startHeadPx, 48));
     }
-    const headLH = Math.round(headPx * 1.06);
-    const eyebrowY = 345;
-    const headStartY = 398;
+    const headLH = Math.round(headPx * 1.08);
+    const headStartY = 334;
     const headBotY = headStartY + (linesHead.length - 1) * headLH + Math.round(headPx * 0.85);
     const accentY = headBotY + 24;
 
-    // 3. Code window: y = accentY + 46 .. 1540
+    // 3. Code window: y = accentY + 46 .. 1548
     const winX = safeX + (L === "L4" || L === "L5" ? 8 : 0);
     const winW = safeW - (L === "L4" || L === "L5" ? 16 : 0);
-    const winY = Math.max(545, accentY + 44);
-    const winBotLimit = 1545;
+    const winY = Math.max(524, accentY + 44);
+    const winBotLimit = 1548;
     const winH = winBotLimit - winY;
-    const tbH = 74;
+    const tbH = 72;
     const bodyY = winY + tbH;
     const bodyH = winH - tbH;
 
-    // Auto-fit code font size inside code body
-    const rawLines = (frame.code || "").replace(/\r\n/g, "\n").split("\n").slice(0, 12);
-    const gutterW = 92;
-    const codePadX = 36;
+    // Auto-fit larger legible code font size inside code body
+    const rawLines = (frame.code || "").replace(/\r\n/g, "\n").split("\n").slice(0, 11);
+    const gutterW = 82;
+    const codePadX = 34;
     const codeMaxW = winW - gutterW - codePadX * 2;
     const codeFam = "'JetBrains Mono', monospace";
-    let codePx = 33;
+    let codePx = 40;
     for (const ln of rawLines) {
         if (!ln.trim()) continue;
-        codePx = Math.min(codePx, fitSingleLineFontSize(ln, px => `700 ${px}px ${codeFam}`, codeMaxW, 33, 21));
+        codePx = Math.min(codePx, fitSingleLineFontSize(ln, px => `700 ${px}px ${codeFam}`, codeMaxW, 40, 23));
     }
-    const codeLH = Math.min(Math.round(codePx * 1.92), Math.floor((bodyH - 72) / Math.max(1, rawLines.length)));
-    const codeBlockH = rawLines.length * codeLH;
-    const codeTopPad = Math.max(42, Math.round((bodyH - codeBlockH) / 2) + Math.round(codePx * 0.72));
+    const codeLH = Math.min(Math.round(codePx * 2.02), Math.floor((bodyH - 96) / Math.max(1, rawLines.length)));
+    const codeBlockH = (rawLines.length - 1) * codeLH;
+    const codeTopPad = Math.max(54, Math.round((bodyH - codeBlockH) / 2) + Math.round(codePx * 0.34));
 
-    // 4. Clean bottom quote box: y = 1595 .. 1770
-    const quoteBox = { x: safeX, y: 1595, w: safeW, h: 170 };
+    // 4. Clean bottom quote box: y = 1598 .. 1770
+    const quoteBox = { x: safeX, y: 1598, w: safeW, h: 172 };
     const qFontFam = "'Plus Jakarta Sans', sans-serif";
-    const qPx = 31;
+    const qPx = 34;
     const qLines = wrapTextLines(frame.quote, `700 ${qPx}px ${qFontFam}`, safeW - 110).slice(0, 3);
-    const qLH = 44;
+    const qLH = 48;
 
-    // 5. Subtle footer bar: y = 1825 .. 1915
-    const footerY = 1825;
+    // 5. Subtle footer bar: y = 1830 .. 1915
+    const footerY = 1830;
 
     return {
         T, L, safeX, safeW, hdr,
-        eyebrowY, linesHead, headFontFam, headPx, headLH, headStartY, accentY,
+        linesHead, headFontFam, headPx, headLH, headStartY, accentY,
         win: { x: winX, y: winY, w: winW, h: winH, tbH, bodyY, bodyH, gutterW, codePadX },
         rawLines, codeFam, codePx, codeLH, codeTopPad,
         quoteBox, qFontFam, qPx, qLines, qLH, footerY
@@ -848,13 +835,6 @@ function generatePosterSvg(frame, includeGuides, forDownload) {
         parts.push(`<circle cx="${A5_W / 2}" cy="${A5_H * 0.45}" r="660" fill="url(#spot_${uid})"/>`);
     }
 
-    // Subtle Mading/Editorial grid extra lines for L5 (strictly inside 15mm safe margin)
-    if (L === "L5") {
-        parts.push(`<line x1="${safeX}" y1="158" x2="${safeX + safeW}" y2="158" stroke="${T.footerRule}" stroke-width="1.5"/>`);
-        parts.push(`<circle cx="${safeX}" cy="158" r="4.5" fill="${T.accentBar}"/>`);
-        parts.push(`<circle cx="${safeX + safeW}" cy="158" r="4.5" fill="${T.accentBar}"/>`);
-    }
-
     // 2. Top Identity Bar
     const hdrFilter = T.softShadow ? ` filter="url(#soft_${uid})"` : "";
     if (!T.softShadow && T.hdrShadow > 0) {
@@ -877,28 +857,15 @@ function generatePosterSvg(frame, includeGuides, forDownload) {
 
     const textStartX = hdr.x + logoPad + logos.length * (logoSize + logoGap) + 12;
     parts.push(`<line x1="${textStartX - 10}" y1="${hdr.y + 24}" x2="${textStartX - 10}" y2="${hdr.y + hdr.h - 24}" stroke="${T.hdrBorder === 'transparent' ? 'rgba(18,48,90,0.22)' : T.hdrSub}" stroke-width="2" opacity="0.5"/>`);
-    parts.push(`<text x="${textStartX + 8}" y="${hdr.y + 49}" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="27" letter-spacing="1.2" fill="${T.hdrTitle}">HIMA INFORMATIKA</text>`);
-    parts.push(`<text x="${textStartX + 8}" y="${hdr.y + 79}" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="18" letter-spacing="1.8" fill="${T.hdrSub}">KABINET AKSARA NIRMANA • IDE LPKIA</text>`);
-
-    // Right side of header: clean single tech chip
-    const chipW = 110;
-    const chipH = 52;
-    const chipX = hdr.x + hdr.w - chipW - 24;
-    const chipY = hdr.y + (hdr.h - chipH) / 2;
-    const chipRad = T.hdrRad > 14 ? 12 : (T.hdrRad === 0 ? 0 : 8);
-    parts.push(`<rect x="${chipX}" y="${chipY}" width="${chipW}" height="${chipH}" rx="${chipRad}" fill="${T.chipFill}"/>`);
-    parts.push(`<text x="${chipX + chipW / 2}" y="${chipY + 35}" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-weight="800" font-size="25" letter-spacing="1.6" fill="${T.chipText}">${escapeXml(frame.lang)}</text>`);
+    parts.push(`<text x="${textStartX + 8}" y="${hdr.y + 49}" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="28" letter-spacing="1.2" fill="${T.hdrTitle}">HIMA INFORMATIKA</text>`);
+    parts.push(`<text x="${textStartX + 8}" y="${hdr.y + 79}" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="18.5" letter-spacing="1.6" fill="${T.hdrSub}">KABINET AKSARA NIRMANA • IDE LPKIA</text>`);
 
     // 3. Headline Block
-    parts.push(`<text x="${safeX}" y="${M.eyebrowY}" font-family="'JetBrains Mono', monospace" font-weight="800" font-size="24" letter-spacing="3.2" fill="${T.eyebrowCol}">${escapeXml(frame.eyebrow.toUpperCase())}</text>`);
     M.linesHead.forEach((ln, idx) => {
         const hy = M.headStartY + idx * M.headLH;
         parts.push(`<text x="${safeX}" y="${hy + Math.round(M.headPx * 0.78)}" font-family="${M.headFontFam}" font-weight="900" font-size="${M.headPx}" letter-spacing="-1" fill="${T.headCol}">${escapeXml(ln)}</text>`);
     });
-    parts.push(`<rect x="${safeX}" y="${M.accentY}" width="136" height="9" rx="${T.softShadow ? 4.5 : 0}" fill="${T.accentBar}"/>`);
-    if (L === "L3") {
-        parts.push(`<rect x="${safeX + 150}" y="${M.accentY}" width="32" height="9" rx="4.5" fill="${T.eyebrowCol}" opacity="0.65"/>`);
-    }
+    parts.push(`<rect x="${safeX}" y="${M.accentY}" width="144" height="10" rx="${T.softShadow ? 5 : 0}" fill="${T.accentBar}"/>`);
 
     // 4. Stacked Back Card (L4 Stack or L5 Slight Tilt)
     const wBox = M.win;
@@ -922,11 +889,11 @@ function generatePosterSvg(frame, includeGuides, forDownload) {
 
     // Subtle paper graph lines inside Paper Neubrutalism window
     if (frame.theme === "paper-neu") {
-        for (let gx = wBox.x + 92; gx < wBox.x + wBox.w; gx += 46) {
+        for (let gx = wBox.x + wBox.gutterW; gx < wBox.x + wBox.w; gx += 46) {
             parts.push(`<line x1="${gx}" y1="${wBox.bodyY}" x2="${gx}" y2="${wBox.y + wBox.h}" stroke="#E2E8F0" stroke-width="1"/>`);
         }
         for (let gy = wBox.bodyY + 46; gy < wBox.y + wBox.h; gy += 46) {
-            parts.push(`<line x1="${wBox.x + 92}" y1="${gy}" x2="${wBox.x + wBox.w}" y2="${gy}" stroke="#E2E8F0" stroke-width="1"/>`);
+            parts.push(`<line x1="${wBox.x + wBox.gutterW}" y1="${gy}" x2="${wBox.x + wBox.w}" y2="${gy}" stroke="#E2E8F0" stroke-width="1"/>`);
         }
     }
 
@@ -962,20 +929,11 @@ function generatePosterSvg(frame, includeGuides, forDownload) {
         });
     }
 
-    // Clean minimal pushpin mark on right of titlebar for L5
-    if (L === "L5") {
-        const px = wBox.x + wBox.w - 42;
-        const py = wBox.y + wBox.tbH / 2;
-        parts.push(`<circle cx="${px + 2}" cy="${py + 3}" r="13" fill="rgba(0,0,0,0.45)"/>`);
-        parts.push(`<circle cx="${px}" cy="${py}" r="13" fill="#CA2C2A" stroke="${T.winBorder}" stroke-width="2.5"/>`);
-        parts.push(`<circle cx="${px - 4}" cy="${py - 4}" r="3.5" fill="#FCA5A5"/>`);
-    }
-
     // Syntax Highlighted Code Lines (join without newlines inside xml:space="preserve")
     M.rawLines.forEach((rawLine, idx) => {
         const lineY = wBox.bodyY + M.codeTopPad + idx * M.codeLH;
         const numStr = String(idx + 1).padStart(2, "0");
-        parts.push(`<text x="${wBox.x + wBox.gutterW / 2}" y="${lineY}" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="${Math.round(M.codePx * 0.72)}" fill="${T.gutterText}">${numStr}</text>`);
+        parts.push(`<text x="${wBox.x + wBox.gutterW / 2}" y="${lineY}" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="${Math.round(M.codePx * 0.68)}" fill="${T.gutterText}" opacity="0.72">${numStr}</text>`);
         const toks = tokenizeCodeLine(rawLine, frame.lang, T.syn);
         if (toks.length > 0) {
             const tspans = toks.map(tok => `<tspan fill="${tok.col}">${escapeXml(tok.text)}</tspan>`).join("");
@@ -1097,17 +1055,6 @@ async function renderFrameToPngBytes(frame) {
         ctx.fillRect(0, 0, A5_W, A5_H);
     }
 
-    if (L === "L5") {
-        ctx.strokeStyle = T.footerRule;
-        ctx.lineWidth = 1.5;
-        ctx.beginPath();
-        ctx.moveTo(safeX, 158);
-        ctx.lineTo(safeX + safeW, 158);
-        ctx.stroke();
-        ctx.fillStyle = T.accentBar;
-        [safeX, safeX + safeW].forEach(cx => { ctx.beginPath(); ctx.arc(cx, 158, 4.5, 0, Math.PI * 2); ctx.fill(); });
-    }
-
     function applySoftShadow() {
         if (T.softShadow) {
             ctx.shadowColor = "rgba(4, 13, 30, 0.34)";
@@ -1180,31 +1127,13 @@ async function renderFrameToPngBytes(frame) {
     ctx.textBaseline = "alphabetic";
     ctx.textAlign = "left";
     ctx.fillStyle = T.hdrTitle;
-    ctx.font = "700 27px 'Space Grotesk', sans-serif";
+    ctx.font = "700 28px 'Space Grotesk', sans-serif";
     ctx.fillText("HIMA INFORMATIKA", textStartX + 8, hdr.y + 49);
     ctx.fillStyle = T.hdrSub;
-    ctx.font = "700 18px 'Plus Jakarta Sans', sans-serif";
+    ctx.font = "700 18.5px 'Plus Jakarta Sans', sans-serif";
     ctx.fillText("KABINET AKSARA NIRMANA • IDE LPKIA", textStartX + 8, hdr.y + 79);
 
-    const chipW = 110;
-    const chipH = 52;
-    const chipX = hdr.x + hdr.w - chipW - 24;
-    const chipY = hdr.y + (hdr.h - chipH) / 2;
-    const chipRad = T.hdrRad > 14 ? 12 : (T.hdrRad === 0 ? 0 : 8);
-    ctx.fillStyle = T.chipFill;
-    drawRoundRect(ctx, chipX, chipY, chipW, chipH, chipRad);
-    ctx.fill();
-    ctx.fillStyle = T.chipText;
-    ctx.font = "800 25px 'JetBrains Mono', monospace";
-    ctx.textAlign = "center";
-    ctx.fillText(frame.lang, chipX + chipW / 2, chipY + 35);
-
     // 3. Headline Block
-    ctx.textAlign = "left";
-    ctx.fillStyle = T.eyebrowCol;
-    ctx.font = "800 24px 'JetBrains Mono', monospace";
-    ctx.fillText(frame.eyebrow.toUpperCase(), safeX, M.eyebrowY);
-
     ctx.fillStyle = T.headCol;
     ctx.font = `900 ${M.headPx}px ${M.headFontFam}`;
     M.linesHead.forEach((ln, idx) => {
@@ -1213,15 +1142,8 @@ async function renderFrameToPngBytes(frame) {
     });
 
     ctx.fillStyle = T.accentBar;
-    drawRoundRect(ctx, safeX, M.accentY, 136, 9, T.softShadow ? 4.5 : 0);
+    drawRoundRect(ctx, safeX, M.accentY, 144, 10, T.softShadow ? 5 : 0);
     ctx.fill();
-    if (L === "L3") {
-        ctx.globalAlpha = 0.65;
-        ctx.fillStyle = T.eyebrowCol;
-        drawRoundRect(ctx, safeX + 150, M.accentY, 32, 9, 4.5);
-        ctx.fill();
-        ctx.globalAlpha = 1;
-    }
 
     // 4. Stacked Back Card (L4 / L5)
     const wBox = M.win;
@@ -1338,27 +1260,15 @@ async function renderFrameToPngBytes(frame) {
         ctx.globalAlpha = 1;
     }
 
-    if (L === "L5") {
-        const px = wBox.x + wBox.w - 42;
-        const py = wBox.y + wBox.tbH / 2;
-        ctx.fillStyle = "rgba(0,0,0,0.45)";
-        ctx.beginPath(); ctx.arc(px + 2, py + 3, 13, 0, Math.PI * 2); ctx.fill();
-        ctx.fillStyle = "#CA2C2A";
-        ctx.beginPath(); ctx.arc(px, py, 13, 0, Math.PI * 2); ctx.fill();
-        ctx.strokeStyle = T.winBorder;
-        ctx.lineWidth = 2.5;
-        ctx.stroke();
-        ctx.fillStyle = "#FCA5A5";
-        ctx.beginPath(); ctx.arc(px - 4, py - 4, 3.5, 0, Math.PI * 2); ctx.fill();
-    }
-
     M.rawLines.forEach((rawLine, idx) => {
         const lineY = wBox.bodyY + M.codeTopPad + idx * M.codeLH;
         const numStr = String(idx + 1).padStart(2, "0");
         ctx.fillStyle = T.gutterText;
-        ctx.font = `700 ${Math.round(M.codePx * 0.72)}px 'JetBrains Mono', monospace`;
+        ctx.globalAlpha = 0.72;
+        ctx.font = `700 ${Math.round(M.codePx * 0.68)}px 'JetBrains Mono', monospace`;
         ctx.textAlign = "center";
         ctx.fillText(numStr, wBox.x + wBox.gutterW / 2, lineY);
+        ctx.globalAlpha = 1;
 
         const toks = tokenizeCodeLine(rawLine, frame.lang, T.syn);
         ctx.font = `700 ${M.codePx}px 'JetBrains Mono', monospace`;
@@ -1579,7 +1489,6 @@ function openEditModal(id) {
     const f = framesState.find(x => x.id === id);
     if (!f) return;
     document.getElementById("editModalTitle").textContent = `Edit ${f.cardTitle}`;
-    document.getElementById("edEyebrow").value = f.eyebrow;
     document.getElementById("edHead1").value = f.head1;
     document.getElementById("edHead2").value = f.head2;
     document.getElementById("edFilename").value = f.filename;
@@ -1592,7 +1501,6 @@ function openEditModal(id) {
 function saveFrameEdit() {
     const f = framesState.find(x => x.id === activeEditFrameId);
     if (!f) return;
-    f.eyebrow = document.getElementById("edEyebrow").value;
     f.head1 = document.getElementById("edHead1").value;
     f.head2 = document.getElementById("edHead2").value;
     f.filename = document.getElementById("edFilename").value;
@@ -1636,7 +1544,7 @@ function renderAllCards() {
             <div class="flex items-start justify-between gap-2">
                 <div>
                     <h2 class="text-sm font-extrabold text-white tracking-tight">${escapeXml(f.cardTitle)}</h2>
-                    <p class="text-[11px] text-sky-300/90 mt-0.5">Ukuran Fiks: A5 (14,8 × 21,0 cm) • Klik gambar perbesar</p>
+                    <p class="text-[11px] text-sky-300/90 mt-0.5">A5 (14,8 × 21,0 cm) • Klik gambar perbesar</p>
                 </div>
                 <button type="button" onclick="openEditModal(${f.id})" class="px-2.5 py-1 bg-[#132C52] border border-sky-400/40 text-[11px] font-bold text-sky-200 hover:bg-[#1B3D70] cursor-pointer shrink-0">
                     Edit Teks
