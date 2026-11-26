@@ -550,6 +550,7 @@
         .ratio-9-16 .l4-stack-stage { width: 760px; height: 820px; }
         .ratio-1-1  .l4-stack-stage { width: 640px; height: 640px; }
 
+        .l4-card-mid { position: absolute; inset: 0; transform: translate(-10px, -4px) rotate(-3.2deg); }
         .l4-card-back { position: absolute; inset: 0; transform: translate(16px, -6px) rotate(4.2deg); }
         .l4-card-front { position: relative; width: 100%; height: 100%; transform: rotate(-2.2deg); display: flex; flex-direction: column; overflow: hidden; }
 
@@ -592,7 +593,7 @@
         .ratio-9-16 .l4-card-ftr { height: 150px; }
         .ratio-1-1 .l4-card-ftr { height: 124px; }
         .l4-act-row { position: relative; height: 40px; display: flex; align-items: center; gap: 14px; }
-        .l4-dots { position: absolute; left: 50%; top: 50%; transform: translateY(-50%); display: flex; align-items: center; gap: 6px; }
+        .l4-dots { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: flex; align-items: center; gap: 6px; }
         .l4-likes { line-height: 24px; font-size: 16px; font-weight: 800; }
         .l4-cap { line-height: 26px; font-size: 16px; white-space: nowrap; overflow: hidden; }
         .l4-loc { line-height: 24px; font-size: 15.5px; font-weight: 700; display: flex; align-items: center; gap: 6px; }
@@ -618,18 +619,19 @@
         .layout-4.style-neubrutalism .l4-ca { color: rgba(255, 255, 255, 0.34); }
         .layout-4.style-neubrutalism .l4-cb { color: rgba(252, 211, 77, 0.72); }
         .layout-4.style-neubrutalism .l4-media-code { color: rgba(26, 70, 124, 0.38); }
-        .layout-4.style-neubrutalism .l4-top-pill { background: #FFFFFF; color: #12305A; border: 3.5px solid #000000; box-shadow: 6px 6px 0 #000000; border-radius: 14px; }
+        .layout-4.style-neubrutalism .l4-top-pill { background: #FFFFFF; color: #12305A; border: 3.5px solid #000000; box-shadow: 6px 6px 0 #000000; border-radius: 6px; }
         .layout-4.style-neubrutalism .l4-top-sub { color: #CA2C2A; }
-        .layout-4.style-neubrutalism .l4-card-back { background: #DBEAFE; border: 4px solid #000000; box-shadow: 9px 9px 0 #000000; border-radius: 16px; }
-        .layout-4.style-neubrutalism .l4-card-front { background: #FFFFFF; color: #0F172A; border: 4px solid #000000; box-shadow: 12px 12px 0 #000000; border-radius: 16px; }
-        .layout-4.style-neubrutalism .l4-follow-btn { background: #16488E; color: #FFFFFF; border: 2px solid #000000; border-radius: 8px; box-sizing: border-box; }
-        .layout-4.style-neubrutalism .l4-media-box { background: #F4F8FF; border: 3.5px solid #000000; border-radius: 8px; }
+        .layout-4.style-neubrutalism .l4-card-mid { background: #FCD34D; border: 4px solid #000000; box-shadow: 7px 7px 0 #000000; border-radius: 10px; }
+        .layout-4.style-neubrutalism .l4-card-back { background: #DBEAFE; border: 4px solid #000000; box-shadow: 9px 9px 0 #000000; border-radius: 10px; }
+        .layout-4.style-neubrutalism .l4-card-front { background: #FFFFFF; color: #0F172A; border: 4px solid #000000; box-shadow: 12px 12px 0 #000000; border-radius: 10px; }
+        .layout-4.style-neubrutalism .l4-follow-btn { background: #16488E; color: #FFFFFF; border: 2px solid #000000; border-radius: 5px; box-sizing: border-box; }
+        .layout-4.style-neubrutalism .l4-media-box { background: #F4F8FF; border: 3.5px solid #000000; border-radius: 6px; }
         .layout-4.style-neubrutalism .l4-media-grid { background-image: linear-gradient(rgba(26,70,124,0.10) 1px, transparent 1px), linear-gradient(90deg, rgba(26,70,124,0.10) 1px, transparent 1px); }
         .layout-4.style-neubrutalism .l4-win-bar { background: #1A467C; color: #FFFFFF; border-bottom: 3.5px solid #000000; }
         .layout-4.style-neubrutalism .l4-win-dot { border: 2px solid #000000; border-radius: 0; }
         .layout-4.style-neubrutalism .l4-wd-1 { background: #CA2C2A; } .layout-4.style-neubrutalism .l4-wd-2 { background: #FCD34D; } .layout-4.style-neubrutalism .l4-wd-3 { background: #FFFFFF; }
         .layout-4.style-neubrutalism .l4-badge { background: #1A467C; color: #FFFFFF; border: 4px solid #000000; box-shadow: 6px 6px 0 #000000; border-radius: 0; }
-        .layout-4.style-neubrutalism .l4-hero-txt { color: #CA2C2A; -webkit-text-stroke: 16px #000000; paint-order: stroke fill; text-shadow: 8px 8px 0 #000000; }
+        .layout-4.style-neubrutalism .l4-hero-txt { font-family: 'Barlow Condensed', 'Space Grotesk', sans-serif; font-weight: 900; color: #CA2C2A; -webkit-text-stroke: 11px #000000; paint-order: stroke fill; text-shadow: 8px 8px 0 #000000; }
         .layout-4.style-neubrutalism .l4-script-txt { font-family: 'Space Grotesk', sans-serif; font-weight: 800; text-transform: uppercase; letter-spacing: 0.18em; color: #0B1F40; background: #FCD34D; border: 3.5px solid #000000; box-shadow: 4px 4px 0 #000000; border-radius: 0; padding: 6px 22px; margin-top: 12px; margin-bottom: 14px; transform: rotate(-2deg); -webkit-text-stroke: 0; text-shadow: none; display: inline-block; }
         .ratio-1-1.layout-4.style-neubrutalism .l4-script-txt { padding: 5px 18px; margin-top: 10px; margin-bottom: 11px; border-width: 3px; box-shadow: 3px 3px 0 #000000; }
         .layout-4.style-neubrutalism .l4-stamp { background: #CA2C2A; border: 4px solid #000000; box-shadow: 7px 7px 0 #000000; border-radius: 0; }
@@ -647,20 +649,21 @@
         .layout-4.style-glass .l4-ca { color: rgba(219, 234, 254, 0.38); }
         .layout-4.style-glass .l4-cb { color: rgba(253, 224, 71, 0.50); }
         .layout-4.style-glass .l4-media-code { color: rgba(37, 99, 235, 0.40); }
-        .layout-4.style-glass .l4-top-pill { background: rgba(255, 255, 255, 0.88); color: #12305A; border: 1.5px solid rgba(255,255,255,0.95); box-shadow: 0 14px 32px rgba(8, 25, 58, 0.28); border-radius: 999px; font-family: 'Outfit', sans-serif; }
+        .layout-4.style-glass .l4-top-pill { background: rgba(255, 255, 255, 0.88); color: #12305A; border: 1.5px solid rgba(255,255,255,0.95); box-shadow: 0 14px 32px rgba(8, 25, 58, 0.28); border-radius: 14px; font-family: 'Outfit', sans-serif; }
         .layout-4.style-glass .l4-top-sub { color: #DC2626; }
-        .layout-4.style-glass .l4-card-back { background: rgba(226, 240, 255, 0.45); border: 1.5px solid rgba(255,255,255,0.70); box-shadow: 0 24px 48px rgba(8, 25, 58, 0.26); border-radius: 26px; }
-        .layout-4.style-glass .l4-card-front { background: rgba(255, 255, 255, 0.88); color: #0F294A; border: 2px solid rgba(255,255,255,0.96); box-shadow: 0 28px 56px rgba(8, 25, 58, 0.36); border-radius: 26px; }
-        .layout-4.style-glass .l4-follow-btn { background: #2563EB; color: #FFFFFF; border-radius: 999px; }
-        .layout-4.style-glass .l4-media-box { background: linear-gradient(145deg, rgba(255,255,255,0.62) 0%, rgba(191,223,255,0.46) 55%, rgba(235,245,255,0.60) 100%); border: 1.5px solid rgba(255,255,255,0.95); border-radius: 18px; }
+        .layout-4.style-glass .l4-card-mid { background: rgba(191, 219, 254, 0.34); border: 1.5px solid rgba(255,255,255,0.68); box-shadow: 0 20px 44px rgba(8, 25, 58, 0.22); border-radius: 18px; }
+        .layout-4.style-glass .l4-card-back { background: rgba(226, 240, 255, 0.45); border: 1.5px solid rgba(255,255,255,0.70); box-shadow: 0 24px 48px rgba(8, 25, 58, 0.26); border-radius: 18px; }
+        .layout-4.style-glass .l4-card-front { background: rgba(255, 255, 255, 0.88); color: #0F294A; border: 2px solid rgba(255,255,255,0.96); box-shadow: 0 28px 56px rgba(8, 25, 58, 0.36); border-radius: 18px; }
+        .layout-4.style-glass .l4-follow-btn { background: #2563EB; color: #FFFFFF; border-radius: 8px; }
+        .layout-4.style-glass .l4-media-box { background: linear-gradient(145deg, rgba(255,255,255,0.62) 0%, rgba(191,223,255,0.46) 55%, rgba(235,245,255,0.60) 100%); border: 1.5px solid rgba(255,255,255,0.95); border-radius: 14px; }
         .layout-4.style-glass .l4-media-grid { background-image: linear-gradient(rgba(37,99,235,0.10) 1px, transparent 1px), linear-gradient(90deg, rgba(37,99,235,0.10) 1px, transparent 1px); }
         .layout-4.style-glass .l4-win-bar { background: rgba(255,255,255,0.58); color: #1E40AF; border-bottom: 1.5px solid rgba(255,255,255,0.90); }
         .layout-4.style-glass .l4-win-dot { border-radius: 999px; }
         .layout-4.style-glass .l4-wd-1 { background: #EF4444; } .layout-4.style-glass .l4-wd-2 { background: #F59E0B; } .layout-4.style-glass .l4-wd-3 { background: #3B82F6; }
-        .layout-4.style-glass .l4-badge { background: linear-gradient(180deg, #60A5FA 0%, #2563EB 100%); color: #FFFFFF; border: 1.5px solid rgba(255,255,255,0.90); box-shadow: 0 12px 26px rgba(37, 99, 235, 0.32); border-radius: 12px; font-family: 'Space Grotesk', sans-serif; letter-spacing: 0.16em; }
+        .layout-4.style-glass .l4-badge { background: linear-gradient(180deg, #60A5FA 0%, #2563EB 100%); color: #FFFFFF; border: 1.5px solid rgba(255,255,255,0.90); box-shadow: 0 12px 26px rgba(37, 99, 235, 0.32); border-radius: 10px; font-family: 'Space Grotesk', sans-serif; letter-spacing: 0.16em; }
         .layout-4.style-glass .l4-hero-txt { font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif; font-weight: 900; background: linear-gradient(180deg, #FF8A8A 0%, #F84B4B 34%, #DC2626 70%, #991B1B 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; filter: drop-shadow(0 8px 16px rgba(30, 64, 175, 0.28)); }
         .layout-4.style-glass .l4-script-txt { color: #F59E0B; text-shadow: 0 6px 14px rgba(245, 158, 11, 0.32); }
-        .layout-4.style-glass .l4-stamp { background: linear-gradient(180deg, #F87171 0%, #DC2626 100%); border: 1.5px solid rgba(255,255,255,0.85); box-shadow: 0 12px 24px rgba(220, 38, 38, 0.30); border-radius: 12px; font-family: 'Outfit', sans-serif; }
+        .layout-4.style-glass .l4-stamp { background: linear-gradient(180deg, #F87171 0%, #DC2626 100%); border: 1.5px solid rgba(255,255,255,0.85); box-shadow: 0 12px 24px rgba(220, 38, 38, 0.30); border-radius: 10px; font-family: 'Outfit', sans-serif; }
         .layout-4.style-glass .l4-dot-active { background: #DC2626; }
         .layout-4.style-glass .l4-bottom-bar { background: rgba(15, 41, 74, 0.88); color: #FFFFFF; border-top: 1.5px solid rgba(255,255,255,0.35); }
         .layout-4.style-glass .l4-bar-icon { color: #93C5FD; }
@@ -676,20 +679,21 @@
         .layout-4.style-dark-code .l4-star-poly { fill: rgba(56, 189, 248, 0.16); stroke: #38BDF8; stroke-width: 7; stroke-linejoin: round; }
         .layout-4.style-dark-code .l4-ca { color: rgba(56, 189, 248, 0.50); }
         .layout-4.style-dark-code .l4-cb { color: rgba(252, 211, 77, 0.60); }
-        .layout-4.style-dark-code .l4-top-pill { background: #122645; color: #FFFFFF; border: 2.5px solid #38BDF8; box-shadow: 5px 5px 0 #000000; border-radius: 14px; }
+        .layout-4.style-dark-code .l4-top-pill { background: #122645; color: #FFFFFF; border: 2.5px solid #38BDF8; box-shadow: 5px 5px 0 #000000; border-radius: 8px; }
         .layout-4.style-dark-code .l4-top-sub { color: #38BDF8; }
-        .layout-4.style-dark-code .l4-card-back { background: #0E1F3A; border: 3px solid rgba(56, 189, 248, 0.55); box-shadow: 8px 8px 0 #000000; border-radius: 18px; }
-        .layout-4.style-dark-code .l4-card-front { background: #122645; color: #F8FAFC; border: 3.5px solid #38BDF8; box-shadow: 12px 12px 0 #000000; border-radius: 18px; }
-        .layout-4.style-dark-code .l4-follow-btn { background: #38BDF8; color: #0B192E; border-radius: 8px; }
-        .layout-4.style-dark-code .l4-media-box { background: #081529; border: 2.5px solid rgba(56,189,248,0.65); border-radius: 12px; }
+        .layout-4.style-dark-code .l4-card-mid { background: #1A365D; border: 3px solid rgba(56, 189, 248, 0.72); box-shadow: 6px 6px 0 #000000; border-radius: 12px; }
+        .layout-4.style-dark-code .l4-card-back { background: #0E1F3A; border: 3px solid rgba(56, 189, 248, 0.55); box-shadow: 8px 8px 0 #000000; border-radius: 12px; }
+        .layout-4.style-dark-code .l4-card-front { background: #122645; color: #F8FAFC; border: 3.5px solid #38BDF8; box-shadow: 12px 12px 0 #000000; border-radius: 12px; }
+        .layout-4.style-dark-code .l4-follow-btn { background: #38BDF8; color: #0B192E; border-radius: 6px; }
+        .layout-4.style-dark-code .l4-media-box { background: #081529; border: 2.5px solid rgba(56,189,248,0.65); border-radius: 10px; }
         .layout-4.style-dark-code .l4-media-grid { background-image: linear-gradient(rgba(56,189,248,0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(56,189,248,0.12) 1px, transparent 1px); }
         .layout-4.style-dark-code .l4-win-bar { background: #0F2342; color: #38BDF8; border-bottom: 2.5px solid rgba(56,189,248,0.50); }
         .layout-4.style-dark-code .l4-win-dot { border-radius: 999px; }
         .layout-4.style-dark-code .l4-wd-1 { background: #EF4444; } .layout-4.style-dark-code .l4-wd-2 { background: #FCD34D; } .layout-4.style-dark-code .l4-wd-3 { background: #38BDF8; }
-        .layout-4.style-dark-code .l4-badge { background: #1A365D; color: #38BDF8; border: 3px solid #38BDF8; box-shadow: 6px 6px 0 #000000; border-radius: 8px; }
-        .layout-4.style-dark-code .l4-hero-txt { color: #FCD34D; -webkit-text-stroke: 12px #060D1A; paint-order: stroke fill; text-shadow: 8px 8px 0 #EF4444; }
+        .layout-4.style-dark-code .l4-badge { background: #1A365D; color: #38BDF8; border: 3px solid #38BDF8; box-shadow: 6px 6px 0 #000000; border-radius: 6px; }
+        .layout-4.style-dark-code .l4-hero-txt { font-family: 'Barlow Condensed', 'Space Grotesk', sans-serif; font-weight: 900; color: #FCD34D; -webkit-text-stroke: 9px #060D1A; paint-order: stroke fill; text-shadow: 7px 7px 0 #EF4444; }
         .layout-4.style-dark-code .l4-script-txt { color: #FCD34D; text-shadow: 0 4px 12px rgba(0, 0, 0, 0.50); }
-        .layout-4.style-dark-code .l4-stamp { background: #CA2C2A; border: 3px solid #FFFFFF; box-shadow: 6px 6px 0 #000000; border-radius: 10px; }
+        .layout-4.style-dark-code .l4-stamp { background: #CA2C2A; border: 3px solid #FFFFFF; box-shadow: 6px 6px 0 #000000; border-radius: 8px; }
         .layout-4.style-dark-code .l4-dot-active { background: #38BDF8; }
         .layout-4.style-dark-code .l4-bottom-bar { background: #071120; color: #F8FAFC; border-top: 2.5px solid #38BDF8; }
         .layout-4.style-dark-code .l4-bar-icon { color: #38BDF8; }
@@ -704,20 +708,21 @@
         .layout-4.style-modern .l4-star-tr, .layout-4.style-modern .l4-star-bl { filter: drop-shadow(0 16px 32px rgba(8, 22, 44, 0.34)); }
         .layout-4.style-modern .l4-ca { color: rgba(255, 255, 255, 0.30); }
         .layout-4.style-modern .l4-cb { color: rgba(253, 211, 77, 0.60); }
-        .layout-4.style-modern .l4-top-pill { background: rgba(255, 255, 255, 0.96); color: #12305A; box-shadow: 0 14px 32px rgba(6, 20, 44, 0.34); border-radius: 999px; }
+        .layout-4.style-modern .l4-top-pill { background: rgba(255, 255, 255, 0.96); color: #12305A; box-shadow: 0 14px 32px rgba(6, 20, 44, 0.34); border-radius: 14px; }
         .layout-4.style-modern .l4-top-sub { color: #2A82C6; }
-        .layout-4.style-modern .l4-card-back { background: #E2EEFF; box-shadow: 0 24px 48px rgba(6, 20, 44, 0.30); border-radius: 24px; }
-        .layout-4.style-modern .l4-card-front { background: #FFFFFF; color: #12305A; box-shadow: 0 30px 64px rgba(6, 20, 44, 0.44); border-radius: 24px; }
-        .layout-4.style-modern .l4-follow-btn { background: #16488E; color: #FFFFFF; border-radius: 999px; }
-        .layout-4.style-modern .l4-media-box { background: linear-gradient(145deg, #1D4D85 0%, #16488E 100%); border-radius: 16px; }
+        .layout-4.style-modern .l4-card-mid { background: #BFDBFE; box-shadow: 0 20px 44px rgba(6, 20, 44, 0.24); border-radius: 18px; }
+        .layout-4.style-modern .l4-card-back { background: #E2EEFF; box-shadow: 0 24px 48px rgba(6, 20, 44, 0.30); border-radius: 18px; }
+        .layout-4.style-modern .l4-card-front { background: #FFFFFF; color: #12305A; box-shadow: 0 30px 64px rgba(6, 20, 44, 0.44); border-radius: 18px; }
+        .layout-4.style-modern .l4-follow-btn { background: #16488E; color: #FFFFFF; border-radius: 8px; }
+        .layout-4.style-modern .l4-media-box { background: linear-gradient(145deg, #1D4D85 0%, #16488E 100%); border-radius: 14px; }
         .layout-4.style-modern .l4-media-grid { background-image: linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px); }
         .layout-4.style-modern .l4-win-bar { background: rgba(255,255,255,0.96); color: #12305A; }
         .layout-4.style-modern .l4-win-dot { border-radius: 999px; }
         .layout-4.style-modern .l4-wd-1 { background: #CA2C2A; } .layout-4.style-modern .l4-wd-2 { background: #FDD34D; } .layout-4.style-modern .l4-wd-3 { background: #12305A; }
-        .layout-4.style-modern .l4-badge { background: #FDD34D; color: #12305A; box-shadow: 0 12px 24px rgba(6, 20, 44, 0.30); border-radius: 999px; }
-        .layout-4.style-modern .l4-hero-txt { color: #FFFFFF; text-shadow: 9px 9px 0 #FDD34D; }
+        .layout-4.style-modern .l4-badge { background: #FDD34D; color: #12305A; box-shadow: 0 12px 24px rgba(6, 20, 44, 0.30); border-radius: 10px; }
+        .layout-4.style-modern .l4-hero-txt { font-family: 'Barlow Condensed', 'Space Grotesk', sans-serif; font-weight: 900; color: #FFFFFF; text-shadow: 9px 9px 0 #FDD34D; }
         .layout-4.style-modern .l4-script-txt { color: #FDD34D; text-shadow: 0 4px 12px rgba(6, 20, 44, 0.45); }
-        .layout-4.style-modern .l4-stamp { background: #CA2C2A; box-shadow: 0 14px 28px rgba(6, 20, 44, 0.40); border-radius: 16px; }
+        .layout-4.style-modern .l4-stamp { background: #CA2C2A; box-shadow: 0 14px 28px rgba(6, 20, 44, 0.40); border-radius: 12px; }
         .layout-4.style-modern .l4-dot-active { background: #16488E; }
         .layout-4.style-modern .l4-bottom-bar { background: #0A2044; color: #FFFFFF; }
         .layout-4.style-modern .l4-bar-icon { color: #FDD34D; }
@@ -3910,16 +3915,17 @@
                                     <span class="l4-logo-chip inline-flex items-center justify-center"><img id="l4KabinetLogo" src="" alt="Logo Kabinet Aksara Nirmana" class="l4-top-logo shrink-0"></span>
                                 </div>
                                 <div class="text-center leading-none px-1">
-                                    <p class="font-display text-[20px] font-bold uppercase tracking-[0.04em] leading-none">HIMA INFORMATIKA</p>
+                                    <p class="text-[25px] font-black uppercase tracking-[0.04em] leading-none" style="font-family: 'Barlow Condensed', sans-serif;">HIMA INFORMATIKA</p>
                                     <p class="l4-top-sub text-[12px] font-extrabold uppercase tracking-[0.22em] mt-1 leading-none">IDE LPKIA BANDUNG</p>
                                 </div>
                                 <span class="l4-logo-chip inline-flex items-center justify-center"><img id="l4LpkiaLogo" src="" alt="Logo IDE LPKIA" class="l4-top-logo shrink-0"></span>
                             </div>
                         </header>
 
-                        <!-- Centerpiece: Tilted 2-Layer Stacked Instagram Card -->
+                        <!-- Centerpiece: Tilted 3-Layer Stacked Instagram Card -->
                         <section class="relative z-10 flex items-center justify-center my-auto px-8">
                             <div class="l4-stack-stage">
+                                <div class="l4-card-mid" aria-hidden="true"></div>
                                 <div class="l4-card-back" aria-hidden="true"></div>
 
                                 <article class="l4-card-front">
@@ -5379,11 +5385,12 @@
         function getL4Metrics(E) {
             const r = currentRatio;
             const isNeu = currentStyle === 'neubrutalism';
+            const isGl = currentStyle === 'glass';
             const heroLines = E.isCS ? ['COMING', 'SOON'] : [E.hero];
             const longest = Math.max(1, ...heroLines.map((l) => l.length));
             const sc = r === '9-16' ? 1.08 : (r === '1-1' ? 0.82 : 1);
-            const rawBase = Math.max(36, Math.min(250, Math.floor(600 / (0.72 * longest))));
-            const base = E.isCS ? Math.round(rawBase * 0.88) : rawBase;
+            const rawBase = Math.max(40, Math.min(250, Math.floor(600 / ((isGl ? 0.70 : 0.56) * longest))));
+            const base = E.isCS ? Math.round(rawBase * 0.90) : rawBase;
             return {
                 heroLines,
                 heroFs: Math.round(base * sc),
@@ -8644,15 +8651,16 @@
                     bgMode: 'dots', bg: '#16488E', dot: 'rgba(255,255,255,0.16)', wallCol: 'rgba(255,255,255,0.08)',
                     star: { fill: '#CA2C2A', stroke: '#000000', sw: 6, soft: null },
                     codeA: 'rgba(255,255,255,0.34)', codeB: 'rgba(252,211,77,0.72)', codeM: 'rgba(26,70,124,0.38)', softCol: null,
-                    topFill: '#FFFFFF', topText: '#12305A', topSub: '#CA2C2A', topBorder: 3.5, topBorderCol: '#000000', topShadow: 6, topRad: 14,
+                    topFill: '#FFFFFF', topText: '#12305A', topSub: '#CA2C2A', topBorder: 3.5, topBorderCol: '#000000', topShadow: 6, topRad: 6,
+                    midFill: '#FCD34D', midBorder: 4, midBorderCol: '#000000', midShadow: 7,
                     backFill: '#DBEAFE', backBorder: 4, backBorderCol: '#000000', backShadow: 9,
-                    cardFill: '#FFFFFF', cardText: '#0F172A', cardBorder: 4, cardBorderCol: '#000000', cardShadow: 12, cardRad: 16,
+                    cardFill: '#FFFFFF', cardText: '#0F172A', cardBorder: 4, cardBorderCol: '#000000', cardShadow: 12, cardRad: 10,
                     handleFam: '"Space Grotesk", sans-serif', uiFam: '"Plus Jakarta Sans", sans-serif',
-                    followFill: '#16488E', followText: '#FFFFFF', followBorder: 2, followRad: 8,
-                    mediaFill: '#F4F8FF', mediaBorder: 3.5, mediaBorderCol: '#000000', mediaRad: 8, grid: 'rgba(26,70,124,0.10)',
+                    followFill: '#16488E', followText: '#FFFFFF', followBorder: 2, followRad: 5,
+                    mediaFill: '#F4F8FF', mediaBorder: 3.5, mediaBorderCol: '#000000', mediaRad: 6, grid: 'rgba(26,70,124,0.10)',
                     tbFill: '#1A467C', tbText: '#FFFFFF', tbBorder: 3.5, tbBorderCol: '#000000', wd: ['#CA2C2A', '#FCD34D', '#FFFFFF'], wdBorder: 2, wdRad: 0,
                     badgeFam: '"Silkscreen", monospace', badgeTrack: 0.10, badgeFill: '#1A467C', badgeText: '#FFFFFF', badgeBorder: 4, badgeBorderCol: '#000000', badgeShadow: 6, badgeRad: 0, badgeSoft: null,
-                    heroFam: '"Archivo Black", "Space Grotesk", sans-serif', heroW: 400, heroFill: '#CA2C2A', heroStroke: '#000000', heroSW: 16, heroShd: { off: 8, col: '#000000' }, heroGlow: null,
+                    heroFam: '"Barlow Condensed", "Space Grotesk", sans-serif', heroW: 900, heroFill: '#CA2C2A', heroStroke: '#000000', heroSW: 11, heroShd: { off: 8, col: '#000000' }, heroGlow: null,
                     scriptFill: '#0B1F40', scriptPill: { fill: '#FCD34D', border: 3.5, shadow: 4 }, scriptStroke: null, scriptSW: 0, scriptShd: null, scriptGlow: null,
                     stFam: '"Space Grotesk", sans-serif', stFill: '#CA2C2A', stBorder: 4, stBorderCol: '#000000', stShadow: 7, stRad: 0, stSoft: null,
                     dotCol: '#CA2C2A', barFill: '#0B1F40', barText: '#FFFFFF', barIcon: '#FCD34D', barBorder: '#000000',
@@ -8662,18 +8670,19 @@
                     bgMode: 'grad', stops: [[0, '#0D356F'], [0.48, '#1B5AA6'], [1, '#2E80D1']], wallCol: 'rgba(255,255,255,0.08)',
                     star: { fill: 'rgba(96,165,250,0.28)', stroke: 'rgba(255,255,255,0.90)', sw: 4, soft: null },
                     codeA: 'rgba(219,234,254,0.38)', codeB: 'rgba(253,224,71,0.50)', codeM: 'rgba(37,99,235,0.40)', softCol: 'rgba(8,25,58,0.34)',
-                    topFill: 'rgba(255,255,255,0.88)', topText: '#12305A', topSub: '#DC2626', topBorder: 1.5, topBorderCol: 'rgba(255,255,255,0.95)', topShadow: 0, topRad: 999,
+                    topFill: 'rgba(255,255,255,0.88)', topText: '#12305A', topSub: '#DC2626', topBorder: 1.5, topBorderCol: 'rgba(255,255,255,0.95)', topShadow: 0, topRad: 14,
+                    midFill: 'rgba(191,219,254,0.34)', midBorder: 1.5, midBorderCol: 'rgba(255,255,255,0.68)', midShadow: 0,
                     backFill: 'rgba(226,240,255,0.45)', backBorder: 1.5, backBorderCol: 'rgba(255,255,255,0.70)', backShadow: 0,
-                    cardFill: 'rgba(255,255,255,0.88)', cardText: '#0F294A', cardBorder: 2, cardBorderCol: 'rgba(255,255,255,0.96)', cardShadow: 0, cardRad: 26,
+                    cardFill: 'rgba(255,255,255,0.88)', cardText: '#0F294A', cardBorder: 2, cardBorderCol: 'rgba(255,255,255,0.96)', cardShadow: 0, cardRad: 18,
                     handleFam: '"Outfit", sans-serif', uiFam: '"Outfit", "Plus Jakarta Sans", sans-serif',
-                    followFill: '#2563EB', followText: '#FFFFFF', followBorder: 0, followRad: 999,
+                    followFill: '#2563EB', followText: '#FFFFFF', followBorder: 0, followRad: 8,
                     mediaFill: { dir: 'diag', stops: [[0, 'rgba(255,255,255,0.62)'], [0.55, 'rgba(191,223,255,0.46)'], [1, 'rgba(235,245,255,0.60)']] },
-                    mediaBorder: 1.5, mediaBorderCol: 'rgba(255,255,255,0.95)', mediaRad: 18, grid: 'rgba(37,99,235,0.10)',
+                    mediaBorder: 1.5, mediaBorderCol: 'rgba(255,255,255,0.95)', mediaRad: 14, grid: 'rgba(37,99,235,0.10)',
                     tbFill: 'rgba(255,255,255,0.58)', tbText: '#1E40AF', tbBorder: 1.5, tbBorderCol: 'rgba(255,255,255,0.90)', wd: ['#EF4444', '#F59E0B', '#3B82F6'], wdBorder: 0, wdRad: 99,
-                    badgeFam: '"Space Grotesk", sans-serif', badgeTrack: 0.16, badgeFill: { dir: 'vert', stops: [[0, '#60A5FA'], [1, '#2563EB']] }, badgeText: '#FFFFFF', badgeBorder: 1.5, badgeBorderCol: 'rgba(255,255,255,0.90)', badgeShadow: 0, badgeRad: 12, badgeSoft: 'rgba(37,99,235,0.32)',
+                    badgeFam: '"Space Grotesk", sans-serif', badgeTrack: 0.16, badgeFill: { dir: 'vert', stops: [[0, '#60A5FA'], [1, '#2563EB']] }, badgeText: '#FFFFFF', badgeBorder: 1.5, badgeBorderCol: 'rgba(255,255,255,0.90)', badgeShadow: 0, badgeRad: 10, badgeSoft: 'rgba(37,99,235,0.32)',
                     heroFam: '"Outfit", "Plus Jakarta Sans", sans-serif', heroW: 900, heroFill: 'glassHero', heroStroke: null, heroSW: 0, heroShd: null, heroGlow: { col: 'rgba(30,64,175,0.28)', blur: 16, sy: 8 },
                     scriptFill: '#F59E0B', scriptStroke: null, scriptSW: 0, scriptShd: null, scriptGlow: { col: 'rgba(245,158,11,0.32)', blur: 14, sy: 6 },
-                    stFam: '"Outfit", sans-serif', stFill: { dir: 'vert', stops: [[0, '#F87171'], [1, '#DC2626']] }, stBorder: 1.5, stBorderCol: 'rgba(255,255,255,0.85)', stShadow: 0, stRad: 12, stSoft: 'rgba(220,38,38,0.30)',
+                    stFam: '"Outfit", sans-serif', stFill: { dir: 'vert', stops: [[0, '#F87171'], [1, '#DC2626']] }, stBorder: 1.5, stBorderCol: 'rgba(255,255,255,0.85)', stShadow: 0, stRad: 10, stSoft: 'rgba(220,38,38,0.30)',
                     dotCol: '#DC2626', barFill: 'rgba(15,41,74,0.88)', barText: '#FFFFFF', barIcon: '#93C5FD', barBorder: 'rgba(255,255,255,0.35)',
                     mega: { hi: '#FF8585', mid: '#EF4444', dark: '#B91C1C', deep: '#450A0A', edge: 'rgba(255,255,255,0.88)', ew: 1.4, wave: '#FDE047' }
                 },
@@ -8681,17 +8690,18 @@
                     bgMode: 'dots', bg: '#0B192E', dot: 'rgba(56,189,248,0.24)', wallCol: 'rgba(56,189,248,0.09)',
                     star: { fill: 'rgba(56,189,248,0.16)', stroke: '#38BDF8', sw: 5, soft: null },
                     codeA: 'rgba(56,189,248,0.50)', codeB: 'rgba(252,211,77,0.60)', softCol: null,
-                    topFill: '#122645', topText: '#FFFFFF', topSub: '#38BDF8', topBorder: 2.5, topBorderCol: '#38BDF8', topShadow: 5, topRad: 14,
+                    topFill: '#122645', topText: '#FFFFFF', topSub: '#38BDF8', topBorder: 2.5, topBorderCol: '#38BDF8', topShadow: 5, topRad: 8,
+                    midFill: '#1A365D', midBorder: 3, midBorderCol: 'rgba(56,189,248,0.72)', midShadow: 6,
                     backFill: '#0E1F3A', backBorder: 3, backBorderCol: 'rgba(56,189,248,0.55)', backShadow: 8,
-                    cardFill: '#122645', cardText: '#F8FAFC', cardBorder: 3.5, cardBorderCol: '#38BDF8', cardShadow: 12, cardRad: 18,
+                    cardFill: '#122645', cardText: '#F8FAFC', cardBorder: 3.5, cardBorderCol: '#38BDF8', cardShadow: 12, cardRad: 12,
                     handleFam: '"Space Grotesk", sans-serif', uiFam: '"Plus Jakarta Sans", sans-serif',
-                    followFill: '#38BDF8', followText: '#0B192E', followBorder: 0, followRad: 8,
-                    mediaFill: '#081529', mediaBorder: 2.5, mediaBorderCol: 'rgba(56,189,248,0.65)', mediaRad: 12, grid: 'rgba(56,189,248,0.12)',
+                    followFill: '#38BDF8', followText: '#0B192E', followBorder: 0, followRad: 6,
+                    mediaFill: '#081529', mediaBorder: 2.5, mediaBorderCol: 'rgba(56,189,248,0.65)', mediaRad: 10, grid: 'rgba(56,189,248,0.12)',
                     tbFill: '#0F2342', tbText: '#38BDF8', tbBorder: 2.5, tbBorderCol: 'rgba(56,189,248,0.50)', wd: ['#EF4444', '#FCD34D', '#38BDF8'], wdBorder: 0, wdRad: 99,
-                    badgeFam: '"Silkscreen", monospace', badgeTrack: 0.10, badgeFill: '#1A365D', badgeText: '#38BDF8', badgeBorder: 3, badgeBorderCol: '#38BDF8', badgeShadow: 6, badgeRad: 8, badgeSoft: null,
-                    heroFam: '"Archivo Black", "Space Grotesk", sans-serif', heroW: 400, heroFill: '#FCD34D', heroStroke: '#060D1A', heroSW: 12, heroShd: { off: 8, col: '#EF4444' }, heroGlow: null,
+                    badgeFam: '"Silkscreen", monospace', badgeTrack: 0.10, badgeFill: '#1A365D', badgeText: '#38BDF8', badgeBorder: 3, badgeBorderCol: '#38BDF8', badgeShadow: 6, badgeRad: 6, badgeSoft: null,
+                    heroFam: '"Barlow Condensed", "Space Grotesk", sans-serif', heroW: 900, heroFill: '#FCD34D', heroStroke: '#060D1A', heroSW: 9, heroShd: { off: 7, col: '#EF4444' }, heroGlow: null,
                     scriptFill: '#FCD34D', scriptStroke: null, scriptSW: 0, scriptShd: null, scriptGlow: { col: 'rgba(0,0,0,0.50)', blur: 12, sy: 4 },
-                    stFam: '"Space Grotesk", sans-serif', stFill: '#CA2C2A', stBorder: 3, stBorderCol: '#FFFFFF', stShadow: 6, stRad: 10, stSoft: null,
+                    stFam: '"Space Grotesk", sans-serif', stFill: '#CA2C2A', stBorder: 3, stBorderCol: '#FFFFFF', stShadow: 6, stRad: 8, stSoft: null,
                     dotCol: '#38BDF8', barFill: '#071120', barText: '#F8FAFC', barIcon: '#38BDF8', barBorder: '#38BDF8',
                     mega: { hi: '#7DD3FC', mid: '#0EA5E9', dark: '#0369A1', deep: '#061326', edge: '#38BDF8', ew: 2, wave: '#38BDF8' }
                 },
@@ -8699,17 +8709,18 @@
                     bgMode: 'radial', stops: [[0, '#2E7BD1'], [0.46, '#16488E'], [1, '#0D2D5E']], wallCol: 'rgba(255,255,255,0.055)',
                     star: { fill: '#FDD34D', stroke: null, sw: 0, soft: 'rgba(8,22,44,0.34)' },
                     codeA: 'rgba(255,255,255,0.30)', codeB: 'rgba(253,211,77,0.60)', softCol: 'rgba(6,20,44,0.44)',
-                    topFill: 'rgba(255,255,255,0.96)', topText: '#12305A', topSub: '#2A82C6', topBorder: 0, topBorderCol: 'transparent', topShadow: 0, topRad: 999,
+                    topFill: 'rgba(255,255,255,0.96)', topText: '#12305A', topSub: '#2A82C6', topBorder: 0, topBorderCol: 'transparent', topShadow: 0, topRad: 14,
+                    midFill: '#BFDBFE', midBorder: 0, midBorderCol: 'transparent', midShadow: 0,
                     backFill: '#E2EEFF', backBorder: 0, backBorderCol: 'transparent', backShadow: 0,
-                    cardFill: '#FFFFFF', cardText: '#12305A', cardBorder: 0, cardBorderCol: 'transparent', cardShadow: 0, cardRad: 24,
+                    cardFill: '#FFFFFF', cardText: '#12305A', cardBorder: 0, cardBorderCol: 'transparent', cardShadow: 0, cardRad: 18,
                     handleFam: '"Space Grotesk", sans-serif', uiFam: '"Plus Jakarta Sans", sans-serif',
-                    followFill: '#16488E', followText: '#FFFFFF', followBorder: 0, followRad: 999,
-                    mediaFill: { dir: 'diag', stops: [[0, '#1D4D85'], [1, '#16488E']] }, mediaBorder: 0, mediaBorderCol: 'transparent', mediaRad: 16, grid: 'rgba(255,255,255,0.06)',
+                    followFill: '#16488E', followText: '#FFFFFF', followBorder: 0, followRad: 8,
+                    mediaFill: { dir: 'diag', stops: [[0, '#1D4D85'], [1, '#16488E']] }, mediaBorder: 0, mediaBorderCol: 'transparent', mediaRad: 14, grid: 'rgba(255,255,255,0.06)',
                     tbFill: 'rgba(255,255,255,0.96)', tbText: '#12305A', tbBorder: 0, tbBorderCol: 'transparent', wd: ['#CA2C2A', '#FDD34D', '#12305A'], wdBorder: 0, wdRad: 99,
-                    badgeFam: '"Silkscreen", monospace', badgeTrack: 0.10, badgeFill: '#FDD34D', badgeText: '#12305A', badgeBorder: 0, badgeBorderCol: 'transparent', badgeShadow: 0, badgeRad: 999, badgeSoft: 'rgba(6,20,44,0.30)',
-                    heroFam: '"Archivo Black", "Space Grotesk", sans-serif', heroW: 400, heroFill: '#FFFFFF', heroStroke: null, heroSW: 0, heroShd: { off: 9, col: '#FDD34D' }, heroGlow: null,
+                    badgeFam: '"Silkscreen", monospace', badgeTrack: 0.10, badgeFill: '#FDD34D', badgeText: '#12305A', badgeBorder: 0, badgeBorderCol: 'transparent', badgeShadow: 0, badgeRad: 10, badgeSoft: 'rgba(6,20,44,0.30)',
+                    heroFam: '"Barlow Condensed", "Space Grotesk", sans-serif', heroW: 900, heroFill: '#FFFFFF', heroStroke: null, heroSW: 0, heroShd: { off: 9, col: '#FDD34D' }, heroGlow: null,
                     scriptFill: '#FDD34D', scriptStroke: null, scriptSW: 0, scriptShd: null, scriptGlow: { col: 'rgba(6,20,44,0.45)', blur: 12, sy: 4 },
-                    stFam: '"Space Grotesk", sans-serif', stFill: '#CA2C2A', stBorder: 0, stBorderCol: 'transparent', stShadow: 0, stRad: 16, stSoft: 'rgba(6,20,44,0.40)',
+                    stFam: '"Space Grotesk", sans-serif', stFill: '#CA2C2A', stBorder: 0, stBorderCol: 'transparent', stShadow: 0, stRad: 12, stSoft: 'rgba(6,20,44,0.40)',
                     dotCol: '#16488E', barFill: '#0A2044', barText: '#FFFFFF', barIcon: '#FDD34D', barBorder: 'transparent',
                     mega: { hi: '#60A5FA', mid: '#2563EB', dark: '#1E3A8A', deep: '#091834', edge: 'rgba(255,255,255,0.72)', ew: 1.2, wave: '#FDD34D' }
                 }
@@ -8959,7 +8970,7 @@
                 ctx.drawImage(img, ix + pad + (d - img.width * sc) / 2, iy + pad + (d - img.height * sc) / 2, img.width * sc, img.height * sc);
             };
             if (!E.isLR) {
-                ctx.font = '700 20px "Space Grotesk", sans-serif';
+                ctx.font = '900 25px "Barlow Condensed", sans-serif';
                 const titleW = Math.max(ctx.measureText('HIMA INFORMATIKA').width + 18, 220);
                 const leftGrpW = slot4 * 2 + 8;
                 const topW = pillPx * 2 + leftGrpW + slot4 + 34 + titleW;
@@ -8971,8 +8982,8 @@
                 drawOrgImg(pillX0 + pillPx + slot4 + 8, topY + pillPy, slot4, kabinetImg);
                 drawOrgImg(pillX0 + topW - pillPx - slot4, topY + pillPy, slot4, lpkiaImg);
                 const titleCX4 = pillX0 + pillPx + leftGrpW + 17 + titleW / 2;
-                drawTextTrack('HIMA INFORMATIKA', titleCX4, topY + pillH / 2 - 9, '700 20px "Space Grotesk", sans-serif', L.topText, 0.8, 'center');
-                drawTextTrack('IDE LPKIA BANDUNG', titleCX4, topY + pillH / 2 + 11, '800 12px "Plus Jakarta Sans", sans-serif', L.topSub, 2.4, 'center');
+                drawTextTrack('HIMA INFORMATIKA', titleCX4, topY + pillH / 2 - 9, '900 25px "Barlow Condensed", sans-serif', L.topText, 1.0, 'center');
+                drawTextTrack('IDE LPKIA BANDUNG', titleCX4, topY + pillH / 2 + 12, '800 12px "Plus Jakarta Sans", sans-serif', L.topSub, 2.4, 'center');
             }
 
             // 6. Bottom Social Strip Bar
@@ -9013,7 +9024,15 @@
             const rotFront4 = E.isLR ? 0 : -2.2;
 
             if (!E.isLR) {
-                // Back card
+                // Mid stack card (-3.2 deg)
+                ctx.save();
+                ctx.translate(stackCX - 10, stackCY - 4);
+                ctx.rotate((-3.2 * Math.PI) / 180);
+                drawBox(-S.cw / 2, -S.ch / 2, S.cw, S.ch, {
+                    fill: L.midFill, border: L.midBorder, borderCol: L.midBorderCol, shadow: L.midShadow, radius: L.cardRad, soft: L.softCol, blur: 32, sy: 14
+                });
+                ctx.restore();
+                // Back card (+4.2 deg)
                 ctx.save();
                 ctx.translate(stackCX + 16, stackCY - 6);
                 ctx.rotate((4.2 * Math.PI) / 180);
@@ -9058,12 +9077,12 @@
                 const isNeu4 = currentStyle === 'neubrutalism';
                 const isDk4 = currentStyle === 'dark-code';
                 ctx.fillStyle = isDk4 ? '#0B192E' : '#CA2C2A';
-                rrPath(p4X, p4Y, p4W, p4H, isNeu4 ? 0 : 999);
+                rrPath(p4X, p4Y, p4W, p4H, isNeu4 ? 0 : 8);
                 ctx.fill();
                 if (isNeu4 || isDk4) {
                     ctx.lineWidth = isNeu4 ? 2.5 : 1.5;
                     ctx.strokeStyle = isDk4 ? '#38BDF8' : '#000000';
-                    rrPath(p4X, p4Y, p4W, p4H, isNeu4 ? 0 : 999);
+                    rrPath(p4X, p4Y, p4W, p4H, isNeu4 ? 0 : 8);
                     ctx.stroke();
                 }
                 drawLiveDot(ctx, p4X + 16, hdrMidY, 5, !isDk4);
@@ -9272,7 +9291,7 @@
                     ctx.save();
                     ctx.fillStyle = d === 0 ? L.dotCol : L.cardText;
                     ctx.globalAlpha = d === 0 ? 1 : 0.25;
-                    ctx.beginPath(); ctx.arc(cx0 + S.cw / 2 + 5 + d * 14, actY, d === 0 ? 5 : 4, 0, Math.PI * 2); ctx.fill();
+                    ctx.beginPath(); ctx.arc(cx0 + S.cw / 2 - 21 + d * 14, actY, d === 0 ? 5 : 4, 0, Math.PI * 2); ctx.fill();
                     ctx.restore();
                 }
                 drawTextTrack('1,024 likes', cx0 + 24, fY + 58, `800 16px ${L.uiFam}`, L.cardText, 0, 'left');
